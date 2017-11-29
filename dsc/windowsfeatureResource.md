@@ -4,11 +4,11 @@ author: eslesar
 ms.topic: conceptual
 keywords: "DSC, do powershell, a configuração, a configuração"
 title: Recursos do DSC WindowsFeature
-ms.openlocfilehash: a3433577a122f6c7e31360e094a089f6ceef77c2
-ms.sourcegitcommit: 75f70c7df01eea5e7a2c16f9a3ab1dd437a1f8fd
+ms.openlocfilehash: b4f50cb9ee172600b1811175e9cf67f6a7ed2d55
+ms.sourcegitcommit: cd5a1f054cbf9eb95c5242a995f9741e031ddb24
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 06/12/2017
+ms.lasthandoff: 11/28/2017
 ---
 # <a name="dsc-windowsfeature-resource"></a>Recursos do DSC WindowsFeature
 
@@ -35,7 +35,7 @@ WindowsFeature [string] #ResourceName
 
 |  Propriedade  |  Descrição   | 
 |---|---| 
-| Nome| Indica o nome da função ou funcionalidade que pretende para se certificar de que é adicionado ou removido. Este é o mesmo que o __nome__ propriedade do [Get-WindowsFeature](https://technet.microsoft.com/en-us/library/jj205469.aspx) cmdlet e não o nome a apresentar da função ou funcionalidade.| 
+| Nome| Indica o nome da função ou funcionalidade que pretende para se certificar de que é adicionado ou removido. Este é o mesmo que o __nome__ propriedade do [Get-WindowsFeature](/powershell/module/servermanager/Get-WindowsFeature) cmdlet e não o nome a apresentar da função ou funcionalidade.| 
 | credencial| Indica as credenciais a utilizar para adicionar ou remover a função ou funcionalidade.| 
 | Certifique-se| Indica se a função ou funcionalidade é adicionada. Para garantir que a função ou funcionalidade adicionado, defina esta propriedade como "Apresente" para se certificar de que a função ou funcionalidade for removida, defina a propriedade para "Ausente".| 
 | IncludeAllSubFeature| Defina esta propriedade como __$true__ para garantir o estado de todos requeridos subfuncionalidades com o estado da funcionalidade especificar com o __nome__ propriedade.| 

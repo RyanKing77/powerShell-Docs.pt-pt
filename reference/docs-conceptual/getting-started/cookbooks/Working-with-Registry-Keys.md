@@ -1,15 +1,15 @@
 ---
 ms.date: 2017-06-05
 keywords: PowerShell, o cmdlet
-title: Trabalhar com as chaves de registo
+title: Trabalhar com Chaves do Registo
 ms.assetid: 91bfaecd-8684-48b4-ad86-065dfe6dc90a
-ms.openlocfilehash: efb2c016afa2212c2907c0740ad26c4e4cddd3af
-ms.sourcegitcommit: 74255f0b5f386a072458af058a15240140acb294
+ms.openlocfilehash: e7c16fe5f03330da3ea8f60b141d9e35eed474b9
+ms.sourcegitcommit: cd5a1f054cbf9eb95c5242a995f9741e031ddb24
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 08/03/2017
+ms.lasthandoff: 11/28/2017
 ---
-# <a name="working-with-registry-keys"></a>Trabalhar com as chaves de registo
+# <a name="working-with-registry-keys"></a>Trabalhar com Chaves do Registo
 Uma vez que as chaves de registo são itens em unidades do Windows PowerShell, trabalhar com eles é muito semelhante para trabalhar com ficheiros e pastas. Uma diferença crítica é que todos os itens numa unidade do Windows PowerShell baseada no registo é um contentor, tal como uma pasta numa unidade de sistema de ficheiros. No entanto, as entradas de registo e os respetivos valores associados são propriedades dos itens, itens não distintos.
 
 ### <a name="listing-all-subkeys-of-a-registry-key"></a>Listar todas as subchaves da chave de registo
@@ -49,7 +49,7 @@ Estes comandos listam apenas os itens contidos diretamente, semelhante a utiliza
 Get-ChildItem -Path hkcu:\ -Recurse
 ```
 
-**Get-ChildItem** pode efetuar as capacidades de filtragem complexas através do respetivo **caminho**, **filtro**, **incluir**, e **excluir** parâmetros, mas esses parâmetros normalmente baseiam-se apenas no nome. Pode efetuar a filtragem complexas com base nas outras propriedades de itens utilizando o **Where-Object**cmdlet. O comando seguinte localiza todas as chaves dentro HKCU:\\Software que tenham mais do que uma subchave e também de ter exatamente quatro valores:
+**Get-ChildItem** pode efetuar as capacidades de filtragem complexas através do respetivo **caminho**, **filtro**, **incluir**, e **excluir** parâmetros, mas esses parâmetros normalmente baseiam-se apenas no nome. Pode efetuar a filtragem complexas com base nas outras propriedades de itens utilizando o **Where-Object** cmdlet. O comando seguinte localiza todas as chaves dentro HKCU:\\Software que tenham mais do que uma subchave e também de ter exatamente quatro valores:
 
 ```
 Get-ChildItem -Path HKCU:\Software -Recurse | Where-Object -FilterScript {($_.SubKeyCount -le 1) -and ($_.ValueCount -eq 4) }
