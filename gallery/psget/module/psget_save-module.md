@@ -4,30 +4,30 @@ contributor: manikb
 ms.topic: reference
 keywords: cmdlet do powershell do galeria, psget
 title: "Módulo de guardar"
-ms.openlocfilehash: 296c5c5ffc6f1e12da0162237e562b13b3679110
-ms.sourcegitcommit: 75f70c7df01eea5e7a2c16f9a3ab1dd437a1f8fd
+ms.openlocfilehash: acea38b0eebc58dafda0ab58b91dc6a70ffffd3b
+ms.sourcegitcommit: 58371abe9db4b9a0e4e1eb82d39a9f9e187355f9
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 06/12/2017
+ms.lasthandoff: 12/05/2017
 ---
-# <a name="save-module"></a><span data-ttu-id="2243e-103">Módulo de guardar</span><span class="sxs-lookup"><span data-stu-id="2243e-103">Save-Module</span></span>
+# <a name="save-module"></a><span data-ttu-id="b1780-103">Módulo de guardar</span><span class="sxs-lookup"><span data-stu-id="b1780-103">Save-Module</span></span>
 
-<span data-ttu-id="2243e-104">Guarda um módulo localmente sem instalá-lo.</span><span class="sxs-lookup"><span data-stu-id="2243e-104">Saves a module locally without installing it.</span></span>
+<span data-ttu-id="b1780-104">Guarda um módulo localmente sem instalá-lo.</span><span class="sxs-lookup"><span data-stu-id="b1780-104">Saves a module locally without installing it.</span></span>
 
-## <a name="description"></a><span data-ttu-id="2243e-105">Descrição</span><span class="sxs-lookup"><span data-stu-id="2243e-105">Description</span></span>
+## <a name="description"></a><span data-ttu-id="b1780-105">Descrição</span><span class="sxs-lookup"><span data-stu-id="b1780-105">Description</span></span>
 
-<span data-ttu-id="2243e-106">O cmdlet do módulo de guardar guarda um módulo localmente do repositório especificado para inspecção.</span><span class="sxs-lookup"><span data-stu-id="2243e-106">The Save-Module cmdlet saves a module locally from the specified repository for inspection.</span></span> <span data-ttu-id="2243e-107">O módulo não está instalado.</span><span class="sxs-lookup"><span data-stu-id="2243e-107">The module is not installed.</span></span>
+<span data-ttu-id="b1780-106">O cmdlet do módulo de guardar guarda um módulo localmente do repositório especificado para inspecção.</span><span class="sxs-lookup"><span data-stu-id="b1780-106">The Save-Module cmdlet saves a module locally from the specified repository for inspection.</span></span> <span data-ttu-id="b1780-107">O módulo não está instalado.</span><span class="sxs-lookup"><span data-stu-id="b1780-107">The module is not installed.</span></span>
 
-## <a name="cmdlet-syntax"></a><span data-ttu-id="2243e-108">Sintaxe de cmdlet</span><span class="sxs-lookup"><span data-stu-id="2243e-108">Cmdlet syntax</span></span>
+## <a name="cmdlet-syntax"></a><span data-ttu-id="b1780-108">Sintaxe de cmdlet</span><span class="sxs-lookup"><span data-stu-id="b1780-108">Cmdlet syntax</span></span>
 ```powershell
 Get-Command -Name Save-Module -Module PowerShellGet -Syntax
 ```
 
-## <a name="cmdlet-online-help-reference"></a><span data-ttu-id="2243e-109">Referência de ajuda online do cmdlet</span><span class="sxs-lookup"><span data-stu-id="2243e-109">Cmdlet online help reference</span></span>
+## <a name="cmdlet-online-help-reference"></a><span data-ttu-id="b1780-109">Referência de ajuda online do cmdlet</span><span class="sxs-lookup"><span data-stu-id="b1780-109">Cmdlet online help reference</span></span>
 
-[<span data-ttu-id="2243e-110">Módulo de guardar</span><span class="sxs-lookup"><span data-stu-id="2243e-110">Save-Module</span></span>](http://go.microsoft.com/fwlink/?LinkId=531351)
+[<span data-ttu-id="b1780-110">Módulo de guardar</span><span class="sxs-lookup"><span data-stu-id="b1780-110">Save-Module</span></span>](http://go.microsoft.com/fwlink/?LinkId=531351)
 
-## <a name="example-commands"></a><span data-ttu-id="2243e-111">Comandos de exemplo</span><span class="sxs-lookup"><span data-stu-id="2243e-111">Example commands</span></span>
+## <a name="example-commands"></a><span data-ttu-id="b1780-111">Comandos de exemplo</span><span class="sxs-lookup"><span data-stu-id="b1780-111">Example commands</span></span>
 
 ```powershell
 Save-Module -Repository MSPSGallery -Name ModuleWithDependencies2 -Path C:\MySavedModuleLocation
@@ -53,6 +53,15 @@ Find-Command -Name "Get-NestedRequiredModule4" -Repository "INT" | Save-Module -
 
 # Save the role capability modules by piping the Find-RoleCapability output to Save-Module cmdlet.
 Find-RoleCapability -Name Maintenance,MyJeaRole | Save-Module -Path C:\MyModulesPath
+
+
+# Save a specific prerelease version of a module to C:\MySavedModuleLocation
+Save-Module -Name ContosoServer -RequiredVersion 1.1.3-alpha -Path C:\MySavedModuleLocation -AllowPrerelease
+
+# Install the latest version of a module by name, including prelrelease versions if one exists
+Install-Module -Name ContosoServer -Path C:\MySavedModuleLocation -AllowPrerelease
+
+
 
 ```
 
