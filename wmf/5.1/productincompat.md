@@ -3,11 +3,11 @@ ms.date: 2017-06-12
 author: JKeithB
 ms.topic: reference
 keywords: wmf,powershell,setup
-ms.openlocfilehash: 2429e0fa6ef982d3c722c62c7b1aed8f36ce9959
-ms.sourcegitcommit: cd5a1f054cbf9eb95c5242a995f9741e031ddb24
+ms.openlocfilehash: d01fd70e60e65c9d787431ee505388c3737c635f
+ms.sourcegitcommit: ea01285a3aa7818d67d4761fbd8793b9b66bd5f7
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 11/28/2017
+ms.lasthandoff: 12/12/2017
 ---
 # <a name="product-compatibility-status"></a>Estado de compatibilidade do produto
 
@@ -15,9 +15,11 @@ ms.lasthandoff: 11/28/2017
 > Sistemas que estejam a executar as seguintes aplicações de servidor **pode executar** Windows Management Framework 5.1:
 
 - O Microsoft SharePoint Server 2013
-- Skype para Empresas Server 2015
+- Skype para empresas servidor 2015 (_ver nota_) 
 - Microsoft Lync Server 2013
 - System Center 2012 Configuration Manager
+
+_Nota: O Skype para empresas servidor 2015 de compatibilidade com WMF 5.1 foi testado apenas com o Windows Server 2012 R2._ 
 
 ## <a name="not-tested"></a>Não testado:
 > Sistemas que estejam a executar as seguintes aplicações de servidor **não tiver testado** contra Windows Management Framework 5.1:
