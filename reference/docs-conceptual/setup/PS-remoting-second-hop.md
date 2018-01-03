@@ -2,11 +2,11 @@
 ms.date: 2017-06-05
 keywords: PowerShell, o cmdlet
 title: "Tornando-o segundo hop comunicação remota do PowerShell"
-ms.openlocfilehash: f3b8280819e43bd67bd608ffd0ba9484c2bbc26c
-ms.sourcegitcommit: 4102ecc35d473211f50a453f6ae3fbea31cb3428
+ms.openlocfilehash: 2518409369a75a49b975b9b944320c1878819421
+ms.sourcegitcommit: 1a0a0928c1e3cae4e8df8d79b0737bd7ed6b4e47
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 08/31/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="making-the-second-hop-in-powershell-remoting"></a>Tornando-o segundo hop comunicação remota do PowerShell
 
@@ -256,12 +256,12 @@ Pode passar credenciais dentro de **ScriptBlock** parâmetro de uma chamada para
 - Não necessita de configuração de servidor especial.
 - Funciona em qualquer servidor que executa o WMF 2.0 ou posterior.
 
-## <a name="cons"></a>Desvantagens
+### <a name="cons"></a>Desvantagens
 
 - Requer uma técnica de código awkward.
 - Se executar o WMF 2.0, necessita de sintaxe diferentes para passar os argumentos para uma sessão remota.
 
-## <a name="example"></a>Exemplo
+### <a name="example"></a>Exemplo
 
 O exemplo seguinte mostra como introduzir credenciais num **Invoke-Command** bloco de script:
 
@@ -277,7 +277,7 @@ Invoke-Command -ComputerName ServerB -Credential $cred -ScriptBlock {
 
 ## <a name="see-also"></a>Consulte também
 
-[Considerações de segurança de comunicação remota do PowerShell](WinRMSecurity.md)
+[Considerações de Segurança da Comunicação Remota do PowerShell](WinRMSecurity.md)
 
 
 
