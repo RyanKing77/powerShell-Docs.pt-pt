@@ -4,11 +4,11 @@ author: eslesar
 ms.topic: conceptual
 keywords: "DSC, do powershell, a configuração, a configuração"
 title: "Descrição geral da configuração do Estado de desired para decisores"
-ms.openlocfilehash: e39ab5138b20653e46ac35fa32b99d268f96b2df
-ms.sourcegitcommit: f069ff0689006fece768f178c10e3e3eeaee09f0
+ms.openlocfilehash: 1800acfa9edae4f65e34db380ff719ad4c034921
+ms.sourcegitcommit: 60f06a06c2fce63024f3f4cbd7657b1dfe7fcb1a
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 10/13/2017
+ms.lasthandoff: 01/03/2018
 ---
 # <a name="desired-state-configuration-overview-for-decision-makers"></a>Descrição geral da configuração do Estado de desired para decisores
 
@@ -34,7 +34,7 @@ Configurações também são partilhável através de [galeria do PowerShell](ht
 
 ## <a name="desired-state-configuration-and-devops"></a>Configuração do estado pretendido e DevOps
 
-[DevOps](http://blogs.technet.com/b/ashleymcglone/archive/2015/11/20/devops-for-n00bs-ie-windows-people.aspx) é uma combinação de pessoas, tecnologias e cultura que permitir a implementação rápida e iteração. DSC foi concebido com DevOps em mente. Ter uma configuração única definir um ambiente significa que os programadores podem codificar os respetivos requisitos para uma configuração, verifique que a configuração para o controlo de origem e equipas de operações podem facilmente implementar código sem ter de passar por propensas ao erro processos manuais. 
+[DevOps](http://blogs.technet.com/b/ashleymcglone/archive/2015/11/20/devops-for-n00bs-ie-windows-people.aspx) é uma combinação de pessoas, processos e ferramentas que permitem para implementação rápida e iteração concentra-se em permitir o valor para os utilizadores finais se internos ou externos. DSC foi concebido com DevOps em mente. Ter uma configuração única definir um ambiente significa que os programadores podem codificar os respetivos requisitos para uma configuração, verifique que a configuração para o controlo de origem e equipas de operações podem facilmente implementar código sem ter de passar por propensas ao erro processos manuais. 
 
 Configurações são também [condicionada por dados](https://msdn.microsoft.com/en-us/powershell/dsc/configdata), que torna mais fácil para as equipas de ops identificar e alterar ambientes sem a intervenção do programador. 
 

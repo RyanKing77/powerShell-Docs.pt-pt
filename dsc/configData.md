@@ -4,11 +4,11 @@ author: eslesar
 ms.topic: conceptual
 keywords: "DSC, do powershell, a configuração, a configuração"
 title: "Utilizar dados de configuração"
-ms.openlocfilehash: a70cd8f0f6c24eb02743b02d198cebcc3d775756
-ms.sourcegitcommit: 75f70c7df01eea5e7a2c16f9a3ab1dd437a1f8fd
+ms.openlocfilehash: 60c6c2d5694a03275e1a08522bdcf4b1bc5bb068
+ms.sourcegitcommit: 60f06a06c2fce63024f3f4cbd7657b1dfe7fcb1a
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 06/12/2017
+ms.lasthandoff: 01/03/2018
 ---
 # <a name="using-configuration-data-in-dsc"></a>A utilização de dados de configuração DSC
 
@@ -153,7 +153,7 @@ Por exemplo, pode criar um ficheiro denominado `MyData.psd1` com o seguinte cont
 
 ## <a name="compiling-a-configuration-with-configuration-data"></a>Compilar uma configuração com dados de configuração
 
-Para compilar uma configuração para o qual definiu os dados de configuração, transmitir os dados de cofiguration como o valor de **ConfigurationData** parâmetro.
+Para compilar uma configuração para o qual definiu os dados de configuração, transmitir os dados de configuração como o valor de **ConfigurationData** parâmetro.
 
 Esta ação irá criar um ficheiro MOF para cada entrada no **AllNodes** matriz.
 Cada ficheiro MOF será nomeado com o `NodeName` propriedade da entrada de matriz correspondentes.
@@ -187,7 +187,7 @@ O DSC fornece três variáveis especiais que podem ser utilizadas um script de c
 ## <a name="using-non-node-data"></a>Utilização de dados do nó não
 
 Como podemos viu nos exemplos anteriores, o **ConfigurationData** tabela hash pode ter uma ou mais chaves para além de necessários **AllNodes** chave.
-Nos exemplos neste tópico, podemos ter utilizado apenas um nó único addiontal e com o mesmo nome `NonNodeData`. No entanto, pode definir qualquer número de chaves addiontal e nome tudo o que pretende.
+Nos exemplos neste tópico, podemos ter utilizado apenas um único nó adicional e com o mesmo nome `NonNodeData`. No entanto, pode definir qualquer número de chaves adicionais e nome tudo o que pretende.
 
 Para obter um exemplo de utilização de dados do nó não, consulte [separação de dados de configuração e ambiente](separatingEnvData.md).
 
