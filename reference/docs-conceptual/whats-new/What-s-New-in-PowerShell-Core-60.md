@@ -224,7 +224,7 @@ Para mais informações sobre as tarefas do PowerShell, consulte [about_Jobs](ht
   - `PSEdition`: Este é definido como `Core` no PowerShell Core e `Desktop` no Windows PowerShell
   - `GitCommitId`: Este é o ID de consolidação de Git do Git ramo ou etiqueta onde foi criado o PowerShell.
     Nas compilações de lançamento, provavelmente será o mesmo que `PSVersion`.
-  - `OS`: Este é uma cadeia de versão do SO devolvida pelo`[System.Environment]::OSVersion.VersionString`
+  - `OS`: Este é uma cadeia de versão do SO devolvida pelo`[System.Runtime.InteropServices.RuntimeInformation]::OSDescription`
   - `Platform`: Este é devolvido pelo `[System.Environment]::OSVersion.Platform` estiver definido como `Win32NT` no Windows, `MacOSX` no macOS, e `Unix` no Linux.
 - Remover o `BuildVersion` propriedade da `$PSVersionTable`.
   Esta propriedade foi vivamente associada para a versão de compilação do Windows.

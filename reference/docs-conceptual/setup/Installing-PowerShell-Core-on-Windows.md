@@ -2,10 +2,10 @@
 
 ## <a name="msi"></a>MSI
 
-Para instalar o PowerShell num cliente Windows ou Windows Server (funciona no Windows 7 SP1, Server 2008 R2 e posterior), transfira o pacote MSI
-<!-- TODO: either the Download Center or -->
-a nossa GitHub [versões][] página.
+Para instalar o PowerShell num cliente Windows ou Windows Server (funciona no Windows 7 SP1, Server 2008 R2 e posterior), transfira o pacote MSI da nossa GitHub [versões][] página.
+
 O ficheiro MSI aspeto-`PowerShell-6.0.0.<buildversion>.<os-arch>.msi`
+<!-- TODO: should be updated to point to the Download Center as well -->
 
 Depois de transferido, faça duplo clique o instalador e siga as instruções.
 
