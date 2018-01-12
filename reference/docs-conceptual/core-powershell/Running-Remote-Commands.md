@@ -1,27 +1,39 @@
 ---
 ms.date: 2017-06-05
 keywords: PowerShell, o cmdlet
-title: Executar comandos remotos
+title: Executar Comandos Remotos
 ms.assetid: d6938b56-7dc8-44ba-b4d4-cd7b169fd74d
-ms.openlocfilehash: 5cf9690b8fe4549a99186f172cb6f0de156a4dea
-ms.sourcegitcommit: c5251755c4442487f99ff74fadf7e37bbf039089
+ms.openlocfilehash: 43f07abd642e7de235647fa151537c46ebe86cae
+ms.sourcegitcommit: 6aed37d7f0c9652ae09bb8c11928da7e4783ed7f
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 01/10/2018
 ---
-# <a name="running-remote-commands"></a>Executar comandos remotos
+# <a name="running-remote-commands"></a>Executar Comandos Remotos
+
 Pode executar comandos num ou centenas de computadores com um único comando do Windows PowerShell. O Windows PowerShell suporta informática remoto utilizando várias tecnologias, incluindo WMI, RPC e WS-Management.
+
+## <a name="remoting-in-powershell-core"></a>Comunicação remota do PowerShell Core
+
+PowerShell Core, a edição mais recente do PowerShell no Windows, macOS e Linux, suporta WMI, WS-Management e a comunicação remota SSH.
+(RPC já não é suportada.)
+
+Para obter mais informações sobre esta configuração, consulte:
+
+* [SSH comunicação remota do PowerShell Core] [ssh-gestão remota]
+* [WinRM sistema de interação remota no PowerShell Core] [winrm-sistema de interação remota]
 
 ## <a name="remoting-without-configuration"></a>Comunicação remota sem configuração
 Vários cmdlets do Windows PowerShell têm o parâmetro ComputerName que lhe permite recolher dados e alterar as definições num ou mais computadores remotos. Utilizam uma variedade de tecnologias de comunicação e de trabalho muitos em todos os sistemas operativos do Windows que suporta o Windows PowerShell sem qualquer configuração especial.
 
 Estes cmdlets incluem:
+
 * [Reiniciar o computador](https://go.microsoft.com/fwlink/?LinkId=821625)
 * [Ligação de teste](https://go.microsoft.com/fwlink/?LinkId=821646)
 * [Desmarque-registo de eventos](https://go.microsoft.com/fwlink/?LinkId=821568)
 * [Get-registo de eventos](https://go.microsoft.com/fwlink/?LinkId=821585)
 * [Get-correção](https://go.microsoft.com/fwlink/?LinkId=821586)
-  - [Get-Process](https://go.microsoft.com/fwlink/?linkid=821590)
+* [Get-Process](https://go.microsoft.com/fwlink/?linkid=821590)
 * [Get-Service](https://go.microsoft.com/fwlink/?LinkId=821593)
 * [Serviço de conjunto](https://go.microsoft.com/fwlink/?LinkId=821633)
 * [Get-WinEvent](https://go.microsoft.com/fwlink/?linkid=821529)
@@ -135,3 +147,6 @@ Para obter ajuda com erros de sistema de interação remota, consulte [about_Rem
 - [Novo-PSSession](https://go.microsoft.com/fwlink/?LinkId=821498)
 - [Register-PSSessionConfiguration](https://go.microsoft.com/fwlink/?LinkId=821508)
 - [Fornecedor de WSMan](https://technet.microsoft.com/en-us/library/66fe1241-e08f-49ca-832f-a84c33ca8735)
+
+[wsman-remoting]: WSMan-Remoting-in-PowerShell-Core.md
+[ssh-resmoting]: SSH-Remoting-in-PowerShell-Core.md
