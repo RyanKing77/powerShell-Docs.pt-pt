@@ -1,14 +1,13 @@
 ---
 ms.date: 2017-06-12
-author: eslesar
 ms.topic: conceptual
 keywords: "DSC, do powershell, a configuração, a configuração"
 title: "Configurar um cliente de solicitação do DSC"
-ms.openlocfilehash: d2d1bab7ba2b482b2a66ce59b5f80ea32c242c47
-ms.sourcegitcommit: 75f70c7df01eea5e7a2c16f9a3ab1dd437a1f8fd
+ms.openlocfilehash: 98a67b8d27eeb445bb70f75253ca31e12207d5bd
+ms.sourcegitcommit: a444406120e5af4e746cbbc0558fe89a7e78aef6
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 06/12/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="setting-up-a-dsc-pull-client"></a>Configurar um cliente de solicitação do DSC
 
@@ -19,8 +18,8 @@ Cada nó de destino tem de ser disse para utilizar o modo de extração e determ
 
 Os tópicos seguintes explicam como configurar clientes de extração:
 
-* [Configurar um cliente de solicitação utilizando nomes de configuração](pullClientConfigNames.md)
-* [Configurar um cliente de extração com o ID de configuração](pullClientConfigID.md)
+* [Configurar um cliente de solicitação através de nomes de configuração](pullClientConfigNames.md)
+* [Configurar um cliente de solicitação através de IDs de configuração](pullClientConfigID.md)
 
 > **Tenha em atenção**: estes tópicos que se aplicam ao PowerShell 5.0. Para configurar um cliente de solicitação no PowerShell 4.0, consulte [configurar um cliente de extração com o ID de configuração no PowerShell 4.0](pullClientConfigID4.md).
 

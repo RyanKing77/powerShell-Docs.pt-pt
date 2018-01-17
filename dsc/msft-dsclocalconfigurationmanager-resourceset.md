@@ -1,14 +1,13 @@
 ---
 ms.date: 2017-06-12
-author: eslesar
 ms.topic: conceptual
 keywords: "DSC, do powershell, a configuração, a configuração"
 title: "Método de ResourceSet da classe MSFT_DSCLocalConfigurationManager"
-ms.openlocfilehash: 9cd9c1b3f58a5862db6c4eea0488423b8dfe7310
-ms.sourcegitcommit: 75f70c7df01eea5e7a2c16f9a3ab1dd437a1f8fd
+ms.openlocfilehash: 7291641098578226449f8cbd360da0a3f9842598
+ms.sourcegitcommit: a444406120e5af4e746cbbc0558fe89a7e78aef6
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 06/12/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="resourceset-method-of-the-msftdsclocalconfigurationmanager-class"></a>Método de ResourceSet da classe MSFT_DSCLocalConfigurationManager
 
@@ -29,16 +28,16 @@ uint32 ResourceSet(
 <a name="parameters"></a>Parâmetros
 ----------
 
-*ResourceType* \[no\]  
+*ResourceType* \[in\]  
 O nome do recurso para chamar.
 
-*ModuleName* \[no\]  
+*ModuleName* \[in\]  
 O nome do módulo que contém o recurso a chamada.
 
-*resourceProperty* \[no\]  
+*resourceProperty* \[in\]  
 Especifica o nome de propriedade de recursos e o respetivo valor numa tabela hash como chave e valor, respetivamente. Utilize o [Get-DscResource](https://technet.microsoft.com/en-us/library/dn521625.aspx) cmdlet para detetar as propriedades de recurso e os respetivos tipos.
 
-*RebootRequired* \[enviados\]  
+*RebootRequired* \[out\]  
 No retorno, esta propriedade está definida como **verdadeiro** se o nó de destino tem de ser reiniciado.
 
 ## <a name="return-value"></a>Valor devolvido
@@ -54,7 +53,7 @@ Este é um método estático.
 ------------
 >**MOF:** DscCore.mof
 
->**Espaço de nomes**: Root\Microsoft\Windows\DesiredStateConfiguration
+>**Namespace**: Root\Microsoft\Windows\DesiredStateConfiguration
 
 
 ## <a name="see-also"></a>Consulte também

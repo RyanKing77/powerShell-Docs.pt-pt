@@ -1,14 +1,13 @@
 ---
 ms.date: 2017-06-12
-author: eslesar
 ms.topic: conceptual
 keywords: "DSC, do powershell, a configuração, a configuração"
 title: "Incorporado do Windows PowerShell pretendido recursos de configuração de estado"
-ms.openlocfilehash: 181cafde60d44a1cd663472279dab01f38833522
-ms.sourcegitcommit: 75f70c7df01eea5e7a2c16f9a3ab1dd437a1f8fd
+ms.openlocfilehash: fcc77ac07144864e65413b3c14c61bc8a3422351
+ms.sourcegitcommit: a444406120e5af4e746cbbc0558fe89a7e78aef6
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 06/12/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="built-in-windows-powershell-desired-state-configuration-resources"></a>Incorporado do Windows PowerShell pretendido recursos de configuração de estado
 
@@ -16,16 +15,16 @@ ms.lasthandoff: 06/12/2017
 
 Configuração de estado pretendido do Windows PowerShell (DSC) inclui um conjunto de recursos de configuração incorporada. A tabela seguinte fornece uma lista alfabética com estes recursos e ligações para tópicos que descrevem-los em detalhe. Se precisar de criar recursos adicionais, consulte [criar Windows PowerShell pretendido estado configuração recursos personalizados](authoringResource.md)
 
-* [Recurso de arquivo](archiveResource.md)
-* [Recurso de ambiente](environmentResource.md)
-* [Recurso de ficheiros](fileResource.md)
-* [Grupo de recursos](groupResource.md)
-* [Recursos de registo](logResource.md)
-* [Recurso de pacote](packageResource.md)
-* [Recursos de registo](registryResource.md)
-* [Recurso de script](scriptResource.md)
-* [Recurso de serviço](serviceResource.md)
-* [Recurso de utilizador](userResource.md)
-* [Recurso de WindowsFeature](windowsfeatureResource.md)
-* [Recurso de WindowsProcess](windowsProcessResource.md)
+* [Recurso Archive](archiveResource.md)
+* [Recurso Environment](environmentResource.md)
+* [Recurso File](fileResource.md)
+* [Recurso Group](groupResource.md)
+* [Recurso Log](logResource.md)
+* [Recurso Package](packageResource.md)
+* [Recurso Registry](registryResource.md)
+* [Recurso Script](scriptResource.md)
+* [Recurso Service](serviceResource.md)
+* [Recurso User](userResource.md)
+* [Recurso WindowsFeature](windowsfeatureResource.md)
+* [Recurso WindowsProcess](windowsProcessResource.md)
 

@@ -1,23 +1,21 @@
 ---
 description: 
-manager: carmonm
 ms.topic: article
-author: jpjofre
 ms.prod: powershell
 keywords: PowerShell, o cmdlet
 ms.date: 2016-12-12
 title: Adicionar pswaauthorizationrule
 ms.technology: powershell
 schema: 2.0.0
-ms.openlocfilehash: 18422f71b2a5f9af07af94e4324d3c7774f1d5ea
-ms.sourcegitcommit: d6ab9ab5909ed59cce4ce30e29457e0e75c7ac12
+ms.openlocfilehash: 196797215a678e6f674592dc6b289816aced3c01
+ms.sourcegitcommit: a444406120e5af4e746cbbc0558fe89a7e78aef6
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 09/08/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="add-pswaauthorizationrule"></a>Add-PswaAuthorizationRule
 
-## <a name="synopsis"></a>RESUMO
+## <a name="synopsis"></a>SYNOPSIS
 
 Adiciona uma nova regra de autorização para o conjunto de regras de autorização de acesso de Web do Windows PowerShell®.
 
@@ -60,7 +58,7 @@ As regras de autorização avaliar a credencial primária início de sessão dos
 
 ## <a name="parameters"></a>Parâmetros
 
-### <a name="-computergroupnameltstringgt"></a>-ComputerGroupName&lt;cadeia&gt;
+### <a name="-computergroupnameltstringgt"></a>-ComputerGroupName&lt;String&gt;
 
 Especifica o nome de um grupo de computador nos serviços de domínio do Active Directory (AD DS) ou grupos locais para o qual esta regra concede acesso.
 
@@ -73,7 +71,7 @@ Especifica o nome de um grupo de computador nos serviços de domínio do Active 
 | Aceitar Entrada de Pipeline?               | VERDADEIRO (ByPropertyName)                |
 | Aceitar Carateres Universais?          | falso                                |
 
-### <a name="-computernameltstringgt"></a>-ComputerName&lt;cadeia&gt;
+### <a name="-computernameltstringgt"></a>-ComputerName&lt;String&gt;
 
 Especifica o nome do computador ao qual esta regra concede acesso.
 
@@ -86,7 +84,7 @@ Especifica o nome do computador ao qual esta regra concede acesso.
 | Aceitar Entrada de Pipeline?               | VERDADEIRO (ByPropertyName)                |
 | Aceitar Carateres Universais?          | falso                                |
 
-### <a name="-configurationnameltstringgt"></a>-ConfigurationName&lt;cadeia&gt;
+### <a name="-configurationnameltstringgt"></a>-ConfigurationName&lt;String&gt;
 
 Especifica o nome da configuração de sessão do Windows PowerShell, também conhecido como espaço de execução, ao qual esta regra concede acesso.
 
@@ -126,7 +124,7 @@ Além disso, este também solicita a confirmação ao introduzir um nome de comp
 | Aceitar Entrada de Pipeline?               | falso                                |
 | Aceitar Carateres Universais?          | falso                                |
 
-### <a name="-rulenameltstringgt"></a>-RuleName&lt;cadeia&gt;
+### <a name="-rulenameltstringgt"></a>-RuleName&lt;String&gt;
 
 Especifica o nome amigável para esta regra.
 
@@ -139,7 +137,7 @@ Especifica o nome amigável para esta regra.
 | Aceitar Entrada de Pipeline?               | VERDADEIRO (ByPropertyName)                |
 | Aceitar Carateres Universais?          | falso                                |
 
-### <a name="-usergroupnameltstringgt"></a>-UserGroupName&lt;cadeia\[\]&gt;
+### <a name="-usergroupnameltstringgt"></a>-UserGroupName&lt;String\[\]&gt;
 
 Especifica o nome de um ou mais grupos de utilizador no AD DS ou grupos locais para o qual esta regra concede acesso.
 
@@ -152,7 +150,7 @@ Especifica o nome de um ou mais grupos de utilizador no AD DS ou grupos locais p
 | Aceitar Entrada de Pipeline?               | VERDADEIRO (ByPropertyName)                |
 | Aceitar Carateres Universais?          | falso                                |
 
-### <a name="-usernameltstringgt"></a>-UserName&lt;cadeia\[\]&gt;
+### <a name="-usernameltstringgt"></a>-UserName&lt;String\[\]&gt;
 
 Especifica um ou mais utilizadores ao qual esta regra concede acesso. O nome de utilizador pode ser uma conta de utilizador local no computador gateway ou um utilizador no AD DS.
 O formato é `domain\user` ou `computer\user`.
@@ -166,7 +164,7 @@ O formato é `domain\user` ou `computer\user`.
 | Aceitar Entrada de Pipeline?               | VERDADEIRO (ByValue, ByPropertyName)       |
 | Aceitar Carateres Universais?          | falso                                |
 
-### <a name="ltcommonparametersgt"></a>&lt;Parâmetroscomuns&gt;
+### <a name="ltcommonparametersgt"></a>&lt;CommonParameters&gt;
 
 Este cmdlet suporta os parâmetros comuns: -Verbose, -Debug, -ErrorAction, -ErrorVariable, -OutBuffer, e -OutVariable.
 Para obter mais informações, consulte [about_CommonParameters](https://msdn.microsoft.com/en-us/powershell/reference/5.1/microsoft.powershell.core/about/about_commonparameters).
@@ -251,8 +249,8 @@ Add-PswaAuthorizationRule –UserName * -ComputerName * -ConfigurationName *
 
 - [Get-PswaAuthorizationRule](https://technet.microsoft.com/en-us/library/jj592891(v=wps.630).aspx)
 - [Remove-PswaAuthorizationRule](https://technet.microsoft.com/en-us/library/jj592893(v=wps.630).aspx)
-- [Teste-PswaAuthorizationRule](https://technet.microsoft.com/en-us/library/jj592892(v=wps.630).aspx)
+- [Test-PswaAuthorizationRule](https://technet.microsoft.com/en-us/library/jj592892(v=wps.630).aspx)
 - [Install-PswaWebApplication](https://technet.microsoft.com/en-us/library/jj592894(v=wps.630).aspx)
-- [Adicionar membros](http://go.microsoft.com/fwlink/p/?LinkId=113280)
-- [Novo objeto](http://go.microsoft.com/fwlink/p/?LinkId=113355)
+- [Add-Member](http://go.microsoft.com/fwlink/p/?LinkId=113280)
+- [New-Object](http://go.microsoft.com/fwlink/p/?LinkId=113355)
 - [Get-Credential](http://go.microsoft.com/fwlink/?LinkID=293936)

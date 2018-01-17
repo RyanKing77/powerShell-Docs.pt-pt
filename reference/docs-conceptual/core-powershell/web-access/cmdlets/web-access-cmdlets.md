@@ -1,24 +1,22 @@
 ---
 description: 
-manager: carmonm
 ms.topic: article
-author: jpjofre
 ms.prod: powershell
 keywords: PowerShell, o cmdlet
 ms.date: 2016-12-12
 title: cmdlets de acesso Web
 ms.technology: powershell
-ms.openlocfilehash: daebe2fe2cbccaf8d3f41d265d23dc45d3bb99b6
-ms.sourcegitcommit: d6ab9ab5909ed59cce4ce30e29457e0e75c7ac12
+ms.openlocfilehash: 54821c318b165461ec613678a39c4e3b500dfd0e
+ms.sourcegitcommit: a444406120e5af4e746cbbc0558fe89a7e78aef6
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 09/08/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="windows-powershell-web-access-cmdlets"></a>Cmdlets do Windows PowerShell Web Access
 
 Esta referência fornece sintaxe e descrições de cmdlet para todos os cmdlets do Windows PowerShell® Web acesso específico. Lista os cmdlets por ordem alfabética baseados no verbo no início do cmdlet.
 
-## <a name="add-pswaauthorizationruleadd-pswaauthorizationrulemd"></a>[Adicionar-PswaAuthorizationRule](add-pswaauthorizationrule.md)
+## <a name="add-pswaauthorizationruleadd-pswaauthorizationrulemd"></a>[Add-PswaAuthorizationRule](add-pswaauthorizationrule.md)
 
 Adiciona uma nova regra de autorização para o conjunto de regras de autorização de acesso de Web do Windows PowerShell®.
 
@@ -34,11 +32,11 @@ Configura a aplicação web do acesso Web Windows PowerShell no IIS.
 
 Remove uma regra de autorização especificada do acesso Web Windows PowerShell.
 
-## <a name="test-pswaauthorizationruletest-pswaauthorizationrulemd"></a>[Teste-PswaAuthorizationRule](test-pswaauthorizationrule.md)
+## <a name="test-pswaauthorizationruletest-pswaauthorizationrulemd"></a>[Test-PswaAuthorizationRule](test-pswaauthorizationrule.md)
 
 Os testes de regras de autorização para validar que um determinado utilizador, computador, o pedido de acesso de ponto final está autorizado.
 
-## <a name="uninstall-pswawebapplicationuninstall-pswawebapplicationmd"></a>[Desinstalar-PswaWebApplication](uninstall-pswawebapplication.md)
+## <a name="uninstall-pswawebapplicationuninstall-pswawebapplicationmd"></a>[Uninstall-PswaWebApplication](uninstall-pswawebapplication.md)
 
 Desinstala a aplicação web do Windows PowerShell a partir do IIS.
 

@@ -1,14 +1,13 @@
 ---
 ms.date: 2017-06-12
-author: eslesar
 ms.topic: conceptual
 keywords: "DSC, do powershell, a configuração, a configuração"
 title: Recursos do DSC WaitForSome
-ms.openlocfilehash: 3ea9dc51cbb00cf6158abf114fdb31fd91307df9
-ms.sourcegitcommit: f069ff0689006fece768f178c10e3e3eeaee09f0
+ms.openlocfilehash: cbe16c543f0eeb62dbe1fb439af2f9147f1bc210
+ms.sourcegitcommit: a444406120e5af4e746cbbc0558fe89a7e78aef6
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 10/13/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="dsc-waitforsome-resource"></a>Recursos do DSC WaitForSome
 
@@ -40,10 +39,10 @@ WaitForSome [String] #ResourceName
 |  Propriedade  |  Descrição   | 
 |---|---| 
 | NodeCount| O número mínimo de nós que têm de estar no estado pretendido para este recurso com êxito.|
-| nodeName| Os nós de destino do recurso dependem.| 
-| resourceName| O nome de recurso a dependem.| 
+| NodeName| Os nós de destino do recurso dependem.| 
+| ResourceName| O nome de recurso a dependem.| 
 | RetryIntervalSec| O número de segundos antes de repetir a operação. Mínimo é 1.| 
-| retryCount| O número máximo de vezes para tentar novamente.| 
+| RetryCount| O número máximo de vezes para tentar novamente.| 
 | ThrottleLimit| Número de máquinas para ligar em simultâneo. Predefinição é novo-cimsession predefinido.| 
 | dependsOn | Indica que a configuração de outro recurso tem de executar antes deste recurso é configurado. Por exemplo, se o ID da configuração do recurso de script bloco de que pretende executar primeiro é __ResourceName__ e o respetivo tipo é __ResourceType__, a sintaxe para utilizar esta propriedade é `DependsOn = "[ResourceType]ResourceName"`.|
 | PsDscRunAsCredential | Consulte [através de DSC com credenciais de utilizador](https://docs.microsoft.com/en-us/powershell/dsc/runasuser) |

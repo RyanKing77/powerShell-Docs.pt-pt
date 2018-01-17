@@ -1,14 +1,13 @@
 ---
 ms.date: 2017-06-12
-author: eslesar
 ms.topic: conceptual
 keywords: "DSC, do powershell, a configuração, a configuração"
 title: "Opções de credenciais nos dados de configuração"
-ms.openlocfilehash: 94ff541fc517254ef2876c424307513eaf1d362a
-ms.sourcegitcommit: 28e71b0ae868014523631fec3f5417de751944f3
+ms.openlocfilehash: 15cdb29127d9774c58e1d6518bbba56273e7defd
+ms.sourcegitcommit: a444406120e5af4e746cbbc0558fe89a7e78aef6
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 10/25/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="credentials-options-in-configuration-data"></a>Opções de credenciais nos dados de configuração
 >Aplica-se a: O Windows PowerShell 5.0
@@ -21,7 +20,10 @@ Para suprimir estas mensagens de aviso de erro e utilizam as palavras-chave do D
 * **PsDscAllowPlainTextPassword**
 * **PsDscAllowDomainUser**
 
->**Notas:** <p>Armazenar/transmitir palavras-passe de texto simples não encriptadas é geralmente não segura. É recomendado proteger credenciais através de técnicas tratadas mais à frente neste tópico.</p> <p>O serviço do Automation DSC do Azure permite-lhe gerir centralmente as credenciais para ser compilado em configurações e armazenadas em segurança.  Para informações, consulte: [compilar configurações de DSC / ativos de credenciais](https://docs.microsoft.com/en-in/azure/automation/automation-dsc-compile#credential-assets)</p>
+> [!NOTE]
+> Armazenar/transmitir palavras-passe de texto simples não encriptadas é geralmente não segura. É recomendado proteger credenciais através de técnicas tratadas mais à frente neste tópico.
+> O serviço do Automation DSC do Azure permite-lhe gerir centralmente as credenciais para ser compilado em configurações e armazenadas em segurança.
+> Para informações, consulte: [compilar configurações de DSC / ativos de credenciais](/azure/automation/automation-dsc-compile#credential-assets)
 
 Segue-se um exemplo de transmitir as credenciais de texto simples:
 
@@ -133,7 +135,8 @@ WMF 5.0 adicionado um automático `PsDscRunAsCredential` propriedade para todos 
 Para obter informações sobre como utilizar `PsDscRunAsCredential`, consulte [DSC em execução com as credenciais de utilizador](runAsUser.md).
 Recursos mais recentes e recursos personalizados podem utilizar esta propriedade automática em vez de criar as seus próprios propriedade credenciais.
 
->**Nota:** a estrutura de alguns recursos estão a utilizar várias credenciais para um motivo específico e terá as seus próprios propriedades de credencial.
+> [!NOTE]
+> A estrutura de alguns recursos estão a utilizar várias credenciais para um motivo específico e terá as seus próprios propriedades de credencial.
 
 Para localizar a credencial disponível propriedades num recurso utilizam `Get-DscResource -Name ResourceName -Syntax` ou o Intellisense no ISE do (`CTRL+SPACE`).
 
@@ -222,8 +225,8 @@ for node 'localhost'.
 ```
 
 Neste exemplo tem dois problemas:
-1.  Um erro explica de que as palavras-passe de texto simples não são recomendadas
-2.  Indica um aviso contra a utilização de uma credencial de domínio
+1. Um erro explica de que as palavras-passe de texto simples não são recomendadas
+2. Indica um aviso contra a utilização de uma credencial de domínio
 
 ## <a name="psdscallowplaintextpassword"></a>PsDscAllowPlainTextPassword
 
@@ -266,9 +269,11 @@ $cred = Get-Credential -UserName contoso\genericuser -Message "Password please"
 DomainCredentialExample -DomainCredential $cred -ConfigurationData $cd
 ```
 
->**Nota:** `NodeName` não pode ser igual asterisco, um nome de nó específico é obrigatório.
+> [!NOTE]
+> `NodeName`não pode ser igual asterisco, um nome de nó específico é obrigatório.
 
 **Microsoft aconselha para evitar palavras-passe de texto simples devido ao risco de segurança significativo.**
+
 Uma exceção seria ao utilizar o serviço do Automation DSC do Azure, apenas porque os dados são armazenados sempre encriptados (em trânsito, Inativos no serviço e o restante no nó).
 
 ## <a name="domain-credentials"></a>Credenciais do domínio

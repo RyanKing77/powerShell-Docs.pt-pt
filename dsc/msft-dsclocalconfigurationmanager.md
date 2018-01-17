@@ -1,14 +1,13 @@
 ---
 ms.date: 2017-06-12
-author: eslesar
 ms.topic: conceptual
 keywords: "DSC, do powershell, a configuração, a configuração"
 title: Classe de MSFT_DSCLocalConfigurationManager
-ms.openlocfilehash: 35f732698fcc58f7bd43945edd10c143ffb79af9
-ms.sourcegitcommit: 75f70c7df01eea5e7a2c16f9a3ab1dd437a1f8fd
+ms.openlocfilehash: b2d2ce000988f2c10ab04c4ba5a4650bd3c75ec7
+ms.sourcegitcommit: a444406120e5af4e746cbbc0558fe89a7e78aef6
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 06/12/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="msftdsclocalconfigurationmanager-class"></a>Classe de MSFT_DSCLocalConfigurationManager
 
@@ -51,7 +50,7 @@ O **MSFT_DSCLocalConfigurationManager** classe tem estes métodos.
 | [ResourceGet](msft-dsclocalconfigurationmanager-resourceget.md)| Chamadas diretamente a **obter** método de um recurso de DSC.| 
 | [ResourceSet](msft-dsclocalconfigurationmanager-resourceset.md)| Chamadas diretamente a **definir** método de um recurso de DSC.| 
 | [ResourceTest](msft-dsclocalconfigurationmanager-resourcetest.md)| Chamadas diretamente a **teste** método de um recurso de DSC.| 
-| [Reversão](msft-dsclocalconfigurationmanager-rollback.md)| Rolls novamente para uma configuração anterior.| 
+| [RollBack](msft-dsclocalconfigurationmanager-rollback.md)| Rolls novamente para uma configuração anterior.| 
 | [SendConfiguration](msft-dsclocalconfigurationmanager-sendconfiguration.md)| Envia o documento de configuração para o nó gerido e guarda-o como uma alteração pendente.| 
 | [SendConfigurationApply](msft-dsclocalconfigurationmanager-sendconfigurationapply.md)| Envia o documento de configuração para o nó gerido e utiliza o agente de configuração para aplicar a configuração.| 
 | [SendConfigurationApplyAsync](msft-dsclocalconfigurationmanager-sendconfigurationapplyasync.md)| Enviar o documento de configuração para o nó gerido e começar a utilizar o agente de configuração para aplicar a configuração. Utilize GetConfigurationResultOutput para obter a saída de resultado.| 
@@ -67,7 +66,7 @@ O **MSFT_DSCLocalConfigurationManager** classe tem estes métodos.
 ------------
 >**MOF:** DscCore.mof
 
->**Espaço de nomes**: Root\Microsoft\Windows\DesiredStateConfiguration
+>**Namespace**: Root\Microsoft\Windows\DesiredStateConfiguration
 
 
 

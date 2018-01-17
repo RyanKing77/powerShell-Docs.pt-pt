@@ -1,14 +1,13 @@
 ---
 ms.date: 2017-06-12
-author: eslesar
 ms.topic: conceptual
 keywords: "DSC, do powershell, a configuração, a configuração"
 title: DSC de Linux nxPackage recursos
-ms.openlocfilehash: 11019b1cd12f23b0b498b7cb9a06e02c46c3c279
-ms.sourcegitcommit: 75f70c7df01eea5e7a2c16f9a3ab1dd437a1f8fd
+ms.openlocfilehash: 41c627ebb39dad535f7acc8fe34739355f7a81b5
+ms.sourcegitcommit: a444406120e5af4e746cbbc0558fe89a7e78aef6
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 06/12/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="dsc-for-linux-nxpackage-resource"></a>DSC de Linux nxPackage recursos
 
@@ -38,7 +37,7 @@ nxPackage <string> #ResourceName
 | Nome| O nome do pacote para o qual pretende garantir um estado específico.| 
 | Certifique-se| Determina se deve verificar se o pacote existir. Defina esta propriedade para "Presente" para garantir que o pacote existir. Defina-o para "Ausente", certifique-se de que o pacote não existe. O valor predefinido é "Presente".|  
 | PackageManager| Os valores suportados são "yum", "apt" e "zypper". Especifica o Gestor de pacotes a utilizar ao instalar pacotes. Se **FilePath** for especificado, o caminho fornecido será utilizado para instalar o pacote. Caso contrário, um Gestor de pacote será utilizado para instalar o pacote a partir de um repositório de pré-configurado. Se nenhum dos **PackageManager** nem **FilePath** são fornecidos, o Gestor de pacote predefinido para o sistema irá ser utilizado.| 
-| filePath| O caminho do ficheiro onde reside o pacote| 
+| FilePath| O caminho do ficheiro onde reside o pacote| 
 | PackageGroup| Se **$true**, a **nome** deve ser o nome de um grupo do pacote para utilização com um **PackageManager**. **PacakgeGroup** não é válido quando fornecer um **FilePath**.| 
 | Argumentos| Uma cadeia de argumentos que serão transmitidas ao pacote exatamente como fornecido.| 
 | ReturnCode| O código de retorno esperado. Se o código de retorno de real não coincide com que o valor esperado indicado aqui, que a configuração irá devolver um erro.| 

@@ -1,14 +1,13 @@
 ---
 ms.date: 2017-06-12
-author: eslesar
 ms.topic: conceptual
 keywords: "DSC, do powershell, a configuração, a configuração"
 title: "Método de SendConfigurationApplyAsync da classe MSFT_DSCLocalConfigurationManager"
-ms.openlocfilehash: e680bfd1c5b39d364c90cf5ef6b43d0a568af23a
-ms.sourcegitcommit: 75f70c7df01eea5e7a2c16f9a3ab1dd437a1f8fd
+ms.openlocfilehash: e680d510aaac097f4f0de80660274230e028ed45
+ms.sourcegitcommit: a444406120e5af4e746cbbc0558fe89a7e78aef6
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 06/12/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="sendconfigurationapplyasync-method-of-the-msftdsclocalconfigurationmanager-class"></a>Método de SendConfigurationApplyAsync da classe MSFT_DSCLocalConfigurationManager
 
@@ -28,13 +27,13 @@ uint32 SendConfigurationApplyAsync(
 <a name="parameters"></a>Parâmetros
 ----------
 
-*ConfigurationData* \[no\]  
+*ConfigurationData* \[in\]  
 Os dados de ambiente para a configuração.
 
-*Forçar* \[no\]  
+*force* \[in\]  
 **Verdadeiro** para forçar a configuração para parar.
 
-*jobId* \[no\]  
+*jobId* \[in\]  
 O ID da tarefa para o qual pretende enviar a configuração.
 
 ## <a name="return-value"></a>Valor devolvido
@@ -50,7 +49,7 @@ Este é um método estático.
 ------------
 >**MOF:** DscCore.mof
 
->**Espaço de nomes**: Root\Microsoft\Windows\DesiredStateConfiguration
+>**Namespace**: Root\Microsoft\Windows\DesiredStateConfiguration
 
 
 ## <a name="see-also"></a>Consulte também

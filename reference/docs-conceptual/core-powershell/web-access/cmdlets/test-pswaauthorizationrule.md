@@ -1,26 +1,24 @@
 ---
 description: 
-manager: carmonm
 ms.topic: article
-author: jpjofre
 ms.prod: powershell
 keywords: PowerShell, o cmdlet
 ms.date: 2016-12-12
 title: teste pswaauthorizationrule
 ms.technology: powershell
-ms.openlocfilehash: 900547301c815ba6fe3a9507f975503fec864e4e
-ms.sourcegitcommit: d6ab9ab5909ed59cce4ce30e29457e0e75c7ac12
+ms.openlocfilehash: fb2937397616160c70b056e412e42fb8ff4c2f27
+ms.sourcegitcommit: a444406120e5af4e746cbbc0558fe89a7e78aef6
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 09/08/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="test-pswaauthorizationrule"></a>Test-PswaAuthorizationRule
 
-## <a name="synopsis"></a>RESUMO
+## <a name="synopsis"></a>SYNOPSIS
 
 Verifica se existe uma regra para um utilizador especificado, o computador ou o ponto final.
 
-## <a name="syntax"></a>SINTAXE
+## <a name="syntax"></a>SYNTAX
 
 ### <a name="computername"></a>ComputerName
 ```
@@ -123,7 +121,7 @@ Especifica o nome do utilizador para testar.
 | Aceitar Entrada de Pipeline?               | falso                                |
 | Aceitar Carateres Universais?          | falso                                |
 
-### <a name="ltcommonparametersgt"></a>&lt;Parâmetroscomuns&gt;
+### <a name="ltcommonparametersgt"></a>&lt;CommonParameters&gt;
 
 Este cmdlet suporta os parâmetros comuns: -Verbose, -Debug, -ErrorAction, -ErrorVariable, -OutBuffer, e -OutVariable.
 Para obter mais informações, consulte [about_CommonParameters](http://go.microsoft.com/fwlink/p/?LinkID=113216).
@@ -160,7 +158,7 @@ Test-PswaAuthorizationRule -UserName contoso\mhanson -ComputerName *
 
 ## <a name="related-topics"></a>Tópicos relacionados
 
-- [Adicionar-PswaAuthorizationRule](add-pswaauthorizationrule.md)
+- [Add-PswaAuthorizationRule](add-pswaauthorizationrule.md)
 - [Get-PswaAuthorizationRule](get-pswaauthorizationrule.md)
 - [Install-PswaWebApplication](install-pswawebapplication.md)
 - [Remove-PswaAuthorizationRule](remove-pswaauthorizationrule.md)

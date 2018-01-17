@@ -1,26 +1,24 @@
 ---
 description: 
-manager: carmonm
 ms.topic: article
-author: jpjofre
 ms.prod: powershell
 keywords: PowerShell, o cmdlet
 ms.date: 2016-12-12
 title: desinstalar pswawebapplication
 ms.technology: powershell
-ms.openlocfilehash: 5fe608b3bfbb90f842f16c1f5a8c51879589cf6d
-ms.sourcegitcommit: d6ab9ab5909ed59cce4ce30e29457e0e75c7ac12
+ms.openlocfilehash: cc54c94426d754ff2d3bf658e3e92083f02cd6c7
+ms.sourcegitcommit: a444406120e5af4e746cbbc0558fe89a7e78aef6
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 09/08/2017
+ms.lasthandoff: 01/17/2018
 ---
-# <a name="uninstall-pswawebapplication"></a>Desinstalar-PswaWebApplication
+# <a name="uninstall-pswawebapplication"></a>Uninstall-PswaWebApplication
 
-## <a name="synopsis"></a>RESUMO
+## <a name="synopsis"></a>SYNOPSIS
 
 Desinstala a aplicação de web Windows PowerShell®.
 
-## <a name="syntax"></a>SINTAXE
+## <a name="syntax"></a>SYNTAX
 
 ### <a name="default"></a>Predefinido
 ```
@@ -98,7 +96,7 @@ O cmdlet não é executado.
 | Aceitar Entrada de Pipeline?               | falso                                |
 | Aceitar Carateres Universais?          | falso                                |
 
-### <a name="ltcommonparametersgt"></a>&lt;Parâmetroscomuns&gt;
+### <a name="ltcommonparametersgt"></a>&lt;CommonParameters&gt;
 
 Este cmdlet suporta os parâmetros comuns: -Verbose, -Debug, -ErrorAction, -ErrorVariable, -OutBuffer, e -OutVariable.
 Para obter mais informações, consulte [about_CommonParameters](http://go.microsoft.com/fwlink/p/?LinkID=113216).
@@ -142,8 +140,8 @@ Uninstall-PswaWebApplication -WebApplicationName TestApplication -WebsiteName My
 
 ## <a name="related-topics"></a>Tópicos relacionados
 
-- [Adicionar-PswaAuthorizationRule](add-pswaauthorizationrule.md)
+- [Add-PswaAuthorizationRule](add-pswaauthorizationrule.md)
 - [Get-PswaAuthorizationRule](get-pswaauthorizationrule.md)
 - [Install-PswaWebApplication](install-pswawebapplication.md)
 - [Remove-PswaAuthorizationRule](remove-pswaauthorizationrule.md)
-- [Teste-PswaAuthorizationRule](test-pswaauthorizationrule.md)
+- [Test-PswaAuthorizationRule](test-pswaauthorizationrule.md)

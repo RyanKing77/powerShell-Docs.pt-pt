@@ -1,14 +1,13 @@
 ---
 ms.date: 2017-06-12
-author: eslesar
 ms.topic: conceptual
 keywords: "DSC, do powershell, a configuração, a configuração"
 title: Recursos de registo DSC
-ms.openlocfilehash: 649cb60578c053c04a7fcc7446881fb76daee26a
-ms.sourcegitcommit: 79e8f03afb8d0b0bb0a167e56464929b27f51990
+ms.openlocfilehash: 1e73e4275c0d9db5d8fac7641514ea8190f719ca
+ms.sourcegitcommit: a444406120e5af4e746cbbc0558fe89a7e78aef6
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 06/26/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="dsc-registry-resource"></a>Recursos de registo DSC
 
@@ -43,7 +42,7 @@ Registry [string] #ResourceName
 | dependsOn| Indica que a configuração de outro recurso tem de executar antes deste recurso é configurado. Por exemplo, se o ID da configuração do recurso de script bloco de que pretende executar primeiro é __ResourceName__ e o respetivo tipo é __ResourceType__, a sintaxe para utilizar esta propriedade é `DependsOn = "[ResourceType]ResourceName"`.| 
 | ValueData| Os dados para o valor de registo.| 
 | ValueType| Indica o tipo do valor. Os tipos suportados são: 
-<ul><li>Cadeia (REG_SZ)</li>
+<ul><li>String (REG_SZ)</li>
 
 
 <li>Binário (REG binário)</li>
@@ -55,7 +54,7 @@ Registry [string] #ResourceName
 <li>QWORD 64-bit (REG_QWORD)</li>
 
 
-<li>Cadeia múltipla (REG_MULTI_SZ)</li>
+<li>Multi-string (REG_MULTI_SZ)</li>
 
 
 <li>Cadeia expansível (REG_EXPAND_SZ)</li></ul>

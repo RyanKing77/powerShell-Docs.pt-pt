@@ -13,7 +13,7 @@ Isto significa que o Windows PowerShell expõe o conjunto de API oferecido pelo 
 
 As APIs partilhadas entre o .NET Core e o .NET Framework são definidas como parte da [.NET padrão][].
 
-Para obter mais informações sobre a forma como afeta a compatibilidade de módulo/script entre PowerShell Core e o Windows PowerShell, consulte [Backwards compatibilidade com o Windows PowerShell] [#backwards-compatibilidade-com-windows-powershell]
+Para obter mais informações sobre a forma como afeta a compatibilidade de módulo/script entre PowerShell Core e o Windows PowerShell, consulte [Backwards compatibilidade com o Windows PowerShell](#backwards-compatibility-with-windows-powershell).
 
 ## <a name="support-for-macos-and-linux"></a>Suporte para macOS e Linux
 
@@ -28,11 +28,11 @@ PowerShell oficialmente suporta agora macOS e do Linux, incluindo:
 - Red Hat Enterprise Linux 7
 - OpenSUSE 42.2
 - Fedora 25, 26
-- macOS 10.12 +
+- macOS 10.12+
 
 A nossa Comunidade também tem contribuíram pacotes para as seguintes plataformas, mas não são suportados oficialmente:
 
-- Arquitetura de Linux
+- Arch Linux
 - Kali Linux
 - AppImage (funciona em várias plataformas Linux)
 
@@ -59,7 +59,7 @@ Outras pessoas só estão presentes ou aplicável em instalações de não-Windo
 No macOS, PowerShell utiliza o nativo `os_log` APIs para iniciar sessão da Apple [unified registo sistema][os_log].
 No Linux, PowerShell utiliza [Syslog][], uma solução de registo ubíquo.
 
-### <a name="filesystem"></a>Sistema de ficheiros
+### <a name="filesystem"></a>Filesystem
 
 Um número de alterações foram efetuado no macOS e Linux para suportar carateres tradicionalmente não suportadas no Windows:
 
@@ -172,18 +172,18 @@ PowerShell Core altera a codificação predefinida a estar em conformidade com a
 Isto significa que todos os cmdlets incorporados a utilizar o `-Encoding` utilização do parâmetro de `UTF8NoBOM` valor por predefinição.
 Os seguintes cmdlets são afetados por esta alteração:
 
-- Adicionar conteúdo
-- Exportação Clixml
+- Add-Content
+- Export-Clixml
 - Export-Csv
-- Exportação-PSSession
+- Export-PSSession
 - Formato hexadecimal
-- Get-conteúdo
+- Get-Content
 - Import-Csv
-- Novo ModuleManifest
+- New-ModuleManifest
 - Out-File
 - Selecione cadeia
-- Enviar-MailMessage
-- Conjunto de conteúdo
+- Send-MailMessage
+- Set-Content
 
 Estes cmdlets também ter sido atualizados para que o `-Encoding` parâmetro universalmente aceita `System.Text.Encoding`.
 
@@ -271,7 +271,7 @@ Para mais informações sobre as tarefas do PowerShell, consulte [about_Jobs](ht
 - Adicionar explícita `ContentType` deteção para `Invoke-RestMethod` (#4692)
 - Corrigir web cmdlets `-SkipHeaderValidation` para trabalhar com os cabeçalhos de agente de utilizador não padrão. (#4479 & #4512) (Obrigado @markekraus)
 
-### <a name="json-cmdlets"></a>Cmdlets JSON
+### <a name="json-cmdlets"></a>JSON cmdlets
 
 - Adicionar `-AsHashtable` para `ConvertFrom-Json` para devolver um `Hashtable` em vez disso. (#5043) (Obrigado @bergmeister!)
 - Utilize o formatador prettier com `ConvertTo-Json` saída. (#2787) (Thanks para @kittholland!)

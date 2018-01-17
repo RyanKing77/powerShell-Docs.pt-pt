@@ -1,14 +1,13 @@
 ---
 ms.date: 2017-06-12
-author: eslesar
 ms.topic: conceptual
 keywords: "DSC, do powershell, a configuração, a configuração"
 title: Utilizar a ferramenta do Designer de recursos
-ms.openlocfilehash: 5a034547d0850682513e9a80367ce148bfcf0bdc
-ms.sourcegitcommit: a775e4788616490980123e8e6ea78594ffeb6f7d
+ms.openlocfilehash: c21602e219b5830877cc211e092e93bb7fc8ad9c
+ms.sourcegitcommit: a444406120e5af4e746cbbc0558fe89a7e78aef6
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 06/29/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="using-the-resource-designer-tool"></a>Utilizar a ferramenta do Designer de recursos
 
@@ -182,4 +181,4 @@ A ferramenta de recurso Designer expõe um cmdlet mais que pode ser utilizada pa
 [Criar recursos de configuração do estado pretendido do PowerShell de personalizada do Windows](authoringResource.md)
 
 #### <a name="other-resources"></a>Outros Recursos
-[xDscResourceDesigner módulo](https://powershellgallery.com/packages/xDscResourceDesigner)
+[xDscResourceDesigner Module](https://powershellgallery.com/packages/xDscResourceDesigner)

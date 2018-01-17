@@ -1,14 +1,13 @@
 ---
 ms.date: 2017-06-12
-author: eslesar
 ms.topic: conceptual
 keywords: "DSC, do powershell, a configuração, a configuração"
 title: Utilizar o DSC no servidor de Nano
-ms.openlocfilehash: 2233106bfd07144132f95ea7957ebfa3248ca219
-ms.sourcegitcommit: 75f70c7df01eea5e7a2c16f9a3ab1dd437a1f8fd
+ms.openlocfilehash: 7427d6bb7644f513b9b523f284109f5ae0f8ef27
+ms.sourcegitcommit: a444406120e5af4e746cbbc0558fe89a7e78aef6
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 06/12/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="using-dsc-on-nano-server"></a>Utilizar o DSC no servidor de Nano
 
@@ -34,22 +33,22 @@ Para obter informações sobre como instalar e utilizar o servidor de nano for a
 
 * Todos os cmdlets de DSC que existe uma versão completa do Windows Server, incluindo o seguinte: 
   * [Get-DscLocalConfigurationManager](https://technet.microsoft.com/en-us/library/dn407378.aspx)
-  * [Conjunto DscLocalConfigurationManager](https://technet.microsoft.com/en-us/library/dn521621.aspx)   
-  * [Ativar DscDebug](https://technet.microsoft.com/en-us/library/mt517870.aspx)
-  * [Desativar DscDebug](https://technet.microsoft.com/en-us/library/mt517872.aspx)       
-  * [Início DscConfiguration](https://technet.microsoft.com/en-us/library/dn521623.aspx)
+  * [Set-DscLocalConfigurationManager](https://technet.microsoft.com/en-us/library/dn521621.aspx)   
+  * [Enable-DscDebug](https://technet.microsoft.com/en-us/library/mt517870.aspx)
+  * [Disable-DscDebug](https://technet.microsoft.com/en-us/library/mt517872.aspx)       
+  * [Start-DscConfiguration](https://technet.microsoft.com/en-us/library/dn521623.aspx)
   * [Stop-DscConfiguration](https://technet.microsoft.com/en-us/library/mt143542.aspx)
   * [Get-DscConfiguration](https://technet.microsoft.com/en-us/library/dn407379.aspx)
-  * [Teste DscConfiguration](https://technet.microsoft.com/en-us/library/dn407382.aspx)      
-  * [DscConfiguraiton publicar](https://technet.microsoft.com/en-us/library/mt517875.aspx) 
-  * [Atualização DscConfiguration](https://technet.microsoft.com/en-us/library/mt143541.aspx)
-  * [Restauro DscConfiguration](https://technet.microsoft.com/en-us/library/dn407383.aspx)
-  * [Remover DscConfigurationDocument](https://technet.microsoft.com/en-us/library/mt143544.aspx)
+  * [Test-DscConfiguration](https://technet.microsoft.com/en-us/library/dn407382.aspx)      
+  * [Publish-DscConfiguraiton](https://technet.microsoft.com/en-us/library/mt517875.aspx) 
+  * [Update-DscConfiguration](https://technet.microsoft.com/en-us/library/mt143541.aspx)
+  * [Restore-DscConfiguration](https://technet.microsoft.com/en-us/library/dn407383.aspx)
+  * [Remove-DscConfigurationDocument](https://technet.microsoft.com/en-us/library/mt143544.aspx)
   * [Get-DscConfigurationStatus](https://technet.microsoft.com/en-us/library/mt517868.aspx)
-  * [DscResource invocar](https://technet.microsoft.com/en-us/library/mt517869.aspx)
-  * [Localizar DscResource](https://technet.microsoft.com/en-us/library/mt517874.aspx)
+  * [Invoke-DscResource](https://technet.microsoft.com/en-us/library/mt517869.aspx)
+  * [Find-DscResource](https://technet.microsoft.com/en-us/library/mt517874.aspx)
   * [Get-DscResource](https://technet.microsoft.com/en-us/library/dn521625.aspx)
-  * [Novo DscChecksum](https://technet.microsoft.com/en-us/library/dn521622.aspx)    
+  * [New-DscChecksum](https://technet.microsoft.com/en-us/library/dn521622.aspx)    
 
 * Compilar configurações (consulte [configurações de DSC](configurations.md))
 
@@ -83,11 +82,11 @@ Para obter informações sobre como instalar e utilizar o servidor de nano for a
 
 * Recursos que são totalmente funcionais
   * [Arquivo](archiveResource.md)
-  * [Ambiente](environmentResource.md)
+  * [Environment](environmentResource.md)
   * [Ficheiro](fileResource.md)
   * [Registo](logResource.md)
   * ProcessSet
-  * [Registo](registryResource.md)
+  * [Registry](registryResource.md)
   * [Script](scriptResource.md)
   * WindowsPackageCab
   * [WindowsProcess](windowsProcessResource.md)

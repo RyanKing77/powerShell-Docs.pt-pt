@@ -1,14 +1,13 @@
 ---
 ms.date: 2017-06-12
-author: eslesar
 ms.topic: conceptual
 keywords: "DSC, do powershell, a configuração, a configuração"
 title: "Chamar os métodos de recursos de DSC diretamente"
-ms.openlocfilehash: ab00e66d526eda244500a41e450c56b0151274ee
-ms.sourcegitcommit: 75f70c7df01eea5e7a2c16f9a3ab1dd437a1f8fd
+ms.openlocfilehash: 3e83984fbf31dfcfec76fa15cdd9b83d92501aa0
+ms.sourcegitcommit: a444406120e5af4e746cbbc0558fe89a7e78aef6
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 06/12/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="calling-dsc-resource-methods-directly"></a>Chamar os métodos de recursos de DSC diretamente
 
@@ -54,5 +53,5 @@ $result.ItemValue | fl
 ## <a name="see-also"></a>Consulte Também
 - [Escrever um recurso personalizado de DSC com MOF](authoringResourceMOF.md) 
 - [Escrever um recurso personalizado de DSC com classes de PowerShell](authoringResourceClass.md)
-- [A depuração de recursos de DSC](debugResource.md)
+- [Depurar os recursos de DSC](debugResource.md)
 

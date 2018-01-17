@@ -1,14 +1,13 @@
 ---
 ms.date: 2017-06-12
-author: eslesar
 ms.topic: conceptual
 keywords: "DSC, do powershell, a configuração, a configuração"
 title: "Método de GetConfiguration da classe MSFT_DSCLocalConfigurationManager"
-ms.openlocfilehash: 96676a76a0302543e5e4a214c82ed952d7f52a71
-ms.sourcegitcommit: 75f70c7df01eea5e7a2c16f9a3ab1dd437a1f8fd
+ms.openlocfilehash: 60f4b49575dbb28ce74af0500e6982ec5d2e7a66
+ms.sourcegitcommit: a444406120e5af4e746cbbc0558fe89a7e78aef6
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 06/12/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="getconfiguration-method-of-the-msftdsclocalconfigurationmanager-class"></a>Método de GetConfiguration da classe MSFT_DSCLocalConfigurationManager
 
@@ -27,10 +26,10 @@ uint32 GetConfiguration(
 <a name="parameters"></a>Parâmetros
 ----------
 
-*configurationData* \[no\]  
+*configurationData* \[in\]  
 Especifica os dados de configuração para enviar.
 
-*configurações* \[enviados\]  
+*configurations* \[out\]  
 No retorno, contém uma instância incorporada das configurações.
 
 ## <a name="return-value"></a>Valor devolvido
@@ -46,7 +45,7 @@ Este é um método estático.
 ------------
 >**MOF:** DscCore.mof
 
->**Espaço de nomes**: Root\Microsoft\Windows\DesiredStateConfiguration
+>**Namespace**: Root\Microsoft\Windows\DesiredStateConfiguration
 
 
 ## <a name="see-also"></a>Consulte também

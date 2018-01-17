@@ -1,14 +1,13 @@
 ---
 ms.date: 2017-10-31
-author: eslesar
 ms.topic: conceptual
 keywords: "DSC, do powershell, a configuração, a configuração"
 title: Proteger o ficheiro MOF
-ms.openlocfilehash: ed9d259e2cd963560ad6f5b60702c54e2fa36900
-ms.sourcegitcommit: cd5a1f054cbf9eb95c5242a995f9741e031ddb24
+ms.openlocfilehash: fdb8fa17e9b5e92b56e0a62bf850529c241eee41
+ms.sourcegitcommit: a444406120e5af4e746cbbc0558fe89a7e78aef6
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 11/28/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="securing-the-mof-file"></a>Proteger o ficheiro MOF
 
@@ -81,7 +80,7 @@ O exemplo seguinte:
  3. importa o certificado de chave público para o **meu** arquivo de certificados o **criação nó**.
 
 #### <a name="on-the-target-node-create-and-export-the-certificate"></a>No nó de destino: criar e exportar o certificado
->Nó criação: Windows Server 2016 e o Windows 10
+>Nó de destino: Windows Server 2016 e o Windows 10
 
 ```powershell
 # note: These steps need to be performed in an Administrator PowerShell session
@@ -91,7 +90,7 @@ $cert | Export-Certificate -FilePath "$env:temp\DscPublicKey.cer" -Force
 ```
 Uma vez exportado, o ```DscPublicKey.cer``` teria de ser copiados para o **criação nó**.
 
->Nó de criação: Windows Server 2012 R2/Windows 8.1 e versões anteriores
+>Nó de destino: Windows Server 2012 R2/Windows 8.1 e versões anteriores
 
 Porque o cmdlet New-SelfSignedCertificate em sistemas operativos Windows antes do Windows 10 e Windows Server 2016 não suportam o **tipo** parâmetro, um método alternativo de criar este certificado é necessária a estes sistemas operativos.
 Neste caso, pode utilizar ```makecert.exe``` ou ```certutil.exe``` para criar o certificado.
@@ -109,7 +108,6 @@ New-SelfsignedCertificateEx `
     -FriendlyName 'DSC Credential Encryption certificate' `
     -Exportable `
     -StoreLocation 'LocalMachine' `
-    -StoreName 'My' `
     -KeyLength 2048 `
     -ProviderName 'Microsoft Enhanced Cryptographic Provider v1.0' `
     -AlgorithmName 'RSA' `

@@ -1,26 +1,24 @@
 ---
 description: 
-manager: carmonm
 ms.topic: article
-author: jpjofre
 ms.prod: powershell
 keywords: PowerShell, o cmdlet
 ms.date: 2016-12-12
 title: remover pswaauthorizationrule
 ms.technology: powershell
-ms.openlocfilehash: a8304b68a446de0be98aa732304c71302fb8389e
-ms.sourcegitcommit: d6ab9ab5909ed59cce4ce30e29457e0e75c7ac12
+ms.openlocfilehash: 4d039e7e00f87bc7aebb89217251edbbb5c3f5be
+ms.sourcegitcommit: a444406120e5af4e746cbbc0558fe89a7e78aef6
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 09/08/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="remove-pswaauthorizationrule"></a>Remove-PswaAuthorizationRule
 
-## <a name="synopsis"></a>RESUMO
+## <a name="synopsis"></a>SYNOPSIS
 
 Remove uma regra de autorização especificada do Windows PowerShell® Web Access.
 
-## <a name="syntax"></a>SINTAXE
+## <a name="syntax"></a>SYNTAX
 
 ### <a name="id"></a>Id
 ```
@@ -101,14 +99,14 @@ Apresenta o que aconteceria mediante a execução do cmdlet. O cmdlet não é ex
 | Aceitar Entrada de Pipeline?               | falso                                |
 | Aceitar Carateres Universais?          | falso                                |
 
-### <a name="ltcommonparametersgt"></a>&lt;Parâmetroscomuns&gt;
+### <a name="ltcommonparametersgt"></a>&lt;CommonParameters&gt;
 
 Este cmdlet suporta os parâmetros comuns: -Verbose, -Debug, -ErrorAction, -ErrorVariable, -OutBuffer, e -OutVariable.
 Para obter mais informações, consulte [about_CommonParameters](http://go.microsoft.com/fwlink/p/?LinkID=113216).
 
 ## <a name="inputs"></a>ENTRADAS
 
-### <a name="int"></a>Int\[\]
+### <a name="int"></a>int\[\]
 
 Este cmdlet aceita uma matriz de números inteiros ou uma matriz de objetos de PswaAuthorizationRule.
 
@@ -140,7 +138,7 @@ Get-PswaAuthorizationRule | Remove-PswaAuthorizationRule -Confirm
 
 ## <a name="related-topics"></a>Tópicos relacionados
 
-- [Adicionar-PswaAuthorizationRule](add-pswaauthorizationrule.md)
+- [Add-PswaAuthorizationRule](add-pswaauthorizationrule.md)
 - [Get-PswaAuthorizationRule](get-pswaauthorizationrule.md)
 - [Install-PswaWebApplication](install-pswawebapplication.md)
-- [Teste-PswaAuthorizationRule](test-pswaauthorizationrule.md)
+- [Test-PswaAuthorizationRule](test-pswaauthorizationrule.md)

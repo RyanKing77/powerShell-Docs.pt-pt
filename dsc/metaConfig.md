@@ -1,14 +1,13 @@
 ---
 ms.date: 2017-10-11
-author: eslesar;mgreenegit
 ms.topic: conceptual
 keywords: "DSC, do powershell, a configuração, a configuração"
 title: "Configurar o Gestor de configuração Local"
-ms.openlocfilehash: 6ca527aae263637bbca5a064e0d770fe9384d679
-ms.sourcegitcommit: ea01285a3aa7818d67d4761fbd8793b9b66bd5f7
+ms.openlocfilehash: 947bc17347204f6f15a24f83b449582afe65a4ee
+ms.sourcegitcommit: a444406120e5af4e746cbbc0558fe89a7e78aef6
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 12/12/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="configuring-the-local-configuration-manager"></a>Configurar o Gestor de configuração Local
 
@@ -46,7 +45,7 @@ configuration LCMConfig
             RefreshMode = 'Push'
         }
     }
-} 
+}
 ```
 
 O processo de aplicar as definições para o MMC é semelhante ao aplicar uma configuração de DSC.
@@ -76,16 +75,16 @@ As seguintes propriedades estão disponíveis num **definições** bloco.
 | ActionAfterReboot| cadeia| Especifica o que acontece após um reinício durante a aplicação de uma configuração. Os valores possíveis são __"ContinueConfiguration"__ e __"StopConfiguration"__. <ul><li> __ContinueConfiguration__: continuar a aplicar a configuração atual após o reinício do computador. Este é o valor predefinido</li><li>__StopConfiguration__: parar a configuração atual após o reinício do computador.</li></ul>|
 | AllowModuleOverwrite| bool| __$TRUE__ se as novas configurações transferidas a partir do serviço de extração estão autorizadas a substituir as antigas no nó de destino. Caso contrário, $FALSE.|
 | CertificateID| cadeia| O thumbprint de um certificado utilizado para proteger as credenciais transmitidas numa configuração. Para obter mais informações consulte [pretende proteger credenciais na configuração de estado pretendido do Windows PowerShell](http://blogs.msdn.com/b/powershell/archive/2014/01/31/want-to-secure-credentials-in-windows-powershell-desired-state-configuration.aspx)?. <br> __Nota:__ é gerida automaticamente se utilizar o serviço de solicitação do Automation DSC do Azure.|
-| ConfigurationDownloadManagers| CimInstance []| Obsoleto. Utilize __ConfigurationRepositoryWeb__ e __ConfigurationRepositoryShare__ pontos finais de serviço de blocos para definir a solicitação de configuração.|
+| ConfigurationDownloadManagers| CimInstance[]| Obsoleto. Utilize __ConfigurationRepositoryWeb__ e __ConfigurationRepositoryShare__ pontos finais de serviço de blocos para definir a solicitação de configuração.|
 | ConfigurationID| cadeia| Para efeitos de compatibilidade com mais antiga solicitação serviço versões. Um GUID que identifica o ficheiro de configuração a obter a partir de um serviço de extração. O nó irá solicitar configurações do serviço de solicitação, se o nome da configuração MOF denominado ConfigurationID.mof.<br> __Nota:__ se definir esta propriedade, registar o nó de um serviço de solicitação utilizando __RegistrationKey__ não funciona. Para obter mais informações, consulte [configurar um cliente de extração com nomes de configuração](pullClientConfigNames.md).|
 | ConfigurationMode| cadeia | Especifica a forma como o MMC, na verdade, aplica-se a configuração para os nós de destino. Os valores possíveis são __"ApplyOnly"__,__"ApplyandMonitior"__, e __"ApplyandAutoCorrect"__. <ul><li>__ApplyOnly__: aplica-se a configuração de DSC e faz nada adicional a menos que é feito o Push de uma nova configuração para o nó de destino ou quando uma nova configuração é retirada de um serviço. Após a aplicação inicial de uma nova configuração, DSC não verificar que se desviam de um estado anteriormente configurado. Tenha em atenção que o DSC tentará aplicar a configuração até ter êxito antes de __ApplyOnly__ entra em vigor. </li><li> __ApplyAndMonitor__: Este é o valor predefinido. O MMC aplica-se as configurações de novo. Após a aplicação inicial de uma nova configuração, se o nó de destino drifts do estado pretendido, DSC relatórios discrepância nos registos. Tenha em atenção que o DSC tentará aplicar a configuração até ter êxito antes de __ApplyAndMonitor__ entra em vigor.</li><li>__ApplyAndAutoCorrect__: DSC aplica-se as configurações de novo. Após a aplicação inicial de uma nova configuração, se o nó de destino drifts do estado pretendido, DSC relatórios discrepância nos registos e, em seguida, volte aplica-se a configuração atual.</li></ul>|
 | ConfigurationModeFrequencyMins| UInt32| Frequência, em minutos, a configuração atual é marcada e aplicada. Esta propriedade é ignorada se a propriedade ConfigurationMode estiver definida como ApplyOnly. O valor predefinido é 15.|
 | DebugMode| cadeia| Os valores possíveis são __nenhum__, __ForceModuleImport__, e __todos os__. <ul><li>Definido como __nenhum__ a utilização de recursos em cache. Esta é a predefinição e deve ser utilizada em cenários de produção.</li><li>A definição para __ForceModuleImport__, faz com que o MMC para recarregar quaisquer módulos de recursos de DSC, mesmo que tenham sido previamente carregadas e colocadas em cache. Este problema afeta o desempenho das operações de DSC como cada módulo é recarregado em utilização. Normalmente, utilizaria este valor durante a depuração de um recurso</li><li>Nesta versão, __todos os__ é a mesma __ForceModuleImport__</li></ul> |
 | RebootNodeIfNeeded| bool| Defina esta opção para __$true__ para reiniciar automaticamente o nó após a uma configuração que necessita de reiniciar o computador é aplicado. Caso contrário, terá de reiniciar o nó para qualquer configuração que obriga manualmente. O valor predefinido é __$false__. Para utilizar esta definição quando uma condição de reinício é enacted por algo diferente de DSC (por exemplo, o Windows Installer), combinar esta definição com a [xPendingReboot](https://github.com/powershell/xpendingreboot) módulo.|
 | RefreshMode| cadeia| Especifica a forma como o MMC obtém configurações. Os valores possíveis são __"Desativado"__, __"Push"__, e __"Solicitar"__. <ul><li>__Desativado__: configurações de DSC estão desativadas para este nó.</li><li> __Push__: configurações são iniciadas ao chamar o [início DscConfiguration](https://technet.microsoft.com/en-us/library/dn521623.aspx) cmdlet. A configuração é imediatamente aplicada ao nó. Este é o valor predefinido.</li><li>__Solicitação:__ o nó estiver configurado para verificar regularmente para configurações de um serviço de extração ou caminho SMB. Se esta propriedade estiver definida como __solicitar__, tem de especificar um HTTP (serviço) ou o caminho SMB (partilha) num __ConfigurationRepositoryWeb__ ou __ConfigurationRepositoryShare__ bloco.</li></ul>|
-| RefreshFrequencyMins| UInt32| O intervalo de tempo, em minutos, no qual o MMC verifica um serviço de extração para obter configurações atualizadas. Este valor é ignorado se a MMC não está configurado no modo de extração. O valor predefinido é 30.|
-| ReportManagers| CimInstance []| Obsoleto. Utilize __ReportServerWeb__ blocos para definir um ponto final para enviar dados de relatórios para um serviço de extração.|
-| ResourceModuleManagers| CimInstance []| Obsoleto. Utilize __ResourceRepositoryWeb__ e __ResourceRepositoryShare__ blocos para definir a solicitação de serviço pontos finais de HTTP ou caminhos SMB, respetivamente.|
+| RefreshFrequencyMins| Uint32| O intervalo de tempo, em minutos, no qual o MMC verifica um serviço de extração para obter configurações atualizadas. Este valor é ignorado se a MMC não está configurado no modo de extração. O valor predefinido é 30.|
+| ReportManagers| CimInstance[]| Obsoleto. Utilize __ReportServerWeb__ blocos para definir um ponto final para enviar dados de relatórios para um serviço de extração.|
+| ResourceModuleManagers| CimInstance[]| Obsoleto. Utilize __ResourceRepositoryWeb__ e __ResourceRepositoryShare__ blocos para definir a solicitação de serviço pontos finais de HTTP ou caminhos SMB, respetivamente.|
 | PartialConfigurations| CimInstance| Não implementado. Não utilizar.|
 | StatusRetentionTimeInDays | UInt32| O número de dias que o MMC mantém o estado da configuração atual.|
 
@@ -130,10 +129,10 @@ Para definir um servidor de configuração baseada na web, cria um **Configurati
 A **ConfigurationRepositoryWeb** define as propriedades seguintes.
 
 |Propriedade|Tipo|Descrição|
-|---|---|---| 
+|---|---|---|
 |AllowUnsecureConnection|bool|Definido como **$TRUE** para permitir ligações a partir do nó para o servidor sem autenticação. Definido como **$FALSE** para exigir a autenticação.|
 |CertificateID|cadeia|O thumbprint de um certificado utilizado para autenticar para o servidor.|
-|ConfigurationNames|String]|Uma matriz de nomes de configurações para ser solicitados pelo nó de destino. Estas são utilizadas apenas se o nó está registado com o serviço de solicitação utilizando um **RegistrationKey**. Para obter mais informações, consulte [configurar um cliente de extração com nomes de configuração](pullClientConfigNames.md).|
+|ConfigurationNames|String[]|Uma matriz de nomes de configurações para ser solicitados pelo nó de destino. Estas são utilizadas apenas se o nó está registado com o serviço de solicitação utilizando um **RegistrationKey**. Para obter mais informações, consulte [configurar um cliente de extração com nomes de configuração](pullClientConfigNames.md).|
 |RegistrationKey|cadeia|Um GUID que regista o nó com o serviço de extração. Para obter mais informações, consulte [configurar um cliente de extração com nomes de configuração](pullClientConfigNames.md).|
 |ServerURL|cadeia|O URL do serviço de configuração.|
 
@@ -191,25 +190,25 @@ Para obter mais informações sobre as configurações parciais, consulte [confi
 **PartialConfiguration** define as propriedades seguintes.
 
 |Propriedade|Tipo|Descrição|
-|---|---|---| 
-|ConfigurationSource|String]|Uma matriz de nomes de servidores de configuração, anteriormente definidas na **ConfigurationRepositoryWeb** e **ConfigurationRepositoryShare** blocos, onde a configuração parcial é retirada da.|
-|dependsOn|cadeia {}|Uma lista de nomes de outras configurações que têm de ser concluídas antes desta configuração parcial é aplicada.|
+|---|---|---|
+|ConfigurationSource|string[]|Uma matriz de nomes de servidores de configuração, anteriormente definidas na **ConfigurationRepositoryWeb** e **ConfigurationRepositoryShare** blocos, onde a configuração parcial é retirada da.|
+|dependsOn|string{}|Uma lista de nomes de outras configurações que têm de ser concluídas antes desta configuração parcial é aplicada.|
 |Descrição|cadeia|Texto utilizado para descrever a configuração parcial.|
-|ExclusiveResources|String]|Uma matriz de recursos exclusivas para esta configuração parcial.|
+|ExclusiveResources|string[]|Uma matriz de recursos exclusivas para esta configuração parcial.|
 |RefreshMode|cadeia|Especifica a forma como o MMC obtém esta configuração parcial. Os valores possíveis são __"Desativado"__, __"Push"__, e __"Solicitar"__. <ul><li>__Desativado__: esta configuração parcial está desativada.</li><li> __Push__: A configuração parcial é enviada para o nó ao chamar o [publicar DscConfiguration](https://technet.microsoft.com/en-us/library/mt517875.aspx) cmdlet. Depois de todas as configurações parciais para o nó são enviadas por push ou solicitadas a partir de um serviço, a configuração pode ser iniciada ao chamar `Start-DscConfiguration –UseExisting`. Este é o valor predefinido.</li><li>__Solicitação:__ o nó está configurado para verificar regularmente parcial configuração a partir de um serviço de extração. Se esta propriedade estiver definida como __solicitação__, tem de especificar um serviço de solicitação num __ConfigurationSource__ propriedade. Para obter mais informações sobre o serviço de solicitação de automatização do Azure, consulte [descrição geral do Azure Automation DSC](https://docs.microsoft.com/en-us/azure/automation/automation-dsc-overview).</li></ul>|
-|ResourceModuleSource|String]|Uma matriz dos nomes dos servidores de recursos a partir das quais transferir os recursos necessários para esta configuração parcial. Estes nomes tem de referenciar pontos finais de serviço definidos anteriormente no **ResourceRepositoryWeb** e **ResourceRepositoryShare** blocos.|
+|ResourceModuleSource|string[]|Uma matriz dos nomes dos servidores de recursos a partir das quais transferir os recursos necessários para esta configuração parcial. Estes nomes tem de referenciar pontos finais de serviço definidos anteriormente no **ResourceRepositoryWeb** e **ResourceRepositoryShare** blocos.|
 
 __Nota:__ parciais configurações são suportadas com o Automation DSC do Azure, mas pode ser solicitada apenas uma configuração de cada conta de automatização por nó.
 
-## <a name="see-also"></a>Consulte Também 
+## <a name="see-also"></a>Consulte Também
 
 ### <a name="concepts"></a>Conceitos
 [Descrição geral da configuração do Estado de pretendida](overview.md)
- 
+
 [Introdução ao Azure Automation DSC](https://docs.microsoft.com/en-us/azure/automation/automation-dsc-getting-started)
 
 ### <a name="other-resources"></a>Outros Recursos
 
-[Conjunto DscLocalConfigurationManager](https://technet.microsoft.com/en-us/library/dn521621.aspx)
+[Set-DscLocalConfigurationManager](https://technet.microsoft.com/en-us/library/dn521621.aspx)
 
 [Configurar um cliente de extração com nomes de configuração](pullClientConfigNames.md)

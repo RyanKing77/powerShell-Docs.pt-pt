@@ -1,14 +1,13 @@
 ---
 ms.date: 2017-06-12
-author: eslesar
 ms.topic: conceptual
 keywords: "DSC, do powershell, a configuração, a configuração"
 title: "Método de PerformRequiredConfigurationChecks da classe MSFT_DSCLocalConfigurationManager"
-ms.openlocfilehash: 26110b3920104da7343b8d55cf63440c12accbbc
-ms.sourcegitcommit: 75f70c7df01eea5e7a2c16f9a3ab1dd437a1f8fd
+ms.openlocfilehash: 687c92f2dac5e8855731713e81390ac67615231e
+ms.sourcegitcommit: a444406120e5af4e746cbbc0558fe89a7e78aef6
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 06/12/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="performrequiredconfigurationchecks-method-of-the-msftdsclocalconfigurationmanager-class"></a>Método de PerformRequiredConfigurationChecks da classe MSFT_DSCLocalConfigurationManager
 
@@ -26,7 +25,7 @@ uint32 PerformRequiredConfigurationChecks(
 <a name="parameters"></a>Parâmetros
 ----------
 
-*Sinalizadores* \[no\]  
+*Flags* \[in\]  
 Uma máscara de bits que especifica o tipo de verificação de consistência para ser executada. Os seguintes valores são válidos e podem ser combinados utilizando um bit a bit **ou** operação:
 
 |Valor |Descrição |
@@ -49,7 +48,7 @@ Este é um método estático.
 ------------
 >**MOF:** DscCore.mof
 
->**Espaço de nomes**: Root\Microsoft\Windows\DesiredStateConfiguration
+>**Namespace**: Root\Microsoft\Windows\DesiredStateConfiguration
 
 
 ## <a name="see-also"></a>Consulte também

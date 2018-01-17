@@ -1,14 +1,13 @@
 ---
 ms.date: 2017-06-12
-author: eslesar
 ms.topic: conceptual
 keywords: "DSC, do powershell, a configuração, a configuração"
 title: "Método de GetMetaConfiguration da classe MSFT_DSCLocalConfigurationManager"
-ms.openlocfilehash: 4f209014e9fde5841a9bce743f5364e6677d1e41
-ms.sourcegitcommit: 75f70c7df01eea5e7a2c16f9a3ab1dd437a1f8fd
+ms.openlocfilehash: 695be4ee6490567295fda0cc44635870362d24b8
+ms.sourcegitcommit: a444406120e5af4e746cbbc0558fe89a7e78aef6
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 06/12/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="getmetaconfiguration-method-of-the-msftdsclocalconfigurationmanager-class"></a>Método de GetMetaConfiguration da classe MSFT_DSCLocalConfigurationManager
 
@@ -26,7 +25,7 @@ uint32 GetMetaConfiguration(
 <a name="parameters"></a>Parâmetros
 ----------
 
-*Configuração meta* \[enviados\]  
+*MetaConfiguration* \[out\]  
 No retorno, contém uma instância do embedded o **MSFT_DSCMetaConfiguration** classe que define as definições.
 
 ## <a name="return-value"></a>Valor devolvido
@@ -42,7 +41,7 @@ Este é um método estático.
 ------------
 >**MOF:** DscCore.mof
 
->**Espaço de nomes**: Root\Microsoft\Windows\DesiredStateConfiguration
+>**Namespace**: Root\Microsoft\Windows\DesiredStateConfiguration
 
 
 ## <a name="see-also"></a>Consulte também

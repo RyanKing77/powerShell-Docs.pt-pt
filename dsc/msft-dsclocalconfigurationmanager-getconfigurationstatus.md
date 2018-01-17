@@ -1,14 +1,13 @@
 ---
 ms.date: 2017-06-12
-author: eslesar
 ms.topic: conceptual
 keywords: "DSC, do powershell, a configuração, a configuração"
 title: "Método de GetConfigurationStatus da classe MSFT_DSCLocalConfigurationManager"
-ms.openlocfilehash: e02ed81a7b8436323bc68aaa2587a445e6a5adf9
-ms.sourcegitcommit: 75f70c7df01eea5e7a2c16f9a3ab1dd437a1f8fd
+ms.openlocfilehash: a41e7a15fc935c2cd5fd4cb66d0ab13509d5d4e0
+ms.sourcegitcommit: a444406120e5af4e746cbbc0558fe89a7e78aef6
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 06/12/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="getconfigurationstatus-method-of-the-msftdsclocalconfigurationmanager-class"></a>Método de GetConfigurationStatus da classe MSFT_DSCLocalConfigurationManager
 
@@ -27,10 +26,10 @@ uint32 GetConfigurationStatus(
 <a name="parameters"></a>Parâmetros
 ----------
 
-*Todos os* \[no\]  
+*All* \[in\]  
 **Verdadeiro** se este método deverá devolver informações sobre todas a configuração é executada na máquina, incluindo a aplicação de configuração e a verificação de consistência.
 
-*configurationStatus* \[enviados\]  
+*configurationStatus* \[out\]  
 No retorno, contém uma instância do embedded o **MSFT_DSCConfigurationStatus** classe que define as definições.
 
 ## <a name="return-value"></a>Valor devolvido
@@ -46,7 +45,7 @@ Este é um método estático.
 ------------
 >**MOF:** DscCore.mof
 
->**Espaço de nomes**: Root\Microsoft\Windows\DesiredStateConfiguration
+>**Namespace**: Root\Microsoft\Windows\DesiredStateConfiguration
 
 
 ## <a name="see-also"></a>Consulte também
