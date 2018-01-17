@@ -1,16 +1,15 @@
 ---
 ms.date: 2017-06-12
-author: eslesar
 ms.topic: conceptual
 keywords: "DSC, do powershell, a configuração, a configuração"
 title: "Função de DSC consultadas nó do servidor de solicitação."
-ms.openlocfilehash: 307fd46f113797c75c6ad2211ec86af30104de36
-ms.sourcegitcommit: 75f70c7df01eea5e7a2c16f9a3ab1dd437a1f8fd
+ms.openlocfilehash: f97e1d62873fb9e23147ff137468a767455cd82c
+ms.sourcegitcommit: a444406120e5af4e746cbbc0558fe89a7e78aef6
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 06/12/2017
+ms.lasthandoff: 01/17/2018
 ---
-# <a name="dsc-function-to-query-node-information-from-pull-server"></a><span data-ttu-id="2acdb-103">Função de DSC consultadas nó do servidor de solicitação.</span><span class="sxs-lookup"><span data-stu-id="2acdb-103">DSC function to query node information from pull server.</span></span>
+# <a name="dsc-function-to-query-node-information-from-pull-server"></a><span data-ttu-id="befda-103">Função de DSC consultadas nó do servidor de solicitação.</span><span class="sxs-lookup"><span data-stu-id="befda-103">DSC function to query node information from pull server.</span></span>
 
 ```powershell
 function QueryNodeInformation
@@ -39,9 +38,9 @@ Param (
 }
 ```
 
-<span data-ttu-id="2acdb-104">Substitua o `Uri` parâmetro com o URI para o servidor de solicitação.</span><span class="sxs-lookup"><span data-stu-id="2acdb-104">Replace the `Uri` parameter with the URI for your pull server.</span></span> <span data-ttu-id="2acdb-105">Se pretender que as informações do nó no formato XML, defina `ContentType` para `application/xml`.</span><span class="sxs-lookup"><span data-stu-id="2acdb-105">If you want the node information in XML format, set `ContentType` to `application/xml`.</span></span>
+<span data-ttu-id="befda-104">Substitua o `Uri` parâmetro com o URI para o servidor de solicitação.</span><span class="sxs-lookup"><span data-stu-id="befda-104">Replace the `Uri` parameter with the URI for your pull server.</span></span> <span data-ttu-id="befda-105">Se pretender que as informações do nó no formato XML, defina `ContentType` para `application/xml`.</span><span class="sxs-lookup"><span data-stu-id="befda-105">If you want the node information in XML format, set `ContentType` to `application/xml`.</span></span>
 
-<span data-ttu-id="2acdb-106">Para obter as informações do nó do `$json` parâmetro, utilize o seguinte:</span><span class="sxs-lookup"><span data-stu-id="2acdb-106">To retrieve the node information from the `$json` parameter, use the following:</span></span>
+<span data-ttu-id="befda-106">Para obter as informações do nó do `$json` parâmetro, utilize o seguinte:</span><span class="sxs-lookup"><span data-stu-id="befda-106">To retrieve the node information from the `$json` parameter, use the following:</span></span>
 
 ```powershell
 $json = QueryNodeInformation –Uri http://localhost:7070/PSDSCComplianceServer.svc/Status 

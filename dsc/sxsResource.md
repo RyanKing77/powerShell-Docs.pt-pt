@@ -1,26 +1,25 @@
 ---
 ms.date: 2017-06-12
-author: eslesar
 ms.topic: conceptual
 keywords: "DSC, do powershell, a configuração, a configuração"
 title: "Utilizar recursos com várias versões"
-ms.openlocfilehash: c3397775a6767d74c182e15d07371e830f98e9a9
-ms.sourcegitcommit: 75f70c7df01eea5e7a2c16f9a3ab1dd437a1f8fd
+ms.openlocfilehash: 8bd8b1dab9418c6d8cf64cd682c527a7f039cdb4
+ms.sourcegitcommit: a444406120e5af4e746cbbc0558fe89a7e78aef6
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 06/12/2017
+ms.lasthandoff: 01/17/2018
 ---
-# <a name="using-resources-with-multiple-versions"></a><span data-ttu-id="8745f-103">Utilizar recursos com várias versões</span><span class="sxs-lookup"><span data-stu-id="8745f-103">Using resources with multiple versions</span></span>
+# <a name="using-resources-with-multiple-versions"></a><span data-ttu-id="40039-103">Utilizar recursos com várias versões</span><span class="sxs-lookup"><span data-stu-id="40039-103">Using resources with multiple versions</span></span>
 
-> <span data-ttu-id="8745f-104">Aplica-se a: O Windows PowerShell 5.0</span><span class="sxs-lookup"><span data-stu-id="8745f-104">Applies To: Windows PowerShell 5.0</span></span>
+> <span data-ttu-id="40039-104">Aplica-se a: O Windows PowerShell 5.0</span><span class="sxs-lookup"><span data-stu-id="40039-104">Applies To: Windows PowerShell 5.0</span></span>
 
-<span data-ttu-id="8745f-105">No PowerShell 5.0, recursos de DSC podem ter várias versões e versões podem ser instaladas num computador do lado do lado a lado.</span><span class="sxs-lookup"><span data-stu-id="8745f-105">In PowerShell 5.0, DSC resources can have multiple versions, and versions can be installed on a computer side-by-side.</span></span> <span data-ttu-id="8745f-106">Isto é implementado por ter várias versões de um módulo de recursos que estão contidas na mesma pasta do módulo.</span><span class="sxs-lookup"><span data-stu-id="8745f-106">This is implemented by having multiple versions of a resource module that are contained in the same module folder.</span></span>
+<span data-ttu-id="40039-105">No PowerShell 5.0, recursos de DSC podem ter várias versões e versões podem ser instaladas num computador do lado do lado a lado.</span><span class="sxs-lookup"><span data-stu-id="40039-105">In PowerShell 5.0, DSC resources can have multiple versions, and versions can be installed on a computer side-by-side.</span></span> <span data-ttu-id="40039-106">Isto é implementado por ter várias versões de um módulo de recursos que estão contidas na mesma pasta do módulo.</span><span class="sxs-lookup"><span data-stu-id="40039-106">This is implemented by having multiple versions of a resource module that are contained in the same module folder.</span></span>
 
-## <a name="installing-multiple-resource-versions-side-by-side"></a><span data-ttu-id="8745f-107">Instalar vários recursos versões do lado do lado a lado</span><span class="sxs-lookup"><span data-stu-id="8745f-107">Installing multiple resource versions side-by-side</span></span>
+## <a name="installing-multiple-resource-versions-side-by-side"></a><span data-ttu-id="40039-107">Instalar vários recursos versões do lado do lado a lado</span><span class="sxs-lookup"><span data-stu-id="40039-107">Installing multiple resource versions side-by-side</span></span>
 
-<span data-ttu-id="8745f-108">Pode utilizar o **MinimumVersion**, **MaximumVersion**, e **RequiredVersion** parâmetros a [Install-Module](https://technet.microsoft.com/en-us/library/dn807162.aspx) cmdlet para especificar qual é a versão de um módulo para instalar.</span><span class="sxs-lookup"><span data-stu-id="8745f-108">You can use the **MinimumVersion**, **MaximumVersion**, and **RequiredVersion** parameters of the [Install-Module](https://technet.microsoft.com/en-us/library/dn807162.aspx) cmdlet to specify which version of a module to install.</span></span> <span data-ttu-id="8745f-109">Chamar **Install-Module** sem especificar uma versão instala a versão mais recente.</span><span class="sxs-lookup"><span data-stu-id="8745f-109">Calling **Install-Module** without specifying a version installs the most recent version.</span></span>
+<span data-ttu-id="40039-108">Pode utilizar o **MinimumVersion**, **MaximumVersion**, e **RequiredVersion** parâmetros a [Install-Module](https://technet.microsoft.com/en-us/library/dn807162.aspx) cmdlet para especificar qual é a versão de um módulo para instalar.</span><span class="sxs-lookup"><span data-stu-id="40039-108">You can use the **MinimumVersion**, **MaximumVersion**, and **RequiredVersion** parameters of the [Install-Module](https://technet.microsoft.com/en-us/library/dn807162.aspx) cmdlet to specify which version of a module to install.</span></span> <span data-ttu-id="40039-109">Chamar **Install-Module** sem especificar uma versão instala a versão mais recente.</span><span class="sxs-lookup"><span data-stu-id="40039-109">Calling **Install-Module** without specifying a version installs the most recent version.</span></span>
 
-<span data-ttu-id="8745f-110">Por exemplo, existem várias versões do **xFailOverCluster** módulo, cada um dos quais contém uma **xCluster** recurso.</span><span class="sxs-lookup"><span data-stu-id="8745f-110">For example, there are multiple versions of the **xFailOverCluster** module, each of which contains an **xCluster** resouce.</span></span> <span data-ttu-id="8745f-111">O resultado da chamada **Install-Module** sem especificar a versão número é o seguinte:</span><span class="sxs-lookup"><span data-stu-id="8745f-111">The result of calling **Install-Module** without specifying the version number is as follows:</span></span>
+<span data-ttu-id="40039-110">Por exemplo, existem várias versões do **xFailOverCluster** módulo, cada um dos quais contém uma **xCluster** recurso.</span><span class="sxs-lookup"><span data-stu-id="40039-110">For example, there are multiple versions of the **xFailOverCluster** module, each of which contains an **xCluster** resouce.</span></span> <span data-ttu-id="40039-111">O resultado da chamada **Install-Module** sem especificar a versão número é o seguinte:</span><span class="sxs-lookup"><span data-stu-id="40039-111">The result of calling **Install-Module** without specifying the version number is as follows:</span></span>
 
 ```powershell
 C:\Program Files\WindowsPowerShell\Modules\xFailOverCluster> Install-Module xFailOverCluster
@@ -31,7 +30,7 @@ ImplementedAs   Name                      ModuleName                     Version
 PowerShell      xCluster                  xFailOverCluster               1.2.0.0    {DomainAdministratorCredential, ...
 ```
 
-<span data-ttu-id="8745f-112">Agora, se chamar **Install-Module** novamente, mas Especifica um **RequiredVersion** de 1.1.0.0, o que resulta no seguinte:</span><span class="sxs-lookup"><span data-stu-id="8745f-112">Now, if you call **Install-Module** again, but specify a **RequiredVersion** of 1.1.0.0, it results in the following:</span></span>
+<span data-ttu-id="40039-112">Agora, se chamar **Install-Module** novamente, mas Especifica um **RequiredVersion** de 1.1.0.0, o que resulta no seguinte:</span><span class="sxs-lookup"><span data-stu-id="40039-112">Now, if you call **Install-Module** again, but specify a **RequiredVersion** of 1.1.0.0, it results in the following:</span></span>
 
 ```powershell
 C:\Program Files\WindowsPowerShell\Modules\xFailOverCluster> Install-Module xFailOverCluster -RequiredVersion 1.1
@@ -43,11 +42,11 @@ PowerShell      xCluster                  xFailOverCluster               1.1    
 PowerShell      xCluster                  xFailOverCluster               1.2.0.0    {DomainAdministratorCredential, Name, ...
 ```
 
-## <a name="specifying-a-resource-version-in-a-configuration"></a><span data-ttu-id="8745f-113">Especificar uma versão do recurso numa configuração</span><span class="sxs-lookup"><span data-stu-id="8745f-113">Specifying a resource version in a configuration</span></span>
+## <a name="specifying-a-resource-version-in-a-configuration"></a><span data-ttu-id="40039-113">Especificar uma versão do recurso numa configuração</span><span class="sxs-lookup"><span data-stu-id="40039-113">Specifying a resource version in a configuration</span></span>
 
-<span data-ttu-id="8745f-114">Se tiver vários recursos instalados num computador, tem de especificar a versão desse recurso quando utiliza uma configuração.</span><span class="sxs-lookup"><span data-stu-id="8745f-114">If you have multiple resources installed on a computer, you must specify the version of that resource when you use it in a configuration.</span></span> <span data-ttu-id="8745f-115">Fazê-lo especificando o **ModuleVersion** parâmetro o **importação DscResource** palavra-chave.</span><span class="sxs-lookup"><span data-stu-id="8745f-115">You do this by specifying the **ModuleVersion** parameter of the **Import-DscResource** keyword.</span></span> <span data-ttu-id="8745f-116">Se falhar especificar a versão de um módulo de recurso de um recurso de que tem mais do que uma versão instalada, a configuração gera um erro.</span><span class="sxs-lookup"><span data-stu-id="8745f-116">If you fail to specify the version of a resource module of a resource of which you have more than one version installed, the configuration generates an error.</span></span>
+<span data-ttu-id="40039-114">Se tiver vários recursos instalados num computador, tem de especificar a versão desse recurso quando utiliza uma configuração.</span><span class="sxs-lookup"><span data-stu-id="40039-114">If you have multiple resources installed on a computer, you must specify the version of that resource when you use it in a configuration.</span></span> <span data-ttu-id="40039-115">Fazê-lo especificando o **ModuleVersion** parâmetro o **importação DscResource** palavra-chave.</span><span class="sxs-lookup"><span data-stu-id="40039-115">You do this by specifying the **ModuleVersion** parameter of the **Import-DscResource** keyword.</span></span> <span data-ttu-id="40039-116">Se falhar especificar a versão de um módulo de recurso de um recurso de que tem mais do que uma versão instalada, a configuração gera um erro.</span><span class="sxs-lookup"><span data-stu-id="40039-116">If you fail to specify the version of a resource module of a resource of which you have more than one version installed, the configuration generates an error.</span></span>
 
-<span data-ttu-id="8745f-117">A configuração seguinte mostra como especificar a versão do recurso para chamar:</span><span class="sxs-lookup"><span data-stu-id="8745f-117">The following configuration shows how to specify the version of the resource to call:</span></span>
+<span data-ttu-id="40039-117">A configuração seguinte mostra como especificar a versão do recurso para chamar:</span><span class="sxs-lookup"><span data-stu-id="40039-117">The following configuration shows how to specify the version of the resource to call:</span></span>
 
 ```powershell
 configuration VersionTest
@@ -66,7 +65,7 @@ configuration VersionTest
 }     
 ```
 
-><span data-ttu-id="8745f-118">Nota: O parâmetro ModuleVersion da importação DscResource não está disponível no PowerShell 4.0.</span><span class="sxs-lookup"><span data-stu-id="8745f-118">Note: The ModuleVersion parameter of Import-DscResource is not available in PowerShell 4.0.</span></span> <span data-ttu-id="8745f-119">No PowerShell 4.0, pode especificar uma versão do módulo através da transmissão de um objeto de especificação do módulo para o parâmetro ModuleName do DscResource de importação.</span><span class="sxs-lookup"><span data-stu-id="8745f-119">In PowerShell 4.0, you can specify a module version by passing a module specification object to the ModuleName parameter of Import-DscResource.</span></span> <span data-ttu-id="8745f-120">Um objeto de especificação do módulo é uma tabela hash que contém chaves ModuleName e RequiredVersion.</span><span class="sxs-lookup"><span data-stu-id="8745f-120">A module specification object is a hash table that contains ModuleName and RequiredVersion  keys.</span></span> <span data-ttu-id="8745f-121">Por exemplo:</span><span class="sxs-lookup"><span data-stu-id="8745f-121">For example:</span></span>
+><span data-ttu-id="40039-118">Nota: O parâmetro ModuleVersion da importação DscResource não está disponível no PowerShell 4.0.</span><span class="sxs-lookup"><span data-stu-id="40039-118">Note: The ModuleVersion parameter of Import-DscResource is not available in PowerShell 4.0.</span></span> <span data-ttu-id="40039-119">No PowerShell 4.0, pode especificar uma versão do módulo através da transmissão de um objeto de especificação do módulo para o parâmetro ModuleName do DscResource de importação.</span><span class="sxs-lookup"><span data-stu-id="40039-119">In PowerShell 4.0, you can specify a module version by passing a module specification object to the ModuleName parameter of Import-DscResource.</span></span> <span data-ttu-id="40039-120">Um objeto de especificação do módulo é uma tabela hash que contém chaves ModuleName e RequiredVersion.</span><span class="sxs-lookup"><span data-stu-id="40039-120">A module specification object is a hash table that contains ModuleName and RequiredVersion  keys.</span></span> <span data-ttu-id="40039-121">Por exemplo:</span><span class="sxs-lookup"><span data-stu-id="40039-121">For example:</span></span>
 
 ```powershell
 configuration VersionTest
@@ -85,9 +84,9 @@ configuration VersionTest
 }     
 ```
 
-<span data-ttu-id="8745f-122">Isto também irá funcionar no PowerShell 5.0, mas é recomendado que utilize o **ModuleVersion** parâmetro.</span><span class="sxs-lookup"><span data-stu-id="8745f-122">This will also work in PowerShell 5.0, but it is recommended that you use the **ModuleVersion** parameter.</span></span>
+<span data-ttu-id="40039-122">Isto também irá funcionar no PowerShell 5.0, mas é recomendado que utilize o **ModuleVersion** parâmetro.</span><span class="sxs-lookup"><span data-stu-id="40039-122">This will also work in PowerShell 5.0, but it is recommended that you use the **ModuleVersion** parameter.</span></span>
 
-## <a name="see-also"></a><span data-ttu-id="8745f-123">Consulte também</span><span class="sxs-lookup"><span data-stu-id="8745f-123">See also</span></span>
-* [<span data-ttu-id="8745f-124">Configurações de DSC</span><span class="sxs-lookup"><span data-stu-id="8745f-124">DSC Configurations</span></span>](configurations.md)
-* [<span data-ttu-id="8745f-125">Recursos de DSC</span><span class="sxs-lookup"><span data-stu-id="8745f-125">DSC Resources</span></span>](resources.md)
+## <a name="see-also"></a><span data-ttu-id="40039-123">Consulte também</span><span class="sxs-lookup"><span data-stu-id="40039-123">See also</span></span>
+* [<span data-ttu-id="40039-124">Configurações de DSC</span><span class="sxs-lookup"><span data-stu-id="40039-124">DSC Configurations</span></span>](configurations.md)
+* [<span data-ttu-id="40039-125">Recursos de DSC</span><span class="sxs-lookup"><span data-stu-id="40039-125">DSC Resources</span></span>](resources.md)
 
