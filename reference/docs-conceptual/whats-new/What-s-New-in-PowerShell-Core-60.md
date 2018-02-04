@@ -234,7 +234,7 @@ Para mais informações sobre as tarefas do PowerShell, consulte [about_Jobs](ht
 - Adicionar três novas variáveis automáticas para determinar se o PowerShell está em execução no SO determinada: `$IsWindows`, `$IsMacOs`, e `$IsLinux`.
 - Adicionar `GitCommitId` a faixa de PowerShell Core.
   Agora que não tem de executar `$PSVersionTable` assim que iniciar o PowerShell para obter a versão! (#3916) (Thanks para @iSazonov!)
-- Adicionar um ficheiro de configuração JSON chamado `PowerShellProperties.json` no `$PSHome` para armazenar algumas definições necessárias antes do tempo de arranque (por exemplo, `ExecutionPolicy`).
+- Adicionar um ficheiro de configuração JSON chamado `powershell.config.json` no `$PSHome` para armazenar algumas definições necessárias antes do tempo de arranque (por exemplo, `ExecutionPolicy`).
 - Não bloqueia pipeline ao executar o Windows. EXE
 - Enumeração ativada de coleções de COM. (#4553)
 

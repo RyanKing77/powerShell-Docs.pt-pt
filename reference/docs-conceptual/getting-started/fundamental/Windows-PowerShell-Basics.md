@@ -1,15 +1,15 @@
 ---
 ms.date: 2017-06-05
 keywords: PowerShell, o cmdlet
-title: "Noções básicas do Windows PowerShell"
+title: "Noções Básicas sobre o Windows PowerShell"
 ms.assetid: 6b3cbbc8-060c-4877-b00b-7300dbbe4e28
-ms.openlocfilehash: 7b5cdfce876aa7d5559fe772379829011b275a02
-ms.sourcegitcommit: d6ab9ab5909ed59cce4ce30e29457e0e75c7ac12
+ms.openlocfilehash: bd17786d2d8690b89a2d107e0da98ee45f5b2ff7
+ms.sourcegitcommit: 18e3bfae83ffe282d3fd1a45f5386f3b7250f0c0
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 09/08/2017
+ms.lasthandoff: 02/03/2018
 ---
-# <a name="windows-powershell-basics"></a>Noções básicas do Windows PowerShell
+# <a name="windows-powershell-basics"></a>Noções Básicas sobre o Windows PowerShell
 Interfaces de utilizador gráfica utilizam alguns conceitos básicos que são bem conhecidos para a maioria dos utilizadores do computador. Os utilizadores dependem familiaridade essas interfaces para realizar tarefas. Sistemas operativos apresentar os utilizadores com uma representação gráfica de itens que podem ser pesquisados, normalmente com menus de lista pendente para aceder ao menus de contexto e funcionalidades específicos para aceder às funcionalidades específicas do contexto.
 
 Uma interface de linha de comandos (CLI), como o Windows PowerShell, tem de utilizar uma abordagem diferente para expor as informações porque esta não tem menus sistemas gráficos para ajudar o utilizador. Terá de conhecer os nomes de comando antes de poder utilizá-los. Embora pode escrever comandos complexos que sejam equivalentes às funcionalidades num ambiente de GUI, tem de se familiarizar com comandos utilizados frequentemente e parâmetros de comando.
@@ -18,13 +18,10 @@ A maioria das CLIs não dispõe de padrões que podem ajudar o utilizador para o
 
 Windows PowerShell foi concebido para beneficiar do conhecimento históricos de um utilizador de CLIs. Neste capítulo, serão abordadas alguns conceitos que pode utilizar para obter rapidamente o Windows PowerShell e ferramentas básicas. Incluem:
 
-- Utilizar o comando Get
+- Utilizar [Get-Command](/powershell/module/Microsoft.PowerShell.Core/get-command)
 
-- Utilizar comandos Cmd.exe e UNIX
+- Utilizar [Cmd.exe](/windows-server/administration/windows-commands/cmd) e [comandos UNIX](/windows/wsl/reference)
 
-- Utilizar comandos externos
+- [Conclusão de separador a utilizar](../../core-powershell/console/using-tab-expansion.md)
 
-- Conclusão de separador a utilizar
-
-- Utilizar Get-Help
-
+- [Utilizar Get-Help](./getting-detailed-help-information.md)
