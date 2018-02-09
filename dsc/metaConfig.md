@@ -3,11 +3,11 @@ ms.date: 2017-10-11
 ms.topic: conceptual
 keywords: "DSC, do powershell, a configuração, a configuração"
 title: "Configurar o Gestor de configuração Local"
-ms.openlocfilehash: 81434b57e453ba7b64cc32dffdf309da16ef8882
-ms.sourcegitcommit: 18e3bfae83ffe282d3fd1a45f5386f3b7250f0c0
+ms.openlocfilehash: b8e0749cf2f67e395e9fd8eaf9cde33b97c0cb67
+ms.sourcegitcommit: 755d7bc0740573d73613cedcf79981ca3dc81c5e
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="configuring-the-local-configuration-manager"></a>Configurar o Gestor de configuração Local
 
@@ -25,8 +25,8 @@ Também é responsável por um número de outros aspetos do DSC, incluindo o seg
 Utilize um tipo especial de configuração para configurar o MMC para especificar cada um dos seguintes comportamentos.
 As secções seguintes descrevem como configurar o MMC.
 
-> **Tenha em atenção**: Este tópico aplica-se para MMC introduzido no Windows PowerShell 5.0.
-Para obter informações sobre como configurar o MMC no Windows PowerShell 4.0, consulte [Windows PowerShell 4.0 pretendido estado de configuração Local do Configuration Manager](metaconfig4.md).
+Windows PowerShell 5.0 introduzidas novas definições para gerir o Gestor de configuração locais.
+Para obter informações sobre como configurar o MMC no Windows PowerShell 4.0, consulte [configurar o Gestor de configuração Local no anterior versões do Windows PowerShell](metaconfig4.md).
 
 ## <a name="writing-and-enacting-an-lcm-configuration"></a>Escrever e enacting uma configuração de MMC
 
@@ -90,38 +90,13 @@ As seguintes propriedades estão disponíveis num **definições** bloco.
 
 ## <a name="pull-service"></a>Serviço de solicitação
 
-Definições de DSC permite que um nó para serem geridos pelo extrair módulos e configurações e dados de relatórios, de publicação para uma localização remota.
-As opções de atuais para o serviço de solicitação incluem:
-
-- Serviço de configuração de estado de Desired de automatização do Azure
-- Uma instância de serviço de solicitação em execução no Windows Server
-- Uma partilha SMB (não suporta a publicação de dados de relatórios)
-
 Configuração de MMC suporta definir os seguintes tipos de pontos finais do serviço de extração:
 
 - **Servidor de configuração**: um repositório para configurações de DSC. Definir os servidores de configuração utilizando **ConfigurationRepositoryWeb** (para servidores baseada na web) e **ConfigurationRepositoryShare** (para servidores com base em SMB) blocos.
 - **Servidor de recurso**: um repositório para recursos de DSC, empacotadas como módulos do PowerShell. Definir os servidores de recursos utilizando **ResourceRepositoryWeb** (para servidores baseada na web) e **ResourceRepositoryShare** (para servidores com base em SMB) blocos.
 - **Servidor de relatórios**: um serviço que DSC envia dados de relatório. Definir os servidores de relatório utilizando **ReportServerWeb** blocos. Um servidor de relatórios tem de ser um serviço web.
 
-**A solução recomendada**, e a opção com mais funcionalidades disponíveis, é [Automation DSC do Azure](https://docs.microsoft.com/en-us/azure/automation/automation-dsc-getting-started).
-
-O serviço do Azure pode gerir nós no local em centros de dados privados ou em nuvens públicas, tais como o Azure e AWS.
-Para ambientes privados em que os servidores não é possível ligar diretamente à Internet, considere limitar o tráfego de saída para apenas o intervalo de IP de Azure publicado (consulte [intervalos de IP do Datacenter do Azure](https://www.microsoft.com/en-us/download/details.aspx?id=41653)).
-
-As funcionalidades do serviço online que não estão atualmente disponíveis no serviço de solicitação no Windows Server incluem:
-- Todos os dados são encriptados em trânsito e o restante
-- Certificados de cliente são criados e geridos automaticamente
-- Armazenam segredos para gerir centralmente [palavras-passe/credenciais](https://docs.microsoft.com/en-us/azure/automation/automation-credentials), ou [variáveis](https://docs.microsoft.com/en-us/azure/automation/automation-variables) tais como nomes de servidor ou cadeias de ligação
-- Gerir centralmente o nó [configuração MMC](metaConfig.md#basic-settings)
-- Atribuir centralmente configurações para nós de cliente
-- Configuração de versão é alterada para "grupos canary" para fins de teste antes de atingir a produção
-- Gráfico de relatórios
-  - Detalhes de estado ao nível de recursos do DSC de granularidade
-  - Mensagens de erro verbosas provenientes de máquinas de cliente para resolução de problemas
-- [Integração com o Log Analytics do Azure](https://docs.microsoft.com/en-us/azure/automation/automation-dsc-diagnostics) para alertar, tarefas automatizadas, a aplicação Android/iOS para relatórios e alertas
-
-Em alternativa, para obter informações sobre como configurar e utilizar o serviço de solicitação HTTP no Windows Server, consulte [configurar um servidor de solicitação do DSC](pullServer.md).
-Volte a ser aconselhado que é uma implementação limitada com as capacidades de apenas básicas de armazenar configurações/módulos e capturar os dados de relatório numa base de dados.
+Para obter mais detalhes sobre o serviço de solicitação, veja [serviço de solicitação de configuração de estado pretendido](pullServer.md).
 
 ## <a name="configuration-server-blocks"></a>Blocos de servidor de configuração
 

@@ -1,13 +1,13 @@
 ---
 ms.date: 2017-06-05
 keywords: PowerShell, o cmdlet
-title: "A iniciar a versão de 32 bits do Windows PowerShell"
+title: "Iniciar a Versão de 32 Bits do Windows PowerShell"
 ms.assetid: 12b31890-2609-4a76-8c24-0ebe78084f50
 ms.openlocfilehash: d682ce45ebc92cda3a9008ab608bacf9ef8eba57
-ms.sourcegitcommit: d6ab9ab5909ed59cce4ce30e29457e0e75c7ac12
+ms.sourcegitcommit: 18e3bfae83ffe282d3fd1a45f5386f3b7250f0c0
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 09/08/2017
+ms.lasthandoff: 02/08/2018
 ---
 # <a name="starting-the-32-bit-version-of-windows-powershell"></a>A iniciar a versão de 32 bits do Windows PowerShell
 Quando instalar o Windows PowerShell no computador de 64 bits, **Windows PowerShell (x86)**, está instalada uma versão de 32 bits do Windows PowerShell para além da versão de 64 bits. Quando executar o Windows PowerShell, executa a versão de 64 bits por predefinição.
@@ -16,7 +16,7 @@ No entanto, ocasionalmente, poderá ter de executar **Windows PowerShell (x86)**
 
 Para iniciar uma versão de 32 bits do Windows PowerShell, utilize qualquer um dos seguintes procedimentos.
 
-#### <a name="in-windows-server-2012-r2"></a>No Windows Server® 2012 R2
+#### <a name="in-windows-server-2012-r2"></a>In Windows Server® 2012 R2
 
 - No **iniciar** ecrã, escreva **Windows PowerShell (x86)**. Clique em de **Windows PowerShell x86** mosaico.
 
@@ -26,7 +26,7 @@ Para iniciar uma versão de 32 bits do Windows PowerShell, utilize qualquer um d
 
 - Linha de comandos, introduza:`%SystemRoot%\SysWOW64\WindowsPowerShell\v1.0\powershell.exe`
 
-#### <a name="in-windows-server-2012"></a>No Windows Server® 2012
+#### <a name="in-windows-server-2012"></a>In Windows Server® 2012
 
 - No **iniciar** ecrã, escreva **PowerShell** e, em seguida, clique em **Windows PowerShell (x86)**.
 

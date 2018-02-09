@@ -2,16 +2,18 @@
 ms.date: 2017-10-12
 ms.topic: conceptual
 keywords: "DSC, do powershell, a configuração, a configuração"
-title: "Windows PowerShell 4.0 pretendido estado configuração Local do Configuration Manager (MMC)"
-ms.openlocfilehash: 6ff8fa75f8ed33dc8da5285373ec1f3858cfa917
-ms.sourcegitcommit: a444406120e5af4e746cbbc0558fe89a7e78aef6
+title: "Configurar o Gestor de configuração Local em versões anteriores do Windows PowerShell"
+ms.openlocfilehash: 65eb2a8d5a99e977cf2f3dbd726240ec2d5a6142
+ms.sourcegitcommit: 755d7bc0740573d73613cedcf79981ca3dc81c5e
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 02/09/2018
 ---
-# <a name="windows-powershell-40-desired-state-configuration-local-configuration-manager-lcm"></a>Windows PowerShell 4.0 pretendido estado configuração Local do Configuration Manager (MMC)
+# <a name="configuring-the-local-configuration-manager-in-previous-versions-of-windows-powershell"></a>Configurar o Gestor de configuração Local em versões anteriores do Windows PowerShell
 
 >Aplica-se a: O Windows PowerShell 4.0
+
+**Para informações relacionadas com o Windows PowerShell 5.0 e posterior, consulte [configurar o Gestor de configuração Local](metaConfig.md).**
 
 Gestor de configuração locais é o motor de configuração de estado pretendido do Windows PowerShell (DSC).
 Este é executado em todos os nós de destino e é responsável pela chamar os recursos de configuração que estão incluídos num script de configuração de DSC.
