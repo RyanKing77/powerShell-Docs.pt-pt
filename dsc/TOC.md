@@ -108,7 +108,7 @@
 
 # Modelo de solicitação de DSC
 
-## [Configurar um servidor de solicitação da Web](pullServer.md)
+## [Serviço de Solicitação de DSC](pullServer.md)
 
 ## [Configurar um servidor de solicitação SMB de DSC](pullServerSMB.md)
 
