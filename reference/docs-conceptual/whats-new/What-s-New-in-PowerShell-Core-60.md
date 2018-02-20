@@ -52,7 +52,7 @@ Outras pessoas só estão presentes ou aplicável em instalações de não-Windo
 - Ignorar o `-ExecutionPolicy` mudar durante a execução do PowerShell em plataformas do Windows não porque a assinatura de script não é atualmente suportado. (#3481)
 - Corrigido ConsoleHost que respeite `NoEcho` em plataformas Unix. (#3801)
 - Fixo `Get-Help` para suportar a correspondência de padrões sensível em plataformas Unix. (#3852)
-- `powershell`página de Man adicionada ao pacote
+- `powershell` página de Man adicionada ao pacote
 
 ### <a name="logging"></a>Registo
 
@@ -65,14 +65,14 @@ Um número de alterações foram efetuado no macOS e Linux para suportar carater
 
 - Caminhos para os cmdlets desconhecem agora uma barra (tanto / e \ escolar como separador de diretório)
 - Especificação de diretório de Base de XDG agora é respeitada e utilizada por predefinição:
-  - O caminho de perfil do Linux/macOS está localizado em`~/.config/powershell/profile.ps1`
-  - O histórico de caminho para guardar está localizado em`~/.local/share/powershell/PSReadline/ConsoleHost_history.txt`
-  - O caminho do módulo de utilizador está localizado em`~/.local/share/powershell/Modules`
+  - O caminho de perfil do Linux/macOS está localizado em `~/.config/powershell/profile.ps1`
+  - O histórico de caminho para guardar está localizado em `~/.local/share/powershell/PSReadline/ConsoleHost_history.txt`
+  - O caminho do módulo de utilizador está localizado em `~/.local/share/powershell/Modules`
 - Suporte para os nomes de ficheiros e pastas que contém o caráter de dois pontos no Unix. (#4959)
 - Suporte para nomes de script ou caminhos completos com vírgulas. (#4136) (Thanks para @TimCurwick!)
 - Detetar quando `-LiteralPath` é utilizado para suprimir a expansão de caráter universal para os cmdlets de navegação. (#5038)
 - Atualizado `Get-ChildItem` funcione mais semelhante a * nix `ls -R` e o Windows `DIR /S` comandos nativos.
-  `Get-ChildItem`agora devolve as ligações simbólicas encontradas durante uma pesquisa recursiva e não procura os diretórios que destino essas ligações. (#3780)
+  `Get-ChildItem` agora devolve as ligações simbólicas encontradas durante uma pesquisa recursiva e não procura os diretórios que destino essas ligações. (#3780)
 
 ### <a name="case-sensitivity"></a>Sensibilidade às maiúsculas e minúsculas
 
@@ -93,11 +93,11 @@ Lado a lado permite também a efeitos de compatibilidade como scripts podem ser 
 > Por predefinição, o Instalador MSI baseado no Windows efetua uma instalação de atualização no local.
 >
 
-## <a name="renamed-powershellexe-to-pwshexe"></a>Mudar o nome `powershell(.exe)` para`pwsh(.exe)`
+## <a name="renamed-powershellexe-to-pwshexe"></a>Mudar o nome `powershell(.exe)` para `pwsh(.exe)`
 
 O nome de binário para PowerShell Core foi alterado de `powershell(.exe)` para `pwsh(.exe)`.
 Esta alteração é uma forma determinística para os utilizadores executar o PowerShell Core em máquinas para suportar lado a lado Windows PowerShell e as instalações do PowerShell Core.
-`pwsh`Também é muito mais curto e mais fácil para o tipo.
+`pwsh` Também é muito mais curto e mais fácil para o tipo.
 
 Alterações adicionais para `pwsh(.exe)` de `powershell.exe`:
 
@@ -210,7 +210,7 @@ Para mais informações sobre as tarefas do PowerShell, consulte [about_Jobs](ht
 ## <a name="language-updates"></a>Atualizações de idioma
 
 - Implemente escape Unicode análise para que os utilizadores podem utilizar carateres Unicode como argumentos, as cadeias ou nomes de variáveis. (#3958) (Thanks para @rkeithhill!)
-- Caráter de escape novo adicionado para ESC:`` `e``
+- Caráter de escape novo adicionado para ESC: `` `e``
 - Foi adicionado suporte para a conversão enumerações a cadeia (#4318) (obrigado @KirkMunro)
 - Matriz de elemento único fixo conversão para uma coleção genérica. (#3170)
 - Sobrecarga de intervalo de carácter adicionado para o `..` operador, por isso, `'a'..'z'` devolve os carateres de 'a' para 'z'. (#5026) (Obrigado @IISResetMe!)
@@ -220,11 +220,11 @@ Para mais informações sobre as tarefas do PowerShell, consulte [about_Jobs](ht
 
 ## <a name="engine-updates"></a>Atualizações do motor
 
-- `$PSVersionTable`tem quatro novas propriedades:
+- `$PSVersionTable` tem quatro novas propriedades:
   - `PSEdition`: Este é definido como `Core` no PowerShell Core e `Desktop` no Windows PowerShell
   - `GitCommitId`: Este é o ID de consolidação de Git do Git ramo ou etiqueta onde foi criado o PowerShell.
     Nas compilações de lançamento, provavelmente será o mesmo que `PSVersion`.
-  - `OS`: Este é uma cadeia de versão do SO devolvida pelo`[System.Runtime.InteropServices.RuntimeInformation]::OSDescription`
+  - `OS`: Este é uma cadeia de versão do SO devolvida pelo `[System.Runtime.InteropServices.RuntimeInformation]::OSDescription`
   - `Platform`: Este é devolvido pelo `[System.Environment]::OSVersion.Platform` estiver definido como `Win32NT` no Windows, `MacOSX` no macOS, e `Unix` no Linux.
 - Remover o `BuildVersion` propriedade da `$PSVersionTable`.
   Esta propriedade foi vivamente associada para a versão de compilação do Windows.
@@ -302,18 +302,18 @@ Para mais informações sobre as tarefas do PowerShell, consulte [about_Jobs](ht
 - Adicionar `-Extension` e `-LeafBase` muda para `Split-Path` para que pode dividir caminhos entre a extensão de nome de ficheiro e o resto do nome de ficheiro. (#2721) (Thanks para @powercode!)
 - Adicionar parâmetros `-Top` e `-Bottom` para `Sort-Object` de ordenação de parte superior/na parte inferior N
 - Expor o processo de principal de um processo adicionando o `CodeProperty "Parent"` para `System.Diagnostics.Process`. (#2850) (Thanks para @powercode!)
-- Utilizar MB, em vez de KB para colunas de memória do`Get-Process`
+- Utilizar MB, em vez de KB para colunas de memória do `Get-Process`
 - Adicionar `-NoNewLine` mudar para `Out-String`. (#5056) (Obrigado @raghav710)
-- `Move-Item`cmdlet honra `-Include`, `-Exclude`, e `-Filter` parâmetros. (#3878)
+- `Move-Item` cmdlet honra `-Include`, `-Exclude`, e `-Filter` parâmetros. (#3878)
 - Permitir `*` a ser utilizado no caminho de registo para `Remove-Item`. (#4866)
 - Adicionar `-Title` para `Get-Credential` e unificar a experiência de linha de comandos entre plataformas.
 - Adicionar o `-TimeOut` parâmetro `Test-Connection`. (#2492)
-- `Get-AuthenticodeSignature`cmdlets agora podem obter timestamp de assinatura de ficheiro. (#4061)
+- `Get-AuthenticodeSignature` cmdlets agora podem obter timestamp de assinatura de ficheiro. (#4061)
 - Remover não suportado `-ShowWindow` mudar da `Get-Help`. (#4903)
 - Corrigir `Get-Content -Delimiter` por não incluir o delimitador dos elementos de matriz de devolvido (#3706) (obrigado @mklement0)
 - Adicionar `Meta`, `Charset`, e `Transitional` parâmetros `ConvertTo-HTML` (#4184) (obrigado @ergo3114)
 - Adicionar `WindowsUBR` e `WindowsVersion` propriedades `Get-ComputerInfo` resultado
-- Adicionar `-Group` parâmetro`Get-Verb`
+- Adicionar `-Group` parâmetro `Get-Verb`
 - Adicionar `ShouldProcess` suportar a `New-FileCatalog` e `Test-FileCatalog` (correções `-WhatIf` e `-Confirm`). (#3074) (Thanks para @iSazonov!)
 - Adicionar `-WhatIf` mudar para `Start-Process` cmdlet (#4735) (obrigado @sarithsutha)
 - Adicionar `ValidateNotNullOrEmpty` demasiados parâmetros existentes.
@@ -344,8 +344,8 @@ Para ler mais sobre os mesmos em detalhe, consulte [interrompendo as alteraçõe
 ## <a name="filesystem-updates"></a>Atualizações do sistema de ficheiros
 
 - Ative a utilização do fornecedor do sistema de ficheiros a partir de um caminho UNC. ($4998)
-- `Split-Path`agora funciona com o UNC raízes
-- `cd`sem argumentos agora comporta-se como`cd ~`
+- `Split-Path` agora funciona com o UNC raízes
+- `cd` sem argumentos agora comporta-se como `cd ~`
 - PowerShell Core fixo para permitir a utilização de caminhos que são mais de 260 caracteres de comprimento. (#3960)
 
 ## <a name="bug-fixes-and-performance-improvements"></a>Correções de erros e melhorias de desempenho
@@ -361,8 +361,8 @@ Para obter uma lista completa das correções e as alterações, consulte a noss
   - a plataforma do SO (`$PSVersionTable.OSDescription`)
   - a versão exata do PowerShell (`$PSVersionTable.GitCommitId`)
 
-Se pretender ativamente de que esta telemetria, simplesmente elimine `$PSHome\DELETE_ME_TO_DISABLE_CONSOLEHOST_TELEMETRY`.
-Eliminar este ficheiro ignora toda a telemetria mesmo antes de primeira execução do PowerShell.
+Se pretender ativamente de que esta telemetria, simplesmente elimine `$PSHome\DELETE_ME_TO_DISABLE_CONSOLEHOST_TELEMETRY` ou criar `POWERSHELL_TELEMETRY_OPTOUT` variável de ambiente com um dos seguintes valores: `true`, `1` ou `yes`.
+Eliminar este ficheiro ou criar a variável ignora toda a telemetria mesmo antes de primeira execução do PowerShell.
 Planeamos também no exposição estes dados de telemetria e as informações que glean de telemetria no [dashboard Comunidade][community-dashboard].
 Pode encontrar mais informações sobre como utilizamos esses dados deste [blogue][telemetry-blog].
 

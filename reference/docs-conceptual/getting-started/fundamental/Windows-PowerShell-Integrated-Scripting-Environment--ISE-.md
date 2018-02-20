@@ -3,11 +3,11 @@ ms.date: 2017-06-05
 keywords: PowerShell, o cmdlet
 title: Integrada de Windows PowerShell ISE de ambiente de script
 ms.assetid: f156b92d-0203-46d2-89c7-b4989d32e3d2
-ms.openlocfilehash: 6a2d2bada2d8d6a1d5bedffc7b1b28fe9472544a
-ms.sourcegitcommit: 755d7bc0740573d73613cedcf79981ca3dc81c5e
+ms.openlocfilehash: 413fc375ad4617bfae59d6a1217cf9f91c2cf090
+ms.sourcegitcommit: 05d576cf107780fa52b2db4a042816be40b00fbc
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 02/19/2018
 ---
 # <a name="windows-powershell-integrated-scripting-environment-ise"></a>Windows PowerShell Integrated Scripting Environment (ISE)
 
@@ -25,7 +25,7 @@ Seguem-se algumas das funcionalidades que foram adicionadas ao ISE nas versões 
 
 **Fragmentos** são secções abreviadas do código que lhe pode facilmente inserir os scripts a escrita. Uma coleção de fragmentos útil está incluída na caixa e pode mais utilizando o **New-fragmento** cmdlet.
 
-**Ferramentas de suplemento** que adiciona funcionalidades ao ISE do podem ser criadas por código de escrita de mensagens em fila que interage com o [o Windows PowerShell ISE Scripting modelo de objeto](../../core-powershell/ise/The-ISE-Object-Model-Hierarchy.md).
+**Ferramentas de suplemento** que adiciona funcionalidades ao ISE do podem ser criadas por código de escrita de mensagens em fila que interage com [o Windows PowerShell ISE Scripting modelo de objeto](../../core-powershell/ise/The-ISE-Object-Model-Hierarchy.md).
 
 Estas ferramentas podem apresentar os controlos no painel de separadores ou invisibly de trabalho em segundo plano. O **comandos** suplemento é um bom exemplo e está incluído com a versão 3.0 e mais tarde que mostra uma lista dos comandos disponíveis e as respetivas ajuda.
 

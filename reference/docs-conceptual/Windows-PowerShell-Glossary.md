@@ -3,11 +3,11 @@ ms.date: 2017-06-05
 keywords: PowerShell, o cmdlet
 title: "Glossário do Windows PowerShell"
 ms.assetid: b0f88cbe-cb83-4912-a301-184534cb35c7
-ms.openlocfilehash: 48e5d832ead720c8bc7753c94f757ddb21846fc9
-ms.sourcegitcommit: ced46469e064736eeb1f5608abbc792ec69bdc92
+ms.openlocfilehash: 872ceb342cc72477c5142ce28a9b3b66e32bb84f
+ms.sourcegitcommit: 05d576cf107780fa52b2db4a042816be40b00fbc
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 08/08/2017
+ms.lasthandoff: 02/19/2018
 ---
 # <a name="windows-powershell-glossary"></a>Glossário do Windows PowerShell
 
@@ -24,7 +24,7 @@ ms.lasthandoff: 08/08/2017
 |anfitrião|A interface que utiliza o motor do Windows PowerShell para comunicar com o utilizador. Por exemplo, o anfitrião Especifica a forma como os pedidos são processados entre do Windows PowerShell e o utilizador.|
 |aplicação de anfitrião|Um programa que carrega o motor do Windows PowerShell para o respetivo processo e utiliza-o para executar operações.|
 |processamento do método de entrada|Um método que pode utilizar um cmdlet para processar registos recebe como entrada. Os métodos de processamento de entrada incluem o método BeginProcessing, o método ProcessRecord, o método EndProcessing e o método StopProcessing.|
-|módulo de manifesto|Um módulo do Windows PowerShell que tenha um manifesto e cuja chave ModulesToProcess está vazio.|
+|módulo de manifesto|Um módulo do Windows PowerShell que tenha um manifesto e cuja chave RootModule está vazio.|
 |manifesto de módulo|Um Windows PowerShell ficheiro de dados (. psd1) que descreve o conteúdo de um módulo e que controla a forma como é processado um módulo.|
 |Estado da sessão de módulo|O estado da sessão que contém os dados públicos e privados de um módulo do Windows PowerShell. Os dados privados neste estado de sessão não estão disponíveis para o utilizador de uma sessão do Windows PowerShell.|
 |Erro de não interrupção|Um erro que não a interromperá do Windows PowerShell de continuar a processar o comando.|
@@ -33,7 +33,7 @@ ms.lasthandoff: 08/08/2017
 |pipe|No Windows PowerShell, para enviar os resultados do comando anterior como entrada para o seguinte comando no pipeline.|
 |Pipeline|Uma série de comandos ligados por operadores de pipeline (&#124;) (ASCII 124). O operador de pipeline envia os resultados do comando anterior como entrada para o comando seguinte.|
 |PSSession|Um tipo de sessão do Windows PowerShell que é criada, gerido e fechado pelo utilizador.|
-|módulo de raiz|O módulo especificado na chave ModuleToProcess num manifesto de módulo.|
+|módulo de raiz|O módulo especificado na chave RootModule num manifesto de módulo.|
 |Espaço de execução|No Windows PowerShell, o ambiente de funcionamento em que cada comando num pipeline é executado.|
 |Bloco de script|No Windows PowerShell de programação idioma, uma coleção de instruções ou expressões que podem ser utilizadas como uma única unidade. Um bloco de script pode aceitar argumentos e valores devolvidos.|
 |módulo de script|Um módulo do Windows PowerShell módulo cuja raiz é um ficheiro de módulo de script (. psm1). Um módulo de script pode ou não pode incluir um manifesto de módulo.|
