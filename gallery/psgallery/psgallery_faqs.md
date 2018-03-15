@@ -4,11 +4,11 @@ contributor: JKeithB
 ms.topic: conceptual
 keywords: cmdlet do powershell do galeria, psgallery
 title: psgallery_faqs
-ms.openlocfilehash: 80aaaa5e50e1bd85b93df721a4859e3020d1f315
-ms.sourcegitcommit: 75f70c7df01eea5e7a2c16f9a3ab1dd437a1f8fd
+ms.openlocfilehash: b856c44f3733d4a7c236d901edb391091d9d546e
+ms.sourcegitcommit: 99227f62dcf827354770eb2c3e95c5cf6a3118b4
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 06/12/2017
+ms.lasthandoff: 03/15/2018
 ---
 # <a name="frequently-asked-questions"></a>Perguntas Mais Frequentes
 
@@ -18,7 +18,7 @@ Um módulo do PowerShell é um pacote de reutilizável com algumas funcionalidad
 
 ## <a name="what-is-a-powershell-script"></a>O que é um script do PowerShell?
 
-Um script do PowerShell é uma série de comandos que são armazenadas num ficheiro. ps1 para ativar a partilha e reutilização. Fluxos de trabalho do PowerShell também são scripts do PowerShell, que descrevem um conjunto de tarefas e fornecem a sequenciação para essas tarefas. Para obter mais informações, visite [introdução ao fluxo de trabalho do PowerShell](https://technet.microsoft.com/en-us/library/jj134242.aspx).
+Um script do PowerShell é uma série de comandos que são armazenadas num ficheiro. ps1 para ativar a partilha e reutilização. Fluxos de trabalho do PowerShell também são scripts do PowerShell, que descrevem um conjunto de tarefas e fornecem a sequenciação para essas tarefas. Para obter mais informações, visite [introdução ao fluxo de trabalho do PowerShell](https://technet.microsoft.com/library/jj134242.aspx).
 
 ## <a name="how-are-powershell-scripts-different-from-powershell-modules"></a>Como Scripts do PowerShell são diferentes dos módulos do PowerShell?
 
@@ -48,7 +48,7 @@ Este erro pode ocorrer pelos seguintes motivos:
 
 ## <a name="why-cant-i-sign-in-with-my-personal-account-but-i-could-sign-in-yesterday"></a>Razão pela qual não é possível iniciar sessão com a minha conta pessoal, mas como posso foi possível iniciar sessão ontem?
 
-. Lembre-se de que a conta de Galeria não acomodar as alterações ao seu alias de correio eletrónico principal. Para obter mais informações, consulte [Aliases de E-Mail do Microsoft](https://windows.microsoft.com/en-us/windows/outlook/add-alias-account).
+. Lembre-se de que a conta de Galeria não acomodar as alterações ao seu alias de correio eletrónico principal. Para obter mais informações, consulte [Aliases de E-Mail do Microsoft](https://windows.microsoft.com/windows/outlook/add-alias-account).
 
 ## <a name="why-dont-i-see-all-the-gallery-items-when-i-select-all-the-category-checkboxes-on-the-items-tab"></a>Por que motivo não vejo todos os itens de galeria quando todas as caixas de categoria no separador itens selecionados?
 
@@ -156,7 +156,7 @@ Por conseguinte, **PowerShellGet** necessita de um dos seguintes sistemas operat
 - Windows Server 2012 R2
 - Windows Server 2008 R2 SP1
 
-**PowerShellGet** também requer o .NET Framework 4.5 ou superior. Pode instalar o .NET Framework 4.5 ou superior do [aqui](https://msdn.microsoft.com/en-us/library/5a4x27ek.aspx).
+**PowerShellGet** também requer o .NET Framework 4.5 ou superior. Pode instalar o .NET Framework 4.5 ou superior do [aqui](https://msdn.microsoft.com/library/5a4x27ek.aspx).
 
 ## <a name="is-it-possible-to-reserve-names-for-items-that-will-be-published-in-future"></a>É possível reservar nomes de itens que serão publicados no futuro?
 

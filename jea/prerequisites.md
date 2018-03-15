@@ -4,11 +4,11 @@ author: rpsqrd
 ms.topic: conceptual
 keywords: "jea, powershell, segurança"
 title: "Pré-requisitos JEA"
-ms.openlocfilehash: 75d5db2ba446df1d461050d187dc1495a22fef18
-ms.sourcegitcommit: 75f70c7df01eea5e7a2c16f9a3ab1dd437a1f8fd
+ms.openlocfilehash: e6ee16e34eb9f1f0b2f3601c1aa9e90ab4f785f1
+ms.sourcegitcommit: 99227f62dcf827354770eb2c3e95c5cf6a3118b4
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 06/12/2017
+ms.lasthandoff: 03/15/2018
 ---
 # <a name="prerequisites"></a>Pré-requisitos
 
@@ -33,7 +33,7 @@ Também pode utilizar o JEA no seu computador de casa ou de trabalho:
 
 Sistema operativo do cliente   | Disponibilidade JEA
 --------------------------|-----------------------------------------------------
-Windows 10 1607 +          | Pré-instalado
+Windows 10 1607+          | Pré-instalado
 Windows 10 1603, 1511     | Pré-instalado, com um reduzido funcionalidade<sup>2</sup>
 Windows 10 1507           | Não disponível
 Windows 8, 8.1            | Funcionalidade completa com WMF 5.1
@@ -72,7 +72,7 @@ Os utilizadores do Windows 10, devem instalar as atualizações de funcionalidad
 ## <a name="enable-powershell-remoting"></a>Ativar a comunicação remota do PowerShell
 
 Comunicação remota do PowerShell fornece a base no qual o JEA é criada.
-Consequentemente, é necessário para garantir a comunicação remota do PowerShell está ativada e [corretamente protegida](https://msdn.microsoft.com/en-us/powershell/scripting/setup/winrmsecurity) no seu sistema antes de poder utilizar JEA.
+Consequentemente, é necessário para garantir a comunicação remota do PowerShell está ativada e [corretamente protegida](https://msdn.microsoft.com/powershell/scripting/setup/winrmsecurity) no seu sistema antes de poder utilizar JEA.
 
 Comunicação remota do PowerShell está ativada por predefinição no Windows Server 2012, 2012 R2 e 2016.
 Pode ativar a comunicação remota do PowerShell, executando o seguinte comando numa janela elevada do PowerShell.
@@ -109,6 +109,6 @@ Também pode ativar transcription do PowerShell de todo sistema através da pol�
 
 ## <a name="see-also"></a>Consulte também
 
-- [Informações adicionais sobre a segurança de comunicação remota do PowerShell e WinRM](https://msdn.microsoft.com/en-us/powershell/scripting/setup/winrmsecurity)
+- [Informações adicionais sobre a segurança de comunicação remota do PowerShell e WinRM](https://msdn.microsoft.com/powershell/scripting/setup/winrmsecurity)
 - [*PowerShell ♥ a equipa azul* blogue de segurança](https://blogs.msdn.microsoft.com/powershell/2015/06/09/powershell-the-blue-team/)
 

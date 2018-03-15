@@ -2,12 +2,12 @@
 ms.date: 2017-06-12
 author: JKeithB
 ms.topic: reference
-keywords: "WMF, o powershell, o programa de configuração"
+keywords: wmf,powershell,setup
 ms.openlocfilehash: 3413672e73705252225300a853c10a514500baa2
-ms.sourcegitcommit: 75f70c7df01eea5e7a2c16f9a3ab1dd437a1f8fd
+ms.sourcegitcommit: 99227f62dcf827354770eb2c3e95c5cf6a3118b4
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 06/12/2017
+ms.lasthandoff: 03/15/2018
 ---
 # <a name="extract-and-parse-structured-objects-out-of-string"></a>Extrair e analisar os objetos de estruturado fora de cadeia
 Isto também apresenta algumas funcionalidades adicionais para o cmdlet ConvertFrom cadeia:
@@ -30,7 +30,7 @@ Análise delimitada como, por predefinição, divide a entrada em espaço em bra
 
 > 1 \[c:\\temp\] &gt; &gt; "Olá mundo" | Cadeia de ConvertFrom | Formato de tabela-automática
 
-P1 P2
+P1    P2
 --    --
 
 O cmdlet também suporta a geração automática condicionada por exemplo analisar com base no [FlashExtract](http://research.microsoft.com/en-us/um/people/sumitg/flashextract.html) pesquisar trabalho no [Microsoft Research](http://research.microsoft.com).
@@ -83,11 +83,11 @@ Este conjunto de exemplos, **ConvertFrom cadeia** pode agora extrair automaticam
 
 > 2 \[c:\\temp\]
 >
-> &gt;&gt;Get-conteúdo. \\addresses.output.txt | Cadeia ConvertFrom - TemplateFile. \\addresses.template.txt | &gt; &gt; &gt; Format-Table-automática
+> &gt;&gt; Get-conteúdo. \\addresses.output.txt | Cadeia ConvertFrom - TemplateFile. \\addresses.template.txt | &gt; &gt; &gt; Format-Table-automática
 >
 > Estado da cidade ExtentText nome
 > ----------                     ----               ----     -----
-> Ana Trujillo...                Ana Trujillo Redmond WA Antonio Moreno...              Antonio Moreno Renton WA blogue Hardy...                Blogue Hardy Seattle WA Christina Berglund...          Christina Berglund Redmond WA Hanna Moos...                  Hanna Moos Puyallup WA
+> Ana Trujillo...                Ana Trujillo       Redmond  WA Antonio Moreno...              Antonio Moreno Renton WA blogue Hardy...                Blogue Hardy Seattle WA Christina Berglund...          Christina Berglund Redmond WA Hanna Moos...                  Hanna Moos         Puyallup WA
 
-Para fazer a manipulação de dados adicionais no texto extraído, o **ExtentText** propriedade captura o texto não processado a partir da qual o registo foi extraído. Fornecer comentários sobre esta funcionalidade, ou para partilhar conteúdo para o qual estão a ter dificuldade em escrever exemplos, envie um e-mail < psdmfb@microsoft.com >.
+Para fazer a manipulação de dados adicionais no texto extraído, o **ExtentText** propriedade captura o texto não processado a partir da qual o registo foi extraído. Fornecer comentários sobre esta funcionalidade, ou para partilhar conteúdo para o qual estão a ter dificuldade em escrever exemplos, envie um e-mail <psdmfb@microsoft.com>.
 

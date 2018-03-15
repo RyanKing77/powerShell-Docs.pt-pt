@@ -4,11 +4,11 @@ contributor: JKeithB
 ms.topic: conceptual
 keywords: cmdlet do powershell do galeria, psgallery
 title: psgallery_deploy_to_azure_automation
-ms.openlocfilehash: 91f48fb43d7fb099e34ce5d3b3b632e3cb119d64
-ms.sourcegitcommit: 75f70c7df01eea5e7a2c16f9a3ab1dd437a1f8fd
+ms.openlocfilehash: 223acbcc2f6cd4f15e1ee55d3f2f68df851cd902
+ms.sourcegitcommit: 99227f62dcf827354770eb2c3e95c5cf6a3118b4
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 06/12/2017
+ms.lasthandoff: 03/15/2018
 ---
 <a name="deploy-to-azure-automation"></a>Implementar a automatização do Azure
 ===========================
@@ -26,5 +26,5 @@ Se implementar um módulo, será apresentada na secção de módulos da automati
 
 A implementar no botão de automatização do Azure pode ser desativado através da adição de etiqueta AzureAutomationNotSupported para os metadados do item.
 
-Para saber mais sobre a automatização do Azure, consulte o Web site da automatização do Azure [Web site da automatização do Azure](http://azure.microsoft.com/en-us/services/automation/).
+Para saber mais sobre a automatização do Azure, consulte o Web site da automatização do Azure [Web site da automatização do Azure](http://azure.microsoft.com/services/automation/).
 

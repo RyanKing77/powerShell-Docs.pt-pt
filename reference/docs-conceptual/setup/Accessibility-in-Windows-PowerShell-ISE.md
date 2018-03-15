@@ -3,11 +3,11 @@ ms.date: 2017-06-05
 keywords: PowerShell, o cmdlet
 title: Acessibilidade no ISE do Windows PowerShell
 ms.assetid: a078f9d1-dd6b-4323-b16d-0622cd993aa8
-ms.openlocfilehash: 505ec3aca84b5ad0b9d58a1ec84d80e3aa86db7a
-ms.sourcegitcommit: 3720ce4efb6735694cfb53a1b793d949af5d1bc5
+ms.openlocfilehash: 7f758a46bdc722482b9e8a9baaff0a075f64ece9
+ms.sourcegitcommit: 99227f62dcf827354770eb2c3e95c5cf6a3118b4
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 09/29/2017
+ms.lasthandoff: 03/15/2018
 ---
 # <a name="accessibility-in-windows-powershell-ise"></a>Acessibilidade no ISE do Windows PowerShell
 Este tópico descreve as funcionalidades de acessibilidade do Windows PowerShell Integrated Scripting Environment (ISE) que poderão ser úteis.
@@ -22,7 +22,7 @@ Este tópico descreve as funcionalidades de acessibilidade do Windows PowerShell
 
 A Microsoft está empenhada em tornar mais fácil a utilização dos seus produtos e serviços para todos os utilizadores. Os tópicos seguintes fornecem informações sobre as funcionalidades, produtos e serviços que tornam o ISE do Windows PowerShell mais acessível para pessoas com incapacidades.
 
-ISE do Windows PowerShell suporta o modo de alto contraste. Para visualmente debilitada, estão disponíveis através dos cmdlets para gerir pontos de interrupção, tais como informações de ponto de interrupção [Get-PSBreakpoint](https://technet.microsoft.com/en-us/library/0bf48936-00ab-411c-b5e0-9b10a812a3c6) e [conjunto PSBreakpoint](https://technet.microsoft.com/en-us/library/6afd5d2c-a285-4796-8607-3cbf49471420). Para mais informações, consulte 'Como gerir pontos de interrupção' no [como depurar Scripts no ISE do Windows PowerShell](../core-powershell/ise/How-to-Debug-Scripts-in-Windows-PowerShell-ISE.md). Além das funcionalidades de acessibilidade e utilitários no Microsoft Windows, as seguintes funcionalidades tornam o ISE do Windows PowerShell mais acessível para pessoas com incapacidades:
+ISE do Windows PowerShell suporta o modo de alto contraste. Para visualmente debilitada, estão disponíveis através dos cmdlets para gerir pontos de interrupção, tais como informações de ponto de interrupção [Get-PSBreakpoint](https://technet.microsoft.com/library/0bf48936-00ab-411c-b5e0-9b10a812a3c6) e [conjunto PSBreakpoint](https://technet.microsoft.com/library/6afd5d2c-a285-4796-8607-3cbf49471420). Para mais informações, consulte 'Como gerir pontos de interrupção' no [como depurar Scripts no ISE do Windows PowerShell](../core-powershell/ise/How-to-Debug-Scripts-in-Windows-PowerShell-ISE.md). Além das funcionalidades de acessibilidade e utilitários no Microsoft Windows, as seguintes funcionalidades tornam o ISE do Windows PowerShell mais acessível para pessoas com incapacidades:
 
 - Atalhos de teclado
 
@@ -58,12 +58,12 @@ Pode utilizar os seguintes atalhos de teclado ao editar o texto.
 |Ação|Atalhos de teclado|Utilize|
 |----------|----------------------|----------|
 |**Copiar**|CTRL + C|Painel de script, o painel de consola|
-|**Cortar**|CTRL + X|Painel de script, o painel de consola|
+|**Cut**|CTRL + X|Painel de script, o painel de consola|
 |**Localizar o script**|CTRL + L|Painel de script|
 |**Localizar o seguinte script**|F3|Painel de script|
 |**Localizar anterior no Script**|SHIFT + F3|Painel de script|
-|**Colar**|CTRL + V|Painel de script, o painel de consola|
-|**Ação de Refazer**|CTRL + Y|Painel de script, o painel de consola|
+|**Paste**|CTRL + V|Painel de script, o painel de consola|
+|**Redo**|CTRL + Y|Painel de script, o painel de consola|
 |**Substituir o script**|CTRL + H|Painel de script|
 |**Guardar**|CTRL+S|Painel de script|
 |**Selecionar tudo**|CTRL + T|Painel de script, o painel de consola|
@@ -74,9 +74,9 @@ Pode utilizar os seguintes atalhos de teclado quando executar scripts no painel 
 
 |Ação|Atalho de teclado|
 |----------|---------------------|
-|**Novo**|CTRL + N|
+|**novo**|CTRL + N|
 |**Abrir**|CTRL + O|
-|**Executar**|F5|
+|**Run**|F5|
 |**Executar seleção**|F8|
 |**Parar a execução**|CTRL + BREAK. CTRL + C podem ser utilizado quando o contexto é inequívoca (quando não existe nenhum texto selecionado).|
 |**Separador** (para o script seguinte)|CTRL + TAB **Nota:** separador para o script seguinte funciona apenas quando tiver um separador de PowerShell único abrir, ou quando tem mais do que um separador de PowerShell abrir, mas centra-se no painel de Script.|
@@ -103,7 +103,7 @@ Pode utilizar os seguintes atalhos de teclado quando depurar scripts.
 
 |Ação|Atalho de teclado|Utilize|
 |----------|---------------------|----------|
-|**Executar/continuar**|F5|Painel de script, quando um script de depuração|
+|**Run/Continue**|F5|Painel de script, quando um script de depuração|
 |**Avance para**|F11|Painel de script, quando um script de depuração|
 |**Passo ao longo do**|F10|Painel de script, quando um script de depuração|
 |**Passo**|SHIFT + F11|Painel de script, quando um script de depuração|
@@ -144,7 +144,7 @@ Pode utilizar os seguintes atalhos de teclado para iniciar a consola do Windows 
 
 |Ação|Atalho de teclado|
 |----------|---------------------|
-|**Saída**|ALT+F4|
+|**Exit**|ALT+F4|
 |**Iniciar o PowerShell.exe** (consola do Windows PowerShell)|CTRL + SHIFT + P|
 
 ## <a name="see-also"></a>Consulte Também

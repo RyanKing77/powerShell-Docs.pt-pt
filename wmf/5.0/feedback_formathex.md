@@ -2,15 +2,15 @@
 ms.date: 2017-06-12
 author: JKeithB
 ms.topic: reference
-keywords: "WMF, o powershell, o programa de configuração"
-ms.openlocfilehash: 6e0493a75e02efd81e833760f941f98566235efe
-ms.sourcegitcommit: a5c0795ca6ec9332967bff9c151a8572feb1a53a
+keywords: wmf,powershell,setup
+ms.openlocfilehash: c8ad7c6c6ec992c8b6891ff657536797164562a8
+ms.sourcegitcommit: 99227f62dcf827354770eb2c3e95c5cf6a3118b4
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 07/27/2017
+ms.lasthandoff: 03/15/2018
 ---
 # <a name="format-hex"></a>Formato hexadecimal
-**Formato hexadecimal** permite-lhe ver os dados de texto ou binário em formato hexadecimal; consulte [formato hexadecimal](https://msdn.microsoft.com/en-us/powershell/reference/5.1/microsoft.powershell.utility/format-hex)
+**Formato hexadecimal** permite-lhe ver os dados de texto ou binário em formato hexadecimal; consulte [formato hexadecimal](https://msdn.microsoft.com/powershell/reference/5.1/microsoft.powershell.utility/format-hex)
 
 ## <a name="example-1"></a>Exemplo 1
 Ver os conteúdos de uma cadeia em formato hexadecimal.

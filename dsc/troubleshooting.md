@@ -3,11 +3,11 @@ ms.date: 2017-06-12
 ms.topic: conceptual
 keywords: "DSC, do powershell, a configuração, a configuração"
 title: "Resolução de problemas de DSC"
-ms.openlocfilehash: 4141e1f3304460dcaf310ce603fdc5d9550a5069
-ms.sourcegitcommit: a444406120e5af4e746cbbc0558fe89a7e78aef6
+ms.openlocfilehash: cdb11a80daecec0e0d01071752612663ac69ac6d
+ms.sourcegitcommit: 99227f62dcf827354770eb2c3e95c5cf6a3118b4
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 03/15/2018
 ---
 # <a name="troubleshooting-dsc"></a>Resolução de problemas de DSC
 
@@ -21,7 +21,7 @@ Configuração de estado pretendido do Windows PowerShell (DSC) depende do WinRM
 
 ## <a name="using-get-dscconfigurationstatus"></a>Get-DscConfigurationStatus a utilizar
 
-O [Get-DscConfigurationStatus](https://technet.microsoft.com/en-us/library/mt517868.aspx) cmdlet obtém informações sobre o estado de configuração a partir de um nó de destino. Um objeto avançado é devolvido que inclui informações de alto nível sobre ou não a execução de configuração foi concluída com êxito ou não. Pode aprofundar para o objeto a descobrir detalhes sobre a configuração executar como:
+O [Get-DscConfigurationStatus](https://technet.microsoft.com/library/mt517868.aspx) cmdlet obtém informações sobre o estado de configuração a partir de um nó de destino. Um objeto avançado é devolvido que inclui informações de alto nível sobre ou não a execução de configuração foi concluída com êxito ou não. Pode aprofundar para o objeto a descobrir detalhes sobre a configuração executar como:
 
 * Todos os recursos que falhou
 * Qualquer recurso pedido um reinício
@@ -117,7 +117,7 @@ Consistency engine was run successfully.
 
 Eventos de DSC são registados numa estrutura específica que permite ao utilizador para agregar eventos a partir de uma tarefa de DSC. A estrutura é o seguinte:
 
-**ID da tarefa:<Guid>**
+**ID da tarefa: <Guid>**
 **<Event Message>**
 
 ## <a name="gathering-events-from-a-single-dsc-operation"></a>Recolha de eventos de uma única operação de DSC
@@ -232,7 +232,7 @@ Displaying messages from built-in DSC resources:
 
 ### <a name="4-error-messages-logged-for-recent-failed-operations"></a>4: as mensagens de erro registadas recente operações falhadas
 
-`$SeparateDscOperations[0].Group`contém um conjunto de eventos para a operação mais recente. Execute o `Where-Object` cmdlet para filtrar os eventos com base no respetivo nome de apresentação de nível. Os resultados são armazenados no `$myFailedEvent` variável, que pode ser mais dissected para obter a mensagem de evento:
+`$SeparateDscOperations[0].Group` contém um conjunto de eventos para a operação mais recente. Execute o `Where-Object` cmdlet para filtrar os eventos com base no respetivo nome de apresentação de nível. Os resultados são armazenados no `$myFailedEvent` variável, que pode ser mais dissected para obter a mensagem de evento:
 
 ```powershell
 PS C:\> $myFailedEvent = ($SeparateDscOperations[0].Group | Where-Object {$_.LevelDisplayName -eq "Error"})
@@ -247,7 +247,7 @@ Error Code : 1
 
 ### <a name="5-all-events-generated-for-a-particular-job-id"></a>5: todos os eventos gerados para um ID de tarefa específica.
 
-`$SeparateDscOperations`é uma matriz de grupos, cada um dos quais tem o nome como o ID de tarefa exclusivo. Ao executar o `Where-Object` cmdlet, pode extrair os grupos de eventos que tenham um ID de tarefa específica:
+`$SeparateDscOperations` é uma matriz de grupos, cada um dos quais tem o nome como o ID de tarefa exclusivo. Ao executar o `Where-Object` cmdlet, pode extrair os grupos de eventos que tenham um ID de tarefa específica:
 
 ```powershell
 PS C:\> ($SeparateDscOperations | Where-Object {$_.Name -eq $jobX} ).Group
@@ -621,5 +621,5 @@ onlyProperty                            PSComputerName
 * [Criar recursos de configuração do estado pretendido do PowerShell de personalizada do Windows](authoringResource.md)
 
 ### <a name="other-resources"></a>Outros Recursos
-* [Cmdlets de configuração do estado pretendido do Windows PowerShell](https://technet.microsoft.com/en-us/library/dn521624(v=wps.630).aspx)
+* [Cmdlets de configuração do estado pretendido do Windows PowerShell](https://technet.microsoft.com/library/dn521624(v=wps.630).aspx)
 
