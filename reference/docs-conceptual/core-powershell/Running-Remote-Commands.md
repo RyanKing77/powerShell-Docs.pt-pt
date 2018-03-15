@@ -3,11 +3,11 @@ ms.date: 2017-06-05
 keywords: PowerShell, o cmdlet
 title: Executar Comandos Remotos
 ms.assetid: d6938b56-7dc8-44ba-b4d4-cd7b169fd74d
-ms.openlocfilehash: 43f07abd642e7de235647fa151537c46ebe86cae
-ms.sourcegitcommit: 6aed37d7f0c9652ae09bb8c11928da7e4783ed7f
+ms.openlocfilehash: 24648e8f35fbc28c9ba9f9b7176ac23e72ffbe78
+ms.sourcegitcommit: 99227f62dcf827354770eb2c3e95c5cf6a3118b4
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 01/10/2018
+ms.lasthandoff: 03/15/2018
 ---
 # <a name="running-remote-commands"></a>Executar Comandos Remotos
 
@@ -28,14 +28,14 @@ Vários cmdlets do Windows PowerShell têm o parâmetro ComputerName que lhe per
 
 Estes cmdlets incluem:
 
-* [Reiniciar o computador](https://go.microsoft.com/fwlink/?LinkId=821625)
-* [Ligação de teste](https://go.microsoft.com/fwlink/?LinkId=821646)
-* [Desmarque-registo de eventos](https://go.microsoft.com/fwlink/?LinkId=821568)
-* [Get-registo de eventos](https://go.microsoft.com/fwlink/?LinkId=821585)
-* [Get-correção](https://go.microsoft.com/fwlink/?LinkId=821586)
+* [Restart-Computer](https://go.microsoft.com/fwlink/?LinkId=821625)
+* [Test-Connection](https://go.microsoft.com/fwlink/?LinkId=821646)
+* [Clear-EventLog](https://go.microsoft.com/fwlink/?LinkId=821568)
+* [Get-EventLog](https://go.microsoft.com/fwlink/?LinkId=821585)
+* [Get-HotFix](https://go.microsoft.com/fwlink/?LinkId=821586)
 * [Get-Process](https://go.microsoft.com/fwlink/?linkid=821590)
 * [Get-Service](https://go.microsoft.com/fwlink/?LinkId=821593)
-* [Serviço de conjunto](https://go.microsoft.com/fwlink/?LinkId=821633)
+* [Set-Service](https://go.microsoft.com/fwlink/?LinkId=821633)
 * [Get-WinEvent](https://go.microsoft.com/fwlink/?linkid=821529)
 * [Get-WmiObject](https://go.microsoft.com/fwlink/?LinkId=821595)
 
@@ -48,9 +48,9 @@ Get-Command | where { $_.parameters.keys -contains "ComputerName" -and $_.parame
 ## <a name="windows-powershell-remoting"></a>Comunicação remota do Windows PowerShell
 Comunicação remota do Windows PowerShell, que utiliza o protocolo WS-Management, permite-lhe executar qualquer comando do Windows PowerShell num ou vários computadores remotos. Permite-lhe estabelecer ligações persistentes, iniciar sessões interativas 1:1 e executar scripts em vários computadores.
 
-Para utilizar a comunicação remota do Windows PowerShell, o computador remoto tem de ser configurado para a gestão remota. Para obter mais informações, incluindo instruções, consulte [sobre requisitos remoto](https://technet.microsoft.com/en-us/library/dd315349.aspx).
+Para utilizar a comunicação remota do Windows PowerShell, o computador remoto tem de ser configurado para a gestão remota. Para obter mais informações, incluindo instruções, consulte [sobre requisitos remoto](https://technet.microsoft.com/library/dd315349.aspx).
 
-Depois de ter configurado a comunicação remota do Windows PowerShell, muitos estratégias de gestão remota estão disponíveis para si. O resto deste documento apresenta alguns dos mesmos. Para obter mais informações, consulte [sobre remoto](https://technet.microsoft.com/en-us/library/dd347744.aspx) e [sobre remoto FAQ](https://technet.microsoft.com/en-us/library/dd347744.aspx).
+Depois de ter configurado a comunicação remota do Windows PowerShell, muitos estratégias de gestão remota estão disponíveis para si. O resto deste documento apresenta alguns dos mesmos. Para obter mais informações, consulte [sobre remoto](https://technet.microsoft.com/library/dd347744.aspx) e [sobre remoto FAQ](https://technet.microsoft.com/library/dd347744.aspx).
 
 ### <a name="start-an-interactive-session"></a>Iniciar uma sessão interativa
 Para iniciar uma sessão interativa com um único computador remoto, utilize o [Enter-PSSession](https://go.microsoft.com/fwlink/?LinkId=821477) cmdlet.
@@ -131,7 +131,7 @@ Para obter mais informações sobre o fornecedor de WSMan, consulte [WSMan forne
 Para mais informações, consulte:
 - [Sobre FAQ remoto](https://technet.microsoft.com/en-us/library/dd315359.aspx)
 - [Register-PSSessionConfiguration](https://go.microsoft.com/fwlink/?LinkId=821508)
-- [Importar-PSSession](https://go.microsoft.com/fwlink/?LinkId=821821)
+- [Import-PSSession](https://go.microsoft.com/fwlink/?LinkId=821821)
 
 Para obter ajuda com erros de sistema de interação remota, consulte [about_Remote_Troubleshooting](https://technet.microsoft.com/en-us/library/dd347642.aspx).
 
@@ -141,10 +141,10 @@ Para obter ajuda com erros de sistema de interação remota, consulte [about_Rem
 - [about_Remote_Requirements](https://technet.microsoft.com/en-us/library/da213949-134c-4741-b307-81f4492ba1bd)
 - [about_Remote_Troubleshooting](https://technet.microsoft.com/en-us/library/2f890148-8578-49ed-85ea-79a489dd6317)
 - [about_PSSessions](https://technet.microsoft.com/en-us/library/7a9b4e0e-fa1b-47b0-92f6-6e2995d70acb)
-- [about_WS Management_Cmdlets](https://technet.microsoft.com/en-us/library/6ed3370a-ea10-45a5-9493-696aeace27ed)
-- [Invocação de comando](https://go.microsoft.com/fwlink/?LinkId=821493)
-- [Importar-PSSession](https://go.microsoft.com/fwlink/?LinkId=821821)
-- [Novo-PSSession](https://go.microsoft.com/fwlink/?LinkId=821498)
+- [about_WS-Management_Cmdlets](https://technet.microsoft.com/en-us/library/6ed3370a-ea10-45a5-9493-696aeace27ed)
+- [Invoke-Command](https://go.microsoft.com/fwlink/?LinkId=821493)
+- [Import-PSSession](https://go.microsoft.com/fwlink/?LinkId=821821)
+- [New-PSSession](https://go.microsoft.com/fwlink/?LinkId=821498)
 - [Register-PSSessionConfiguration](https://go.microsoft.com/fwlink/?LinkId=821508)
 - [Fornecedor de WSMan](https://technet.microsoft.com/en-us/library/66fe1241-e08f-49ca-832f-a84c33ca8735)
 

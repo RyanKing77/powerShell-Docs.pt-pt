@@ -2,12 +2,12 @@
 ms.date: 2017-06-12
 author: JKeithB
 ms.topic: reference
-keywords: "WMF, o powershell, o programa de configuração"
-ms.openlocfilehash: f39328b240a36deb40d484c4aedb889cee91dc8d
-ms.sourcegitcommit: 75f70c7df01eea5e7a2c16f9a3ab1dd437a1f8fd
+keywords: wmf,powershell,setup
+ms.openlocfilehash: ad1d19eeb70a19cd3d1493b9a09b115af755feb4
+ms.sourcegitcommit: 99227f62dcf827354770eb2c3e95c5cf6a3118b4
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 06/12/2017
+ms.lasthandoff: 03/15/2018
 ---
 # <a name="desired-state-configuration-dsc-known-issues-and-limitations"></a>Configuração do estado pretendido (DSC) conhecido problemas e limitações
 
@@ -16,7 +16,7 @@ ms.lasthandoff: 06/12/2017
 
 Em versões do WMF 4.0 e o WMF 5.0 pré-visualização, DSC não permitiria palavras-passe na configuração para ter um comprimento superior 121 carateres. DSC foi forçar a utilizar palavras-passe curtas, mesmo se a palavra-passe forte e demorado foi assim o desejar. Esta alteração inovadora permite palavras-passe para ser de comprimento arbitrário na configuração de DSC.
 
-**Resolução:** voltar a criar o certificado com a utilização de encriptação de dados ou chave cifragem de chaves e a utilização de chave de melhorada de encriptação do documento (1.3.6.1.4.1.311.80.1). Artigo do TechNet <https://technet.microsoft.com/en-us/library/dn807171.aspx> tem mais informações.
+**Resolução:** voltar a criar o certificado com a utilização de encriptação de dados ou chave cifragem de chaves e a utilização de chave de melhorada de encriptação do documento (1.3.6.1.4.1.311.80.1). Artigo do TechNet <https://technet.microsoft.com/library/dn807171.aspx> tem mais informações.
 
 
 <a name="dsc-cmdlets-may-fail-after-installing-wmf-50-rtm"></a>Cmdlets de DSC poderão falhar após a instalação do WMF 5.0 RTM
@@ -89,7 +89,7 @@ O cmdlet Invoke-DscResource não devolver verboso, aviso, e mensagens de erro na
 <a name="dsc-resources-cannot-be-debugged-easily-when-used-with-invoke-dscresource"></a>Recursos de DSC não é possível debugged facilmente quando utilizado com Invoke-DscResource
 -----------------------------------------------------------------------
 Quando o MMC está em execução no modo de depuração (consulte [recursos de DSC depuração](https://msdn.microsoft.com/powershell/dsc/debugresource) para obter mais detalhes), cmdlet Invoke-DscResource não fornecer informações sobre o espaço de execução para ligar para a depuração.
-**Resolução:** detetar e ligue a execução com os cmdlets **Get-PSHostProcessInfo**, **Enter PSHostProcess** , **Get-espaço de execução** e  **Espaço de execução de depuração** para depurar o recursos de DSC.
+**Resolução:** detetar e ligue a execução com os cmdlets **Get-PSHostProcessInfo**, **Enter PSHostProcess** , **Get-espaço de execução** e **Espaço de execução de depuração** para depurar o recursos de DSC.
 
 ```powershell
 # Find all the processes hosting PowerShell

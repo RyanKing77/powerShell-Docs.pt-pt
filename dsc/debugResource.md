@@ -3,11 +3,11 @@ ms.date: 2017-06-12
 ms.topic: conceptual
 keywords: "DSC, do powershell, a configuração, a configuração"
 title: "A depuração de recursos de DSC"
-ms.openlocfilehash: 35eb990705bab8190172df899c64c9f34452aa4b
-ms.sourcegitcommit: a444406120e5af4e746cbbc0558fe89a7e78aef6
+ms.openlocfilehash: c9534deb755e2d3ce59dbb44e55b58b59af2e7f4
+ms.sourcegitcommit: 99227f62dcf827354770eb2c3e95c5cf6a3118b4
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 03/15/2018
 ---
 # <a name="debugging-dsc-resources"></a>A depuração de recursos de DSC
 
@@ -16,9 +16,9 @@ ms.lasthandoff: 01/17/2018
 No PowerShell 5.0, uma nova funcionalidade introduzida na pretendido Estado elementos (DSC) que permite-lhe depurar um recurso de DSC como um configuration está a ser aplicada.
 
 ## <a name="enabling-dsc-debugging"></a>Ativar depuração de DSC
-Antes de pode depurar um recurso, tem de ativar a depuração de chamar o [ativar DscDebug](https://technet.microsoft.com/en-us/library/mt517870.aspx) cmdlet. Este cmdlet assume um parâmetro obrigatório, **BreakAll**. 
+Antes de pode depurar um recurso, tem de ativar a depuração de chamar o [ativar DscDebug](https://technet.microsoft.com/library/mt517870.aspx) cmdlet. Este cmdlet assume um parâmetro obrigatório, **BreakAll**. 
 
-Pode verificar que a depuração foi ativada ao observar o resultado de uma chamada para [Get-DscLocalConfigurationManager](https://technet.microsoft.com/en-us/library/dn407378.aspx).
+Pode verificar que a depuração foi ativada ao observar o resultado de uma chamada para [Get-DscLocalConfigurationManager](https://technet.microsoft.com/library/dn407378.aspx).
 
 A saída do PowerShell seguinte mostra o resultado da ativação da depuração:
 
@@ -59,7 +59,7 @@ Configuration PSWebAccess
     }
 PSWebAccess
 ```
-Depois de compilar a configuração, inicie-o ao chamar [início DscConfiguration](https://technet.microsoft.com/en-us/library/dn521623.aspx). A configuração irá parar quando chama o Gestor de configuração Local (MMC) para o recurso primeiro na configuração. Se utilizar o `-Verbose` e `-Wait` parâmetros, a saída apresenta as linhas tem de introduzir para iniciar a depuração.
+Depois de compilar a configuração, inicie-o ao chamar [início DscConfiguration](https://technet.microsoft.com/library/dn521623.aspx). A configuração irá parar quando chama o Gestor de configuração Local (MMC) para o recurso primeiro na configuração. Se utilizar o `-Verbose` e `-Wait` parâmetros, a saída apresenta as linhas tem de introduzir para iniciar a depuração.
 
 ```powershell
 Start-DscConfiguration .\PSWebAccess -Wait -Verbose
@@ -96,7 +96,7 @@ Agora, pode utilizar os comandos de depuração no ISE para seguir o script de r
 
 ## <a name="disabling-dsc-debugging"></a>Desativar a depuração de DSC
 
-Após a chamada [ativar DscDebug](https://technet.microsoft.com/en-us/library/mt517870.aspx), todas as chamadas para [início DscConfiguration](https://technet.microsoft.com/en-us/library/dn521623.aspx) resultará na configuração interrompendo ao depurador. Para permitir que as configurações executar normalmente, tem de desativar a depuração ao chamar o [desativar DscDebug](https://technet.microsoft.com/en-us/library/mt517872.aspx) cmdlet.
+Após a chamada [ativar DscDebug](https://technet.microsoft.com/library/mt517870.aspx), todas as chamadas para [início DscConfiguration](https://technet.microsoft.com/library/dn521623.aspx) resultará na configuração interrompendo ao depurador. Para permitir que as configurações executar normalmente, tem de desativar a depuração ao chamar o [desativar DscDebug](https://technet.microsoft.com/en-us/library/mt517872.aspx) cmdlet.
 
 >**Nota:** Rebooting não altera o estado de depuração do MMC. Se a depuração está ativada, a partir de uma configuração irá ainda aceder ao depurador após um reinício.
 

@@ -3,11 +3,11 @@ ms.date: 2017-06-12
 ms.topic: conceptual
 keywords: "DSC, do powershell, a configuração, a configuração"
 title: "Separação de dados de configuração e de ambiente"
-ms.openlocfilehash: cf0d4a12efe4998176d3c80841740c5f9d9a103b
-ms.sourcegitcommit: a444406120e5af4e746cbbc0558fe89a7e78aef6
+ms.openlocfilehash: 18b18d805ac248b29526862591df5f0ff785937b
+ms.sourcegitcommit: 99227f62dcf827354770eb2c3e95c5cf6a3118b4
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 03/15/2018
 ---
 # <a name="separating-configuration-and-environment-data"></a>Separação de dados de configuração e de ambiente
 
@@ -81,7 +81,7 @@ Mode                LastWriteTime         Length Name
 -a----        3/31/2017   5:09 PM           1970 VM-2.mof  
 ```
  
-`$MyData`Especifica a dois nós diferentes, cada uma com a sua própria `NodeName` e `Role`. A configuração cria dinamicamente **nó** blocos, efetuando a coleção de nós que obtém a partir do `$MyData` (especificamente, `$AllNodes`) e filtra nessa coleção contra o `Role` propriedade...
+`$MyData` Especifica a dois nós diferentes, cada uma com a sua própria `NodeName` e `Role`. A configuração cria dinamicamente **nó** blocos, efetuando a coleção de nós que obtém a partir do `$MyData` (especificamente, `$AllNodes`) e filtra nessa coleção contra o `Role` propriedade...
 
 ## <a name="using-configuration-data-to-define-development-and-production-environments"></a>Com dados de configuração para definir a ambientes de desenvolvimento e de produção
 
@@ -143,7 +143,7 @@ Configuration MyWebApp
     Import-DscResource -Module xSqlPs
     Import-DscResource -Module xWebAdministration
 
-    Node $AllNodes.Where{$_.Role -contains "MSSQL"}.Nodename
+    Node $AllNodes.Where{$_.Role -contains "MSSQL"}.NodeName
    {
         # Install prerequisites
         WindowsFeature installdotNet35
@@ -246,7 +246,7 @@ A seguinte configuração garante a presença dos dois sites.
 Os dados para cada Web site são definidos no **AllNodes** matriz.
 O ficheiro `Config.xml` é utilizado para os dois Web sites, pelo que definimos numa chave adicional com o nome `NonNodeData`.
 Tenha em atenção que pode ter como número de chaves adicional à medida que quiser, pode atribuir o nome-los tudo o que pretende.
-`NonNodeData`Não é uma palavra reservada, é apenas o que decidimos nomear a chave adicional.
+`NonNodeData` Não é uma palavra reservada, é apenas o que decidimos nomear a chave adicional.
 
 Aceder às chaves adicionais ao utilizar a variável especial **$ConfigurationData**.
 Neste exemplo, `ConfigFileContents` é acedida com a linha:

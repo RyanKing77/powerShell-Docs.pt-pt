@@ -2,11 +2,11 @@
 ms.date: 2017-08-23
 keywords: PowerShell, o cmdlet
 title: "resolução de problemas de acesso no windows powershell web access"
-ms.openlocfilehash: 08a9fd286ed8a40e9423deb7d29dc0a8ecf8e5b1
-ms.sourcegitcommit: 4102ecc35d473211f50a453f6ae3fbea31cb3428
+ms.openlocfilehash: 6e51df3f4c6ac196c855ad918a91394d02c7d75e
+ms.sourcegitcommit: 99227f62dcf827354770eb2c3e95c5cf6a3118b4
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 08/31/2017
+ms.lasthandoff: 03/15/2018
 ---
 # <a name="troubleshooting-access-problems-in-windows-powershell-web-access"></a>Resolução de Problemas de Acesso no Windows PowerShell Web Access
 
@@ -34,7 +34,7 @@ Falha pode ocorrer devido a qualquer um dos seguintes procedimentos.
 
   Certifique-se a gestão remota está ativada no computador ao qual o utilizador está a tentar ligar.
 
-  Para obter mais informações, consulte [como configurar o seu computador para a gestão remota](https://docs.microsoft.com/en-us/powershell/module/microsoft.powershell.core/about/about_remote_requirements#how-to-configure-your-computer-for-remoting).
+  Para obter mais informações, consulte [como configurar o seu computador para a gestão remota](https://docs.microsoft.com/powershell/module/microsoft.powershell.core/about/about_remote_requirements#how-to-configure-your-computer-for-remoting).
 
 ## <a name="internal-server-error"></a>Erro interno do servidor
 
@@ -61,7 +61,7 @@ Esta situação pode ocorrer a utilizadores que tenham sessão iniciada com um n
 
 ## <a name="cannot-connect-to-a-remote-workgroup-computer"></a>Não é possível ligar a um computador de grupo de trabalho remoto
 
-Se o computador de destino for um membro do grupo de trabalho, utilize a seguinte sintaxe para fornecer o nome de utilizador e inicie sessão computador:`<workgroup_name>\<user_name>`
+Se o computador de destino for um membro do grupo de trabalho, utilize a seguinte sintaxe para fornecer o nome de utilizador e inicie sessão computador: `<workgroup_name>\<user_name>`
 
 ## <a name="cannot-find-web-server-iis-management-tools-even-though-the-role-was-installed"></a>Não é possível localizar ferramentas de gestão do Servidor Web (IIS), apesar da função ter sido instalada
 
@@ -92,9 +92,9 @@ Não utilize um ponto (.) autonomamente para representar o nome do computador.
 
 Parâmetro | Valor
 -- | --
-UserName | Servidor\_nome\\utilizador\_nome<br/>Localhost\\utilizador\_nome<br/>. \\utilizador\_nome
-Grupo de utilizador | Servidor\_nome\\utilizador\_grupo<br/>Localhost\\utilizador\_grupo<br/>. \\utilizador\_grupo
-Grupo de computador | Servidor\_nome\\computador\_grupo<br/>Localhost\\computador\_grupo<br/>. \\computador\_grupo
+UserName | Server\_name\\user\_name<br/>Localhost\\user\_name<br/>. \\utilizador\_nome
+Grupo de utilizador | Server\_name\\user\_group<br/>Localhost\\user\_group<br/>. \\utilizador\_grupo
+ComputerGroup | Server\_name\\computer\_group<br/>Localhost\\computer\_group<br/>. \\computador\_grupo
 
 #### <a name="gateway-server-is-in-a-domain"></a>Servidor de gateway está num domínio
 
@@ -112,8 +112,8 @@ ComputerName | Nome do servidor
 
 Inicie sessão num servidor de gateway como computador de destino utilizando as credenciais formatadas através de um dos seguintes procedimentos.
 
-- Servidor\_nome\\utilizador\_nome
-- Localhost\\utilizador\_nome
+- Server\_name\\user\_name
+- Localhost\\user\_name
 - . \\utilizador\_nome
 
 ## <a name="a-security-identifier-sid-is-displayed-in-an-authorization-rule"></a>Um identificador de segurança (SID) é apresentado numa regra de autorização
@@ -132,7 +132,7 @@ As regras de autorização não suportam um endereço IPv6 no formato de um nome
 Para especificar um computador de destino utilizando um endereço IPv6, utilize o endereço IPv6 original (que contém dois pontos) na regra de autorização.
 O domínio e os endereços IPv6 numéricos (com dois pontos) são suportados como o nome do computador de destino na página de início de sessão de acesso Web Windows PowerShell, mas não em regras de autorização. 
 
-Para obter mais informações sobre os endereços IPv6, consulte [como IPv6 funciona](https://technet.microsoft.com/en-us/library/cc781672(v=ws.10).aspx).
+Para obter mais informações sobre os endereços IPv6, consulte [como IPv6 funciona](https://technet.microsoft.com/library/cc781672(v=ws.10).aspx).
 
 ## <a name="see-also"></a>Consulte Também
 

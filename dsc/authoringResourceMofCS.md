@@ -3,17 +3,17 @@ ms.date: 2017-06-12
 ms.topic: conceptual
 keywords: "DSC, do powershell, a configuração, a configuração"
 title: "Criação de um recurso de DSC em c#"
-ms.openlocfilehash: 2fc6b8c127bca29e8f66fc7bd8d2828fdfe39f3c
-ms.sourcegitcommit: a444406120e5af4e746cbbc0558fe89a7e78aef6
+ms.openlocfilehash: 4d276edf1180573df61b62d18a9f90cfa1cd4112
+ms.sourcegitcommit: 99227f62dcf827354770eb2c3e95c5cf6a3118b4
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 03/15/2018
 ---
 # <a name="authoring-a-dsc-resource-in-c"></a>Criação de um recurso de DSC em c#
 
 > Aplica-se a: O Windows PowerShell 4.0, Windows PowerShell 5.0
 
-Normalmente, um recurso personalizado de configuração de estado pretendido do Windows PowerShell (DSC) é implementado num script do PowerShell. No entanto, também pode implementar a funcionalidade de um recurso personalizado de DSC escrevendo cmdlets em c#. Para uma introdução sobre como escrever cmdlets em c#, consulte [escrever um Cmdlet do Windows PowerShell](https://technet.microsoft.com/en-us/library/dd878294.aspx).
+Normalmente, um recurso personalizado de configuração de estado pretendido do Windows PowerShell (DSC) é implementado num script do PowerShell. No entanto, também pode implementar a funcionalidade de um recurso personalizado de DSC escrevendo cmdlets em c#. Para uma introdução sobre como escrever cmdlets em c#, consulte [escrever um Cmdlet do Windows PowerShell](https://technet.microsoft.com/library/dd878294.aspx).
 
 Para além de implementar o recurso em c# que cmdlets, o processo de criar o esquema MOF, a estrutura da pasta a criar, importar e utilizar o recurso personalizado de DSC são os mesmos conforme descrito em [escrever um recurso personalizado de DSC com MOF](authoringResourceMOF.md).
 
@@ -281,5 +281,5 @@ $env: psmodulepath (folder)
 #### <a name="concepts"></a>Conceitos
 [Escrever um recurso personalizado de DSC com MOF](authoringResourceMOF.md)
 #### <a name="other-resources"></a>Outros Recursos
-[Escrever um Cmdlet do Windows PowerShell](https://msdn.microsoft.com/en-us/library/dd878294.aspx)
+[Escrever um Cmdlet do Windows PowerShell](https://msdn.microsoft.com/library/dd878294.aspx)
 

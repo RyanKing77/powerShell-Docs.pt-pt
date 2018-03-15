@@ -3,11 +3,11 @@ ms.date: 2017-06-12
 ms.topic: conceptual
 keywords: "DSC, do powershell, a configuração, a configuração"
 title: "Descrição geral da configuração do Estado de desired para decisores"
-ms.openlocfilehash: cbde5d22f9cf118485a0302e53ee0a75eb4b8843
-ms.sourcegitcommit: a444406120e5af4e746cbbc0558fe89a7e78aef6
+ms.openlocfilehash: 42335d674bd23a109ad8f818d3e22ef221884ca7
+ms.sourcegitcommit: 99227f62dcf827354770eb2c3e95c5cf6a3118b4
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 03/15/2018
 ---
 # <a name="desired-state-configuration-overview-for-decision-makers"></a>Descrição geral da configuração do Estado de desired para decisores
 
@@ -17,7 +17,7 @@ Este documento descreve as vantagens de negócio da utilização pretendida Esta
 
 Configuração de estado pretendido do Windows PowerShell (DSC) é uma plataforma de gestão de configuração incorporada no Windows que é baseada nas normas de abertura. DSC é flexível o suficiente para funcionar de forma fiável e consistentemente em cada fase do ciclo de vida de implementação (desenvolvimento, teste, pré-produção, produção), bem como durante Escalamento horizontal. 
 
-DSC centra-se "[configurações](https://msdn.microsoft.com/en-us/powershell/dsc/configurations)".
+DSC centra-se "[configurações](https://msdn.microsoft.com/powershell/dsc/configurations)".
 Uma configuração é um documento de fácil leitura que descreve um ambiente efetuado cópias de segurança de computadores "(nós) com características específicas. Estas características podem ser tão simples como garantir que uma funcionalidade específica do Windows está ativado ou como complexos como implementar o SharePoint. 
 
 DSC tem também de monitorização e relatórios incorporados. Se um sistema já não for conforme, DSC pode emitir um alerta e atuar para corrigir o sistema. 
@@ -35,11 +35,11 @@ Configurações também são partilhável através de [galeria do PowerShell](ht
 
 [DevOps](http://blogs.technet.com/b/ashleymcglone/archive/2015/11/20/devops-for-n00bs-ie-windows-people.aspx) é uma combinação de pessoas, processos e ferramentas que permitem para implementação rápida e iteração concentra-se em permitir o valor para os utilizadores finais se internos ou externos. DSC foi concebido com DevOps em mente. Ter uma configuração única definir um ambiente significa que os programadores podem codificar os respetivos requisitos para uma configuração, verifique que a configuração para o controlo de origem e equipas de operações podem facilmente implementar código sem ter de passar por propensas ao erro processos manuais. 
 
-Configurações são também [condicionada por dados](https://msdn.microsoft.com/en-us/powershell/dsc/configdata), que torna mais fácil para as equipas de ops identificar e alterar ambientes sem a intervenção do programador. 
+Configurações são também [condicionada por dados](https://msdn.microsoft.com/powershell/dsc/configdata), que torna mais fácil para as equipas de ops identificar e alterar ambientes sem a intervenção do programador. 
 
 ## <a name="desired-state-configuration-on--and-off-premises"></a>Configuração do estado pretendido e desativar-no local
 
-DSC pode ser utilizado para gerir implementações no local e fora do local. Para soluções no local, DSC tem um [do servidor de solicitação](https://msdn.microsoft.com/en-us/powershell/dsc/pullserver) que podem ser utilizados para centralizar a gestão das máquinas e comunicar no respetivo estado. Para soluções de nuvem, DSC é utilizável onde quer que Windows utilizável. Também existem ofertas específicas do Azure incorporado numa configuração de estado pretendido, tais como [da automatização do Azure](https://azure.microsoft.com/en-us/documentation/services/automation/), que centraliza reporting do DSC. 
+DSC pode ser utilizado para gerir implementações no local e fora do local. Para soluções no local, DSC tem um [do servidor de solicitação](https://msdn.microsoft.com/powershell/dsc/pullserver) que podem ser utilizados para centralizar a gestão das máquinas e comunicar no respetivo estado. Para soluções de nuvem, DSC é utilizável onde quer que Windows utilizável. Também existem ofertas específicas do Azure incorporado numa configuração de estado pretendido, tais como [da automatização do Azure](https://azure.microsoft.com/en-us/documentation/services/automation/), que centraliza reporting do DSC. 
 
 ## <a name="dsc-and-compatibility"></a>Compatibilidade e DSC
 

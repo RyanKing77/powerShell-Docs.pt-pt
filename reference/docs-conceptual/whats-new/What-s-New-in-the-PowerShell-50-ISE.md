@@ -3,27 +3,27 @@ ms.date: 2017-06-05
 keywords: PowerShell, o cmdlet
 title: Que s novas no PowerShell 50 ISE
 ms.assetid: 38648d47-7c27-4b37-a40e-ad29948519c2
-ms.openlocfilehash: 89dcc905ce200d06029e148c9675269e6f518fa3
-ms.sourcegitcommit: 3720ce4efb6735694cfb53a1b793d949af5d1bc5
+ms.openlocfilehash: 9fd25a4759602bebf2b5df2c17d0c816a15e5e2b
+ms.sourcegitcommit: 99227f62dcf827354770eb2c3e95c5cf6a3118b4
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 09/29/2017
+ms.lasthandoff: 03/15/2018
 ---
-# <a name="what39s-new-in-the-windows-powershell-ise"></a>O que &#39; s no ISE do Windows PowerShell
+# <a name="what39s-new-in-the-windows-powershell-ise"></a>O que&#39;s no ISE do Windows PowerShell
 Este tópico explica as funcionalidades novas e atualizadas que foi introduzidas em versões do Windows PowerShell Integrated Scripting Environment (ISE).
 
 ## <a name="feature-description"></a>Descrição da funcionalidade
 O ISE do Windows PowerShell é uma aplicação de anfitrião que permite-lhe escrever, executar e testar scripts e de módulos num ambiente gráfico e intuitivo. As principais funcionalidades, tais como cores da sintaxe separador conclusão, depuração visual, compatibilidade de Unicode e ajuda sensível ao contexto fornecer uma experiência avançada do script.
 
-Para obter uma descrição geral do ISE do Windows PowerShell, consulte [descrição geral do Windows PowerShell Integrated Scripting ambiente](https://technet.microsoft.com/en-us/library/3c1892c2-bf84-4cb6-af26-1f453be9e671).
+Para obter uma descrição geral do ISE do Windows PowerShell, consulte [descrição geral do Windows PowerShell Integrated Scripting ambiente](https://technet.microsoft.com/library/3c1892c2-bf84-4cb6-af26-1f453be9e671).
 
 ## <a name="new-and-changed-functionality-in-windows-powershell-ise"></a>Funcionalidades novas e alteradas no ISE do Windows PowerShell
 A tabela seguinte lista as funcionalidades novas e alteradas para esta versão do ISE do Windows PowerShell no Windows PowerShell.
 
-|Funcionalidade|ISE do Windows PowerShell 4.0|ISE do Windows PowerShell 3.0|ISE do Windows PowerShell 2.0|
+|Funcionalidade|Windows PowerShell ISE 4.0|ISE do Windows PowerShell 3.0|Windows PowerShell ISE 2.0|
 |--------------------------|-----------------------------------------------|-----------------------------------------------|-----------------------------------------------|
 |**[IntelliSense](#intellisense)**|X|X||
-|**[Fragmentos](#snippets)**|X|X||
+|**[Snippets](#snippets)**|X|X||
 |**[Ferramentas de suplemento](#add-on-tools)**|X|X||
 |**[Reinicie o gestor e guardar automática](#restart-manager-and-auto-save)**|X|X||
 |**[Mais recentemente utilizados lista](#most-recently-used-list)**|X|X||
@@ -167,7 +167,7 @@ Outras funcionalidades de edição do ISE do Windows PowerShell incluem:
 
 - **XML de cores da sintaxe**ISE do Windows PowerShell cores agora sintaxe XML da mesma forma como este cores sintaxe do Windows PowerShell.
 
-- **Correspondência Chaveta** ISE do Windows PowerShell inclui Chaveta correspondentes e de realce e pode ser utilizado das seguintes formas: (por exemplo, utilizando o **aceda a correspondência** comando ou **Ctrl +]** localiza a chaveta de fecho, se tiver uma chaveta de abertura selecionada).
+- **Correspondência Chaveta** ISE do Windows PowerShell inclui Chaveta correspondentes e de realce e pode ser utilizado das seguintes formas: (por exemplo, utilizando o **aceda a correspondência** comando ou **Ctrl +]** localiza o fechar a chaveta, se tiver uma chaveta de abertura selecionada).
 
 - **Descrevem vista** o painel de Script suporta definido que estipule, que lhe permite collapsing ou expandir secções de código, clicando em mais ou menos inicia na margem esquerda. Pode utilizar chavetas ou **#region** e **#endregion** etiquetas para marcar o início ou fim de uma secção expansível. Para expandir ou fechar todas as regiões, prima **Ctrl + M**.
 
@@ -222,7 +222,7 @@ Mostrar comando é novo do Windows PowerShell ISE 3.0.
 ## <a name="see-also"></a>Consulte também
 Para obter mais informações sobre como utilizar o ISE do Windows PowerShell no Windows PowerShell, consulte as hiperligações seguintes.
 
-- [Utilizando o ambiente de script integrada do Windows PowerShell](../core-powershell/ise/Using-the-Windows-PowerShell-ISE.md)
+- [Explorar o ambiente de script integrada do Windows PowerShell](../getting-started/fundamental/exploring-the-windows-powershell-ise.md)
 - [ISE no TechNet Wiki](http://social.technet.microsoft.com/wiki/search/searchresults.aspx?q=ISE)
 - [Centro de scripts](http://technet.microsoft.com/scriptcenter/default)
 

@@ -369,10 +369,21 @@ sudo yum remove powershell
 
 ## <a name="opensuse-422"></a>OpenSUSE 42.2
 
-> **Nota:** ao instalar o PowerShell Core, OpenSUSE poderá reportar nada fornece `libcurl`.
-`libcurl`devem ser instalados em versões suportadas do OpenSUSE.
-Executar `zypper search libcurl` para confirmar.
-O erro apresentará 2 'soluções'. Escolha 'Solução 2' para continuar a instalação do núcleo do PowerShell.
+> **Nota:** ao instalar o PowerShell Core, `zypper` pode comunicar o seguinte erro:
+>
+> ```text
+> Problem: nothing provides libcurl needed by powershell-6.0.1-1.rhel.7.x86_64
+>  Solution 1: do not install powershell-6.0.1-1.rhel.7.x86_64
+>  Solution 2: break powershell-6.0.1-1.rhel.7.x86_64 by ignoring some of its dependencies
+> ```
+>
+> Neste caso, certifique-se de que um ecrã compatível com `libcurl` biblioteca encontra-se ao verificar que o seguinte comando mostra o `libcurl4` pacote como instalado:
+>
+> ```sh
+> zypper search --file-list --match-exact '/usr/lib64/libcurl.so.4'
+> ```
+>
+> Em seguida, escolha o `break powershell-6.0.1-1.rhel.7.x86_64 by ignoring some of its dependencies` solução quando instalar o `powershell` pacote.
 
 ### <a name="installation-via-package-repository-preferred---opensuse-422"></a>Instalação através do repositório de pacote (preferencial) - OpenSUSE 42.2
 
@@ -384,9 +395,6 @@ sudo rpm --import https://packages.microsoft.com/keys/microsoft.asc
 
 # Add the Microsoft Product feed
 curl https://packages.microsoft.com/config/rhel/7/prod.repo | sudo tee /etc/zypp/repos.d/microsoft.repo
-
-# Update the list of products
-sudo zypper update
 
 # Install PowerShell
 sudo zypper install powershell
@@ -763,13 +771,13 @@ sudo rm -rf /usr/local/bin/pwsh /usr/local/microsoft/powershell
 
 ## <a name="paths"></a>Caminhos
 
-* `$PSHOME`é`/opt/microsoft/powershell/6.0.0/`
-* Perfis de utilizador serão lida a partir de`~/.config/powershell/profile.ps1`
-* Serão possível ler perfis predefinidos`$PSHOME/profile.ps1`
-* Módulos de utilizador serão lida a partir de`~/.local/share/powershell/Modules`
-* Módulos partilhados irão ler a partir do`/usr/local/share/powershell/Modules`
-* Módulos de predefinido serão possível ler a partir do`$PSHOME/Modules`
-* Histórico de PSReadline será gravado para`~/.local/share/powershell/PSReadLine/ConsoleHost_history.txt`
+* `$PSHOME` é `/opt/microsoft/powershell/6.0.0/`
+* Perfis de utilizador serão lida a partir de `~/.config/powershell/profile.ps1`
+* Serão possível ler perfis predefinidos `$PSHOME/profile.ps1`
+* Módulos de utilizador serão lida a partir de `~/.local/share/powershell/Modules`
+* Módulos partilhados irão ler a partir do `/usr/local/share/powershell/Modules`
+* Módulos de predefinido serão possível ler a partir do `$PSHOME/Modules`
+* Histórico de PSReadline será gravado para `~/.local/share/powershell/PSReadLine/ConsoleHost_history.txt`
 
 Os perfis respeitem a configuração de por anfitrião do PowerShell, pelo que os perfis de anfitrião específico predefinido não existe em `Microsoft.PowerShell_profile.ps1` nas localizações da mesmas.
 

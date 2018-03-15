@@ -2,13 +2,13 @@
 ms.date: 2017-06-12
 author: JKeithB
 ms.topic: reference
-keywords: "WMF, o powershell, o programa de configuração"
+keywords: wmf,powershell,setup
 title: "Novos cenários e funcionalidades no WMF 5.1"
-ms.openlocfilehash: 430781c5c9a59fc544db4f94098313ae1e9cf610
-ms.sourcegitcommit: a6ee6e64d369ecf82c730411bed9750278fdb5c1
+ms.openlocfilehash: da3dfb2243c00e3faf637d3dbcb70016cfabb011
+ms.sourcegitcommit: 99227f62dcf827354770eb2c3e95c5cf6a3118b4
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 08/18/2017
+ms.lasthandoff: 03/15/2018
 ---
 # <a name="new-scenarios-and-features-in-wmf-51"></a>Novos cenários e funcionalidades no WMF 5.1 #
 
@@ -28,9 +28,9 @@ Começando na versão 5.1, o PowerShell está disponível nas diferentes ediçõ
 
 ## <a name="catalog-cmdlets"></a>Cmdlets de catálogo  
 
-Foram adicionados dois novos cmdlets no [Microsoft.PowerShell.Security](https://technet.microsoft.com/en-us/library/hh847877.aspx) módulo; estas gerar e validar os ficheiros de catálogo do Windows.  
+Foram adicionados dois novos cmdlets no [Microsoft.PowerShell.Security](https://technet.microsoft.com/library/hh847877.aspx) módulo; estas gerar e validar os ficheiros de catálogo do Windows.  
 
-###<a name="new-filecatalog"></a>Novo FileCatalog 
+###<a name="new-filecatalog"></a>New-FileCatalog 
 --------------------------------
 
 Novo FileCatalog cria um ficheiro de catálogo do Windows para o conjunto de ficheiros e pastas. Este ficheiro de catálogo contém hashes para todos os ficheiros em caminhos especificados. Os utilizadores possam distribuir o conjunto de pastas, juntamente com o ficheiro de catálogo correspondente que representa essas pastas. Estas informações são úteis para validar se todas as alterações foram efetuadas às pastas desde a hora de criação do catálogo.    
@@ -51,7 +51,7 @@ Esta ação cria o ficheiro de catálogo.
 Para verificar a integridade dos ficheiros de catálogo (Pester.cat no acima exemplo), inicie sessão com [conjunto AuthenticodeSignature](https://technet.microsoft.com/library/hh849819.aspx) cmdlet.   
 
 
-###<a name="test-filecatalog"></a>Teste FileCatalog 
+###<a name="test-filecatalog"></a>Test-FileCatalog 
 --------------------------------
 
 Teste FileCatalog valida o catálogo que representa um conjunto de pastas. 
@@ -62,7 +62,7 @@ Test-FileCatalog [-CatalogFilePath] <string> [[-Path] <string[]>] [-Detailed] [-
 
 ![](../images/TestFileCatalog.jpg)
 
-Este cmdlet compara todos os hashes de ficheiros e os respetivos caminhos relativos encontrado na *catálogo* com aqueles no *disco*. Se detetar qualquer erro de correspondência entre os hashes de ficheiros e caminhos devolve o estado como *ValidationFailed*. Os utilizadores podem obter todos os estas informações ao utilizar o *-detalhadas* parâmetro. Também apresenta assinatura estado do catálogo no *assinatura* propriedade que é equivalente a chamar [Get-AuthenticodeSignature](https://technet.microsoft.com/en-us/library/hh849805.aspx) cmdlet no ficheiro de catálogo. Os utilizadores também podem ignorar qualquer ficheiro durante a validação utilizando o *- FilesToSkip* parâmetro. 
+Este cmdlet compara todos os hashes de ficheiros e os respetivos caminhos relativos encontrado na *catálogo* com aqueles no *disco*. Se detetar qualquer erro de correspondência entre os hashes de ficheiros e caminhos devolve o estado como *ValidationFailed*. Os utilizadores podem obter todos os estas informações ao utilizar o *-detalhadas* parâmetro. Também apresenta assinatura estado do catálogo no *assinatura* propriedade que é equivalente a chamar [Get-AuthenticodeSignature](https://technet.microsoft.com/library/hh849805.aspx) cmdlet no ficheiro de catálogo. Os utilizadores também podem ignorar qualquer ficheiro durante a validação utilizando o *- FilesToSkip* parâmetro. 
 
 
 ## <a name="module-analysis-cache"></a>Cache de análise do módulo ##
@@ -101,13 +101,13 @@ No WMF 5.1:
 
 * Pode utilizar [ModuleSpecification construtor (tabela hash)](https://msdn.microsoft.com/library/jj136290). Esta tabela hash tem o mesmo formato que `Get-Module -FullyQualifiedName`.
 
-**Exemplo:**`using module @{ModuleName = 'PSReadLine'; RequiredVersion = '1.1'}`
+**Exemplo:** `using module @{ModuleName = 'PSReadLine'; RequiredVersion = '1.1'}`
 
 * Se existirem várias versões do módulo, PowerShell utiliza o **mesma lógica resolução** como `Import-Module` e não devolve um erro - o mesmo comportamento de `Import-Module` e `Import-DscResource`.
 
 
 ##<a name="improvements-to-pester"></a>Melhoramentos à Pester
-No WMF 5.1, a versão do Pester que é fornecido com o PowerShell foi atualizada de 3.3.5 para 3.4.0, com a adição de consolidação https://github.com/pester/Pester/pull/484/commits/3854ae8a1f215b39697ac6c2607baf42257b102e, que permite um melhor comportamento para Pester no servidor de nano for apresentado. 
+No WMF 5.1, a versão do Pester que é fornecido com o PowerShell foi atualizada de 3.3.5 para 3.4.0, com a adição de consolidação https://github.com/pester/Pester/pull/484/commits/3854ae8a1f215b39697ac6c2607baf42257b102e, que permite uma maior comportamento para Pester no servidor de nano for apresentado. 
 
-Pode rever as alterações em versões 3.3.5 para 3.4.0 ao inspecionar o ficheiro de ChangeLog.md: https://github.com/pester/Pester/blob/master/CHANGELOG.md
+Pode rever as alterações em versões 3.3.5 para 3.4.0 ao inspecionar o ficheiro de ChangeLog.md em: https://github.com/pester/Pester/blob/master/CHANGELOG.md
 

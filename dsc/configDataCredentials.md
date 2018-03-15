@@ -3,11 +3,11 @@ ms.date: 2017-06-12
 ms.topic: conceptual
 keywords: "DSC, do powershell, a configuração, a configuração"
 title: "Opções de credenciais nos dados de configuração"
-ms.openlocfilehash: 15cdb29127d9774c58e1d6518bbba56273e7defd
-ms.sourcegitcommit: a444406120e5af4e746cbbc0558fe89a7e78aef6
+ms.openlocfilehash: 6ddf82c2b63309255ec3187d650677a6c3c2afb0
+ms.sourcegitcommit: 99227f62dcf827354770eb2c3e95c5cf6a3118b4
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 03/15/2018
 ---
 # <a name="credentials-options-in-configuration-data"></a>Opções de credenciais nos dados de configuração
 >Aplica-se a: O Windows PowerShell 5.0
@@ -156,7 +156,7 @@ Group [String] #ResourceName
 }
 ```
 
-Este exemplo utiliza um [grupo](https://msdn.microsoft.com/en-us/powershell/dsc/groupresource) recurso do `PSDesiredStateConfiguration` módulo incorporado de recursos de DSC.
+Este exemplo utiliza um [grupo](https://msdn.microsoft.com/powershell/dsc/groupresource) recurso do `PSDesiredStateConfiguration` módulo incorporado de recursos de DSC.
 Pode criar grupos locais e adicionar ou remover membros.
 Aceita ambos o `Credential` propriedade e o automático `PsDscRunAsCredential` propriedade.
 No entanto, o recurso utiliza apenas a `Credential` propriedade.
@@ -231,7 +231,7 @@ Neste exemplo tem dois problemas:
 ## <a name="psdscallowplaintextpassword"></a>PsDscAllowPlainTextPassword
 
 A primeira mensagem de erro tem um URL com a documentação.
-Esta ligação explica como encriptar as palavras-passe a utilizar um [ConfigurationData](https://msdn.microsoft.com/en-us/powershell/dsc/configdata) estrutura e um certificado.
+Esta ligação explica como encriptar as palavras-passe a utilizar um [ConfigurationData](https://msdn.microsoft.com/powershell/dsc/configdata) estrutura e um certificado.
 Para obter mais informações sobre certificados e DSC [ler esta mensagem](http://aka.ms/certs4dsc).
 
 Para forçar uma palavra-passe de texto simples, o recurso requer o `PsDscAllowPlainTextPassword` secção de palavra-chave dos dados de configuração da seguinte forma:
@@ -270,7 +270,7 @@ DomainCredentialExample -DomainCredential $cred -ConfigurationData $cd
 ```
 
 > [!NOTE]
-> `NodeName`não pode ser igual asterisco, um nome de nó específico é obrigatório.
+> `NodeName` não pode ser igual asterisco, um nome de nó específico é obrigatório.
 
 **Microsoft aconselha para evitar palavras-passe de texto simples devido ao risco de segurança significativo.**
 

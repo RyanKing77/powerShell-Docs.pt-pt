@@ -3,11 +3,11 @@ ms.date: 2017-06-12
 ms.topic: conceptual
 keywords: "DSC, do powershell, a configuração, a configuração"
 title: Recursos do DSC WaitForAll
-ms.openlocfilehash: 2054d2af7cd7dd839c62e77c1d4b6eee5cff34ab
-ms.sourcegitcommit: a444406120e5af4e746cbbc0558fe89a7e78aef6
+ms.openlocfilehash: 2b6d9e11acd429eecb30926316d1033331524edc
+ms.sourcegitcommit: 99227f62dcf827354770eb2c3e95c5cf6a3118b4
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 03/15/2018
 ---
 # <a name="dsc-waitforall-resource"></a>Recursos do DSC WaitForAll
 
@@ -36,7 +36,7 @@ WaitForAll [string] #ResourceName
 
 |  Propriedade  |  Descrição   | 
 |---|---| 
-| ResourceName| O nome de recurso a dependem.| 
+| ResourceName| O nome de recurso a dependem. Se este recurso pertence a uma configuração diferente, o nome de formato "[__ResourceType__]__ResourceName__:: [__ConfigurationName__]: [ __ConfigurationName__] "| 
 | NodeName| Os nós de destino do recurso dependem.| 
 | RetryIntervalSec| O número de segundos antes de repetir a operação. Mínimo é 1.| 
 | RetryCount| O número máximo de vezes para tentar novamente.| 

@@ -2,11 +2,11 @@
 ms.date: 2017-08-23
 keywords: PowerShell, o cmdlet
 title: instalar e utilizar o acesso web windows powershell
-ms.openlocfilehash: 63e25fa2b1fc7c0a2b57763e337c25ece17a3296
-ms.sourcegitcommit: f069ff0689006fece768f178c10e3e3eeaee09f0
+ms.openlocfilehash: 2ad7a701dbb464088d6ed47d49a8dc3fb9b911f8
+ms.sourcegitcommit: 99227f62dcf827354770eb2c3e95c5cf6a3118b4
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 10/13/2017
+ms.lasthandoff: 03/15/2018
 ---
 # <a name="install-and-use-windows-powershell-web-access"></a>Instalar e Utilizar o Acesso Web Windows PowerShell
 
@@ -29,7 +29,7 @@ A configuração do acesso Web Windows PowerShell e a configuração é um proce
 1. [Configurar uma regra de autorização restrita](#configure-a-restrictive-authorization-rule)
 
 Antes de instalar e configurar o acesso Web Windows PowerShell, recomendamos que leia deste guia completo, que inclui instruções sobre como instalar, proteger e desinstalar o acesso Web Windows PowerShell.
-O [utilizar a consola do PowerShell baseada na Web do Windows](https://technet.microsoft.com/en-us/library/hh831417(v=ws.11).aspx) tópico descreve a forma como os utilizadores iniciam sessão consola baseada na web e abrange as limitações e diferenças entre a consola do Windows PowerShell baseada na web e o  **PowerShell.exe** consola. Os utilizadores finais da consola baseada na web devem ler [utilize Web com base em consola do Windows PowerShell](use-the-web-based-windows-powershell-console.md), mas não é necessário ler o resto deste guia.
+O [utilizar a consola do PowerShell baseada na Web do Windows](https://technet.microsoft.com/library/hh831417(v=ws.11).aspx) tópico descreve a forma como os utilizadores iniciam sessão consola baseada na web e abrange as limitações e diferenças entre a consola do Windows PowerShell baseada na web e o  **PowerShell.exe** consola. Os utilizadores finais da consola baseada na web devem ler [utilize Web com base em consola do Windows PowerShell](use-the-web-based-windows-powershell-console.md), mas não é necessário ler o resto deste guia.
 
 Este tópico fornece orientações de operações do servidor Web IIS aprofundadas; apenas os passos necessários para configurar o gateway de acesso Web Windows PowerShell são descritos neste tópico. Para mais informações sobre como configurar e proteger Web sites no IIS, consulte os recursos da documentação do IIS na secção Consulte Também.
 
@@ -126,7 +126,7 @@ Pode concluir a configuração de aplicação web do Windows PowerShell Web Acce
 
 2. Escreva o seguinte e, em seguida, prima **Enter**.
 
-    **Install-PswaWebApplication - UseTestCertificate**
+    **Install-PswaWebApplication -UseTestCertificate**
 
   >**![Nota de segurança](images/securitynote.jpeg) nota de segurança**
   >
@@ -141,7 +141,7 @@ As definições seguintes são configuradas ao executar o cmdlet. Pode alterá-l
 - EnabledProtocols: http
 - PhysicalPath: %*windir*%/Web/PowerShellWebAccess/wwwroot
 
-**Exemplo**:`Install-PswaWebApplication -webApplicationName myWebApp -useTestCertificate`
+**Exemplo**: `Install-PswaWebApplication -webApplicationName myWebApp -useTestCertificate`
 
 Neste exemplo, o Web site resultante para o acesso Web Windows PowerShell é https://\<*server_name*\>/myWebApp.
 
@@ -212,7 +212,7 @@ Para obter mais detalhes sobre regras de autorização de acesso Web Windows Pow
 
     - O Windows **iniciar** ecrã, faça duplo clique **do Windows PowerShell**e, em seguida, clique em **executar como administrador**.
 
-2. Passo opcional para restringir o acesso de utilizador utilizando configurações de sessão: Certifique-se de que as configurações de sessão que pretende utilizar nas suas regras já existem. Se ainda não tiver sido criados, utilize as instruções para a criação de configurações de sessão no [about_Session_Configuration_Files](https://docs.microsoft.com/en-us/powershell/module/microsoft.powershell.core/about/about_session_configurations).
+2. Passo opcional para restringir o acesso de utilizador utilizando configurações de sessão: Certifique-se de que as configurações de sessão que pretende utilizar nas suas regras já existem. Se ainda não tiver sido criados, utilize as instruções para a criação de configurações de sessão no [about_Session_Configuration_Files](https://docs.microsoft.com/powershell/module/microsoft.powershell.core/about/about_session_configurations).
 
 3. Escreva o seguinte e, em seguida, prima **Enter**.
 
@@ -224,7 +224,7 @@ Para obter mais detalhes sobre regras de autorização de acesso Web Windows Pow
 
    `Add-PswaAuthorizationRule -UserName Contoso\JSmith -ComputerName Contoso_214 -ConfigurationName NewAdminsOnly`
 
-4. Certifique-se de que a regra foi criada através da execução de `Get-PswaAuthorizationRule` cmdlet, ou`Test-PswaAuthorizationRule -UserName <domain\user> -ComputerName <computer-name>`
+4. Certifique-se de que a regra foi criada através da execução de `Get-PswaAuthorizationRule` cmdlet, ou `Test-PswaAuthorizationRule -UserName <domain\user> -ComputerName <computer-name>`
 
 5. Por exemplo, `Test-PswaAuthorizationRule -UserName 'Contoso\JSmith' -ComputerName Contoso_214`.
 
@@ -290,13 +290,13 @@ As instruções nesta secção destinam-se a instalar a aplicação de web de ac
 
 9. Siga os passos do procedimento para configurar um certificado SSL no IIS manager](#to-configure-an-ssl-certificate-in-iis-Manager) neste tópico.
 
-10. ![](images/SecurityNote.jpeg)Passo opcional de segurança:
+10. ![](images/SecurityNote.jpeg) Passo opcional de segurança:
 
     Com o site selecionado no painel de árvore, faça duplo clique em **as definições de SSL** no painel de conteúdo. Selecione **exigir SSL**e, em seguida, no **ações** painel, clique em **aplicar**. Opcionalmente, no **as definições de SSL** painel, pode exigir que os utilizadores a ligar ao Web site do acesso Web Windows PowerShell têm certificados de cliente. Os certificados de cliente ajudam a verificar a identidade de um utilizador do dispositivo cliente. Para obter mais informações sobre como os certificados de cliente podem aumentar a segurança de acesso Web Windows PowerShell, consulte [regras de autorização e segurança funcionalidades de acesso Web Windows PowerShell](authorization-rules-and-security-features-of-windows-powershell-web-access.md) neste guia.
 
 11. Abra uma sessão de browser num dispositivo cliente. Para obter mais informações sobre dispositivos e browsers suportados, consulte [Browser e o dispositivo de cliente suportar](#browser-and-client-device-support) neste tópico.
 
-12. Abrir o novo site de acesso Web Windows PowerShell,  **https://\<*nome de servidor de gateway*\>/pswa**.
+12. Abrir o novo site de acesso Web Windows PowerShell, **https://\<*nome de servidor de gateway*\>/pswa**.
 
     O browser deve apresentar o acesso Web Windows PowerShell início de sessão page da consola.
 
@@ -361,7 +361,7 @@ As instruções nesta secção destinam-se a instalar a aplicação de web de ac
 
 15. Abra o novo Web site do acesso Web Windows PowerShell.
 
-    Porque o Web site de raiz aponta para a pasta de acesso Web Windows PowerShell, o browser deve apresentar a página de início de sessão do acesso Web Windows PowerShell quando abrir  **https://\<*nome_servidor_gateway* \>**. Não deverá necessitar de adicionar **/pswa** para o URL.
+    Porque o Web site de raiz aponta para a pasta de acesso Web Windows PowerShell, o browser deve apresentar a página de início de sessão do acesso Web Windows PowerShell quando abrir **https://\<*nome_servidor_gateway* \>**. Não deverá necessitar de adicionar **/pswa** para o URL.
 
     >**![Tenha em atenção](images/note.jpeg) nota** 
     > 
@@ -384,7 +384,7 @@ Para obter mais detalhes sobre regras de autorização de acesso Web Windows Pow
 
 2. ![Nota de segurança](images/SecurityNote.jpeg) Passo opcional para restringir o acesso de utilizador utilizando configurações de sessão:
 
-    Certifique-se de que as configurações de sessão que pretende utilizar nas suas regras já existem. Se ainda não tiver sido criados, utilize as instruções para a criação de configurações de sessão no [about_Session_Configuration_Files](https://docs.microsoft.com/en-us/powershell/module/microsoft.powershell.core/about/about_session_configurations).
+    Certifique-se de que as configurações de sessão que pretende utilizar nas suas regras já existem. Se ainda não tiver sido criados, utilize as instruções para a criação de configurações de sessão no [about_Session_Configuration_Files](https://docs.microsoft.com/powershell/module/microsoft.powershell.core/about/about_session_configurations).
 
 3. Escreva o seguinte e, em seguida, prima **Enter**.
 
@@ -418,7 +418,7 @@ Num ambiente de produção seguro, utilize sempre um certificado SSL válido ass
 
     - Clique em **criar pedido de certificado** para pedir um certificado a partir de uma AC, tal como [VeriSign](http://www.verisign.com/), [Thawte](https://www.thawte.com/), ou [GeoTrust](https://www.geotrust.com/). O nome comum do certificado tem de corresponder ao cabeçalho do anfitrião no pedido.
 
-      Por exemplo, se o browser cliente pedir http://www.contoso.com/, o nome comum também tem de ser http://www.contoso.com/. Esta é a opção mais segura e recomendada para fornecer o gateway de acesso Web Windows PowerShell com um certificado.
+      Por exemplo, se o browser cliente pedir http://www.contoso.com/, em seguida, o nome comum também tem de ser http://www.contoso.com/. Esta é a opção mais segura e recomendada para fornecer o gateway de acesso Web Windows PowerShell com um certificado.
 
     - Clique em **criar um certificado autoassinado** para criar um certificado que pode utilizar imediatamente e ser assinado mais tarde por uma AC se assim o desejar. Especifique um nome amigável para o certificado autoassinado, tal como **acesso Web Windows PowerShell**. Esta opção não é considerada segura e é recomendada apenas para um ambiente de teste privado.
 

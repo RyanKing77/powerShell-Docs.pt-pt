@@ -4,11 +4,11 @@ contributor: JKeithB
 ms.topic: conceptual
 keywords: cmdlet do powershell do galeria, psgallery
 title: psgallery_gettingstarted
-ms.openlocfilehash: d13c23cd6f9cce433cd3fe1ad5f2d00e3ef0527c
-ms.sourcegitcommit: 3720ce4efb6735694cfb53a1b793d949af5d1bc5
+ms.openlocfilehash: 2117712b0081db4a21f8480b458a499ed84dc512
+ms.sourcegitcommit: 99227f62dcf827354770eb2c3e95c5cf6a3118b4
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 09/29/2017
+ms.lasthandoff: 03/15/2018
 ---
 # <a name="get-started-with-the-powershell-gallery"></a>Introdução à galeria do PowerShell
 
@@ -103,7 +103,7 @@ Por predefinição, [Install-Module](https://go.microsoft.com/fwlink/?LinkId=821
 
 Para implementar um item da galeria do PowerShell a automatização do Azure, clique em **implementar a automatização do Azure** na página de detalhes do item. Será redirecionado para o Portal de gestão do Azure, onde poderá iniciar sessão com as suas credenciais de conta do Azure. Tenha em atenção que implementar itens com dependências irá implementar todas as dependências da automatização do Azure. O botão 'Implementar a automatização do Azure' pode ser desativado através da adição de **AzureAutomationNotSupported** etiquetas para os seus metadados do item.
 
-Para saber mais sobre a automatização do Azure, consulte o [Web site da automatização do Azure](http://azure.microsoft.com/en-us/services/automation/).
+Para saber mais sobre a automatização do Azure, consulte o [Web site da automatização do Azure](http://azure.microsoft.com/services/automation/).
 
 ## <a name="updating-items-from-the-powershell-gallery"></a>Atualizar itens da galeria do PowerShell
 

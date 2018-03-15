@@ -4,11 +4,11 @@ author: rpsqrd
 ms.topic: conceptual
 keywords: "jea, powershell, segurança"
 title: "Registar JEA configurações"
-ms.openlocfilehash: 0684a1c7acffbccbedab9dba4689611a24c8ae25
-ms.sourcegitcommit: 75f70c7df01eea5e7a2c16f9a3ab1dd437a1f8fd
+ms.openlocfilehash: d6b007fed97be6470bfe4cf4d42f72cb4edc3a45
+ms.sourcegitcommit: 99227f62dcf827354770eb2c3e95c5cf6a3118b4
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 06/12/2017
+ms.lasthandoff: 03/15/2018
 ---
 # <a name="registering-jea-configurations"></a>Registar JEA configurações
 
@@ -19,7 +19,7 @@ Este processo aplica-se as informações de configuração de sessão para o sis
 
 ## <a name="single-machine-configuration"></a>Configuração da máquina único
 
-Para ambientes pequenos, pode implementar o JEA registando a configuração de sessão ficheiros com o [Register-PSSessionConfiguration](https://msdn.microsoft.com/en-us/powershell/reference/5.1/microsoft.powershell.core/register-pssessionconfiguration) cmdlet.
+Para ambientes pequenos, pode implementar o JEA registando a configuração de sessão ficheiros com o [Register-PSSessionConfiguration](https://msdn.microsoft.com/powershell/reference/5.1/microsoft.powershell.core/register-pssessionconfiguration) cmdlet.
 
 Antes de começar, certifique-se de que os seguintes pré-requisitos foram cumpridos:
 - Uma ou mais funções foi criado e colocado na pasta 'RoleCapabilities' de um módulo do PowerShell válida.
@@ -28,7 +28,7 @@ Antes de começar, certifique-se de que os seguintes pré-requisitos foram cumpr
 
 Também terá de selecionar um nome para o ponto final JEA.
 O nome do ponto final JEA serão necessário quando os utilizadores que pretende estabelecer ligação ao sistema através da JEA.
-Pode utilizar o [Get-PSSessionConfiguration](https://msdn.microsoft.com/en-us/powershell/reference/5.1/microsoft.powershell.core/get-pssessionconfiguration) cmdlet para verificar os nomes dos pontos finais existentes no sistema.
+Pode utilizar o [Get-PSSessionConfiguration](https://msdn.microsoft.com/powershell/reference/5.1/microsoft.powershell.core/get-pssessionconfiguration) cmdlet para verificar os nomes dos pontos finais existentes no sistema.
 Pontos finais que começam por 'microsoft', normalmente, são fornecidos com o Windows.
 O ponto final 'Microsoft' é o ponto final predefinido utilizado ao ligar a um ponto final de PowerShell remoto.
 

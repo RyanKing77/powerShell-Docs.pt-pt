@@ -1,14 +1,14 @@
 ---
 ms.date: 2017-06-05
 keywords: PowerShell, o cmdlet
-title: Como depurar Scripts no ISE do Windows PowerShell
-ms.openlocfilehash: 0ec520dfcba5e4562258256570f140e618e77cdb
-ms.sourcegitcommit: 3720ce4efb6735694cfb53a1b793d949af5d1bc5
+title: Como Depurar Scripts no ISE do Windows PowerShell
+ms.openlocfilehash: d37fb6cdcd5782cf8eff89c2b124b7c81fdaca71
+ms.sourcegitcommit: 99227f62dcf827354770eb2c3e95c5cf6a3118b4
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 09/29/2017
+ms.lasthandoff: 03/15/2018
 ---
-# <a name="how-to-debug-scripts-in-windows-powershell-ise"></a>Como depurar Scripts no ISE do Windows PowerShell
+# <a name="how-to-debug-scripts-in-windows-powershell-ise"></a>Como Depurar Scripts no ISE do Windows PowerShell
 
 Este tópico descreve como depurar scripts num computador local, utilizando as funcionalidades de depuração visual do Windows PowerShell Integrated Scripting Environment (ISE).
 
@@ -42,7 +42,7 @@ Mostra todos os pontos de interrupção na sessão atual do Windows PowerShell.
 No **depurar** menu, clique em **lista de pontos de interrupção**. O script seguinte é um exemplo de como pode listar todos os pontos de interrupção no painel de consola utilizando o [Get-PSBreakpoint](https://technet.microsoft.com/library/0bf48936-00ab-411c-b5e0-9b10a812a3c6) cmdlet.
 
 ``` PowerShell
-# This command lists all breakpoints in the current session. 
+# This command lists all breakpoints in the current session.
 Get-PSBreakpoint
 ```
 
@@ -82,7 +82,7 @@ Disable-PSBreakpoint -Id 0
 Desativar um ponto de interrupção não removê-lo; -Desativa-lo até que seja ativado.  Desativar a todos os pontos de interrupção na sessão atual, no **depurar** menu, clique em **desative todos os pontos de interrupção**. O script seguinte é um exemplo de como pode desativar todos os pontos de interrupção no painel de consola, utilizando o [desativar PSBreakpoint](https://technet.microsoft.com/library/d4974e9b-0aaa-4e20-b87f-f599a413e4e8) cmdlet.
 
 ``` PowerShell
-# This command disables all breakpoints in the current session. 
+# This command disables all breakpoints in the current session.
 # You can abbreviate this command as: "gbp | dbp".
 Get-PSBreakpoint | Disable-PSBreakpoint
 ```
@@ -99,13 +99,13 @@ Enable-PSBreakpoint -Id 0, 1, 5
 Para ativar todos os pontos de interrupção definidos na sessão atual, o **depurar** menu, clique em **ativar todos os pontos de interrupção**. O script seguinte é um exemplo de como pode permitir todos os pontos de interrupção no painel de consola utilizando o [ativar PSBreakpoint](https://technet.microsoft.com/library/739e1091-3b3f-405f-a428-bec7543e5df0) cmdlet.
 
 ``` PowerShell
-# This command enables all breakpoints in the current session. 
+# This command enables all breakpoints in the current session.
 # You can abbreviate the command by using their aliases: "gbp | ebp".
 Get-PSBreakpoint | Enable-PSBreakpoint
 ```
 
 ## <a name="how-to-manage-a-debugging-session"></a>Como gerir uma sessão de depuração
-Antes de iniciar a depuração, tem de definir uma ou mais pontos de interrupção. Não é possível definir um ponto de interrupção, a menos que o script que pretende depurar é guardado. Para instruções sobre como definir um ponto de interrupção, consulte [como gerir pontos de interrupção](#how-to-manage-breakpoints) ou [conjunto PSBreakpoint](https://docs.microsoft.com/en-us/powershell/module/microsoft.powershell.utility/set-psbreakpoint). Depois de iniciar a depuração, não é possível editar um script até que interrompa a depuração. Um script que tem um ou mais pontos de interrupção definido é guardado automaticamente antes de ser executada.
+Antes de iniciar a depuração, tem de definir uma ou mais pontos de interrupção. Não é possível definir um ponto de interrupção, a menos que o script que pretende depurar é guardado. Para instruções sobre como definir um ponto de interrupção, consulte [como gerir pontos de interrupção](#how-to-manage-breakpoints) ou [conjunto PSBreakpoint](https://docs.microsoft.com/powershell/module/microsoft.powershell.utility/set-psbreakpoint). Depois de iniciar a depuração, não é possível editar um script até que interrompa a depuração. Um script que tem um ou mais pontos de interrupção definido é guardado automaticamente antes de ser executada.
 
 ### <a name="to-start-debugging"></a>Para iniciar a depuração
 Prima **F5** ou, na barra de ferramentas, clique em de **executar Script** ícone, ou no **depurar** menu clique **executar/continuar**. O script é executado até encontrar o primeiro ponto de interrupção. Interrompe a operação aí e realça a linha em que em pausa.
@@ -174,5 +174,4 @@ C:\ps-test\MyScript.ps1
 ```
 
 ## <a name="see-also"></a>Consulte Também
-- [Utilizar o ISE do Windows PowerShell](Using-the-Windows-PowerShell-ISE.md)
-
+- [Explorar o ISE do Windows PowerShell](../../getting-started/fundamental/exploring-the-windows-powershell-ise.md)

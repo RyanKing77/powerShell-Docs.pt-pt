@@ -3,17 +3,17 @@ ms.date: 2017-06-12
 ms.topic: conceptual
 keywords: "DSC, do powershell, a configuração, a configuração"
 title: "Escrever ajuda para as configurações de DSC"
-ms.openlocfilehash: c868fa0565baff833423db090a5d62824ab4cad8
-ms.sourcegitcommit: a444406120e5af4e746cbbc0558fe89a7e78aef6
+ms.openlocfilehash: c5d499ec887829c864c0f63f64af2d0a7738220b
+ms.sourcegitcommit: 99227f62dcf827354770eb2c3e95c5cf6a3118b4
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 03/15/2018
 ---
 # <a name="writing-help-for-dsc-configurations"></a>Escrever ajuda para as configurações de DSC
 
 >Aplica-se a: Windows do Windows PowerShell 5.0
 
-Pode utilizar a ajuda baseada no comentário nas configurações de DSC. Os utilizadores podem aceder a ajuda ao chamar a função de configuração com `-?`, ou utilizando o [Get-Help](https://technet.microsoft.com/en-us/library/hh849696.aspx) cmdlet. Para obter mais informações sobre a ajuda baseada no comentário do PowerShell, consulte [about_Comment_Based_Help](https://technet.microsoft.com/en-us/library/hh847834.aspx).
+Pode utilizar a ajuda baseada no comentário nas configurações de DSC. Os utilizadores podem aceder a ajuda ao chamar a função de configuração com `-?`, ou utilizando o [Get-Help](https://technet.microsoft.com/library/hh849696.aspx) cmdlet. Para obter mais informações sobre a ajuda baseada no comentário do PowerShell, consulte [about_Comment_Based_Help](https://technet.microsoft.com/library/hh847834.aspx).
 
 O exemplo seguinte mostra um script que contém uma configuração e baseada no comentário ajuda para o mesmo:
 

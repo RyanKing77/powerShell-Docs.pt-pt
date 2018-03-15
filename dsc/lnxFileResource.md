@@ -3,11 +3,11 @@ ms.date: 2017-06-12
 ms.topic: conceptual
 keywords: "DSC, do powershell, a configuração, a configuração"
 title: DSC de Linux nxFile recursos
-ms.openlocfilehash: e4916414e4de29ab15d9c82c492671ebc16d5412
-ms.sourcegitcommit: a444406120e5af4e746cbbc0558fe89a7e78aef6
+ms.openlocfilehash: 7ee8a37ee63a70b1c8c69dc79dfbc77c1f583234
+ms.sourcegitcommit: 99227f62dcf827354770eb2c3e95c5cf6a3118b4
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 03/15/2018
 ---
 # <a name="dsc-for-linux-nxfile-resource"></a>DSC de Linux nxFile recursos
 
@@ -76,7 +76,7 @@ nxFile resolvConf
 ```
 
 
-Passo 2: Ler o conteúdo do ficheiro no script PowerShell com [Get-Content](https://technet.microsoft.com/en-us/library/hh849787.aspx) após a definição de __$OFS__ propriedade para utilizar o caráter de quebra de linha do Linux.
+Passo 2: Ler o conteúdo do ficheiro no script PowerShell com [Get-Content](https://technet.microsoft.com/library/hh849787.aspx) após a definição de __$OFS__ propriedade para utilizar o caráter de quebra de linha do Linux.
 
 
 ```

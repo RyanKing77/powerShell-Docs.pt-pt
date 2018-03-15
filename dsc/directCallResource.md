@@ -3,17 +3,17 @@ ms.date: 2017-06-12
 ms.topic: conceptual
 keywords: "DSC, do powershell, a configuração, a configuração"
 title: "Chamar os métodos de recursos de DSC diretamente"
-ms.openlocfilehash: 3e83984fbf31dfcfec76fa15cdd9b83d92501aa0
-ms.sourcegitcommit: a444406120e5af4e746cbbc0558fe89a7e78aef6
+ms.openlocfilehash: 68344d1be5c41e5ce4660e0a62019fa0a52c2541
+ms.sourcegitcommit: 99227f62dcf827354770eb2c3e95c5cf6a3118b4
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 03/15/2018
 ---
 # <a name="calling-dsc-resource-methods-directly"></a>Chamar os métodos de recursos de DSC diretamente
 
 >Aplica-se a: O Windows PowerShell 5.0
 
-Pode utilizar o [Invoke-DscResource](https://technet.microsoft.com/en-us/library/mt517869.aspx) cmdlet para chamar diretamente as funções ou métodos de um recurso de DSC (o **Get-TargetResource**, **conjunto TargetResource**e  **Test-TargetResource** funções de um recurso com base no MOF, ou o **obter**, **definir**, e **teste** métodos de um recurso com base na classe). Isto pode ser utilizado por terceiros, a que pretendem utilizar recursos de DSC ou como uma ferramenta útil enquanto programar recursos. 
+Pode utilizar o [Invoke-DscResource](https://technet.microsoft.com/library/mt517869.aspx) cmdlet para chamar diretamente as funções ou métodos de um recurso de DSC (o **Get-TargetResource**, **conjunto TargetResource**e  **Test-TargetResource** funções de um recurso com base no MOF, ou o **obter**, **definir**, e **teste** métodos de um recurso com base na classe). Isto pode ser utilizado por terceiros, a que pretendem utilizar recursos de DSC ou como uma ferramenta útil enquanto programar recursos. 
 
 Este cmdlet é normalmente utilizado em combinação com uma propriedade de configuração meta `refreshMode = 'Disabled'`, mas podem ser utilizado, independentemente da que **refreshMode** está definido como.
 

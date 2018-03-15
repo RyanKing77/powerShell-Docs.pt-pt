@@ -4,19 +4,19 @@ contributor: manikb
 ms.topic: reference
 keywords: cmdlet do powershell do galeria, psget
 title: "Obter módulo PowerShellGet"
-ms.openlocfilehash: a5a323b17709e519ec57623a9dd7499e591bbed5
-ms.sourcegitcommit: 75f70c7df01eea5e7a2c16f9a3ab1dd437a1f8fd
+ms.openlocfilehash: 7224cf5d71b98d51ca22c47a00ca382d34864bfb
+ms.sourcegitcommit: 99227f62dcf827354770eb2c3e95c5cf6a3118b4
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 06/12/2017
+ms.lasthandoff: 03/15/2018
 ---
 <a name="get-powershellget-module"></a>Obter módulo PowerShellGet
 ========================
 
 ### <a name="powershellget-is-an-in-box-module-in-the-following-releases"></a>PowerShellGet é um módulo de na caixa as seguintes versões
-- [Windows 10](https://www.microsoft.com/en-us/windows/get-windows-10) ou mais recente
-- [Windows Server 2016](https://technet.microsoft.com/en-us/windows-server-docs/get-started/windows-server-2016) ou mais recente
-- [Windows Management Framework (WMF) 5.0](https://www.microsoft.com/en-us/download/details.aspx?id=50395) ou mais recente
+- [Windows 10](https://www.microsoft.com/windows/get-windows-10) ou mais recente
+- [Windows Server 2016](https://technet.microsoft.com/windows-server-docs/get-started/windows-server-2016) ou mais recente
+- [Windows Management Framework (WMF) 5.0](https://www.microsoft.com/download/details.aspx?id=50395) ou mais recente
 - [6 de PowerShell](https://github.com/PowerShell/PowerShell/releases)
 
 ### <a name="get-powershellget-module-for-powershell-versions-30-and-40"></a>Obter módulo PowerShellGet para versões de PowerShell 3.0 e 4.0

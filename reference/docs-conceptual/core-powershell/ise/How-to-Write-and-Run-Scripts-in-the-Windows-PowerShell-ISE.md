@@ -1,22 +1,22 @@
 ---
 ms.date: 2017-06-05
 keywords: PowerShell, o cmdlet
-title: Como escrever e executar Scripts no ISE do Windows PowerShell
+title: Como Escrever e Executar Scripts no ISE do Windows PowerShell
 ms.assetid: 62f916d9-b3a1-484a-bdfb-41f57112c22b
-ms.openlocfilehash: dd3055df8c84195f0145b1a058f1d17c9c382f33
-ms.sourcegitcommit: d6ab9ab5909ed59cce4ce30e29457e0e75c7ac12
+ms.openlocfilehash: 77d8ae81cb03f03b3b5d044e6503bbb23cb5b771
+ms.sourcegitcommit: 99227f62dcf827354770eb2c3e95c5cf6a3118b4
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 09/08/2017
+ms.lasthandoff: 03/15/2018
 ---
-# <a name="how-to-write-and-run-scripts-in-the-windows-powershell-ise"></a>Como escrever e executar Scripts no ISE do Windows PowerShell
+# <a name="how-to-write-and-run-scripts-in-the-windows-powershell-ise"></a>Como Escrever e Executar Scripts no ISE do Windows PowerShell
 Este tópico descreve como criar, editar, executar e guardar scripts no painel de Script.
 
 ## <a name="how-to-create-and-run-scripts"></a>Como criar e executar scripts
 Pode abrir e editar ficheiros do Windows PowerShell no painel de Script. Tipos de ficheiro específicos de interesse no Windows PowerShell são ficheiros de script (. ps1), ficheiros de dados do script (. psd1) e os ficheiros do módulo de script (. psm1). Estes tipos de ficheiro são sintaxe colorido no editor do painel de Script. Outros tipos de ficheiro comuns que poderá abrir no painel de Script são ficheiros de configuração (.ps1xml), ficheiros XML e ficheiros de texto.
 
 > [!NOTE]
-> A política de execução do Windows PowerShell determina se pode executar scripts e carga do Windows PowerShell perfis e ficheiros de configuração. A política de execução predefinidas, restrito, impede que todos os scripts em execução e impede que os perfis de carregamento. Para alterar a política de execução para permitir que os perfis a carregar e ser utilizado, consulte [Set-ExecutionPolicy [PSITPro5_Security]](https://technet.microsoft.com/en-us/library/5690a0e1-495b-4e63-8280-65ead7bf01ab) e [about_Signing [v4]](https://technet.microsoft.com/en-us/library/fcbdd3b9-0b9f-4734-b5c7-e0dcc304fa1d).
+> A política de execução do Windows PowerShell determina se pode executar scripts e carga do Windows PowerShell perfis e ficheiros de configuração. A política de execução predefinidas, restrito, impede que todos os scripts em execução e impede que os perfis de carregamento. Para alterar a política de execução para permitir que os perfis a carregar e ser utilizado, consulte [Set-ExecutionPolicy [PSITPro5_Security]](https://technet.microsoft.com/library/5690a0e1-495b-4e63-8280-65ead7bf01ab) e [about_Signing [v4]](https://technet.microsoft.com/library/fcbdd3b9-0b9f-4734-b5c7-e0dcc304fa1d).
 
 ### <a name="to-create-a-new-script-file"></a>Para criar um novo ficheiro de script
 Na barra de ferramentas, clique em **novo** , ou no **ficheiro** menu, clique em **novo**. O ficheiro criado é apresentado num separador novo do ficheiro no separador atual do PowerShell. Lembre-se de que os separadores de PowerShell apenas são visíveis quando existirem mais do que um. Por predefinição é criado um ficheiro de script de tipo (. ps1), mas podem ser guardado com um novo nome e extensão. Podem ser criados vários ficheiros de script no mesmo separador do PowerShell.
@@ -139,5 +139,4 @@ ISE do Windows PowerShell suporta as seguintes opções de codificação: ASCII,
 ISE do Windows PowerShell não altera a codificação de scripts que foram criadas por em outros editores, mesmo quando utiliza o guardar ou guardar como comandos no ISE do Windows PowerShell.
 
 ## <a name="see-also"></a>Consulte Também
-- [Utilizar o ISE do Windows PowerShell](Using-the-Windows-PowerShell-ISE.md)
-
+- [Explorar o ISE do Windows PowerShell](../../getting-started/fundamental/exploring-the-windows-powershell-ise.md)

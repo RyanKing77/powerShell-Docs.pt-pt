@@ -3,11 +3,11 @@ ms.date: 2017-10-16
 ms.topic: conceptual
 keywords: "DSC, do powershell, a configuração, a configuração"
 title: "Enacting configurações"
-ms.openlocfilehash: 4285dbe04c9745ec2a859e479848da2881c18de0
-ms.sourcegitcommit: a444406120e5af4e746cbbc0558fe89a7e78aef6
+ms.openlocfilehash: 01294b85d33e147593299de8ecf46c027a69f7a3
+ms.sourcegitcommit: 99227f62dcf827354770eb2c3e95c5cf6a3118b4
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 03/15/2018
 ---
 # <a name="enacting-configurations"></a>Enacting configurações
 
@@ -19,10 +19,10 @@ Existem duas formas de enact configurações do PowerShell pretendido Estado Con
 
 ![Modo de push](images/pushModel.png "como push funciona do modo")
 
-Modo de push refere-se a um utilizador ativamente aplicar uma configuração para um nó de destino ao chamar o [início DscConfiguration](https://technet.microsoft.com/en-us/library/dn521623.aspx) cmdlet.
+Modo de push refere-se a um utilizador ativamente aplicar uma configuração para um nó de destino ao chamar o [início DscConfiguration](https://technet.microsoft.com/library/dn521623.aspx) cmdlet.
 
-Depois de criar e compilar uma configuração, pode enact-lo no modo de push chamando a [início DscConfiguration](https://technet.microsoft.com/en-us/library/dn521623.aspx) cmdlet, definir o parâmetro - Path do cmdlet para o caminho onde está localizada a configuração MOF.
-Por exemplo, se a configuração MOF está localizada em `C:\DSC\Configurations\localhost.mof`, seria aplicá-la para o computador local com o seguinte comando:`Start-DscConfiguration -Path 'C:\DSC\Configurations'`
+Depois de criar e compilar uma configuração, pode enact-lo no modo de push chamando a [início DscConfiguration](https://technet.microsoft.com/library/dn521623.aspx) cmdlet, definir o parâmetro - Path do cmdlet para o caminho onde está localizada a configuração MOF.
+Por exemplo, se a configuração MOF está localizada em `C:\DSC\Configurations\localhost.mof`, seria aplicá-la para o computador local com o seguinte comando: `Start-DscConfiguration -Path 'C:\DSC\Configurations'`
 
 > __Tenha em atenção__: por predefinição, o DSC é executada uma configuração como uma tarefa em segundo plano. Para executar a configuração de forma interativa, chame o [início DscConfiguration](https://technet.microsoft.com/library/dn521623.aspx) com o __-aguarde__ parâmetro.
 
@@ -40,7 +40,7 @@ O MMC verifica se o cliente está em conformidade com a configuração em interv
 O MMC verifica a existência de configurações atualizadas no serviço de solicitação em intervalos regulares especificados pelo **RefreshModeFrequency** propriedade a MMC.
 Para obter informações sobre como configurar o MMC, consulte [configurar o Gestor de configuração Local](metaConfig.md).
 
-A solução recomendada para alojar um serviço de extração é o serviço de nuvem de DSC [da automatização do Azure](https://azure.microsoft.com/en-us/services/automation/).
+A solução recomendada para alojar um serviço de extração é o serviço de nuvem de DSC [da automatização do Azure](https://azure.microsoft.com/services/automation/).
 Isto está alojado fornece a solução de gestão gráficas, relatórios e administração centralizada.
 
 Para obter mais informações sobre como configurar um serviço de solicitação no Windows Server, consulte [configurar um servidor de solicitação do DSC web](pullServer.md).

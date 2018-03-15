@@ -3,11 +3,11 @@ ms.date: 2017-06-12
 ms.topic: conceptual
 keywords: "DSC, do powershell, a configuração, a configuração"
 title: "Configurar uma máquinas virtuais em cima de arranque inicial através da utilização de DSC"
-ms.openlocfilehash: 76c990ee7c98ea47d1fc3d7bd955ce6a993e28a6
-ms.sourcegitcommit: a444406120e5af4e746cbbc0558fe89a7e78aef6
+ms.openlocfilehash: ff06aafa6db49d93a9b42e38ac7c3e9a11657bd5
+ms.sourcegitcommit: 99227f62dcf827354770eb2c3e95c5cf6a3118b4
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 03/15/2018
 ---
 >Aplica-se a: O Windows PowerShell 5.0
 
@@ -20,7 +20,7 @@ Para obter informações sobre como configurar novas máquinas virtuais em cima 
 
 Para executar estes exemplos, necessitará de:
 
-- Um VHD de arranque para trabalhar com. Pode transferir uma imagem ISO com uma cópia de avaliação do Windows Server 2016 em [TechNet Evaluation Center](https://www.microsoft.com/en-us/evalcenter/evaluate-windows-server-2016). Pode encontrar instruções sobre como criar um VHD a partir de uma imagem ISO na [criar suportes os discos rígidos virtuais](https://technet.microsoft.com/en-us/library/gg318049.aspx).
+- Um VHD de arranque para trabalhar com. Pode transferir uma imagem ISO com uma cópia de avaliação do Windows Server 2016 em [TechNet Evaluation Center](https://www.microsoft.com/evalcenter/evaluate-windows-server-2016). Pode encontrar instruções sobre como criar um VHD a partir de uma imagem ISO na [criar suportes os discos rígidos virtuais](https://technet.microsoft.com/library/gg318049.aspx).
 - Um computador anfitrião que tenha o Hyper-V ativada. Para informações, consulte [descrição geral do Hyper-V](https://technet.microsoft.com/library/hh831531.aspx).
 
 Ao utilizar o DSC, pode automatizar a instalação de software e configuração para um computador em cima de arranque inicial.

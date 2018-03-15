@@ -3,11 +3,11 @@ ms.date: 2017-06-12
 ms.topic: conceptual
 keywords: "DSC, do powershell, a configuração, a configuração"
 title: Utilizar o DSC no servidor de Nano
-ms.openlocfilehash: 7427d6bb7644f513b9b523f284109f5ae0f8ef27
-ms.sourcegitcommit: a444406120e5af4e746cbbc0558fe89a7e78aef6
+ms.openlocfilehash: c8f3669ee9c2ed6107c14ba9f4460d82276e1932
+ms.sourcegitcommit: 99227f62dcf827354770eb2c3e95c5cf6a3118b4
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 03/15/2018
 ---
 # <a name="using-dsc-on-nano-server"></a>Utilizar o DSC no servidor de Nano
 
@@ -19,7 +19,7 @@ ms.lasthandoff: 01/17/2018
 New-NanoServerImage -Edition Standard -DeploymentType Guest -MediaPath f:\ -BasePath .\Base -TargetPath .\Nano1\Nano.vhd -ComputerName Nano1 -Packages Microsoft-NanoServer-DSC-Package
 ```
 
-Para obter informações sobre como instalar e utilizar o servidor de nano for apresentado, bem como gerir o servidor de Nano com comunicação remota do PowerShell, consulte [introdução ao servidor Nano](https://technet.microsoft.com/en-us/library/mt126167.aspx).
+Para obter informações sobre como instalar e utilizar o servidor de nano for apresentado, bem como gerir o servidor de Nano com comunicação remota do PowerShell, consulte [introdução ao servidor Nano](https://technet.microsoft.com/library/mt126167.aspx).
 
 
 ## <a name="dsc-features-available-on-nano-server"></a>Funcionalidades de DSC disponíveis no servidor de Nano
@@ -32,8 +32,8 @@ Para obter informações sobre como instalar e utilizar o servidor de nano for a
 * Modos push e pull
 
 * Todos os cmdlets de DSC que existe uma versão completa do Windows Server, incluindo o seguinte: 
-  * [Get-DscLocalConfigurationManager](https://technet.microsoft.com/en-us/library/dn407378.aspx)
-  * [Set-DscLocalConfigurationManager](https://technet.microsoft.com/en-us/library/dn521621.aspx)   
+  * [Get-DscLocalConfigurationManager](https://technet.microsoft.com/library/dn407378.aspx)
+  * [Set-DscLocalConfigurationManager](https://technet.microsoft.com/library/dn521621.aspx)     
   * [Enable-DscDebug](https://technet.microsoft.com/en-us/library/mt517870.aspx)
   * [Disable-DscDebug](https://technet.microsoft.com/en-us/library/mt517872.aspx)       
   * [Start-DscConfiguration](https://technet.microsoft.com/en-us/library/dn521623.aspx)
@@ -83,7 +83,7 @@ Para obter informações sobre como instalar e utilizar o servidor de nano for a
 * Recursos que são totalmente funcionais
   * [Arquivo](archiveResource.md)
   * [Environment](environmentResource.md)
-  * [Ficheiro](fileResource.md)
+  * [ficheiro](fileResource.md)
   * [Registo](logResource.md)
   * ProcessSet
   * [Registry](registryResource.md)
@@ -108,7 +108,7 @@ Para obter informações sobre como instalar e utilizar o servidor de nano for a
   *Não é possível localizar o tipo [management.managementobject]: Certifique-se de que a assemblagem que contém este tipo está carregada.*
   
 * Recursos que não estão funcionais
-  * [Utilizador](userResource.md)
+  * [utilizador](userResource.md)
   
 
 ## <a name="dsc-features-not-available-on-nano-server"></a>Funcionalidades de DSC não está disponíveis no servidor de Nano
@@ -124,5 +124,5 @@ As seguintes funcionalidades de DSC não estão atualmente disponíveis no servi
 Devido a um conjuntos limitado das APIs do Windows e estão disponíveis no Nano servidor de bibliotecas CLR, recursos de DSC funcionam na versão CLR completa do Windows não necessariamente funcionam no servidor de nano for apresentado. Conclua o teste de ponto-a-ponto antes de implementar quaisquer recursos personalizados do DSC no ambiente de produção.
 
 ## <a name="see-also"></a>Consulte Também
-- [Introdução ao servidor Nano](https://technet.microsoft.com/en-us/library/mt126167.aspx)
+- [Introdução ao servidor Nano](https://technet.microsoft.com/library/mt126167.aspx)
 

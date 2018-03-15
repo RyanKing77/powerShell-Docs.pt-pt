@@ -2,8 +2,8 @@
 
 Este tópico fornece os publicadores com informações de resumo sobre como modificar o manifesto para as publicações de galeria do PowerShell para que as funcionalidades de PowerShellGet cmdlets e a IU de galeria do PowerShell serão afetadas. Este conteúdo está organizado por onde a alteração será apresentada, começando com a secção do System center, em seguida, a área de navegação à esquerda. Há uma secção de detalhes de etiquetas de abrangente, que identifica importante etiquetas, bem como algumas das mais frequentemente utilizadas etiquetas. Existem dois tópicos fornecem exemplos de manifesto: 
 
-* Para módulos, consulte [manifesto de módulo de atualização](https://docs.microsoft.com/en-us/powershell/gallery/psget/module/psget_update-modulemanifest)
-* Para scripts, consulte [criar ficheiro de Script com metadados](https://docs.microsoft.com/en-us/powershell/gallery/psget/script/psget_new-scriptfileinfo)
+* Para módulos, consulte [manifesto de módulo de atualização](https://docs.microsoft.com/powershell/gallery/psget/module/psget_update-modulemanifest)
+* Para scripts, consulte [criar ficheiro de Script com metadados](https://docs.microsoft.com/powershell/gallery/psget/script/psget_new-scriptfileinfo)
 
 ## <a name="powershell-gallery-feature-elements-controlled-by-the-manifest"></a>Elementos da galeria do PowerShell de funcionalidade controlados pelo manifesto
 
@@ -18,7 +18,7 @@ Cada item indica se pode ser controlado pelo manifesto de módulo ou script.
 | **Solicite a aceitação de licença** | Um módulo pode exigir que o utilizador aceitar uma licença, modificando o manifesto de módulo com RequireLicenseAcceptance = $true, fornecendo um LicenseURI e fornecer um ficheiro de license.txt na raiz da pasta do módulo. Estão disponíveis informações adicionais no [exigir a aceitação de licença](https://docs.microsoft.com/en-us/powershell/gallery/psgallery/psgallery_requires_license_acceptance) tópico. | Sim | Não |
 | **Notas de versão** | Para módulos, esta informação é desenhada da secção ReleaseNotes, sob PSData\PrivateData. Manifestos de script, é o. Elemento RELEASENOTES. | Sim | Sim |
 | **Proprietários** | Os proprietários são a lista de utilizadores na galeria do PowerShell que pode atualizar um item. A lista de proprietário não está incluída no manifesto de item. Documentação adicional descreve como [Gerir proprietários do item](https://docs.microsoft.com/en-us/powershell/gallery/psgallery/managing-item-owners). | Não | Não |
-| **Autor** | Isto está incluído no manifesto como o autor do módulo e no manifesto script como. AUTOR. O campo autor é frequentemente utilizado para especificar uma empresa ou organização associada a um item. | Sim | Sim |
+| **autor** | Isto está incluído no manifesto como o autor do módulo e no manifesto script como. AUTOR. O campo autor é frequentemente utilizado para especificar uma empresa ou organização associada a um item. | Sim | Sim |
 | **Copyright** | Este é o campo de direitos de autor no manifesto do módulo, e. COPYRIGHT no manifesto script. | Sim | Sim |
 | **FileList** | A lista de ficheiros é desenhada do pacote quando este for publicado na galeria do PowerShell. Não é controllable pelas informações de manifesto. Nota: existe é um ficheiro de .nuspec adicionais listado com cada item da galeria do PowerShell que não está presente depois de instalar o item num sistema. Este é o manifesto do pacote Nuget para o item e pode ser ignorada. | Não | Não |
 | **Etiquetas** | Para módulos, as etiquetas estão incluídas em PSData\PrivateData. Para scripts, a secção é assinaladas como. ETIQUETAS. Tenha em atenção que as etiquetas não podem conter espaços, mesmo quando são aspas. As etiquetas têm requisitos adicionais e significados, que são descritos mais à frente neste tópico na seção Detalhes da etiqueta. | Sim | Sim |
@@ -77,7 +77,7 @@ Para referência, aqui estão algumas etiquetas frequentemente utilizadas a part
 | **SQLServer** |  |
 | **DBA** |  |
 | **Segurança** | Defesa é menos precisa |
-| **Base de dados** | Bases de dados (plural) é desejável inferior |
+| **base de dados** | Bases de dados (plural) é desejável inferior |
 | **DevOps** |  |
 | **Windows** |  |
 | **Compilação** |  |

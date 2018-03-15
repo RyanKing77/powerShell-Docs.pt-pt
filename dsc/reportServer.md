@@ -3,11 +3,11 @@ ms.date: 2017-06-12
 ms.topic: conceptual
 keywords: "DSC, do powershell, a configuração, a configuração"
 title: "Utilizar um servidor de relatório de DSC"
-ms.openlocfilehash: 31b0df7d9baf30d93154d6a28b21f32fc052bc06
-ms.sourcegitcommit: a444406120e5af4e746cbbc0558fe89a7e78aef6
+ms.openlocfilehash: fdf16a2de6aea46844d3812029fae474e80ae6ac
+ms.sourcegitcommit: 99227f62dcf827354770eb2c3e95c5cf6a3118b4
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 03/15/2018
 ---
 # <a name="using-a-dsc-report-server"></a>Utilizar um servidor de relatório de DSC
 
@@ -92,7 +92,7 @@ PullClientConfig
 
 ## <a name="getting-report-data"></a>Obter dados do relatório
 
-Relatórios enviados para o servidor de solicitação são introduzidos numa base de dados no servidor. Os relatórios estão disponíveis através de chamadas para o serviço web. Para obter relatórios para um nó específico, enviar um pedido de HTTP para o serviço de web de relatório no seguinte formato: `http://CONTOSO-REPORT:8080/PSDSCReportServer.svc/Nodes(AgentId= 'MyNodeAgentId')/Reports` onde `MyNodeAgentId` é AgentId do nó para o qual pretende obter relatórios. Pode obter o AgentID para um nó ao chamar [Get-DscLocalConfigurationManager](https://technet.microsoft.com/en-us/library/dn407378.aspx) nesse nó.
+Relatórios enviados para o servidor de solicitação são introduzidos numa base de dados no servidor. Os relatórios estão disponíveis através de chamadas para o serviço web. Para obter relatórios para um nó específico, enviar um pedido de HTTP para o serviço de web de relatório no seguinte formato: `http://CONTOSO-REPORT:8080/PSDSCReportServer.svc/Nodes(AgentId= 'MyNodeAgentId')/Reports` onde `MyNodeAgentId` é AgentId do nó para o qual pretende obter relatórios. Pode obter o AgentID para um nó ao chamar [Get-DscLocalConfigurationManager](https://technet.microsoft.com/library/dn407378.aspx) nesse nó.
 
 Os relatórios são devolvidos como uma matriz de objetos JSON.
 

@@ -4,11 +4,11 @@ author: rpsqrd
 ms.topic: conceptual
 keywords: "jea, powershell, segurança"
 title: "Configurações de sessão JEA"
-ms.openlocfilehash: 0a8931ae15caf04a3639ab46f130e5f5b0498d8c
-ms.sourcegitcommit: 0733db9a05e89e6a23f6b52b9edd784fcbe8beec
+ms.openlocfilehash: c475a90a59d91b074f954cfb656b00142444c052
+ms.sourcegitcommit: 99227f62dcf827354770eb2c3e95c5cf6a3118b4
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 03/15/2018
 ---
 # <a name="jea-session-configurations"></a>Configurações de sessão JEA
 
@@ -38,7 +38,7 @@ New-PSSessionConfigurationFile -SessionType RestrictedRemoteServer -Path .\MyJEA
 
 Pode abrir o ficheiro de configuração de sessão em qualquer editor de texto.
 O `-SessionType RestrictedRemoteServer` campo indica que a configuração de sessão será utilizada pelo JEA para gestão segura.
-Sessões configuradas desta forma irão funcionar no [NoLanguage modo](https://technet.microsoft.com/en-us/library/dn433292.aspx) e conter apenas os seguintes comandos de 8 predefinida (e aliases) disponíveis:
+Sessões configuradas desta forma irão funcionar no [NoLanguage modo](https://technet.microsoft.com/library/dn433292.aspx) e conter apenas os seguintes comandos de 8 predefinida (e aliases) disponíveis:
 
 - Desmarque-Host (conformidade com cls, desmarque)
 - Sair-PSSession (exsn, saída)
@@ -128,7 +128,7 @@ Utilizadores padrão devem ter sem acesso à pasta e um conjunto limitado de adm
 ### <a name="user-drive"></a>Unidade de utilizador
 
 Se os utilizadores de ligação terá de copiar ficheiros para/a partir do ponto final JEA para executar um comando, pode ativar a unidade de utilizador no ficheiro de configuração de sessão.
-A unidade de utilizador é um [PSDrive](https://msdn.microsoft.com/en-us/powershell/scripting/getting-started/cookbooks/managing-windows-powershell-drives) que está mapeado para uma pasta exclusiva para cada utilizador de ligação.
+A unidade de utilizador é um [PSDrive](https://msdn.microsoft.com/powershell/scripting/getting-started/cookbooks/managing-windows-powershell-drives) que está mapeado para uma pasta exclusiva para cada utilizador de ligação.
 Esta pasta serve como um espaço para os mesmos copiar ficheiros para/a partir do sistema, sem conceder acesso ao sistema de ficheiros completo ou expor o fornecedor do sistema de ficheiros.
 O conteúdo de unidade do utilizador sejam persistente nos sessões para acomodar situações em que a conectividade de rede pode ser interrompida.
 

@@ -3,11 +3,11 @@ ms.date: 2017-06-12
 ms.topic: conceptual
 keywords: "DSC, do powershell, a configuração, a configuração"
 title: "Melhores práticas do servidor de solicitação"
-ms.openlocfilehash: 045f98475d6182b329ecf048038a98e933684a82
-ms.sourcegitcommit: a444406120e5af4e746cbbc0558fe89a7e78aef6
+ms.openlocfilehash: 3d0ab969b7a0de9d428becc4b9bdb124a7a44c2c
+ms.sourcegitcommit: 99227f62dcf827354770eb2c3e95c5cf6a3118b4
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 03/15/2018
 ---
 # <a name="pull-server-best-practices"></a>Melhores práticas do servidor de solicitação
 
@@ -24,7 +24,7 @@ Publicado | Abril de 2015
 ## <a name="abstract"></a>Abstrato
 
 Este documento foi concebido para fornecer orientações oficial para qualquer pessoa planear uma implementação de servidor de solicitação de configuração de estado pretendido do Windows PowerShell. Um servidor de solicitação é um serviço simple que deve demorar apenas minutos a implementar. Embora este documento irá oferecer técnica orientações procedimentos que podem ser utilizada numa implementação, o valor deste documento é como uma referência para as melhores práticas e que tenha em consideração antes de implementar.
-Os leitores devem ter básica familiaridade com DSC e termos utilizados para descrever os componentes que estão incluídas na implementação de DSC. Para obter mais informações, consulte o [Windows PowerShell Desired Configuration descrição geral do estado](https://technet.microsoft.com/en-us/library/dn249912.aspx) tópico.
+Os leitores devem ter básica familiaridade com DSC e termos utilizados para descrever os componentes que estão incluídas na implementação de DSC. Para obter mais informações, consulte o [Windows PowerShell Desired Configuration descrição geral do estado](https://technet.microsoft.com/library/dn249912.aspx) tópico.
 Como é esperado DSC evoluir em cadência de nuvem, a tecnologia subjacente, incluindo o servidor de solicitação também é esperada para evoluem e introduzem novas capacidades. Este documento inclui uma tabela de versão no anexo que fornece as referências para futuras soluções procura a encorajar forward-looking estruturas e referências a versões anteriores.
 
 As duas secções principais deste documento:
@@ -43,7 +43,7 @@ Windows PowerShell fornece um conjunto de extensões de idioma para configuraç�
 ### <a name="pull-server-role"></a>Função de servidor de solicitação  
 Um servidor de solicitação fornece um serviço centralizado para armazenar as configurações que estarão acessíveis a nós de destino.
  
-A função de servidor de solicitação pode ser implementada como uma instância de servidor Web ou uma partilha de ficheiros SMB. A capacidade de servidor web inclui uma interface de OData e, opcionalmente, pode incluir capacidades para nós de destino informar confirmação de êxito ou falha como configurações são aplicadas. Esta funcionalidade é útil em ambientes onde existe um grande número de nós de destino. Depois de configurar um nó de destino (também referido como um cliente) para apontar para o servidor de solicitação a configuração mais recente os dados e quaisquer scripts necessários são transferidos e aplicadas. Isto pode acontecer como uma única implementação ou como uma tarefa novamente occurring que também faz com que o servidor de solicitação um recurso importante para a gestão de alterações à escala. Para obter mais informações, consulte [Windows PowerShell pretendido Estado solicitar a servidores de configuração](https://technet.microsoft.com/en-us/library/dn249913.aspx) e [Push e Pull modos de configuração](https://technet.microsoft.com/en-us/library/dn249913.aspx).
+A função de servidor de solicitação pode ser implementada como uma instância de servidor Web ou uma partilha de ficheiros SMB. A capacidade de servidor web inclui uma interface de OData e, opcionalmente, pode incluir capacidades para nós de destino informar confirmação de êxito ou falha como configurações são aplicadas. Esta funcionalidade é útil em ambientes onde existe um grande número de nós de destino. Depois de configurar um nó de destino (também referido como um cliente) para apontar para o servidor de solicitação a configuração mais recente os dados e quaisquer scripts necessários são transferidos e aplicadas. Isto pode acontecer como uma única implementação ou como uma tarefa novamente occurring que também faz com que o servidor de solicitação um recurso importante para a gestão de alterações à escala. Para obter mais informações, consulte [Windows PowerShell pretendido Estado solicitar a servidores de configuração](https://technet.microsoft.com/library/dn249913.aspx) e [Push e Pull modos de configuração](https://technet.microsoft.com/library/dn249913.aspx).
 
 ## <a name="configuration-planning"></a>Planear a configuração
 

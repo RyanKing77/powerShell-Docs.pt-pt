@@ -4,11 +4,11 @@ contributor: manikb
 ms.topic: reference
 keywords: cmdlet do powershell do galeria, psget
 title: Localizar DscResource
-ms.openlocfilehash: 37ba7925d6f73c453126f25e0818b3f8839d3b3b
-ms.sourcegitcommit: 75f70c7df01eea5e7a2c16f9a3ab1dd437a1f8fd
+ms.openlocfilehash: 6c5713f122d48e9c9d5e0aa45dc14047afc56102
+ms.sourcegitcommit: 99227f62dcf827354770eb2c3e95c5cf6a3118b4
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 06/12/2017
+ms.lasthandoff: 03/15/2018
 ---
 # <a name="find-dscresource"></a>Localizar DscResource
 
@@ -16,7 +16,7 @@ Localiza recursos de DSC nos módulos.
 
 ## <a name="description"></a>Descrição
 
-O cmdlet Find DscResource localiza [configuração de estado pretendido (DSC)](https://msdn.microsoft.com/en-us/PowerShell/dsc/overview) recursos contidos nos módulos que correspondem aos critérios especificados da repositórios registados.
+O cmdlet Find DscResource localiza [configuração de estado pretendido (DSC)](https://msdn.microsoft.com/PowerShell/dsc/overview) recursos contidos nos módulos que correspondem aos critérios especificados da repositórios registados.
 Para cada módulo que este cmdlet localiza, localizar DscResource devolve um objeto de PSGetDscResourceInfo que podem ser transmitidos para o módulo de instalação para instalar os módulos que contém os recursos que este cmdlet devolve.
 
 DSC é uma nova plataforma de gestão do Windows PowerShell que lhe permite implementar e gerir dados de configuração para os serviços de software e gerir o ambiente em que estes serviços são executados.
@@ -41,7 +41,7 @@ Get-Command -Name Find-DscResource -Module PowerShellGet -Syntax
 
 ## <a name="cmdlet-online-help-reference"></a>Referência de ajuda online do cmdlet
 
-[Localizar DscResource](http://go.microsoft.com/fwlink/?LinkId=517196)
+[Find-DscResource](http://go.microsoft.com/fwlink/?LinkId=517196)
 
 ## <a name="example-commands"></a>Comandos de exemplo
 ```powershell

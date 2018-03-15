@@ -3,11 +3,11 @@ ms.date: 2017-06-12
 ms.topic: conceptual
 keywords: "DSC, do powershell, a configuração, a configuração"
 title: Recursos do DSC ServiceSet
-ms.openlocfilehash: 9556a1d513c3819a36c1161e3b35388ca1eb66f9
-ms.sourcegitcommit: a444406120e5af4e746cbbc0558fe89a7e78aef6
+ms.openlocfilehash: 2488dda5212ccb717f7fd5d59ad62ec135ad13d5
+ms.sourcegitcommit: 99227f62dcf827354770eb2c3e95c5cf6a3118b4
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 03/15/2018
 ---
 # <a name="dsc-serviceset-resource"></a>Recursos do DSC ServiceSet
 
@@ -38,7 +38,7 @@ Service [string] #ResourceName
 
 |  Propriedade  |  Descrição   | 
 |---|---| 
-| Nome| Indica os nomes de serviço. Tenha em atenção que, por vezes, isto é diferente dos nomes a apresentar. Pode obter uma lista de serviços e o respetivo estado atual com o [Get-Service](https://technet.microsoft.com/en-us/library/hh849804.aspx) cmdlet.|
+| Nome| Indica os nomes de serviço. Tenha em atenção que, por vezes, isto é diferente dos nomes a apresentar. Pode obter uma lista de serviços e o respetivo estado atual com o [Get-Service](https://technet.microsoft.com/library/hh849804.aspx) cmdlet.|
 | StartupType| Indica o tipo de arranque para o serviço. Os valores que são permitidos para esta propriedade são: **automática**, **desativado**, e **Manual**|  
 | BuiltInAccount| Indica a conta de início de sessão a utilizar para os serviços. Os valores que são permitidos para esta propriedade são: **LocalService**, **LocalSystem**, e **NetworkService**.| 
 | Estado| Indica o estado pretender certificar-se para os serviços: **parado** ou **executar**.| 

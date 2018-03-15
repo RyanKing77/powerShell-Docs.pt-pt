@@ -4,11 +4,11 @@ author: rpsqrd
 ms.topic: conceptual
 keywords: "jea, powershell, segurança"
 title: "Considerações de segurança JEA"
-ms.openlocfilehash: 2dcce34113998a1c31709b6afe6d0a21c991e79d
-ms.sourcegitcommit: f069ff0689006fece768f178c10e3e3eeaee09f0
+ms.openlocfilehash: 69bbe50fb1a7580c32d657a0f084cc80c28825c7
+ms.sourcegitcommit: 99227f62dcf827354770eb2c3e95c5cf6a3118b4
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 10/13/2017
+ms.lasthandoff: 03/15/2018
 ---
 # <a name="jea-security-considerations"></a>Considerações de segurança JEA
 
@@ -79,7 +79,7 @@ Isto significa que as definições de função deixarão de funcionar conforme e
 
 Não deve utilizar um RunAsCredential um ponto final JEA devido a dificuldade em ações para utilizadores específicos e a falta de suporte para o mapeamento de utilizadores a funções de rastreio.
 
-## <a name="winrm-endpoint-acl"></a>ACL de ponto final WinRM
+## <a name="winrm-endpoint-acl"></a>WinRM Endpoint ACL
 
 Como com regulares PowerShell remota pontos finais, cada ponto final JEA tem uma lista de controlo de acesso separado (ACL) definida na configuração do WinRM que controla quem pode autenticar com o ponto final JEA.
 Se configurado incorretamente, utilizadores fidedignos poderão não conseguir aceder ao ponto final JEA e/ou os utilizadores não fidedignos, podem obter acesso.
@@ -95,7 +95,7 @@ New-PSSessionConfigurationFile -Path '.\jea.pssc' -SessionType RestrictedRemoteS
 Register-PSSessionConfiguration -Path '.\jea.pssc' -Name 'MyJEAEndpoint'
 ```
 
-Pode auditar as permissões de utilizador com o [Get-PSSessionConfiguration](https://msdn.microsoft.com/en-us/powershell/reference/5.1/microsoft.powershell.core/get-pssessionconfiguration) cmdlet.
+Pode auditar as permissões de utilizador com o [Get-PSSessionConfiguration](https://msdn.microsoft.com/powershell/reference/5.1/microsoft.powershell.core/get-pssessionconfiguration) cmdlet.
 
 ```powershell
 PS C:\> Get-PSSessionConfiguration -Name 'MyJEAEndpoint' | Select-Object Permission

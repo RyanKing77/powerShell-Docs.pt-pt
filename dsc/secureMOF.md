@@ -3,11 +3,11 @@ ms.date: 2017-10-31
 ms.topic: conceptual
 keywords: "DSC, do powershell, a configuração, a configuração"
 title: Proteger o ficheiro MOF
-ms.openlocfilehash: fdb8fa17e9b5e92b56e0a62bf850529c241eee41
-ms.sourcegitcommit: a444406120e5af4e746cbbc0558fe89a7e78aef6
+ms.openlocfilehash: 1bb257f3237344f32c9035f3836dd317b75eef0a
+ms.sourcegitcommit: 99227f62dcf827354770eb2c3e95c5cf6a3118b4
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 03/15/2018
 ---
 # <a name="securing-the-mof-file"></a>Proteger o ficheiro MOF
 
@@ -19,7 +19,7 @@ Este tópico descreve como garantir que o nó de destino tiver encriptados o fic
 
 A partir do PowerShell na versão 5.0, todo o ficheiro MOF é encriptado por predefinição quando é aplicada para o nó utilizando o **início DSCConfiguration** cmdlet.
 O processo descrito neste artigo, é necessário apenas quando implementar uma solução utilizando o protocolo de serviço de solicitação, se os certificados não são geridos, para garantir que as configurações transferidas pelo nó de destino podem ser desencriptadas e ler pelo sistema antes de estes serem aplicadas (por exemplo, o serviço de solicitação disponível no Windows Server).
-Nós registado para [Automation DSC do Azure](https://docs.microsoft.com/en-us/azure/automation/automation-dsc-overview) serão automaticamente certificados instalou e geridas pelo serviço de com nenhuma sobrecarga administrativa necessária.
+Nós registado para [Automation DSC do Azure](https://docs.microsoft.com/azure/automation/automation-dsc-overview) serão automaticamente certificados instalou e geridas pelo serviço de com nenhuma sobrecarga administrativa necessária.
 
 >**Nota:** este tópico descreve os certificados utilizados para a encriptação.
 >Para a encriptação, um certificado auto-assinado é suficiente, porque a chave privada é sempre é mantida segredo e a encriptação não implica a confiança do documento.
@@ -262,7 +262,7 @@ configuration CredentialEncryptionExample
 
 ## <a name="setting-up-decryption"></a>Configurar a desencriptação
 
-Antes de [ `Start-DscConfiguration` ](https://technet.microsoft.com/en-us/library/dn521623.aspx) pode funcionar, terá de saber o Gestor de configuração Local em cada nó de destino de certificado a utilizar para desencriptar as credenciais, utilizando o recurso de CertificateID para verificar o thumbprint do certificado. Esta função de exemplo irá encontrar o certificado adequado a local (poderá ter de personalizá-lo, pelo que irá encontrar o certificado exato que pretende utilizar):
+Antes de [ `Start-DscConfiguration` ](https://technet.microsoft.com/library/dn521623.aspx) pode funcionar, terá de saber o Gestor de configuração Local em cada nó de destino de certificado a utilizar para desencriptar as credenciais, utilizando o recurso de CertificateID para verificar o thumbprint do certificado. Esta função de exemplo irá encontrar o certificado adequado a local (poderá ter de personalizá-lo, pelo que irá encontrar o certificado exato que pretende utilizar):
 
 ```powershell
 # Get the certificate that works for encryption 
@@ -311,7 +311,7 @@ configuration CredentialEncryptionExample
 
 Neste momento, pode executar a configuração, que será a saída dois ficheiros:
 
- * A *. ficheiro meta.mof que configura o Gestor de configuração Local para desencriptar as credenciais utilizando o certificado que é armazenado no arquivo computador local e identificado pelo respetivo thumbprint. [`Set-DscLocalConfigurationManager`](https://technet.microsoft.com/en-us/library/dn521621.aspx)aplica-se a *. meta.mof ficheiro.
+ * A *. ficheiro meta.mof que configura o Gestor de configuração Local para desencriptar as credenciais utilizando o certificado que é armazenado no arquivo computador local e identificado pelo respetivo thumbprint. [`Set-DscLocalConfigurationManager`](https://technet.microsoft.com/library/dn521621.aspx) aplica-se a *. meta.mof ficheiro.
  * Um ficheiro MOF existente, na verdade, aplica-se a configuração. Início DscConfiguration aplica-se a configuração.
 
 Estes comandos irão conseguir esses passos:

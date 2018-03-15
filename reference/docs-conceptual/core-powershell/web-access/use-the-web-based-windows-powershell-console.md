@@ -2,11 +2,11 @@
 ms.date: 2017-08-23
 keywords: PowerShell, o cmdlet
 title: Utilize a consola web baseado em windows powershell
-ms.openlocfilehash: 31ab17f1a1ea1353abc6f770285a2dca70da446d
-ms.sourcegitcommit: d6ab9ab5909ed59cce4ce30e29457e0e75c7ac12
+ms.openlocfilehash: a6c9812253309ba1225141cfd48d0f1c8b8785b5
+ms.sourcegitcommit: 99227f62dcf827354770eb2c3e95c5cf6a3118b4
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 09/08/2017
+ms.lasthandoff: 03/15/2018
 ---
 # <a name="use-the-web-based-windows-powershell-console"></a>Utilizar a Consola do Windows PowerShell baseada na Web
 
@@ -58,7 +58,7 @@ Por predefinição, este endereço de Web site é *https://\<server_name\>/pswa*
 
 Antes de iniciar sessão Windows PowerShell Web Access, lembre-se de que tem o nome ou endereço IP do computador remoto que pretende gerir.
 Tem de ser um utilizador autorizado no computador remoto e tem de estar configurado para permitir a gestão remota.
-Para obter mais informações sobre como configurar o computador para permitir a gestão remota, consulte [ativar e utilizar comandos remotos no Windows PowerShell](https://docs.microsoft.com/en-us/powershell/module/microsoft.powershell.core/enable-psremoting).
+Para obter mais informações sobre como configurar o computador para permitir a gestão remota, consulte [ativar e utilizar comandos remotos no Windows PowerShell](https://docs.microsoft.com/powershell/module/microsoft.powershell.core/enable-psremoting).
 
 O método mais simples de configurar o computador para permitir a gestão remota está a ser executado o **Enable-PSRemoting - force** cmdlet no computador, numa sessão do Windows PowerShell que foi aberta com direitos de utilizador elevados (**Executar como administrador**).
 
@@ -70,11 +70,11 @@ O método mais simples de configurar o computador para permitir a gestão remota
 
     > ![Tenha em atenção](images/Note.jpeg) **nota**:
     >
-    > - Se o computador de destino for um grupo de trabalho, utilize a seguinte sintaxe para fornecer o nome de utilizador e inicie sessão computador:`<workgroup_name>\<user_name>`
+    > - Se o computador de destino for um grupo de trabalho, utilize a seguinte sintaxe para fornecer o nome de utilizador e inicie sessão computador: `<workgroup_name>\<user_name>`
     > - Se o computador de destino for o servidor de gateway, pode especificar `localhost` no campo do nome do computador
     > - Se o computador de destino é o servidor de gateway e o servidor de gateway está num grupo de trabalho, tem de utilizar `<workgroup name>\<user_name>` no nome do utilizador registada. Pode utilizar `localhost` no campo do nome do computador.
 
-1. O **definições de ligação opcionais** secção está relacionada com os requisitos de autorização do computador remoto que pretende gerir. Para obter mais informações sobre os parâmetros que são equivalentes às definições de ligação opcionais, consulte o [Enter-PSSession](https://docs.microsoft.com/en-us/powershell/module/microsoft.powershell.core/enter-pssession) ajuda do cmdlet.
+1. O **definições de ligação opcionais** secção está relacionada com os requisitos de autorização do computador remoto que pretende gerir. Para obter mais informações sobre os parâmetros que são equivalentes às definições de ligação opcionais, consulte o [Enter-PSSession](https://docs.microsoft.com/powershell/module/microsoft.powershell.core/enter-pssession) ajuda do cmdlet.
 
     Normalmente, as credenciais que utiliza para passar o gateway de acesso Web Windows PowerShell são os mesmos que são reconhecidas pelo computador remoto que pretende gerir. No entanto, se pretender utilizar credenciais diferentes para gerir o computador remoto que especificou no passo 2, expanda o **definições de ligação opcionais** secção e forneça as credenciais alternativas. Caso contrário, avance para o passo 6.
 

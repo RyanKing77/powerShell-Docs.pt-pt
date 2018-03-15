@@ -3,11 +3,11 @@ ms.date: 2017-06-12
 ms.topic: conceptual
 keywords: "DSC, do powershell, a configuração, a configuração"
 title: "Configurações de DSC"
-ms.openlocfilehash: 3fd2846d0fbfb0ae9baa44cde66afe1f5be65cf7
-ms.sourcegitcommit: a444406120e5af4e746cbbc0558fe89a7e78aef6
+ms.openlocfilehash: 14db60126fd6c3d11d425a28c749a8e8b81122ca
+ms.sourcegitcommit: 99227f62dcf827354770eb2c3e95c5cf6a3118b4
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 03/15/2018
 ---
 # <a name="dsc-configurations"></a>Configurações de DSC
 
@@ -62,7 +62,7 @@ Configuration MyDscConfiguration {
         }
     }
 }
-MyDscConfiguration -ComputerName <MyComputer>
+MyDscConfiguration -ComputerName $ComputerName
 
 ```
 
@@ -141,11 +141,11 @@ Configuration DependsOnExample {
 ## <a name="using-new-resources-in-your-configuration"></a>Utilização de novos recursos na sua configuração
 
 Se tiver executado os exemplos anteriores, poderá ter reparado que foram avisado que estava a utilizar um recurso sem explicitamente importá-lo.
-Hoje em dia, DSC é fornecido com 12 recursos como parte do módulo PSDesiredStateConfiguration. Outros recursos em módulos externos tem de ser colocados numa `$env:PSModulePath` para poder ser reconhecido pelo MMC. Um novo cmdlet [Get-DscResource](https://technet.microsoft.com/en-us/library/dn521625.aspx), pode ser utilizado para determinar os recursos que estão instalados no sistema e disponível para utilização pelo MMC. Depois destes módulos foram colocados no `$env:PSModulePath` e corretamente são reconhecidos pelo [Get-DscResource](https://technet.microsoft.com/en-us/library/dn521625.aspx), têm de ser carregado dentro da sua configuração. 
+Hoje em dia, DSC é fornecido com 12 recursos como parte do módulo PSDesiredStateConfiguration. Outros recursos em módulos externos tem de ser colocados numa `$env:PSModulePath` para poder ser reconhecido pelo MMC. Um novo cmdlet [Get-DscResource](https://technet.microsoft.com/library/dn521625.aspx), pode ser utilizado para determinar os recursos que estão instalados no sistema e disponível para utilização pelo MMC. Depois destes módulos foram colocados no `$env:PSModulePath` e corretamente são reconhecidos pelo [Get-DscResource](https://technet.microsoft.com/library/dn521625.aspx), têm de ser carregado dentro da sua configuração. 
 **Importar DscResource** é uma palavra-chave dinâmica que só pode ser reconhecida dentro de um **configuração** blocos (ou seja, não é um cmdlet). 
 **Importar DscResource** suporta dois parâmetros:
 - **ModuleName** é a forma recomendada de utilização **importação DscResource**. Aceita o nome do módulo que contém os recursos a serem importados (bem como uma matriz de cadeia de nomes de módulo). 
-- **Nome** é o nome do recurso para importar. Não é o nome amigável devolvido como "Name" por [Get-DscResource](https://technet.microsoft.com/en-us/library/dn521625.aspx), mas o nome de classe utilizado quando definir o esquema de recursos (devolvido como **ResourceType** por [Get-DscResource](https://technet.microsoft.com/en-us/library/dn521625.aspx)). 
+- **Nome** é o nome do recurso para importar. Não é o nome amigável devolvido como "Name" por [Get-DscResource](https://technet.microsoft.com/library/dn521625.aspx), mas o nome de classe utilizado quando definir o esquema de recursos (devolvido como **ResourceType** por [Get-DscResource](https://technet.microsoft.com/library/dn521625.aspx)). 
 
 ## <a name="see-also"></a>Consulte Também
 * [Descrição geral da configuração do estado pretendido do Windows PowerShell](overview.md)

@@ -3,11 +3,11 @@ ms.date: 2017-06-12
 ms.topic: conceptual
 keywords: "DSC, do powershell, a configuração, a configuração"
 title: "Configurações de parciais de configuração de estado pretendido do PowerShell"
-ms.openlocfilehash: 66791bb7b14898d292b9da38dd27ba45b7c75d88
-ms.sourcegitcommit: a444406120e5af4e746cbbc0558fe89a7e78aef6
+ms.openlocfilehash: 4401ea80cffd09f4b92c9fcca16d5dcad7f6a327
+ms.sourcegitcommit: 99227f62dcf827354770eb2c3e95c5cf6a3118b4
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 03/15/2018
 ---
 # <a name="powershell-desired-state-configuration-partial-configurations"></a>Configurações de parciais de configuração de estado pretendido do PowerShell
 
@@ -18,10 +18,10 @@ No PowerShell 5.0, configuração de estado pretendido (DSC) permite que as conf
 Pode utilizar configurações parciais no modo de push, modo de extração ou uma combinação dos dois.
 
 ## <a name="partial-configurations-in-push-mode"></a>Configurações parciais no modo de push
-Para utilizar configurações parciais no modo de push, configurar o MMC no nó de destino para receber as configurações parciais. Cada configuração parcial deve ser enviada para o destino utilizando o cmdlet Publish-DSCConfiguration. O nó de destino, em seguida, combina a configuração parcial para uma configuração única e pode aplicar a configuração ao chamar o [início DscConfiguration](https://technet.microsoft.com/en-us/library/dn521623.aspx) cmdlet.
+Para utilizar configurações parciais no modo de push, configurar o MMC no nó de destino para receber as configurações parciais. Cada configuração parcial deve ser enviada para o destino utilizando o cmdlet Publish-DSCConfiguration. O nó de destino, em seguida, combina a configuração parcial para uma configuração única e pode aplicar a configuração ao chamar o [início DscConfiguration](https://technet.microsoft.com/library/dn521623.aspx) cmdlet.
 
 ### <a name="configuring-the-lcm-for-push-mode-partial-configurations"></a>Configurar o MMC para configurações parcial do modo de push
-Para configurar MMC para configurações parciais no modo de push, crie um **DSCLocalConfigurationManager** configuração com um **PartialConfiguration** bloco para cada configuração parcial. Para obter mais informações sobre como configurar o MMC, consulte [Windows configurar o Gestor de configuração Local](https://technet.microsoft.com/en-us/library/mt421188.aspx). O exemplo seguinte mostra uma configuração de MMC que espera duas configurações parciais — que implementa o sistema operativo e outro que implementa e configura o SharePoint.
+Para configurar MMC para configurações parciais no modo de push, crie um **DSCLocalConfigurationManager** configuração com um **PartialConfiguration** bloco para cada configuração parcial. Para obter mais informações sobre como configurar o MMC, consulte [Windows configurar o Gestor de configuração Local](https://technet.microsoft.com/library/mt421188.aspx). O exemplo seguinte mostra uma configuração de MMC que espera duas configurações parciais — que implementa o sistema operativo e outro que implementa e configura o SharePoint.
 
 ```powershell
 [DSCLocalConfigurationManager()]
@@ -51,7 +51,7 @@ O **RefreshMode** cada configuração parcial está definida como "Push". Os nom
 
 ### <a name="publishing-and-starting-push-mode-partial-configurations"></a>Publicar e iniciar configurações parcial do modo de push
 
-Em seguida, chame [publicar DSCConfiguration](https://msdn.microsoft.com/en-us/powershell/reference/5.1/psdesiredstateconfiguration/publish-dscconfiguration) para cada configuração, transmitir as pastas que contêm os documentos de configuração como a **caminho** parâmetros. `Publish-DSCConfiguration`coloca os ficheiros MOF de configuração para os nós de destino. Depois de publicar ambas as configurações, pode chamar `Start-DSCConfiguration –UseExisting` no nó de destino.
+Em seguida, chame [publicar DSCConfiguration](https://msdn.microsoft.com/powershell/reference/5.1/psdesiredstateconfiguration/publish-dscconfiguration) para cada configuração, transmitir as pastas que contêm os documentos de configuração como a **caminho** parâmetros. `Publish-DSCConfiguration`coloca os ficheiros MOF de configuração para os nós de destino. Depois de publicar ambas as configurações, pode chamar `Start-DSCConfiguration –UseExisting` no nó de destino.
 
 Por exemplo, se tiver compilado os seguintes documentos MOF de configuração no nó de criação:
 
@@ -96,7 +96,7 @@ Id     Name            PSJobTypeName   State         HasMoreData     Location   
 17     Job17           Configuratio... Running       True            TestVM            Start-DscConfiguration...
 ```
 
->**Nota:** o utilizador que executa o [publicar DSCConfiguration](https://msdn.microsoft.com/en-us/powershell/reference/5.1/psdesiredstateconfiguration/publish-dscconfiguration) cmdlet tem de ter privilégios de administrador no nó de destino.
+>**Nota:** o utilizador que executa o [publicar DSCConfiguration](https://msdn.microsoft.com/powershell/reference/5.1/psdesiredstateconfiguration/publish-dscconfiguration) cmdlet tem de ter privilégios de administrador no nó de destino.
 
 ## <a name="partial-configurations-in-pull-mode"></a>Configurações parciais no modo de extração
 
@@ -211,7 +211,7 @@ SharePointConfig.mof.checksum
 
 ### <a name="naming-and-placing-the-configuration-documents-on-the-pull-server-configurationid"></a>Atribuição de nomes e colocar os documentos de configuração no servidor de solicitação (ConfigurationID)
 
-Os documentos de configuração parcial tem de ser colocados na pasta especificada como a **ConfigurationPath** no `web.config` ficheiro para o servidor de solicitação (normalmente `C:\Program Files\WindowsPowerShell\DscService\Configuration`). Os documentos de configuração devem ter o nome da seguinte forma: _ConfigurationName_. _ConfigurationID_`.mof`, onde _ConfigurationName_ é o nome da configuração parcial e _ConfigurationID_ é o ID de configuração definido no MMC no nó de destino. Para o nosso exemplo, os documentos de configuração devem ter o nome da seguinte forma:
+Os documentos de configuração parcial tem de ser colocados na pasta especificada como a **ConfigurationPath** no `web.config` ficheiro para o servidor de solicitação (normalmente `C:\Program Files\WindowsPowerShell\DscService\Configuration`). Os documentos de configuração devem ter o nome da seguinte forma: _ConfigurationName_. _ConfigurationID_`.mof`, onde _ConfigurationName_ é o nome da configuração parcial e _ConfigurationID_ o ID de configuração está definido na MMC no destino nó. Para o nosso exemplo, os documentos de configuração devem ter o nome da seguinte forma:
 
 ```
 ServiceAccountConfig.1d545e3b-60c3-47a0-bf65-5afc05182fd0.mof
@@ -377,5 +377,5 @@ SharePointConfig
 **Conceitos**
 [servidores de solicitação de configuração do estado pretendido do Windows PowerShell](pullServer.md) 
 
-[Configurar o Gestor de configuração Local do Windows](https://technet.microsoft.com/en-us/library/mt421188.aspx) 
+[Configurar o Gestor de configuração Local do Windows](https://technet.microsoft.com/library/mt421188.aspx) 
 

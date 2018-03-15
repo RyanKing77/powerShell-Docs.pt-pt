@@ -3,11 +3,11 @@ ms.date: 2017-06-12
 ms.topic: conceptual
 keywords: "DSC, do powershell, a configuração, a configuração"
 title: Escrever um recurso personalizado de DSC com classes de PowerShell
-ms.openlocfilehash: b24351a49ca11dac4687efdce39d400bfd00f399
-ms.sourcegitcommit: a444406120e5af4e746cbbc0558fe89a7e78aef6
+ms.openlocfilehash: 53757f965c51fee699409b5a8ecda802dda9801f
+ms.sourcegitcommit: 99227f62dcf827354770eb2c3e95c5cf6a3118b4
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 03/15/2018
 ---
 # <a name="writing-a-custom-dsc-resource-with-powershell-classes"></a>Escrever um recurso personalizado de DSC com classes de PowerShell
 
@@ -69,7 +69,7 @@ Tenha em atenção que as propriedades são modificadas por atributos. O signifi
 - **DscProperty(NotConfigurable)**: A propriedade é só de leitura. Propriedades marcadas com este atributo não pode ser definidas por uma configuração, mas são preenchidas pelo **Get()** método quando presente.
 - **DscProperty()**: A propriedade é configurável, mas não é necessária.
 
-O **$Path** e **$SourcePath** propriedades são ambas as cadeias. O **$CreationTime** é um [DateTime](https://technet.microsoft.com/en-us/library/system.datetime.aspx) propriedade. O **$Ensure** propriedade é um tipo de enumeração definido do seguinte modo.
+O **$Path** e **$SourcePath** propriedades são ambas as cadeias. O **$CreationTime** é um [DateTime](https://technet.microsoft.com/library/system.datetime.aspx) propriedade. O **$Ensure** propriedade é um tipo de enumeração definido do seguinte modo.
 
 ```powershell
 enum Ensure 
@@ -484,10 +484,10 @@ Para obter mais informações, consulte [DSC em execução com as credenciais de
 O **DscResource()** atributo assume um parâmetro opcional **RunAsCredential**.
 Este parâmetro assume um de três valores:
 
-- `Optional`**PsDscRunAsCredential** é opcional para as configurações que chamar este recurso. Este é o valor predefinido.
-- `Mandatory`**PsDscRunAsCredential** devem ser utilizadas para qualquer configuração que chama este recurso.
-- `NotSupported`Não é possível utilizar as configurações que chamar este recurso **PsDscRunAsCredential**.
-- `Default`Igual ao `Optional`.
+- `Optional` **PsDscRunAsCredential** é opcional para as configurações que chamar este recurso. Este é o valor predefinido.
+- `Mandatory` **PsDscRunAsCredential** devem ser utilizadas para qualquer configuração que chama este recurso.
+- `NotSupported` Não é possível utilizar as configurações que chamar este recurso **PsDscRunAsCredential**.
+- `Default` Igual ao `Optional`.
 
 Por exemplo, utilize o seguinte atributo para especificar que o recurso personalizado não suporta a utilização **PsDscRunAsCredential**:
 
