@@ -2,14 +2,14 @@
 ms.date: 2017-06-12
 author: JKeithB
 ms.topic: reference
-keywords: "WMF, o powershell, o programa de configuração"
+keywords: wmf,powershell,setup
 ms.openlocfilehash: 32f8e20889ddc526def4b925e8d0761a2e851e19
-ms.sourcegitcommit: 75f70c7df01eea5e7a2c16f9a3ab1dd437a1f8fd
+ms.sourcegitcommit: 99227f62dcf827354770eb2c3e95c5cf6a3118b4
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 06/12/2017
+ms.lasthandoff: 03/20/2018
 ---
-# <a name="unified-and-consistent-state-and-status-representation"></a>Estado de browser unificado e consistente e representação de estado
+# <a name="unified-and-consistent-state-and-status-representation"></a>Estado Unificado e Consistente e Representação de Estado
 
 Uma série de melhorias foram efetuadas nesta versão para automatizações incorporadas estado do MMC e estado de DSC. Estes incluem Estado unificado e consistente e a declaração de estado, datetime gerível propriedade dos objetos de estado devolvido pelo cmdlet Get-DscConfigurationStatus e modulação de propriedade de detalhes do Estado do MMC devolvida pelo Get-DscLocalConfigurationManager cmdlet.
 
@@ -23,7 +23,7 @@ A representação de estado do MMC e o estado da operação de DSC são Revisita
 
 A tabela abaixo ilustra o resultante Estado relacionadas com propriedades em alguns cenários típicos.
 
-| **Cenário**                    | **LCMState\***       | **Estado** | **Reiniciar o computador solicitado**  | **ResourcesInDesiredState**  | **ResourcesNotInDesiredState** |
+| **Cenário**                    | **LCMState\***       | **Status** | **Reiniciar o computador solicitado**  | **ResourcesInDesiredState**  | **ResourcesNotInDesiredState** |
 |---------------------------------|----------------------|------------|---------------|------------------------------|--------------------------------|
 | S**^**                          | Inativo                 | Sucesso    | $false        | S                            | $null                          |
 | F**^**                          | PendingConfiguration | Falha    | $false        | $null                        | F                              |
@@ -36,7 +36,7 @@ A tabela abaixo ilustra o resultante Estado relacionadas com propriedades em alg
 | r, S                            | PendingReboot        | Sucesso    | $true         | $null                        | r                              |
 | r, F                            | PendingReboot        | Sucesso    | $true         | $null                        | r                              |
 
-^ S<sub>posso</sub>: uma série de recursos que aplicada com êxito F<sub>posso</sub>: uma série de recursos que aplicadas sem êxito r: um recurso que requer o reinício\*
+^ S<sub>posso</sub>: uma série de recursos que aplicada com êxito F<sub>posso</sub>: uma série de recursos que aplicadas sem êxito r: um recurso que requer o reinício \*
 
 ```powershell
 $LCMState = (Get-DscLocalConfigurationManager).LCMState
