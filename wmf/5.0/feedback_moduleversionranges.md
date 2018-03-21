@@ -10,7 +10,7 @@ ms.contentlocale: pt-PT
 ms.lasthandoff: 03/20/2018
 ---
 # <a name="modules-support-for-declaring-version-ranges-1-etc"></a>Suporte de módulos para declarar intervalos de versão (1.*, etc.)
-Combinado com **- MinimumVersion**, **- MaximumVersion** agora permite ao utilizador para o módulo get/importação dentro do intervalo específico. O parâmetro também suporta * *. ***. O exemplo seguinte mostra como funciona:
+Combinado com **-MinimumVersion**, **-MaximumVersion** agora permite ao utilizador para o módulo get/importação dentro do intervalo específico. O parâmetro também suporta **.**\*. O exemplo seguinte mostra como funciona:
 
 ```powershell
 Now, you can combine **-MinimumVersion** and **-MaximumVersion** to import module within specific range:
