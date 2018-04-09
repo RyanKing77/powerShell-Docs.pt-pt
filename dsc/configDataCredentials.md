@@ -1,11 +1,11 @@
 ---
 ms.date: 2017-06-12
 ms.topic: conceptual
-keywords: "DSC, do powershell, a configuração, a configuração"
-title: "Opções de credenciais nos dados de configuração"
+keywords: DSC, do powershell, a configuração, a configuração
+title: Opções de credenciais nos dados de configuração
 ms.openlocfilehash: 6ddf82c2b63309255ec3187d650677a6c3c2afb0
 ms.sourcegitcommit: 99227f62dcf827354770eb2c3e95c5cf6a3118b4
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: pt-PT
 ms.lasthandoff: 03/15/2018
 ---
@@ -283,7 +283,7 @@ Utilizar uma conta local elimina potencial exposição de credenciais de domíni
 
 **Ao utilizar as credenciais com recursos de DSC, preferir uma conta local através de uma conta de domínio sempre que possível.**
 
-Se existir um '\' ou '@' no `Username` propriedade de credencial, DSC irá processá-lo como uma conta de domínio.
+Se existir um '\' ou '\@' no `Username` propriedade de credencial, DSC irá processá-lo como uma conta de domínio.
 Há uma exceção para "localhost", "127.0.0.1" e ":: 1" na parte do domínio do nome de utilizador.
 
 ## <a name="psdscallowdomainuser"></a>PSDscAllowDomainUser
