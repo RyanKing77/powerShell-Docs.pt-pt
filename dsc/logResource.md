@@ -1,15 +1,15 @@
 ---
-ms.date: 2017-06-12
+ms.date: 06/12/2017
 ms.topic: conceptual
-keywords: "DSC, do powershell, a configuração, a configuração"
+keywords: DSC, do powershell, a configuração, a configuração
 title: Recursos de registo DSC
-ms.openlocfilehash: 3bc4bf38b376cc62e42107eee1024eaabc93485a
-ms.sourcegitcommit: a444406120e5af4e746cbbc0558fe89a7e78aef6
+ms.openlocfilehash: f1a528767508d4a0e7f0ea2e58fd27a6a4d7ec75
+ms.sourcegitcommit: cf195b090b3223fa4917206dfec7f0b603873cdf
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 04/09/2018
 ---
-# <a name="dsc-log-resource"></a>Recursos de registo DSC 
+# <a name="dsc-log-resource"></a>Recursos de registo DSC
 
 > Aplica-se a: O Windows PowerShell 4.0, Windows PowerShell 5.0
 
@@ -32,10 +32,10 @@ Consulte o seguinte artigo.
 [Onde estão os registos de eventos do DSC?](https://msdn.microsoft.com/en-us/powershell/dsc/troubleshooting#where-are-dsc-event-logs)
 
 ## <a name="properties"></a>Propriedades
-|  Propriedade  |  Descrição   | 
-|---|---| 
-| Mensagem| Indica a mensagem que pretende escrever no registo de eventos de configuração de estado Microsoft-Windows-Desired, registos analíticos.| 
-| dependsOn | Indica que a configuração de outro recurso tem de executar antes desta mensagem do registo obtém escrita. Por exemplo, se o ID da configuração do recurso de script bloco de que pretende executar primeiro é __ResourceName__ e o respetivo tipo é __ResourceType__, a sintaxe para utilizar esta propriedade é `DependsOn = "[ResourceType]ResourceName"`.| 
+|  Propriedade  |  Descrição   |
+|---|---|
+| Mensagem| Indica a mensagem que pretende escrever no registo de eventos de configuração de estado Microsoft-Windows-Desired, registos analíticos.|
+| dependsOn | Indica que a configuração de outro recurso tem de executar antes desta mensagem do registo obtém escrita. Por exemplo, se o ID da configuração do recurso de script bloco de que pretende executar primeiro é __ResourceName__ e o respetivo tipo é __ResourceType__, a sintaxe para utilizar esta propriedade é `DependsOn = "[ResourceType]ResourceName"`.|
 
 ## <a name="example"></a>Exemplo
 
@@ -43,7 +43,7 @@ O exemplo seguinte mostra como incluir uma mensagem no registo de eventos de con
 
 > **Tenha em atenção**: Se executar [teste DscConfiguration](https://technet.microsoft.com/en-us/library/dn407382.aspx) com este recurso configurado, será sempre devolver **$false**.
 
-```powershell 
+```powershell
 Configuration logResourceTest
 {
     Import-DscResource -ModuleName PSDesiredStateConfiguration
@@ -58,4 +58,3 @@ Configuration logResourceTest
     }
 }
 ```
-

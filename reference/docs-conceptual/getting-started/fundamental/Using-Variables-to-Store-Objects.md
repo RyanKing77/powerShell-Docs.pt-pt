@@ -1,15 +1,15 @@
 ---
-ms.date: 2017-06-05
+ms.date: 06/05/2017
 keywords: PowerShell, o cmdlet
-title: "Utilizar variáveis para objetos de arquivo"
+title: Utilizar Variáveis para Armazenar Objetos
 ms.assetid: b1688d73-c173-491e-9ba6-6d0c1cc852de
-ms.openlocfilehash: 9a95d421fa2686608a565987c16fecc41c3c6d20
-ms.sourcegitcommit: f069ff0689006fece768f178c10e3e3eeaee09f0
+ms.openlocfilehash: e52f0a344d0ad13db42b34bed912d584c99b0e30
+ms.sourcegitcommit: cf195b090b3223fa4917206dfec7f0b603873cdf
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 10/13/2017
+ms.lasthandoff: 04/09/2018
 ---
-# <a name="using-variables-to-store-objects"></a>Utilizar variáveis para objetos de arquivo
+# <a name="using-variables-to-store-objects"></a>Utilizar Variáveis para Armazenar Objetos
 PowerShell funciona com objetos. PowerShell permite-lhe criar variáveis, essencialmente com o nome de objetos, para preservar a saída para utilização posterior. Se forem utilizados para trabalhar com variáveis noutras shells Lembre-se de que as variáveis de PowerShell são objetos, não texto.
 
 Variáveis são sempre especificadas com o caráter inicial $ e podem incluir quaisquer carateres alfanuméricos ou o caráter de sublinhado nos respetivos nomes.
@@ -97,4 +97,3 @@ C:\WINDOWS
 ```
 
 Também pode criar e modificar variáveis de ambiente de PowerShell. Variáveis de ambiente acedidas a partir do Windows PowerShell está em conformidade com as regras normais nas variáveis de ambiente noutro local do Windows.
-

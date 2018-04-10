@@ -1,22 +1,23 @@
 ---
-ms.date: 2017-06-12
+ms.date: 06/12/2017
 contributor: manikb
 ms.topic: reference
 keywords: cmdlet do powershell do galeria, psget
-title: "Módulo desinstalar"
-ms.openlocfilehash: 3c4d8faa63aba6b4434d42a19a219baf84122591
-ms.sourcegitcommit: 75f70c7df01eea5e7a2c16f9a3ab1dd437a1f8fd
+title: Uninstall-Module
+ms.openlocfilehash: 90f26e64a8a6bc95faf444b1d3ce82a8e3bbefc1
+ms.sourcegitcommit: cf195b090b3223fa4917206dfec7f0b603873cdf
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 06/12/2017
+ms.lasthandoff: 04/09/2018
 ---
-# <a name="uninstall-module"></a>Módulo desinstalar
+# <a name="uninstall-module"></a>Uninstall-Module
 
 Desinstala um módulo que foi instalado através de PowerShellGet cmdlets.
 
 ## <a name="description"></a>Descrição
 
-O cmdlet Uninstall-Module desinstala o módulo especificado do computador local. Não é possível desinstalar um módulo se alguns outros módulos tem uma dependência no mesmo.
+O cmdlet Uninstall-Module desinstala o módulo especificado do computador local.
+Não é possível desinstalar um módulo se alguns outros módulos tem uma dependência no mesmo.
 Os cmdlets do módulo de desinstalação também valida se o módulo a desinstalar está em utilização ou não. Será emitido um erro se o módulo está a ser utilizado.
 
 ## <a name="cmdlet-syntax"></a>Sintaxe de cmdlet
@@ -26,7 +27,7 @@ Get-Command -Name Uninstall-Module -Module PowerShellGet -Syntax
 
 ## <a name="cmdlet-online-help-reference"></a>Referência de ajuda online do cmdlet
 
-[Módulo desinstalar](http://go.microsoft.com/fwlink/?LinkId=526864)
+[Uninstall-Module](http://go.microsoft.com/fwlink/?LinkId=526864)
 
 
 ## <a name="example-commands"></a>Comandos de exemplo
@@ -126,4 +127,3 @@ At C:\Program Files\WindowsPowerShell\Modules\PowerShellGet\1.0.0.1\PSModule.psm
    , Exception
     + FullyQualifiedErrorId : NoMatchFound,Microsoft.PowerShell.PackageManagement.Cmdlets.UninstallPackage
 ```
-

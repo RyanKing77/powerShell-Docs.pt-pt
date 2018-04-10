@@ -1,13 +1,13 @@
 ---
-ms.date: 2017-06-12
+ms.date: 06/12/2017
 ms.topic: conceptual
-keywords: "DSC, do powershell, a configuração, a configuração"
+keywords: DSC, do powershell, a configuração, a configuração
 title: Recurso de ambiente de DSC
-ms.openlocfilehash: 9c166d719ba3f168c936278acd6fb5fb7658613e
-ms.sourcegitcommit: a444406120e5af4e746cbbc0558fe89a7e78aef6
+ms.openlocfilehash: 4f024afe2d70c13e19406745ec7fd69821ab229b
+ms.sourcegitcommit: cf195b090b3223fa4917206dfec7f0b603873cdf
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 04/09/2018
 ---
 # <a name="dsc-environment-resource"></a>Recurso de ambiente de DSC
 
@@ -29,13 +29,13 @@ Environment [string] #ResourceName
 
 ## <a name="properties"></a>Propriedades
 
-|  Propriedade  |  Descrição   | 
-|---|---| 
-| Nome| Indica o nome da variável de ambiente para o qual pretende garantir um estado específico.| 
-| Certifique-se| Indica se existe uma variável. Defina esta propriedade como __presente__ para criar a variável de ambiente, se não existir ou certifique-se de que corresponde ao respetivo valor que é fornecido através de __valor__ propriedade se a variável já existe. Defina-o como __ausente__ para eliminar a variável, se existir.| 
-| Caminho| Define a variável de ambiente que está a ser configurada. Defina esta propriedade como __$true__ se a variável é o __caminho__ variável; caso contrário, defina-o como __$false__. A predefinição é __$false__. Se a variável que está a ser configurada é o __caminho__ variável, o valor fornecido através de __valor__ propriedade será anexada ao valor existente.| 
-| dependsOn | Indica que a configuração de outro recurso tem de executar antes deste recurso é configurado. Por exemplo, se o ID da configuração do recurso de script bloco de que pretende executar primeiro é __ResourceName__ e o respetivo tipo é __ResourceType__, a sintaxe para utilizar esta propriedade é `DependsOn = "[ResourceType]ResourceName"`.| 
-| Valor| O valor a atribuir à variável de ambiente.| 
+|  Propriedade  |  Descrição   |
+|---|---|
+| Nome| Indica o nome da variável de ambiente para o qual pretende garantir um estado específico.|
+| Certifique-se| Indica se existe uma variável. Defina esta propriedade como __presente__ para criar a variável de ambiente, se não existir ou certifique-se de que corresponde ao respetivo valor que é fornecido através de __valor__ propriedade se a variável já existe. Defina-o como __ausente__ para eliminar a variável, se existir.|
+| Caminho| Define a variável de ambiente que está a ser configurada. Defina esta propriedade como __$true__ se a variável é o __caminho__ variável; caso contrário, defina-o como __$false__. A predefinição é __$false__. Se a variável que está a ser configurada é o __caminho__ variável, o valor fornecido através de __valor__ propriedade será anexada ao valor existente.|
+| dependsOn | Indica que a configuração de outro recurso tem de executar antes deste recurso é configurado. Por exemplo, se o ID da configuração do recurso de script bloco de que pretende executar primeiro é __ResourceName__ e o respetivo tipo é __ResourceType__, a sintaxe para utilizar esta propriedade é `DependsOn = "[ResourceType]ResourceName"`.|
+| Valor| O valor a atribuir à variável de ambiente.|
 
 ## <a name="example"></a>Exemplo
 
@@ -49,4 +49,3 @@ Environment EnvironmentExample
     Value = "TestValue"
 }
 ```
-

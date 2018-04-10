@@ -1,15 +1,15 @@
 ---
-ms.date: 2017-06-12
+ms.date: 06/12/2017
 ms.topic: conceptual
-keywords: "DSC, do powershell, a configuração, a configuração"
-title: "Configurar um servidor de solicitação do DSC SMB"
-ms.openlocfilehash: ff3faeb1952e6116cf97b1aaf8f125d8931dd35e
-ms.sourcegitcommit: 99227f62dcf827354770eb2c3e95c5cf6a3118b4
+keywords: DSC, do powershell, a configuração, a configuração
+title: Configurar um servidor de solicitação SMB de DSC
+ms.openlocfilehash: e9228c050d6f496e30e94404a564ed2e425a5412
+ms.sourcegitcommit: cf195b090b3223fa4917206dfec7f0b603873cdf
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 03/15/2018
+ms.lasthandoff: 04/09/2018
 ---
-# <a name="setting-up-a-dsc-smb-pull-server"></a>Configurar um servidor de solicitação do DSC SMB
+# <a name="setting-up-a-dsc-smb-pull-server"></a>Configurar um servidor de solicitação SMB de DSC
 
 >Aplica-se a: O Windows PowerShell 4.0, Windows PowerShell 5.0
 
@@ -37,19 +37,19 @@ Configuration SmbShare {
 
 Import-DscResource -ModuleName PSDesiredStateConfiguration
 Import-DscResource -ModuleName xSmbShare
- 
+
     Node localhost {
- 
+
         File CreateFolder {
- 
+
             DestinationPath = 'C:\DscSmbShare'
             Type = 'Directory'
             Ensure = 'Present'
- 
+
         }
- 
+
         xSMBShare CreateShare {
- 
+
             Name = 'DscSmbShare'
             Path = 'C:\DscSmbShare'
             FullAccess = 'admininstrator'
@@ -57,11 +57,11 @@ Import-DscResource -ModuleName xSmbShare
             FolderEnumerationMode = 'AccessBased'
             Ensure = 'Present'
             DependsOn = '[File]CreateFolder'
- 
+
         }
-        
+
     }
- 
+
 }
 ```
 
@@ -78,19 +78,19 @@ Configuration DSCSMB {
 Import-DscResource -ModuleName PSDesiredStateConfiguration
 Import-DscResource -ModuleName xSmbShare
 Import-DscResource -ModuleName cNtfsAccessControl
- 
+
     Node localhost {
- 
+
         File CreateFolder {
- 
+
             DestinationPath = 'DscSmbShare'
             Type = 'Directory'
             Ensure = 'Present'
- 
+
         }
- 
+
         xSMBShare CreateShare {
- 
+
             Name = 'DscSmbShare'
             Path = 'DscSmbShare'
             FullAccess = 'administrator'
@@ -98,11 +98,11 @@ Import-DscResource -ModuleName cNtfsAccessControl
             FolderEnumerationMode = 'AccessBased'
             Ensure = 'Present'
             DependsOn = '[File]CreateFolder'
- 
+
         }
 
         cNtfsPermissionEntry PermissionSet1 {
-            
+
         Ensure = 'Present'
         Path = 'C:\DSCSMB'
         Principal = 'myDomain\Contoso-Server$'
@@ -116,12 +116,12 @@ Import-DscResource -ModuleName cNtfsAccessControl
             }
         )
         DependsOn = '[File]CreateFolder'
-        
+
         }
- 
-        
+
+
     }
- 
+
 }
 ```
 
@@ -133,10 +133,12 @@ Qualquer ficheiro de configuração de MOF deve ter o nome _ConfigurationID_. MO
 
 >**Nota:** tem de utilizar os IDs de configuração se estiver a utilizar um servidor de solicitação do SMB. Nomes de configuração não são suportados para SMB.
 
-Cada módulo de recursos tem de ser zipado e com o nome de acordo com o padrão de seguinte `{Module Name}_{Module Version}.zip`. Por exemplo, um módulo com o nome xWebAdminstration com uma versão do módulo de 3.1.2.0 seria possível com o nome 'xWebAdministration_3.2.1.0.zip'. Cada versão do módulo tem de estar contido num ficheiro zip único. Uma vez que existe apenas uma única versão de um recurso em cada ficheiro zip o formato de módulo adicionado no WMF 5.0 com suporte para várias versões de módulo num único diretório não é suportado. Isto significa que antes do empacotamento dos módulos de recursos de DSC para utilização com o servidor de solicitação tem de efetuar uma alteração de pequena para a estrutura de diretórios. O formato predefinido de módulos que contém os recursos de DSC na WMF 5.0 é ' {pasta do módulo}\{versão do módulo} \DscResources\{pasta de recursos de DSC}\'. Antes de empacotamento para o servidor de solicitação basta remover a **{versão do módulo}** pasta para o caminho fica ' {pasta do módulo} \DscResources\{pasta de recursos de DSC}\'. Com esta alteração, zip a pasta, conforme descrito acima e colocar esses ficheiros zip na pasta de partilha SMB. 
+Cada módulo de recursos tem de ser zipado e com o nome de acordo com o padrão de seguinte `{Module Name}_{Module Version}.zip`. Por exemplo, um módulo com o nome xWebAdminstration com uma versão do módulo de 3.1.2.0 seria possível com o nome 'xWebAdministration_3.2.1.0.zip'. Cada versão do módulo tem de estar contido num ficheiro zip único. Uma vez que existe apenas uma única versão de um recurso em cada ficheiro zip o formato de módulo adicionado no WMF 5.0 com suporte para várias versões de módulo num único diretório não é suportado. Isto significa que antes do empacotamento dos módulos de recursos de DSC para utilização com o servidor de solicitação tem de efetuar uma alteração de pequena para a estrutura de diretórios. O formato predefinido de módulos que contém os recursos de DSC na WMF 5.0 é ' {pasta do módulo}\{versão do módulo} \DscResources\{pasta de recursos de DSC}\'. Antes de empacotamento para o servidor de solicitação basta remover a **{versão do módulo}** pasta para o caminho fica ' {pasta do módulo} \DscResources\{pasta de recursos de DSC}\'. Com esta alteração, zip a pasta, conforme descrito acima e colocar esses ficheiros zip na pasta de partilha SMB.
 
 ## <a name="creating-the-mof-checksum"></a>Criar a soma de verificação MOF
-Um ficheiro MOF de configuração tem de estar associados a um ficheiro de soma de verificação para que o MMC num nó de destino pode validar a configuração. Para criar uma soma de verificação, chame o [New-DSCCheckSum](https://technet.microsoft.com/en-us/library/dn521622.aspx) cmdlet. O cmdlet assume um **caminho** parâmetro que especifica a pasta onde está localizada a configuração MOF. O cmdlet cria um ficheiro de soma de verificação chamado `ConfigurationMOFName.mof.checksum`, onde `ConfigurationMOFName` é o nome do ficheiro mof configuração. Se existirem mais de uma configuração MOF ficheiros na pasta especificada, é criada uma soma de verificação para cada configuração na pasta.
+Um ficheiro MOF de configuração tem de estar associados a um ficheiro de soma de verificação para que o MMC num nó de destino pode validar a configuração.
+Para criar uma soma de verificação, chame o [New-DSCCheckSum](https://technet.microsoft.com/en-us/library/dn521622.aspx) cmdlet. O cmdlet assume um **caminho** parâmetro que especifica a pasta onde está localizada a configuração MOF. O cmdlet cria um ficheiro de soma de verificação chamado `ConfigurationMOFName.mof.checksum`, onde `ConfigurationMOFName` é o nome do ficheiro mof configuração.
+Se existirem mais de uma configuração MOF ficheiros na pasta especificada, é criada uma soma de verificação para cada configuração na pasta.
 
 O ficheiro de soma de verificação deve estar presente no mesmo diretório do ficheiro MOF configuration (`$env:PROGRAMFILES\WindowsPowerShell\DscService\Configuration` por predefinição), e ter o mesmo nome com o `.checksum` extensão anexado.
 
@@ -164,12 +166,12 @@ configuration SmbCredTest
         Settings
         {
             RefreshMode = 'Pull'
-            RefreshFrequencyMins = 30 
+            RefreshFrequencyMins = 30
             RebootNodeIfNeeded = $true
             ConfigurationID    = '16db7357-9083-4806-a80c-ebbaf4acd6c1'
         }
-         
-         ConfigurationRepositoryShare SmbConfigShare      
+
+         ConfigurationRepositoryShare SmbConfigShare
         {
             SourcePath = '\\WIN-E0TRU6U11B1\DscSmbShare'
             Credential = $mycreds
@@ -179,8 +181,8 @@ configuration SmbCredTest
         {
             SourcePath = '\\WIN-E0TRU6U11B1\DscSmbShare'
             Credential = $mycreds
-            
-        }      
+
+        }
     }
 }
 
@@ -198,7 +200,7 @@ $ConfigurationData = @{
 
         })
 
-        
+
 
 }
 ```
@@ -214,5 +216,3 @@ Especial obrigado às seguintes:
 - [Descrição geral da configuração do estado pretendido do Windows PowerShell](overview.md)
 - [Aplicar configurações](enactingConfigurations.md)
 - [Configurar um cliente de solicitação através de IDs de configuração](pullClientConfigID.md)
-
- 

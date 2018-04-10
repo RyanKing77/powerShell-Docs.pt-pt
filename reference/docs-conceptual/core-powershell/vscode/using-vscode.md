@@ -58,7 +58,7 @@ Se pretender utilizar uma instalação específica do PowerShell com o Visual St
 
 1. Clique em **ficheiro -> Preferências -> definições**
 1. Serão apresentada a dois painéis do editor.
-   No painel de mais à direita (`settings.json`), inserir a definição abaixo apropriado para o SO algures entre as dois chavetas (`{` e `}`) e substitua  *<version>*  com o instalado Versão do PowerShell:
+   No painel de mais à direita (`settings.json`), inserir a definição abaixo apropriado para o SO algures entre as dois chavetas (`{` e `}`) e substitua *<version>* com o instalado Versão do PowerShell:
 
   ```json
     // On Windows:

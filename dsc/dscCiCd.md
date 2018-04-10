@@ -1,19 +1,20 @@
 ---
-ms.date: 2017-06-12
+ms.date: 06/12/2017
 ms.topic: conceptual
-keywords: "DSC, do powershell, a configuração, a configuração"
-title: "Criar um pipeline de integração contínua e a implementação contínua com DSC"
-ms.openlocfilehash: 5f7583fb93b69bbe4103b34b79b3a859c9cee8a9
-ms.sourcegitcommit: a444406120e5af4e746cbbc0558fe89a7e78aef6
+keywords: DSC, do powershell, a configuração, a configuração
+title: Criar um pipeline de integração contínua e a implementação contínua com DSC
+ms.openlocfilehash: a3803a8e6fe6ff1b93758a73ccd54754d7bb2a84
+ms.sourcegitcommit: cf195b090b3223fa4917206dfec7f0b603873cdf
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 04/09/2018
 ---
 # <a name="building-a-continuous-integration-and-continuous-deployment-pipeline-with-dsc"></a>Criar um pipeline de integração contínua e a implementação contínua com DSC
 
 Este exemplo demonstra como criar um pipeline de implementação contínua/integração contínua (CI/CD) utilizando o PowerShell, DSC, Pester e Visual Studio Team Foundation Server (TFS).
 
-Depois do pipeline é criado e configurado, pode utilizá-la completamente implementar, configurar e testar um servidor DNS e associados registos de anfitrião. Este processo simula a primeira parte de um pipeline que seria utilizada num ambiente de desenvolvimento.
+Depois do pipeline é criado e configurado, pode utilizá-la completamente implementar, configurar e testar um servidor DNS e associados registos de anfitrião.
+Este processo simula a primeira parte de um pipeline que seria utilizada num ambiente de desenvolvimento.
 
 Um pipeline de CI/CD automatizado ajuda-o a atualização de software mais rápido e mais fiável, garantir que todo o código é testado e de que é uma compilação atual do seu código disponível em todas as vezes.
 
@@ -60,7 +61,7 @@ O computador tem de estar em execução [Windows Server 2016](https://www.micros
 ### <a name="testagent2"></a>TestAgent2
 
 Este é o computador que aloja o site que este exemplo configura.
-O computador tem de estar em execução [Windows Server 2016](https://www.microsoft.com/en-us/evalcenter/evaluate-windows-server-2016). 
+O computador tem de estar em execução [Windows Server 2016](https://www.microsoft.com/en-us/evalcenter/evaluate-windows-server-2016).
 
 ## <a name="add-the-code-to-tfs"></a>Adicione o código para o TFS
 
@@ -156,7 +157,8 @@ Isto localiza quaisquer nós que foram definidos como tendo uma função de `DNS
 
 É importante utilizar dados de configuração para definir nós ao efetuar CI porque as informações do nó, provavelmente, serão alterado entre ambientes e utilização de dados de configuração permite-lhe facilmente efetuar alterações às informações do nó, sem alterar o código de configuração.
 
-No primeiro bloco de recursos, a configuração chama o [WindowsFeature](windowsFeatureResource.md) para se certificar de que a funcionalidade DNS está ativada. Os blocos de recursos que se seguem recursos chamada a partir de [xDnsServer](https://github.com/PowerShell/xDnsServer) módulo para configurar a zona primária e registos DNS.
+No primeiro bloco de recursos, a configuração chama o [WindowsFeature](windowsFeatureResource.md) para se certificar de que a funcionalidade DNS está ativada.
+Os blocos de recursos que se seguem recursos chamada a partir de [xDnsServer](https://github.com/PowerShell/xDnsServer) módulo para configurar a zona primária e registos DNS.
 
 Tenha em atenção que as duas `xDnsRecord` blocos são moldados numa `foreach` ciclos iterar através de matrizes de dados de configuração.
 Novamente, os dados de configuração são criados pelo `DevEnv.ps1` script, que vamos ver seguinte.
@@ -199,7 +201,8 @@ No nosso caso, apenas o `RawEnvData` parâmetro é utilizado.
 ### <a name="the-psake-build-script"></a>O script de compilação psake
 
 O [psake](https://github.com/psake/psake) compilar o script definido no `Build.ps1` (de raiz do repositório Demo_CI, `./InfraDNS/Build.ps1`) define as tarefas que façam parte de compilação.
-Também define as tarefas que cada tarefa depende. Quando foi invocado, o script de psake garante que a tarefa especificada (ou a tarefa com o nome `Default` se não for especificado nenhum) é executado e que também executam todas as dependências (isto é recursiva, para que as dependências de dependências de executam, e assim sucessivamente).
+Também define as tarefas que cada tarefa depende.
+Quando foi invocado, o script de psake garante que a tarefa especificada (ou a tarefa com o nome `Default` se não for especificado nenhum) é executado e que também executam todas as dependências (isto é recursiva, para que as dependências de dependências de executam, e assim sucessivamente).
 
 Neste exemplo, o `Default` tarefas está definida como:
 
@@ -263,7 +266,7 @@ Cria as pastas utilizadas para o exemplo e remove quaisquer resultados de teste,
 
 O [psake](https://github.com/psake/psake) script de implementação foi definido no `Deploy.ps1` (de raiz do repositório Demo_CI, `./InfraDNS/Deploy.ps1`) define as tarefas que implemente e execute a configuração.
 
-`Deploy.ps1`Define as seguintes tarefas:
+`Deploy.ps1` Define as seguintes tarefas:
 
 #### <a name="deploymodules"></a>DeployModules
 
@@ -334,8 +337,8 @@ Este passo de compilação é executado o `initiate.ps1` ficheiro, que chama o s
 
 ### <a name="publish-test-results"></a>Publicar os resultados do teste
 
-1. Definir **testar o formato de resultado** para`NUnit`
-1. Definir **resultados do teste de ficheiros** para`InfraDNS/Tests/Results/*.xml`
+1. Definir **testar o formato de resultado** para `NUnit`
+1. Definir **resultados do teste de ficheiros** para `InfraDNS/Tests/Results/*.xml`
 1. Definir **testar título execução** para `Unit`.
 1. Certifique-se **opções de controlo** **ativado** e **são sempre executadas** tem ambos os selecionado.
 
@@ -352,15 +355,15 @@ Este passo de compilação executa os testes de unidade no script Pester iremos 
     **\Integration\**
     ```
 
-1. Definir **TargetFolder** para`$(Build.ArtifactStagingDirectory)\`
+1. Definir **TargetFolder** para `$(Build.ArtifactStagingDirectory)\`
 
 Este passo copia a compilação e teste de scripts para o diretório de testes para que o possa ser publicada como criar artefactos pelo passo seguinte.
 
 ### <a name="publish-artifact"></a>Publicar artefactos
 
-1. Definir **caminho publicar** para`$(Build.ArtifactStagingDirectory)\`
-1. Definir **artefactos nome** para`Deploy`
-1. Definir **artefactos tipo** para`Server`
+1. Definir **caminho publicar** para `$(Build.ArtifactStagingDirectory)\`
+1. Definir **artefactos nome** para `Deploy`
+1. Definir **artefactos tipo** para `Server`
 1. Selecione `Enabled` no **controlo opções**
 
 ## <a name="enable-continuous-integration"></a>Ativar a integração contínua
@@ -393,21 +396,21 @@ Edite os passos da seguinte forma:
 
 ### <a name="powershell-script"></a>Script do PowerShell
 
-1. Definir o **caminho do Script** campo para`$(Build.DefinitionName)\Deploy\initiate.ps1"`
-1. Definir o **argumentos** campo para`-fileName Deploy`
+1. Definir o **caminho do Script** campo para `$(Build.DefinitionName)\Deploy\initiate.ps1"`
+1. Definir o **argumentos** campo para `-fileName Deploy`
 
 ### <a name="first-publish-test-results"></a>Publicar primeiro os resultados do teste
 
 1. Selecione `NUnit` para o **formato de resultado do teste** campo
-1. Definir o **ficheiros de resultado do teste** campo para`$(Build.DefinitionName)\Deploy\InfraDNS\Tests\Results\Integration*.xml`
-1. Definir o **testar título execução** para`Integration`
+1. Definir o **ficheiros de resultado do teste** campo para `$(Build.DefinitionName)\Deploy\InfraDNS\Tests\Results\Integration*.xml`
+1. Definir o **testar título execução** para `Integration`
 1. Em **opções de controlo**, verifique **são sempre executadas**
 
 ### <a name="second-publish-test-results"></a>Segundo publicar os resultados do teste
 
 1. Selecione `NUnit` para o **formato de resultado do teste** campo
-1. Definir o **ficheiros de resultado do teste** campo para`$(Build.DefinitionName)\Deploy\InfraDNS\Tests\Results\Acceptance*.xml`
-1. Definir o **testar título execução** para`Acceptance`
+1. Definir o **ficheiros de resultado do teste** campo para `$(Build.DefinitionName)\Deploy\InfraDNS\Tests\Results\Acceptance*.xml`
+1. Definir o **testar título execução** para `Acceptance`
 1. Em **opções de controlo**, verifique **são sempre executadas**
 
 ## <a name="verify-your-results"></a>Verificar os resultados
@@ -422,10 +425,3 @@ Pode verificar o resultado da implementação ao abrir um browser no computador 
 Este exemplo configura o servidor DNS `TestAgent1` para que o URL `www.contoso.com` é resolvido para `TestAgent2`, mas não implementa efetivamente um Web site.
 A estrutura para fazê-lo é fornecida no repositório sob o `WebApp` pasta.
 Pode utilizar os stubs fornecidos para criar psake scripts, Pester testes e configurações de DSC para implementar a sua própria Web site.
-
-
-
-
-
-
-

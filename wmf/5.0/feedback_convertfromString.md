@@ -1,15 +1,15 @@
 ---
-ms.date: 2017-06-12
+ms.date: 06/12/2017
 author: JKeithB
 ms.topic: reference
 keywords: wmf,powershell,setup
-ms.openlocfilehash: 3413672e73705252225300a853c10a514500baa2
-ms.sourcegitcommit: 99227f62dcf827354770eb2c3e95c5cf6a3118b4
+ms.openlocfilehash: cedda61241df4965fe5db723f03e3497f046fa44
+ms.sourcegitcommit: cf195b090b3223fa4917206dfec7f0b603873cdf
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 03/15/2018
+ms.lasthandoff: 04/09/2018
 ---
-# <a name="extract-and-parse-structured-objects-out-of-string"></a>Extrair e analisar os objetos de estruturado fora de cadeia
+# <a name="extract-and-parse-structured-objects-out-of-string"></a>Extrair e Analisar Objetos Estruturados Fora de Cadeia
 Isto também apresenta algumas funcionalidades adicionais para o cmdlet ConvertFrom cadeia:
 
 -   Remove a propriedade de texto de extensão por predefinição. Pode incluí-la com o parâmetro - IncludeExtent.
@@ -67,7 +67,7 @@ Copie alguns exemplos para um ficheiro, o que irá utilizar como o modelo:
 
     Renton, WA
 
-   
+
 
 Colocar chavetas à volta de dados que pretende extrair, atribua um nome como fazê-lo. Porque o **nome** propriedade (e a respetiva associadas a outras propriedades) pode aparecer várias vezes, utilize um asterisco (\*) para indicar que isto resulta em vários registos de (em vez de extrair um bunch das propriedades numa só registo):
 
@@ -90,4 +90,3 @@ Este conjunto de exemplos, **ConvertFrom cadeia** pode agora extrair automaticam
 > Ana Trujillo...                Ana Trujillo       Redmond  WA Antonio Moreno...              Antonio Moreno Renton WA blogue Hardy...                Blogue Hardy Seattle WA Christina Berglund...          Christina Berglund Redmond WA Hanna Moos...                  Hanna Moos         Puyallup WA
 
 Para fazer a manipulação de dados adicionais no texto extraído, o **ExtentText** propriedade captura o texto não processado a partir da qual o registo foi extraído. Fornecer comentários sobre esta funcionalidade, ou para partilhar conteúdo para o qual estão a ter dificuldade em escrever exemplos, envie um e-mail <psdmfb@microsoft.com>.
-

@@ -1,19 +1,20 @@
 ---
-ms.date: 2017-06-12
+ms.date: 06/12/2017
 ms.topic: conceptual
-keywords: "DSC, do powershell, a configuração, a configuração"
-title: "Chamar os métodos de recursos de DSC diretamente"
-ms.openlocfilehash: 68344d1be5c41e5ce4660e0a62019fa0a52c2541
-ms.sourcegitcommit: 99227f62dcf827354770eb2c3e95c5cf6a3118b4
+keywords: DSC, do powershell, a configuração, a configuração
+title: Chamar os métodos de recursos de DSC diretamente
+ms.openlocfilehash: dbf0a4ada4c6cc2e7d65698b87a5a29a2ea84781
+ms.sourcegitcommit: cf195b090b3223fa4917206dfec7f0b603873cdf
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 03/15/2018
+ms.lasthandoff: 04/09/2018
 ---
 # <a name="calling-dsc-resource-methods-directly"></a>Chamar os métodos de recursos de DSC diretamente
 
 >Aplica-se a: O Windows PowerShell 5.0
 
-Pode utilizar o [Invoke-DscResource](https://technet.microsoft.com/library/mt517869.aspx) cmdlet para chamar diretamente as funções ou métodos de um recurso de DSC (o **Get-TargetResource**, **conjunto TargetResource**e  **Test-TargetResource** funções de um recurso com base no MOF, ou o **obter**, **definir**, e **teste** métodos de um recurso com base na classe). Isto pode ser utilizado por terceiros, a que pretendem utilizar recursos de DSC ou como uma ferramenta útil enquanto programar recursos. 
+Pode utilizar o [Invoke-DscResource](https://technet.microsoft.com/library/mt517869.aspx) cmdlet para chamar diretamente as funções ou métodos de um recurso de DSC (o **Get-TargetResource**, **conjunto TargetResource**e  **Test-TargetResource** funções de um recurso com base no MOF, ou o **obter**, **definir**, e **teste** métodos de um recurso com base na classe).
+Isto pode ser utilizado por terceiros, a que pretendem utilizar recursos de DSC ou como uma ferramenta útil enquanto programar recursos.
 
 Este cmdlet é normalmente utilizado em combinação com uma propriedade de configuração meta `refreshMode = 'Disabled'`, mas podem ser utilizado, independentemente da que **refreshMode** está definido como.
 
@@ -51,7 +52,6 @@ $result.ItemValue | fl
 >**Nota:** diretamente chamar os métodos de composto de recurso não é suportado. Em vez disso, chame os métodos dos recursos subjacentes que compõem o recurso composto.
 
 ## <a name="see-also"></a>Consulte Também
-- [Escrever um recurso personalizado de DSC com MOF](authoringResourceMOF.md) 
+- [Escrever um recurso personalizado de DSC com MOF](authoringResourceMOF.md)
 - [Escrever um recurso personalizado de DSC com classes de PowerShell](authoringResourceClass.md)
 - [Depurar os recursos de DSC](debugResource.md)
-

@@ -1,23 +1,25 @@
 ---
-ms.date: 2017-06-12
+ms.date: 06/12/2017
 contributor: JKeithB
 ms.topic: conceptual
 keywords: cmdlet do powershell do galeria, psgallery
-title: "Gerir proprietários de Item"
-ms.openlocfilehash: fcd538148f9ff1ac96324b567d54d643f1756c93
-ms.sourcegitcommit: 75f70c7df01eea5e7a2c16f9a3ab1dd437a1f8fd
+title: Gerir proprietários de Item
+ms.openlocfilehash: e550b74ebde00cfbb154dbf4fb1fa4ae0582e029
+ms.sourcegitcommit: cf195b090b3223fa4917206dfec7f0b603873cdf
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 06/12/2017
+ms.lasthandoff: 04/09/2018
 ---
 # <a name="managing-item-owners"></a>Gerir proprietários de Item
 
 Propriedade de um item na galeria do PowerShell é definida pela que publicado o item da galeria.
 Por vezes, estes metadados tem de ser geridos fora a publicação de item inicial, o que significa que os metadados de proprietário tem de ser mutável enquanto o próprio item não é.
 
-Todos os proprietários do item são elementos. Isto significa que qualquer proprietário do item de pode publicar uma nova versão de um item. Também significa que qualquer proprietário do item pode remover quaisquer outro proprietário do item. Não existe nenhum proprietário tem autoridade mais que outros proprietários.  
+Todos os proprietários do item são elementos.
+Isto significa que qualquer proprietário do item de pode publicar uma nova versão de um item. Também significa que qualquer proprietário do item pode remover quaisquer outro proprietário do item.
+Não existe nenhum proprietário tem autoridade mais que outros proprietários.
 
-## <a name="setting-an-items-initial-owner"></a>Definir o proprietário inicial de um Item 
+## <a name="setting-an-items-initial-owner"></a>Definir o proprietário inicial de um Item
 
 Quando um novo item é publicado na galeria do PowerShell, o proprietário inicial é definido pelo utilizador que publicou o item. É determinado pela cujo API chave foi utilizada o cmdlet do módulo de publicar.
 
@@ -78,4 +80,3 @@ Em seguida, iremos segui um processo para verificar a sua propriedade do item.
 Se determinar que deve ser um proprietário do item, iremos utilizar na ligação 'Gerir proprietários' para o item ourselves e enviar-lhe o convite para se tornar um proprietário.
 Só será efetuado esta depois de verificar que deve ser um proprietário e o processo para este varia consoante o circunstâncias.
 Muitas vezes, iremos utilizar o URL de projeto do item para encontrar uma forma de contactar o proprietário do projeto, mas podem também utilizamos Twitter, o E-Mail ou outros meios para contactar o proprietário do projeto.
-

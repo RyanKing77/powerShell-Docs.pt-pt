@@ -1,12 +1,12 @@
 ---
-ms.date: 2017-06-05
+ms.date: 06/05/2017
 keywords: PowerShell, o cmdlet
 title: Novidades no Windows PowerShell 5.0
-ms.openlocfilehash: 3a412b35c593c99fb8ea8307b12ccc05871863f4
-ms.sourcegitcommit: e2360ac94fe4deb0ed0f5c8c8d9b293551ec8030
+ms.openlocfilehash: f1134a37e7027b00c948ce1db186a21dc5a311c6
+ms.sourcegitcommit: cf195b090b3223fa4917206dfec7f0b603873cdf
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 10/05/2017
+ms.lasthandoff: 04/09/2018
 ---
 # <a name="whats-new-in-windows-powershell-50"></a>Novidades no Windows PowerShell 5.0
 Windows PowerShell 5.0 inclui funcionalidades novas importantes que expandem a sua utilização, melhoram a usabilidade e permitem controlar e gerir ambientes baseados em Windows mais fácil e abrangente.
@@ -14,7 +14,7 @@ Windows PowerShell 5.0 inclui funcionalidades novas importantes que expandem a s
 Windows PowerShell 5.0 é compatível com versões anteriores. Os cmdlets, fornecedores, módulos, snap-ins, scripts, funções e perfis que foram concebidos para o Windows PowerShell 4.0, o Windows PowerShell 3.0 e o Windows PowerShell 2.0, geralmente, funcionam no Windows PowerShell 5.0 sem alterações.
 
 # <a name="installing-windows-powershell"></a>Instalar o Windows PowerShell
-Windows PowerShell 5.0 é instalado por predefinição no Windows Server 2016 Technical Preview e Windows 10. 
+Windows PowerShell 5.0 é instalado por predefinição no Windows Server 2016 Technical Preview e Windows 10.
 
 Para instalar o Windows PowerShell 5.0 no Windows Server 2012 R2, Windows 8.1 Enterprise ou Windows 8.1 Pro, transfira e instale [Windows Management Framework 5.0](http://aka.ms/wmf5download). Lembre-se de que lê os detalhes de transferência e cumprir todos os requisitos de sistema, antes de instalar o Windows Management Framework 5.0.
 
@@ -184,7 +184,7 @@ Muitas atualizações e melhoramentos para Windows PowerShell pretendido Estado 
 
 - O cmdlet New-Guid aproveita a classe de .NET Framework Guid para gerar um GUID, útil quando estiver a escrever scripts ou recursos de DSC.
 
-- Como informação de versão pode ser enganosa, particularmente depois de um ficheiro é aplicado, novas propriedades de script de FileVersionRaw e ProductVersionRaw estão disponíveis para FileInfo objetos. Por exemplo, pode executar o seguinte comando para apresentar os valores destas propriedades para o powershell.exe, onde o $pid contém o ID de processo para uma sessão de execução do Windows PowerShell:```Get-Process -Id $pid -FileVersionInfo | Format-List *version* -Force```
+- Como informação de versão pode ser enganosa, particularmente depois de um ficheiro é aplicado, novas propriedades de script de FileVersionRaw e ProductVersionRaw estão disponíveis para FileInfo objetos. Por exemplo, pode executar o seguinte comando para apresentar os valores destas propriedades para o powershell.exe, onde o $pid contém o ID de processo para uma sessão de execução do Windows PowerShell:  ```Get-Process -Id $pid -FileVersionInfo | Format-List *version* -Force```
 
 - Novos cmdlets Enter PSHostProcess e PSHostProcess de saída permitem a depurar scripts do Windows PowerShell em processos separados do processo atual que está a ser executado na consola do Windows PowerShell. Execute Enter-PSHostProcess para introduzir ou ligar a um ID de processo específico e, em seguida, execute Get-espaço de execução para devolver os Active Directory espaços de execução no processo. Execute PSHostProcess de saída para anular a exposição do processo de quando tiver terminado de depurar o script no processo.
 
@@ -228,19 +228,19 @@ Muitas atualizações e melhoramentos para Windows PowerShell pretendido Estado 
 
     -   Get-DscLocalConfigurationManager
 
-    -   Restauro DscConfiguration
+    -   Restore-DscConfiguration
 
-    -   Teste DscConfiguration
+    -   Test-DscConfiguration
 
-    -   Comparar DscConfiguration
+    -   Compare-DscConfiguration
 
-    -   DscConfiguration publicar
+    -   Publish-DscConfiguration
 
-    -   Conjunto DscLocalConfigurationManager
+    -   Set-DscLocalConfigurationManager
 
-    -   Início DscConfiguration
+    -   Start-DscConfiguration
 
-    -   Atualização DscConfiguration
+    -   Update-DscConfiguration
 
 - Com centralizada DSC relatório de erros, informações de erro avançadas não são apenas registadas nos eventos de registo, mas podem ser enviadas para uma localização central de Analysis Services posteriores. Pode utilizar esta localização central para armazenar os erros de configuração de DSC ocorridas para qualquer servidor no respetivo ambiente. Depois do servidor de relatórios está definido na configuração de metadados, todos os erros são enviados para o servidor de relatórios e, em seguida, armazenados numa base de dados. Pode configurar esta funcionalidade, independentemente se pretende ou não um nó de destino está configurado para solicitar a configurações de um servidor de solicitação.
 
@@ -352,7 +352,7 @@ Windows PowerShell 4.0 inclui as seguintes novas funcionalidades.
 
 - O valor de **$PSVersionTable.PSVersion** foi atualizada para 4.0.
 
-- **WHERE()** foi alterado o comportamento de operador. `Collection.Where('property -match name')`aceitar uma expressão de cadeia no formato `"Property -CompareOperator Value"` já não é suportada. No entanto, o **Where()** operador aceita as expressões de cadeia no formato de um scriptblock; isto ainda é suportado.
+- **WHERE()** foi alterado o comportamento de operador. `Collection.Where('property -match name')` aceitar uma expressão de cadeia no formato `"Property -CompareOperator Value"` já não é suportada. No entanto, o **Where()** operador aceita as expressões de cadeia no formato de um scriptblock; isto ainda é suportado.
 
 ### <a name="new-features-in-windows-powershell-integrated-scripting-environment-ise"></a>Novas funcionalidades no Windows PowerShell Integrated Scripting Environment (ISE)
 
@@ -604,34 +604,34 @@ Foram adicionados novos cmdlets para a instalação do núcleo do Windows PowerS
 
 |||
 |-|-|
-|Adicionar-JobTrigger|Novo-JobTrigger|
-|Connect-PSSession|Novo PSSessionConfigurationFile|
-|ConvertFrom Json|New-PSTransportOption|
-|ConvertTo-Json|Novo-PSWorkflowExecutionOption|
-|Disable-JobTrigger|Novo PSWorkflowSession|
-|Disable-ScheduledJob|Novo ScheduledJobOption|
-|Desligar-PSSession|Novo-WinEvent.|
-|Enable-JobTrigger|Receber-PSSession|
-|Enable-ScheduledJob|Registar CimIndicationEvent|
+|Add-JobTrigger|New-JobTrigger|
+|Connect-PSSession|New-PSSessionConfigurationFile|
+|ConvertFrom-Json|New-PSTransportOption|
+|ConvertTo-Json|New-PSWorkflowExecutionOption|
+|Disable-JobTrigger|New-PSWorkflowSession|
+|Disable-ScheduledJob|New-ScheduledJobOption|
+|Disconnect-PSSession|New-WinEvent|
+|Enable-JobTrigger|Receive-PSSession|
+|Enable-ScheduledJob|Register-CimIndicationEvent|
 |Get-CimAssociatedInstance|Register-ScheduledJob|
-|Get-CimClass|Remover CimInstance|
+|Get-CimClass|Remove-CimInstance|
 |Get-CimInstance|Remove-CimSession|
-|Get-CimSession|Remover TypeData|
+|Get-CimSession|Remove-TypeData|
 |Get-ControlPanelItem|Mudança de nome de computador|
 |Get-IseSnippet|Resume-Job|
 |Get-JobTrigger|Save-Help|
-|Get-ScheduledJob|Conjunto CimInstance|
+|Get-ScheduledJob|Set-CimInstance|
 |Get-ScheduledJobOption|Set-JobTrigger|
 |Get-TypeData|Set-ScheduledJob|
-|Importar IseSnippet|Conjunto ScheduledJobOption|
-|AsWorkflow invocar|Mostrar comando|
-|CimMethod invocar|Mostrar ControlPanelItem|
+|Import-IseSnippet|Set-ScheduledJobOption|
+|Invoke-AsWorkflow|Mostrar comando|
+|Invoke-CimMethod|Show-ControlPanelItem|
 |RestMethod invocar|Suspend-Job|
-|WebRequest invocar|Teste PSSessionConfigurationFile|
-|Novo CimInstance|Ficheiro de desbloqueio|
-|Novo-CimSession|Anular o registo-ScheduledJob|
-|Novo CimSessionOption|Update-Help|
-|Novo IseSnippet||
+|Invoke-WebRequest|Test-PSSessionConfigurationFile|
+|New-CimInstance|Unblock-File|
+|New-CimSession|Unregister-ScheduledJob|
+|New-CimSessionOption|Update-Help|
+|New-IseSnippet||
 
 ### <a name="improvements-to-existing-core-cmdlets-and-providers"></a>Melhoramentos para os Cmdlets de núcleo existente e fornecedores
 Windows PowerShell 3.0 inclui novas funcionalidades para os cmdlets existentes, incluindo a sintaxe simplificada e novos parâmetros para os seguintes cmdlets: os cmdlets do computador, os cmdlets CSV, Get-ChildItem, Get-Command, Get-conteúdo, histórico de Get, objeto de medida de segurança cmdlets Select-Object, selecione-String, caminho de divisão, processo de início, Tee-Object, Test-Connection, adicionar membro e cmdlets do WMI.
@@ -713,4 +713,3 @@ Para melhorar a capacidade do Windows PowerShell 3.0 interpretar e processa corr
 ## <a name="see-also"></a>Consulte Também
 - [about_Windows_PowerShell_5.0](https://docs.microsoft.com/en-us/powershell/module/microsoft.powershell.core/about/about_windows_powershell_5.0?view=powershell-5.0)
 - [Windows PowerShell](http://go.microsoft.com/fwlink/?LinkID=107116)
-

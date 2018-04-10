@@ -1,15 +1,15 @@
 ---
-ms.date: 2017-06-05
+ms.date: 06/05/2017
 keywords: PowerShell, o cmdlet
-title: Instalar o SDK do Windows PowerShell
+title: Instalar o SKD do Windows PowerShell
 ms.assetid: c3636b45-61aa-4720-85f0-58312c4fc8f9
-ms.openlocfilehash: c6acba828e469e716c80603ec2432176652a7280
-ms.sourcegitcommit: 74255f0b5f386a072458af058a15240140acb294
+ms.openlocfilehash: 830b054c2cf2b49d935d3d96b79effa7131f6db2
+ms.sourcegitcommit: cf195b090b3223fa4917206dfec7f0b603873cdf
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 08/03/2017
+ms.lasthandoff: 04/09/2018
 ---
-# <a name="installing-the-windows-powershell-sdk"></a>Instalar o SDK do Windows PowerShell
+# <a name="installing-the-windows-powershell-sdk"></a>Instalar o SKD do Windows PowerShell
 
 O tópico seguinte descreve como instalar o SDK do PowerShell em diferentes versões do Windows.
 
@@ -266,4 +266,3 @@ A classe de fornecedor neste exemplo deriva de [NavigationCmdletProvider](https:
 Mostra como substituir métodos de conteúdo para suportar chamadas para o conteúdo encriptado, Get-conteúdo e conteúdo do conjunto de cmdlets.
 Estes métodos devem ser implementados quando o utilizador precisa de gerir o conteúdo dos itens no arquivo de dados.
 A classe de fornecedor neste exemplo deriva de um a [NavigationCmdletProvider](https://technet.microsoft.com/library/system.management.automation.provider.navigationcmdletprovider.aspx) classe e implementa o [IContentCmdletProvider](https://technet.microsoft.com/library/system.management.automation.provider.icontentcmdletprovider.aspx) interface.
-

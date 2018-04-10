@@ -1,17 +1,17 @@
 ---
-ms.date: 2017-06-12
+ms.date: 06/12/2017
 author: JKeithB
 ms.topic: reference
 keywords: wmf,powershell,setup
-ms.openlocfilehash: 60abe525ca1bdcebca570f2ef3656f32dca3747f
-ms.sourcegitcommit: 99227f62dcf827354770eb2c3e95c5cf6a3118b4
+ms.openlocfilehash: 85982027ba1c967d3ec9b099300509cf5761807b
+ms.sourcegitcommit: cf195b090b3223fa4917206dfec7f0b603873cdf
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 03/15/2018
+ms.lasthandoff: 04/09/2018
 ---
 # <a name="mof-documents-are-encrypted-by-default"></a>MOF documentos são encriptados por predefinição
 
-Documentos de configuração contêm informações confidenciais. Nas versões anteriores do DSC era necessário para distribuir e gerir certificados para proteger as credenciais dentro de uma configuração. Para muitos, isto era uma carga de gestão significativos e mesmo com todo o trabalho demorou a fazê-lo que foram deixou ainda com algumas informações de configuração que não estava e não podem ser protegidas. 
+Documentos de configuração contêm informações confidenciais. Nas versões anteriores do DSC era necessário para distribuir e gerir certificados para proteger as credenciais dentro de uma configuração. Para muitos, isto era uma carga de gestão significativos e mesmo com todo o trabalho demorou a fazê-lo que foram deixou ainda com algumas informações de configuração que não estava e não podem ser protegidas.
 
 Que já não for o caso, porque **toda a configuração MOFs são protegidas por predefinição**. Não existem certificados ou as definições de configuração de metadados necessários. Sempre que uma configuração MOF é guardado no disco pelo Local Configuration Manager (MMC) num nó de destino, é encriptado. Os MOFs estão encriptadas com [DPAPI](https://msdn.microsoft.com/library/ms995355.aspx). **Nota:** MOFs gerados por um script de configuração não estão encriptados.
 
@@ -20,4 +20,3 @@ Que já não for o caso, porque **toda a configuração MOFs são protegidas por
 Se já estiver a utilizar o método de certificado para encriptar as palavras-passe ou se precisar de segurança adicional para as palavras-passe, o [existente método de encriptação baseada em certificado](https://msdn.microsoft.com/powershell/dsc/securemof) continuarão a funcionar. O resultado será um documento MOF totalmente é encriptado utilizando os DPAPIs e além disso, ter palavras-passe encriptado dentro da mesma.
 
 Esta encriptação só se aplica a documentos MOF de configuração (pending.mof, current.mof, previous.mof e MOFs parciais). Configuração meta MOFs ainda são guardados em texto simples, uma vez que menos provável que contêm segredos.
-

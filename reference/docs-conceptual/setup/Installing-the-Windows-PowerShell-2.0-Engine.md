@@ -1,15 +1,15 @@
 ---
-ms.date: 2017-06-05
+ms.date: 06/05/2017
 keywords: PowerShell, o cmdlet
-title: Instalar o motor do Windows PowerShell 2.0
+title: Instalar o Motor do Windows PowerShell 2.0
 ms.assetid: 82928f2b-f96a-4ae6-a0d0-6e7b181da308
-ms.openlocfilehash: ff6c2b52b8948472ace3ee35cd4c6aa2dbf46c25
-ms.sourcegitcommit: d6ab9ab5909ed59cce4ce30e29457e0e75c7ac12
+ms.openlocfilehash: 0b3282a1a67886509e749af0f499c47fe7a99411
+ms.sourcegitcommit: cf195b090b3223fa4917206dfec7f0b603873cdf
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 09/08/2017
+ms.lasthandoff: 04/09/2018
 ---
-# <a name="installing-the-windows-powershell-20-engine"></a>Instalar o motor do Windows PowerShell 2.0
+# <a name="installing-the-windows-powershell-20-engine"></a>Instalar o Motor do Windows PowerShell 2.0
 Este tópico explica como instalar o motor do Windows PowerShell 2.0.
 
 Windows PowerShell 3.0 está concebido para ser retrocompatíveis com o Windows PowerShell 2.0. Os cmdlets, fornecedores, snap-ins, módulos e scripts escritos para o Windows PowerShell 2.0 executam inalterados no Windows PowerShell 3.0 e o Windows PowerShell 4.0. No entanto, devido a uma alteração na política de ativação de tempo de execução no Microsoft .NET Framework 4, alojar programas do Windows PowerShell que foram escritos para o Windows PowerShell 2.0 e compilados com o Common Language Runtime (CLR) 2.0 não é possível executar sem modificação no mais tarde versões do Windows PowerShell, que é compilada com CLR 4.0.
@@ -77,5 +77,4 @@ O pacote do Windows Management Framework 3.0 que instala no Windows 7, Windows S
 - [Requisitos de sistema do PowerShell do Windows](Windows-PowerShell-System-Requirements.md)
 - [Instalar o Windows PowerShell](Installing-Windows-PowerShell.md)
 - [A partir do Windows PowerShell](https://technet.microsoft.com/en-us/library/8ec8c2d7-8e7c-4722-a3d2-498fe5739a8e)
-- [A iniciar o motor do Windows PowerShell 2.0](Starting-the-Windows-PowerShell-2.0-Engine.md)
-
+- [Iniciar o Motor do Windows PowerShell 2.0](Starting-the-Windows-PowerShell-2.0-Engine.md)

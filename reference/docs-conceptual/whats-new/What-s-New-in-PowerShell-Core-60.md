@@ -133,7 +133,7 @@ Ao instalar o [ `WindowsPSModulePath` ] [ windowspsmodulepath] módulo, pode uti
 Em primeiro lugar, instalar o `WindowsPSModulePath` módulo a partir da galeria do PowerShell:
 
 ```powershell
-# Add `-Scope CurrentUser` if you're installing as non-admin 
+# Add `-Scope CurrentUser` if you're installing as non-admin
 Install-Module WindowsPSModulePath -Force
 ```
 
@@ -160,7 +160,7 @@ Tudo o que precisa de executar é registar o PowerShell como um subsistema com u
 
 Para obter mais informações sobre configuração e utilização do sistema de interação remota baseado no SSH, consulte [comunicação remota do PowerShell através de SSH][ssh-remoting].
 
-## <a name="default-encoding-is-utf-8-without-a-bom"></a>Codificação predefinida é UTF-8 sem um LM
+## <a name="default-encoding-is-utf-8-without-a-bom-except-for-new-modulemanifest"></a>Codificação predefinida é UTF-8 sem um LM, exceto para o novo ModuleManifest
 
 No passado, cmdlets do Windows PowerShell, como `Get-Content`, `Set-Content` utilizado codificações diferentes, tais como ASCII e UTF-16.
 A variância na codificação predefinições criado problemas quando a combinação de cmdlets sem especificar uma codificação.
@@ -176,10 +176,9 @@ Os seguintes cmdlets são afetados por esta alteração:
 - Export-Clixml
 - Export-Csv
 - Export-PSSession
-- Formato hexadecimal
+- Format-Hex
 - Get-Content
 - Import-Csv
-- New-ModuleManifest
 - Out-File
 - Selecione cadeia
 - Send-MailMessage
@@ -190,6 +189,8 @@ Estes cmdlets também ter sido atualizados para que o `-Encoding` parâmetro uni
 O valor predefinido de `$OutputEncoding` também foi alterada para UTF-8.
 
 Como melhor prática, deve definir explicitamente codificações de scripts com o `-Encoding` parâmetro para produzir o comportamento determinista entre plataformas.
+
+`New-ModuleManifest` cmdlet não tiver **codificação** parâmetro. A codificação do ficheiro de manifesto (. psd1) módulo criados com `New-ModuleManifest` cmdlet depende do ambiente: se for PowerShell Core em execução no Linux, em seguida, a codificação UTF-8 (nenhum LM); caso contrário, a codificação está UTF-16 (com LM). (#3940)
 
 ## <a name="support-backgrounding-of-pipelines-with-ampersand--3360"></a>Suporta backgrounding de pipelines com ' e ' comercial (`&`) (#3360)
 
@@ -225,7 +226,7 @@ Para mais informações sobre as tarefas do PowerShell, consulte [about_Jobs](ht
   - `GitCommitId`: Este é o ID de consolidação de Git do Git ramo ou etiqueta onde foi criado o PowerShell.
     Nas compilações de lançamento, provavelmente será o mesmo que `PSVersion`.
   - `OS`: Este é uma cadeia de versão do SO devolvida pelo `[System.Runtime.InteropServices.RuntimeInformation]::OSDescription`
-  - `Platform`: Este é devolvido pelo `[System.Environment]::OSVersion.Platform` estiver definido como `Win32NT` no Windows, `MacOSX` no macOS, e `Unix` no Linux.
+  - `Platform`: Este é devolvido pelo `[System.Environment]::OSVersion.Platform` estiver definido como `Win32NT` no Windows, `Unix` no macOS, e `Unix` no Linux.
 - Remover o `BuildVersion` propriedade da `$PSVersionTable`.
   Esta propriedade foi vivamente associada para a versão de compilação do Windows.
   Em vez disso, recomendamos que utilize `GitCommitId` para obter a versão de compilação exato do PowerShell Core. (#3877) (Thanks para @iSazonov!)

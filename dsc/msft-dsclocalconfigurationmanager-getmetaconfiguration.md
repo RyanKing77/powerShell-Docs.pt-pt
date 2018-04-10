@@ -1,15 +1,15 @@
 ---
-ms.date: 2017-06-12
+ms.date: 06/12/2017
 ms.topic: conceptual
-keywords: "DSC, do powershell, a configuração, a configuração"
-title: "Método de GetMetaConfiguration da classe MSFT_DSCLocalConfigurationManager"
-ms.openlocfilehash: 695be4ee6490567295fda0cc44635870362d24b8
-ms.sourcegitcommit: a444406120e5af4e746cbbc0558fe89a7e78aef6
+keywords: DSC, do powershell, a configuração, a configuração
+title: Método GetConfigurationStatus da classe MSFT_DSCLocalConfigurationManager
+ms.openlocfilehash: ddc016402239bcdea060a717fbac9ab7ea42698c
+ms.sourcegitcommit: cf195b090b3223fa4917206dfec7f0b603873cdf
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 04/09/2018
 ---
-# <a name="getmetaconfiguration-method-of-the-msftdsclocalconfigurationmanager-class"></a>Método de GetMetaConfiguration da classe MSFT_DSCLocalConfigurationManager
+# <a name="getmetaconfiguration-method-of-the-msftdsclocalconfigurationmanager-class"></a>Método GetConfigurationStatus da classe MSFT_DSCLocalConfigurationManager
 
 Obtém as definições de Configuration Manager local que são utilizadas para controlar o agente de configuração.
 
@@ -25,8 +25,7 @@ uint32 GetMetaConfiguration(
 <a name="parameters"></a>Parâmetros
 ----------
 
-*MetaConfiguration* \[out\]  
-No retorno, contém uma instância do embedded o **MSFT_DSCMetaConfiguration** classe que define as definições.
+*Configuração meta do* \[saída\] no retorno, contém uma instância do embedded o **MSFT_DSCMetaConfiguration** classe que define as definições.
 
 ## <a name="return-value"></a>Valor devolvido
 ------------
@@ -48,11 +47,3 @@ Este é um método estático.
 
 
 [**MSFT_DSCLocalConfigurationManager**](msft-dsclocalconfigurationmanager.md)
-
-
- 
-
- 
-
-
-

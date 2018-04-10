@@ -1,13 +1,13 @@
 ---
-ms.date: 2017-06-12
+ms.date: 06/12/2017
 ms.topic: conceptual
-keywords: "DSC, do powershell, a configuração, a configuração"
-title: "Configurar um cliente de extração com o ID de configuração no PowerShell 4.0"
-ms.openlocfilehash: 2449a4ddfea5c0ee7096ad7478e80166eb095bbe
-ms.sourcegitcommit: a444406120e5af4e746cbbc0558fe89a7e78aef6
+keywords: DSC, do powershell, a configuração, a configuração
+title: Configurar um cliente de extração com o ID de configuração no PowerShell 4.0
+ms.openlocfilehash: 7074d842b7b99ef3fb6498b6dbc1e561b14caf16
+ms.sourcegitcommit: cf195b090b3223fa4917206dfec7f0b603873cdf
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 04/09/2018
 ---
 # <a name="setting-up-a-pull-client-using-configuration-id-in-powershell-40"></a>Configurar um cliente de extração com o ID de configuração no PowerShell 4.0
 
@@ -18,28 +18,28 @@ Cada nó de destino tem de ser disse para utilizar o modo de extração e dado o
 O script seguinte configura o MMC para as configurações de solicitação de um servidor com o nome "PullServer":
 
 ```powershell
-Configuration SimpleMetaConfigurationForPull 
-{ 
-    LocalConfigurationManager 
-    { 
+Configuration SimpleMetaConfigurationForPull
+{
+    LocalConfigurationManager
+    {
         ConfigurationID = "1C707B86-EF8E-4C29-B7C1-34DA2190AE24";
         RefreshMode = "PULL";
         DownloadManagerName = "WebDownloadManager";
         RebootNodeIfNeeded = $true;
         RefreshFrequencyMins = 30;
-        ConfigurationModeFrequencyMins = 30; 
+        ConfigurationModeFrequencyMins = 30;
         ConfigurationMode = "ApplyAndAutoCorrect";
         DownloadManagerCustomData = @{ServerUrl = "http://PullServer:8080/PSDSCPullServer/PSDSCPullServer.svc"; AllowUnsecureConnection = “TRUE”}
-    } 
-} 
+    }
+}
 SimpleMetaConfigurationForPull -Output "."
 ```
 
-O script, **DownloadManagerCustomData** transmite o URL do servidor de solicitação e (para este exemplo) permite uma ligação segura. 
+O script, **DownloadManagerCustomData** transmite o URL do servidor de solicitação e (para este exemplo) permite uma ligação segura.
 
 Depois deste script é executado, cria uma nova pasta de saída designada **SimpleMetaConfigurationForPull** e coloca não existe um ficheiro MOF de configuração meta.
 
-Para aplicar a configuração, utilize **conjunto DscLocalConfigurationManager** com parâmetros **ComputerName** (utilize "localhost") e **caminho** (o caminho para a localização do destino de ficheiro de localhost.meta.mof deste nó). Por exemplo: 
+Para aplicar a configuração, utilize **conjunto DscLocalConfigurationManager** com parâmetros **ComputerName** (utilize "localhost") e **caminho** (o caminho para a localização do destino de ficheiro de localhost.meta.mof deste nó). Por exemplo:
 ```powershell
 Set-DSCLocalConfigurationManager –ComputerName localhost –Path . –Verbose.
 ```
@@ -53,20 +53,20 @@ Se o servidor de solicitação está configurado como uma partilha de ficheiros 
 O **DscFileDownloadManager** demora um **SourcePath** propriedade em vez de **ServerUrl**. O script seguinte configura o MMC para solicitar as configurações de partilha SMB com o nome "SmbDscShare" num servidor com o nome "CONTOSO-SERVER":
 
 ```powershell
-Configuration SimpleMetaConfigurationForPull 
-{ 
-    LocalConfigurationManager 
-    { 
+Configuration SimpleMetaConfigurationForPull
+{
+    LocalConfigurationManager
+    {
         ConfigurationID = "1C707B86-EF8E-4C29-B7C1-34DA2190AE24";
         RefreshMode = "PULL";
         DownloadManagerName = "DscFileDownloadManager";
         RebootNodeIfNeeded = $true;
         RefreshFrequencyMins = 30;
-        ConfigurationModeFrequencyMins = 30; 
+        ConfigurationModeFrequencyMins = 30;
         ConfigurationMode = "ApplyAndAutoCorrect";
         DownloadManagerCustomData = @{ServerUrl = "\\CONTOSO-SERVER\SmbDscShare"}
-    } 
-} 
+    }
+}
 SimpleMetaConfigurationForPull -Output "."
 ```
 
@@ -74,4 +74,3 @@ SimpleMetaConfigurationForPull -Output "."
 
 - [Configurar um servidor de solicitação do DSC web](pullServer.md)
 - [Configurar um servidor de solicitação SMB de DSC](pullServerSMB.md)
-

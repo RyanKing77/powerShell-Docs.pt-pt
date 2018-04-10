@@ -1,13 +1,13 @@
 ---
-ms.date: 2017-06-12
+ms.date: 06/12/2017
 ms.topic: conceptual
-keywords: "DSC, do powershell, a configuração, a configuração"
+keywords: DSC, do powershell, a configuração, a configuração
 title: Recursos do DSC WindowsFeatureSet
-ms.openlocfilehash: a2bb008852ccfdc04998a57d3e64e08bf05e6433
-ms.sourcegitcommit: a444406120e5af4e746cbbc0558fe89a7e78aef6
+ms.openlocfilehash: a6fecba0397b88ce39f6f1a1be6cc366c8a983a6
+ms.sourcegitcommit: cf195b090b3223fa4917206dfec7f0b603873cdf
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 04/09/2018
 ---
 # <a name="dsc-windowsfeatureset-resource"></a>Recursos do DSC WindowsFeatureSet
 
@@ -23,28 +23,28 @@ Utilize este recurso quando pretender configurar um número de funcionalidades d
 ```
 WindowsFeatureSet [string] #ResourceName
 {
-    Name = [string[]] 
+    Name = [string[]]
     [ Ensure = [string] { Absent | Present }  ]
     [ Source = [string] ]
     [ IncludeAllSubFeature = [bool] ]
     [ Credential = [PSCredential] ]
     [ LogPath = [string] ]
     [ DependsOn = [string[]] ]
-    
+
 }
 ```
 
 ## <a name="properties"></a>Propriedades
 
-|  Propriedade  |  Descrição   | 
-|---|---| 
-| Nome| Os nomes das funções ou funcionalidades que pretende para se certificar de que são adicionados ou removidos. Este é o mesmo que o **nome** propriedade o [Get-WindowsFeature](https://technet.microsoft.com/en-us/library/jj205469.aspx) cmdlet e não o nome a apresentar das funções ou funcionalidades.| 
-| credencial| As credenciais a utilizar para adicionar ou remover as funções ou funcionalidades.| 
-| Certifique-se| Indica se as funções ou funcionalidades são adicionadas. Para garantir que as funções ou funcionalidades são adicionados, defina esta propriedade como "Apresente" para garantir que as funções ou funcionalidades, definir a propriedade para "Ausente".| 
-| IncludeAllSubFeature| Defina esta propriedade como **$true** para incluir todos requeridas subfuncionalidades com as funcionalidades que especificar com o **nome** propriedade.| 
-| LogPath| O caminho para um ficheiro de registo onde pretende que o fornecedor de recursos para iniciar a operação.| 
-| dependsOn| Indica que a configuração de outro recurso tem de executar antes deste recurso é configurado. Por exemplo, se o ID da configuração do recurso de script bloco de que pretende executar primeiro é __ResourceName__ e o respetivo tipo é __ResourceType__, a sintaxe para utilizar esta propriedade é `DependsOn = "[ResourceType]ResourceName"`.| 
-| Origem| Indica a localização do ficheiro de origem a utilizar para instalação, se necessário.| 
+|  Propriedade  |  Descrição   |
+|---|---|
+| Nome| Os nomes das funções ou funcionalidades que pretende para se certificar de que são adicionados ou removidos. Este é o mesmo que o **nome** propriedade o [Get-WindowsFeature](https://technet.microsoft.com/en-us/library/jj205469.aspx) cmdlet e não o nome a apresentar das funções ou funcionalidades.|
+| credencial| As credenciais a utilizar para adicionar ou remover as funções ou funcionalidades.|
+| Certifique-se| Indica se as funções ou funcionalidades são adicionadas. Para garantir que as funções ou funcionalidades são adicionados, defina esta propriedade como "Apresente" para garantir que as funções ou funcionalidades, definir a propriedade para "Ausente".|
+| IncludeAllSubFeature| Defina esta propriedade como **$true** para incluir todos requeridas subfuncionalidades com as funcionalidades que especificar com o **nome** propriedade.|
+| LogPath| O caminho para um ficheiro de registo onde pretende que o fornecedor de recursos para iniciar a operação.|
+| dependsOn| Indica que a configuração de outro recurso tem de executar antes deste recurso é configurado. Por exemplo, se o ID da configuração do recurso de script bloco de que pretende executar primeiro é __ResourceName__ e o respetivo tipo é __ResourceType__, a sintaxe para utilizar esta propriedade é `DependsOn = "[ResourceType]ResourceName"`.|
+| Origem| Indica a localização do ficheiro de origem a utilizar para instalação, se necessário.|
 
 ## <a name="example"></a>Exemplo
 
@@ -62,8 +62,7 @@ configuration FeatureSetTest
             Name                    = @("SMTP-Server", "Web-Server")
             Ensure                  = 'Present'
             IncludeAllSubFeature    = $true
-        } 
+        }
     }
 }
 ```
-

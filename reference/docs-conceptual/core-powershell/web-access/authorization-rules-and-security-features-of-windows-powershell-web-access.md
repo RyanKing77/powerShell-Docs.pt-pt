@@ -1,12 +1,12 @@
 ---
-ms.date: 2017-06-27
+ms.date: 06/27/2017
 keywords: PowerShell, o cmdlet
-title: "Regras de Autorização e Funcionalidades de Segurança do Windows PowerShell Web Access"
-ms.openlocfilehash: 19e4aa1bb55178ec2634af0771afe2db5db3423c
-ms.sourcegitcommit: 99227f62dcf827354770eb2c3e95c5cf6a3118b4
+title: Regras de Autorização e Funcionalidades de Segurança do Windows PowerShell Web Access
+ms.openlocfilehash: 0e765ae90661a054ca9bae71d0f6d449cccb185d
+ms.sourcegitcommit: cf195b090b3223fa4917206dfec7f0b603873cdf
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 03/15/2018
+ms.lasthandoff: 04/09/2018
 ---
 # <a name="authorization-rules-and-security-features-of-windows-powershell-web-access"></a>Regras de Autorização e Funcionalidades de Segurança do Windows PowerShell Web Access
 
@@ -186,7 +186,7 @@ Seguem-se alguns exemplos deste cenário.
 - Alguns administradores fornecem mais acesso a determinados utilizadores que outros. Por exemplo, um administrador cria dois grupos de utilizadores, **Admins** e **BasicSupport**. O administrador também cria um ponto final com um espaço de execução restrito denominado **PswaEndpoint**e define as duas regras seguintes: **Admins,\*,\***  e  **BasicSupport,\*, PswaEndpoint**. A primeira regra fornece todos os utilizadores no **Admin** acesso de grupo para todos os computadores e a segunda regra fornece todos os utilizadores a **BasicSupport** grupo acesso apenas aos computadores com  **PswaEndpoint**.
 
 - Um administrador configurou um ambiente de teste privado e pretende permitir que todos os utilizadores autorizados tenham acesso de rede a todos os computadores na rede a que normalmente tenham acesso, tendo acesso a todas as configurações de sessão às que têm normalmente acesso. Por ser um ambiente de teste privado, o administrador cria uma regra de autorização que não é segura.
-  - O administrador executa o cmdlet `Add-PswaAuthorizationRule * * *`, que utiliza o caráter universal  **\***  para representar todos os utilizadores, todos os computadores e todas as configurações.
+  - O administrador executa o cmdlet `Add-PswaAuthorizationRule * * *`, que utiliza o caráter universal **\*** para representar todos os utilizadores, todos os computadores e todas as configurações.
   - Esta regra é o equivalente ao seguinte: `Add-PswaAuthorizationRule -UserName * -ComputerName * -ConfigurationName *`.
 
   >**Tenha em atenção**:

@@ -1,15 +1,16 @@
 ---
-ms.date: 2017-06-05
+ms.date: 06/05/2017
 keywords: PowerShell, o cmdlet
-title: Manipular diretamente itens
+title: Manipular Itens Diretamente
 ms.assetid: 8cbd4867-917d-41ea-9ff0-b8e765509735
-ms.openlocfilehash: d9aa95dcb0da2e8203cbe32d64b95bf33d914166
-ms.sourcegitcommit: 74255f0b5f386a072458af058a15240140acb294
+ms.openlocfilehash: 688f9194bd16793331325999c69e88df3e94c976
+ms.sourcegitcommit: cf195b090b3223fa4917206dfec7f0b603873cdf
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 08/03/2017
+ms.lasthandoff: 04/09/2018
 ---
-# <a name="manipulating-items-directly"></a>Manipular diretamente itens
+# <a name="manipulating-items-directly"></a>Manipular Itens Diretamente
+
 Os elementos que visualiza no Windows PowerShell unidades, tais como os ficheiros e pastas nas unidades de sistema de ficheiros e as chaves do registo em unidades de registo do Windows PowerShell, são denominados *itens* no Windows PowerShell. Os cmdlets para trabalhar com os mesmos item tem o substantivo **Item** nos respetivos nomes.
 
 O resultado a **Get-Command - substantivo Item** comando mostra que existem nove cmdlets de item do Windows PowerShell.
@@ -31,6 +32,7 @@ Cmdlet          Set-Item                        Set-Item [-Path] <String[]> ...
 ```
 
 ### <a name="creating-new-items-new-item"></a>Criar novos itens (Novo Item)
+
 Para criar um novo item no sistema de ficheiros, utilize o **Novo Item** cmdlet. Incluir o **caminho** parâmetro com o caminho para o item e o **ItemType** parâmetro com um valor de "ficheiro" ou "diretório".
 
 Por exemplo, para criar um novo diretório denominado "New.Directory"in unidade c:\\diretório Temp, escreva:
@@ -73,6 +75,7 @@ SKC  VC Name                           Property
 Quando escrever um caminho de registo, lembre-se de que inclui os dois pontos (**:**) no Windows PowerShell unidade nomes, HKLM: e HKCU:. Sem vírgula, o Windows PowerShell não reconhece o nome da unidade do caminho.
 
 ### <a name="why-registry-values-are-not-items"></a>Por que razão os valores de registo não são itens
+
 Quando utiliza o **Get-ChildItem** cmdlet para determinar os itens existentes na chave de registo, nunca verá as entradas de registo real ou os respetivos valores.
 
 Por exemplo, a chave de registo **HKEY_LOCAL_MACHINE\\Software\\Microsoft\\Windows\\CurrentVersion\\executar** geralmente contém várias entradas do registo que representam aplicações que são executadas quando inicia o sistema.
@@ -81,6 +84,7 @@ No entanto, quando utilizar **Get-ChildItem** para procurar itens subordinados n
 
 ```
 PS> Get-ChildItem HKLM:\Software\Microsoft\Windows\CurrentVersion\Run
+
    Hive: Microsoft.PowerShell.Core\Registry::HKEY_LOCAL_MACHINE\Software\Micros
 oft\Windows\CurrentVersion\Run
 SKC  VC Name                           Property
@@ -91,10 +95,11 @@ SKC  VC Name                           Property
 Embora seja conveniente tratar as entradas de registo como itens, não é possível especificar um caminho para uma entrada de registo de uma forma que garante que é exclusivo. A notação de caminho não distinguir entre a subchave de registo com o nome **executar** e **(predefinida)** entrada de registo no **executar** subchave. Além disso, porque os nomes de entradas de registo podem conter o caráter de barra invertida (**\\**), se regsitry entradas foram itens, em seguida, não foi possível utilizar a notação de caminho para uma entrada de registo com o nome de distinguir  **Windows\\CurrentVersion\\executar** da subchave que é localizada nesse caminho.
 
 ### <a name="renaming-existing-items-rename-item"></a>Mudar o nome de itens existentes (Item de mudança de nome)
+
 Para alterar o nome de um ficheiro ou pasta, utilize o **Item de mudança de nome** cmdlet. O comando seguinte altera o nome do **file1.txt** do ficheiro para **fileOne.txt**.
 
-```
-PS> Rename-Item -Path C:\temp\New.Directory\file1.txt fileOne.txt
+```powershell
+Rename-Item -Path C:\temp\New.Directory\file1.txt fileOne.txt
 ```
 
 O **Item de mudança de nome** cmdlet pode alterar o nome de um ficheiro ou pasta, mas não é possível mover um item. O seguinte comando falha porque este tenta mover o ficheiro a partir do diretório New.Directory para o diretório Temp.
@@ -107,6 +112,7 @@ At line:1 char:12
 ```
 
 ### <a name="moving-items-move-item"></a>Mover itens (Mover Item)
+
 Para mover um ficheiro ou pasta, utilize o **Mover Item** cmdlet.
 
 Por exemplo, o seguinte comando move o diretório de New.Directory da unidade c:\\diretório temp na raiz da unidade c:. Para verificar que o item foi movido, inclua o **PassThru** parâmetro o **Mover Item** cmdlet. Sem **Passthru**, a **Mover Item** cmdlet não apresenta os resultados.
@@ -122,12 +128,13 @@ d----        2006-05-18  12:14 PM            New.Directory
 ```
 
 ### <a name="copying-items-copy-item"></a>Copiar itens (Copy-Item)
+
 Se estiver familiarizado com as operações de cópia em outros shells, poderá encontrar o comportamento de **Copy-Item** cmdlet no Windows PowerShell para ser invulgar. Quando copiar um item de uma localização para outro, Item de cópia não copia o respetivo conteúdo por predefinição.
 
 Por exemplo, se copiar o **New.Directory** diretório a partir da unidade c: a unidade c:\\no diretório temporário, o comando for bem sucedida, mas os ficheiros no diretório New.Directory não são copiados.
 
-```
-PS> Copy-Item -Path C:\New.Directory -Destination C:\temp
+```powershell
+Copy-Item -Path C:\New.Directory -Destination C:\temp
 ```
 
 Se a apresentar o conteúdo da **c:\\temp\\New.Directory**, encontrará que não contém ficheiros:
@@ -145,6 +152,7 @@ Para copiar todo o conteúdo de uma pasta, inclua o **Recurse** parâmetro o **C
 
 ```
 PS> Copy-Item -Path C:\New.Directory -Destination C:\temp -Recurse -Force -Passthru
+
     Directory: Microsoft.Windows PowerShell.Core\FileSystem::C:\temp
 
 Mode                LastWriteTime     Length Name
@@ -159,6 +167,7 @@ Mode                LastWriteTime     Length Name
 ```
 
 ### <a name="deleting-items-remove-item"></a>Eliminar itens (Remover-Item)
+
 Para eliminar ficheiros e pastas, utilize o **Remove-Item** cmdlet. Cmdlets do Windows PowerShell, tais como **Remove-Item**, que pode efetuar significativos, alterações irreversível, muitas vezes, irão pedir confirmação ao introduzir o respetivos comandos. Por exemplo, se tentar remover o **New.Directory** pasta, será solicitado para confirmar o comando, porque a pasta contém os ficheiros:
 
 ```
@@ -174,26 +183,26 @@ specified. If you continue, all children will be removed with the item. Are you
 
 Porque **Sim** resposta predefinido, para eliminar a pasta e os respetivos ficheiros, prima a **Enter** chave. Para remover a pasta sem confirmar, utilize o **-Recurse** parâmetro.
 
-```
-PS> Remove-Item C:\temp\New.Directory -Recurse
+```powershell
+Remove-Item C:\temp\New.Directory -Recurse
 ```
 
 ### <a name="executing-items-invoke-item"></a>Executar itens (Item invocar)
+
 O Windows PowerShell utiliza o **Invoke-Item** cmdlet para efetuar uma ação predefinido para um ficheiro ou pasta. Esta ação predefinida é determinada pelo processador de aplicação predefinida no registo; o efeito é o mesmo como se fizer duplo clique no item do Explorador de ficheiros.
 
 Por exemplo, suponha que execute o seguinte comando:
 
-```
-PS> Invoke-Item C:\WINDOWS
+```powershell
+Invoke-Item C:\WINDOWS
 ```
 
 Uma janela do Explorador do que está localizada na c:\\Windows for apresentada, tal como se tivesse double-clicked unidade c:\\pasta do Windows.
 
 Se é a invocar o **Boot.ini** ficheiro num sistema ao Windows Vista:
 
-```
-PS> Invoke-Item C:\boot.ini
+```powershell
+Invoke-Item C:\boot.ini
 ```
 
 Se o tipo de ficheiro. ini está associado a bloco de notas, o ficheiro boot.ini abre-se no bloco de notas.
-

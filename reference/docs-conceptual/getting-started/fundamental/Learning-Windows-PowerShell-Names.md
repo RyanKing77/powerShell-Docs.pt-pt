@@ -1,15 +1,15 @@
 ---
-ms.date: 2017-06-05
+ms.date: 06/05/2017
 keywords: PowerShell, o cmdlet
-title: Os nomes do Windows PowerShell de aprendizagem
+title: Saber Mais sobre os Nomes do Windows PowerShell
 ms.assetid: b4d0fd22-8298-4ee6-82ae-9b6f2907c986
-ms.openlocfilehash: 28c821c4a617b6ac775dbdda8ade3d15c3f218c3
-ms.sourcegitcommit: 74255f0b5f386a072458af058a15240140acb294
+ms.openlocfilehash: 381aa619a41ccacb2ff3a4cdbc2b75b7f04282d1
+ms.sourcegitcommit: cf195b090b3223fa4917206dfec7f0b603873cdf
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 08/03/2017
+ms.lasthandoff: 04/09/2018
 ---
-# <a name="learning-windows-powershell-names"></a>Os nomes do Windows PowerShell de aprendizagem
+# <a name="learning-windows-powershell-names"></a>Saber Mais sobre os Nomes do Windows PowerShell
 Nomes de aprendizagem dos comandos e parâmetros de comando é um investimento de muito tempo com a maioria das interfaces de linha de comandos. O problema é que existem padrões muito poucos, pelo que é a única forma de saber por memorizing cada comando e cada um dos parâmetros que tem de utilizar regularmente.
 
 Quando trabalha com um novo comando ou um parâmetro, geralmente, não é possível utilizar o que já sabe; tem de localizar e obter um novo nome. Se observar como interfaces aumentam a partir de um pequeno conjunto de ferramentas com adições incrementais de funcionalidade, é fácil de ver por que razão a estrutura não padrão. Com nomes de comandos em particular, isto poderá som lógico, uma vez que cada comando é uma ferramenta separada, mas não existe uma melhor forma de lidar com os nomes de comando.
@@ -57,7 +57,7 @@ Cmdlet          Resume-Service                  Resume-Service [-Name] <Stri...
 Cmdlet          Set-Service                     Set-Service [-Name] <String>...
 Cmdlet          Start-Service                   Start-Service [-Name] <Strin...
 Cmdlet          Stop-Service                    Stop-Service [-Name] <String...
-Cmdlet          Suspend-Service                 Suspend-Service [-Name] <Str... 
+Cmdlet          Suspend-Service                 Suspend-Service [-Name] <Str...
 ...
 ```
 
@@ -91,4 +91,3 @@ Windows PowerShell tem vários parâmetros conhecidos como *parâmetros comuns d
 Os cmdlets de núcleo do Windows PowerShell utilizar nomes de standard para os parâmetros semelhantes. Embora a utilização de nomes de parâmetro não é imposta, há explícita orientações para a utilização a encorajar uniformização.
 
 Por exemplo, a documentação de orientação recomenda nomenclatura um parâmetro que refere-se a um computador pelo nome como **ComputerName**, em vez de servidor, anfitrião, sistema, nó ou outras palavras alternativas comuns. Entre o parâmetro sugerido importante são nomes **Force**, **excluir**, **incluir**, **PassThru**, **caminho**, e **CaseSensitive**.
-

@@ -1,15 +1,15 @@
 ---
-ms.date: 2017-06-12
+ms.date: 06/12/2017
 author: JKeithB
 ms.topic: reference
-keywords: "WMF, o powershell, o programa de configuração"
-ms.openlocfilehash: 4a2dfd651f1c74e7441e5f5e357c1c26453adc07
-ms.sourcegitcommit: 75f70c7df01eea5e7a2c16f9a3ab1dd437a1f8fd
+keywords: wmf,powershell,setup
+ms.openlocfilehash: 4db2237678649c23729bd1f41bf88f1b9f8f0eef
+ms.sourcegitcommit: cf195b090b3223fa4917206dfec7f0b603873cdf
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 06/12/2017
+ms.lasthandoff: 04/09/2018
 ---
-# <a name="software-inventory-logging-sil"></a>Inventário de software (SIL) de registo
+# <a name="software-inventory-logging-sil"></a>Registo de Inventário de Software (SIL)
 
 * * Importante: * * *ao instalar o WMF 5.0 num Windows Server 2012 R2 servidor que já está a executar o SIL, é necessário para executar o cmdlet Start-SilLogging uma vez após a instalação do WMF, uma vez que o processo de instalação erradamente irá parar o Software Funcionalidade de registo de inventário.*
 
@@ -20,4 +20,3 @@ Apesar de também pode iniciar sessão dados de inventário de software através
 Nenhuma destes dados é enviada à Microsoft como parte da funcionalidade de funcionalidade. A funcionalidade e os dados do Registo de Inventário de Software destinam-se apenas a serem utilizados pelos administradores e pelo proprietário licenciado do software de servidor.
 
 Para obter mais informações e documentação sobre cmdlets de registo de inventário de Software, consulte recursos online do Windows Server 2012 R2 em <http://technet.microsoft.com/library/dn383584.aspx>.
-

@@ -1,13 +1,13 @@
 ---
-ms.date: 2017-06-12
+ms.date: 06/12/2017
 ms.topic: conceptual
-keywords: "DSC, do powershell, a configuração, a configuração"
-title: "Configurar uma máquinas virtuais em cima de arranque inicial através da utilização de DSC"
-ms.openlocfilehash: ff06aafa6db49d93a9b42e38ac7c3e9a11657bd5
-ms.sourcegitcommit: 99227f62dcf827354770eb2c3e95c5cf6a3118b4
+keywords: DSC, do powershell, a configuração, a configuração
+title: Configurar uma máquinas virtuais em cima de arranque inicial através da utilização de DSC
+ms.openlocfilehash: e6ff83b9a09f93277904c80e8e52f3db5e818739
+ms.sourcegitcommit: cf195b090b3223fa4917206dfec7f0b603873cdf
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 03/15/2018
+ms.lasthandoff: 04/09/2018
 ---
 >Aplica-se a: O Windows PowerShell 5.0
 
@@ -90,7 +90,8 @@ Mudar o nome e mover esse ficheiro para a localização correta no VHD como `Pen
     Dismount-VHD -Path C:\users\public\documents\vhd\Srv16.vhd
     ```
 
-7. Crie uma VM utilizando o VHD onde instalou o documento de DSC MOF. Depois de iniciais existentes de segurança de arranque e instalação do sistema operativo, será instalado o IIS.
+7. Crie uma VM utilizando o VHD onde instalou o documento de DSC MOF.
+Depois de iniciais existentes de segurança de arranque e instalação do sistema operativo, será instalado o IIS.
 Pode verificar isto ao chamar o [Get-WindowsFeature](https://technet.microsoft.com/library/jj205469.aspx) cmdlet.
 
 ## <a name="inject-a-dsc-metaconfiguration-into-a-vhd"></a>Inserir uma configuração meta do DSC num VHD
@@ -203,4 +204,3 @@ Por predefinição, o valor da **HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\C
 - [Chave de registo DSCAutomationHostEnabled](DSCAutomationHostEnabled.md)
 - [Configurar o Gestor de Configuração Local (LCM)](metaConfig.md)
 - [Configurar um servidor de solicitação do DSC web](pullServer.md)
-

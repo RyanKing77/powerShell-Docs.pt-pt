@@ -1,22 +1,22 @@
 ---
-ms.date: 2017-06-12
+ms.date: 06/12/2017
 author: JKeithB
 ms.topic: reference
-keywords: "WMF, o powershell, o programa de configuração"
-ms.openlocfilehash: c3645a6ba83081bd5ac31a13af0f67f6538db22a
-ms.sourcegitcommit: 75f70c7df01eea5e7a2c16f9a3ab1dd437a1f8fd
+keywords: wmf,powershell,setup
+ms.openlocfilehash: 9065315ef39129e6a28234d972fe350fd5e7e11d
+ms.sourcegitcommit: cf195b090b3223fa4917206dfec7f0b603873cdf
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 06/12/2017
+ms.lasthandoff: 04/09/2018
 ---
-# <a name="creating-and-connecting-to-a-jea-endpoint"></a>Criação e ligação a um ponto final JEA
+# <a name="creating-and-connecting-to-a-jea-endpoint"></a>Criar e Estabelecer Ligação a um Ponto Final da JEA
 Para criar um ponto final JEA, tem de criar e registar um ficheiro de configuração de sessão do PowerShell especial configurada, o que pode ser gerado com o **New-PSSessionConfigurationFile** cmdlet.
 
 ```powershell
-New-PSSessionConfigurationFile -SessionType RestrictedRemoteServer -TranscriptDirectory "C:\ProgramData\JEATranscripts" -RunAsVirtualAccount -RoleDefinitions @{ 'CONTOSO\NonAdmin_Operators' = @{ RoleCapabilities = 'Maintenance' }} -Path "$env:ProgramData\JEAConfiguration\Demo.pssc" 
+New-PSSessionConfigurationFile -SessionType RestrictedRemoteServer -TranscriptDirectory "C:\ProgramData\JEATranscripts" -RunAsVirtualAccount -RoleDefinitions @{ 'CONTOSO\NonAdmin_Operators' = @{ RoleCapabilities = 'Maintenance' }} -Path "$env:ProgramData\JEAConfiguration\Demo.pssc"
 ```
 
-Isto irá criar um ficheiro de configuração de sessão que tem este aspeto: 
+Isto irá criar um ficheiro de configuração de sessão que tem este aspeto:
 ```powershell
 @{
 
@@ -52,7 +52,7 @@ RoleDefinitions = @{
     'CONTOSO\NonAdmin_Operators' = @{
         'RoleCapabilities' = 'Maintenance' } }
 
-} 
+}
 ```
 Ao criar um ponto final JEA, os seguintes parâmetros de comando (e as correspondentes chaves no ficheiro) tem de ser definidos:
 1.  SessionType para RestrictedRemoteServer
@@ -64,7 +64,7 @@ Ao criar um ponto final JEA, os seguintes parâmetros de comando (e as correspon
 O campo de RoleDefinitions define os grupos que tinham acesso que capacidades de função.  Uma capacidade de função é um ficheiro que define um conjunto de capacidades que irá ser disponibilizado para os utilizadores a ligar.  Pode criar capacidades de função com o **New-PSRoleCapabilityFile** comando.
 
 ```powershell
-New-PSRoleCapabilityFile -Path "$env:ProgramFiles\WindowsPowerShell\Modules\DemoModule\RoleCapabilities\Maintenance.psrc" 
+New-PSRoleCapabilityFile -Path "$env:ProgramFiles\WindowsPowerShell\Modules\DemoModule\RoleCapabilities\Maintenance.psrc"
 ```
 
 Esta ação irá gerar uma capacidade de função de modelo que tem este aspeto:
@@ -128,7 +128,7 @@ Copyright = '(c) 2015 Administrator. All rights reserved.'
 # Assemblies to load when applied to a session
 # AssembliesToLoad = 'System.Web', 'System.OtherAssembly, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a'
 
-} 
+}
 
 ```
 Para ser utilizado por uma configuração de sessão JEA, capacidades de função tem de ser guardadas como um módulo do PowerShell válido num diretório com o nome "RoleCapabilities". Um módulo pode ter vários ficheiros de capacidade de função, se assim o desejar.
@@ -138,7 +138,7 @@ Para iniciar a configuração que os cmdlets, funções, aliases e scripts um ut
 Por fim, assim que tiver concluído a personalizar a configuração de sessão e as capacidades de função relacionados, registar esta configuração de sessão e criar o ponto final executando **Register-PSSessionConfiguration**.
 
 ```powershell
-Register-PSSessionConfiguration -Name Maintenance -Path "C:\ProgramData\JEAConfiguration\Demo.pssc" 
+Register-PSSessionConfiguration -Name Maintenance -Path "C:\ProgramData\JEAConfiguration\Demo.pssc"
 ```
 
 ## <a name="connect-to-a-jea-endpoint"></a>Ligar a um ponto final JEA
@@ -148,4 +148,3 @@ Ligar a um ponto final JEA funciona da mesma forma que a ligação a quaisquer o
 Enter-PSSession -ConfigurationName Maintenance -ComputerName localhost
 ```
 Assim que tiver estabelecido ligação à sessão JEA, será limitado em execução na lista de comandos permissões nas capacidades de função que tenha acesso. Se tentar executar qualquer comando não permitido para a sua função, irá encontrar um erro.
-

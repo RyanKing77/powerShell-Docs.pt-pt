@@ -1,15 +1,15 @@
 ---
-ms.date: 2017-06-12
+ms.date: 06/12/2017
 author: JKeithB
 ms.topic: reference
-keywords: "WMF, o powershell, o programa de configuração"
-ms.openlocfilehash: 2c3cc6d5d226daf22c7ee83a1b7068d6a08b7f45
-ms.sourcegitcommit: 75f70c7df01eea5e7a2c16f9a3ab1dd437a1f8fd
+keywords: wmf,powershell,setup
+ms.openlocfilehash: b440ea4a8208d5c576fa566a19e2de377bf5f475
+ms.sourcegitcommit: cf195b090b3223fa4917206dfec7f0b603873cdf
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 06/12/2017
+ms.lasthandoff: 04/09/2018
 ---
-# <a name="script-tracing-and-logging"></a>Registo e rastreio de script
+# <a name="script-tracing-and-logging"></a>Registo e Rastreio de Scripts
 
 Enquanto o Windows PowerShell já tem o **LogPipelineExecutionDetails** política de grupo de definições a invocação dos cmdlets de registo, linguagem de script do PowerShell tem muitos das funcionalidades que pode querer iniciar sessão e/ou de auditoria. A nova funcionalidade de rastreio de Script de detalhado permite-lhe ativar análise de utilização de script do Windows PowerShell num sistema e detalhadas de controlo. Depois de ativar o rastreio de script detalhado, do Windows PowerShell regista todos os blocos de script para o registo de eventos do ETW, **Microsoft-Windows-PowerShell/Operational**. Se um bloco de script cria outro bloco de script (por exemplo, um script que chama o cmdlet Invoke-Expression numa cadeia), bloco script resultante é registado bem.
 
@@ -52,7 +52,7 @@ function SuperDecrypt
 {
     param($script)
     $bytes = [Convert]::FromBase64String($script)
-             
+
     ## XOR “encryption”
     $xorKey = 0x42
     for($counter = 0; $counter -lt $bytes.Length; $counter++)
@@ -107,4 +107,3 @@ $mergedScript = -join ($sortedScripts | % { $_.Properties[2].Value })
 ```
 
 Tal como acontece com todos os sistemas de registo que tenham uma retenção limitada de memória intermédia (ou seja, registos ETW), um ataque contra esta infraestrutura é inundar o registo de eventos spurious para ocultar provas anterior. Para proteger-se contra este ataque, certifique-se de que tem alguma forma de recolha de registos de eventos de multimédia (ou seja, Windows reencaminhamento de eventos, [Spotting o adversário com a monitorização de registo de eventos do Windows](http://www.nsa.gov/ia/_files/app/Spotting_the_Adversary_with_Windows_Event_Log_Monitoring.pdf)) para mover os registos de eventos retire o computador como logo que possível.
-

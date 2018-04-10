@@ -1,12 +1,12 @@
 ---
-ms.date: 2017-08-23
+ms.date: 08/23/2017
 keywords: PowerShell, o cmdlet
 title: Utilize a consola web baseado em windows powershell
-ms.openlocfilehash: a6c9812253309ba1225141cfd48d0f1c8b8785b5
-ms.sourcegitcommit: 99227f62dcf827354770eb2c3e95c5cf6a3118b4
+ms.openlocfilehash: 3ef2b39279745ffe78fa928247e8a1fb76519ba0
+ms.sourcegitcommit: cf195b090b3223fa4917206dfec7f0b603873cdf
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 03/15/2018
+ms.lasthandoff: 04/09/2018
 ---
 # <a name="use-the-web-based-windows-powershell-console"></a>Utilizar a Consola do Windows PowerShell baseada na Web
 
@@ -18,15 +18,18 @@ Acesso Web Windows PowerShell permite aos utilizadores iniciar sessão para um W
 
 Uma vez a consola do Windows PowerShell é executado num browser, pode ser aberta a partir de uma ampla variedade de dispositivos de cliente quase todos os dispositivos com um browser funcionam.
 
-Consola do Windows PowerShell baseada na web é direcionada para um computador remoto que é especificado por utilizadores como parte do processo de início de sessão. 
+Consola do Windows PowerShell baseada na web é direcionada para um computador remoto que é especificado por utilizadores como parte do processo de início de sessão.
 
 Este tópico descreve como iniciar sessão e começar a utilizar a consola do acesso Web Windows PowerShell baseada na web.
 
-Este tópico descreve como utilizar o Windows PowerShell ou executar cmdlets ou scripts. Para obter informações sobre como utilizar o Windows PowerShell e scripts de recursos, consulte o [Consulte também](#see-also) secção no final deste tópico.
+Este tópico descreve como utilizar o Windows PowerShell ou executar cmdlets ou scripts.
+Para obter informações sobre como utilizar o Windows PowerShell e scripts de recursos, consulte o [Consulte também](#see-also) secção no final deste tópico.
 
 ## <a name="supported-browsers-and-client-devices"></a>Browsers suportados e dispositivos cliente
 
-Acesso Web Windows PowerShell suporta os browsers seguintes. Embora browsers para dispositivos móveis não são suportados oficialmente, muitos poderá executar a consola do Windows PowerShell baseada na web. Espera-se que outros browsers que aceitam cookies, executam JavaScript e executam Web sites HTTPS funcionem, mas são foram testados oficialmente.
+Acesso Web Windows PowerShell suporta os browsers seguintes.
+Embora browsers para dispositivos móveis não são suportados oficialmente, muitos poderá executar a consola do Windows PowerShell baseada na web.
+Espera-se que outros browsers que aceitam cookies, executam JavaScript e executam Web sites HTTPS funcionem, mas são foram testados oficialmente.
 
 ### <a name="supported-desktop-computer-browsers"></a>Browsers para computadores de secretária suportados
 

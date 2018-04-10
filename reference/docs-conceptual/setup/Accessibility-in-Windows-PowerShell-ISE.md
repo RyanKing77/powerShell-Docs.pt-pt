@@ -1,15 +1,16 @@
 ---
-ms.date: 2017-06-05
+ms.date: 06/05/2017
 keywords: PowerShell, o cmdlet
 title: Acessibilidade no ISE do Windows PowerShell
 ms.assetid: a078f9d1-dd6b-4323-b16d-0622cd993aa8
-ms.openlocfilehash: 7f758a46bdc722482b9e8a9baaff0a075f64ece9
-ms.sourcegitcommit: 99227f62dcf827354770eb2c3e95c5cf6a3118b4
+ms.openlocfilehash: 65d159905660f4f3e025b385626679e02a785fd7
+ms.sourcegitcommit: cf195b090b3223fa4917206dfec7f0b603873cdf
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 03/15/2018
+ms.lasthandoff: 04/09/2018
 ---
 # <a name="accessibility-in-windows-powershell-ise"></a>Acessibilidade no ISE do Windows PowerShell
+
 Este tópico descreve as funcionalidades de acessibilidade do Windows PowerShell Integrated Scripting Environment (ISE) que poderão ser úteis.
 
 * [Como alterar o tamanho e a localização da consola e painéis de Script](#how-to-change-the-size-and-location-of-the-console-and-script-panes)
@@ -31,6 +32,7 @@ ISE do Windows PowerShell suporta o modo de alto contraste. Para visualmente deb
 - Alteração do tamanho de texto
 
 ## <a name="how-to-change-the-size-and-location-of-the-console-and-script-panes"></a>Como alterar o tamanho e a localização da consola e painéis de Script
+
 Pode utilizar os seguintes passos para alterar o tamanho e localização do painel de consola e o painel de Script. Quando abrir novamente o ISE do Windows PowerShell, os tamanho e localização alterações que serão mantidas.
 
 ### <a name="to-resize-the-script-pane-and-console-pane"></a>Redimensionar o painel de Script e o painel de consola
@@ -40,6 +42,7 @@ Pode utilizar os seguintes passos para alterar o tamanho e localização do pain
 2. Quando o ponteiro do rato muda para uma seta headed de dois, arraste o limite para alterar o tamanho do painel.
 
 ### <a name="to-move-the-script-pane-and-console-pane"></a>Para mover o painel de Script e o painel de consola
+
 Efetue uma das seguintes opções:
 
 - Para mover o painel de Script acima do painel de consola, prima **CTRL + 1** ou, na barra de ferramentas, clique em de **Mostrar parte superior do Script painel** ícone, ou no **vista** menu, clique em **Mostrar Parte superior do painel de script**.
@@ -53,6 +56,7 @@ Efetue uma das seguintes opções:
 - Para apresentar o painel de Script ao painel de consola é maximizado, na extremidade extremidade direita da linha de separadores, clique em de **Mostrar painel de Script** ícone, ou no **vista** menu, clique para selecionar o **Mostrar Script Painel** opção do menu.
 
 ## <a name="keyboard-shortcuts-for-editing-text"></a>Atalhos de teclado para edição de texto
+
 Pode utilizar os seguintes atalhos de teclado ao editar o texto.
 
 |Ação|Atalhos de teclado|Utilize|
@@ -70,6 +74,7 @@ Pode utilizar os seguintes atalhos de teclado ao editar o texto.
 |**Anular**|CTRL + Z|Painel de script, o painel de consola|
 
 ## <a name="keyboard-shortcuts-for-running-scripts"></a>Atalhos de teclado para executar scripts
+
 Pode utilizar os seguintes atalhos de teclado quando executar scripts no painel de Script.
 
 |Ação|Atalho de teclado|
@@ -83,6 +88,7 @@ Pode utilizar os seguintes atalhos de teclado quando executar scripts no painel 
 |**Separador** (para o script anterior)|CTRL + SHIFT + TAB **Nota:** separador ao script anterior funciona quando tem apenas uma abertura de separador do PowerShell ou se tiver mais do que um separador de PowerShell abrir e centra-se no painel de Script.|
 
 ## <a name="keyboard-shortcuts-for-customizing-the-view"></a>Atalhos de teclado para personalizar a vista
+
 Pode utilizar os seguintes atalhos de teclado para personalizar a vista no ISE do Windows PowerShell. Que estejam acessíveis a partir de todos os painéis na aplicação.
 
 |Ação|Atalho de teclado|
@@ -99,6 +105,7 @@ Pode utilizar os seguintes atalhos de teclado para personalizar a vista no ISE d
 |**Reduzir**|CTRL + SINAL DE SUBTRAÇÃO|
 
 ## <a name="keyboard-shortcuts-for-debugging-scripts"></a>Atalhos de teclado para depuração de scripts
+
 Pode utilizar os seguintes atalhos de teclado quando depurar scripts.
 
 |Ação|Atalho de teclado|Utilize|
@@ -130,6 +137,7 @@ Pode utilizar os seguintes atalhos de teclado quando depurar scripts.
 |**Apresentar consola a depuração de comandos**|H ou?|Painel de consola, quando um script de depuração|
 
 ## <a name="keyboard-shortcuts-for-windows-powershell-tabs"></a>Atalhos de teclado para separadores do Windows PowerShell
+
 Pode utilizar os seguintes atalhos de teclado ao utilizar os separadores de Windows PowerShell.
 
 |Ação|Atalho de teclado|
@@ -140,6 +148,7 @@ Pode utilizar os seguintes atalhos de teclado ao utilizar os separadores de Wind
 |**Separador que se segue do Windows PowerShell**|CTRL + TAB. Este atalho funciona apenas quando não existem ficheiros abertos em qualquer separador do PowerShell.|
 
 ## <a name="keyboard-shortcuts-for-starting-and-exiting"></a>Atalhos de teclado para iniciar e sair
+
 Pode utilizar os seguintes atalhos de teclado para iniciar a consola do Windows PowerShell (PowerShell.exe) ou para sair do ISE do Windows PowerShell.
 
 |Ação|Atalho de teclado|
@@ -148,5 +157,5 @@ Pode utilizar os seguintes atalhos de teclado para iniciar a consola do Windows 
 |**Iniciar o PowerShell.exe** (consola do Windows PowerShell)|CTRL + SHIFT + P|
 
 ## <a name="see-also"></a>Consulte Também
-- [Utilizar o ISE do Windows PowerShell](../core-powershell/ise/Using-the-Windows-PowerShell-ISE.md)
 
+- [Introdução ao ISE do Windows PowerShell](../core-powershell/ise/Introducing-the-Windows-PowerShell-ISE.md)

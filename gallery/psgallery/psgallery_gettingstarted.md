@@ -1,14 +1,14 @@
 ---
-ms.date: 2017-06-12
+ms.date: 06/12/2017
 contributor: JKeithB
 ms.topic: conceptual
 keywords: cmdlet do powershell do galeria, psgallery
 title: psgallery_gettingstarted
-ms.openlocfilehash: 2117712b0081db4a21f8480b458a499ed84dc512
-ms.sourcegitcommit: 99227f62dcf827354770eb2c3e95c5cf6a3118b4
+ms.openlocfilehash: 599b148e141ba4205a7c774581e737a5d54bfae1
+ms.sourcegitcommit: cf195b090b3223fa4917206dfec7f0b603873cdf
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 03/15/2018
+ms.lasthandoff: 04/09/2018
 ---
 # <a name="get-started-with-the-powershell-gallery"></a>Introdução à galeria do PowerShell
 
@@ -33,7 +33,7 @@ PowerShellGet também requer o [NuGet fornecedor](http://go.microsoft.com/fwlink
 
 Em alternativa, pode executar `Install-PackageProvider -Name NuGet -Force` para automatizar a transferência e instalação do fornecedor do NuGet.
 
-  
+
 Se tiver uma versão mais antiga do que 2.8.5.201 do NuGet, terá de chamar os seguintes cmdlets do PowerShell para instalar e mudar para a versão mais recente do NuGet.
 
 1.  `Install-PackageProvider NuGet -MinimumVersion '2.8.5.201' -Force`
@@ -42,7 +42,7 @@ Se tiver uma versão mais antiga do que 2.8.5.201 do NuGet, terá de chamar os s
 
 Para obter mais informações, consulte <http://oneget.org/> .
 
-  
+
 Nota: Devido a alterações em formatos de empacotamento, recomendamos que Atualize para a versão mais recente do PowerShellGet e PackageManagement para instalar os itens que tenham sido atualizados recentemente. PowerShellGet está incluído no Windows 10, pode saber mais sobre [aqui](http://go.microsoft.com/fwlink/?LinkID=624830&clcid=0x409).
 PowerShellGet também faz parte do Windows Management Framework (WMF) 5.0, que pode transferir [aqui](http://go.microsoft.com/fwlink/?LinkId=398175).
 
@@ -118,4 +118,3 @@ Para atualizar seletivamente scripts, adicione o `-Name` parâmetro.
 Para saber quais os módulos que instalou da galeria do PowerShell, execute o [Get-InstalledModule](https://go.microsoft.com/fwlink/?LinkId=526863) cmdlet. Este comando lista todos os módulos tem no seu sistema, que foram instalados diretamente a partir da galeria do PowerShell.
 
 Da mesma forma, para saber quais os scripts que instalou da galeria do PowerShell, execute o [Get-InstalledScript](https://go.microsoft.com/fwlink/?LinkId=619790) cmdlet. Este comando lista todos os scripts que tem no seu sistema, que foram instalados diretamente a partir da galeria do PowerShell.
-

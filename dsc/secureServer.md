@@ -1,13 +1,13 @@
 ---
-ms.date: 2017-06-12
+ms.date: 06/12/2017
 ms.topic: conceptual
-keywords: "DSC, do powershell, a configuração, a configuração"
-title: "Melhores práticas do servidor de solicitação"
-ms.openlocfilehash: 3d0ab969b7a0de9d428becc4b9bdb124a7a44c2c
-ms.sourcegitcommit: 99227f62dcf827354770eb2c3e95c5cf6a3118b4
+keywords: DSC, do powershell, a configuração, a configuração
+title: Melhores práticas do servidor de solicitação
+ms.openlocfilehash: 7de523ad16aee77d87ec4d3334d296997020aa19
+ms.sourcegitcommit: cf195b090b3223fa4917206dfec7f0b603873cdf
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 03/15/2018
+ms.lasthandoff: 04/09/2018
 ---
 # <a name="pull-server-best-practices"></a>Melhores práticas do servidor de solicitação
 
@@ -17,8 +17,8 @@ Resumo: Este documento destina-se para incluir o processo e extensibilidade para
 
 | |Informações do documento|
 |:---|:---|
-autor | Michael Greene  
-Revisores | Ben Gelens, Ravikanth Chaganti, Aleksandar Nikolic  
+autor | Michael Greene
+Revisores | Ben Gelens, Ravikanth Chaganti, Aleksandar Nikolic
 Publicado | Abril de 2015
 
 ## <a name="abstract"></a>Abstrato
@@ -31,8 +31,8 @@ As duas secções principais deste documento:
 
  - Planear a configuração
  - Guia de instalação
- 
-### <a name="versions-of-the-windows-management-framework"></a>Versões do Windows Management Framework 
+
+### <a name="versions-of-the-windows-management-framework"></a>Versões do Windows Management Framework
 As informações neste documento destina-se a aplicar ao Windows Management Framework 5.0. Enquanto o WMF 5.0 não é necessário para implementar e operar um servidor de solicitação, versão 5.0 é o objetivo deste documento.
 
 ### <a name="windows-powershell-desired-state-configuration"></a>Configuração do estado pretendido do Windows PowerShell
@@ -40,10 +40,11 @@ Pretendido a configuração de estado (DSC) é uma plataforma de gestão que per
 
 Windows PowerShell fornece um conjunto de extensões de idioma para configuração de estado pretendido que pode utilizar para criar e gerir configurações declarativas.
 
-### <a name="pull-server-role"></a>Função de servidor de solicitação  
+### <a name="pull-server-role"></a>Função de servidor de solicitação
 Um servidor de solicitação fornece um serviço centralizado para armazenar as configurações que estarão acessíveis a nós de destino.
- 
-A função de servidor de solicitação pode ser implementada como uma instância de servidor Web ou uma partilha de ficheiros SMB. A capacidade de servidor web inclui uma interface de OData e, opcionalmente, pode incluir capacidades para nós de destino informar confirmação de êxito ou falha como configurações são aplicadas. Esta funcionalidade é útil em ambientes onde existe um grande número de nós de destino. Depois de configurar um nó de destino (também referido como um cliente) para apontar para o servidor de solicitação a configuração mais recente os dados e quaisquer scripts necessários são transferidos e aplicadas. Isto pode acontecer como uma única implementação ou como uma tarefa novamente occurring que também faz com que o servidor de solicitação um recurso importante para a gestão de alterações à escala. Para obter mais informações, consulte [Windows PowerShell pretendido Estado solicitar a servidores de configuração](https://technet.microsoft.com/library/dn249913.aspx) e [Push e Pull modos de configuração](https://technet.microsoft.com/library/dn249913.aspx).
+
+A função de servidor de solicitação pode ser implementada como uma instância de servidor Web ou uma partilha de ficheiros SMB. A capacidade de servidor web inclui uma interface de OData e, opcionalmente, pode incluir capacidades para nós de destino informar confirmação de êxito ou falha como configurações são aplicadas. Esta funcionalidade é útil em ambientes onde existe um grande número de nós de destino.
+Depois de configurar um nó de destino (também referido como um cliente) para apontar para o servidor de solicitação a configuração mais recente os dados e quaisquer scripts necessários são transferidos e aplicadas. Isto pode acontecer como uma única implementação ou como uma tarefa novamente occurring que também faz com que o servidor de solicitação um recurso importante para a gestão de alterações à escala. Para obter mais informações, consulte [Windows PowerShell pretendido Estado solicitar a servidores de configuração](https://technet.microsoft.com/library/dn249913.aspx) e [Push e Pull modos de configuração](https://technet.microsoft.com/library/dn249913.aspx).
 
 ## <a name="configuration-planning"></a>Planear a configuração
 
@@ -59,7 +60,9 @@ Para além de instalar o conteúdo mais recente do Windows Update, existem dois 
 
 ### <a name="wmf"></a>WMF
 
-Windows Server 2012 R2 inclui uma funcionalidade com o nome do serviço de DSC. A funcionalidade do serviço de DSC fornece a funcionalidade de servidor de solicitação, incluindo os binários que suportam o ponto final de OData. WMF está incluído no Windows Server e é atualizado uma cadência seja ágil entre versões do Windows Server. [Novas versões do WMF 5.0](http://aka.ms/wmf5latest) podem incluir atualizações para a funcionalidade serviço de DSC. Por este motivo, é melhor prática para transferir a versão mais recente do WMF e para rever as notas de versão para determinar se a versão inclui uma atualização para a funcionalidade de serviço do DSC. Também deve consultar a secção das notas de versão que indica se o estado da estrutura de um cenário de atualização ou está listado como estável ou experimental. Para permitir um ciclo de lançamento seja ágil funcionalidades individuais podem ser declaradas estáveis, que indica que a funcionalidade, está pronto para ser utilizada num ambiente de produção, mesmo enquanto WMF é lançado em pré-visualização.
+Windows Server 2012 R2 inclui uma funcionalidade com o nome do serviço de DSC. A funcionalidade do serviço de DSC fornece a funcionalidade de servidor de solicitação, incluindo os binários que suportam o ponto final de OData.
+WMF está incluído no Windows Server e é atualizado uma cadência seja ágil entre versões do Windows Server. [Novas versões do WMF 5.0](http://aka.ms/wmf5latest) podem incluir atualizações para a funcionalidade serviço de DSC. Por este motivo, é melhor prática para transferir a versão mais recente do WMF e para rever as notas de versão para determinar se a versão inclui uma atualização para a funcionalidade de serviço do DSC. Também deve consultar a secção das notas de versão que indica se o estado da estrutura de um cenário de atualização ou está listado como estável ou experimental.
+Para permitir um ciclo de lançamento seja ágil funcionalidades individuais podem ser declaradas estáveis, que indica que a funcionalidade, está pronto para ser utilizada num ambiente de produção, mesmo enquanto WMF é lançado em pré-visualização.
 Outras funcionalidades que tenham sido atualizadas historicamente por versões WMF (consulte as notas de versão do WMF para obter mais detalhes):
 
  - Windows PowerShell Windows PowerShell, integrado Scripting
@@ -77,7 +80,7 @@ Utilize o **Install-Module** cmdlet a partir de **PowerShellGet** módulo.
 Install-Module xPSDesiredStateConfiguration
 ```
 
-O **PowerShellGet** módulo irá transferir o módulo para: 
+O **PowerShellGet** módulo irá transferir o módulo para:
 
 `C:\Program Files\Windows PowerShell\Modules`
 
@@ -93,10 +96,7 @@ Tem acesso aos ficheiros de instalação do Windows Server que já incluem atual
 
 Implementações de servidor de solicitação são suportadas em servidores físicos e virtuais. Os requisitos de dimensionamento para o servidor de solicitação alinharem com os requisitos do Windows Server 2012 R2.
 
-Da CPU: processador de 64 bits GHz 1,4  
-Memória: 512 MB  
-Espaço em disco: 32 GB  
-Rede: Adaptador de Ethernet Gigabit  
+Da CPU: processador de 64 bits GHz 1,4 memória: 512 MB de espaço em disco: 32 GB de rede: adaptador Ethernet Gigabit
 
 Tarefas de planeamento|
 ---|
@@ -107,15 +107,22 @@ O servidor de tamanho irá solicitar?|
 
 ### <a name="accounts"></a>Contas
 
-Não existem não requisitos de conta de serviço para implementar uma instância de servidor de solicitação. No entanto, existem cenários onde o Web site foi executada no contexto de uma conta de utilizador local. Por exemplo, se for necessário para acesso de armazenamento de partilha de conteúdo do Web site e o Windows Server ou o dispositivo que aloja a partilha de armazenamento não estão associados a um domínio.
+Não existem não requisitos de conta de serviço para implementar uma instância de servidor de solicitação.
+No entanto, existem cenários onde o Web site foi executada no contexto de uma conta de utilizador local.
+Por exemplo, se for necessário para acesso de armazenamento de partilha de conteúdo do Web site e o Windows Server ou o dispositivo que aloja a partilha de armazenamento não estão associados a um domínio.
 
 ### <a name="dns-records"></a>Registos DNS
 
-É necessário um nome de servidor para utilizar quando configurar clientes para trabalhar com um ambiente de servidor de solicitação. Em ambientes de teste, normalmente é utilizado o nome de anfitrião do servidor ou o endereço IP para o servidor pode ser utilizado se a resolução do nome DNS não está disponível. Em ambientes de produção ou num ambiente de laboratório que se destina a representar uma implementação de produção, a melhor prática é criar um registo CNAME no DNS.
+É necessário um nome de servidor para utilizar quando configurar clientes para trabalhar com um ambiente de servidor de solicitação.
+Em ambientes de teste, normalmente é utilizado o nome de anfitrião do servidor ou o endereço IP para o servidor pode ser utilizado se a resolução do nome DNS não está disponível.
+Em ambientes de produção ou num ambiente de laboratório que se destina a representar uma implementação de produção, a melhor prática é criar um registo CNAME no DNS.
 
-Um CNAME DNS permite-lhe criar um alias referir-se para o anfitrião (A) registo. A intenção de registo de nome adicionais é aumentar flexibilidade deve uma alteração necessário no futuro. Um CNAME pode ajudar a isolar a configuração do cliente para que as alterações para o ambiente de servidor, tais como substituir um servidor de solicitação ou adicionar servidores de solicitação adicionais, não irão exigir uma alteração à configuração de cliente correspondente.
+Um CNAME DNS permite-lhe criar um alias referir-se para o anfitrião (A) registo.
+A intenção de registo de nome adicionais é aumentar flexibilidade deve uma alteração necessário no futuro.
+Um CNAME pode ajudar a isolar a configuração do cliente para que as alterações para o ambiente de servidor, tais como substituir um servidor de solicitação ou adicionar servidores de solicitação adicionais, não irão exigir uma alteração à configuração de cliente correspondente.
 
-Ao escolher um nome para o registo DNS, mantenha a arquitetura de solução em mente. Se utilizar o balanceamento de carga, o certificado utilizado para proteger o tráfego através de HTTPS terá de partilhar o mesmo nome que o registo DNS. 
+Ao escolher um nome para o registo DNS, mantenha a arquitetura de solução em mente.
+Se utilizar o balanceamento de carga, o certificado utilizado para proteger o tráfego através de HTTPS terá de partilhar o mesmo nome que o registo DNS.
 
 Cenário |Melhores práticas
 :---|:---
@@ -134,7 +141,8 @@ Se for necessário, tipo de solução de balanceamento de carga que irá utiliza
 
 ### <a name="public-key-infrastructure"></a>Infraestrutura de chaves públicas
 
-A maioria das organizações hoje necessitam que o tráfego de rede, especialmente tráfego que inclua esses dados confidenciais, como servidores estiverem configurados, deve ser validado e/ou encriptado durante a trânsito. Embora seja possível implementar um servidor de solicitação utilizando HTTP que facilita a pedidos de cliente no apague o texto, é uma melhor prática para o tráfego seguro através de HTTPS. O serviço pode ser configurado para utilizar HTTPS utilizando um conjunto de parâmetros no recurso DSC **xPSDesiredStateConfiguration**.
+A maioria das organizações hoje necessitam que o tráfego de rede, especialmente tráfego que inclua esses dados confidenciais, como servidores estiverem configurados, deve ser validado e/ou encriptado durante a trânsito.
+Embora seja possível implementar um servidor de solicitação utilizando HTTP que facilita a pedidos de cliente no apague o texto, é uma melhor prática para o tráfego seguro através de HTTPS. O serviço pode ser configurado para utilizar HTTPS utilizando um conjunto de parâmetros no recurso DSC **xPSDesiredStateConfiguration**.
 
 Os requisitos de certificados para proteger o tráfego HTTPS para o servidor de solicitação não são diferentes proteger outro HTTPS web site. O **servidor Web** modelo nos serviços de certificados de servidor Windows satisfaça as capacidades necessárias.
 
@@ -149,9 +157,11 @@ Ter settled num nome de DNS para o ambiente de servidor de solicitação, o que 
 
 ### <a name="choosing-an-architecture"></a>Escolher uma arquitetura
 
-Um servidor de solicitação pode ser implementado utilizando um serviço de web alojado no IIS ou uma partilha de ficheiros SMB. Na maioria das situações, a opção de serviço web irá fornecer maior flexibilidade. Não é invulgar para tráfego HTTPS para percorrer os limites de rede, enquanto que o tráfego SMB é, muitas vezes, filtrado ou bloqueado entre redes. O serviço web também oferece a opção para incluir um servidor de conformidade ou Web Gestor Reporting Services (ambos os tópicos para ser resolvido numa versão futura deste documento) que fornecem um mecanismo para os clientes para comunicar o estado para um servidor de visibilidade centralizada. O SMB fornece uma opção para ambientes onde a política dita que não deve ser utilizado de um servidor web e outros requisitos ambientais que tornam uma função de servidor web indesejável. Em ambos os casos, lembre-se avaliar os requisitos para assinatura e encriptação de tráfego. HTTPS, a assinatura SMB e políticas IPSEC são todas as opções de vale a considerar.
+Um servidor de solicitação pode ser implementado utilizando um serviço de web alojado no IIS ou uma partilha de ficheiros SMB. Na maioria das situações, a opção de serviço web irá fornecer maior flexibilidade. Não é invulgar para tráfego HTTPS para percorrer os limites de rede, enquanto que o tráfego SMB é, muitas vezes, filtrado ou bloqueado entre redes. O serviço web também oferece a opção para incluir um servidor de conformidade ou Web Gestor Reporting Services (ambos os tópicos para ser resolvido numa versão futura deste documento) que fornecem um mecanismo para os clientes para comunicar o estado para um servidor de visibilidade centralizada.
+O SMB fornece uma opção para ambientes onde a política dita que não deve ser utilizado de um servidor web e outros requisitos ambientais que tornam uma função de servidor web indesejável.
+Em ambos os casos, lembre-se avaliar os requisitos para assinatura e encriptação de tráfego. HTTPS, a assinatura SMB e políticas IPSEC são todas as opções de vale a considerar.
 
-#### <a name="load-balancing"></a>Balanceamento de carga  
+#### <a name="load-balancing"></a>Balanceamento de carga
 Os clientes a interagir com o serviço web efetuar um pedido com indicação de que é devolvido numa única resposta. Não existem pedidos sequenciais são necessários, pelo que não é necessário para a plataforma para garantir sessões são mantidas num único servidor em qualquer ponto no tempo de balanceamento de carga.
 
 Tarefas de planeamento|
@@ -166,11 +176,11 @@ A solução de balanceamento de carga requer que a PKI ser processados pelo disp
 
 ### <a name="staging-configurations-and-modules-on-the-pull-server"></a>Configurações e os módulos no servidor de solicitação de teste
 
-Como parte do planeamento de configuração, terá de pensar sobre o DSC módulos e configurações serão alojadas pelo servidor de solicitação. Para efeitos de planeamento da configuração é importante ter uma compreensão básica sobre como preparar e implementar conteúdo num servidor de solicitação. 
+Como parte do planeamento de configuração, terá de pensar sobre o DSC módulos e configurações serão alojadas pelo servidor de solicitação. Para efeitos de planeamento da configuração é importante ter uma compreensão básica sobre como preparar e implementar conteúdo num servidor de solicitação.
 
-No futuro, esta secção será expandida e incluída no guia de operações do servidor de solicitação do DSC.  O guia de abordar o processo de diário para a gestão de módulos e configurações ao longo do tempo com a automatização. 
+No futuro, esta secção será expandida e incluída no guia de operações do servidor de solicitação do DSC.  O guia de abordar o processo de diário para a gestão de módulos e configurações ao longo do tempo com a automatização.
 
-#### <a name="dsc-modules"></a>Módulos de DSC  
+#### <a name="dsc-modules"></a>Módulos de DSC
 Clientes que solicitam uma configuração terá dos módulos necessários do DSC. É uma funcionalidade do servidor de solicitação automatizar a distribuição a pedido dos módulos de DSC nos clientes. Se estiver a implementar um servidor de solicitação pela primeira vez, talvez como um laboratório ou de prova de conceito, provavelmente pretender dependem de módulos de DSC que estão disponíveis de repositórios públicos, como a galeria do PowerShell ou repositórios do PowerShell.org GitHub para módulos de DSC .
 
 É essencial Lembre-se de que, mesmo para origens de online fidedignas, tais como a galeria do PowerShell, qualquer módulo que é transferido a partir de um repositório público deve ser revisto por alguém com experiência com o PowerShell e o conhecimento do ambiente onde os módulos será utilizar antes a ser utilizado em produção. Ao concluir esta tarefa é uma boa altura para verificar a existência de quaisquer payload adicional no módulo que possa ser removido como scripts de exemplo e a documentação. Isto irá reduzir a largura de banda de rede por cliente aquando do primeiro pedido, quando os módulos serão transferidos através da rede do servidor ao cliente.
@@ -194,7 +204,8 @@ A equipa será responsável por gerir a plataforma de automatização?|
 
 #### <a name="dsc-configurations"></a>Configurações de DSC
 
-O objetivo de um servidor de solicitação consiste em fornecer um mecanismo centralizado para distribuir as configurações de DSC em nós de cliente. As configurações são armazenadas no servidor como documentos MOF. Cada documento será nomeado com um GUID exclusivo. Quando os clientes são configurados para estabelecer ligação com um servidor de solicitação, também são fornecidos o GUID para a configuração deve pedir. Este sistema de referência configurações pelo GUID garantias de exclusividade global e é flexível do que uma configuração pode ser aplicada com granularidade por nó, ou como uma configuração de função que abranja vários servidores que devem ter configurações idênticas.
+O objetivo de um servidor de solicitação consiste em fornecer um mecanismo centralizado para distribuir as configurações de DSC em nós de cliente. As configurações são armazenadas no servidor como documentos MOF.
+Cada documento será nomeado com um GUID exclusivo. Quando os clientes são configurados para estabelecer ligação com um servidor de solicitação, também são fornecidos o GUID para a configuração deve pedir. Este sistema de referência configurações pelo GUID garantias de exclusividade global e é flexível do que uma configuração pode ser aplicada com granularidade por nó, ou como uma configuração de função que abranja vários servidores que devem ter configurações idênticas.
 
 #### <a name="guids"></a>GUIDs
 
@@ -289,26 +300,26 @@ Start-DscConfiguration -Wait -Force -Verbose -Path 'C:\PullServerConfig\'
 #      * Automatically load certificate from Certificate Authority
 #      * Locate Modules and Configuration data on remote SMB share
 #      * Manage state of default websites in IIS
-    
+
 param (
-        [Parameter(Mandatory=$true)] 
-        [ValidateNotNullorEmpty()] 
+        [Parameter(Mandatory=$true)]
+        [ValidateNotNullorEmpty()]
         [System.String] $ServerName,
         [System.String] $DomainName,
         [System.String] $CARootName,
         [System.String] $CAServerFQDN,
         [System.String] $CertSubject,
         [System.String] $SMBShare,
-        [Parameter(Mandatory=$true)] 
-        [ValidateNotNullorEmpty()] 
+        [Parameter(Mandatory=$true)]
+        [ValidateNotNullorEmpty()]
         [PsCredential] $Credential
     )
-    
+
 Configuration PullServer {
     Import-DscResource -ModuleName xPSDesiredStateConfiguration, xWebAdministration, xCertificate, xComputerManagement
     Node localhost
     {
-            
+
         # Configure the server to automatically corret configuration drift including reboots if needed.
         LocalConfigurationManager
         {
@@ -316,14 +327,14 @@ Configuration PullServer {
             RebootNodeifNeeded = $node.RebootNodeifNeeded
             CertificateId = $node.Thumbprint
         }
-    
+
         # Remove all GUI interfaces so the server has minimum running footprint.
         WindowsFeature ServerCore
         {
             Ensure = 'Absent'
             Name = 'User-Interfaces-Infra'
         }
-    
+
         # Set the server name and if needed, join a domain. If not joining a domain, remove the DomainName parameter.
         xComputer DomainJoin
         {
@@ -331,7 +342,7 @@ Configuration PullServer {
             DomainName = $Node.DomainName
             Credential = $Node.Credential
         }
-    
+
         # The next series of settings disable SSL and enable TLS, for environments where that is required by policy.
         Registry TLS1_2ServerEnabled
         {
@@ -373,14 +384,14 @@ Configuration PullServer {
             ValueData = 0
             ValueType = 'Dword'
         }
-    
+
         # Install the Windows Server DSC Service feature
         WindowsFeature DSCServiceFeature
         {
             Ensure = 'Present'
             Name = 'DSC-Service'
         }
-    
+
         # If using a certificate from a local Active Directory Enterprise Root Certificate Authority, complete a request and install the certificate
         xCertReq SSLCert
         {
@@ -390,7 +401,7 @@ Configuration PullServer {
             AutoRenew = $Node.AutoRenew
             Credential = $Node.Credential
         }
-    
+
         # Use the DSC resource to simplify deployment of the web service.  You might also consider modifying the default port, possibly leveraging port 443 in environments where that is enforced as a standard.
         xDSCWebService PSDSCPullServer
         {
@@ -405,10 +416,10 @@ Configuration PullServer {
             State = 'Started'
             DependsOn = '[WindowsFeature]DSCServiceFeature'
         }
-    
+
         # Validate web config file contains current DB settings
         xWebConfigKeyValue CorrectDBProvider
-        { 
+        {
             ConfigSection = 'AppSettings'
             Key = 'dbprovider'
             Value = 'System.Data.OleDb'
@@ -416,17 +427,17 @@ Configuration PullServer {
             DependsOn = '[xDSCWebService]PSDSCPullServer'
         }
         xWebConfigKeyValue CorrectDBConnectionStr
-        { 
+        {
             ConfigSection = 'AppSettings'
             Key = 'dbconnectionstr'
             Value = 'Provider=Microsoft.Jet.OLEDB.4.0;Data Source=C:\Program Files\WindowsPowerShell\DscService\Devices.mdb;'
             WebsitePath = 'IIS:\sites\PSDSCPullServer'
             DependsOn = '[xDSCWebService]PSDSCPullServer'
         }
-    
+
         # Stop the default website
-        xWebsite StopDefaultSite  
-        { 
+        xWebsite StopDefaultSite
+        {
             Ensure = 'Present'
             Name = 'Default Web Site'
             State = 'Stopped'
@@ -456,8 +467,8 @@ $configData = @{
 PullServer -ConfigurationData $configData -OutputPath 'C:\PullServerConfig\'
 Set-DscLocalConfigurationManager -ComputerName localhost -Path 'C:\PullServerConfig\'
 Start-DscConfiguration -Wait -Force -Verbose -Path 'C:\PullServerConfig\'
-    
-# .\Script.ps1 -ServerName web1 -domainname 'test.pha' -carootname 'test-dc01-ca' -caserverfqdn 'dc01.test.pha' -certsubject 'CN=service.test.pha' -smbshare '\\sofs1.test.pha\share' 
+
+# .\Script.ps1 -ServerName web1 -domainname 'test.pha' -carootname 'test-dc01-ca' -caserverfqdn 'dc01.test.pha' -certsubject 'CN=service.test.pha' -smbshare '\\sofs1.test.pha\share'
 ```
 
 
@@ -468,7 +479,7 @@ Start-DscConfiguration -Wait -Force -Verbose -Path 'C:\PullServerConfig\'
 function Verify-DSCPullServer ($fqdn) {
     ([xml](invoke-webrequest "https://$($fqdn):8080/psdscpullserver.svc" | % Content)).service.workspace.collection.href
 }
-Verify-DSCPullServer 'INSERT SERVER FQDN' 
+Verify-DSCPullServer 'INSERT SERVER FQDN'
 
 Expected Result:
 Action
@@ -485,14 +496,14 @@ Configuration PullClient {
     $ID,
     $Server
     )
-        LocalConfigurationManager 
-                { 
+        LocalConfigurationManager
+                {
                     ConfigurationID = $ID;
                     RefreshMode = 'PULL';
                     DownloadManagerName = 'WebDownloadManager';
                     RebootNodeIfNeeded = $true;
                     RefreshFrequencyMins = 30;
-                    ConfigurationModeFrequencyMins = 15; 
+                    ConfigurationModeFrequencyMins = 15;
                     ConfigurationMode = 'ApplyAndAutoCorrect';
                     DownloadManagerCustomData = @{ServerUrl = "http://"+$Server+":8080/PSDSCPullServer.svc"; AllowUnsecureConnection = $true}
                 }
@@ -504,13 +515,13 @@ Set-DscLocalConfigurationManager -ComputerName 'Localhost' -Path 'C:\DSCConfig\'
 
 ## <a name="additional-references-snippets-and-examples"></a>Referências adicionais, fragmentos e exemplos
 
-Este exemplo mostra como iniciar manualmente uma ligação de cliente (requer WMF5) para fins de teste. 
+Este exemplo mostra como iniciar manualmente uma ligação de cliente (requer WMF5) para fins de teste.
 
 ```powershell
 Update-DSCConfiguration –Wait -Verbose
 ```
 
-O [adicionar DnsServerResourceRecordName](http://bit.ly/1G1H31L) cmdlet é utilizado para adicionar um tipo de registo CNAME para uma zona DNS. 
+O [adicionar DnsServerResourceRecordName](http://bit.ly/1G1H31L) cmdlet é utilizado para adicionar um tipo de registo CNAME para uma zona DNS.
 
 A função de PowerShell para [criar uma soma de verificação e publicar o DSC MOF para o servidor de solicitação do SMB](http://bit.ly/1E46BhI) gera automaticamente a soma de verificação necessária e, em seguida, copia a configuração de MOF e de ficheiros de soma de verificação para o servidor de solicitação SMB.
 
@@ -518,10 +529,7 @@ A função de PowerShell para [criar uma soma de verificação e publicar o DSC 
 
 Um ficheiro de dados é armazenado para criar informações durante a implementação de um servidor de solicitação, que inclui o serviço web de OData. O tipo do ficheiro depende do sistema operativo, conforme descrito abaixo.
 
- - **Windows Server 2012**  
-O tipo de ficheiro será sempre. mdb
- - **Windows Server 2012 R2**  
-O tipo de ficheiro será predefinido para. edb, a menos que um. mdb é especificado na configuração
+ - **Windows Server 2012** o tipo de ficheiro será sempre. mdb
+ - **Windows Server 2012 R2** o tipo de ficheiro será predefinido para. edb, a menos que um. mdb é especificado na configuração
 
 No [avançadas de script de exemplo](https://github.com/mgreenegit/Whitepapers/blob/Dev/PullServerCPIG.md#installation-and-configuration-scripts) para instalar um servidor de solicitação, também irá encontrar um exemplo de como controlar automaticamente as definições do ficheiro Web. config para evitar qualquer probabilidade de erro foi causado por tipo de ficheiro.
-

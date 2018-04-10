@@ -1,18 +1,18 @@
 ---
-ms.date: 2017-06-12
+ms.date: 06/12/2017
 author: JKeithB
 ms.topic: reference
-keywords: "WMF, o powershell, o programa de configuração"
-ms.openlocfilehash: 8d5f8cc8c85d584b195483e464e878857629a78e
-ms.sourcegitcommit: 75f70c7df01eea5e7a2c16f9a3ab1dd437a1f8fd
+keywords: wmf,powershell,setup
+ms.openlocfilehash: d34a267bae7e48afe4442256d7f112da3a97eb7d
+ms.sourcegitcommit: cf195b090b3223fa4917206dfec7f0b603873cdf
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 06/12/2017
+ms.lasthandoff: 04/09/2018
 ---
 # <a name="clipboard-cmdlets"></a>Cmdlets de área de transferência
 **Get-área de transferência** e **Set-área de transferência** tornar mais fácil para si transferir conteúdo de e para uma sessão do Windows PowerShell. Por exemplo, se utilizar o Explorador do Windows para copiar três ficheiros para a área de transferência (selecionando-los e premir `ctrl-c`, por exemplo), pode, em seguida, facilmente aceder ao conteúdo da área de transferência como uma lista de ficheiros:
 
-```powershell 
+```powershell
 PS C:\\&gt; Get-Clipboard -Format FileDropList
 
 Directory: C:\\Users\\slee\\Downloads\\Example
@@ -30,4 +30,3 @@ Mode LastWriteTime Length Name
 
 
 Os cmdlets de área de transferência suporta imagens, ficheiros de áudio, listas de ficheiro e texto.
-

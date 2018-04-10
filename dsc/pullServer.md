@@ -1,13 +1,13 @@
 ---
-ms.date: 2018-02-02
+ms.date: 02/02/2018
 ms.topic: conceptual
-keywords: "DSC, do powershell, a configuração, a configuração"
-title: "Serviço de solicitação do DSC"
-ms.openlocfilehash: d5e24dcc093c73d8ebbaa618517193dacc4f2aaf
-ms.sourcegitcommit: 755d7bc0740573d73613cedcf79981ca3dc81c5e
+keywords: DSC, do powershell, a configuração, a configuração
+title: Serviço de Solicitação de DSC
+ms.openlocfilehash: 1547092d5ea6733296bf89f05dd96f70c0a000ac
+ms.sourcegitcommit: cf195b090b3223fa4917206dfec7f0b603873cdf
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/09/2018
 ---
 # <a name="desired-state-configuration-pull-service"></a>Serviço de solicitação de configuração do estado pretendido
 
@@ -67,7 +67,7 @@ Um script de exemplo é fornecido abaixo.
 A forma mais fácil de configurar um servidor de solicitação web consiste em utilizar o recurso de xWebService incluído no módulo xPSDesiredStateConfiguration.
 Os passos seguintes explicam como utilizar o recurso uma configuração de que configura o serviço web.
 
-1. Chamar o [Install-Module](https://technet.microsoft.com/en-us/library/dn807162.aspx) cmdlet para instalar o **xPSDesiredStateConfiguration** módulo. **Tenha em atenção**: **Install-Module** está incluído no **PowerShellGet** módulo, que está incluído no PowerShell 5.0. Pode transferir o **PowerShellGet** módulo para o PowerShell 3.0 e 4.0 em [pré-visualização de módulos do PowerShell PackageManagement](https://www.microsoft.com/en-us/download/details.aspx?id=49186). 
+1. Chamar o [Install-Module](https://technet.microsoft.com/en-us/library/dn807162.aspx) cmdlet para instalar o **xPSDesiredStateConfiguration** módulo. **Tenha em atenção**: **Install-Module** está incluído no **PowerShellGet** módulo, que está incluído no PowerShell 5.0. Pode transferir o **PowerShellGet** módulo para o PowerShell 3.0 e 4.0 em [pré-visualização de módulos do PowerShell PackageManagement](https://www.microsoft.com/en-us/download/details.aspx?id=49186).
 1. Obter um certificado SSL para o servidor de solicitação do DSC de uma autoridade de certificação fidedigna-se dentro da sua organização ou uma autoridade de pública. O certificado recebido a partir da autoridade de normalmente se encontra no formato PFX. Instale o certificado no nó que irá tornar-se o servidor de solicitação do DSC na localização predefinida que deve ser CERT: \LocalMachine\My. Anote o thumbprint do certificado.
 1. Selecione um GUID para ser utilizado como a chave de registo. Para gerar um através do PowerShell, introduza o seguinte na linha de PS e prima enter: '``` [guid]::newGuid()```'ou'```New-Guid```'. Esta chave será utilizada por nós de cliente como uma chave partilhada para autenticar durante o registo. Para obter mais informações, consulte a secção de chave de registo abaixo.
 1. No ISE do PowerShell, iniciar (F5), o seguinte script de configuração (incluído na pasta de exemplo a **xPSDesiredStateConfiguration** módulo como Sample_xDscWebService.ps1). Este script configura o servidor de solicitação.
@@ -127,7 +127,7 @@ Os passos seguintes explicam como utilizar o recurso uma configuração de que c
 1. Execute a configuração, transmitir o thumbprint do certificado SSL como o **certificateThumbPrint** parâmetro e um registo GUID de chave como o **RegistrationKey** parâmetro:
 
 ```powershell
-    # To find the Thumbprint for an installed SSL certificate for use with the pull server list all certificates in your local store 
+    # To find the Thumbprint for an installed SSL certificate for use with the pull server list all certificates in your local store
     # and then copy the thumbprint for the appropriate certificate by reviewing the certificate subjects
     dir Cert:\LocalMachine\my
 
@@ -142,7 +142,7 @@ Os passos seguintes explicam como utilizar o recurso uma configuração de que c
 #### <a name="registration-key"></a>Chave de registo
 
 Para permitir nós registar o servidor para que estes possam utilizar nomes de configuração em vez de um ID de configuração de cliente, uma chave de registo que foi criada na configuração acima é guardada num ficheiro denominado `RegistrationKeys.txt` no `C:\Program Files\WindowsPowerShell\DscService`. A chave de registo funciona como um segredo partilhado utilizado durante o registo inicial pelo cliente com o servidor de solicitação. O cliente irá gerar um certificado autoassinado que é utilizado para autenticar exclusivamente para o servidor de solicitação assim que o registo é concluído com êxito. O thumbprint deste certificado é armazenado localmente e associado ao URL do servidor de solicitação.
-> **Tenha em atenção**: as chaves de registo não são suportadas no PowerShell 4.0. 
+> **Tenha em atenção**: as chaves de registo não são suportadas no PowerShell 4.0.
 
 Para configurar um nó para autenticar com o servidor de solicitação, o registo chave tem de ser a configuração meta para qualquer nó de destino que irá registar este servidor de solicitação. Tenha em atenção que o **RegistrationKey** a configuração meta do abaixo é removido depois da máquina de destino registou com êxito e de que o valor '140a952b-b9d6-406b-b416-e0f759c9c0e4' tem de corresponder ao valor armazenado no Ficheiro de RegistrationKeys.txt no servidor de solicitação. Sempre processe o valor da chave de registo de forma segura, a porque a saber o permite que qualquer máquina de destino registar o servidor de solicitação.
 
@@ -155,7 +155,7 @@ configuration PullClientConfigID
         Settings
         {
             RefreshMode          = 'Pull'
-            RefreshFrequencyMins = 30 
+            RefreshFrequencyMins = 30
             RebootNodeIfNeeded   = $true
         }
 
@@ -223,8 +223,8 @@ Para efetuar a definição de cópia de segurança, validar e gerir o servidor d
 
     ```powershell
         # Example 1 - Package all versions of given modules installed locally and MOF files are in c:\LocalDepot
-         $moduleList = @("xWebAdministration", "xPhp") 
-         Publish-DSCModuleAndMof -Source C:\LocalDepot -ModuleNameList $moduleList 
+         $moduleList = @("xWebAdministration", "xPhp")
+         Publish-DSCModuleAndMof -Source C:\LocalDepot -ModuleNameList $moduleList
 
          # Example 2 - Package modules and mof documents from c:\LocalDepot
          Publish-DSCModuleAndMof -Source C:\LocalDepot -Force

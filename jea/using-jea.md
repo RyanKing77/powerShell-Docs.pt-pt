@@ -1,16 +1,16 @@
 ---
-ms.date: 2017-06-12
+ms.date: 06/12/2017
 author: rpsqrd
 ms.topic: conceptual
-keywords: "jea, powershell, segurança"
-title: Utilizar JEA
-ms.openlocfilehash: f0c22bf0f823b9fafa203e7f98049a6a6b3b7c05
-ms.sourcegitcommit: 99227f62dcf827354770eb2c3e95c5cf6a3118b4
+keywords: jea, powershell, segurança
+title: Utilizar a JEA
+ms.openlocfilehash: 8a6fb2682cf82de8dd20a8699178d4abde4954c2
+ms.sourcegitcommit: cf195b090b3223fa4917206dfec7f0b603873cdf
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 03/15/2018
+ms.lasthandoff: 04/09/2018
 ---
-# <a name="using-jea"></a>Utilizar JEA
+# <a name="using-jea"></a>Utilizar a JEA
 
 > Aplica-se a: Windows PowerShell 5.0
 
@@ -103,7 +103,7 @@ $jeaDefaultCmdlets = 'Clear-Host', 'Exit-PSSession', 'Get-Command', 'Get-FormatD
 $filteredCommands = $commands.Name | Where-Object { $jeaDefaultCmdlets -notcontains $_ }
 
 # Import only commands explicitly added in role capabilities and prefix each imported cmdlet with "JEA"
-Import-PSSession -Session $jeasession -Prefix 'JEA' -CommandName $filteredCommands 
+Import-PSSession -Session $jeasession -Prefix 'JEA' -CommandName $filteredCommands
 ```
 
 Também pode manter os cmdlets efetuados da utilização do sistema de interação remota implícito [Export-PSSession](https://msdn.microsoft.com/powershell/reference/5.1/microsoft.powershell.utility/Export-PSSession).
@@ -189,4 +189,3 @@ Enter-PSSession -VMId $vm.VMId -ConfigurationName 'NICMaintenance' -Credential '
 Lembre-se de que, mesmo um utilizador sem privilégios pode ainda iniciar sessão numa máquina Windows por predefinição, incluindo a utilização do PowerShell.
 Que irão permitir-lhe procurar (alguns dos) do sistema de ficheiros e obter mais informações sobre o ambiente de SO.
 Para bloquear um administrador do Hyper-V para aceder apenas uma VM com o PowerShell direta JEA, terá de negar direitos de início de sessão local para a conta JEA do administrador do Hyper-V.
-

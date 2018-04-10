@@ -1,6 +1,8 @@
 # <a name="item-manifest-values-that-impact-the-powershell-gallery-ui"></a>Valores de manifesto do item que afetam a IU de galeria do PowerShell
 
-Este tópico fornece os publicadores com informações de resumo sobre como modificar o manifesto para as publicações de galeria do PowerShell para que as funcionalidades de PowerShellGet cmdlets e a IU de galeria do PowerShell serão afetadas. Este conteúdo está organizado por onde a alteração será apresentada, começando com a secção do System center, em seguida, a área de navegação à esquerda. Há uma secção de detalhes de etiquetas de abrangente, que identifica importante etiquetas, bem como algumas das mais frequentemente utilizadas etiquetas. Existem dois tópicos fornecem exemplos de manifesto: 
+Este tópico fornece os publicadores com informações de resumo sobre como modificar o manifesto para as publicações de galeria do PowerShell para que as funcionalidades de PowerShellGet cmdlets e a IU de galeria do PowerShell serão afetadas.
+Este conteúdo está organizado por onde a alteração será apresentada, começando com a secção do System center, em seguida, a área de navegação à esquerda. Há uma secção de detalhes de etiquetas de abrangente, que identifica importante etiquetas, bem como algumas das mais frequentemente utilizadas etiquetas.
+Existem dois tópicos fornecem exemplos de manifesto:
 
 * Para módulos, consulte [manifesto de módulo de atualização](https://docs.microsoft.com/powershell/gallery/psget/module/psget_update-modulemanifest)
 * Para scripts, consulte [criar ficheiro de Script com metadados](https://docs.microsoft.com/powershell/gallery/psget/script/psget_new-scriptfileinfo)
@@ -10,7 +12,7 @@ Este tópico fornece os publicadores com informações de resumo sobre como modi
 A tabela abaixo mostra os elementos da página de item de galeria do PowerShell da IU que são controlados pelo fabricante.
 Cada item indica se pode ser controlado pelo manifesto de módulo ou script.
 
-| Elemento de IU | Descrição | Módulo | Script | 
+| Elemento de IU | Descrição | Módulo | Script |
 | --- | --- | --- | --- |
 | **Título** | Este é o nome do item de que é publicado na Galeria  | Não | Não |
 | **Versão** | A versão apresentada é a cadeia de versão nos metadados, e um pré-lançamento se for especificado. A parte da versão de um manifesto de módulo principal é o ModuleVersion. Para obter um script, é identificado como. VERSÃO. Se não for especificada uma cadeia de versão de pré-lançamento,-será anexado ao ModuleVersion de módulos, ou especificada como parte da. VERSÃO de scripts. Não há documentação para especificar as cadeias de pré-lançamento no [módulos](https://docs.microsoft.com/en-us/powershell/gallery/psget/module/prereleasemodule)e, em [scripts](https://docs.microsoft.com/en-us/powershell/gallery/psget/script/prereleasescript) | Sim | Sim |
@@ -49,18 +51,26 @@ A página de item a editar de galeria do PowerShell permite alterar vários camp
 * Notas de versão
 * Necessita de licença
 
-Esta abordagem não é, geralmente, recomendada, exceto quando for necessário para corrigir o que é apresentado para uma versão mais antiga de um módulo. Os utilizadores que adquirir o módulo irão ver que os metadados não corresponde ao conteúdo que é apresentado na galeria do PowerShell, gera as questões sobre o item. Frequentemente esta operação resultará compras vai para os proprietários do item para confirmar a alteração. É vivamente recomendado que qualquer altura que esta abordagem é utilizada, uma nova versão do item deve ser publicada com as alterações do mesmas. 
+Esta abordagem não é, geralmente, recomendada, exceto quando for necessário para corrigir o que é apresentado para uma versão mais antiga de um módulo.
+Os utilizadores que adquirir o módulo irão ver que os metadados não corresponde ao conteúdo que é apresentado na galeria do PowerShell, gera as questões sobre o item.
+Frequentemente esta operação resultará compras vai para os proprietários do item para confirmar a alteração.
+É vivamente recomendado que qualquer altura que esta abordagem é utilizada, uma nova versão do item deve ser publicada com as alterações do mesmas.
 
 ## <a name="tag-details"></a>Detalhes da etiqueta
 
-As etiquetas são cadeias simples consumidores utilizado para localizar itens. As etiquetas são mais importantes quando são utilizados consistentemente entre o número de itens relacionados com o mesmo tópico. A utilização de várias versões do mesmo word (por exemplo da base de dados e bases de dados, ou teste e testar) fornece normalmente benefício pouco. As etiquetas são cadeias sensível de palavra única e não podem incluir espaços em branco. Se existir uma frase de acesso que se considerar que irão procurar utilizadores, adicione que a descrição do item e irá ser possível encontrá-lo nos resultados da pesquisa. Se estiver a tentar melhorar a legibilidade, utilize Pascal tem maiúsculas e minúsculas, hífen, um caráter de sublinhado ou período. Tenha cuidado sobre a criação de etiquetas invulgares, longas e complexas, como estes são frequentemente mal escritos. 
+As etiquetas são cadeias simples consumidores utilizado para localizar itens.
+As etiquetas são mais importantes quando são utilizados consistentemente entre o número de itens relacionados com o mesmo tópico. A utilização de várias versões do mesmo word (por exemplo da base de dados e bases de dados, ou teste e testar) fornece normalmente benefício pouco.
+As etiquetas são cadeias sensível de palavra única e não podem incluir espaços em branco. Se existir uma frase de acesso que se considerar que irão procurar utilizadores, adicione que a descrição do item e irá ser possível encontrá-lo nos resultados da pesquisa. Se estiver a tentar melhorar a legibilidade, utilize Pascal tem maiúsculas e minúsculas, hífen, um caráter de sublinhado ou período. Tenha cuidado sobre a criação de etiquetas invulgares, longas e complexas, como estes são frequentemente mal escritos.
 
-Existem etiquetas que são importantes a ter em atenção, como a galeria do PowerShell e PowerShellGet cmdlets tratá-los exclusivamente. PSEdition_Desktop PSEdition_Core são os exemplos específicos e descritas acima. 
+Existem etiquetas que são importantes a ter em atenção, como a galeria do PowerShell e PowerShellGet cmdlets tratá-los exclusivamente. PSEdition_Desktop PSEdition_Core são os exemplos específicos e descritas acima.
 
-Conforme indicado acima, as etiquetas fornecem o máximo valor quando são específicos e utilizados consistentemente entre o número de itens. Como um publicador tentar localizar as melhores etiquetas a utilizar, a abordagem mais fácil é procurar a galeria do PowerShell para as etiquetas que estiver a considerar. Idealmente, será devolvido de número de itens e as descrições de item irão alinhar com a utilização dessa palavra-chave. 
+Conforme indicado acima, as etiquetas fornecem o máximo valor quando são específicos e utilizados consistentemente entre o número de itens.
+Como um publicador tentar localizar as melhores etiquetas a utilizar, a abordagem mais fácil é procurar a galeria do PowerShell para as etiquetas que estiver a considerar.
+Idealmente, será devolvido de número de itens e as descrições de item irão alinhar com a utilização dessa palavra-chave.
 
-Para referência, aqui estão algumas etiquetas frequentemente utilizadas a partir de 14/12/2017. Em alguns casos, existem semelhante, mas talvez menos ideais das opções apresentadas junto a etiqueta.
-É uma melhor prática para utilizar a Tag preferencial, como, que irá resultar num menor ruído e melhor resultados da pesquisa para consumidores. 
+Para referência, aqui estão algumas etiquetas frequentemente utilizadas a partir de 14/12/2017.
+Em alguns casos, existem semelhante, mas talvez menos ideais das opções apresentadas junto a etiqueta.
+É uma melhor prática para utilizar a Tag preferencial, como, que irá resultar num menor ruído e melhor resultados da pesquisa para consumidores.
 
 
 | **Etiqueta preferencial** | **Alternativas e notas** |
@@ -125,5 +135,3 @@ Para referência, aqui estão algumas etiquetas frequentemente utilizadas a part
 | **MSI** |  |
 | **Mac** |  |
 | **PoshBot** |  |
-
-

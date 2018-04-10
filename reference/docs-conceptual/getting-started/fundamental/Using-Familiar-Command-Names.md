@@ -1,15 +1,15 @@
 ---
-ms.date: 2017-06-05
+ms.date: 06/05/2017
 keywords: PowerShell, o cmdlet
-title: Utilizar nomes de comandos familiares
+title: Utilizar Nomes de Comandos Familiares
 ms.assetid: 021e2424-c64e-4fa5-aa98-aa6405758d5d
-ms.openlocfilehash: 5e72e721bdb9d48684092344a0169907e7e25d40
-ms.sourcegitcommit: 74255f0b5f386a072458af058a15240140acb294
+ms.openlocfilehash: 37fc6dfad5a2f1363254744141dcab1e13aa5066
+ms.sourcegitcommit: cf195b090b3223fa4917206dfec7f0b603873cdf
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 08/03/2017
+ms.lasthandoff: 04/09/2018
 ---
-# <a name="using-familiar-command-names"></a>Utilizar nomes de comandos familiares
+# <a name="using-familiar-command-names"></a>Utilizar Nomes de Comandos Familiares
 Utilizar um mecanismo chamado *aliasing*, do Windows PowerShell permite que os utilizadores fazer referência aos comandos por nomes alternativos. Aliasing permite aos utilizadores com a experiência de outros shells reutilizar nomes comuns do comando que já conhecem para efetuar operações similares no Windows PowerShell. Apesar de não, vamos abordar os aliases de Windows PowerShell em detalhe, pode ainda utilizá-los como começar com o Windows PowerShell.
 
 Aliasing associa um nome de comando que escrever outro comando. Por exemplo, o Windows PowerShell tem uma função interna com o nome **limpar anfitrião** que limpa a janela de saída. Se escrever um o **conformidade com cls** ou **limpar** interpreta de comando numa linha de comandos, do Windows PowerShell que se trata de um alias para o **limpar anfitrião** funcionar e executa o  **Limpar anfitrião** função.
@@ -21,13 +21,13 @@ Segue-se uma listagem breve comuns Cmd.exe e UNIX comandos que pode utilizar den
 |||||
 |-|-|-|-|
 |cat|Dir|montagem|RM|
-|CD|eco|Mover|rmdir|
+|cd|echo|Mover|rmdir|
 |chdir|apagar|popd|modo de suspensão|
-|Limpar|H|PS|Ordenação|
-|conformidade com CLS|histórico|pushd|Tee|
+|Limpar|h|ps|Ordenação|
+|cls|histórico|pushd|Tee|
 |Copiar|kill|pwd|tipo|
 |del|LP|r|escrita|
-|diff|Ls|ren||
+|diff|ls|ren||
 
 Caso se utilizar um destes comandos reflexively e pretende obter o nome real do comando do Windows PowerShell nativo, pode utilizar o **Get-Alias** comando:
 
@@ -67,4 +67,3 @@ Set-Alias : Alias is not writeable because alias gi is read-only or constant and
 At line:1 char:10
 + Set-Alias  <<<< -Name gi -Value Get-Item
 ```
-

@@ -1,15 +1,15 @@
 ---
-ms.date: 2017-06-12
+ms.date: 06/12/2017
 author: JKeithB
 ms.topic: reference
-keywords: "WMF, o powershell, o programa de configuração"
-ms.openlocfilehash: aaf1809277f072c82e5a1a862ea64b75586e32d1
-ms.sourcegitcommit: 75f70c7df01eea5e7a2c16f9a3ab1dd437a1f8fd
+keywords: wmf,powershell,setup
+ms.openlocfilehash: dee5e8206c61d79faadf8573a82c74d4ac0fb8e0
+ms.sourcegitcommit: cf195b090b3223fa4917206dfec7f0b603873cdf
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 06/12/2017
+ms.lasthandoff: 04/09/2018
 ---
-# <a name="improvements-in-powershell-script-debugging"></a>Melhoramentos na depuração de Script do PowerShell
+# <a name="improvements-in-powershell-script-debugging"></a>Melhorias na Depuração de Scripts do PowerShell
 
 Um número de melhorias efetuado no PowerShell 5.0 para melhorar a experiência de depuração:
 
@@ -41,16 +41,15 @@ Não existem funcionalidades de depuração novo, avançadas que lhe permitem li
 
 Foram adicionados novos cmdlets que lhe permitem a lista de espaços de execução atuais num processo e anexar a consola do Windows PowerShell ou o depurador ISE para esse espaço de execução para a depuração de scripts:
 
--   Get-espaço de execução
--   Espaço de execução de depuração
--   Ativar RunspaceDebug
--   Desativar RunspaceDebug
+-   Get-Runspace
+-   Debug-Runspace
+-   Enable-RunspaceDebug
+-   Disable-RunspaceDebug
 -   Get-RunspaceDebug
 
 ### <a name="attach-to-process-hosting-powershell"></a>Ligar ao processo de alojamento do PowerShell
 
 Agora pode anexar à qualquer processo computador carregado com o Windows PowerShell. Fazê-lo ao introduzir para uma sessão interativa com o processo, de forma semelhante ao como introduziu para uma sessão remota interativa executando o cmdlet Enter-PSSession:
 
--   PSHostProcess introduza
--   Saída PSHostProcess
-
+-   Enter-PSHostProcess
+-   Exit-PSHostProcess
