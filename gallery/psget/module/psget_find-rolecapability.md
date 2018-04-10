@@ -1,21 +1,22 @@
 ---
-ms.date: 2017-06-12
+ms.date: 06/12/2017
 contributor: manikb
 ms.topic: reference
 keywords: cmdlet do powershell do galeria, psget
-title: Localizar RoleCapability
-ms.openlocfilehash: 77c5b492d9681fa05315401fba410c508af1d13b
-ms.sourcegitcommit: 75f70c7df01eea5e7a2c16f9a3ab1dd437a1f8fd
+title: Find-RoleCapability
+ms.openlocfilehash: 89aacd604d54f6a5e9752790be65cc3bcc77c8e1
+ms.sourcegitcommit: cf195b090b3223fa4917206dfec7f0b603873cdf
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 06/12/2017
+ms.lasthandoff: 04/09/2018
 ---
-# <a name="find-rolecapability"></a>Localizar RoleCapability
+# <a name="find-rolecapability"></a>Find-RoleCapability
 
 Encontra capacidades de funções nos módulos.
 
 ## <a name="description"></a>Descrição
-O cmdlet Find RoleCapability localiza capacidades de função do PowerShell nos módulos. Localizar RoleCapability procura módulos no repositórios registados. Para cada capacidade de função que este cmdlet localiza, devolve um objeto de PSGetRoleCapabilityInfo. Pode transmitir um objeto de PSGetRoleCapabilityInfo para o cmdlet do módulo de instalação para instalar o módulo que contém a capacidade de função.
+O cmdlet Find RoleCapability localiza capacidades de função do PowerShell nos módulos. Localizar RoleCapability procura módulos no repositórios registados.
+Para cada capacidade de função que este cmdlet localiza, devolve um objeto de PSGetRoleCapabilityInfo. Pode transmitir um objeto de PSGetRoleCapabilityInfo para o cmdlet do módulo de instalação para instalar o módulo que contém a capacidade de função.
 Capacidades de função de PowerShell definem quais os comandos, aplicações e assim sucessivamente estão disponíveis para um utilizador de um ponto final apenas suficiente administração (JEA). Capacidades de função são definidas pelos ficheiros com uma extensão de .psrc.
 
 - Localizar RoleCapability pode filtrar com parâmetros de versão: MinimumVersion, RequiredVersion, AllVersions.
@@ -34,7 +35,7 @@ Get-Command -Name Find-RoleCapability -Module PowerShellGet -Syntax
 
 ## <a name="cmdlet-online-help-reference"></a>Referência de ajuda online do cmdlet
 
-[Localizar RoleCapability](http://go.microsoft.com/fwlink/?LinkId=718029)
+[Find-RoleCapability](http://go.microsoft.com/fwlink/?LinkId=718029)
 
 ## <a name="example-commands"></a>Comandos de exemplo
 ```powershell
@@ -78,4 +79,3 @@ Find-RoleCapability -Filter RBAC
 Find-RoleCapability -Tag Azure, DSC
 
 ```
-

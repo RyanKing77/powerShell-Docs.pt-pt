@@ -1,13 +1,13 @@
 ---
-ms.date: 2017-06-12
+ms.date: 06/12/2017
 ms.topic: conceptual
-keywords: "DSC, do powershell, a configuração, a configuração"
+keywords: DSC, do powershell, a configuração, a configuração
 title: Recursos do DSC ProcessSet
-ms.openlocfilehash: ec1d6a04b5debc22fe2f3b4a4396c385514a3b0c
-ms.sourcegitcommit: a444406120e5af4e746cbbc0558fe89a7e78aef6
+ms.openlocfilehash: d3c7383da5fd10580612527465ab621004ee7269
+ms.sourcegitcommit: cf195b090b3223fa4917206dfec7f0b603873cdf
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 04/09/2018
 ---
 # <a name="dsc-windowsprocess-resource"></a>Recursos do DSC WindowsProcess
 
@@ -26,22 +26,21 @@ WindowsProcess [string] #ResourceName
     [ Ensure = [string] { Absent | Present }  ]
     [ StandardOutputPath = [string] ]
     [ StandardErrorPath = [string] ]
-    [ StandardInputPath = [string] ]   
+    [ StandardInputPath = [string] ]
     [ WorkingDirectory = [string] ]
     [ DependsOn = [string[]] ]
 }
 ```
 
 ## <a name="properties"></a>Propriedades
-|  Propriedade  |  Descrição   | 
-|---|---| 
-| Argumentos| Uma cadeia que contém os argumentos transmitidos para o processo que-é. Se tiver de passar vários argumentos, colocá-los a todos nesta cadeia.| 
-| Caminho| Os caminhos para o processo de executáveis. Se estes são os nomes dos ficheiros executáveis (caminhos completamente qualificados), os recursos de DSC pesquisará o ambiente **caminho** variável (`$env:Path`) para localizar os ficheiros. Se os valores desta propriedade caminhos completamente qualificados, DSC não utilizará o **caminho** variável de ambiente para encontrar os ficheiros e irá gerar um erro se qualquer um dos caminhos de não existir. Não são permitidos caminhos relativos.| 
-| credencial| Indica as credenciais para iniciar o processo.| 
-| Certifique-se| Especifica se os processos existe. Defina esta propriedade para "Presente" para se certificar de que o processo exista. Caso contrário, defina-o para "Ausente". A predefinição é "Presente".| 
-| StandardErrorPath| O caminho para os quais os processos de escrita de erro padrão. Não existe qualquer ficheiro existente será substituído.| 
-| StandardInputPath| O fluxo a partir do qual o processo recebe entrada padrão.| 
-| StandardOutputPath| O caminho do ficheiro para que os processos de escrever a saída padrão. Não existe qualquer ficheiro existente será substituído.| 
-| WorkingDirectory| A localização utilizada como o atual diretório de trabalho para processos.| 
-| dependsOn | Indica que a configuração de outro recurso tem de executar antes deste recurso é configurado. Por exemplo, se o ID da configuração do recurso de script bloco de que pretende executar primeiro é **ResourceName** e o respetivo tipo é **_ResourceType**, a sintaxe para utilizar esta propriedade é ' DependsOn = "[ ResourceName ResourceType]"'.| 
-
+|  Propriedade  |  Descrição   |
+|---|---|
+| Argumentos| Uma cadeia que contém os argumentos transmitidos para o processo que-é. Se tiver de passar vários argumentos, colocá-los a todos nesta cadeia.|
+| Caminho| Os caminhos para o processo de executáveis. Se estes são os nomes dos ficheiros executáveis (caminhos completamente qualificados), os recursos de DSC pesquisará o ambiente **caminho** variável (`$env:Path`) para localizar os ficheiros. Se os valores desta propriedade caminhos completamente qualificados, DSC não utilizará o **caminho** variável de ambiente para encontrar os ficheiros e irá gerar um erro se qualquer um dos caminhos de não existir. Não são permitidos caminhos relativos.|
+| credencial| Indica as credenciais para iniciar o processo.|
+| Certifique-se| Especifica se os processos existe. Defina esta propriedade para "Presente" para se certificar de que o processo exista. Caso contrário, defina-o para "Ausente". A predefinição é "Presente".|
+| StandardErrorPath| O caminho para os quais os processos de escrita de erro padrão. Não existe qualquer ficheiro existente será substituído.|
+| StandardInputPath| O fluxo a partir do qual o processo recebe entrada padrão.|
+| StandardOutputPath| O caminho do ficheiro para que os processos de escrever a saída padrão. Não existe qualquer ficheiro existente será substituído.|
+| WorkingDirectory| A localização utilizada como o atual diretório de trabalho para processos.|
+| dependsOn | Indica que a configuração de outro recurso tem de executar antes deste recurso é configurado. Por exemplo, se o ID da configuração do recurso de script bloco de que pretende executar primeiro é **ResourceName** e o respetivo tipo é **_ResourceType**, a sintaxe para utilizar esta propriedade é ' DependsOn = "[ ResourceName ResourceType]"'.|

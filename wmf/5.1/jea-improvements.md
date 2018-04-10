@@ -1,15 +1,15 @@
 ---
-ms.date: 2017-06-12
+ms.date: 06/12/2017
 author: JKeithB
 ms.topic: reference
-keywords: "WMF, o powershell, o programa de configuração"
+keywords: wmf,powershell,setup
 contributor: ryanpu
-title: "Melhoramentos à administração Just Enough (JEA)"
-ms.openlocfilehash: 2811b4deb3f4fca513791c7389ee5f9f877dbfe8
-ms.sourcegitcommit: 75f70c7df01eea5e7a2c16f9a3ab1dd437a1f8fd
+title: Melhoramentos à administração Just Enough (JEA)
+ms.openlocfilehash: c80472fa4372331bf2cf9ab0b7513021354d1408
+ms.sourcegitcommit: cf195b090b3223fa4917206dfec7f0b603873cdf
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 06/12/2017
+ms.lasthandoff: 04/09/2018
 ---
 # <a name="improvements-to-just-enough-administration-jea"></a>Melhoramentos à administração Just Enough (JEA)
 
@@ -28,7 +28,7 @@ MountUserDrive = $true
 UserDriveMaximumSize = 10485760    # 10 MB
 ```
 
-A pasta de cópia de unidade de utilizador será criada em`$env:LOCALAPPDATA\Microsoft\Windows\PowerShell\DriveRoots\DOMAIN_USER`
+A pasta de cópia de unidade de utilizador será criada em `$env:LOCALAPPDATA\Microsoft\Windows\PowerShell\DriveRoots\DOMAIN_USER`
 
 Para utilizar a unidade de utilizador e copiar ficheiros para/de um ponto final de JEA configurado para expor o disco do utilizador, utilize o `-ToSession` e `-FromSession` parâmetros num Item de cópia.
 
@@ -50,7 +50,7 @@ Em seguida, pode escrever funções personalizadas para processar os dados armaz
 
 Em alguns casos, uma tarefa de que um utilizador precisa de realizar numa sessão JEA poderá ter de aceder a recursos para além do computador local.
 Quando uma sessão JEA é configurada para utilizar uma conta virtual, qualquer tentativa de aceder esses recursos aparecerá vêm da identidade do computador local, não a conta virtual ou utilizador ligada.
-No TP5, iremos ativar suporte para executar o JEA sob o contexto de uma [grupo de conta de serviço gerida] (https://technet.microsoft.com/en-us/library/jj128431(v=ws.11\).aspx), tornando mais fácil e aceder a recursos de rede através da utilização de um domínio identidade.
+No TP5, iremos ativar suporte para executar o JEA sob o contexto de uma [grupo de conta de serviço gerida] (https://technet.microsoft.com/en-us/library/jj128431(v=ws.11\). aspx), tornando mais fácil e aceder a recursos de rede ao utilizar uma identidade de domínio.
 
 Para configurar uma sessão JEA para ser executado sob uma conta gMSA, utilize a seguinte chave de novo no seu ficheiro PSSC:
 
@@ -93,4 +93,3 @@ RequiredGroups = @{ And = 'elevated-jea', @{ Or = '2FA-logon', 'smartcard-logon'
 ## <a name="fixed-virtual-accounts-are-now-supported-on-windows-server-2008-r2"></a>Fixo: Contas virtuais são agora suportadas no Windows Server 2008 R2
 No WMF 5.1, está agora podem utilizar as contas virtual no Windows Server 2008 R2, ativar paridade de funcionalidades e configurações consistentes em todos os Windows Server 2008 R2 - 2016.
 As contas virtual permanecem não suportadas ao utilizar o JEA no Windows 7.
-

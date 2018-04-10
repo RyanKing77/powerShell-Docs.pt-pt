@@ -1,14 +1,14 @@
 ---
-ms.date: 2017-06-12
+ms.date: 06/12/2017
 ms.topic: conceptual
-keywords: "DSC, do powershell, a configuração, a configuração"
-description: "Fornece um mecanismo para gerir grupos locais no nó de destino."
+keywords: DSC, do powershell, a configuração, a configuração
+description: Fornece um mecanismo para gerir grupos locais no nó de destino.
 title: Recursos do DSC GroupSet
-ms.openlocfilehash: 158cb28747c5fe1987eb62b2cc0f6d6f6fb14332
-ms.sourcegitcommit: a444406120e5af4e746cbbc0558fe89a7e78aef6
+ms.openlocfilehash: 4f8fc21806fdb4eb06e0d915d5b6ca229357a210
+ms.sourcegitcommit: cf195b090b3223fa4917206dfec7f0b603873cdf
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 04/09/2018
 ---
 # <a name="dsc-groupset-resource"></a>Recursos do DSC GroupSet
 
@@ -33,19 +33,19 @@ Group [string] #ResourceName
 
 ## <a name="properties"></a>Propriedades
 
-|  Propriedade  |  Descrição   | 
-|---|---| 
-| GroupName| Os nomes dos grupos para os quais pretender certificar-se num estado específico.| 
-| MembersToExclude| Utilize esta propriedade para remover membros da associação dos grupos. O valor desta propriedade é uma matriz de cadeias de formato *domínio*\\*UserName*. Se definir esta propriedade numa configuração, não utilize o **membros** propriedade. Se o fizer, irá gerar um erro.| 
+|  Propriedade  |  Descrição   |
+|---|---|
+| GroupName| Os nomes dos grupos para os quais pretender certificar-se num estado específico.|
+| MembersToExclude| Utilize esta propriedade para remover membros da associação dos grupos. O valor desta propriedade é uma matriz de cadeias de formato *domínio*\\*UserName*. Se definir esta propriedade numa configuração, não utilize o **membros** propriedade. Se o fizer, irá gerar um erro.|
 | credencial| As credenciais necessárias para aceder a recursos remotos. **Tenha em atenção**: esta conta tem de ter as permissões adequadas do Active Directory para adicionar todas as contas não local ao grupo; caso contrário, ocorrerá um erro.
-| Certifique-se| Indica se os grupos de existirem. Defina esta propriedade para "Ausente", certifique-se de que os grupos não existir. Defini-la para "Apresentar" (o valor predefinido) assegura que os grupos de existirem.| 
-| Membros| Utilize esta propriedade para substituir a associação do grupo atual com os membros especificados. O valor desta propriedade é uma matriz de cadeias de formato *domínio*\\*UserName*. Se definir esta propriedade numa configuração, não utilizar o **MembersToExclude** ou **MembersToInclude** propriedade. Se o fizer, irá gerar um erro.| 
-| MembersToInclude| Utilize esta propriedade para adicionar membros à associação do grupo existente. O valor desta propriedade é uma matriz de cadeias de formato *domínio*\\*UserName*. Se definir esta propriedade numa configuração, não utilize o **membros** propriedade. Se o fizer, irá gerar um erro.| 
-| dependsOn | Indica que a configuração de outro recurso tem de executar antes deste recurso é configurado. Por exemplo, se o ID da configuração do recurso de script bloco de que pretende executar primeiro é __ResourceName__ e o respetivo tipo é __ResourceType__, a sintaxe para utilizar esta propriedade é ' DependsOn = "[ ResourceName ResourceType]"'.| 
+| Certifique-se| Indica se os grupos de existirem. Defina esta propriedade para "Ausente", certifique-se de que os grupos não existir. Defini-la para "Apresentar" (o valor predefinido) assegura que os grupos de existirem.|
+| Membros| Utilize esta propriedade para substituir a associação do grupo atual com os membros especificados. O valor desta propriedade é uma matriz de cadeias de formato *domínio*\\*UserName*. Se definir esta propriedade numa configuração, não utilizar o **MembersToExclude** ou **MembersToInclude** propriedade. Se o fizer, irá gerar um erro.|
+| MembersToInclude| Utilize esta propriedade para adicionar membros à associação do grupo existente. O valor desta propriedade é uma matriz de cadeias de formato *domínio*\\*UserName*. Se definir esta propriedade numa configuração, não utilize o **membros** propriedade. Se o fizer, irá gerar um erro.|
+| dependsOn | Indica que a configuração de outro recurso tem de executar antes deste recurso é configurado. Por exemplo, se o ID da configuração do recurso de script bloco de que pretende executar primeiro é __ResourceName__ e o respetivo tipo é __ResourceType__, a sintaxe para utilizar esta propriedade é ' DependsOn = "[ ResourceName ResourceType]"'.|
 
 ## <a name="example-1"></a>Exemplo 1
 
-O exemplo seguinte mostra como Certifique-se de que existem dois grupos chamado "myGroup" e "myOtherGroup". 
+O exemplo seguinte mostra como Certifique-se de que existem dois grupos chamado "myGroup" e "myOtherGroup".
 
 ```powershell
 configuration GroupSetTest
@@ -78,5 +78,3 @@ GroupSetTest -ConfigurationData $cd
 ```
 
 >**Nota:** este exemplo utiliza credenciais de texto simples de simplicidade. Para obter informações sobre como encriptar as credenciais no ficheiro MOF configuração, consulte [proteger o ficheiro MOF](secureMOF.md).
-
-

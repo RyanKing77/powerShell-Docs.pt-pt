@@ -1,4 +1,4 @@
-# <a name="powershell-core-support-lifecycle"></a>Ciclo de vida de suporte de núcleos de PowerShell
+# <a name="powershell-core-support-lifecycle"></a>Ciclo de Vida do Suporte do PowerShell Core
 
 Núcleo do PowerShell é um conjunto diferente de ferramentas e componentes que é enviada, instalado e configurado separadamente a partir do Windows PowerShell.
 Por conseguinte, o PowerShell Core não está incluído nos contratos de licenciamento do Windows 7/8.1/10 ou Windows Server.
@@ -42,11 +42,11 @@ PowerShell Core oficialmente é suportada nas seguintes plataformas:
 * Red Hat Enterprise Linux 7
 * OpenSUSE 42.2
 * Fedora 25, 26
-* macOS 10.12 +
+* macOS 10.12+
 
 A nossa Comunidade também tem contribuíram pacotes para as seguintes plataformas, mas não estão oficialmente suppported:
 
-* Arquitetura de Linux
+* Arch Linux
 * Kali Linux
 * AppImage (funciona em várias plataformas Linux)
 
@@ -62,12 +62,12 @@ Suporte para o PowerShell Core se estendem aos outros módulos de produto, a men
 Por exemplo, utilizando o `ActiveDirectory` módulo que é fornecido como parte do Windows Server é um cenário não suportado.
 
 No entanto, os módulos que não suportam explicitamente PowerShell Core podem ser compatíveis em alguns casos.
-Ao instalar o [`WindowsPSModulePath`][] módulo, pode acrescentar o Windows PowerShell `PSModulePath` para o PowerShell Core `PSModulePath`.
+Ao instalar o [ `WindowsPSModulePath` ][] módulo, pode acrescentar o Windows PowerShell `PSModulePath` para o PowerShell Core `PSModulePath`.
 
 Em primeiro lugar, instalar o `WindowsPSModulePath` módulo a partir da galeria do PowerShell:
 
 ```powershell
-# Add `-Scope CurrentUser` if you're installing as non-admin 
+# Add `-Scope CurrentUser` if you're installing as non-admin
 Install-Module WindowsPSModulePath -Force
 ```
 
@@ -89,4 +89,4 @@ Add-WindowsPSModulePath
 [lifecycle-chart]: ./images/modern-lifecycle.png
 [semi-annual]: https://docs.microsoft.com/windows-server/get-started/semi-annual-channel-overview
 [licença MIT]: https://github.com/PowerShell/PowerShell/blob/master/LICENSE.txt
-['WindowsPSModulePath']: https://www.powershellgallery.com/packages/WindowsPSModulePath/
+[`WindowsPSModulePath`]: https://www.powershellgallery.com/packages/WindowsPSModulePath/

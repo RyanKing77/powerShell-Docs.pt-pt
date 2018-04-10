@@ -1,15 +1,15 @@
 ---
-ms.date: 2017-06-05
+ms.date: 06/05/2017
 keywords: PowerShell, o cmdlet
-title: Processamento de scripts com o Windows PowerShell
+title: Processamento de Scripts com o Windows PowerShell
 ms.assetid: c425d27a-bb41-4947-8d73-ba5480bc8ee0
-ms.openlocfilehash: 693d1bb9329dbb280453fc16738eda63c466e156
-ms.sourcegitcommit: d6ab9ab5909ed59cce4ce30e29457e0e75c7ac12
+ms.openlocfilehash: 9bb420a3d725d3fa925b79452bbbcc542bf9f4db
+ms.sourcegitcommit: cf195b090b3223fa4917206dfec7f0b603873cdf
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 09/08/2017
+ms.lasthandoff: 04/09/2018
 ---
-# <a name="scripting-with-windows-powershell"></a>Processamento de scripts com o Windows PowerShell
+# <a name="scripting-with-windows-powershell"></a>Processamento de Scripts com o Windows PowerShell
 
 O Windows PowerShell® é uma linguagem de script e shell de linha de comandos baseada em tarefas especialmente concebida para a administração do sistema. Incorporado no .NET Framework, o Windows PowerShell ajuda os profissionais de TI e controlo de utilizadores de energia e automatizar a administração do sistema operativo Windows e aplicações que são executados no Windows.
 
@@ -23,4 +23,3 @@ O Windows PowerShell inclui as seguintes funcionalidades:
 - Navegação simplificada, baseado em comandos do sistema operativo, que permite aos utilizadores navegar registo e outros arquivos de dados utilizando as mesmas técnicas que utilizam para navegar pelo sistema de ficheiros.
 - Capacidades de manipulação de objeto de elevado desempenho. Objetos podem ser diretamente manipulados ou enviados para outras ferramentas ou bases de dados.
 - Interface extensível. Podem criar fornecedores independentes de software e programadores empresariais personalizadas ferramentas e utilitários para administrar o seu software.
-

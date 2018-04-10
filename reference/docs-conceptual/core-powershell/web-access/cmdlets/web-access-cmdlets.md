@@ -1,16 +1,16 @@
 ---
-description: 
+description: ''
 ms.topic: article
 ms.prod: powershell
 keywords: PowerShell, o cmdlet
-ms.date: 2016-12-12
+ms.date: 12/12/2016
 title: cmdlets de acesso Web
 ms.technology: powershell
-ms.openlocfilehash: 54821c318b165461ec613678a39c4e3b500dfd0e
-ms.sourcegitcommit: a444406120e5af4e746cbbc0558fe89a7e78aef6
+ms.openlocfilehash: 6930fd6a08de69078576fb0d0fbabb04e05d0814
+ms.sourcegitcommit: cf195b090b3223fa4917206dfec7f0b603873cdf
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 04/09/2018
 ---
 # <a name="windows-powershell-web-access-cmdlets"></a>Cmdlets do Windows PowerShell Web Access
 
@@ -44,21 +44,18 @@ Desinstala a aplicação web do Windows PowerShell a partir do IIS.
 >
 >Para listar todos os cmdlets que estão disponíveis, utilize o:
 >
-> `Get-Command –Module PowerShellWebAccess`cmdlet.
+> `Get-Command –Module PowerShellWebAccess` cmdlet.
 
-Para obter mais informações ou para a sintaxe de qualquer um dos cmdlets, utilize:  
-`Get-Help `*&lt;nome do cmdlet&gt;*  
-onde  *&lt;nome do cmdlet&gt;*  é o nome do cmdlet que pretende pesquisar.
+Para obter mais informações ou para a sintaxe de qualquer um dos cmdlets, utilize: `Get-Help ` *&lt;nome do cmdlet&gt;* onde *&lt;nome do cmdlet&gt;* é o nome do cmdlet que pretende pesquisar.
 
 Para informações mais detalhadas, pode executar um dos cmdlets seguintes:
 
-- `Get-Help `*&lt;nome do cmdlet&gt;*` -Detailed`
-- `Get-Help `*&lt;nome do cmdlet&gt;*` -Examples`
-- `Get-Help `*&lt;nome do cmdlet&gt;*` -Full`
+- `Get-Help `*&lt;Nome do cmdlet&gt;*` -Detailed`
+- `Get-Help `*&lt;Nome do cmdlet&gt;*` -Examples`
+- `Get-Help `*&lt;Nome do cmdlet&gt;*` -Full`
 
 ### <a name="more-information"></a>Mais Informações
 
 Para obter mais informações sobre o acesso Web do PowerShell, consulte o seguinte:
 
 - [Instalar e utilizar o acesso Web Windows PowerShell](../install-and-use-windows-powershell-web-access.md)
-

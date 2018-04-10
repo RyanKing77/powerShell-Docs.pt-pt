@@ -1,4 +1,4 @@
-# <a name="ws-management-wsman-remoting-in-powershell-core"></a>Comunicação remota do WS-Management (WSMan) no PowerShell Core 
+# <a name="ws-management-wsman-remoting-in-powershell-core"></a>Comunicação Remota do WS-Management (WSMan) no PowerShell Core
 
 ## <a name="instructions-to-create-a-remoting-endpoint"></a>Instruções para criar um ponto final de gestão remota
 
@@ -28,19 +28,19 @@ O script tem de ser executado dentro de uma sessão do PowerShell de nível de a
 
 #### <a name="executed-by-the-instance-of-powershell-that-it-will-register"></a>Executado pela instância do PowerShell que serão registados
 
-``` powershell
+```powershell
 Install-PowerShellRemoting.ps1
 ```
 
 #### <a name="executed-by-another-instance-of-powershell-on-behalf-of-the-instance-that-it-will-register"></a>Executado por outra instância do PowerShell em nome de instância que serão registados
 
-``` powershell
+```powershell
 <path to powershell>\Install-PowerShellRemoting.ps1 -PowerShellHome "<absolute path to the instance's $PSHOME>"
 ```
 
 Por exemplo:
 
-``` powershell
+```powershell
 Set-Location -Path 'C:\Program Files\PowerShell\6.0.0\'
 .\Install-PowerShellRemoting.ps1 -PowerShellHome "C:\Program Files\PowerShell\6.0.0\"
 ```
@@ -51,7 +51,7 @@ Set-Location -Path 'C:\Program Files\PowerShell\6.0.0\'
 
 Criar uma sessão do PowerShell para o novo ponto de final do PowerShell, especificando `-ConfigurationName "some endpoint name"`. Para ligar à instância do PowerShell de exemplo acima, utilize qualquer um dos seguintes itens:
 
-``` powershell
+```powershell
 New-PSSession ... -ConfigurationName "powershell.6.0.0"
 Enter-PSSession ... -ConfigurationName "powershell.6.0.0"
 ```

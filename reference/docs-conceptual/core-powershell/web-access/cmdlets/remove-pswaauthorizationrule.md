@@ -1,16 +1,16 @@
 ---
-description: 
+description: ''
 ms.topic: article
 ms.prod: powershell
 keywords: PowerShell, o cmdlet
-ms.date: 2016-12-12
+ms.date: 12/12/2016
 title: remover pswaauthorizationrule
 ms.technology: powershell
-ms.openlocfilehash: 4d039e7e00f87bc7aebb89217251edbbb5c3f5be
-ms.sourcegitcommit: a444406120e5af4e746cbbc0558fe89a7e78aef6
+ms.openlocfilehash: 28dbfe84827d6ccb99dce1ebb520cae66dc8c50e
+ms.sourcegitcommit: cf195b090b3223fa4917206dfec7f0b603873cdf
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 04/09/2018
 ---
 # <a name="remove-pswaauthorizationrule"></a>Remove-PswaAuthorizationRule
 
@@ -40,7 +40,7 @@ Remove uma regra de autorização especificada do acesso Web Windows PowerShell.
 
 Executa o cmdlet sem pedir confirmação. Por predefinição, o cmdlet pede-lhe confirmação antes de continuar.
 
-|||  
+|||
 |-|-|
 | Aliases                              | nenhum                                 |
 | Obrigatório?                            | falso                                |
@@ -53,7 +53,7 @@ Executa o cmdlet sem pedir confirmação. Por predefinição, o cmdlet pede-lhe 
 
 Especifica os identificadores (IDs) de uma ou mais regras para remover.
 
-|||  
+|||
 |-|-|
 | Aliases                              | nenhum                                 |
 | Obrigatório?                            | VERDADEIRO                                 |
@@ -66,7 +66,7 @@ Especifica os identificadores (IDs) de uma ou mais regras para remover.
 
 Especifica regras para remover.
 
-|||  
+|||
 |-|-|
 | Aliases                              | nenhum                                 |
 | Obrigatório?                            | VERDADEIRO                                 |
@@ -79,7 +79,7 @@ Especifica regras para remover.
 
 Solicita a sua confirmação antes de executar o cmdlet.
 
-|||  
+|||
 |-|-|
 | Obrigatório?                            | falso                                |
 | Posição?                            | com o nome                                |
@@ -91,7 +91,7 @@ Solicita a sua confirmação antes de executar o cmdlet.
 
 Apresenta o que aconteceria mediante a execução do cmdlet. O cmdlet não é executado.
 
-|||  
+|||
 |-|-|
 | Obrigatório?                            | falso                                |
 | Posição?                            | com o nome                                |

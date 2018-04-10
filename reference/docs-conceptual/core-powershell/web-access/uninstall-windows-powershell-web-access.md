@@ -1,12 +1,12 @@
 ---
-ms.date: 2017-08-23
+ms.date: 08/23/2017
 keywords: PowerShell, o cmdlet
 title: desinstalar o acesso web windows powershell
-ms.openlocfilehash: b6e6a2374e6b4b2be8742019c5f1e4d5b5d1abe3
-ms.sourcegitcommit: 3720ce4efb6735694cfb53a1b793d949af5d1bc5
+ms.openlocfilehash: 22c874d766445dccedd8494097daf16c30fa66ff
+ms.sourcegitcommit: cf195b090b3223fa4917206dfec7f0b603873cdf
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 09/29/2017
+ms.lasthandoff: 04/09/2018
 ---
 # <a name="uninstall-windows-powershell-web-access"></a>Desinstalar o Acesso Web Windows PowerShell
 
@@ -29,7 +29,7 @@ Os procedimentos nesta secção ajudam a desinstalar:
 
 - a aplicação web de acesso Web Windows PowerShell, e
 - a funcionalidade de acesso Web Windows PowerShell
- 
+
 utilizando os cmdlets do Windows PowerShell.
 
 ### <a name="step-1-delete-the-web-application-using-cmdlets"></a>Passo 1: Eliminar a aplicação web utilizando cmdlets
@@ -96,9 +96,9 @@ Os procedimentos nesta secção ajudam a desinstalar a aplicação web do acesso
 
 > ![Nota de aviso](images/SecurityNote.jpeg)**nota**:
 >
-> O certificado não é eliminado durante a desinstalação. 
+> O certificado não é eliminado durante a desinstalação.
 >
-> Se criou um certificado autoassinado ou utilizou um certificado de teste e pretende removê-lo, elimine o certificado no Gestor do IIS. 
+> Se criou um certificado autoassinado ou utilizou um certificado de teste e pretende removê-lo, elimine o certificado no Gestor do IIS.
 
 ### <a name="step-2-uninstall-windows-powershell-web-access-using-the-remove-roles-and-features-wizard"></a>Passo 2: Desinstalar o acesso Web Windows PowerShell utilizando o Assistente de funcionalidades e para remover funções
 

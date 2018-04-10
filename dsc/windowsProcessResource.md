@@ -1,13 +1,13 @@
 ---
-ms.date: 2017-06-12
+ms.date: 06/12/2017
 ms.topic: conceptual
-keywords: "DSC, do powershell, a configuração, a configuração"
+keywords: DSC, do powershell, a configuração, a configuração
 title: Recursos do DSC WindowsProcess
-ms.openlocfilehash: ec77209637d574a0e530f4cce283e1ad98701cdb
-ms.sourcegitcommit: a444406120e5af4e746cbbc0558fe89a7e78aef6
+ms.openlocfilehash: 236a48fd4449a96f2297c152bce65253dd2fd08d
+ms.sourcegitcommit: cf195b090b3223fa4917206dfec7f0b603873cdf
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 04/09/2018
 ---
 # <a name="dsc-windowsprocess-resource"></a>Recursos do DSC WindowsProcess
 
@@ -33,15 +33,14 @@ WindowsProcess [string] #ResourceName
 ```
 
 ## <a name="properties"></a>Propriedades
-|  Propriedade  |  Descrição   | 
-|---|---| 
-| Argumentos| Indica uma cadeia de argumentos transmitidos para o processo que-é. Se tiver de passar vários argumentos, colocá-los a todos nesta cadeia.| 
-| Caminho| O caminho para o executável do processo. Se o nome de ficheiro do executável (não o caminho completamente qualificado), os recursos de DSC irá procurar o ambiente **caminho** variável (`$env:Path`) para localizar o ficheiro executável. Se o valor desta propriedade é um caminho completamente qualificado, DSC não utilizará o **caminho** variável de ambiente para localizar o ficheiro e irá gerar um erro se o caminho não existe. Não são permitidos caminhos relativos.| 
-| credencial| Indica as credenciais para iniciar o processo.| 
-| Certifique-se| Indica se o processo exista. Defina esta propriedade para "Presente" para se certificar de que o processo exista. Caso contrário, defina-o para "Ausente". A predefinição é "Presente".| 
-| dependsOn | Indica que a configuração de outro recurso tem de executar antes deste recurso é configurado. Por exemplo, se o ID da configuração do recurso de script bloco de que pretende executar primeiro é __ResourceName__ e o respetivo tipo é __ResourceType__, a sintaxe para utilizar esta propriedade é ' DependsOn = "[ ResourceName ResourceType]"'.| 
-| StandardErrorPath| Indica o caminho do diretório para escrever o erro padrão. Não existe qualquer ficheiro existente será substituído.| 
-| StandardInputPath| Indica a localização de entrada padrão.| 
-| StandardOutputPath| Indica a localização para guardar a saída padrão. Não existe qualquer ficheiro existente será substituído.| 
-| WorkingDirectory| Indica a localização que será utilizada como o atual diretório de trabalho para o processo.| 
-
+|  Propriedade  |  Descrição   |
+|---|---|
+| Argumentos| Indica uma cadeia de argumentos transmitidos para o processo que-é. Se tiver de passar vários argumentos, colocá-los a todos nesta cadeia.|
+| Caminho| O caminho para o executável do processo. Se o nome de ficheiro do executável (não o caminho completamente qualificado), os recursos de DSC irá procurar o ambiente **caminho** variável (`$env:Path`) para localizar o ficheiro executável. Se o valor desta propriedade é um caminho completamente qualificado, DSC não utilizará o **caminho** variável de ambiente para localizar o ficheiro e irá gerar um erro se o caminho não existe. Não são permitidos caminhos relativos.|
+| credencial| Indica as credenciais para iniciar o processo.|
+| Certifique-se| Indica se o processo exista. Defina esta propriedade para "Presente" para se certificar de que o processo exista. Caso contrário, defina-o para "Ausente". A predefinição é "Presente".|
+| dependsOn | Indica que a configuração de outro recurso tem de executar antes deste recurso é configurado. Por exemplo, se o ID da configuração do recurso de script bloco de que pretende executar primeiro é __ResourceName__ e o respetivo tipo é __ResourceType__, a sintaxe para utilizar esta propriedade é ' DependsOn = "[ ResourceName ResourceType]"'.|
+| StandardErrorPath| Indica o caminho do diretório para escrever o erro padrão. Não existe qualquer ficheiro existente será substituído.|
+| StandardInputPath| Indica a localização de entrada padrão.|
+| StandardOutputPath| Indica a localização para guardar a saída padrão. Não existe qualquer ficheiro existente será substituído.|
+| WorkingDirectory| Indica a localização que será utilizada como o atual diretório de trabalho para o processo.|

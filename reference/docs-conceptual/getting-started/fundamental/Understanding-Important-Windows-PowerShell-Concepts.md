@@ -1,15 +1,15 @@
 ---
-ms.date: 2017-06-05
+ms.date: 06/05/2017
 keywords: PowerShell, o cmdlet
-title: "Noções sobre conceitos do importantes do Windows PowerShell"
+title: Noções sobre Conceitos Importantes do Windows PowerShell
 ms.assetid: 3e601e38-4520-4578-a48d-b6779f1d35ee
-ms.openlocfilehash: 1ffcfefcc7ffc7c98ba4d1e3ccc9a59cd9b0baac
-ms.sourcegitcommit: 74255f0b5f386a072458af058a15240140acb294
+ms.openlocfilehash: 07ceaa2f3e6a192c6281cb4c99aed4c3f66afc7e
+ms.sourcegitcommit: cf195b090b3223fa4917206dfec7f0b603873cdf
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 08/03/2017
+ms.lasthandoff: 04/09/2018
 ---
-# <a name="understanding-important-windows-powershell-concepts"></a>Noções sobre conceitos do importantes do Windows PowerShell
+# <a name="understanding-important-windows-powershell-concepts"></a>Noções sobre Conceitos Importantes do Windows PowerShell
 A estrutura do Windows PowerShell integra conceitos de vários ambientes diferentes. Vários deles estão familiarizados para pessoas com experiência na shells específicos ou ambientes de programação, mas muito poucas pessoas irão conhecer todos eles. Alguns destes conceitos observar fornece uma descrição útil de shell.
 
 ### <a name="commands-are-not-text-based"></a>Os comandos não são baseados em texto
@@ -30,7 +30,7 @@ Devido à natureza especial dos comandos internas do Windows PowerShell, iremos 
 ### <a name="windows-powershell-handles-console-input-and-display"></a>Entrada da consola do Windows PowerShell identificadores e apresentar
 Quando escreve um comando, do Windows PowerShell sempre processa a entrada da linha de comandos diretamente. Windows PowerShell também formata o resultado que vê no ecrã. O que é significativo porque esta reduz o trabalho necessário de cada cmdlet e assegura que pode sempre fazer coisas da mesma forma, independentemente da que cmdlet estiver a utilizar. Um exemplo de como Isto simplifica vida para os programadores de ferramenta e os utilizadores é ajuda da linha de comandos.
 
-Ferramentas tradicionais de linha de comandos tem os seus próprios esquemas para pedir e apresentar a ajuda. Algumas ferramentas de linha de comandos utilizam **/?** para acionar a apresentação de ajuda; outras pessoas utilizam **-?**, **/H**, ou mesmo  **//** . Algumas irão apresentar a ajuda numa janela de GUI, em vez de na apresentação de consola. Algumas ferramentas complexas, tais como updaters de aplicação, descompacte internos ficheiros antes de apresentar os respetivos ajuda. Se utilizar o parâmetro incorreto, a ferramenta poderá ignorar que escreveu e começar a executar automaticamente uma tarefa.
+Ferramentas tradicionais de linha de comandos tem os seus próprios esquemas para pedir e apresentar a ajuda. Algumas ferramentas de linha de comandos utilizam **/?** para acionar a apresentação de ajuda; outras pessoas utilizam **-?**, **/H**, ou mesmo **//**. Algumas irão apresentar a ajuda numa janela de GUI, em vez de na apresentação de consola. Algumas ferramentas complexas, tais como updaters de aplicação, descompacte internos ficheiros antes de apresentar os respetivos ajuda. Se utilizar o parâmetro incorreto, a ferramenta poderá ignorar que escreveu e começar a executar automaticamente uma tarefa.
 
 Ao introduzir um comando no Windows PowerShell, tudo o que introduz é analisado e automaticamente pré-processado pelo Windows PowerShell. Se utilizar o **-?** parâmetro com um cmdlet do Windows PowerShell, sempre significa "Mostrar ajuda para este comando". Os programadores de cmdlet não dispõe de analisar o comando; apenas necessário fornecer o texto de ajuda.
 
@@ -43,4 +43,3 @@ Ao introduzir um comando no Windows PowerShell, tudo o que introduz é analisado
 Windows PowerShell tem funcionalidades de sintaxe e palavras-chave que são muito semelhantes às utilizadas no c# programação idioma, porque o Windows PowerShell é baseado no .NET Framework. Aprendizagem do Windows PowerShell tornarão mais fácil e saber c#, se estiver interessado no idioma.
 
 Se não tiver um programador de c#, este semelhança não é importante. No entanto, se já estiver familiarizado com c#, as semelhanças podem tornar a aprendizagem muito mais fácil do Windows PowerShell.
-

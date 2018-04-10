@@ -1,15 +1,15 @@
 ---
-ms.date: 2017-06-12
+ms.date: 06/12/2017
 author: JKeithB
 ms.topic: reference
-keywords: "WMF, o powershell, o programa de configuração"
-ms.openlocfilehash: 2d56df459a4e09a16ab16c02f7ca2744c779206f
-ms.sourcegitcommit: 75f70c7df01eea5e7a2c16f9a3ab1dd437a1f8fd
+keywords: wmf,powershell,setup
+ms.openlocfilehash: 505ff4ebef2d0b063edacbdfa465616890be1001
+ms.sourcegitcommit: cf195b090b3223fa4917206dfec7f0b603873cdf
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 06/12/2017
+ms.lasthandoff: 04/09/2018
 ---
-# <a name="powershellget-cmdlets-for-script-management"></a>Cmdlets de PowerShellGet para gestão de Script
+# <a name="powershellget-cmdlets-for-script-management"></a>Cmdlets do PowerShellGet para a Gestão de Scripts
 
 ## <a name="find-script-cmdlet"></a>Script de encontrar o cmdlet
 Script de encontrar o cmdlet permite-lhe detetar os ficheiros de script com os critérios de pesquisa diferentes, como o nome, etiqueta, filtro, nome do comando, intervalo de versão, versão exata, todas as versões, incluindo as respetivas dependências e repositórios de todos os registado ou específicos.
@@ -575,7 +575,7 @@ DefinedFunctions : Demo-ScriptFunction
 DefinedWorkflows : Demo-ScriptWorkflow
 ```
 
-## <a name="update-scriptfileinfo-cmdlet"></a>Cmdlet Update-ScriptFileInfo
+## <a name="update-scriptfileinfo-cmdlet"></a>Update-ScriptFileInfo cmdlet
 Cmdlet Update-ScriptFileInfo permite-lhe para atualizar os metadados do ficheiro de script existente.
 ```powershell
 \# Use Update-ScriptFileInfo cmdlet to update the script metadata
@@ -686,4 +686,3 @@ Repository : GalleryINT
 PackageManagementProvider : NuGet
 AdditionalMetadata : {description, developmentDependency, tags, PackageManagementProvider...}
 ```
-

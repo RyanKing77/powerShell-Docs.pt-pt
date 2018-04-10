@@ -1,15 +1,15 @@
 ---
-ms.date: 2017-06-12
+ms.date: 06/12/2017
 author: JKeithB
 ms.topic: reference
-keywords: "WMF, o powershell, o programa de configuração"
-ms.openlocfilehash: 555e01e88647b40717417360fb74bb6554a9c122
-ms.sourcegitcommit: 75f70c7df01eea5e7a2c16f9a3ab1dd437a1f8fd
+keywords: wmf,powershell,setup
+ms.openlocfilehash: 3b2c268cd10d7c421b3d1fc73a7bbeaa4714f5fc
+ms.sourcegitcommit: cf195b090b3223fa4917206dfec7f0b603873cdf
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 06/12/2017
+ms.lasthandoff: 04/09/2018
 ---
-# <a name="authoring-improvements-using-powershell-ise"></a>Melhoramentos de criação utilizando o ISE do PowerShell
+# <a name="authoring-improvements-using-powershell-ise"></a>Melhorias na Criação com o ISE do PowerShell
 
 Criação de configurações de DSC no ISE do Windows PowerShell é muito mais fácil, obrigado para os seguintes melhoramentos:
 
@@ -19,4 +19,3 @@ Criação de configurações de DSC no ISE do Windows PowerShell é muito mais f
 - Conclusão de separador melhor dos valores de propriedade de recurso.
 
 **Nota:** tem de ter uma cadeia vazia para valores de propriedade de recurso antes de poder utilizar Ctrl + espaço para listar as opções. Premir **separador** percorre opções.
-

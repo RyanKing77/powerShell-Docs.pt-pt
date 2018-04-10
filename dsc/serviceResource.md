@@ -1,13 +1,13 @@
 ---
-ms.date: 2017-06-12
+ms.date: 06/12/2017
 ms.topic: conceptual
-keywords: "DSC, do powershell, a configuração, a configuração"
-title: "Recurso de serviço de DSC"
-ms.openlocfilehash: a549530edc19496a68c036fecbd18b0072cc6d74
-ms.sourcegitcommit: a444406120e5af4e746cbbc0558fe89a7e78aef6
+keywords: DSC, do powershell, a configuração, a configuração
+title: Recurso de serviço de DSC
+ms.openlocfilehash: 59d7c0c7147bf28b92d64a25c0d67c277e0bb210
+ms.sourcegitcommit: cf195b090b3223fa4917206dfec7f0b603873cdf
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 04/09/2018
 ---
 # <a name="dsc-service-resource"></a>Recurso de serviço de DSC
 
@@ -36,18 +36,18 @@ Service [string] #ResourceName
 
 ## <a name="properties"></a>Propriedades
 
-|  Propriedade  |  Descrição   | 
-|---|---| 
-| Nome| Indica o nome do serviço. Tenha em atenção que, por vezes, isto é diferente do nome de apresentação. Pode obter uma lista de serviços e o respetivo estado atual com o cmdlet Get-Service.| 
-| BuiltInAccount| Indica a conta de início de sessão a utilizar para o serviço. Os valores que são permitidos para esta propriedade são: **LocalService**, **LocalSystem**, e **NetworkService**.| 
-| credencial| Indica as credenciais para a conta que o serviço irá ser executado. Esta propriedade e o __BuiltinAccount__ propriedade não pode ser utilizada em conjunto.| 
-| dependsOn| Indica que a configuração de outro recurso tem de executar antes deste recurso é configurado. Por exemplo, se o ID da configuração do recurso de script bloco de que pretende executar primeiro é __ResourceName__ e o respetivo tipo é __ResourceType__, a sintaxe para utilizar esta propriedade é `DependsOn = "[ResourceType]ResourceName"`.| 
-| StartupType| Indica o tipo de arranque para o serviço. Os valores que são permitidos para esta propriedade são: **automática**, **desativado**, e **Manual**| 
-| Estado| Indica o estado que pretender certificar-se para o serviço.| 
-| Descrição | Indica a descrição do serviço de destino.| 
-| NomeaApresentar | Indica o nome a apresentar do serviço de destino.| 
+|  Propriedade  |  Descrição   |
+|---|---|
+| Nome| Indica o nome do serviço. Tenha em atenção que, por vezes, isto é diferente do nome de apresentação. Pode obter uma lista de serviços e o respetivo estado atual com o cmdlet Get-Service.|
+| BuiltInAccount| Indica a conta de início de sessão a utilizar para o serviço. Os valores que são permitidos para esta propriedade são: **LocalService**, **LocalSystem**, e **NetworkService**.|
+| credencial| Indica as credenciais para a conta que o serviço irá ser executado. Esta propriedade e o __BuiltinAccount__ propriedade não pode ser utilizada em conjunto.|
+| dependsOn| Indica que a configuração de outro recurso tem de executar antes deste recurso é configurado. Por exemplo, se o ID da configuração do recurso de script bloco de que pretende executar primeiro é __ResourceName__ e o respetivo tipo é __ResourceType__, a sintaxe para utilizar esta propriedade é `DependsOn = "[ResourceType]ResourceName"`.|
+| StartupType| Indica o tipo de arranque para o serviço. Os valores que são permitidos para esta propriedade são: **automática**, **desativado**, e **Manual**|
+| Estado| Indica o estado que pretender certificar-se para o serviço.|
+| Descrição | Indica a descrição do serviço de destino.|
+| NomeaApresentar | Indica o nome a apresentar do serviço de destino.|
 | Certifique-se | Indica se o serviço de destino existe no sistema. Defina esta propriedade como **ausente** para se certificar de que o serviço de destino não existe. Defini-la como **presente** (o valor predefinido) assegura que o serviço de destino existe.|
-| Caminho | Indica o caminho para o ficheiro binário para um novo serviço.| 
+| Caminho | Indica o caminho para o ficheiro binário para um novo serviço.|
 
 ## <a name="example"></a>Exemplo
 
@@ -63,8 +63,7 @@ configuration ServiceTest
             Name        = "TermService"
             StartupType = "Manual"
             State       = "Running"
-        } 
+        }
     }
 }
 ```
-

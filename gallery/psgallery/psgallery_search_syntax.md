@@ -1,14 +1,14 @@
 ---
-ms.date: 2017-06-12
+ms.date: 06/12/2017
 contributor: JKeithB
 ms.topic: conceptual
 keywords: cmdlet do powershell do galeria, psgallery
 title: psgallery_search_syntax
-ms.openlocfilehash: 409ae607557af760f9cec4e3c54f39e51b5fac18
-ms.sourcegitcommit: 75f70c7df01eea5e7a2c16f9a3ab1dd437a1f8fd
+ms.openlocfilehash: 337b4b1e702994fcbc456eb31a2d8632f5220d09
+ms.sourcegitcommit: cf195b090b3223fa4917206dfec7f0b603873cdf
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 06/12/2017
+ms.lasthandoff: 04/09/2018
 ---
 # <a name="gallery-search-syntax"></a>Sintaxe de pesquisa de galeria
 
@@ -49,7 +49,7 @@ Localiza itens com "PSReadline" ou "AzureRM.Profile" no respetivo campo de ID, r
 O filtro 'Id' é uma subcadeia corresponderem, por isso se procurar o seguinte:
 
     Id:"azure"
-    
+
 Irá obter resultados como 'AzureRM.Profile' e 'Azure.Storage'.
 
 Poderá também pesquisar por várias palavras-chave num campo único. Ou combinar e misturar campos.
@@ -71,7 +71,7 @@ Para procurar todos os itens com a função especificada.
     Functions:"Update-AzureRM"
 
 Para procurar todos os itens com o cmdlet especificado.
-    
+
     Cmdlets:"Get-AzureRmEnvironment"
 
 Para procurar todos os itens com o nome de recursos de DSC especificado.
@@ -88,8 +88,7 @@ Para procurar todos os itens com o PowerShellVersion especificado
 Por fim, se utilizar um campo que não é suportada, como 'comandos', vamos apenas ignorá-lo e todos os campos de pesquisa. Por isso, a seguinte consulta
 
     commands:blobs storage
-    
+
 É interpretado exatamente o mesmo que esta consulta:
 
     blobs storage
-

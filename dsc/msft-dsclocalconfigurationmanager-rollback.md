@@ -1,15 +1,15 @@
 ---
-ms.date: 2017-06-12
+ms.date: 06/12/2017
 ms.topic: conceptual
-keywords: "DSC, do powershell, a configuração, a configuração"
-title: "Método de reversão da classe MSFT_DSCLocalConfigurationManager"
-ms.openlocfilehash: a219703389405c0dd457d0b2e0b1c54b9c28f559
-ms.sourcegitcommit: a444406120e5af4e746cbbc0558fe89a7e78aef6
+keywords: DSC, do powershell, a configuração, a configuração
+title: Método RollBack da classe MSFT_DSCLocalConfigurationManager
+ms.openlocfilehash: c0a801c4037921e700e447d1434e246df0a63a4f
+ms.sourcegitcommit: cf195b090b3223fa4917206dfec7f0b603873cdf
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 04/09/2018
 ---
-# <a name="rollback-method-of-the-msftdsclocalconfigurationmanager-class"></a>Método de reversão da classe MSFT_DSCLocalConfigurationManager
+# <a name="rollback-method-of-the-msftdsclocalconfigurationmanager-class"></a>Método RollBack da classe MSFT_DSCLocalConfigurationManager
 
 Reverte a configuração para uma versão anterior.
 
@@ -25,8 +25,7 @@ uint32 RollBack(
 <a name="parameters"></a>Parâmetros
 ----------
 
-*configurationNumber* \[in\]  
-Especifica a configuração solicitada. 
+*configurationNumber* \[no\] Especifica a configuração solicitada.
 
 ## <a name="return-value"></a>Valor devolvido
 ------------
@@ -48,11 +47,3 @@ Este é um método estático.
 
 
 [**MSFT_DSCLocalConfigurationManager**](msft-dsclocalconfigurationmanager.md)
-
-
- 
-
- 
-
-
-

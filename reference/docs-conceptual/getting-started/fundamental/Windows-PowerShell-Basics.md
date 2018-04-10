@@ -1,13 +1,13 @@
 ---
-ms.date: 2017-06-05
+ms.date: 06/05/2017
 keywords: PowerShell, o cmdlet
-title: "Noções Básicas sobre o Windows PowerShell"
+title: Noções Básicas sobre o Windows PowerShell
 ms.assetid: 6b3cbbc8-060c-4877-b00b-7300dbbe4e28
-ms.openlocfilehash: bd17786d2d8690b89a2d107e0da98ee45f5b2ff7
-ms.sourcegitcommit: 18e3bfae83ffe282d3fd1a45f5386f3b7250f0c0
+ms.openlocfilehash: b21c6cd84ea29d5e8085ccf8df2a5a9199e1d859
+ms.sourcegitcommit: cf195b090b3223fa4917206dfec7f0b603873cdf
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 04/09/2018
 ---
 # <a name="windows-powershell-basics"></a>Noções Básicas sobre o Windows PowerShell
 Interfaces de utilizador gráfica utilizam alguns conceitos básicos que são bem conhecidos para a maioria dos utilizadores do computador. Os utilizadores dependem familiaridade essas interfaces para realizar tarefas. Sistemas operativos apresentar os utilizadores com uma representação gráfica de itens que podem ser pesquisados, normalmente com menus de lista pendente para aceder ao menus de contexto e funcionalidades específicos para aceder às funcionalidades específicas do contexto.

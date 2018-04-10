@@ -1,16 +1,16 @@
 ---
-ms.date: 2017-06-12
+ms.date: 06/12/2017
 contributor: manikb
 ms.topic: reference
 keywords: cmdlet do powershell do galeria, psget
-title: "Obter módulo PowerShellGet"
-ms.openlocfilehash: 7224cf5d71b98d51ca22c47a00ca382d34864bfb
-ms.sourcegitcommit: 99227f62dcf827354770eb2c3e95c5cf6a3118b4
+title: Obter o Módulo PowerShellGet
+ms.openlocfilehash: a392f795d8c065ff881bc6cc113e63a1f18bcb44
+ms.sourcegitcommit: cf195b090b3223fa4917206dfec7f0b603873cdf
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 03/15/2018
+ms.lasthandoff: 04/09/2018
 ---
-<a name="get-powershellget-module"></a>Obter módulo PowerShellGet
+<a name="get-powershellget-module"></a>Obter o Módulo PowerShellGet
 ========================
 
 ### <a name="powershellget-is-an-in-box-module-in-the-following-releases"></a>PowerShellGet é um módulo de na caixa as seguintes versões
@@ -20,7 +20,7 @@ ms.lasthandoff: 03/15/2018
 - [6 de PowerShell](https://github.com/PowerShell/PowerShell/releases)
 
 ### <a name="get-powershellget-module-for-powershell-versions-30-and-40"></a>Obter módulo PowerShellGet para versões de PowerShell 3.0 e 4.0
-- [PackageManagement MSI](http://go.microsoft.com/fwlink/?LinkID=746217&clcid=0x409) 
+- [PackageManagement MSI](http://go.microsoft.com/fwlink/?LinkID=746217&clcid=0x409)
 
 ### <a name="get-the-latest-version-from-powershell-gallery"></a>Obter a versão mais recente a partir da galeria do PowerShell
 
@@ -30,7 +30,7 @@ Install-PackageProvider Nuget –Force
 Exit
 ```
 
-#### <a name="for-systems-with-powershell-50-or-newer-you-can-install-the-latest-powershellget"></a>Para sistemas com o PowerShell 5.0 (ou mais recente) pode instalar o PowerShellGet mais recente 
+#### <a name="for-systems-with-powershell-50-or-newer-you-can-install-the-latest-powershellget"></a>Para sistemas com o PowerShell 5.0 (ou mais recente) pode instalar o PowerShellGet mais recente
 - Para fazê-lo no Windows 10, Windows Server 2016, qualquer sistema com WMF 5.0 ou 5.1 instalado ou qualquer sistema com 6 do PowerShell, execute os seguintes comandos a partir de uma sessão elevada do PowerShell.
 ```powershell
 Install-Module –Name PowerShellGet –Force
@@ -59,3 +59,4 @@ Exit
 ```powershell
 Copy-Item "C:\LocalFolder\PowerShellGet\*" "$env:ProgramFiles\WindowsPowerShell\Modules\PowerShellGet\" -Recurse -Force
 Copy-Item "C:\LocalFolder\PackageManagement\*" "$env:ProgramFiles\WindowsPowerShell\Modules\PackageManagement\" -Recurse -Force
+```

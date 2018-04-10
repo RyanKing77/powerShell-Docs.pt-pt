@@ -1,15 +1,16 @@
 ---
-ms.date: 2017-06-05
+ms.date: 06/05/2017
 keywords: PowerShell, o cmdlet
-title: Como criar um separador de PowerShell no ISE do Windows PowerShell
+title: Como Criar um Separador do PowerShell no ISE do Windows PowerShell
 ms.assetid: c10c18c7-9ece-4fd0-83dc-a19c53d4fd83
-ms.openlocfilehash: 3cfeb18babe6b63f0e02da8cf0fd460950f1afce
-ms.sourcegitcommit: d6ab9ab5909ed59cce4ce30e29457e0e75c7ac12
+ms.openlocfilehash: 4d4388d889f2178b2cd24cb0f3350aee37327625
+ms.sourcegitcommit: cf195b090b3223fa4917206dfec7f0b603873cdf
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 09/08/2017
+ms.lasthandoff: 04/09/2018
 ---
-# <a name="how-to-create-a-powershell-tab-in-windows-powershell-ise"></a>Como criar um separador de PowerShell no ISE do Windows PowerShell
+# <a name="how-to-create-a-powershell-tab-in-windows-powershell-ise"></a>Como Criar um Separador do PowerShell no ISE do Windows PowerShell
+
 Separadores no Windows PowerShell Integrated Scripting Environment (ISE) permitem-lhe criar e utilizar vários ambientes de execução na mesma aplicação de em simultâneo.
 Cada separador PowerShell corresponde a um ambiente de execução separados ou a sessão.
 
@@ -53,6 +54,5 @@ Para obter mais informações sobre como guardar um script, consulte [como guard
 
 ## <a name="see-also"></a>Consulte Também
 
-- [Utilizar o ISE do Windows PowerShell](Using-the-Windows-PowerShell-ISE.md)
+- [Introdução ao ISE do Windows PowerShell](Introducing-the-Windows-PowerShell-ISE.md)
 - [Como utilizar o painel de consola no ISE do Windows PowerShell](How-to-Use-the-Console-Pane-in-the-Windows-PowerShell-ISE.md)
-

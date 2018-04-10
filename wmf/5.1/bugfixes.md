@@ -1,14 +1,14 @@
 ---
-ms.date: 2017-06-12
+ms.date: 06/12/2017
 author: JKeithB
 ms.topic: reference
-keywords: "WMF, o powershell, o programa de configuração"
-title: "Correções de erros no WMF 5.1"
-ms.openlocfilehash: 137095f50f9f926d3488ff9c1ce8270ddbda63eb
-ms.sourcegitcommit: 75f70c7df01eea5e7a2c16f9a3ab1dd437a1f8fd
+keywords: wmf,powershell,setup
+title: Correções de erros no WMF 5.1
+ms.openlocfilehash: dfd9ead447edfe9b7bdae23be14785df4b182bbc
+ms.sourcegitcommit: cf195b090b3223fa4917206dfec7f0b603873cdf
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 06/12/2017
+ms.lasthandoff: 04/09/2018
 ---
 # <a name="bug-fixes-in-wmf-51"></a>Correções de erros no WMF 5.1#
 
@@ -16,13 +16,15 @@ ms.lasthandoff: 06/12/2017
 
 Os seguintes erros relevantes estão corrigidos no WMF 5.1:
 
-### <a name="module-auto-discovery-fully-honors-envpsmodulepath"></a>A deteção automática de módulo completamente honra`$env:PSModulePath` ###
+### <a name="module-auto-discovery-fully-honors-envpsmodulepath"></a>A deteção automática de módulo completamente honra `$env:PSModulePath` ###
 
-Módulo a deteção automática (módulos a carregar automaticamente sem um explícita Import-Module ao chamar um comando) foi introduzida no WMF 3. Ao introduziu, PowerShell verificado em termos de comandos no `$PSHome\Modules` antes de utilizar `$env:PSModulePath`.
+Módulo a deteção automática (módulos a carregar automaticamente sem um explícita Import-Module ao chamar um comando) foi introduzida no WMF 3.
+Ao introduziu, PowerShell verificado em termos de comandos no `$PSHome\Modules` antes de utilizar `$env:PSModulePath`.
 
-Este comportamento que respeite as alterações de WMF 5.1 `$env:PSModulePath` completamente. Este procedimento permite que um módulo criado por utilizador, que define os comandos fornecidos pelo PowerShell (por exemplo, `Get-ChildItem`) que seja automática-carregado e corretamente a substituir o comando incorporado.
+Este comportamento que respeite as alterações de WMF 5.1 `$env:PSModulePath` completamente.
+Este procedimento permite que um módulo criado por utilizador, que define os comandos fornecidos pelo PowerShell (por exemplo, `Get-ChildItem`) que seja automática-carregado e corretamente a substituir o comando incorporado.
 
-### <a name="file-redirection-no-longer-hard-codes--encoding-unicode"></a>Redirecionamento de ficheiros não mais impõe`-Encoding Unicode` ###
+### <a name="file-redirection-no-longer-hard-codes--encoding-unicode"></a>Redirecionamento de ficheiros não mais impõe `-Encoding Unicode` ###
 
 Em todas as versões anteriores do PowerShell, foi impossível controlar a codificação de ficheiro utilizado pela operadora de rede de redirecionamento de ficheiro, por exemplo, `Get-ChildItem > out.txt` porque PowerShell adicionados `-Encoding Unicode`.
 
@@ -32,7 +34,7 @@ A partir do WMF 5.1, agora, pode alterar a codificação de ficheiro de redireci
 $PSDefaultParameterValues["Out-File:Encoding"] = "Ascii"
 ```
 
-### <a name="fixed-a-regression-in-accessing-members-of-systemreflectiontypeinfo"></a>Corrigido um regressão ao aceder ao membros`System.Reflection.TypeInfo` ###
+### <a name="fixed-a-regression-in-accessing-members-of-systemreflectiontypeinfo"></a>Corrigido um regressão ao aceder ao membros `System.Reflection.TypeInfo` ###
 
 Um regressão introduzida no WMF 5.0 quebrou ao aceder aos membros de `System.Reflection.RuntimeType`, por exemplo, `[int].ImplementedInterfaces`.
 Corrigir este erro no WMF 5.1.
@@ -40,7 +42,8 @@ Corrigir este erro no WMF 5.1.
 
 ### <a name="fixed-some-issues-with-com-objects"></a>Corrigir alguns problemas com a objectos COM ###
 
-WMF 5.0 introduziu uma nova COM Gestor de enlaces para ao invocar métodos em objectos COM e aceder propriedades dos objectos COM. O Gestor de enlaces novo melhorada significativamente o desempenho, mas também introduziu alguns erros que foram corrigidos no WMF 5.1.
+WMF 5.0 introduziu uma nova COM Gestor de enlaces para ao invocar métodos em objectos COM e aceder propriedades dos objectos COM.
+O Gestor de enlaces novo melhorada significativamente o desempenho, mas também introduziu alguns erros que foram corrigidos no WMF 5.1.
 
 #### <a name="argument-conversions-were-not-always-performed-correctly"></a>Conversões de argumento não sempre executados corretamente ####
 
@@ -73,10 +76,11 @@ No exemplo acima, WMF 5.0 escrito incorretamente o Scripting.Dictionary pipeline
 
 Isto também alterar endereços [emitir 1752224 no Connect](https://connect.microsoft.com/PowerShell/feedback/details/1752224)
 
-### <a name="ordered-was-not-allowed-inside-classes"></a>`[ordered]`Não foi permitida dentro de classes ###
+### <a name="ordered-was-not-allowed-inside-classes"></a>`[ordered]` Não foi permitida dentro de classes ###
 
-WMF 5.0 introduzida classes com validação do tipo os literais que são utilizados em classes.  
-`[ordered]`aspeto de um tipo de literal mas não é um tipo .NET verdadeiro. WMF 5.0 incorretamente comunicou um erro no `[ordered]` dentro de uma classe:
+WMF 5.0 introduzida classes com validação do tipo os literais que são utilizados em classes.
+`[ordered]` aspeto de um tipo de literal mas não é um tipo .NET verdadeiro.
+WMF 5.0 incorretamente comunicou um erro no `[ordered]` dentro de uma classe:
 
 ```
 class CThing
@@ -95,13 +99,14 @@ Antes de WMF 5.1, se tiver várias versões de um módulo instalado e todos eles
 
 WMF 5.1 corrige isto, devolvendo a ajuda para a versão mais recente do tópico.
 
-`Get-Help`não fornece uma forma para especificar que versão pretende obter ajuda para. Para contornar este problema, navegue para o diretório de módulos e ver a ajuda diretamente com uma ferramenta como o seu editor favorito. 
+`Get-Help` não fornece uma forma para especificar que versão pretende obter ajuda para.
+Para contornar este problema, navegue para o diretório de módulos e ver a ajuda diretamente com uma ferramenta como o seu editor favorito.
 
 ### <a name="powershellexe-reading-from-stdin-stopped-working"></a>PowerShell.exe ler a partir de STDIN parou de funcionar
 
 Os clientes utilizam `powershell -command -` de aplicações nativas para executar o PowerShell transmitir no script através de STDIN Lamentamos, mas isto foi está inoperacional devido a outras alterações do anfitrião da consola.
 
-https://Windowsserver.uservoice.com/forums/301869-PowerShell/Suggestions/15854689-PowerShell-exe-Command-Is-broken-on-Windows-10
+https://windowsserver.uservoice.com/forums/301869-powershell/suggestions/15854689-powershell-exe-command-is-broken-on-windows-10
 
 ### <a name="powershellexe-creates-spike-in-cpu-usage-on-startup"></a>PowerShell.exe cria pico de pedidos na utilização da CPU no arranque
 
@@ -109,4 +114,3 @@ PowerShell utiliza uma consulta WMI para verificar se foi iniciado através da p
 A consulta de WMI termina inserirem tzres.mui.dll para cada processo no sistema, uma vez que a classe WMI Win32_Process tenta obter informações de fuso horário local.
 Isto resulta num grande CPU pico de pedidos de wmiprvse (o anfitrião do fornecedor WMI).
 Corrija consiste em utilizar chamadas da Win32 API para obter as mesmas informações em vez de através do WMI.
-

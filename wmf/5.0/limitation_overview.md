@@ -1,15 +1,15 @@
 ---
-ms.date: 2017-06-12
+ms.date: 06/12/2017
 author: JKeithB
 ms.topic: reference
-keywords: "WMF, o powershell, o programa de configuração"
-ms.openlocfilehash: e8620cdeb90792e86d091d3e19a169f9dfa690f9
-ms.sourcegitcommit: 75f70c7df01eea5e7a2c16f9a3ab1dd437a1f8fd
+keywords: wmf,powershell,setup
+ms.openlocfilehash: 306241bc5ec854c0e2ed835009a79b21fc249f14
+ms.sourcegitcommit: cf195b090b3223fa4917206dfec7f0b603873cdf
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 06/12/2017
+ms.lasthandoff: 04/09/2018
 ---
-# <a name="known-issues-and-limitations"></a>Limitações e problemas conhecidos
+# <a name="known-issues-and-limitations"></a>Limitações e Problemas Conhecidos
 
 <a name="powershell-shortcuts-are-broken-when-used-for-the-first-time"></a>Atalhos de PowerShell sejam interrompidos quando utilizado pela primeira vez
 ------------------------------------------------------------
@@ -63,23 +63,23 @@ Existem duas soluções para este problema, dependendo da versão do Windows Ser
 **Resolução:**
 - Para sistemas com **Windows Server 2008 R2**
   1. Abra Powershell como administrador
-  2. Execute o seguinte comando 
-  
+  2. Execute o seguinte comando
+
   ```powershell
     Set-SilLogging –TargetUri https://BlankTarget –CertificateThumbprint 0123456789
   ```
   3. Execute o comando e ignorar o erro, como os são esperados.
-  
+
   ```powershell
     Publish-SilData
    ```
   4. Elimine os ficheiros no diretório \windows\system32\logfiles\sil\.
-  
+
   ```powershell
     Remove-Item -Recurse $env:SystemRoot\System32\Logfiles\SIL\
   ```
   5. Instale todas as atualizações do Windows importante disponíveis e iniciar a operação de Sysyprep normalmente.
-  
+
 - Para sistemas com **Windows Server 2012**
   1.    Depois de instalar o WMF 5.0 no servidor para ser Sysprep'd, inicie sessão como administrador.
   2.    Copie Generize.xml do diretório \Windows\System32\Sysprep\ActionFiles\ para uma localização fora do diretório do Windows, C:\ por exemplo.
@@ -96,24 +96,23 @@ Existem duas soluções para este problema, dependendo da versão do Windows Ser
   7.    Execute o seguinte comando para assumir a propriedade do ficheiro Generalize.xml na pasta system32:
 
     ```
-    Takeown /f C:\Windows\System32\Sysprep\ActionFiles\Generalize.xml 
+    Takeown /f C:\Windows\System32\Sysprep\ActionFiles\Generalize.xml
     ```
 
   8.    Execute o comando seguinte para definir as permissões adequadas no ficheiro:
 
     ```
-    Cacls C:\Windows\System32\ Sysprep\ActionFiles\Generalize.xml /G `<AdministratorUserName>`:F 
+    Cacls C:\Windows\System32\ Sysprep\ActionFiles\Generalize.xml /G `<AdministratorUserName>`:F
     ```
-      * Responder Sim na linha de confirmação. 
+      * Responder Sim na linha de confirmação.
       * Tenha em atenção que `<AdministratorUserName>` deve ser substituído pelo nome de utilizador que seja administrador no computador. Por exemplo, "Administrador".
-      
+
   9.    Copie o ficheiro editado e guardado através de para o diretório de Sysprep utilizando o seguinte comando:
 
     ```
-    xcopy C:\Generalize.xml C:\Windows\System32\Sysprep\ActionFiles\Generalize.xml 
+    xcopy C:\Generalize.xml C:\Windows\System32\Sysprep\ActionFiles\Generalize.xml
     ```
       * Responder Sim para substituir (tenha em atenção que se não houver nenhuma linha de comandos para substituir, volte a verificar o caminho que introduziu).
       * Assume a que sua cópia editada Generalize.xml foi copiada para C:\.
 
   10.   Generalize.xml agora é atualizado com a solução. Execute o Sysprep com a opção de generalize ativada.
-

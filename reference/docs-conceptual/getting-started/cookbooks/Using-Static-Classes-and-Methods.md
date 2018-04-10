@@ -1,15 +1,15 @@
 ---
-ms.date: 2017-06-05
+ms.date: 06/05/2017
 keywords: PowerShell, o cmdlet
-title: "Utilizar Classes estáticas e métodos"
+title: Utilizar Classes e Métodos Estáticos
 ms.assetid: 418ad766-afa6-4b8c-9a44-471889af7fd9
-ms.openlocfilehash: fe41c7d6b45564e7b5bc2b922a18587c9745e26d
-ms.sourcegitcommit: 74255f0b5f386a072458af058a15240140acb294
+ms.openlocfilehash: 0f2b02c3a40365ad0335118b057a4e548c9f6535
+ms.sourcegitcommit: cf195b090b3223fa4917206dfec7f0b603873cdf
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 08/03/2017
+ms.lasthandoff: 04/09/2018
 ---
-# <a name="using-static-classes-and-methods"></a>Utilizar Classes estáticas e métodos
+# <a name="using-static-classes-and-methods"></a>Utilizar Classes e Métodos Estáticos
 Nem todas as classes de .NET Framework podem ser criadas utilizando **New-Object**. Por exemplo, se tentar criar um **System.Environment** ou um **Math** objeto com **New-Object**, obterá as seguintes mensagens de erro:
 
 ```
@@ -18,6 +18,7 @@ New-Object : Constructor not found. Cannot find an appropriate constructor for
 type System.Environment.
 At line:1 char:11
 + New-Object  <<<< System.Environment
+
 PS> New-Object System.Math
 New-Object : Constructor not found. Cannot find an appropriate constructor for
 type System.Math.
@@ -88,6 +89,7 @@ TickCount                               ExitCode
 Agora, pode selecionar propriedades para ver de System.Environment.
 
 #### <a name="displaying-static-properties-of-systemenvironment"></a>Apresentar as propriedades estáticas de System.Environment
+
 As propriedades de System.Environment também são estáticas e tem de ser especificadas de forma diferente de propriedades normais. Utilizamos **::** para indicar ao Windows PowerShell que queremos para trabalhar com um método estático ou uma propriedade. Para ver o comando que foi utilizado para iniciar o Windows PowerShell, verifique o **CommandLine** propriedade escrevendo:
 
 ```
@@ -113,6 +115,7 @@ False
 ```
 
 ### <a name="doing-math-with-systemmath"></a>Se o fizer bibliotecas com Math
+
 A classe estática Math é útil para a execução de algumas operações matemática. Os membros importantes **Math** são principalmente métodos, que iremos pode apresentar usando **Get-membro**.
 
 > [!NOTE]
@@ -181,4 +184,3 @@ PS> [System.Math]::Truncate(9.3)
 PS> [System.Math]::Truncate(-9.3)
 -9
 ```
-

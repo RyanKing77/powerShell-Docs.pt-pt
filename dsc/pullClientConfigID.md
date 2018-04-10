@@ -1,15 +1,15 @@
 ---
-ms.date: 2017-06-12
+ms.date: 06/12/2017
 ms.topic: conceptual
-keywords: "DSC, do powershell, a configuração, a configuração"
-title: "Configurar um cliente de extração com o ID de configuração"
-ms.openlocfilehash: 6e3dda1de0bfbf52fb876fdcd2dd2e99da4583dd
-ms.sourcegitcommit: a444406120e5af4e746cbbc0558fe89a7e78aef6
+keywords: DSC, do powershell, a configuração, a configuração
+title: Configurar um cliente de solicitação através de IDs de configuração
+ms.openlocfilehash: 93e533fd4e729e1af0124ad69ca7e384e1cb3aa4
+ms.sourcegitcommit: cf195b090b3223fa4917206dfec7f0b603873cdf
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 04/09/2018
 ---
-# <a name="setting-up-a-pull-client-using-configuration-id"></a>Configurar um cliente de extração com o ID de configuração
+# <a name="setting-up-a-pull-client-using-configuration-id"></a>Configurar um cliente de solicitação através de IDs de configuração
 
 > Aplica-se a: O Windows PowerShell 5.0
 
@@ -29,14 +29,14 @@ configuration PullClientConfigID
         {
             RefreshMode = 'Pull'
             ConfigurationID = '1d545e3b-60c3-47a0-bf65-5afc05182fd0'
-            RefreshFrequencyMins = 30 
+            RefreshFrequencyMins = 30
             RebootNodeIfNeeded = $true
         }
         ConfigurationRepositoryWeb CONTOSO-PullSrv
         {
             ServerURL = 'https://CONTOSO-PullSrv:8080/PSDSCPullServer.svc'
-            
-        }      
+
+        }
     }
 }
 PullClientConfigID
@@ -66,14 +66,14 @@ configuration PullClientConfigID
         {
             RefreshMode = 'Pull'
             ConfigurationID = '1d545e3b-60c3-47a0-bf65-5afc05182fd0'
-            RefreshFrequencyMins = 30 
+            RefreshFrequencyMins = 30
             RebootNodeIfNeeded = $true
         }
         ConfigurationRepositoryShare SMBPullServer
         {
             SourcePath = '\\SMBPullServer\PullSource'
-            
-        }     
+
+        }
     }
 }
 PullClientConfigID
@@ -81,7 +81,7 @@ PullClientConfigID
 
 ## <a name="resource-and-report-servers"></a>Servidores de recursos e o relatório
 
-Se especificar apenas um **ConfigurationRepositoryWeb** ou **ConfigurationRepositoryShare** bloquear na configuração da MMC (do exemplo anterior), o cliente de solicitação irá solicitar recursos a partir de servidor especificado, mas não enviarão relatórios ao mesmo. Pode utilizar um servidor de solicitação único para configurações, recursos e relatórios, mas tem de criar um **ReportRepositoryWeb** bloco para configurar o Reporting Services. 
+Se especificar apenas um **ConfigurationRepositoryWeb** ou **ConfigurationRepositoryShare** bloquear na configuração da MMC (do exemplo anterior), o cliente de solicitação irá solicitar recursos a partir de servidor especificado, mas não enviarão relatórios ao mesmo. Pode utilizar um servidor de solicitação único para configurações, recursos e relatórios, mas tem de criar um **ReportRepositoryWeb** bloco para configurar o Reporting Services.
 
 O exemplo seguinte mostra uma configuração meta do que configura um cliente para enviar relatórios de dados, para um servidor de solicitação único e recursos e configurações de extração.
 
@@ -95,17 +95,17 @@ configuration PullClientConfigID
         {
             RefreshMode = 'Pull'
             ConfigurationID = '1d545e3b-60c3-47a0-bf65-5afc05182fd0'
-            RefreshFrequencyMins = 30 
+            RefreshFrequencyMins = 30
             RebootNodeIfNeeded = $true
         }
 
         ConfigurationRepositoryWeb CONTOSO-PullSrv
         {
             ServerURL = 'https://CONTOSO-PullSrv:8080/PSDSCPullServer.svc'
-            
+
         }
-        
-        
+
+
         ReportServerWeb CONTOSO-PullSrv
         {
             ServerURL = 'https://CONTOSO-PullSrv:8080/PSDSCPullServer.svc'
@@ -129,16 +129,16 @@ configuration PullClientConfigID
         {
             RefreshMode = 'Pull'
             ConfigurationID = '1d545e3b-60c3-47a0-bf65-5afc05182fd0'
-            RefreshFrequencyMins = 30 
+            RefreshFrequencyMins = 30
             RebootNodeIfNeeded = $true
         }
 
         ConfigurationRepositoryWeb CONTOSO-PullSrv
         {
             ServerURL = 'https://CONTOSO-PullSrv:8080/PSDSCPullServer.svc'
-            
+
         }
-        
+
         ResourceRepositoryWeb CONTOSO-ResourceSrv
         {
             ServerURL = 'https://CONTOSO-REsourceSrv:8080/PSDSCPullServer.svc'
@@ -156,4 +156,3 @@ PullClientConfigID
 ## <a name="see-also"></a>Consulte Também
 
 * [Configurar um cliente de extração com nomes de configuração](pullClientConfigNames.md)
-

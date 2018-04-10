@@ -1,15 +1,15 @@
 ---
-ms.date: 2017-06-12
+ms.date: 06/12/2017
 ms.topic: conceptual
-keywords: "DSC, do powershell, a configuração, a configuração"
-title: "Separação de dados de configuração e de ambiente"
-ms.openlocfilehash: 18b18d805ac248b29526862591df5f0ff785937b
-ms.sourcegitcommit: 99227f62dcf827354770eb2c3e95c5cf6a3118b4
+keywords: DSC, do powershell, a configuração, a configuração
+title: Separar dados de configuração e de ambiente
+ms.openlocfilehash: c89e26105611eae59a926be1432079913c40671f
+ms.sourcegitcommit: cf195b090b3223fa4917206dfec7f0b603873cdf
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 03/15/2018
+ms.lasthandoff: 04/09/2018
 ---
-# <a name="separating-configuration-and-environment-data"></a>Separação de dados de configuração e de ambiente
+# <a name="separating-configuration-and-environment-data"></a>Separar dados de configuração e de ambiente
 
 >Aplica-se a: O Windows PowerShell 4.0, Windows PowerShell 5.0
 
@@ -26,18 +26,19 @@ Para obter uma descrição detalhada do **ConfigurationData** tabela hash, consu
 
 ## <a name="a-simple-example"></a>Um exemplo simples
 
-Vamos ver um exemplo muito simples para ver como isto funciona. Vamos criar uma configuração única que assegura que **IIS** está presente no alguns nós e que **Hyper-V** está presente na outros utilizadores: 
+Vamos ver um exemplo muito simples para ver como isto funciona.
+Vamos criar uma configuração única que assegura que **IIS** está presente no alguns nós e que **Hyper-V** está presente na outros utilizadores:
 
 ```powershell
 Configuration MyDscConfiguration {
-    
+
     Node $AllNodes.Where{$_.Role -eq "WebServer"}.NodeName
     {
         WindowsFeature IISInstall {
             Ensure = 'Present'
             Name   = 'Web-Server'
         }
-        
+
     }
     Node $AllNodes.Where{$_.Role -eq "VMHost"}.NodeName
     {
@@ -48,7 +49,7 @@ Configuration MyDscConfiguration {
     }
 }
 
-$MyData = 
+$MyData =
 @{
     AllNodes =
     @(
@@ -75,12 +76,12 @@ O resultado é que são criados dois ficheiros MOF:
     Directory: C:\DscTests\MyDscConfiguration
 
 
-Mode                LastWriteTime         Length Name                                                                                                                    
-----                -------------         ------ ----                                                                                                                    
--a----        3/31/2017   5:09 PM           1968 VM-1.mof                                                                                                                
--a----        3/31/2017   5:09 PM           1970 VM-2.mof  
+Mode                LastWriteTime         Length Name
+----                -------------         ------ ----
+-a----        3/31/2017   5:09 PM           1968 VM-1.mof
+-a----        3/31/2017   5:09 PM           1970 VM-2.mof
 ```
- 
+
 `$MyData` Especifica a dois nós diferentes, cada uma com a sua própria `NodeName` e `Role`. A configuração cria dinamicamente **nó** blocos, efetuando a coleção de nós que obtém a partir do `$MyData` (especificamente, `$AllNodes`) e filtra nessa coleção contra o `Role` propriedade...
 
 ## <a name="using-configuration-data-to-define-development-and-production-environments"></a>Com dados de configuração para definir a ambientes de desenvolvimento e de produção
@@ -128,7 +129,9 @@ Iremos definir os dados de ambiente de desenvolvimento e de produção no namd f
 
 ### <a name="configuration-script-file"></a>Ficheiro de script de configuração
 
-Agora, na configuração, que está definido num `.ps1` ficheiro, iremos filtrar os nós que definimos no `DevProdEnvData.psd1` pela respetiva função (`MSSQL`, `Dev`, ou ambos) e configurá-los em conformidade. O ambiente de desenvolvimento tem o SQL Server e o IIS num único nó, enquanto que o ambiente de produção tem-los em dois nós diferentes. O conteúdo do site também é diferente, tal como especificado pelo `SiteContents` propriedades.
+Agora, na configuração, que está definido num `.ps1` ficheiro, iremos filtrar os nós que definimos no `DevProdEnvData.psd1` pela respetiva função (`MSSQL`, `Dev`, ou ambos) e configurá-los em conformidade.
+O ambiente de desenvolvimento tem o SQL Server e o IIS num único nó, enquanto que o ambiente de produção tem-los em dois nós diferentes.
+O conteúdo do site também é diferente, tal como especificado pelo `SiteContents` propriedades.
 
 No final do script de configuração, chamamos a configuração (compilá-la para um documento MOF), passing `DevProdEnvData.psd1` como o `$ConfigurationData` parâmetro.
 
@@ -147,7 +150,7 @@ Configuration MyWebApp
    {
         # Install prerequisites
         WindowsFeature installdotNet35
-        {            
+        {
             Ensure      = "Present"
             Name        = "Net-Framework-Core"
             Source      = "c:\software\sxs"
@@ -182,7 +185,7 @@ Configuration MyWebApp
         }
 
         # Stop the default website
-        xWebsite DefaultSite 
+        xWebsite DefaultSite
         {
             Ensure       = 'Present'
             Name         = 'Default Web Site'
@@ -203,7 +206,7 @@ Configuration MyWebApp
             Type            = 'Directory'
             DependsOn       = '[WindowsFeature]AspNet45'
 
-        }       
+        }
 
 
         # Create the new Website
@@ -232,10 +235,10 @@ Quando executar esta configuração, são criados três ficheiros MOF (um para c
     Directory: C:\DscTests\MyWebApp
 
 
-Mode                LastWriteTime         Length Name                                                                                                                    
-----                -------------         ------ ----                                                                                                                    
--a----        3/31/2017   5:47 PM           2944 Prod-SQL.mof                                                                                                            
--a----        3/31/2017   5:47 PM           6994 Dev.mof                                                                                                                 
+Mode                LastWriteTime         Length Name
+----                -------------         ------ ----
+-a----        3/31/2017   5:47 PM           2944 Prod-SQL.mof
+-a----        3/31/2017   5:47 PM           6994 Dev.mof
 -a----        3/31/2017   5:47 PM           5338 Prod-IIS.mof
 ```
 
@@ -257,39 +260,39 @@ Neste exemplo, `ConfigFileContents` é acedida com a linha:
 
 
 ```powershell
-$MyData = 
+$MyData =
 @{
-    AllNodes = 
+    AllNodes =
     @(
         @{
             NodeName           = “*”
             LogPath            = “C:\Logs”
         },
- 
+
         @{
             NodeName = “VM-1”
             SiteContents = “C:\Site1”
             SiteName = “Website1”
         },
- 
-        
+
+
         @{
             NodeName = “VM-2”;
             SiteContents = “C:\Site2”
             SiteName = “Website2”
         }
     );
- 
-    NonNodeData = 
+
+    NonNodeData =
     @{
         ConfigFileContents = (Get-Content C:\Template\Config.xml)
-     }   
-} 
- 
+     }
+}
+
 configuration WebsiteConfig
 {
     Import-DscResource -ModuleName xWebAdministration -Name MSFT_xWebsite
- 
+
     node $AllNodes.NodeName
     {
         xWebsite Site
@@ -298,14 +301,14 @@ configuration WebsiteConfig
             PhysicalPath = $Node.SiteContents
             Ensure       = “Present”
         }
- 
+
         File ConfigFile
         {
             DestinationPath = $Node.SiteContents + “\\config.xml”
             Contents = $ConfigurationData.NonNodeData.ConfigFileContents
         }
     }
-} 
+}
 ```
 
 
@@ -313,4 +316,3 @@ configuration WebsiteConfig
 - [Utilizar dados de configuração](configData.md)
 - [Opções de credenciais nos dados de configuração](configDataCredentials.md)
 - [Configurações de DSC](configurations.md)
-

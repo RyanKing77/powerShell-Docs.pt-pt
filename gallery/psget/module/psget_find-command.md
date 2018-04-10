@@ -1,14 +1,14 @@
 ---
-ms.date: 2017-06-12
+ms.date: 06/12/2017
 contributor: manikb
 ms.topic: reference
 keywords: cmdlet do powershell do galeria, psget
 title: Encontrar o comando
-ms.openlocfilehash: f867f12b1c6efad30a04581c6f36c5a77a2fb2ae
-ms.sourcegitcommit: 75f70c7df01eea5e7a2c16f9a3ab1dd437a1f8fd
+ms.openlocfilehash: 26ddf4824816db245131a0fc95b7d2a88bef8f4c
+ms.sourcegitcommit: cf195b090b3223fa4917206dfec7f0b603873cdf
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 06/12/2017
+ms.lasthandoff: 04/09/2018
 ---
 # <a name="find-command"></a>Encontrar o comando
 
@@ -34,7 +34,7 @@ Get-Command -Name Find-Command -Module PowerShellGet -Syntax
 
 ## <a name="cmdlet-online-help-reference"></a>Referência de ajuda online do cmdlet
 
-[Encontrar o comando](http://go.microsoft.com/fwlink/?LinkId=733636)
+[Find-Command](http://go.microsoft.com/fwlink/?LinkId=733636)
 
 ## <a name="example-commands"></a>Comandos de exemplo
 ```powershell
@@ -78,4 +78,3 @@ Find-Command -Filter RBAC
 Find-Command -Tag Azure, DSC
 
 ```
-

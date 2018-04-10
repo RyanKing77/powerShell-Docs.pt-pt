@@ -1,15 +1,16 @@
 ---
-ms.date: 2017-06-05
+ms.date: 06/05/2017
 keywords: PowerShell, o cmdlet
-title: "Utilizando o separador de expansão"
+title: Utilizar a Expansão por Tabulação
 ms.assetid: c8730471-bf6a-43b8-ab1d-f9ef5a74f04e
-ms.openlocfilehash: 8412bd97a95719f07b16c6671d3b8801bbfab8e3
-ms.sourcegitcommit: 4807ab554d55fdee499980835bcc279368b1df68
+ms.openlocfilehash: 3d047bf0691c8a304d7637aa50fba6ae99709a82
+ms.sourcegitcommit: cf195b090b3223fa4917206dfec7f0b603873cdf
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 11/07/2017
+ms.lasthandoff: 04/09/2018
 ---
-# <a name="using-tab-expansion"></a>Utilizando o separador de expansão
+# <a name="using-tab-expansion"></a>Utilizar a Expansão por Tabulação
+
 Shells da linha de comandos, muitas vezes, fornecem uma forma para concluir automaticamente, os nomes dos ficheiros de longos ou comandos acelerar a entrada de comando e fornecer. Windows PowerShell permite-lhe preencher os nomes de ficheiros e nomes de cmdlet, premindo o **separador** chave.
 
 > [!NOTE]
@@ -45,4 +46,3 @@ PS> Get-Content C:\windows\actsetup.log
 
 > [!NOTE]
 > Uma limitação do processo de expansão de separador é que os separadores são sempre interpretados como tentativas para concluir uma palavra. Se copiar e colar exemplos de comando para uma consola do PowerShell, certifique-se de que o exemplo contém separadores; Se tiver, os resultados imprevisíveis e quase certamente não serão os esperados.
-

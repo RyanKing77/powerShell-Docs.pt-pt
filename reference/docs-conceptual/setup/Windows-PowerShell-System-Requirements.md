@@ -1,15 +1,15 @@
 ---
-ms.date: 2017-06-05
+ms.date: 06/05/2017
 keywords: PowerShell, o cmdlet
-title: Requisitos de sistema do PowerShell do Windows
+title: Requisitos de Sistema do Windows PowerShell
 ms.assetid: 6d1d3c75-3be4-4fc9-8805-ca9b2c454d42
-ms.openlocfilehash: 33824eac4de28de97990ffa1ea2500e61e03e847
-ms.sourcegitcommit: 3720ce4efb6735694cfb53a1b793d949af5d1bc5
+ms.openlocfilehash: a15b5b33b5296befae833e520cfdfbd41a07b122
+ms.sourcegitcommit: cf195b090b3223fa4917206dfec7f0b603873cdf
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 09/29/2017
+ms.lasthandoff: 04/09/2018
 ---
-# <a name="windows-powershell-system-requirements"></a>Requisitos de sistema do PowerShell do Windows
+# <a name="windows-powershell-system-requirements"></a>Requisitos de Sistema do Windows PowerShell
 Este tópico lista os requisitos de sistema para o Windows PowerShell 3.0, o Windows PowerShell 4.0 e o Windows PowerShell 5.0 e para funcionalidades especiais, como o Windows PowerShell Integrated Scripting Environment (ISE), comandos CIM e fluxos de trabalho.
 
 Windows® 8.1 e Windows Server® 2012 R2 incluem todos os programas necessários. Este tópico foi concebido para utilizadores das versões anteriores do Windows.
@@ -85,11 +85,11 @@ No entanto, alguns itens, tais como o seguinte, necessitam de uma interface grá
 
     1.  [Out-GridView](https://docs.microsoft.com/en-us/powershell/module/microsoft.powershell.utility/out-gridview)
 
-    2.  [Mostrar comando](https://docs.microsoft.com/en-us/powershell/module/Microsoft.PowerShell.Utility/Show-Command)
+    2.  [Show-Command](https://docs.microsoft.com/en-us/powershell/module/Microsoft.PowerShell.Utility/Show-Command)
 
-    3.  [Mostrar ControlPanelItem](https://docs.microsoft.com/en-us/powershell/module/Microsoft.PowerShell.Management/Show-ControlPanelItem)
+    3.  [Show-ControlPanelItem](https://docs.microsoft.com/en-us/powershell/module/Microsoft.PowerShell.Management/Show-ControlPanelItem)
 
-    4.  [Mostrar-registo de eventos](https://docs.microsoft.com/en-us/powershell/module/Microsoft.PowerShell.Management/Show-EventLog)
+    4.  [Show-EventLog](https://docs.microsoft.com/en-us/powershell/module/Microsoft.PowerShell.Management/Show-EventLog)
 
 - Parâmetros
 
@@ -111,7 +111,7 @@ O Windows PowerShell 2.0, o Windows PowerShell 3.0 e o Windows PowerShell 4.0 ex
 
 - [Cmdlets de serviço (BITS) de transferência inteligente em segundo plano](http://go.microsoft.com/fwlink/?LinkId=257514)
 
-- [Get-registo de eventos](https://docs.microsoft.com/en-us/powershell/module/Microsoft.PowerShell.Management/Get-EventLog)
+- [Get-EventLog](https://docs.microsoft.com/en-us/powershell/module/Microsoft.PowerShell.Management/Get-EventLog)
 
 - [Get-WinEvent](https://docs.microsoft.com/en-us/powershell/module/Microsoft.PowerShell.Diagnostics/Get-WinEvent)
 
@@ -125,4 +125,3 @@ Além disso, o **WinRM** serviço não está presente no Windows PE.
 - [Introdução ao Windows PowerShell](../getting-started/Getting-Started-with-Windows-PowerShell.md)
 - [Instalar o Windows PowerShell](Installing-Windows-PowerShell.md)
 - [A partir do Windows PowerShell](Starting-Windows-PowerShell.md)
-

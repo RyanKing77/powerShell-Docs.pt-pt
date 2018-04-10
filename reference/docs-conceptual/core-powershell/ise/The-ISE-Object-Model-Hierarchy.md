@@ -1,15 +1,18 @@
 ---
-ms.date: 2017-06-05
+ms.date: 06/05/2017
 keywords: PowerShell, o cmdlet
-title: A hierarquia de modelo de objeto ISE
-ms.openlocfilehash: 2df6d40f39dbe14bd3f46a6400cde4a6e91052ef
-ms.sourcegitcommit: d6ab9ab5909ed59cce4ce30e29457e0e75c7ac12
+title: Hierarquia do Modelo de Objeto ISE
+ms.openlocfilehash: 0159707b1050c412a74da3d3ca02a46cea982556
+ms.sourcegitcommit: cf195b090b3223fa4917206dfec7f0b603873cdf
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 09/08/2017
+ms.lasthandoff: 04/09/2018
 ---
-# <a name="the-ise-object-model-hierarchy"></a>A hierarquia de modelo de objeto ISE
-Este tópico mostra a hierarquia de objetos que fazem parte do Windows PowerShell Integrated Scripting Environment (ISE). ISE do Windows PowerShell está incluído no Windows PowerShell 3.0 e no Windows PowerShell 4.0. Clique num objeto para leva-o para a documentação de referência para a classe que define o objeto.
+# <a name="the-ise-object-model-hierarchy"></a>Hierarquia do Modelo de Objeto ISE
+
+Este tópico mostra a hierarquia de objetos que fazem parte do Windows PowerShell Integrated Scripting Environment (ISE).
+ISE do Windows PowerShell está incluído no Windows PowerShell 3.0 e no Windows PowerShell 4.0.
+Clique num objeto para leva-o para a documentação de referência para a classe que define o objeto.
 
 ## <a name="psise-object"></a>objeto de $psISE
 
@@ -43,8 +46,10 @@ O objeto de ISEOptions representa várias definições de ISE do Windows PowerSh
 ## <a name="psisepowershelltabsthe-powershelltabcollection-objectmd"></a>[$psISE.PowerShellTabs](The-PowerShellTabCollection-Object.md)
 
 O **$psISE.PowerShellTabs** objeto é uma instância do [PowerShellTabCollection](The-PowerShellTabCollection-Object.md) classe.
-É uma coleção de todos os atualmente abertos PowerShell separadores que representam o Windows PowerShell disponíveis execute ambientes no computador local ou em computadores remotos ligados. Cada membro da coleção é uma instância do [PowerShellTab](The-PowerShellTab-Object.md) classe.
+É uma coleção de todos os atualmente abertos PowerShell separadores que representam o Windows PowerShell disponíveis execute ambientes no computador local ou em computadores remotos ligados.
+Cada membro da coleção é uma instância do [PowerShellTab](The-PowerShellTab-Object.md) classe.
 
 ## <a name="see-also"></a>Consulte Também
-- [O ISE do Windows PowerShell modelo de objeto de Scripting](The-Windows-PowerShell-ISE-Scripting-Object-Model.md)
-- [Referência de modelo de objeto do Windows PowerShell ISE](Windows-PowerShell-ISE-Object-Model-Reference.md)
+
+- [Objetivo do Windows PowerShell ISE modelo de objeto de Scripting do](Purpose-of-the-Windows-PowerShell-ISE-Scripting-Object-Model.md)
+- [Hierarquia do Modelo de Objeto ISE](The-ISE-Object-Model-Hierarchy.md)

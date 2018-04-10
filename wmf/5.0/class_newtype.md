@@ -1,21 +1,22 @@
 ---
-ms.date: 2017-06-12
+ms.date: 06/12/2017
 author: JKeithB
 ms.topic: reference
-keywords: "WMF, o powershell, o programa de configuração"
-ms.openlocfilehash: c7318552969c44f3b79f82efd71e6a72bfabef6b
-ms.sourcegitcommit: 75f70c7df01eea5e7a2c16f9a3ab1dd437a1f8fd
+keywords: wmf,powershell,setup
+ms.openlocfilehash: 85e9206ffef76fb4bd7714d847888e6e5bbcc4ec
+ms.sourcegitcommit: cf195b090b3223fa4917206dfec7f0b603873cdf
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 06/12/2017
+ms.lasthandoff: 04/09/2018
 ---
-# <a name="new-language-features-in-powershell-50"></a>Novas funcionalidades de idioma no PowerShell 5.0 
+# <a name="new-language-features-in-powershell-50"></a>Novas funcionalidades de idioma no PowerShell 5.0
 
 PowerShell 5.0 apresenta os seguintes elementos de linguagem nova no Windows PowerShell:
 
 ## <a name="class-keyword"></a>Classe de palavra-chave
 
-O **classe** palavra-chave define uma nova classe. Este é um valor de true tipo .NET Framework. São membros de classe pública, mas apenas público no âmbito do módulo.
+O **classe** palavra-chave define uma nova classe. Este é um valor de true tipo .NET Framework.
+São membros de classe pública, mas apenas público no âmbito do módulo.
 Não pode referenciar o nome do tipo como uma cadeia (por exemplo, `New-Object` não funciona), e nesta versão, não é possível utilizar um literal do tipo (por exemplo, `[MyClass]`) fora o ficheiro de módulo do script no qual a classe estiver definida.
 
 ```powershell
@@ -57,18 +58,18 @@ enum SomeEnum { Max = 42 }
 enum OtherEnum { Max = [SomeEnum]::Max + 1 }
 ```
 
-## <a name="import-dscresource"></a>Importar DscResource
+## <a name="import-dscresource"></a>Import-DscResource
 
 **Importar DscResource** agora é uma palavra-chave dinâmica verdadeira.
 PowerShell analisa o módulo de raiz do módulo especificado, a procurar classes que contêm o **DscResource** atributo.
 
 ## <a name="implementingassembly"></a>ImplementingAssembly
 
-Um novo campo **ImplementingAssembly**, foi adicionada ao ModuleInfo. Está definido para a assemblagem dinâmica criado para um módulo de script, se o script define as classes, ou a assemblagem carregada para módulos binários. Não é definido quando ModuleType = manifesto. 
+Um novo campo **ImplementingAssembly**, foi adicionada ao ModuleInfo. Está definido para a assemblagem dinâmica criado para um módulo de script, se o script define as classes, ou a assemblagem carregada para módulos binários. Não é definido quando ModuleType = manifesto.
 
 Reflexão no **ImplementingAssembly** campo Deteta recursos num módulo. Isto significa que pode descobrir recursos escritos no PowerShell ou outros idiomas geridos.
 
-Campos com inicializadores:      
+Campos com inicializadores:
 
 ```powershell
 [int] $i = 5
@@ -86,11 +87,11 @@ Um tipo é opcional.
 $s = "hello"
 ```
 
-Todos os membros são públicos. 
+Todos os membros são públicos.
 
 ## <a name="constructors-and-instantiation"></a>Construtores e Instanciação
 
-Classes do Windows PowerShell podem ter construtores; têm o mesmo nome que a respetiva classe. Construtores podem estar sobrecarregados. São suportados construtores estáticos. Propriedades com expressões de inicialização são inicializadas antes de executar qualquer código num construtor. As propriedades estáticas são inicializadas antes do corpo do construtor estático e as propriedades da instância estão inicializadas antes do corpo do construtor não estático. Atualmente, não há nenhuma sintaxe para chamar um construtor de outro construtor (como o C\# sintaxe ": this()"). A solução é para definir um método Init comum. 
+Classes do Windows PowerShell podem ter construtores; têm o mesmo nome que a respetiva classe. Construtores podem estar sobrecarregados. São suportados construtores estáticos. Propriedades com expressões de inicialização são inicializadas antes de executar qualquer código num construtor. As propriedades estáticas são inicializadas antes do corpo do construtor estático e as propriedades da instância estão inicializadas antes do corpo do construtor não estático. Atualmente, não há nenhuma sintaxe para chamar um construtor de outro construtor (como o C\# sintaxe ": this()"). A solução é para definir um método Init comum.
 
 Seguem-se formas de classes instanciar nesta versão.
 
@@ -113,7 +114,7 @@ $c = [MyClass]::new(@(42,43,44), "Hello")
 
 Nesta versão, New-Object não funciona com classes definidas no Windows PowerShell. Também nesta versão, o nome do tipo só é visível lexically, ou seja, não são visível fora do módulo ou script que define a classe. As funções podem devolver instâncias de uma classe definida no Windows PowerShell e instâncias de trabalho também fora do módulo ou script.
 
-`Get-Member -Static`lista construtores, para que possa vê sobrecargas como qualquer outro método. O desempenho desta sintaxe também é significativamente mais rápido do que New-Object.
+`Get-Member -Static` lista construtores, para que possa vê sobrecargas como qualquer outro método. O desempenho desta sintaxe também é significativamente mais rápido do que New-Object.
 
 O método pseudo-estático denominado **novo** funciona com tipos de .NET, conforme mostrado no exemplo seguinte.
 
@@ -151,12 +152,12 @@ Invocação de métodos:
 
 ```powershell
 $b = [MyClass]::new()
-$b.DoSomething(42) 
+$b.DoSomething(42)
 ```
 
 Sobrecarregado métodos - ou seja, os que são com o mesmo método existente, mas diferenciadas pelos respetivos valores especificados – também são suportados.
 
-## <a name="properties"></a>Propriedades 
+## <a name="properties"></a>Propriedades
 
 Todas as propriedades são públicas. Propriedades necessitam de uma nova linha ou um ponto e vírgula. Não se for especificado nenhum tipo de objeto, o tipo de propriedade é o objeto.
 
@@ -210,7 +211,8 @@ $v -eq $d # true
 
 ## <a name="end-to-end-example"></a>Exemplo de ponto a ponto
 
-O exemplo seguinte cria várias classes novas e personalizadas para implementar um idioma de folha de estilo dinâmica HTML (DSL). Em seguida, o exemplo adiciona funções de programa auxiliar para criar tipos de elemento específico como parte da classe de elemento, tais como os estilos do cabeçalho e tabelas, porque os tipos não podem ser utilizados fora do âmbito de um módulo.
+O exemplo seguinte cria várias classes novas e personalizadas para implementar um idioma de folha de estilo dinâmica HTML (DSL).
+Em seguida, o exemplo adiciona funções de programa auxiliar para criar tipos de elemento específico como parte da classe de elemento, tais como os estilos do cabeçalho e tabelas, porque os tipos não podem ser utilizados fora do âmbito de um módulo.
 
 ```powershell
 # Classes that define the structure of the document
@@ -220,7 +222,7 @@ class Html
     [string] $docType
     [HtmlHead] $Head
     [Element[]] $Body
-    
+
     [string] Render()
     {
         $text = "<html>`n<head>`n"
@@ -334,4 +336,3 @@ function Style
 #
 function Html ([HTML] $doc) { return $doc }
 ```
-

@@ -1,15 +1,15 @@
 ---
-ms.date: 2017-06-12
+ms.date: 06/12/2017
 ms.topic: conceptual
-keywords: "DSC, do powershell, a configuração, a configuração"
-title: "Método de GetConfigurationResultOutput da classe MSFT_DSCLocalConfigurationManager"
-ms.openlocfilehash: f6106bb28dc20004b5bbb6df2d8e719cf0c453f0
-ms.sourcegitcommit: a444406120e5af4e746cbbc0558fe89a7e78aef6
+keywords: DSC, do powershell, a configuração, a configuração
+title: Método GetConfigurationResultOutput da classe MSFT_DSCLocalConfigurationManager
+ms.openlocfilehash: f4c2ddaa37cdafeff1a442f3f1fa656788a1c6c8
+ms.sourcegitcommit: cf195b090b3223fa4917206dfec7f0b603873cdf
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 04/09/2018
 ---
-# <a name="getconfigurationresultoutput-method-of-the-msftdsclocalconfigurationmanager-class"></a>Método de GetConfigurationResultOutput da classe MSFT_DSCLocalConfigurationManager
+# <a name="getconfigurationresultoutput-method-of-the-msftdsclocalconfigurationmanager-class"></a>Método GetConfigurationResultOutput da classe MSFT_DSCLocalConfigurationManager
 
 Obtém o resultado de agente de configuração associado uma tarefa específica.
 
@@ -27,14 +27,11 @@ uint32 GetConfigurationResultOutput(
 <a name="parameters"></a>Parâmetros
 ----------
 
-*jobId* \[in\]  
-O ID da tarefa para o qual pretende obter dados de saída.
+*jobId* \[no\] o ID da tarefa para o qual pretende obter dados de saída.
 
-*resumeOutputBookmark* \[in\]  
-Especifica que o resultado deve ser uma continuação de um marcador anterior.
+*resumeOutputBookmark* \[no\] Especifica que o resultado deve ser uma continuação de um marcador anterior.
 
-*output* \[out\]  
-A saída para a tarefa especificada.
+*saída* \[saída\] a saída para a tarefa especificada.
 
 ## <a name="return-value"></a>Valor devolvido
 ------------
@@ -56,10 +53,3 @@ Este é um método estático.
 
 
 [**MSFT_DSCLocalConfigurationManager**](msft-dsclocalconfigurationmanager.md)
-
- 
-
- 
-
-
-

@@ -1,16 +1,15 @@
 ---
-ms.date: 2017-06-12
+ms.date: 06/12/2017
 author: JKeithB
 ms.topic: reference
-keywords: "WMF, o powershell, o programa de configuração"
-ms.openlocfilehash: 2341ffff0dc56b87ad69f84d01666bfda97bf9bf
-ms.sourcegitcommit: 75f70c7df01eea5e7a2c16f9a3ab1dd437a1f8fd
+keywords: wmf,powershell,setup
+ms.openlocfilehash: 57a5b17b6e1db8dea3ce63c9346b9e85be407ea3
+ms.sourcegitcommit: cf195b090b3223fa4917206dfec7f0b603873cdf
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 06/12/2017
+ms.lasthandoff: 04/09/2018
 ---
-# <a name="dsc-resource-script-debugging"></a>A depuração de scripts de recursos de DSC
+# <a name="dsc-resource-script-debugging"></a>Depuração de Scripts de Recursos de DSC
 
 WMF 5.0 inclui suporte para a depuração de scripts de recursos de DSC enquanto são executadas em nós de destino.
 Para obter mais informações, consulte [recursos de DSC depuração](https://msdn.microsoft.com/powershell/dsc/debugresource).
-

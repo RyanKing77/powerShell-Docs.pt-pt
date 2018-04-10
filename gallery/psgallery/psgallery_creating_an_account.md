@@ -1,28 +1,31 @@
 ---
-ms.date: 2017-06-12
+ms.date: 06/12/2017
 contributor: JKeithB
 ms.topic: conceptual
 keywords: cmdlet do powershell do galeria, psgallery
 title: Criar uma conta de galeria do PowerShell
-ms.openlocfilehash: 5af38884d819cb9c600a061109233614bd33666f
-ms.sourcegitcommit: 99227f62dcf827354770eb2c3e95c5cf6a3118b4
+ms.openlocfilehash: c9c263a1926957cbdf059e062326b1903c117f46
+ms.sourcegitcommit: cf195b090b3223fa4917206dfec7f0b603873cdf
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 03/15/2018
+ms.lasthandoff: 04/09/2018
 ---
 ## <a name="creating-a-powershell-gallery-account"></a>Criar uma conta de galeria do PowerShell
 
-Tem de ser estabelecida uma conta de galeria do PowerShell antes de publicar nada para a galeria do PowerShell. As contas de galeria do PowerShell devem ser ligadas a uma conta de e-mail do Azure Active Directory ou uma conta de e-mail do Microsoft (com um domínio do outlook.com, hotmail.com, etc.)
+Tem de ser estabelecida uma conta de galeria do PowerShell antes de publicar nada para a galeria do PowerShell.
+As contas de galeria do PowerShell devem ser ligadas a uma conta de e-mail do Azure Active Directory ou uma conta de e-mail do Microsoft (com um domínio do outlook.com, hotmail.com, etc.)
 
-Para criar uma conta de galeria do PowerShell, aceda a https://PowerShellGallery.com e clique em "Registar" (ver a imagem abaixo). 
+Para criar uma conta de galeria do PowerShell, aceda a https://PowerShellGallery.com e clique em "Registar" (ver a imagem abaixo).
 
 ![Registar a nova conta](./images/CreatingAccount-Register.png)
 
-Na página seguinte, para utilizar uma conta do Azure Active Directory, selecione "Trabalho ou escola conta" e iniciar sessão com a sua conta. Para utilizar uma conta Microsoft - por exemplo, um num domínio Hotmail.com ou Outlook.com - escolha "Conta pessoal" e iniciar sessão. 
+Na página seguinte, para utilizar uma conta do Azure Active Directory, selecione "Trabalho ou escola conta" e iniciar sessão com a sua conta.
+Para utilizar uma conta Microsoft - por exemplo, um num domínio Hotmail.com ou Outlook.com - escolha "Conta pessoal" e iniciar sessão.
 
-Depois de ter sessão iniciada, será solicitado para criar um nome de utilizador para a galeria do PowerShell. Reveja os termos de utilização e a política de privacidade que estejam ligadas no, introduza um nome de utilizador e, em seguida, clique em registar.
+Depois de ter sessão iniciada, será solicitado para criar um nome de utilizador para a galeria do PowerShell.
+Reveja os termos de utilização e a política de privacidade que estejam ligadas no, introduza um nome de utilizador e, em seguida, clique em registar.
 
-Nota: Não é possível alterar este nome de conta quando for criado.  
+Nota: Não é possível alterar este nome de conta quando for criado.
 Consulte [Gerir proprietários do Item](https://msdn.microsoft.com/powershell/gallery/psgallery/managing-item-owners) para obter detalhes adicionais relacionados com este.
 
 ## <a name="recommended-practices-for-powershell-gallery-accounts"></a>Práticas recomendadas para contas de galeria do PowerShell
@@ -32,8 +35,8 @@ Todos os communiction com os proprietários de itens de galeria do PowerShell é
 Se não conseguimos contactar o proprietário do item, a equipa de operações poderá ser necessário eliminar um item em algumas circunstâncias.
 
 As organizações a publiquem para a galeria do PowerShell, muitas vezes, criar uma conta exclusiva para o efeito no Outlook.com ou outro domínio da conta Microsoft.
-Em muitos casos essa conta não é regularmente monitorizada. Nesse caso é uma melhor prática utilizar o reencaminhamento do Outlook para enviar correio eletrónico para outra conta, normalmente, um dentro da organização, que será monitorizada pela owner(s) item.
+Em muitos casos essa conta não é regularmente monitorizada.
+Nesse caso é uma melhor prática utilizar o reencaminhamento do Outlook para enviar correio eletrónico para outra conta, normalmente, um dentro da organização, que será monitorizada pela owner(s) item.
 
 Se existirem vários proprietários associados um item, todas as comunicações que vêm da galeria do PowerShell passa a todos os proprietários.
-Consulte [Gerir proprietários do Item](https://msdn.microsoft.com/powershell/gallery/psgallery/managing-item-owners) para obter detalhes adicionais sobre como adicionar os proprietários de um item. 
-
+Consulte [Gerir proprietários do Item](https://msdn.microsoft.com/powershell/gallery/psgallery/managing-item-owners) para obter detalhes adicionais sobre como adicionar os proprietários de um item.

@@ -1,18 +1,18 @@
-# <a name="installing-powershell-core-on-windows"></a>Instalar o núcleo do PowerShell no Windows
+# <a name="installing-powershell-core-on-windows"></a>Instalar o PowerShell Core no Windows
 
 ## <a name="msi"></a>MSI
 
 Para instalar o PowerShell num cliente Windows ou Windows Server (funciona no Windows 7 SP1, Server 2008 R2 e posterior), transfira o pacote MSI da nossa GitHub [versões][] página.
 
-O ficheiro MSI aspeto-`PowerShell-6.0.0.<buildversion>.<os-arch>.msi`
+O ficheiro MSI aspeto- `PowerShell-6.0.0.<buildversion>.<os-arch>.msi`
 <!-- TODO: should be updated to point to the Download Center as well -->
 
 Depois de transferido, faça duplo clique o instalador e siga as instruções.
 
 Não há um atalho colocado no Menu Iniciar após a instalação.
 
-* Por predefinição, o pacote está instalado para`$env:ProgramFiles\PowerShell\`
-* Pode iniciar PowerShell através do Menu Iniciar ou`$env:ProgramFiles\PowerShell\pwsh.exe`
+* Por predefinição, o pacote está instalado para `$env:ProgramFiles\PowerShell\`
+* Pode iniciar PowerShell através do Menu Iniciar ou `$env:ProgramFiles\PowerShell\pwsh.exe`
 
 ### <a name="prerequisites"></a>Pré-requisitos
 

@@ -1,13 +1,13 @@
 ---
-ms.date: 2017-06-12
+ms.date: 06/12/2017
 ms.topic: conceptual
-keywords: "DSC, do powershell, a configuração, a configuração"
+keywords: DSC, do powershell, a configuração, a configuração
 title: DSC de Linux nxFile recursos
-ms.openlocfilehash: 7ee8a37ee63a70b1c8c69dc79dfbc77c1f583234
-ms.sourcegitcommit: 99227f62dcf827354770eb2c3e95c5cf6a3118b4
+ms.openlocfilehash: 41b5ebde299c47b38d7a6e7f71607332b24ca0e4
+ms.sourcegitcommit: cf195b090b3223fa4917206dfec7f0b603873cdf
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 03/15/2018
+ms.lasthandoff: 04/09/2018
 ---
 # <a name="dsc-for-linux-nxfile-resource"></a>DSC de Linux nxFile recursos
 
@@ -37,20 +37,20 @@ nxFile <string> #ResourceName
 
 ## <a name="properties"></a>Propriedades
 
-|  Propriedade |  Descrição | 
+|  Propriedade |  Descrição |
 |---|---|
-| DestinationPath| Especifica a localização onde pretende garantir o estado de um ficheiro ou diretório.| 
-| SourcePath| Especifica o caminho a partir dos quais pretende copiar o recurso do ficheiro ou pasta. Este caminho pode ser um caminho local, ou um `http/https/ftp` URL. Remoto `http/https/ftp` URLs só são suportadas quando o valor da **tipo** propriedade é o ficheiro.| 
-| Certifique-se| Determina se deve verificar se o ficheiro existe. Defina esta propriedade para "Presente" para garantir que o ficheiro existe. Defina-o para "Ausente", certifique-se de que o ficheiro não existe. O valor predefinido é "Presente".| 
-| Tipo| Especifica se o recurso que está a ser configurado é um diretório ou um ficheiro. Defina esta propriedade para "diretório" para indicar que o recurso é um diretório. Defina-o para "do ficheiro" para indicar que o recurso é um ficheiro. O valor predefinido é "ficheiros"| 
-| Conteúdos| Especifica o conteúdo de um ficheiro, como uma cadeia específica.| 
-| Soma de verificação| Define o tipo a utilizar ao determinar se os dois ficheiros são as mesmas. Se **soma de verificação** não for especificado, apenas o nome de ficheiro ou diretório é utilizado para comparação. Os valores são: "ctime", "mtime" ou "md5".| 
-| Recurse| Indica se subdiretórios estão incluídos. Defina esta propriedade como **$true** para indicar que pretende que o subdiretórios a incluir. A predefinição é **$false**. **Nota:** esta propriedade só é válido quando o **tipo** propriedade está definida para o diretório.| 
-| Force| Determinadas operações de ficheiros (como substituir um ficheiro ou eliminar um diretório que não está vazio) resultará num erro. Utilizar o **Force** propriedade substitui esses erros. O valor predefinido é **$false**.| 
-| Ligações| Especifica o comportamento pretendido para as ligações simbólicas. Definir esta propriedade para "seguir", siga as ligações simbólicas e atuar sobre o destino de ligações (por exemplo. Copie o ficheiro em vez da ligação). Definir esta propriedade para "Gerir" para atuar na ligação (por exemplo. Copie a ligação próprio). Defina esta propriedade para "Ignorar" para ignorar as ligações simbólicas.| 
-| Grupo| O nome do **grupo** possuir o ficheiro ou diretório.| 
-| Modo| Especifica as permissões pretendidas para o recurso, octal ou simbólica notação. (por exemplo, 777 ou rwxrwxrwx). Se utilizar a notação simbólica, não fornecem o primeiro caráter que indica o diretório ou ficheiro.| 
-| dependsOn | Indica que a configuração de outro recurso tem de executar antes deste recurso é configurado. Por exemplo, se o **ID** do recurso de bloco de script de configuração que pretende executar primeiro é **ResourceName** e o respetivo tipo é **ResourceType**, a sintaxe para utilizar esta a propriedade é `DependsOn = "[ResourceType]ResourceName"`.| 
+| DestinationPath| Especifica a localização onde pretende garantir o estado de um ficheiro ou diretório.|
+| SourcePath| Especifica o caminho a partir dos quais pretende copiar o recurso do ficheiro ou pasta. Este caminho pode ser um caminho local, ou um `http/https/ftp` URL. Remoto `http/https/ftp` URLs só são suportadas quando o valor da **tipo** propriedade é o ficheiro.|
+| Certifique-se| Determina se deve verificar se o ficheiro existe. Defina esta propriedade para "Presente" para garantir que o ficheiro existe. Defina-o para "Ausente", certifique-se de que o ficheiro não existe. O valor predefinido é "Presente".|
+| Tipo| Especifica se o recurso que está a ser configurado é um diretório ou um ficheiro. Defina esta propriedade para "diretório" para indicar que o recurso é um diretório. Defina-o para "do ficheiro" para indicar que o recurso é um ficheiro. O valor predefinido é "ficheiros"|
+| Conteúdos| Especifica o conteúdo de um ficheiro, como uma cadeia específica.|
+| Soma de verificação| Define o tipo a utilizar ao determinar se os dois ficheiros são as mesmas. Se **soma de verificação** não for especificado, apenas o nome de ficheiro ou diretório é utilizado para comparação. Os valores são: "ctime", "mtime" ou "md5".|
+| Recurse| Indica se subdiretórios estão incluídos. Defina esta propriedade como **$true** para indicar que pretende que o subdiretórios a incluir. A predefinição é **$false**. **Nota:** esta propriedade só é válido quando o **tipo** propriedade está definida para o diretório.|
+| Force| Determinadas operações de ficheiros (como substituir um ficheiro ou eliminar um diretório que não está vazio) resultará num erro. Utilizar o **Force** propriedade substitui esses erros. O valor predefinido é **$false**.|
+| Ligações| Especifica o comportamento pretendido para as ligações simbólicas. Definir esta propriedade para "seguir", siga as ligações simbólicas e atuar sobre o destino de ligações (por exemplo. Copie o ficheiro em vez da ligação). Definir esta propriedade para "Gerir" para atuar na ligação (por exemplo. Copie a ligação próprio). Defina esta propriedade para "Ignorar" para ignorar as ligações simbólicas.|
+| Grupo| O nome do **grupo** possuir o ficheiro ou diretório.|
+| Modo| Especifica as permissões pretendidas para o recurso, octal ou simbólica notação. (por exemplo, 777 ou rwxrwxrwx). Se utilizar a notação simbólica, não fornecem o primeiro caráter que indica o diretório ou ficheiro.|
+| dependsOn | Indica que a configuração de outro recurso tem de executar antes deste recurso é configurado. Por exemplo, se o **ID** do recurso de bloco de script de configuração que pretende executar primeiro é **ResourceName** e o respetivo tipo é **ResourceType**, a sintaxe para utilizar esta a propriedade é `DependsOn = "[ResourceType]ResourceName"`.|
 
 ## <a name="additional-information"></a>Informações Adicionais
 
@@ -67,11 +67,11 @@ nxFile resolvConf
 {
     SourcePath = "http://10.185.85.11/conf/resolv.conf"
     DestinationPath = "/etc/resolv.conf"
-    Mode = "644"        
+    Mode = "644"
     Type = "file"
-    
+
 }
-        
+
 }
 ```
 
@@ -89,7 +89,7 @@ $Contents = Get-Content C:\temp\resolv.conf
 nxFile resolvConf
 {
     DestinationPath = "/etc/resolv.conf"
-    Mode = "644"        
+    Mode = "644"
     Type = "file"
     Contents = "$Contents"
 }
@@ -122,10 +122,10 @@ $Contents = LinuxString $Contents
 nxFile resolvConf
 {
     DestinationPath = "/etc/resolv.conf"
-    Mode = "644"        
+    Mode = "644"
     Type = "file"
     Contents = $Contents
-    
+
 }
 }
 ```
@@ -135,7 +135,7 @@ nxFile resolvConf
 O exemplo seguinte assegura que o diretório `/opt/mydir` existir, e se um ficheiro com conteúdo especificado existe este diretório.
 
 ```
-Import-DSCResource -Module nx 
+Import-DSCResource -Module nx
 
 Node $node {
 nxFile DirectoryExample
@@ -151,10 +151,9 @@ nxFile FileExample
     Destinationpath = "/opt/mydir/myfile"
     Contents=@"
 #!/bin/bash`necho "hello world"`n
-"@ 
+"@
     Mode = “755”
     DependsOn = "[nxFile]DirectoryExample"
-} 
+}
 }
 ```
-

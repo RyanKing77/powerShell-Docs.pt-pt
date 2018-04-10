@@ -1,13 +1,13 @@
 ---
-ms.date: 2017-06-12
+ms.date: 06/12/2017
 ms.topic: conceptual
-keywords: "DSC, do powershell, a configuração, a configuração"
-title: "Especificar dependências entre nós"
-ms.openlocfilehash: f4411161d819d96803f57600646409d5bfe827b9
-ms.sourcegitcommit: a444406120e5af4e746cbbc0558fe89a7e78aef6
+keywords: DSC, do powershell, a configuração, a configuração
+title: Especificar dependências entre nós
+ms.openlocfilehash: c563563118c4df8aeee442d3b30b79f7b7700fc7
+ms.sourcegitcommit: cf195b090b3223fa4917206dfec7f0b603873cdf
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 04/09/2018
 ---
 # <a name="specifying-cross-node-dependencies"></a>Especificar dependências entre nós
 
@@ -17,7 +17,7 @@ O DSC fornece recursos especiais, **WaitForAll**, **WaitForAny**, e **WaitForSom
 
 * **WaitForAll**: for bem sucedida se o recurso especificado está no estado pretendido em todos os nós de destino definido no **NodeName** propriedade.
 * **WaitForAny**: for bem sucedida se o recurso especificado está no estado pretendido, pelo menos, um de nós de destino definidos no **NodeName** propriedade.
-* **WaitForSome**: Especifica um **NodeCount** propriedade além um **NodeName** propriedade. O recurso for bem sucedida se o recurso está no estado pretendido de um número mínimo de nós (especificada por **NodeCount**) definidos pelo **NodeName** propriedade. 
+* **WaitForSome**: Especifica um **NodeCount** propriedade além um **NodeName** propriedade. O recurso for bem sucedida se o recurso está no estado pretendido de um número mínimo de nós (especificada por **NodeCount**) definidos pelo **NodeName** propriedade.
 
 ## <a name="using-waitforxxxx-resources"></a>Utilizar recursos WaitForXXXX
 
@@ -35,13 +35,13 @@ Configuration JoinDomain
     {
         WindowsFeature InstallAD
         {
-            Ensure = 'Present' 
-            Name = 'AD-Domain-Services' 
+            Ensure = 'Present'
+            Name = 'AD-Domain-Services'
         }
 
-        xADDomain NewDomain 
-        { 
-            DomainName = 'Contoso.com'            
+        xADDomain NewDomain
+        {
+            DomainName = 'Contoso.com'
             DomainAdministratorCredential = (Get-Credential)
             SafemodeAdministratorPassword = (Get-Credential)
             DatabasePath = "C:\Windows\NTDS"
@@ -79,4 +79,3 @@ Configuration JoinDomain
 * [Configurações de DSC](configurations.md)
 * [Recursos de DSC](resources.md)
 * [Configurar o Gestor de configuração Local](metaConfig.md)
-

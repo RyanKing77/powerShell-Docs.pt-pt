@@ -1,28 +1,29 @@
 ---
-ms.date: 2017-06-05
+ms.date: 06/05/2017
 keywords: PowerShell, o cmdlet
-title: "Membro de Get de estrutura de objeto de visualização"
+title: Membro de Get de estrutura de objeto de visualização
 ms.assetid: a1819ed2-2ef3-453a-b2b0-f3589c550481
-ms.openlocfilehash: 618f34bca7bfb76ce5d48ada642a687e279c8aad
-ms.sourcegitcommit: 4102ecc35d473211f50a453f6ae3fbea31cb3428
+ms.openlocfilehash: cc93e45e4306b3d623c1d3d1096dd20c1afc59c8
+ms.sourcegitcommit: cf195b090b3223fa4917206dfec7f0b603873cdf
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 08/31/2017
+ms.lasthandoff: 04/09/2018
 ---
 # <a name="viewing-object-structure-get-member"></a>Visualizar a estrutura de objeto (Get-membro)
+
 Porque os objetos reproduzir essa uma função central no Windows PowerShell, existem vários comandos nativos concebidos para trabalhar com os tipos de objeto arbitrários. O mais importante é o **Get-membro** comando.
 
 A técnica mais simples para analisar os objetos que um comando devolve é para encaminhar a saída desse comando para o **Get-membro** cmdlet. O **Get-membro** cmdlet mostra-lhe o nome do tipo de objeto formal e uma lista completa dos seus membros. O número de elementos que são devolvidos por vezes, pode ser muito confuso. Por exemplo, um objeto de processo pode ter mais de 100 membros.
 
 Para ver todos os membros de um objeto de processo e a saída de página, para que possa visualizar todos, escreva:
 
-```
-PS> Get-Process | Get-Member | Out-Host -Paging
+```powershell
+Get-Process | Get-Member | Out-Host -Paging
 ```
 
 O resultado deste comando será algo semelhante ao seguinte:
 
-```
+```output
 TypeName: System.Diagnostics.Process
 
 Name                           MemberType     Definition
@@ -68,4 +69,3 @@ Existem mais de 60 propriedades para um processo. O motivo que do Windows PowerS
 > Windows PowerShell determina como apresentar um tipo de objeto através da utilização de informações armazenadas em ficheiros XML com nomes terminados em. format.ps1xml. Os dados de formatação de objetos do processo, que são objetos System .NET, são armazenados no DotNetTypes.format.ps1xml.
 
 Se precisar de ver as propriedades além das que do Windows PowerShell apresenta por predefinição, terá de formatar os dados de saída por si. Isto pode ser feito utilizando os cmdlets de formato.
-

@@ -1,14 +1,14 @@
 ---
-ms.date: 2017-06-12
+ms.date: 06/12/2017
 author: JKeithB
 ms.topic: reference
 keywords: wmf,powershell,setup
-title: "Notas de Versão do WMF 5.1"
-ms.openlocfilehash: fa3d9a3563ecf1bfc76d82b027641d19c9a4ff4e
-ms.sourcegitcommit: 99227f62dcf827354770eb2c3e95c5cf6a3118b4
+title: Notas de Versão do WMF 5.1
+ms.openlocfilehash: eb22267c1af28a9fcdd049c76d363fff687f6167
+ms.sourcegitcommit: cf195b090b3223fa4917206dfec7f0b603873cdf
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 03/15/2018
+ms.lasthandoff: 04/09/2018
 ---
 # <a name="windows-management-framework-wmf-51-release-notes"></a>Notas de versão do Windows Management Framework (WMF) 5.1 #
 
@@ -27,6 +27,4 @@ O WMF 5.1 pode ser instalado no Windows 7, Windows 8.1, Windows Server 2008 
 - **WMF 5.1 exige o .NET Framework 4.5.2** (ou superior). Instalação será bem-sucedida, mas as principais funcionalidades irão falhar se a .NET 4.5.2 (ou superior) não está instalado. Estão disponíveis nas instruções de [instalar e configurar o WMF 5.1 ](https://msdn.microsoft.com/powershell/wmf/5.1/install-configure) tópico.
 - Pré-visualização do WMF 5.1 tem de ser desinstalado antes de instalar o WMF 5.1 RTM.
 - WMF 5.1 pode ser instalado diretamente ao longo do WMF 5.0 ou WMF 4.0.
-- É __não necessário__ para instalar o WMF 4.0 antes de instalar o WMF 5.1 no Windows 7 e Windows Server 2008 R2. Se um problema para a versão de pré-visualização do WMF 5.1 e foi resolvido.  
-
-
+- É __não necessário__ para instalar o WMF 4.0 antes de instalar o WMF 5.1 no Windows 7 e Windows Server 2008 R2. Se um problema para a versão de pré-visualização do WMF 5.1 e foi resolvido.

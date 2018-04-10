@@ -1,13 +1,13 @@
 ---
-ms.date: 2017-06-12
+ms.date: 06/12/2017
 ms.topic: conceptual
-keywords: "DSC, do powershell, a configuração, a configuração"
+keywords: DSC, do powershell, a configuração, a configuração
 title: Escrever um recurso personalizado de DSC com MOF
-ms.openlocfilehash: c416fd7cac80d37f1ca1393fa644b4bc15743724
-ms.sourcegitcommit: a444406120e5af4e746cbbc0558fe89a7e78aef6
+ms.openlocfilehash: 4e336e837d2153fecab8325cb8714ffed85a6175
+ms.sourcegitcommit: cf195b090b3223fa4917206dfec7f0b603873cdf
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 04/09/2018
 ---
 # <a name="writing-a-custom-dsc-resource-with-mof"></a>Escrever um recurso personalizado de DSC com MOF
 
@@ -56,12 +56,12 @@ class Demo_IISWebsite : OMI_BaseResource
 
 Tenha em atenção o seguinte sobre o código anterior:
 
-* `FriendlyName`Define o nome que pode utilizar para fazer referência a este recurso personalizado em scripts de configuração de DSC. Neste exemplo, `Website` é equivalente ao nome amigável `Archive` para o recurso de arquivo incorporado.
+* `FriendlyName` Define o nome que pode utilizar para fazer referência a este recurso personalizado em scripts de configuração de DSC. Neste exemplo, `Website` é equivalente ao nome amigável `Archive` para o recurso de arquivo incorporado.
 * A classe definir para o recurso personalizado tem de derivar de `OMI_BaseResource`.
 * O qualificador do tipo, `[Key]`, uma propriedade indica que esta propriedade identifiquem exclusivamente a instância de recurso. Pelo menos um `[Key]` propriedade é necessária.
 * O `[Required]` qualificador indica que a propriedade é necessária (um valor tem de ser especificado qualquer script de configuração que utiliza este recurso).
 * O `[write]` qualificador indica que esta propriedade é opcional quando o recurso personalizado num script de configuração. O `[read]` qualificador indica que uma propriedade não pode ser definida por uma configuração e, para fins de relatórios.
-* `Values`restringe os valores que podem ser atribuídos a propriedade à lista de valores definidos no `ValueMap`. Para obter mais informações, consulte [ValueMap e qualificadores de valor](https://msdn.microsoft.com/library/windows/desktop/aa393965.aspx).
+* `Values` restringe os valores que podem ser atribuídos a propriedade à lista de valores definidos no `ValueMap`. Para obter mais informações, consulte [ValueMap e qualificadores de valor](https://msdn.microsoft.com/library/windows/desktop/aa393965.aspx).
 * Incluindo uma propriedade denominada `Ensure` com valores `Present` e `Absent` no seu recurso é recomendado como uma forma para manter um estilo consistente com os recursos de DSC incorporados.
 * Nome do ficheiro de esquema para o seu recurso personalizado da seguinte forma: `classname.schema.mof`, onde `classname` é o identificador que se segue o `class` palavra-chave na definição de esquema.
 
@@ -117,7 +117,7 @@ function Get-TargetResource
                                         Protocol = $Website.bindings.Collection.protocol;
                                         Binding = $Website.bindings.Collection.bindingInformation;
                                     }
-  
+
         $getTargetResourceResult;
 }
 ```
@@ -131,7 +131,7 @@ Consoante os valores que são especificados para as propriedades de recurso no s
 O exemplo a seguir ilustra este.
 
 ```powershell
-# The Set-TargetResource function is used to create, delete or configure a website on the target machine. 
+# The Set-TargetResource function is used to create, delete or configure a website on the target machine.
 function Set-TargetResource
 {
     [CmdletBinding(SupportsShouldProcess=$true)]
@@ -157,7 +157,7 @@ function Set-TargetResource
 
         [string[]]$Protocol
     )
- 
+
     <# If Ensure is set to "Present" and the website specified in the mandatory input parameters does not exist, then create it using the specified parameter values #>
     <# Else, if Ensure is set to "Present" and the website does exist, then update its properties to match the values provided in the non-mandatory parameter values #>
     <# Else, if Ensure is set to "Absent" and the website does not exist, then do nothing #>
@@ -207,15 +207,15 @@ $ApplicationPool
 #Write-Debug "Use this cmdlet to write debug information while troubleshooting."
 
 
-#Include logic to 
+#Include logic to
 $result = [System.Boolean]
 #Add logic to test whether the website is present and its status mathes the supplied parameter values. If it does, return true. If it does not, return false.
 $result
 }
 ```
 
-**Tenha em atenção**: para depuração mais fácil, utilize o **Write-Verbose** cmdlet na sua implementação das três funções anteriores. 
->Este cmdlet escreve o texto no fluxo de mensagens verbosas. 
+**Tenha em atenção**: para depuração mais fácil, utilize o **Write-Verbose** cmdlet na sua implementação das três funções anteriores.
+>Este cmdlet escreve o texto no fluxo de mensagens verbosas.
 >Por predefinição, o fluxo de mensagens verbosas não for apresentado, mas pode apresentá-lo alterando o valor da **$VerbosePreference** variável ou utilizando o **verboso** parâmetro os cmdlets do DSC = novos.
 
 ### <a name="creating-the-module-manifest"></a>Criar o manifesto de módulo
@@ -290,7 +290,3 @@ if (PsDscContext.RunAsUser) {
     Write-Verbose "User: $PsDscContext.RunAsUser";
 }
 ```
-
-
-
-

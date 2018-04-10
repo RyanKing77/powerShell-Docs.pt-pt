@@ -1,15 +1,15 @@
 ---
-ms.date: 2017-06-12
+ms.date: 06/12/2017
 ms.topic: conceptual
-keywords: "DSC, do powershell, a configuração, a configuração"
-title: "Método de GetConfigurationStatus da classe MSFT_DSCLocalConfigurationManager"
-ms.openlocfilehash: a41e7a15fc935c2cd5fd4cb66d0ab13509d5d4e0
-ms.sourcegitcommit: a444406120e5af4e746cbbc0558fe89a7e78aef6
+keywords: DSC, do powershell, a configuração, a configuração
+title: Método GetConfigurationStatus da classe MSFT_DSCLocalConfigurationManager
+ms.openlocfilehash: dde4ac003b346018561481e05ca7374475f9ff1d
+ms.sourcegitcommit: cf195b090b3223fa4917206dfec7f0b603873cdf
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 04/09/2018
 ---
-# <a name="getconfigurationstatus-method-of-the-msftdsclocalconfigurationmanager-class"></a>Método de GetConfigurationStatus da classe MSFT_DSCLocalConfigurationManager
+# <a name="getconfigurationstatus-method-of-the-msftdsclocalconfigurationmanager-class"></a>Método GetConfigurationStatus da classe MSFT_DSCLocalConfigurationManager
 
 Obter o histórico do Estado de configuração.
 
@@ -26,11 +26,9 @@ uint32 GetConfigurationStatus(
 <a name="parameters"></a>Parâmetros
 ----------
 
-*All* \[in\]  
-**Verdadeiro** se este método deverá devolver informações sobre todas a configuração é executada na máquina, incluindo a aplicação de configuração e a verificação de consistência.
+*Todos os* \[no\] **verdadeiro** se este método deverá devolver informações sobre todas a configuração é executada na máquina, incluindo a aplicação de configuração e a verificação de consistência.
 
-*configurationStatus* \[out\]  
-No retorno, contém uma instância do embedded o **MSFT_DSCConfigurationStatus** classe que define as definições.
+*configurationStatus* \[saída\] no retorno, contém uma instância do embedded o **MSFT_DSCConfigurationStatus** classe que define as definições.
 
 ## <a name="return-value"></a>Valor devolvido
 ------------
@@ -52,11 +50,3 @@ Este é um método estático.
 
 
 [**MSFT_DSCLocalConfigurationManager**](msft-dsclocalconfigurationmanager.md)
-
-
- 
-
- 
-
-
-

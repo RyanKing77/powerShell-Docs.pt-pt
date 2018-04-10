@@ -1,4 +1,4 @@
-# <a name="powershell-remoting-over-ssh"></a>Comunicação remota do PowerShell através de SSH
+# <a name="powershell-remoting-over-ssh"></a>Comunicação Remota do PowerShell através de SSH
 
 ## <a name="overview"></a>Descrição geral
 
@@ -59,7 +59,7 @@ Além disso, terá de ativar a autenticação de palavra-passe e, opcionalmente,
     Restart-Service sshd
     ```
 1. Adicione o caminho onde OpenSSH está instalado o seu caminho Env variável
-    - Isto deve ser juntamente as linhas de`C:\Program Files\OpenSSH\`
+    - Isto deve ser juntamente as linhas de `C:\Program Files\OpenSSH\`
     - Este procedimento permite que o ssh.exe ser encontrado
 
 ## <a name="setup-on-linux-ubuntu-1404-machine"></a>A configuração no computador Linux (Ubuntu 14.04)
@@ -92,11 +92,11 @@ Além disso, terá de ativar a autenticação de palavra-passe e, opcionalmente,
 
 1. Instalar a versão mais recente [PowerShell para MacOS] criar
     - Certifique-se a que comunicação remota SSH está ativada, seguindo estes passos:
-      - Abrir`System Preferences`
-      - Clique em`Sharing`
-      - Verifique `Remote Login` -deverá indicar`Remote Login: On`
+      - Abrir `System Preferences`
+      - Clique em `Sharing`
+      - Verifique `Remote Login` -deverá indicar `Remote Login: On`
       - Permitir o acesso aos utilizadores adequados
-1. Editar o `sshd_config` ficheiro na localização`/private/etc/ssh/sshd_config`
+1. Editar o `sshd_config` ficheiro na localização `/private/etc/ssh/sshd_config`
     - Utilizar o seu editor favorito ou
     ```bash
     sudo nano /private/etc/ssh/sshd_config

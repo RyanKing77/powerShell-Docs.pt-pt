@@ -1,15 +1,15 @@
 ---
-ms.date: 2017-06-12
+ms.date: 06/12/2017
 ms.topic: conceptual
-keywords: "DSC, do powershell, a configuração, a configuração"
-title: "Método de SendConfigurationApplyAsync da classe MSFT_DSCLocalConfigurationManager"
-ms.openlocfilehash: e680d510aaac097f4f0de80660274230e028ed45
-ms.sourcegitcommit: a444406120e5af4e746cbbc0558fe89a7e78aef6
+keywords: DSC, do powershell, a configuração, a configuração
+title: Método SendConfigurationApplyAsync da classe MSFT_DSCLocalConfigurationManager
+ms.openlocfilehash: 7ff821a277a548869862741551ee9897e417ea45
+ms.sourcegitcommit: cf195b090b3223fa4917206dfec7f0b603873cdf
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 04/09/2018
 ---
-# <a name="sendconfigurationapplyasync-method-of-the-msftdsclocalconfigurationmanager-class"></a>Método de SendConfigurationApplyAsync da classe MSFT_DSCLocalConfigurationManager
+# <a name="sendconfigurationapplyasync-method-of-the-msftdsclocalconfigurationmanager-class"></a>Método SendConfigurationApplyAsync da classe MSFT_DSCLocalConfigurationManager
 
 Envia o documento de configuração no modo assíncrono para o nó gerido e utiliza o agente de configuração para aplicar a configuração.
 
@@ -27,14 +27,11 @@ uint32 SendConfigurationApplyAsync(
 <a name="parameters"></a>Parâmetros
 ----------
 
-*ConfigurationData* \[in\]  
-Os dados de ambiente para a configuração.
+*ConfigurationData* \[no\] os dados de ambiente para a configuração.
 
-*force* \[in\]  
-**Verdadeiro** para forçar a configuração para parar.
+*Forçar* \[no\] **verdadeiro** para forçar a configuração para parar.
 
-*jobId* \[in\]  
-O ID da tarefa para o qual pretende enviar a configuração.
+*jobId* \[no\] o ID da tarefa para o qual pretende enviar a configuração.
 
 ## <a name="return-value"></a>Valor devolvido
 ------------
@@ -56,11 +53,3 @@ Este é um método estático.
 
 
 [**MSFT_DSCLocalConfigurationManager**](msft-dsclocalconfigurationmanager.md)
-
-
- 
-
- 
-
-
-

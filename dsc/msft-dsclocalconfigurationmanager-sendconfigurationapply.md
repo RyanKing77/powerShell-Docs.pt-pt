@@ -1,15 +1,15 @@
 ---
-ms.date: 2017-06-12
+ms.date: 06/12/2017
 ms.topic: conceptual
-keywords: "DSC, do powershell, a configuração, a configuração"
-title: "Método de SendConfigurationApply da classe MSFT_DSCLocalConfigurationManager"
-ms.openlocfilehash: 20f732d35860cccde4e507dc6916e27d0cf8c5f6
-ms.sourcegitcommit: a444406120e5af4e746cbbc0558fe89a7e78aef6
+keywords: DSC, do powershell, a configuração, a configuração
+title: Método SendConfigurationApply da classe MSFT_DSCLocalConfigurationManager
+ms.openlocfilehash: 8edf8c55089e767394ba21b42fe74072777a45c9
+ms.sourcegitcommit: cf195b090b3223fa4917206dfec7f0b603873cdf
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 04/09/2018
 ---
-# <a name="sendconfigurationapply-method-of-the-msftdsclocalconfigurationmanager-class"></a>Método de SendConfigurationApply da classe MSFT_DSCLocalConfigurationManager
+# <a name="sendconfigurationapply-method-of-the-msftdsclocalconfigurationmanager-class"></a>Método SendConfigurationApply da classe MSFT_DSCLocalConfigurationManager
 
 Envia o documento de configuração para o nó gerido e utiliza o agente de configuração para aplicar a configuração.
 
@@ -26,11 +26,9 @@ uint32 SendConfigurationApply(
 <a name="parameters"></a>Parâmetros
 ----------
 
-*ConfigurationData* \[in\]  
-Os dados de ambiente para a configuração.
+*ConfigurationData* \[no\] os dados de ambiente para a configuração.
 
-*force* \[in\]  
-**Verdadeiro** para forçar a configuração para parar.
+*Forçar* \[no\] **verdadeiro** para forçar a configuração para parar.
 
 ## <a name="return-value"></a>Valor devolvido
 ------------
@@ -52,11 +50,3 @@ Este é um método estático.
 
 
 [**MSFT_DSCLocalConfigurationManager**](msft-dsclocalconfigurationmanager.md)
-
-
- 
-
- 
-
-
-

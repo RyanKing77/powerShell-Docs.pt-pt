@@ -1,15 +1,15 @@
 ---
-ms.date: 2017-06-12
+ms.date: 06/12/2017
 ms.topic: conceptual
-keywords: "DSC, do powershell, a configuração, a configuração"
-title: "Utilizar recursos com várias versões"
-ms.openlocfilehash: 5ca4eadfe23a4675e1b81b86d4274d7f113228fe
-ms.sourcegitcommit: 99227f62dcf827354770eb2c3e95c5cf6a3118b4
+keywords: DSC, do powershell, a configuração, a configuração
+title: Utilizar recursos com múltiplas versões
+ms.openlocfilehash: 9e5b989be3f33fb9151f76cecb6d5f700b1e36c9
+ms.sourcegitcommit: cf195b090b3223fa4917206dfec7f0b603873cdf
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 03/15/2018
+ms.lasthandoff: 04/09/2018
 ---
-# <a name="using-resources-with-multiple-versions"></a>Utilizar recursos com várias versões
+# <a name="using-resources-with-multiple-versions"></a>Utilizar recursos com múltiplas versões
 
 > Aplica-se a: O Windows PowerShell 5.0
 
@@ -62,7 +62,7 @@ configuration VersionTest
             DomainAdministratorCredential = Get-Credential
         }
      }
-}     
+}
 ```
 
 >Nota: O parâmetro ModuleVersion da importação DscResource não está disponível no PowerShell 4.0. No PowerShell 4.0, pode especificar uma versão do módulo através da transmissão de um objeto de especificação do módulo para o parâmetro ModuleName do DscResource de importação. Um objeto de especificação do módulo é uma tabela hash que contém chaves ModuleName e RequiredVersion. Por exemplo:
@@ -81,7 +81,7 @@ configuration VersionTest
             DomainAdministratorCredential = Get-Credential
         }
      }
-}     
+}
 ```
 
 Isto também irá funcionar no PowerShell 5.0, mas é recomendado que utilize o **ModuleVersion** parâmetro.
@@ -89,4 +89,3 @@ Isto também irá funcionar no PowerShell 5.0, mas é recomendado que utilize o 
 ## <a name="see-also"></a>Consulte também
 * [Configurações de DSC](configurations.md)
 * [Recursos de DSC](resources.md)
-

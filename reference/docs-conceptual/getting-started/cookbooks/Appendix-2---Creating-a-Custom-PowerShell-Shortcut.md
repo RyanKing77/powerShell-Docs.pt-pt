@@ -1,15 +1,16 @@
 ---
-ms.date: 2017-06-05
+ms.date: 06/05/2017
 keywords: PowerShell, o cmdlet
-title: "Apêndice 2 a criar um atalho personalizados do PowerShell"
+title: Apêndice 2 – Criar um Atalho Personalizado para o PowerShell
 ms.assetid: 5d4fd421-5d43-4ec7-86fd-acfe887b066e
-ms.openlocfilehash: d5e554f6f062fc5bf1beddd2aca1acf0b93d2133
-ms.sourcegitcommit: d6ab9ab5909ed59cce4ce30e29457e0e75c7ac12
+ms.openlocfilehash: e8081b7a64d313c8ef4bbccf95f250445dd68ad9
+ms.sourcegitcommit: cf195b090b3223fa4917206dfec7f0b603873cdf
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 09/08/2017
+ms.lasthandoff: 04/09/2018
 ---
 # <a name="appendix-2---creating-a-custom-powershell-shortcut"></a>Apêndice 2 - criar um atalho personalizados do PowerShell
+
 O procedimento seguinte descreve como criar um atalho para o Windows PowerShell que tem várias opções convenientes personalizadas.
 
 1. Crie um atalho que aponta para o Powershell.exe.
@@ -37,4 +38,3 @@ O procedimento seguinte descreve como criar um atalho para o Windows PowerShell 
 11. Se pretende colocar a consola num determinado ponto no ambiente de trabalho quando é aberta, desmarque a **permitem a janela de posição de sistema** caixa de verificação a **posição da janela** secção e, em seguida, altere os valores existentes no  **À esquerda** e **superior** caixas **posição da janela** secção.
 
 12. Clique em **OK**.
-

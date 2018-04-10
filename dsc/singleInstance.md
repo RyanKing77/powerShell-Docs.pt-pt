@@ -1,54 +1,55 @@
 ---
-ms.date: 2017-06-12
+ms.date: 06/12/2017
 ms.topic: conceptual
-keywords: "DSC, do powershell, a configuração, a configuração"
-title: "Escrever um recurso de DSC de instância única (recomendado)"
-ms.openlocfilehash: 4510bec5b4600334b845831ec6700da01e1a110c
-ms.sourcegitcommit: a444406120e5af4e746cbbc0558fe89a7e78aef6
+keywords: DSC, do powershell, a configuração, a configuração
+title: Escrever um recurso de DSC de instância única (melhor prática)
+ms.openlocfilehash: fc118fd8b0d91d2001030769ac7e3c6321972905
+ms.sourcegitcommit: cf195b090b3223fa4917206dfec7f0b603873cdf
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 04/09/2018
 ---
-# <a name="writing-a-single-instance-dsc-resource-best-practice"></a>Escrever um recurso de DSC de instância única (recomendado)
+# <a name="writing-a-single-instance-dsc-resource-best-practice"></a>Escrever um recurso de DSC de instância única (melhor prática)
 
 >**Nota:** este tópico descreve uma melhor prática para definir um recurso de DSC que permite apenas uma única instância numa configuração. Atualmente, não há nenhuma funcionalidade DSC incorporada para efetuar este procedimento. Que poderá alterar no futuro.
 
 Existem situações em que não pretende permitir que um recurso a ser utilizada várias vezes numa configuração. Por exemplo, numa implementação anterior do [xTimeZone](https://github.com/PowerShell/xTimeZone) , uma configuração foi chamada de recursos do recurso várias vezes, definir o fuso horário para uma definição diferente em cada bloco de recursos:
 
 ```powershell
-Configuration SetTimeZone 
-{ 
-    Param 
-    ( 
-        [String[]]$NodeName = $env:COMPUTERNAME 
+Configuration SetTimeZone
+{
+    Param
+    (
+        [String[]]$NodeName = $env:COMPUTERNAME
 
-    ) 
+    )
 
-    Import-DSCResource -ModuleName xTimeZone 
- 
- 
-    Node $NodeName 
-    { 
-         xTimeZone TimeZoneExample 
-         { 
-        
-            TimeZone = 'Eastern Standard Time' 
-         } 
+    Import-DSCResource -ModuleName xTimeZone
+
+
+    Node $NodeName
+    {
+         xTimeZone TimeZoneExample
+         {
+
+            TimeZone = 'Eastern Standard Time'
+         }
 
          xTimeZone TimeZoneExample2
          {
 
             TimeZone = 'Pacific Standard Time'
 
-         }        
+         }
 
-    } 
-} 
+    }
+}
 ```
 
 Isto é devido a forma como as chaves de recursos de DSC funcionar. Um recurso tem de ter, pelo menos, uma propriedade chave. Uma instância de recurso é considerada exclusiva se a combinação de valores de todas as respetivas propriedades chaves é exclusiva. Na sua implementação anterior, o [xTimeZone](https://github.com/PowerShell/xTimeZone) recurso tinha apenas uma propriedade –**fuso horário**, que é exigido para ser uma chave. Por este motivo, uma configuração, tal como o acima seria compilar e executar sem aviso. Cada um do **xTimeZone** blocos de recurso é considerado exclusivo. Isto fará com que a configuração ser aplicada repetidamente para o nó, ciclos o fuso horário anterior e descritos.
 
-Para se certificar de que uma configuração foi possível definir o fuso horário para um nó de destino apenas uma vez, o recurso foi atualizado para adicionar uma segunda propriedade, **IsSingleInstance**, que está a propriedade de chave. O **IsSingleInstance** estava limitado a um valor único, "Sim", utilizando um **ValueMap**. O esquema MOF antigo para o recurso era:
+Para se certificar de que uma configuração foi possível definir o fuso horário para um nó de destino apenas uma vez, o recurso foi atualizado para adicionar uma segunda propriedade, **IsSingleInstance**, que está a propriedade de chave.
+O **IsSingleInstance** estava limitado a um valor único, "Sim", utilizando um **ValueMap**. O esquema MOF antigo para o recurso era:
 
 ```powershell
 [ClassVersion("1.0.0.0"), FriendlyName("xTimeZone")]
@@ -117,10 +118,10 @@ function Set-TargetResource
         [String]
         $TimeZone
     )
-    
+
     #Output the result of Get-TargetResource function.
     $CurrentTimeZone = Get-TimeZone
-    
+
     if($PSCmdlet.ShouldProcess("'$TimeZone'","Replace the System Time Zone"))
     {
         try
@@ -152,7 +153,7 @@ function Test-TargetResource
         [parameter(Mandatory = $true)]
         [ValidateSet('Yes')]
         [String]
-        $IsSingleInstance, 
+        $IsSingleInstance,
 
         [parameter(Mandatory = $true)]
         [ValidateNotNullOrEmpty()]
@@ -205,9 +206,9 @@ Export-ModuleMember -Function *-TargetResource
 Tenha em atenção que o **fuso horário** propriedade já não é uma chave. Agora, se uma configuração de tentar definir o fuso horário duas vezes (ao utilizar dois diferentes **xTimeZone** blocos com diferentes **fuso horário** valores), a tentar a configuração de compilação fará com que um erro:
 
 ```powershell
-Test-ConflictingResources : A conflict was detected between resources '[xTimeZone]TimeZoneExample (::15::10::xTimeZone)' and 
-'[xTimeZone]TimeZoneExample2 (::22::10::xTimeZone)' in node 'CONTOSO-CLIENT'. Resources have identical key properties but there are differences in the 
-following non-key properties: 'TimeZone'. Values 'Eastern Standard Time' don't match values 'Pacific Standard Time'. Please update these property 
+Test-ConflictingResources : A conflict was detected between resources '[xTimeZone]TimeZoneExample (::15::10::xTimeZone)' and
+'[xTimeZone]TimeZoneExample2 (::22::10::xTimeZone)' in node 'CONTOSO-CLIENT'. Resources have identical key properties but there are differences in the
+following non-key properties: 'TimeZone'. Values 'Eastern Standard Time' don't match values 'Pacific Standard Time'. Please update these property
 values so that they are identical in both cases.
 At line:271 char:9
 +         Test-ConflictingResources $keywordName $canonicalizedValue $k ...
@@ -221,4 +222,3 @@ At C:\WINDOWS\system32\WindowsPowerShell\v1.0\Modules\PSDesiredStateConfiguratio
     + CategoryInfo          : InvalidOperation: (SetTimeZone:String) [], InvalidOperationException
     + FullyQualifiedErrorId : FailToProcessConfiguration
 ```
-   
