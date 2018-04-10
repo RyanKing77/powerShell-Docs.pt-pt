@@ -1,25 +1,28 @@
 ---
-ms.date: 2017-06-05
+ms.date: 06/05/2017
 keywords: PowerShell, o cmdlet
-title: Trabalhar com ficheiros pastas e chaves de registo
+title: Trabalhar com Pastas de Ficheiros e Chaves do Registo
 ms.assetid: e6cf87aa-b5f8-48d5-a75a-7cb7ecb482dc
-ms.openlocfilehash: 22a2390686659033bfd8b02a151b3397cfd46a22
-ms.sourcegitcommit: d6ab9ab5909ed59cce4ce30e29457e0e75c7ac12
+ms.openlocfilehash: a09b127d4ba37d33cb4c0f0ce0819e645fd4b137
+ms.sourcegitcommit: cf195b090b3223fa4917206dfec7f0b603873cdf
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 09/08/2017
+ms.lasthandoff: 04/09/2018
 ---
-# <a name="working-with-files-folders-and-registry-keys"></a><span data-ttu-id="bb03b-103">Trabalhar com ficheiros, pastas e chaves de registo</span><span class="sxs-lookup"><span data-stu-id="bb03b-103">Working With Files, Folders and Registry Keys</span></span>
-<span data-ttu-id="bb03b-104">O Windows PowerShell utiliza o substantivo **Item** para fazer referência aos itens encontrados numa unidade do Windows PowerShell.</span><span class="sxs-lookup"><span data-stu-id="bb03b-104">Windows PowerShell uses the noun **Item** to refer to items found on a Windows PowerShell drive.</span></span> <span data-ttu-id="bb03b-105">Ao lidar com o fornecedor de sistema de ficheiros do Windows PowerShell, uma **Item** poderá ser uma pasta, um ficheiro ou a unidade do Windows PowerShell.</span><span class="sxs-lookup"><span data-stu-id="bb03b-105">When dealing with the Windows PowerShell FileSystem provider, an **Item** might be a file, a folder, or the Windows PowerShell drive.</span></span> <span data-ttu-id="bb03b-106">Listar e trabalhar com estes itens são uma tarefa de básica crítico na maioria das definições administrativas, pelo que queremos abordam estas tarefas em detalhe.</span><span class="sxs-lookup"><span data-stu-id="bb03b-106">Listing and working with these items is a critical basic task in most administrative settings, so we want to discuss these tasks in detail.</span></span>
+# <a name="working-with-files-folders-and-registry-keys"></a><span data-ttu-id="6af38-103">Trabalhar com ficheiros, pastas e chaves de registo</span><span class="sxs-lookup"><span data-stu-id="6af38-103">Working With Files, Folders and Registry Keys</span></span>
 
-### <a name="enumerating-files-folders-and-registry-keys-get-childitem"></a><span data-ttu-id="bb03b-107">A enumerar os ficheiros, pastas e chaves de registo (Get-ChildItem)</span><span class="sxs-lookup"><span data-stu-id="bb03b-107">Enumerating Files, Folders, and Registry Keys (Get-ChildItem)</span></span>
-<span data-ttu-id="bb03b-108">Uma vez que obter uma colecção de itens a partir de uma localização específica essas tarefas comuns, a **Get-ChildItem** cmdlet foi concebido especificamente para devolver todos os itens localizados num contentor, tais como uma pasta.</span><span class="sxs-lookup"><span data-stu-id="bb03b-108">Since getting a collection of items from a particular location is such a common task, the **Get-ChildItem** cmdlet is designed specifically to return all items found within a container such as a folder.</span></span>
+<span data-ttu-id="6af38-104">O Windows PowerShell utiliza o substantivo **Item** para fazer referência aos itens encontrados numa unidade do Windows PowerShell.</span><span class="sxs-lookup"><span data-stu-id="6af38-104">Windows PowerShell uses the noun **Item** to refer to items found on a Windows PowerShell drive.</span></span> <span data-ttu-id="6af38-105">Ao lidar com o fornecedor de sistema de ficheiros do Windows PowerShell, uma **Item** poderá ser uma pasta, um ficheiro ou a unidade do Windows PowerShell.</span><span class="sxs-lookup"><span data-stu-id="6af38-105">When dealing with the Windows PowerShell FileSystem provider, an **Item** might be a file, a folder, or the Windows PowerShell drive.</span></span> <span data-ttu-id="6af38-106">Listar e trabalhar com estes itens são uma tarefa de básica crítico na maioria das definições administrativas, pelo que queremos abordam estas tarefas em detalhe.</span><span class="sxs-lookup"><span data-stu-id="6af38-106">Listing and working with these items is a critical basic task in most administrative settings, so we want to discuss these tasks in detail.</span></span>
 
-<span data-ttu-id="bb03b-109">Se pretender devolver todos os ficheiros e pastas que estão incluídas diretamente na pasta c:\\Windows, tipo:</span><span class="sxs-lookup"><span data-stu-id="bb03b-109">If you want to return all files and folders that are contained directly within the folder C:\\Windows, type:</span></span>
+### <a name="enumerating-files-folders-and-registry-keys-get-childitem"></a><span data-ttu-id="6af38-107">A enumerar os ficheiros, pastas e chaves de registo (Get-ChildItem)</span><span class="sxs-lookup"><span data-stu-id="6af38-107">Enumerating Files, Folders, and Registry Keys (Get-ChildItem)</span></span>
+
+<span data-ttu-id="6af38-108">Uma vez que obter uma colecção de itens a partir de uma localização específica essas tarefas comuns, a **Get-ChildItem** cmdlet foi concebido especificamente para devolver todos os itens localizados num contentor, tais como uma pasta.</span><span class="sxs-lookup"><span data-stu-id="6af38-108">Since getting a collection of items from a particular location is such a common task, the **Get-ChildItem** cmdlet is designed specifically to return all items found within a container such as a folder.</span></span>
+
+<span data-ttu-id="6af38-109">Se pretender devolver todos os ficheiros e pastas que estão incluídas diretamente na pasta c:\\Windows, tipo:</span><span class="sxs-lookup"><span data-stu-id="6af38-109">If you want to return all files and folders that are contained directly within the folder C:\\Windows, type:</span></span>
 
 ```
 PS> Get-ChildItem -Path C:\Windows
     Directory: Microsoft.Windows PowerShell.Core\FileSystem::C:\Windows
+
 Mode                LastWriteTime     Length Name
 ----                -------------     ------ ----
 -a---        2006-05-16   8:10 AM          0 0.log
@@ -28,18 +31,19 @@ Mode                LastWriteTime     Length Name
 ...
 ```
 
-<span data-ttu-id="bb03b-110">A listagem semelhante que verá ao introduzir o **dir** no **Cmd.exe**, ou o **ls** comando numa shell de comandos UNIX.</span><span class="sxs-lookup"><span data-stu-id="bb03b-110">The listing looks similar to what you would see when you enter the **dir** command in **Cmd.exe**, or the **ls** command in a UNIX command shell.</span></span>
+<span data-ttu-id="6af38-110">A listagem semelhante que verá ao introduzir o **dir** no **Cmd.exe**, ou o **ls** comando numa shell de comandos UNIX.</span><span class="sxs-lookup"><span data-stu-id="6af38-110">The listing looks similar to what you would see when you enter the **dir** command in **Cmd.exe**, or the **ls** command in a UNIX command shell.</span></span>
 
-<span data-ttu-id="bb03b-111">Pode efetuar listagens muito complexas utilizando os parâmetros do **Get-ChildItem** cmdlet.</span><span class="sxs-lookup"><span data-stu-id="bb03b-111">You can perform very complex listings by using parameters of the **Get-ChildItem** cmdlet.</span></span> <span data-ttu-id="bb03b-112">Iremos abordar o alguns cenários seguinte.</span><span class="sxs-lookup"><span data-stu-id="bb03b-112">We will look at a few scenarios next.</span></span> <span data-ttu-id="bb03b-113">Pode ver a sintaxe de **Get-ChildItem** cmdlet escrevendo:</span><span class="sxs-lookup"><span data-stu-id="bb03b-113">You can see the syntax the **Get-ChildItem** cmdlet by typing:</span></span>
+<span data-ttu-id="6af38-111">Pode efetuar listagens muito complexas utilizando os parâmetros do **Get-ChildItem** cmdlet.</span><span class="sxs-lookup"><span data-stu-id="6af38-111">You can perform very complex listings by using parameters of the **Get-ChildItem** cmdlet.</span></span> <span data-ttu-id="6af38-112">Iremos abordar o alguns cenários seguinte.</span><span class="sxs-lookup"><span data-stu-id="6af38-112">We will look at a few scenarios next.</span></span> <span data-ttu-id="6af38-113">Pode ver a sintaxe de **Get-ChildItem** cmdlet escrevendo:</span><span class="sxs-lookup"><span data-stu-id="6af38-113">You can see the syntax the **Get-ChildItem** cmdlet by typing:</span></span>
 
+```powershell
+Get-Command -Name Get-ChildItem -Syntax
 ```
-PS> Get-Command -Name Get-ChildItem -Syntax
-```
 
-<span data-ttu-id="bb03b-114">Estes parâmetros podem ser misto e correspondência para obter Resultado altamente personalizado.</span><span class="sxs-lookup"><span data-stu-id="bb03b-114">These parameters can be mixed and matched to get highly customized output.</span></span>
+<span data-ttu-id="6af38-114">Estes parâmetros podem ser misto e correspondência para obter Resultado altamente personalizado.</span><span class="sxs-lookup"><span data-stu-id="6af38-114">These parameters can be mixed and matched to get highly customized output.</span></span>
 
-#### <a name="listing-all-contained-items--recurse"></a><span data-ttu-id="bb03b-115">Listar todos os itens contidos (-Recurse)</span><span class="sxs-lookup"><span data-stu-id="bb03b-115">Listing all Contained Items (-Recurse)</span></span>
-<span data-ttu-id="bb03b-116">Para ver os itens dentro de uma pasta do Windows e quaisquer itens que estão incluídos as subpastas, utilize o **Recurse** parâmetro **Get-ChildItem**.</span><span class="sxs-lookup"><span data-stu-id="bb03b-116">To see both the items inside a Windows folder and any items that are contained within the subfolders, use the **Recurse** parameter of **Get-ChildItem**.</span></span> <span data-ttu-id="bb03b-117">A lista apresenta tudo dentro da pasta do Windows e os itens nas respetivas subpastas.</span><span class="sxs-lookup"><span data-stu-id="bb03b-117">The listing displays everything within the Windows folder and the items in its subfolders.</span></span> <span data-ttu-id="bb03b-118">Por exemplo:</span><span class="sxs-lookup"><span data-stu-id="bb03b-118">For example:</span></span>
+#### <a name="listing-all-contained-items--recurse"></a><span data-ttu-id="6af38-115">Listar todos os itens contidos (-Recurse)</span><span class="sxs-lookup"><span data-stu-id="6af38-115">Listing all Contained Items (-Recurse)</span></span>
+
+<span data-ttu-id="6af38-116">Para ver os itens dentro de uma pasta do Windows e quaisquer itens que estão incluídos as subpastas, utilize o **Recurse** parâmetro **Get-ChildItem**.</span><span class="sxs-lookup"><span data-stu-id="6af38-116">To see both the items inside a Windows folder and any items that are contained within the subfolders, use the **Recurse** parameter of **Get-ChildItem**.</span></span> <span data-ttu-id="6af38-117">A lista apresenta tudo dentro da pasta do Windows e os itens nas respetivas subpastas.</span><span class="sxs-lookup"><span data-stu-id="6af38-117">The listing displays everything within the Windows folder and the items in its subfolders.</span></span> <span data-ttu-id="6af38-118">Por exemplo:</span><span class="sxs-lookup"><span data-stu-id="6af38-118">For example:</span></span>
 
 ```
 PS> Get-ChildItem -Path C:\WINDOWS -Recurse
@@ -52,8 +56,9 @@ Mode                LastWriteTime     Length Name
 ...
 ```
 
-#### <a name="filtering-items-by-name--name"></a><span data-ttu-id="bb03b-119">Filtrar itens por nome (-Name)</span><span class="sxs-lookup"><span data-stu-id="bb03b-119">Filtering Items by Name (-Name)</span></span>
-<span data-ttu-id="bb03b-120">Para apresentar apenas os nomes de itens, utilize o **nome** parâmetro **Get-Childitem**:</span><span class="sxs-lookup"><span data-stu-id="bb03b-120">To display only the names of items, use the **Name** parameter of **Get-Childitem**:</span></span>
+#### <a name="filtering-items-by-name--name"></a><span data-ttu-id="6af38-119">Filtrar itens por nome (-Name)</span><span class="sxs-lookup"><span data-stu-id="6af38-119">Filtering Items by Name (-Name)</span></span>
+
+<span data-ttu-id="6af38-120">Para apresentar apenas os nomes de itens, utilize o **nome** parâmetro **Get-Childitem**:</span><span class="sxs-lookup"><span data-stu-id="6af38-120">To display only the names of items, use the **Name** parameter of **Get-Childitem**:</span></span>
 
 ```
 PS> Get-ChildItem -Path C:\WINDOWS -Name
@@ -63,32 +68,35 @@ assembly
 ...
 ```
 
-#### <a name="forcibly-listing-hidden-items--force"></a><span data-ttu-id="bb03b-121">A forçar a listar itens ocultos (-forçar)</span><span class="sxs-lookup"><span data-stu-id="bb03b-121">Forcibly Listing Hidden Items (-Force)</span></span>
-<span data-ttu-id="bb03b-122">Os itens que são normalmente invisíveis no Explorador de ficheiros ou Cmd.exe não são apresentados no resultado de uma **Get-ChildItem** comando.</span><span class="sxs-lookup"><span data-stu-id="bb03b-122">Items that are normally invisible in File Explorer or Cmd.exe are not displayed in the output of a **Get-ChildItem** command.</span></span> <span data-ttu-id="bb03b-123">Para apresentar os itens ocultos, utilize o **Force** parâmetro **Get-ChildItem**.</span><span class="sxs-lookup"><span data-stu-id="bb03b-123">To display hidden items, use the **Force** parameter of **Get-ChildItem**.</span></span> <span data-ttu-id="bb03b-124">Por exemplo:</span><span class="sxs-lookup"><span data-stu-id="bb03b-124">For example:</span></span>
+#### <a name="forcibly-listing-hidden-items--force"></a><span data-ttu-id="6af38-121">A forçar a listar itens ocultos (-forçar)</span><span class="sxs-lookup"><span data-stu-id="6af38-121">Forcibly Listing Hidden Items (-Force)</span></span>
 
-```
+<span data-ttu-id="6af38-122">Os itens que são normalmente invisíveis no Explorador de ficheiros ou Cmd.exe não são apresentados no resultado de uma **Get-ChildItem** comando.</span><span class="sxs-lookup"><span data-stu-id="6af38-122">Items that are normally invisible in File Explorer or Cmd.exe are not displayed in the output of a **Get-ChildItem** command.</span></span> <span data-ttu-id="6af38-123">Para apresentar os itens ocultos, utilize o **Force** parâmetro **Get-ChildItem**.</span><span class="sxs-lookup"><span data-stu-id="6af38-123">To display hidden items, use the **Force** parameter of **Get-ChildItem**.</span></span> <span data-ttu-id="6af38-124">Por exemplo:</span><span class="sxs-lookup"><span data-stu-id="6af38-124">For example:</span></span>
+
+```powershell
 Get-ChildItem -Path C:\Windows -Force
 ```
 
-<span data-ttu-id="bb03b-125">Este parâmetro é denominado Force porque pode forçar a substituir o comportamento normal a **Get-ChildItem** comando.</span><span class="sxs-lookup"><span data-stu-id="bb03b-125">This parameter is named Force because you can forcibly override the normal behavior of the **Get-ChildItem** command.</span></span> <span data-ttu-id="bb03b-126">Force é um parâmetro amplamente utilizado que força uma ação que um cmdlet não seria normalmente efetuar, apesar de não efetuará nenhuma ação que compromises a segurança do sistema.</span><span class="sxs-lookup"><span data-stu-id="bb03b-126">Force is a widely used parameter that forces an action that a cmdlet would not normally perform, although it will not perform any action that compromises the security of the system.</span></span>
+<span data-ttu-id="6af38-125">Este parâmetro é denominado Force porque pode forçar a substituir o comportamento normal a **Get-ChildItem** comando.</span><span class="sxs-lookup"><span data-stu-id="6af38-125">This parameter is named Force because you can forcibly override the normal behavior of the **Get-ChildItem** command.</span></span> <span data-ttu-id="6af38-126">Force é um parâmetro amplamente utilizado que força uma ação que um cmdlet não seria normalmente efetuar, apesar de não efetuará nenhuma ação que compromises a segurança do sistema.</span><span class="sxs-lookup"><span data-stu-id="6af38-126">Force is a widely used parameter that forces an action that a cmdlet would not normally perform, although it will not perform any action that compromises the security of the system.</span></span>
 
-#### <a name="matching-item-names-with-wildcards"></a><span data-ttu-id="bb03b-127">Nomes de itens correspondentes com carateres universais</span><span class="sxs-lookup"><span data-stu-id="bb03b-127">Matching Item Names with Wildcards</span></span>
-<span data-ttu-id="bb03b-128">**Get-ChildItem** comando aceita carateres universais no caminho dos itens de lista.</span><span class="sxs-lookup"><span data-stu-id="bb03b-128">**The Get-ChildItem** command accepts wildcards in the path of the items to list.</span></span>
+#### <a name="matching-item-names-with-wildcards"></a><span data-ttu-id="6af38-127">Nomes de itens correspondentes com carateres universais</span><span class="sxs-lookup"><span data-stu-id="6af38-127">Matching Item Names with Wildcards</span></span>
 
-<span data-ttu-id="bb03b-129">Porque a correspondência de carateres universais é processado pelo motor do Windows PowerShell, todos os cmdlets que aceita carateres universais utilizam a notação mesma e ter o mesmo comportamento correspondente.</span><span class="sxs-lookup"><span data-stu-id="bb03b-129">Because wildcard matching is handled by the Windows PowerShell engine, all cmdlets that accepts wildcards use the same notation and have the same matching behavior.</span></span> <span data-ttu-id="bb03b-130">A notação de caráter universal do Windows PowerShell inclui:</span><span class="sxs-lookup"><span data-stu-id="bb03b-130">The Windows PowerShell wildcard notation includes:</span></span>
+<span data-ttu-id="6af38-128">**Get-ChildItem** comando aceita carateres universais no caminho dos itens de lista.</span><span class="sxs-lookup"><span data-stu-id="6af38-128">**The Get-ChildItem** command accepts wildcards in the path of the items to list.</span></span>
 
-- <span data-ttu-id="bb03b-131">Asterisco (\*) corresponde a zero ou mais ocorrências de qualquer caráter.</span><span class="sxs-lookup"><span data-stu-id="bb03b-131">Asterisk (\*)matches zero or more occurrences of any character.</span></span>
+<span data-ttu-id="6af38-129">Porque a correspondência de carateres universais é processado pelo motor do Windows PowerShell, todos os cmdlets que aceita carateres universais utilizam a notação mesma e ter o mesmo comportamento correspondente.</span><span class="sxs-lookup"><span data-stu-id="6af38-129">Because wildcard matching is handled by the Windows PowerShell engine, all cmdlets that accepts wildcards use the same notation and have the same matching behavior.</span></span> <span data-ttu-id="6af38-130">A notação de caráter universal do Windows PowerShell inclui:</span><span class="sxs-lookup"><span data-stu-id="6af38-130">The Windows PowerShell wildcard notation includes:</span></span>
 
-- <span data-ttu-id="bb03b-132">Ponto de interrogação (?) corresponde exatamente um caráter.</span><span class="sxs-lookup"><span data-stu-id="bb03b-132">Question mark (?) matches exactly one character.</span></span>
+- <span data-ttu-id="6af38-131">Asterisco (\*) corresponde a zero ou mais ocorrências de qualquer caráter.</span><span class="sxs-lookup"><span data-stu-id="6af38-131">Asterisk (\*)matches zero or more occurrences of any character.</span></span>
 
-- <span data-ttu-id="bb03b-133">Reto esquerdo (\[) carateres e o caráter de parêntesis Reto direito (]) coloque um conjunto de carateres a ser correspondido.</span><span class="sxs-lookup"><span data-stu-id="bb03b-133">Left bracket (\[) character and right bracket (]) character surround a set of characters to be matched.</span></span>
+- <span data-ttu-id="6af38-132">Ponto de interrogação (?) corresponde exatamente um caráter.</span><span class="sxs-lookup"><span data-stu-id="6af38-132">Question mark (?) matches exactly one character.</span></span>
 
-<span data-ttu-id="bb03b-134">Seguem-se alguns exemplos de como funciona a especificação de caráter universal.</span><span class="sxs-lookup"><span data-stu-id="bb03b-134">Here are some examples of how wildcard specification works.</span></span>
+- <span data-ttu-id="6af38-133">Reto esquerdo (\[) carateres e o caráter de parêntesis Reto direito (]) coloque um conjunto de carateres a ser correspondido.</span><span class="sxs-lookup"><span data-stu-id="6af38-133">Left bracket (\[) character and right bracket (]) character surround a set of characters to be matched.</span></span>
 
-<span data-ttu-id="bb03b-135">Localizar todos os ficheiros no diretório do Windows com o sufixo **. log** e exatamente cinco carateres no nome de base, introduza o seguinte comando:</span><span class="sxs-lookup"><span data-stu-id="bb03b-135">To find all files in the Windows directory with the suffix **.log** and exactly five characters in the base name, enter the following command:</span></span>
+<span data-ttu-id="6af38-134">Seguem-se alguns exemplos de como funciona a especificação de caráter universal.</span><span class="sxs-lookup"><span data-stu-id="6af38-134">Here are some examples of how wildcard specification works.</span></span>
+
+<span data-ttu-id="6af38-135">Localizar todos os ficheiros no diretório do Windows com o sufixo **. log** e exatamente cinco carateres no nome de base, introduza o seguinte comando:</span><span class="sxs-lookup"><span data-stu-id="6af38-135">To find all files in the Windows directory with the suffix **.log** and exactly five characters in the base name, enter the following command:</span></span>
 
 ```
 PS> Get-ChildItem -Path C:\Windows\?????.log
+
     Directory: Microsoft.Windows PowerShell.Core\FileSystem::C:\Windows
 Mode                LastWriteTime     Length Name
 ----                -------------     ------ ----
@@ -101,26 +109,29 @@ Mode                LastWriteTime     Length Name
 ...
 ```
 
-<span data-ttu-id="bb03b-136">Localizar todos os ficheiros que começam com a letra **x** no diretório do Windows, escreva:</span><span class="sxs-lookup"><span data-stu-id="bb03b-136">To find all files that begin with the letter **x** in the Windows directory, type:</span></span>
+<span data-ttu-id="6af38-136">Localizar todos os ficheiros que começam com a letra **x** no diretório do Windows, escreva:</span><span class="sxs-lookup"><span data-stu-id="6af38-136">To find all files that begin with the letter **x** in the Windows directory, type:</span></span>
 
-```
+```powershell
 Get-ChildItem -Path C:\Windows\x*
 ```
 
-<span data-ttu-id="bb03b-137">Localizar todos os ficheiros cujos nomes começam por **x** ou **z**, tipo:</span><span class="sxs-lookup"><span data-stu-id="bb03b-137">To find all files whose names begin with **x** or **z**, type:</span></span>
+<span data-ttu-id="6af38-137">Localizar todos os ficheiros cujos nomes começam por **x** ou **z**, tipo:</span><span class="sxs-lookup"><span data-stu-id="6af38-137">To find all files whose names begin with **x** or **z**, type:</span></span>
 
-```
+```powershell
 Get-ChildItem -Path C:\Windows\[xz]*
 ```
 
-#### <a name="excluding-items--exclude"></a><span data-ttu-id="bb03b-138">Excluir itens (-excluir)</span><span class="sxs-lookup"><span data-stu-id="bb03b-138">Excluding Items (-Exclude)</span></span>
-<span data-ttu-id="bb03b-139">Pode excluir itens específicos utilizando o **excluir** parâmetro de Get-ChildItem.</span><span class="sxs-lookup"><span data-stu-id="bb03b-139">You can exclude specific items by using the **Exclude** parameter of Get-ChildItem.</span></span> <span data-ttu-id="bb03b-140">Isto permite-lhe efetuar complexas filtragem numa instrução única.</span><span class="sxs-lookup"><span data-stu-id="bb03b-140">This lets you perform complex filtering in a single statement.</span></span>
+#### <a name="excluding-items--exclude"></a><span data-ttu-id="6af38-138">Excluir itens (-excluir)</span><span class="sxs-lookup"><span data-stu-id="6af38-138">Excluding Items (-Exclude)</span></span>
 
-<span data-ttu-id="bb03b-141">Por exemplo, suponha está a tentar localizar a DLL de serviço de hora do Windows na pasta System32, não sendo todas pode Lembre-se sobre o nome DLL que comece com "M" e tem "32" no mesmo.</span><span class="sxs-lookup"><span data-stu-id="bb03b-141">For example, suppose you are trying to find the Windows Time Service DLL in the System32 folder, and all you can remember about the DLL name is that it begins with "W" and has "32" in it.</span></span>
+<span data-ttu-id="6af38-139">Pode excluir itens específicos utilizando o **excluir** parâmetro de Get-ChildItem.</span><span class="sxs-lookup"><span data-stu-id="6af38-139">You can exclude specific items by using the **Exclude** parameter of Get-ChildItem.</span></span> <span data-ttu-id="6af38-140">Isto permite-lhe efetuar complexas filtragem numa instrução única.</span><span class="sxs-lookup"><span data-stu-id="6af38-140">This lets you perform complex filtering in a single statement.</span></span>
 
-<span data-ttu-id="bb03b-142">Como uma expressão **w\&#42; 32\&#42;. dll** irá encontrar todas as DLLs que cumprem as condições, mas pode devolver também o Windows 95 e compatibilidade de Windows de 16 bits DLLs que incluem "95" ou "16" nos respetivos nomes.</span><span class="sxs-lookup"><span data-stu-id="bb03b-142">An expression like **w\&#42;32\&#42;.dll** will find all DLLs that satisfy the conditions, but it may also return the Windows 95 and 16-bit Windows compatibility DLLs that include "95" or "16" in their names.</span></span> <span data-ttu-id="bb03b-143">Pode omitir ficheiros com qualquer um destes números nos respetivos nomes utilizando o **excluir** parâmetro com o padrão  **\&#42;\[ 9516]\&#42;**:</span><span class="sxs-lookup"><span data-stu-id="bb03b-143">You can omit files that have any of these numbers in their names by using the **Exclude** parameter with the pattern **\&#42;\[9516]\&#42;**:</span></span>
+<span data-ttu-id="6af38-141">Por exemplo, suponha está a tentar localizar a DLL de serviço de hora do Windows na pasta System32, não sendo todas pode Lembre-se sobre o nome DLL que comece com "M" e tem "32" no mesmo.</span><span class="sxs-lookup"><span data-stu-id="6af38-141">For example, suppose you are trying to find the Windows Time Service DLL in the System32 folder, and all you can remember about the DLL name is that it begins with "W" and has "32" in it.</span></span>
 
-<pre>PS> Get-ChildItem -Path C:\WINDOWS\System32\w*32*.dll -Exclude *[9516]*
+<span data-ttu-id="6af38-142">Como uma expressão **w\&#42; 32\&#42;. dll** irá encontrar todas as DLLs que cumprem as condições, mas pode devolver também o Windows 95 e compatibilidade de Windows de 16 bits DLLs que incluem "95" ou "16" nos respetivos nomes.</span><span class="sxs-lookup"><span data-stu-id="6af38-142">An expression like **w\&#42;32\&#42;.dll** will find all DLLs that satisfy the conditions, but it may also return the Windows 95 and 16-bit Windows compatibility DLLs that include "95" or "16" in their names.</span></span> <span data-ttu-id="6af38-143">Pode omitir ficheiros com qualquer um destes números nos respetivos nomes utilizando o **excluir** parâmetro com o padrão  **\&#42;\[ 9516]\&#42;**:</span><span class="sxs-lookup"><span data-stu-id="6af38-143">You can omit files that have any of these numbers in their names by using the **Exclude** parameter with the pattern **\&#42;\[9516]\&#42;**:</span></span>
+
+```
+PS> Get-ChildItem -Path C:\WINDOWS\System32\w*32*.dll -Exclude *[9516]*
+
 Directory: Microsoft.PowerShell.Core\FileSystem::C:\WINDOWS\System32
 Mode                LastWriteTime     Length Name
 ----                -------------     ------ ----
@@ -132,20 +143,22 @@ Mode                LastWriteTime     Length Name
 -a---        2004-08-04   8:00 AM      82944 ws2_32.dll
 -a---        2004-08-04   8:00 AM      42496 wsnmp32.dll
 -a---        2004-08-04   8:00 AM      22528 wsock32.dll
--a---        2004-08-04   8:00 AM      18432 wtsapi32.dll</pre>
-
-#### <a name="mixing-get-childitem-parameters"></a><span data-ttu-id="bb03b-144">A combinação de parâmetros de Get-ChildItem</span><span class="sxs-lookup"><span data-stu-id="bb03b-144">Mixing Get-ChildItem Parameters</span></span>
-<span data-ttu-id="bb03b-145">Pode utilizar vários dos parâmetros do **Get-ChildItem** cmdlet no mesmo comando.</span><span class="sxs-lookup"><span data-stu-id="bb03b-145">You can use several of the parameters of the **Get-ChildItem** cmdlet in the same command.</span></span> <span data-ttu-id="bb03b-146">Antes de combinar parâmetros, lembre-se de que compreende a correspondência de carateres universais.</span><span class="sxs-lookup"><span data-stu-id="bb03b-146">Before you mix parameters, be sure that you understand wildcard matching.</span></span> <span data-ttu-id="bb03b-147">Por exemplo, o comando seguinte devolve não existem resultados:</span><span class="sxs-lookup"><span data-stu-id="bb03b-147">For example, the following command returns no results:</span></span>
-
-```
-PS> Get-ChildItem -Path C:\Windows\*.dll -Recurse -Exclude [a-y]*.dll
+-a---        2004-08-04   8:00 AM      18432 wtsapi32.dll
 ```
 
-<span data-ttu-id="bb03b-148">Não existirem resultados, apesar de existirem duas DLLs que começam com a letra "z" na pasta do Windows.</span><span class="sxs-lookup"><span data-stu-id="bb03b-148">There are no results, even though there are two DLLs that begin with the letter "z" in the Windows folder.</span></span>
+#### <a name="mixing-get-childitem-parameters"></a><span data-ttu-id="6af38-144">A combinação de parâmetros de Get-ChildItem</span><span class="sxs-lookup"><span data-stu-id="6af38-144">Mixing Get-ChildItem Parameters</span></span>
 
-<span data-ttu-id="bb03b-149">Não foram devolver resultados porque foi especificado o caráter universal como parte do caminho.</span><span class="sxs-lookup"><span data-stu-id="bb03b-149">No results were returned because we specified the wildcard as part of the path.</span></span> <span data-ttu-id="bb03b-150">Apesar do comando foi recursiva, o **Get-ChildItem** cmdlet restrito os itens que estão na pasta do Windows com nomes que termina com ". dll".</span><span class="sxs-lookup"><span data-stu-id="bb03b-150">Even though the command was recursive, the **Get-ChildItem** cmdlet restricted the items to those that are in the Windows folder with names ending with ".dll".</span></span>
+<span data-ttu-id="6af38-145">Pode utilizar vários dos parâmetros do **Get-ChildItem** cmdlet no mesmo comando.</span><span class="sxs-lookup"><span data-stu-id="6af38-145">You can use several of the parameters of the **Get-ChildItem** cmdlet in the same command.</span></span> <span data-ttu-id="6af38-146">Antes de combinar parâmetros, lembre-se de que compreende a correspondência de carateres universais.</span><span class="sxs-lookup"><span data-stu-id="6af38-146">Before you mix parameters, be sure that you understand wildcard matching.</span></span> <span data-ttu-id="6af38-147">Por exemplo, o comando seguinte devolve não existem resultados:</span><span class="sxs-lookup"><span data-stu-id="6af38-147">For example, the following command returns no results:</span></span>
 
-<span data-ttu-id="bb03b-151">Para especificar uma pesquisa recursiva para ficheiros cujos nomes correspondem um padrão especial, utilize o **-incluem** parâmetro.</span><span class="sxs-lookup"><span data-stu-id="bb03b-151">To specify a recursive search for files whose names match a special pattern, use the **-Include** parameter.</span></span>
+```powershell
+Get-ChildItem -Path C:\Windows\*.dll -Recurse -Exclude [a-y]*.dll
+```
+
+<span data-ttu-id="6af38-148">Não existirem resultados, apesar de existirem duas DLLs que começam com a letra "z" na pasta do Windows.</span><span class="sxs-lookup"><span data-stu-id="6af38-148">There are no results, even though there are two DLLs that begin with the letter "z" in the Windows folder.</span></span>
+
+<span data-ttu-id="6af38-149">Não foram devolver resultados porque foi especificado o caráter universal como parte do caminho.</span><span class="sxs-lookup"><span data-stu-id="6af38-149">No results were returned because we specified the wildcard as part of the path.</span></span> <span data-ttu-id="6af38-150">Apesar do comando foi recursiva, o **Get-ChildItem** cmdlet restrito os itens que estão na pasta do Windows com nomes que termina com ". dll".</span><span class="sxs-lookup"><span data-stu-id="6af38-150">Even though the command was recursive, the **Get-ChildItem** cmdlet restricted the items to those that are in the Windows folder with names ending with ".dll".</span></span>
+
+<span data-ttu-id="6af38-151">Para especificar uma pesquisa recursiva para ficheiros cujos nomes correspondem um padrão especial, utilize o **-incluem** parâmetro.</span><span class="sxs-lookup"><span data-stu-id="6af38-151">To specify a recursive search for files whose names match a special pattern, use the **-Include** parameter.</span></span>
 
 ```
 PS> Get-ChildItem -Path C:\Windows -Include *.dll -Recurse -Exclude [a-y]*.dll
@@ -162,4 +175,3 @@ Mode                LastWriteTime     Length Name
 ----                -------------     ------ ----
 -a---        2004-08-04   8:00 AM     337920 zipfldr.dll
 ```
-

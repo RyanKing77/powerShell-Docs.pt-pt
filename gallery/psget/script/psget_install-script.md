@@ -1,85 +1,85 @@
 ---
-ms.date: 2017-06-12
+ms.date: 06/12/2017
 contributor: manikb
 ms.topic: reference
 keywords: cmdlet do powershell do galeria, psget
-title: "Script de instalação"
-ms.openlocfilehash: 9ce4125329ea2a38f27f9305b169c7fcf3e9df42
-ms.sourcegitcommit: 58371abe9db4b9a0e4e1eb82d39a9f9e187355f9
+title: Script de instalação
+ms.openlocfilehash: 3d5b3a3076a11fbf452eb1b968decf217d9bace0
+ms.sourcegitcommit: cf195b090b3223fa4917206dfec7f0b603873cdf
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 04/09/2018
 ---
-# <a name="install-script"></a><span data-ttu-id="13487-103">Script de instalação</span><span class="sxs-lookup"><span data-stu-id="13487-103">Install-Script</span></span>
+# <a name="install-script"></a><span data-ttu-id="e41f3-103">Script de instalação</span><span class="sxs-lookup"><span data-stu-id="e41f3-103">Install-Script</span></span>
 
-<span data-ttu-id="13487-104">Instala os ficheiros de script do PowerShell de repositórios online no computador local.</span><span class="sxs-lookup"><span data-stu-id="13487-104">Installs the PowerShell script files from online repositories to the local computer.</span></span>
+<span data-ttu-id="e41f3-104">Instala os ficheiros de script do PowerShell de repositórios online no computador local.</span><span class="sxs-lookup"><span data-stu-id="e41f3-104">Installs the PowerShell script files from online repositories to the local computer.</span></span>
 
-## <a name="description"></a><span data-ttu-id="13487-105">Descrição</span><span class="sxs-lookup"><span data-stu-id="13487-105">Description</span></span>
+## <a name="description"></a><span data-ttu-id="e41f3-105">Descrição</span><span class="sxs-lookup"><span data-stu-id="e41f3-105">Description</span></span>
 
-<span data-ttu-id="13487-106">O cmdlet de Script de instalação localiza e transfere os scripts de um ou mais de uma galeria online, valida e instala-os no computador local para o âmbito de instalação especificada.</span><span class="sxs-lookup"><span data-stu-id="13487-106">The Install-Script cmdlet finds and downloads one or more scripts from an online gallery, validates and installs them on the local computer to the specified installation scope.</span></span>
+<span data-ttu-id="e41f3-106">O cmdlet de Script de instalação localiza e transfere os scripts de um ou mais de uma galeria online, valida e instala-os no computador local para o âmbito de instalação especificada.</span><span class="sxs-lookup"><span data-stu-id="e41f3-106">The Install-Script cmdlet finds and downloads one or more scripts from an online gallery, validates and installs them on the local computer to the specified installation scope.</span></span>
 
-<span data-ttu-id="13487-107">Quando não está definido nenhum âmbito, ou quando o valor do parâmetro de âmbito é AllUsers, o script está instalado para %systemdrive%:\Program Files\WindowsPowerShell\scripts.</span><span class="sxs-lookup"><span data-stu-id="13487-107">When no scope is defined, or when the value of the Scope parameter is AllUsers, the script is installed to %systemdrive%:\Program Files\WindowsPowerShell\scripts.</span></span> <span data-ttu-id="13487-108">Quando o valor do âmbito é CurrentUser, o script está instalado para $home\Documents\WindowsPowerShell\scripts.</span><span class="sxs-lookup"><span data-stu-id="13487-108">When the value of Scope is CurrentUser, the script is installed to $home\Documents\WindowsPowerShell\scripts.</span></span>
+<span data-ttu-id="e41f3-107">Quando não está definido nenhum âmbito, ou quando o valor do parâmetro de âmbito é AllUsers, o script está instalado para %systemdrive%:\Program Files\WindowsPowerShell\scripts.</span><span class="sxs-lookup"><span data-stu-id="e41f3-107">When no scope is defined, or when the value of the Scope parameter is AllUsers, the script is installed to %systemdrive%:\Program Files\WindowsPowerShell\scripts.</span></span> <span data-ttu-id="e41f3-108">Quando o valor do âmbito é CurrentUser, o script está instalado para $home\Documents\WindowsPowerShell\scripts.</span><span class="sxs-lookup"><span data-stu-id="e41f3-108">When the value of Scope is CurrentUser, the script is installed to $home\Documents\WindowsPowerShell\scripts.</span></span>
 
-<span data-ttu-id="13487-109">Pode filtrar os resultados com base nas versões mínimas e exatas de scripts especificados.</span><span class="sxs-lookup"><span data-stu-id="13487-109">You can filter your results based on minimum and exact versions of specified scripts.</span></span>
+<span data-ttu-id="e41f3-109">Pode filtrar os resultados com base nas versões mínimas e exatas de scripts especificados.</span><span class="sxs-lookup"><span data-stu-id="e41f3-109">You can filter your results based on minimum and exact versions of specified scripts.</span></span>
 
-<span data-ttu-id="13487-110">Algumas notas importantes:</span><span class="sxs-lookup"><span data-stu-id="13487-110">Some important notes:</span></span>
-- <span data-ttu-id="13487-111">Scripts são instalados ficheiros único.</span><span class="sxs-lookup"><span data-stu-id="13487-111">Scripts are installed single files.</span></span> <span data-ttu-id="13487-112">Como resultado, é instalada apenas uma cópia de um script e várias versões de scripts não podem ser instalado do lado do lado a lado num sistema.</span><span class="sxs-lookup"><span data-stu-id="13487-112">As a result, only one copy of a script is installed, and multiple versions of scripts cannot be installed side-by-side on a system.</span></span> 
-- <span data-ttu-id="13487-113">Scripts podem definir dependências nos módulos externos, o qual serão instalados quando o Script de instalação é executada.</span><span class="sxs-lookup"><span data-stu-id="13487-113">Scripts may define dependencies on external modules, which will  be installed when Install-Script is run.</span></span>
-- <span data-ttu-id="13487-114">**Não fidedigno linha:** de aceitação de utilizadores é necessária para instalar os scripts a partir de um repositório não fidedigno.</span><span class="sxs-lookup"><span data-stu-id="13487-114">**Untrusted prompt:** User acceptance is required for installing the scripts from an untrusted repository.</span></span>
-- <span data-ttu-id="13487-115">RequiredVersion instala a versão especificada na SxS com versões existentes no PowerShell versão 5.0 ou mais recente.</span><span class="sxs-lookup"><span data-stu-id="13487-115">RequiredVersion installs the specified version in SxS with existing versions on PowerShell version 5.0 or newer.</span></span>
+<span data-ttu-id="e41f3-110">Algumas notas importantes:</span><span class="sxs-lookup"><span data-stu-id="e41f3-110">Some important notes:</span></span>
+- <span data-ttu-id="e41f3-111">Scripts são instalados ficheiros único.</span><span class="sxs-lookup"><span data-stu-id="e41f3-111">Scripts are installed single files.</span></span> <span data-ttu-id="e41f3-112">Como resultado, é instalada apenas uma cópia de um script e várias versões de scripts não podem ser instalado do lado do lado a lado num sistema.</span><span class="sxs-lookup"><span data-stu-id="e41f3-112">As a result, only one copy of a script is installed, and multiple versions of scripts cannot be installed side-by-side on a system.</span></span>
+- <span data-ttu-id="e41f3-113">Scripts podem definir dependências nos módulos externos, o qual serão instalados quando o Script de instalação é executada.</span><span class="sxs-lookup"><span data-stu-id="e41f3-113">Scripts may define dependencies on external modules, which will  be installed when Install-Script is run.</span></span>
+- <span data-ttu-id="e41f3-114">**Não fidedigno linha:** de aceitação de utilizadores é necessária para instalar os scripts a partir de um repositório não fidedigno.</span><span class="sxs-lookup"><span data-stu-id="e41f3-114">**Untrusted prompt:** User acceptance is required for installing the scripts from an untrusted repository.</span></span>
+- <span data-ttu-id="e41f3-115">RequiredVersion instala a versão especificada na SxS com versões existentes no PowerShell versão 5.0 ou mais recente.</span><span class="sxs-lookup"><span data-stu-id="e41f3-115">RequiredVersion installs the specified version in SxS with existing versions on PowerShell version 5.0 or newer.</span></span>
 
-<span data-ttu-id="13487-116">Carateres universais não são suportadas em - nome do Script de instalação, guardar scripts e cmdlets do Script de desinstalação.</span><span class="sxs-lookup"><span data-stu-id="13487-116">Wildcards are not supported in -Name on Install-Script, Save-Script, and Uninstall-Script cmdlets.</span></span>
+<span data-ttu-id="e41f3-116">Carateres universais não são suportadas em - nome do Script de instalação, guardar scripts e cmdlets do Script de desinstalação.</span><span class="sxs-lookup"><span data-stu-id="e41f3-116">Wildcards are not supported in -Name on Install-Script, Save-Script, and Uninstall-Script cmdlets.</span></span>
 
-### <a name="scope"></a><span data-ttu-id="13487-117">Âmbito</span><span class="sxs-lookup"><span data-stu-id="13487-117">Scope</span></span>
-<span data-ttu-id="13487-118">Especifica o âmbito de instalação do script.</span><span class="sxs-lookup"><span data-stu-id="13487-118">Specifies the installation scope of the script.</span></span> <span data-ttu-id="13487-119">Os valores aceitáveis para este parâmetro são: AllUsers e CurrentUser.</span><span class="sxs-lookup"><span data-stu-id="13487-119">The acceptable values for this parameter are: AllUsers and CurrentUser.</span></span>
+### <a name="scope"></a><span data-ttu-id="e41f3-117">Âmbito</span><span class="sxs-lookup"><span data-stu-id="e41f3-117">Scope</span></span>
+<span data-ttu-id="e41f3-118">Especifica o âmbito de instalação do script.</span><span class="sxs-lookup"><span data-stu-id="e41f3-118">Specifies the installation scope of the script.</span></span> <span data-ttu-id="e41f3-119">Os valores aceitáveis para este parâmetro são: AllUsers e CurrentUser.</span><span class="sxs-lookup"><span data-stu-id="e41f3-119">The acceptable values for this parameter are: AllUsers and CurrentUser.</span></span>
 
-<span data-ttu-id="13487-120">O âmbito de instalação predefinida é AllUsers.</span><span class="sxs-lookup"><span data-stu-id="13487-120">The default installation scope is AllUsers.</span></span>
+<span data-ttu-id="e41f3-120">O âmbito de instalação predefinida é AllUsers.</span><span class="sxs-lookup"><span data-stu-id="e41f3-120">The default installation scope is AllUsers.</span></span>
 
-<span data-ttu-id="13487-121">O âmbito de AllUsers permite scripts ser instalado numa localização que esteja acessível para todos os utilizadores do computador, ou seja, "$env: SystemDrive\Program Files\WindowsPowerShell\scripts".</span><span class="sxs-lookup"><span data-stu-id="13487-121">The AllUsers scope lets scripts be installed in a location that is accessible to all users of the computer, that is, "$env:SystemDrive\Program Files\WindowsPowerShell\scripts".</span></span>
+<span data-ttu-id="e41f3-121">O âmbito de AllUsers permite scripts ser instalado numa localização que esteja acessível para todos os utilizadores do computador, ou seja, "$env: SystemDrive\Program Files\WindowsPowerShell\scripts".</span><span class="sxs-lookup"><span data-stu-id="e41f3-121">The AllUsers scope lets scripts be installed in a location that is accessible to all users of the computer, that is, "$env:SystemDrive\Program Files\WindowsPowerShell\scripts".</span></span>
 
-<span data-ttu-id="13487-122">O âmbito de CurrentUser permite scripts instalada apenas para "$home\Documents\WindowsPowerShell\scripts", para que o script está disponível apenas para o utilizador atual.</span><span class="sxs-lookup"><span data-stu-id="13487-122">The CurrentUser scope lets scripts be installed only to "$home\Documents\WindowsPowerShell\scripts", so that the script is available only to the current user.</span></span>
-
-
-<span data-ttu-id="13487-123">Especifica o âmbito de instalação do script.</span><span class="sxs-lookup"><span data-stu-id="13487-123">Specifies the installation scope of the script.</span></span> <span data-ttu-id="13487-124">Os valores válidos são: AllUsers e CurrentUser.</span><span class="sxs-lookup"><span data-stu-id="13487-124">Valid values are: AllUsers and CurrentUser.</span></span> <span data-ttu-id="13487-125">A predefinição é CurrentUser.</span><span class="sxs-lookup"><span data-stu-id="13487-125">The default is CurrentUser.</span></span>
-
-<span data-ttu-id="13487-126">O âmbito de AllUsers Especifica a instalação de um script %systemdrive%:\ProgramFiles\WindowsPowerShell\Scripts para que o script está disponível para todos os utilizadores.</span><span class="sxs-lookup"><span data-stu-id="13487-126">The AllUsers scope specifies to install a script to %systemdrive%:\ProgramFiles\WindowsPowerShell\Scripts so that the script is available to all users.</span></span> <span data-ttu-id="13487-127">Especifica o âmbito de CurrentUser para instalar o script no $home\Documents\WindowsPowerShell\Scripts para que o script está disponível apenas para o utilizador atual.</span><span class="sxs-lookup"><span data-stu-id="13487-127">The CurrentUser scope specifies to install the script in $home\Documents\WindowsPowerShell\Scripts so that the script is available only to the current user.</span></span>
+<span data-ttu-id="e41f3-122">O âmbito de CurrentUser permite scripts instalada apenas para "$home\Documents\WindowsPowerShell\scripts", para que o script está disponível apenas para o utilizador atual.</span><span class="sxs-lookup"><span data-stu-id="e41f3-122">The CurrentUser scope lets scripts be installed only to "$home\Documents\WindowsPowerShell\scripts", so that the script is available only to the current user.</span></span>
 
 
-## <a name="nopathupdate"></a><span data-ttu-id="13487-128">NoPathUpdate</span><span class="sxs-lookup"><span data-stu-id="13487-128">NoPathUpdate</span></span>
+<span data-ttu-id="e41f3-123">Especifica o âmbito de instalação do script.</span><span class="sxs-lookup"><span data-stu-id="e41f3-123">Specifies the installation scope of the script.</span></span> <span data-ttu-id="e41f3-124">Os valores válidos são: AllUsers e CurrentUser.</span><span class="sxs-lookup"><span data-stu-id="e41f3-124">Valid values are: AllUsers and CurrentUser.</span></span> <span data-ttu-id="e41f3-125">A predefinição é CurrentUser.</span><span class="sxs-lookup"><span data-stu-id="e41f3-125">The default is CurrentUser.</span></span>
 
-- <span data-ttu-id="13487-129">Parâmetro NoPathUpdate no Script de instalação cmdlet ignora a linha de comandos para adicionar a localização de instalação do script para a variável de ambiente PATH.</span><span class="sxs-lookup"><span data-stu-id="13487-129">NoPathUpdate switch parameter on Install-Script cmdlet bypasses the prompt for adding the script install location to the PATH environment variable.</span></span>
-- <span data-ttu-id="13487-130">Qualquer utilização do comando com – NoPathUpdate especificado resultará em nenhuma linha de comandos e o caminho não a ser atualizado (force é ignorable aqui).</span><span class="sxs-lookup"><span data-stu-id="13487-130">Any use of the command WITH –NoPathUpdate specified will result in no prompt and the PATH NOT being updated (force is ignorable here).</span></span>
-- <span data-ttu-id="13487-131">-Force sem – NoPathUpdate resultará numa nenhuma linha de comandos e o caminho será atualizado.</span><span class="sxs-lookup"><span data-stu-id="13487-131">-Force without –NoPathUpdate will result in no prompt and the PATH will be updated.</span></span>
-- <span data-ttu-id="13487-132">Se nem – Force ou – NoPathUpdate forem especificado, o utilizador irá ver o pedido.</span><span class="sxs-lookup"><span data-stu-id="13487-132">If neither –Force or –NoPathUpdate are specified, the user will see the prompt.</span></span>
-- <span data-ttu-id="13487-133">Tudo isto aplica-se apenas a primeira vez que o Script de instalação é utilizado num determinado âmbito.</span><span class="sxs-lookup"><span data-stu-id="13487-133">All of this only applies the first time Install-Script is used in a given scope.</span></span>
+<span data-ttu-id="e41f3-126">O âmbito de AllUsers Especifica a instalação de um script %systemdrive%:\ProgramFiles\WindowsPowerShell\Scripts para que o script está disponível para todos os utilizadores.</span><span class="sxs-lookup"><span data-stu-id="e41f3-126">The AllUsers scope specifies to install a script to %systemdrive%:\ProgramFiles\WindowsPowerShell\Scripts so that the script is available to all users.</span></span> <span data-ttu-id="e41f3-127">Especifica o âmbito de CurrentUser para instalar o script no $home\Documents\WindowsPowerShell\Scripts para que o script está disponível apenas para o utilizador atual.</span><span class="sxs-lookup"><span data-stu-id="e41f3-127">The CurrentUser scope specifies to install the script in $home\Documents\WindowsPowerShell\Scripts so that the script is available only to the current user.</span></span>
 
 
-## <a name="notes"></a><span data-ttu-id="13487-134">Notas</span><span class="sxs-lookup"><span data-stu-id="13487-134">Notes</span></span>
+## <a name="nopathupdate"></a><span data-ttu-id="e41f3-128">NoPathUpdate</span><span class="sxs-lookup"><span data-stu-id="e41f3-128">NoPathUpdate</span></span>
 
-<span data-ttu-id="13487-135">Este cmdlet é executado no Windows PowerShell 3.0 ou versões posteriores do Windows PowerShell, no Windows 7 ou Windows 2008 R2 e versões posteriores do Windows.</span><span class="sxs-lookup"><span data-stu-id="13487-135">This cmdlet runs on Windows PowerShell 3.0 or later releases of Windows PowerShell, on Windows 7 or Windows 2008 R2 and later releases of Windows.</span></span>
-
-<span data-ttu-id="13487-136">Se o valor especificado para o parâmetro de nome corresponde a uma versão do script no computador e não adicionou o parâmetro MinimumVersion ou RequiredVersion, o Script de instalação silenciosamente continua sem instalar nesse script.</span><span class="sxs-lookup"><span data-stu-id="13487-136">If a version of the script on the computer matches the value specified for the Name parameter, and you have not added the MinimumVersion or RequiredVersion parameter, Install-Script silently continues without installing that script.</span></span> <span data-ttu-id="13487-137">Se os parâmetros MinimumVersion ou RequiredVersion são especificados e o script existente não correspondem aos valores que parâmetro, em seguida, ocorre um erro.</span><span class="sxs-lookup"><span data-stu-id="13487-137">If the MinimumVersion or RequiredVersion parameters are specified, and the existing script does not match the values in that parameter, then an error occurs.</span></span> <span data-ttu-id="13487-138">Para ser mais específico: se a versão do script atualmente instalada é inferior ao valor do parâmetro MinimumVersion ou não é igual ao valor do parâmetro RequiredVersion, ocorre um erro.</span><span class="sxs-lookup"><span data-stu-id="13487-138">To be more specific: if the version of the currently-installed script is either lower than the value of the MinimumVersion parameter, or not equal to the value of the RequiredVersion parameter, an error occurs.</span></span> <span data-ttu-id="13487-139">Se a versão do script instalado é igual ao valor do parâmetro RequiredVersion ou maior do que o valor do parâmetro MinimumVersion, o Script de instalação silenciosamente continua sem instalar nesse script.</span><span class="sxs-lookup"><span data-stu-id="13487-139">If the version of the installed script is greater than the value of the MinimumVersion parameter, or equal to the value of the RequiredVersion parameter, Install-Script silently continues without installing that script.</span></span>
-
-<span data-ttu-id="13487-140">Script de instalação devolve um erro de não existir nenhum script na Galeria online que corresponde ao nome especificado.</span><span class="sxs-lookup"><span data-stu-id="13487-140">Install-Script returns an error if no script exists in the online gallery that matches the specified name.</span></span>
-
-<span data-ttu-id="13487-141">Para instalar vários scripts, especifique uma matriz de nomes do script, separados por vírgulas.</span><span class="sxs-lookup"><span data-stu-id="13487-141">To install multiple scripts, specify an array of the script names, separated by commas.</span></span> <span data-ttu-id="13487-142">Não é possível adicionar MinimumVersion ou RequiredVersion se especificar vários nomes de script.</span><span class="sxs-lookup"><span data-stu-id="13487-142">You cannot add MinimumVersion or RequiredVersion if you specify multiple script names.</span></span>
-
-<span data-ttu-id="13487-143">Por predefinição, os scripts estão instalados para a pasta de ficheiros de programa.</span><span class="sxs-lookup"><span data-stu-id="13487-143">By default, scripts are installed to the Program Files folder.</span></span> <span data-ttu-id="13487-144">Pode encaminhar vários objetos PSGetItemInfo ao Script de instalação; Esta é outra forma de especificação de vários scripts para instalar um único comando.</span><span class="sxs-lookup"><span data-stu-id="13487-144">You can pipe multiple PSGetItemInfo objects to Install-Script; this is another way of specifying multiple scripts to install in a single command.</span></span>
-
-<span data-ttu-id="13487-145">Para ajudar a evitar que scripts em execução que contêm código malicioso, instalado os scripts não são automaticamente importados por instalação.</span><span class="sxs-lookup"><span data-stu-id="13487-145">To help prevent running scripts that contain malicious code, installed scripts are not automatically imported by installation.</span></span> <span data-ttu-id="13487-146">Como procedimento de segurança recomendado, avaliar o código de script antes de executar quaisquer cmdlets ou funções num script pela primeira vez.</span><span class="sxs-lookup"><span data-stu-id="13487-146">As a security best practice, evaluate script code before running any cmdlets or functions in a script for the first time.</span></span>
+- <span data-ttu-id="e41f3-129">Parâmetro NoPathUpdate no Script de instalação cmdlet ignora a linha de comandos para adicionar a localização de instalação do script para a variável de ambiente PATH.</span><span class="sxs-lookup"><span data-stu-id="e41f3-129">NoPathUpdate switch parameter on Install-Script cmdlet bypasses the prompt for adding the script install location to the PATH environment variable.</span></span>
+- <span data-ttu-id="e41f3-130">Qualquer utilização do comando com – NoPathUpdate especificado resultará em nenhuma linha de comandos e o caminho não a ser atualizado (force é ignorable aqui).</span><span class="sxs-lookup"><span data-stu-id="e41f3-130">Any use of the command WITH –NoPathUpdate specified will result in no prompt and the PATH NOT being updated (force is ignorable here).</span></span>
+- <span data-ttu-id="e41f3-131">-Force sem – NoPathUpdate resultará numa nenhuma linha de comandos e o caminho será atualizado.</span><span class="sxs-lookup"><span data-stu-id="e41f3-131">-Force without –NoPathUpdate will result in no prompt and the PATH will be updated.</span></span>
+- <span data-ttu-id="e41f3-132">Se nem – Force ou – NoPathUpdate forem especificado, o utilizador irá ver o pedido.</span><span class="sxs-lookup"><span data-stu-id="e41f3-132">If neither –Force or –NoPathUpdate are specified, the user will see the prompt.</span></span>
+- <span data-ttu-id="e41f3-133">Tudo isto aplica-se apenas a primeira vez que o Script de instalação é utilizado num determinado âmbito.</span><span class="sxs-lookup"><span data-stu-id="e41f3-133">All of this only applies the first time Install-Script is used in a given scope.</span></span>
 
 
-## <a name="cmdlet-syntax"></a><span data-ttu-id="13487-147">Sintaxe de cmdlet</span><span class="sxs-lookup"><span data-stu-id="13487-147">Cmdlet syntax</span></span>
+## <a name="notes"></a><span data-ttu-id="e41f3-134">Notas</span><span class="sxs-lookup"><span data-stu-id="e41f3-134">Notes</span></span>
+
+<span data-ttu-id="e41f3-135">Este cmdlet é executado no Windows PowerShell 3.0 ou versões posteriores do Windows PowerShell, no Windows 7 ou Windows 2008 R2 e versões posteriores do Windows.</span><span class="sxs-lookup"><span data-stu-id="e41f3-135">This cmdlet runs on Windows PowerShell 3.0 or later releases of Windows PowerShell, on Windows 7 or Windows 2008 R2 and later releases of Windows.</span></span>
+
+<span data-ttu-id="e41f3-136">Se o valor especificado para o parâmetro de nome corresponde a uma versão do script no computador e não adicionou o parâmetro MinimumVersion ou RequiredVersion, o Script de instalação silenciosamente continua sem instalar nesse script.</span><span class="sxs-lookup"><span data-stu-id="e41f3-136">If a version of the script on the computer matches the value specified for the Name parameter, and you have not added the MinimumVersion or RequiredVersion parameter, Install-Script silently continues without installing that script.</span></span> <span data-ttu-id="e41f3-137">Se os parâmetros MinimumVersion ou RequiredVersion são especificados e o script existente não correspondem aos valores que parâmetro, em seguida, ocorre um erro.</span><span class="sxs-lookup"><span data-stu-id="e41f3-137">If the MinimumVersion or RequiredVersion parameters are specified, and the existing script does not match the values in that parameter, then an error occurs.</span></span> <span data-ttu-id="e41f3-138">Para ser mais específico: se a versão do script atualmente instalada é inferior ao valor do parâmetro MinimumVersion ou não é igual ao valor do parâmetro RequiredVersion, ocorre um erro.</span><span class="sxs-lookup"><span data-stu-id="e41f3-138">To be more specific: if the version of the currently-installed script is either lower than the value of the MinimumVersion parameter, or not equal to the value of the RequiredVersion parameter, an error occurs.</span></span> <span data-ttu-id="e41f3-139">Se a versão do script instalado é igual ao valor do parâmetro RequiredVersion ou maior do que o valor do parâmetro MinimumVersion, o Script de instalação silenciosamente continua sem instalar nesse script.</span><span class="sxs-lookup"><span data-stu-id="e41f3-139">If the version of the installed script is greater than the value of the MinimumVersion parameter, or equal to the value of the RequiredVersion parameter, Install-Script silently continues without installing that script.</span></span>
+
+<span data-ttu-id="e41f3-140">Script de instalação devolve um erro de não existir nenhum script na Galeria online que corresponde ao nome especificado.</span><span class="sxs-lookup"><span data-stu-id="e41f3-140">Install-Script returns an error if no script exists in the online gallery that matches the specified name.</span></span>
+
+<span data-ttu-id="e41f3-141">Para instalar vários scripts, especifique uma matriz de nomes do script, separados por vírgulas.</span><span class="sxs-lookup"><span data-stu-id="e41f3-141">To install multiple scripts, specify an array of the script names, separated by commas.</span></span> <span data-ttu-id="e41f3-142">Não é possível adicionar MinimumVersion ou RequiredVersion se especificar vários nomes de script.</span><span class="sxs-lookup"><span data-stu-id="e41f3-142">You cannot add MinimumVersion or RequiredVersion if you specify multiple script names.</span></span>
+
+<span data-ttu-id="e41f3-143">Por predefinição, os scripts estão instalados para a pasta de ficheiros de programa.</span><span class="sxs-lookup"><span data-stu-id="e41f3-143">By default, scripts are installed to the Program Files folder.</span></span> <span data-ttu-id="e41f3-144">Pode encaminhar vários objetos PSGetItemInfo ao Script de instalação; Esta é outra forma de especificação de vários scripts para instalar um único comando.</span><span class="sxs-lookup"><span data-stu-id="e41f3-144">You can pipe multiple PSGetItemInfo objects to Install-Script; this is another way of specifying multiple scripts to install in a single command.</span></span>
+
+<span data-ttu-id="e41f3-145">Para ajudar a evitar que scripts em execução que contêm código malicioso, instalado os scripts não são automaticamente importados por instalação.</span><span class="sxs-lookup"><span data-stu-id="e41f3-145">To help prevent running scripts that contain malicious code, installed scripts are not automatically imported by installation.</span></span> <span data-ttu-id="e41f3-146">Como procedimento de segurança recomendado, avaliar o código de script antes de executar quaisquer cmdlets ou funções num script pela primeira vez.</span><span class="sxs-lookup"><span data-stu-id="e41f3-146">As a security best practice, evaluate script code before running any cmdlets or functions in a script for the first time.</span></span>
+
+
+## <a name="cmdlet-syntax"></a><span data-ttu-id="e41f3-147">Sintaxe de cmdlet</span><span class="sxs-lookup"><span data-stu-id="e41f3-147">Cmdlet syntax</span></span>
 
 ```powershell
 Get-Command -Name Install-Script -Module PowerShellGet -Syntax
 ```
 
-## <a name="cmdlet-online-help-reference"></a><span data-ttu-id="13487-148">Referência de ajuda online do cmdlet</span><span class="sxs-lookup"><span data-stu-id="13487-148">Cmdlet online help reference</span></span>
+## <a name="cmdlet-online-help-reference"></a><span data-ttu-id="e41f3-148">Referência de ajuda online do cmdlet</span><span class="sxs-lookup"><span data-stu-id="e41f3-148">Cmdlet online help reference</span></span>
 
-[<span data-ttu-id="13487-149">Script de instalação</span><span class="sxs-lookup"><span data-stu-id="13487-149">Install-Script</span></span>](http://go.microsoft.com/fwlink/?LinkId=619784)
+[<span data-ttu-id="e41f3-149">Install-Script</span><span class="sxs-lookup"><span data-stu-id="e41f3-149">Install-Script</span></span>](http://go.microsoft.com/fwlink/?LinkId=619784)
 
-## <a name="example-commands"></a><span data-ttu-id="13487-150">Comandos de exemplo</span><span class="sxs-lookup"><span data-stu-id="13487-150">Example commands</span></span>
+## <a name="example-commands"></a><span data-ttu-id="e41f3-150">Comandos de exemplo</span><span class="sxs-lookup"><span data-stu-id="e41f3-150">Example commands</span></span>
 
 ```powershell
 
@@ -239,7 +239,7 @@ Get-Command -Name "Required-Script2"
 
 Get-InstalledScript -Name "Required-Script2"
 
-Get-InstalledScript -Name "Required-Script2" | Format-List * 
+Get-InstalledScript -Name "Required-Script2" | Format-List *
 
 
 # Install a script with AllUsers scope
@@ -250,7 +250,7 @@ Get-InstalledScript -Name "Required-Script2" | Format-List *
 
 Install-Script -Repository "Local1" -Name "Required-Script3" -Scope "AllUsers"
 Get-InstalledScript -Name "Required-Script3"
-Get-InstalledScript -Name "Required-Script3" | Format-List * 
+Get-InstalledScript -Name "Required-Script3" | Format-List *
 
 
 # Install a script with its dependent scripts and modules
@@ -260,7 +260,7 @@ Get-InstalledScript -Name "Required-Script3" | Format-List *
 # The third command uses the Get-InstalledScript script cmdlet to get installed scripts and display the results.
 # The fourth command uses the Get-InstalledModule cmdlet to get installed modules and display the results.
 # The fifth command uses the Find-Script cmdlet to find scripts where the name begins with Required-Script and display the results.
-# The sixth command installs the scripts where the name begins with Required-Script in the Local1 repository. 
+# The sixth command installs the scripts where the name begins with Required-Script in the Local1 repository.
 # The final command gets installed scripts and displays the results.
 
 Find-Script -Repository "Local1" -Name "Script-WithDependencies2" -IncludeDependencies
@@ -273,7 +273,7 @@ Get-InstalledScript
 
 ```
 
-<span data-ttu-id="13487-151">Também pode utilizar o comando Get-nome <InstalledScriptFileName> obtê-lo.</span><span class="sxs-lookup"><span data-stu-id="13487-151">You can also use Get-Command –Name <InstalledScriptFileName> to get it.</span></span> <span data-ttu-id="13487-152">Instalar duas localizações são adicionadas à variável de ambiente PATH na primeira utilização de um âmbito especificado.</span><span class="sxs-lookup"><span data-stu-id="13487-152">Two install locations are added to the PATH environment variable on first use of a specified scope.</span></span>
+<span data-ttu-id="e41f3-151">Também pode utilizar o comando Get-nome <InstalledScriptFileName> obtê-lo.</span><span class="sxs-lookup"><span data-stu-id="e41f3-151">You can also use Get-Command –Name <InstalledScriptFileName> to get it.</span></span> <span data-ttu-id="e41f3-152">Instalar duas localizações são adicionadas à variável de ambiente PATH na primeira utilização de um âmbito especificado.</span><span class="sxs-lookup"><span data-stu-id="e41f3-152">Two install locations are added to the PATH environment variable on first use of a specified scope.</span></span>
 ```powershell
 $env:Path -split ';'| Where-Object {$\_} | Select-Object -Last 2
 C:\\Program Files\\WindowsPowerShell\\Scripts
@@ -326,7 +326,7 @@ Install-Script ContosoClient -Force
 # Install a script with dependencies
 Install-Script -Name ContosoClient
 
-# Install a script 
+# Install a script
 
 # Install a script from the registered repository with ScriptSourceLocation
 Install-Script Connect-AzureVM
@@ -344,7 +344,7 @@ Install-Script -Name *Azure*
 # Find all versions of a script
 Install-Script -Name Connect-O365 -AllVersions
 
-# Find a script with -MinimumVersion. 
+# Find a script with -MinimumVersion.
 # With MinimumVersion we can find a script whose version is greate than or equal to the specified MinimumVersion value.
 Install-Script Connect-O365 -MinimumVersion 1.4
 
@@ -381,8 +381,8 @@ At line:1 char:1
      + CategoryInfo          : InvalidOperation: (:) [Write-Error], WriteErrorException
      + FullyQualifiedErrorId : CommandAlreadyAvailableWitScriptName,Install-Script
 
- 
- 
+
+
  PS C:\WINDOWS\system32> install-script get-childitem,contosos -Repository localrepo
 install-script : A command with name 'get-childitem' is already available on this system. This script 'get-childitem' may override the existing command. If you still want to install this script 'get-childitem', use -Force parameter.
 At line:1 char:1
@@ -400,8 +400,8 @@ At C:\Program Files\WindowsPowerShell\Modules\powershellget\1.0.0.1\PSModule.psm
 
  PS C:\WINDOWS\system32>
 
- 
- 
+
+
  PS C:\WINDOWS\system32> find-script get-childitem -Repository localrepo | install-script
 install-script : A command with name 'get-childitem' is already available on this system. This script 'get-childitem' may override the existing command. If you still want to install this script 'get-childitem', use -Force parameter.
 At line:1 char:51
@@ -410,7 +410,7 @@ At line:1 char:51
      + CategoryInfo          : InvalidOperation: (:) [Write-Error], WriteErrorException
      + FullyQualifiedErrorId : CommandAlreadyAvailableWitScriptName,Install-Script
 
- 
+
  PS C:\WINDOWS\system32>
 
  PS C:\WINDOWS\system32> Install-Package -Name Get-ChildItem -source LocalRepo  -ProviderName powershellget -Type Script
@@ -437,13 +437,13 @@ The scripts install location 'C:\Program Files\WindowsPowerShell\Scripts' is req
 
 
 - To prompt only once per scope, user acceptance for PATH variable change will be added to the user specific settings file under %localappdata%\Microsoft\windows\PowerShell\PowerShellGet
-%localappdata%\Microsoft\windows\PowerShell\PowerShellGet\PowerShellGetSettings.XML. 
+%localappdata%\Microsoft\windows\PowerShell\PowerShellGet\PowerShellGetSettings.XML.
 This settings file will be used to not prompt again.
 
-After prompting for CurrentUser scope: 
+After prompting for CurrentUser scope:
     true or false for CurrentUserScope_AllowPATHChangeForScripts key based on user input.
 
-After prompting for AllUsers scope: 
+After prompting for AllUsers scope:
     true or false for AllUsersScope_AllowPATHChangeForScripts key based on user input.
 
 - If user accepts the prompt
@@ -455,7 +455,7 @@ After prompting for AllUsers scope:
 
 
 
-Example:             
+Example:
 PS C:\windows\system32> Install-Script -Name $scriptName -Repository $repositoryName -Scope $Scope -Verbose
 
 Acceptance required for adding the script installation locations to the PATH environment variable
@@ -465,7 +465,7 @@ The scripts install location 'C:\Program Files\WindowsPowerShell\Scripts' is req
 
 ```
 
-## <a name="install-script-cmdlet-in-pipeline-operations"></a><span data-ttu-id="13487-153">Cmdlet de Script de instalação em operações de pipeline</span><span class="sxs-lookup"><span data-stu-id="13487-153">Install-Script cmdlet in pipeline operations</span></span>
+## <a name="install-script-cmdlet-in-pipeline-operations"></a><span data-ttu-id="e41f3-153">Cmdlet de Script de instalação em operações de pipeline</span><span class="sxs-lookup"><span data-stu-id="e41f3-153">Install-Script cmdlet in pipeline operations</span></span>
 
 ```powershell
 
@@ -489,7 +489,7 @@ Get-Installedscript
 
 
 
-## <a name="error-scenarios"></a><span data-ttu-id="13487-154">Cenários de erro</span><span class="sxs-lookup"><span data-stu-id="13487-154">Error scenarios</span></span>
+## <a name="error-scenarios"></a><span data-ttu-id="e41f3-154">Cenários de erro</span><span class="sxs-lookup"><span data-stu-id="e41f3-154">Error scenarios</span></span>
 
 ```powershell
 
@@ -507,10 +507,10 @@ Install-Script ContosoClient,ContosoServer -MinimumVersion 2.0
 
 ```
 
-## <a name="install-script-and-get-installedscript-cmdlets"></a><span data-ttu-id="13487-155">Cmdlets de Script de instalação e Get-InstalledScript</span><span class="sxs-lookup"><span data-stu-id="13487-155">Install-Script and Get-InstalledScript cmdlets</span></span>
-<span data-ttu-id="13487-156">Cmdlet de Script de instalação permite-lhe instalar um ficheiro de script específico, juntamente com as respetivas dependências para o âmbito especificado.</span><span class="sxs-lookup"><span data-stu-id="13487-156">Install-Script cmdlet lets you to install a specific script file along with its dependencies to the specified scope.</span></span> <span data-ttu-id="13487-157">Por predefinição, os scripts estão instalados para o âmbito de AllUsers.</span><span class="sxs-lookup"><span data-stu-id="13487-157">By default, scripts are installed to the AllUsers scope.</span></span> <span data-ttu-id="13487-158">Cmdlet Get-InstalledScript permite-lhe obter a lista de ficheiros de script que foram instalados utilizando o cmdlet de Script de instalação.</span><span class="sxs-lookup"><span data-stu-id="13487-158">Get-InstalledScript cmdlet lets you to get the list of script files which were installed using Install-Script cmdlet.</span></span>
+## <a name="install-script-and-get-installedscript-cmdlets"></a><span data-ttu-id="e41f3-155">Cmdlets de Script de instalação e Get-InstalledScript</span><span class="sxs-lookup"><span data-stu-id="e41f3-155">Install-Script and Get-InstalledScript cmdlets</span></span>
+<span data-ttu-id="e41f3-156">Cmdlet de Script de instalação permite-lhe instalar um ficheiro de script específico, juntamente com as respetivas dependências para o âmbito especificado.</span><span class="sxs-lookup"><span data-stu-id="e41f3-156">Install-Script cmdlet lets you to install a specific script file along with its dependencies to the specified scope.</span></span> <span data-ttu-id="e41f3-157">Por predefinição, os scripts estão instalados para o âmbito de AllUsers.</span><span class="sxs-lookup"><span data-stu-id="e41f3-157">By default, scripts are installed to the AllUsers scope.</span></span> <span data-ttu-id="e41f3-158">Cmdlet Get-InstalledScript permite-lhe obter a lista de ficheiros de script que foram instalados utilizando o cmdlet de Script de instalação.</span><span class="sxs-lookup"><span data-stu-id="e41f3-158">Get-InstalledScript cmdlet lets you to get the list of script files which were installed using Install-Script cmdlet.</span></span>
 
-<span data-ttu-id="13487-159">Nota de utilização: para permitir a gestão e localizar de scripts, depois de serem instalados, script de instalação irá crie uma pasta predefinida para armazenar os scripts em $home\Documents\WindowsPowerShell\Scripts e adicionar nessa pasta ao seu ambiente de caminho.</span><span class="sxs-lookup"><span data-stu-id="13487-159">Use note: To allow management and locating of scripts once they are installed, Install-script will create a default folder for storing scripts at $home\Documents\WindowsPowerShell\Scripts, and add that folder to your PATH environment.</span></span> <span data-ttu-id="13487-160">Se modificar o caminho for uma preocupação, utilize o Script de guardar em vez de Script de instalação.</span><span class="sxs-lookup"><span data-stu-id="13487-160">If modifying the path is a concern, use Save-Script instead of Install-Script.</span></span> <span data-ttu-id="13487-161">Get-InstalledScripts e o Script de desinstalação só podem ser utilizado com scripts colocados no sistema através do Script de instalação.</span><span class="sxs-lookup"><span data-stu-id="13487-161">Get-InstalledScripts and Uninstall-Script can only work with scripts placed on the system using Install-Script.</span></span>
+<span data-ttu-id="e41f3-159">Nota de utilização: para permitir a gestão e localizar de scripts, depois de serem instalados, script de instalação irá crie uma pasta predefinida para armazenar os scripts em $home\Documents\WindowsPowerShell\Scripts e adicionar nessa pasta ao seu ambiente de caminho.</span><span class="sxs-lookup"><span data-stu-id="e41f3-159">Use note: To allow management and locating of scripts once they are installed, Install-script will create a default folder for storing scripts at $home\Documents\WindowsPowerShell\Scripts, and add that folder to your PATH environment.</span></span> <span data-ttu-id="e41f3-160">Se modificar o caminho for uma preocupação, utilize o Script de guardar em vez de Script de instalação.</span><span class="sxs-lookup"><span data-stu-id="e41f3-160">If modifying the path is a concern, use Save-Script instead of Install-Script.</span></span> <span data-ttu-id="e41f3-161">Get-InstalledScripts e o Script de desinstalação só podem ser utilizado com scripts colocados no sistema através do Script de instalação.</span><span class="sxs-lookup"><span data-stu-id="e41f3-161">Get-InstalledScripts and Uninstall-Script can only work with scripts placed on the system using Install-Script.</span></span>
 ```powershell
 # Install locations for scripts:
 # Default scope is AllUsers.
@@ -566,7 +566,7 @@ InstalledLocation : C:\\Users\\manikb\\Documents\\WindowsPowerShell\\Scripts
 Installed script file is immediately available for usage.
 ```
 
-<span data-ttu-id="13487-162">Também pode utilizar o comando Get-nome <InstalledScriptFileName> obtê-lo.</span><span class="sxs-lookup"><span data-stu-id="13487-162">You can also use Get-Command –Name <InstalledScriptFileName> to get it.</span></span> <span data-ttu-id="13487-163">Instalar duas localizações são adicionadas à variável de ambiente PATH na primeira utilização de um âmbito especificado.</span><span class="sxs-lookup"><span data-stu-id="13487-163">Two install locations are added to the PATH environment variable on first use of a specified scope.</span></span>
+<span data-ttu-id="e41f3-162">Também pode utilizar o comando Get-nome <InstalledScriptFileName> obtê-lo.</span><span class="sxs-lookup"><span data-stu-id="e41f3-162">You can also use Get-Command –Name <InstalledScriptFileName> to get it.</span></span> <span data-ttu-id="e41f3-163">Instalar duas localizações são adicionadas à variável de ambiente PATH na primeira utilização de um âmbito especificado.</span><span class="sxs-lookup"><span data-stu-id="e41f3-163">Two install locations are added to the PATH environment variable on first use of a specified scope.</span></span>
 ```powershell
 $env:Path -split ';'| Where-Object {$\_} | Select-Object -Last 2
 C:\\Program Files\\WindowsPowerShell\\Scripts
@@ -687,4 +687,3 @@ Param()
 Function Test-FunctionFromScript\_Script-WithDependencies2 { Get-Date }
 Workflow Test-WorkflowFromScript\_Script-WithDependencies2 { Get-Date }
 ```
-
