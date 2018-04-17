@@ -472,7 +472,7 @@ Também pode instalar o RPM sem o passo intermédio de transferindo-a:
 sudo dnf install https://github.com/PowerShell/PowerShell/releases/download/v6.0.0/powershell-6.0.0-1.rhel.7.x86_64.rpm
 ```
 
-### <a name="uninstallation---fedora-25"></a>Uninstallation - Fedora 25
+### <a name="uninstallation---fedora-25"></a>Desinstalação - Fedora 25
 
 ```sh
 sudo dnf remove powershell
@@ -528,13 +528,13 @@ sudo dnf install compat-openssl10
 sudo dnf install https://github.com/PowerShell/PowerShell/releases/download/v6.0.0/powershell-6.0.0-1.rhel.7.x86_64.rpm
 ```
 
-### <a name="uninstallation---fedora-26"></a>Uninstallation - Fedora 26
+### <a name="uninstallation---fedora-26"></a>Desinstalação - Fedora 26
 
 ```sh
 sudo dnf remove powershell
 ```
 
-## <a name="arch-linux"></a>Arch Linux
+## <a name="arch-linux"></a>Arquitetura de Linux
 
 PowerShell está disponível a partir de [arquitetura Linux][] utilizador repositório (AUR).
 
@@ -588,10 +588,10 @@ Quando são lançadas novas versões do PowerShell, basta atualizar formulae do 
 
 ```sh
 brew update
-brew cask reinstall powershell
+brew cask upgrade powershell
 ```
 
-> Nota: porque de [este problema nos Cask](https://github.com/caskroom/homebrew-cask/issues/29301), atualmente, possui fazer reinstalar a atualização.
+> Nota: Os comandos acima podem ser chamados a partir de dentro de um anfitrião do PowerShell (pwsh), mas, em seguida, a shell de PowerShell tem de ser terminada e reintroduzida para concluir a atualização e atualizar os valores apresentados nas $PSVersionTable.
 
 [brew]: http://brew.sh/
 [cask]: https://caskroom.github.io/
@@ -703,11 +703,11 @@ O gráfico seguinte mostra as dependências do .NET Core 2.0 em diversas distrib
 
 | SO                 | Dependências |
 | ------------------ | ------------ |
-| Ubuntu 14.04       | libc6, libgcc1, libgssapi-krb5-2, liblttng-ust0, libstdc++6, <br> libcurl3, libunwind8, libuuid1, zlib1g, libssl1.0.0, libicu52 |
-| Ubuntu 16.04       | libc6, libgcc1, libgssapi-krb5-2, liblttng-ust0, libstdc++6, <br> libcurl3, libunwind8, libuuid1, zlib1g, libssl1.0.0, libicu55 |
-| Ubuntu 17.04       | libc6, libgcc1, libgssapi-krb5-2, liblttng-ust0, libstdc++6, <br> libcurl3, libunwind8, libuuid1, zlib1g, libssl1.0.0, libicu57 |
-| 8 debian (Jessie)  | libc6, libgcc1, libgssapi-krb5-2, liblttng-ust0, libstdc++6, <br> libcurl3, libunwind8, libuuid1, zlib1g, libssl1.0.0, libicu52 |
-| Debian 9 (Stretch) | libc6, libgcc1, libgssapi-krb5-2, liblttng-ust0, libstdc++6, <br> libcurl3, libunwind8, libuuid1, zlib1g, libssl1.0.2, libicu57 |
+| Ubuntu 14.04       | libc6, libgcc1, libgssapi-krb5-2, liblttng-ust0, libstdc + + 6, <br> libcurl3, libunwind8, libuuid1, zlib1g, libssl1.0.0, libicu52 |
+| Ubuntu 16.04       | libc6, libgcc1, libgssapi-krb5-2, liblttng-ust0, libstdc + + 6, <br> libcurl3 libunwind8, libuuid1, zlib1g, libssl1.0.0, libicu55 |
+| Ubuntu 17.04       | libc6, libgcc1, libgssapi-krb5-2, liblttng-ust0, libstdc + + 6, <br> libcurl3, libunwind8, libuuid1, zlib1g, libssl1.0.0, libicu57 |
+| 8 debian (Jessie)  | libc6, libgcc1, libgssapi-krb5-2, liblttng-ust0, libstdc + + 6, <br> libcurl3, libunwind8, libuuid1, zlib1g, libssl1.0.0, libicu52 |
+| Debian 9 (Stretch) | libc6, libgcc1, libgssapi-krb5-2, liblttng-ust0, libstdc + + 6, <br> libcurl3, libunwind8, libuuid1, zlib1g, libssl1.0.2, libicu57 |
 | CentOS 7 <br> Oracle Linux 7 <br> RHEL 7 <br> OpenSUSE 42.2 <br> Fedora 25 | libunwind, libcurl, bibliotecas de openssl, libicu |
 | Fedora 26          | libunwind libcurl, bibliotecas de openssl, libicu, openssl10 de compatibilidade |
 

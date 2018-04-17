@@ -1,17 +1,20 @@
 ---
-ms.date: 06/12/2017
+ms.date: 04/11/2018
 ms.topic: conceptual
 keywords: DSC, do powershell, a configuração, a configuração
 title: Configurar um servidor de solicitação SMB de DSC
-ms.openlocfilehash: e9228c050d6f496e30e94404a564ed2e425a5412
-ms.sourcegitcommit: cf195b090b3223fa4917206dfec7f0b603873cdf
+ms.openlocfilehash: e4e313746e95af86c5d17a8de0549451b1399b6c
+ms.sourcegitcommit: ece1794c94be4880a2af5a2605ed4721593643b6
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 04/09/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="setting-up-a-dsc-smb-pull-server"></a>Configurar um servidor de solicitação SMB de DSC
 
 >Aplica-se a: O Windows PowerShell 4.0, Windows PowerShell 5.0
+
+> [!IMPORTANT]
+> O servidor de solicitação (funcionalidade do Windows *DSC serviço*) é um componente suportado do Windows Server no entanto, são não planos para oferecer novas funcionalidades ou capacidades. É recomendado para começar a transição geridos os clientes [Automation DSC do Azure](/azure/automation/automation-dsc-getting-started) (inclui funcionalidades além do servidor de solicitação no Windows Server) ou uma das soluções de Comunidade listados [aqui](pullserver.md#community-solutions-for-pull-service).
 
 Um DSC [SMB](https://technet.microsoft.com/library/hh831795.aspx) do servidor de solicitação é um computador que aloja partilhas de ficheiros SMB que fazer com que os ficheiros de configuração de DSC e recursos de DSC disponíveis para nós de destino quando os nós peça-lhes.
 
