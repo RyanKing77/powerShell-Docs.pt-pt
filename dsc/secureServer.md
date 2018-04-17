@@ -3,22 +3,25 @@ ms.date: 06/12/2017
 ms.topic: conceptual
 keywords: DSC, do powershell, a configuração, a configuração
 title: Melhores práticas do servidor de solicitação
-ms.openlocfilehash: 7de523ad16aee77d87ec4d3334d296997020aa19
-ms.sourcegitcommit: cf195b090b3223fa4917206dfec7f0b603873cdf
+ms.openlocfilehash: d8d8667e2fc608e0c5948a0b5046bf92801b49db
+ms.sourcegitcommit: ece1794c94be4880a2af5a2605ed4721593643b6
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 04/09/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="pull-server-best-practices"></a>Melhores práticas do servidor de solicitação
 
 >Aplica-se a: O Windows PowerShell 4.0, Windows PowerShell 5.0
 
+> [!IMPORTANT]
+> O servidor de solicitação (funcionalidade do Windows *DSC serviço*) é um componente suportado do Windows Server no entanto, são não planos para oferecer novas funcionalidades ou capacidades. É recomendado para começar a transição geridos os clientes [Automation DSC do Azure](/azure/automation/automation-dsc-getting-started) (inclui funcionalidades além do servidor de solicitação no Windows Server) ou uma das soluções de Comunidade listados [aqui](pullserver.md#community-solutions-for-pull-service).
+
 Resumo: Este documento destina-se para incluir o processo e extensibilidade para ajudá-lo engenheiros estiver a preparar para a solução. Detalhes devem fornecer melhores práticas, conforme identificado por clientes e, em seguida, validar pela equipa do produto para garantir que as recomendações são direcionadas para o futura e considerados estáveis.
 
 | |Informações do documento|
 |:---|:---|
-autor | Michael Greene
-Revisores | Ben Gelens, Ravikanth Chaganti, Aleksandar Nikolic
+autor | Miguel Greene
+Revisores | Bernardo Gelens, Ravikanth Chaganti, Aleksandar Nikolic
 Publicado | Abril de 2015
 
 ## <a name="abstract"></a>Abstrato

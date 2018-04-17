@@ -3,18 +3,20 @@ ms.date: 06/12/2017
 ms.topic: conceptual
 keywords: DSC, do powershell, a configuração, a configuração
 title: Configurar um cliente de solicitação do DSC
-ms.openlocfilehash: e6d73187566db2756ae24dabe0a825fffb5ecce0
-ms.sourcegitcommit: cf195b090b3223fa4917206dfec7f0b603873cdf
+ms.openlocfilehash: 4c56671313b93cc12ce9460ce41e1710e0d6a526
+ms.sourcegitcommit: ece1794c94be4880a2af5a2605ed4721593643b6
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 04/09/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="setting-up-a-dsc-pull-client"></a>Configurar um cliente de solicitação do DSC
 
 > Aplica-se a: O Windows PowerShell 4.0, Windows PowerShell 5.0
 
-Cada nó de destino tem de ser disse para utilizar o modo de extração e determinados a localização do ficheiro ou URL em que podem contactar o servidor de solicitação para obter recursos e configurações e, em que deve enviar dados de relatório.
+> [!IMPORTANT]
+> O servidor de solicitação (funcionalidade do Windows *DSC serviço*) é um componente suportado do Windows Server no entanto, são não planos para oferecer novas funcionalidades ou capacidades. É recomendado para começar a transição geridos os clientes [Automation DSC do Azure](/azure/automation/automation-dsc-getting-started) (inclui funcionalidades além do servidor de solicitação no Windows Server) ou uma das soluções de Comunidade listados [aqui](pullserver.md#community-solutions-for-pull-service).
 
+Cada nó de destino tem de ser disse para utilizar o modo de extração e determinados a localização do ficheiro ou URL em que podem contactar o servidor de solicitação para obter recursos e configurações e, em que deve enviar dados de relatório.
 
 Os tópicos seguintes explicam como configurar clientes de extração:
 
