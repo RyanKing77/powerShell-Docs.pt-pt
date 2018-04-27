@@ -4,11 +4,11 @@ contributor: manikb
 ms.topic: reference
 keywords: cmdlet do powershell do galeria, psget
 title: modulewithpseditionsupport
-ms.openlocfilehash: cc4ab8d41d4c6aace72cbeeabcf510fab6d3a999
-ms.sourcegitcommit: cf195b090b3223fa4917206dfec7f0b603873cdf
+ms.openlocfilehash: eb55359bfd8e50e8e318698b59048756095b6ff7
+ms.sourcegitcommit: ffc1198312033945151d6619479cb8144da14ae6
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 04/09/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="modules-with-compatible-powershell-editions"></a>Módulos com edições de PowerShell compatível
 Começando na versão 5.1, o PowerShell está disponível nas diferentes edições que denotam conjuntos de funcionalidade e compatibilidade de plataforma variados.
@@ -230,10 +230,10 @@ Módulos sem PSEdition_Desktop e PSEdition_Core etiquetas são considerados para
 ```powershell
 
 # Find modules supported on PowerShell Desktop edition
-Find-Module -Tag PSEditon_Desktop
+Find-Module -Tag PSEdition_Desktop
 
 # Find modules supported on PowerShell Core editions
-Find-Module -Tag PSEditon_Core
+Find-Module -Tag PSEdition_Core
 
 ```
 
