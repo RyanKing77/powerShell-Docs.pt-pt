@@ -4,33 +4,35 @@ author: JKeithB
 ms.topic: reference
 keywords: wmf,powershell,setup
 title: Novos cenários e funcionalidades no WMF 5.1
-ms.openlocfilehash: f0e50fc87208d6ee9edba9c660b9243621f02bb4
-ms.sourcegitcommit: cf195b090b3223fa4917206dfec7f0b603873cdf
+ms.openlocfilehash: 8edea99731df44349c8bcff113a8163ba5401ccd
+ms.sourcegitcommit: a9aa5e8d0fab0cbb3e4e6cff0e3ca8c0339ab4e6
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 04/09/2018
+ms.lasthandoff: 04/27/2018
 ---
-# <a name="new-scenarios-and-features-in-wmf-51"></a>Novos cenários e funcionalidades no WMF 5.1 #
+# <a name="new-scenarios-and-features-in-wmf-51"></a>Novos cenários e funcionalidades no WMF 5.1
 
 > Nota: Estas informações são preliminares e estão sujeitos a alterações.
 
-## <a name="powershell-editions"></a>Edições do PowerShell ##
+## <a name="powershell-editions"></a>Edições do PowerShell
+
 Começando na versão 5.1, o PowerShell está disponível nas diferentes edições que denotam conjuntos de funcionalidade e compatibilidade de plataforma variados.
 
 - **Edição Desktop:** incorporada no .NET Framework e fornece compatibilidade com scripts e módulos de filtragem de versões do PowerShell a executar edições de requisitos de espaço total do Windows, tais como Server Core e o Ambiente de trabalho do Windows.
 - **Edição Core:** incorporada no .NET Core e fornece compatibilidade com scripts e módulos de filtragem de versões do PowerShell a executar edições de requisitos de espaço reduzido do Windows, tais como Servidor Nano e o IoT do Windows.
 
 **Saiba mais sobre como utilizar as edições do PowerShell**
-- [Determinar a edição de execução do PowerShell]()
-- [Declarar a compatibilidade com um módulo versões específicas do PowerShell]()
-- [Filtrar os resultados de Get-Module pelos CompatiblePSEditions]()
-- [Impedir a execução do script, exceto se executar uma edição compatíveis do PowerShell]()
+
+- [Determinar a edição em execução do PowerShell com $PSVersionTable](/powershell/module/microsoft.powershell.core/about/about_automatic_variables)
+- [Filtrar os resultados de Get-Module pelos CompatiblePSEditions utilizando o parâmetro PSEdition](/powershell/module/microsoft.powershell.core/get-module)
+- [Impedir a execução do script, exceto se executar uma edição compatíveis do PowerShell](/powershell/gallery/psget/script/scriptwithpseditionsupport)
+- [Declarar a compatibilidade com um módulo versões específicas do PowerShell](/powershell/gallery/psget/module/modulewithpseditionsupport)
 
 ## <a name="catalog-cmdlets"></a>Cmdlets de catálogo
 
-Foram adicionados dois novos cmdlets no [Microsoft.PowerShell.Security](https://technet.microsoft.com/library/hh847877.aspx) módulo; estas gerar e validar os ficheiros de catálogo do Windows.
+Foram adicionados dois novos cmdlets no [Microsoft.PowerShell.Security](https://docs.microsoft.com/en-us/powershell/module/microsoft.powershell.security) módulo; estas gerar e validar os ficheiros de catálogo do Windows.
 
-###<a name="new-filecatalog"></a>New-FileCatalog
+### <a name="new-filecatalog"></a>New-FileCatalog
 --------------------------------
 
 Novo FileCatalog cria um ficheiro de catálogo do Windows para o conjunto de ficheiros e pastas.
@@ -41,6 +43,7 @@ Estas informações são úteis para validar se todas as alterações foram efet
 ```powershell
 New-FileCatalog [-CatalogFilePath] <string> [[-Path] <string[]>] [-CatalogVersion <int>] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
+
 São suportadas versões do catálogo 1 e 2.
 Versão 1 utiliza o algoritmo de hash SHA1 para criar os hashes de ficheiro; versão 2 utiliza SHA256.
 Versão 2 do catálogo não é suportada em *Windows Server 2008 R2* ou *Windows 7*.
@@ -56,8 +59,7 @@ Esta ação cria o ficheiro de catálogo.
 
 Para verificar a integridade dos ficheiros de catálogo (Pester.cat no acima exemplo), inicie sessão com [conjunto AuthenticodeSignature](https://technet.microsoft.com/library/hh849819.aspx) cmdlet.
 
-
-###<a name="test-filecatalog"></a>Test-FileCatalog
+### <a name="test-filecatalog"></a>Teste FileCatalog
 --------------------------------
 
 Teste FileCatalog valida o catálogo que representa um conjunto de pastas.
@@ -74,8 +76,8 @@ Os utilizadores podem obter todos os estas informações ao utilizar o *-detalha
 Também apresenta assinatura estado do catálogo no *assinatura* propriedade que é equivalente a chamar [Get-AuthenticodeSignature](https://technet.microsoft.com/library/hh849805.aspx) cmdlet no ficheiro de catálogo.
 Os utilizadores também podem ignorar qualquer ficheiro durante a validação utilizando o *- FilesToSkip* parâmetro.
 
+## <a name="module-analysis-cache"></a>Cache de análise do módulo
 
-## <a name="module-analysis-cache"></a>Cache de análise do módulo ##
 A partir do WMF 5.1, PowerShell fornece controlo sobre o ficheiro que é utilizado para sobre um módulo, tal como os comandos que exporta os dados em cache.
 
 Por predefinição, esta cache é armazenado no ficheiro `${env:LOCALAPPDATA}\Microsoft\Windows\PowerShell\ModuleAnalysisCache`.
@@ -106,23 +108,22 @@ $env:PSDisableModuleAnalysisCacheCleanup = 1
 
 A definição desta variável de ambiente entrarão em vigor imediatamente no processo atual.
 
-##<a name="specifying-module-version"></a>Especificar a versão do módulo
+## <a name="specifying-module-version"></a>Especificar a versão do módulo
 
 No WMF 5.1, `using module` comporta-se da mesma forma que outras construções relacionados com o módulo do PowerShell.
 Anteriormente, era necessário uma forma para especificar uma versão do módulo específico; Se existirem várias versões presentes, este resultou num erro.
 
-
 No WMF 5.1:
 
-* Pode utilizar [ModuleSpecification construtor (tabela hash)](https://msdn.microsoft.com/library/jj136290).
+- Pode utilizar [ModuleSpecification construtor (tabela hash)](https://msdn.microsoft.com/library/jj136290).
 Esta tabela hash tem o mesmo formato que `Get-Module -FullyQualifiedName`.
 
 **Exemplo:** `using module @{ModuleName = 'PSReadLine'; RequiredVersion = '1.1'}`
 
-* Se existirem várias versões do módulo, PowerShell utiliza o **mesma lógica resolução** como `Import-Module` e não devolve um erro - o mesmo comportamento de `Import-Module` e `Import-DscResource`.
+- Se existirem várias versões do módulo, PowerShell utiliza o **mesma lógica resolução** como `Import-Module` e não devolve um erro - o mesmo comportamento de `Import-Module` e `Import-DscResource`.
 
+## <a name="improvements-to-pester"></a>Melhoramentos à Pester
 
-##<a name="improvements-to-pester"></a>Melhoramentos à Pester
 No WMF 5.1, a versão do Pester que é fornecido com o PowerShell foi atualizada de 3.3.5 para 3.4.0, com a adição de consolidação https://github.com/pester/Pester/pull/484/commits/3854ae8a1f215b39697ac6c2607baf42257b102e, que permite uma maior comportamento para Pester no servidor de nano for apresentado.
 
 Pode rever as alterações em versões 3.3.5 para 3.4.0 ao inspecionar o ficheiro de ChangeLog.md em: https://github.com/pester/Pester/blob/master/CHANGELOG.md

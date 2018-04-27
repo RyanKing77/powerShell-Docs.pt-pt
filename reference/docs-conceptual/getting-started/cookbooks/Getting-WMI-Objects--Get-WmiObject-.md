@@ -3,11 +3,11 @@ ms.date: 06/05/2017
 keywords: PowerShell, o cmdlet
 title: Objetos WMI ao obter obter WmiObject
 ms.assetid: f0ddfc7d-6b5e-4832-82de-2283597ea70d
-ms.openlocfilehash: 67922426ae3f13ef5f4c70bc70bb3ce1594d3d05
-ms.sourcegitcommit: cf195b090b3223fa4917206dfec7f0b603873cdf
+ms.openlocfilehash: 279e656b4affd27450be71015a5d6bd21af9f7ad
+ms.sourcegitcommit: a9aa5e8d0fab0cbb3e4e6cff0e3ca8c0339ab4e6
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 04/09/2018
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="getting-wmi-objects-get-wmiobject"></a>Obter os objetos WMI (Get-WmiObject)
 
@@ -120,7 +120,7 @@ TotalVirtualMemorySize TotalVisibleMemory FreePhysicalMemory FreeVirtualMemory F
 ```
 
 > [!NOTE]
-> Carateres universais trabalham com os nomes de propriedade no **Format-Table**, por isso, o elemento de final pipeline pode ser reduzido aos **Format-Table-Total de propriedade*, gratuito *
+> Carateres universais trabalham com os nomes de propriedade no **Format-Table**, por isso, o elemento de final pipeline pode ser reduzido aos `Format-Table -Property Total,Free`
 
 Os dados de memória podem ser mais legíveis se formatar como uma lista escrevendo:
 

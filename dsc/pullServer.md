@@ -3,11 +3,11 @@ ms.date: 04/11/2018
 ms.topic: conceptual
 keywords: DSC, do powershell, a configuração, a configuração
 title: Serviço de Solicitação de DSC
-ms.openlocfilehash: 61b4c0e9cfe1d1d7539cd32da35d2fe50da4b0e3
-ms.sourcegitcommit: ece1794c94be4880a2af5a2605ed4721593643b6
+ms.openlocfilehash: 075487be68de82074750e5344a24d6d4c2f2bec5
+ms.sourcegitcommit: a9aa5e8d0fab0cbb3e4e6cff0e3ca8c0339ab4e6
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="desired-state-configuration-pull-service"></a>Serviço de solicitação de configuração do estado pretendido
 
@@ -276,3 +276,5 @@ Os tópicos seguintes descrevem como configurar clientes de solicitação detalh
 - [Descrição geral da configuração do estado pretendido do Windows PowerShell](overview.md)
 - [Aplicar configurações](enactingConfigurations.md)
 - [Utilizar um servidor de relatório de DSC](reportServer.md)
+- [[MS-DSCPM]: pretendido protocolo de modelo de extração de configuração de estado](https://msdn.microsoft.com/library/dn393548.aspx)
+- [[MS-DSCPM]: pretendido Errata de protocolo de modelo de extração de configuração de estado](https://msdn.microsoft.com/library/mt612824.aspx)

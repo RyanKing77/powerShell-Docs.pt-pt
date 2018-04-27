@@ -3,11 +3,11 @@ ms.date: 06/12/2017
 ms.topic: conceptual
 keywords: DSC, do powershell, a configuração, a configuração
 title: Configurações de DSC
-ms.openlocfilehash: 8b44fd9a715c217ee198ea343cdffbfab1193625
-ms.sourcegitcommit: cf195b090b3223fa4917206dfec7f0b603873cdf
+ms.openlocfilehash: ffeb953048c0a65352618d2ab141ee10ead4c663
+ms.sourcegitcommit: a9aa5e8d0fab0cbb3e4e6cff0e3ca8c0339ab4e6
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 04/09/2018
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="dsc-configurations"></a>Configurações de DSC
 
@@ -72,7 +72,7 @@ Neste exemplo, especifique o nome do nó transferindo-a como o **ComputerName** 
 ## <a name="compiling-the-configuration"></a>Compilar a configuração
 
 Antes de pode enact uma configuração, tem de compilá-la para um documento MOF.
-Fazê-lo ao chamar a configuração como faria com uma função do PowerShell.
+Fazê-lo ao chamar a configuração como iria chamar uma função do PowerShell.
 A última linha do exemplo que contém apenas o nome da configuração, chama a configuração.
 
 >**Nota:** para chamar uma configuração, a função tem de ser no âmbito global (tal como acontece com qualquer outra função do PowerShell).
