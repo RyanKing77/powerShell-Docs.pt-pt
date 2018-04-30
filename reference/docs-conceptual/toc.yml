@@ -9,10 +9,12 @@
           items:
             - name: Instalar o PowerShell Core no Windows
               href: setup/Installing-PowerShell-Core-on-Windows.md
-            - name: Instalar o PowerShell Core no macOS e Linux
-              href: setup/Installing-PowerShell-Core-on-macOS-and-Linux.md
+            - name: Instalar o PowerShell Core no Linux
+              href: setup/Installing-PowerShell-Core-on-Linux.md
+            - name: Instalar o PowerShell Core no macOS
+              href: setup/Installing-PowerShell-Core-on-macOS.md
             - name: PowerShell Core nos ARM
-              href: PowerShell-Core-on-ARM.md
+              href: setup/PowerShell-Core-on-ARM.md
         - name: Windows PowerShell
           href: ''
           items:
@@ -87,7 +89,7 @@
                   href: core-powershell/ise/how-to-debug-scripts-in-windows-powershell-ise.md
                 - name: Como Utilizar Perfis no ISE do Windows PowerShell
                   href: core-powershell/ise/how-to-use-profiles-in-windows-powershell-ise.md
-                - name: Como Utilizar o Preenchimento com a Tecla Tab no Painel de Scripts e no Painel de Consola
+                - name: Como Utilizar o Preenchimento com a Tecla Tab nos Painéis de Scripts e no Painel de Consola
                   href: core-powershell/ise/how-to-use-tab-completion-in-the-script-pane-and-console-pane.md
                 - name: Como Utilizar o Painel de Consola no ISE do Windows PowerShell
                   href: core-powershell/ise/how-to-use-the-console-pane-in-the-windows-powershell-ise.md
@@ -137,15 +139,15 @@
         - name: Acesso Web
           href: ''
           items:
-            - name: Regras de autorização e funcionalidades de segurança do Acesso Web do Windows PowerShell
+            - name: Regras de autorização e funcionalidades de segurança
               href: core-powershell/web-access/authorization-rules-and-security-features-of-windows-powershell-web-access.md
-            - name: Instalar e utilizar o Acesso Web do Windows PowerShell
+            - name: Instalação
               href: core-powershell/web-access/install-and-use-windows-powershell-web-access.md
-            - name: Resolução de Problemas de acesso no Acesso Web do Windows PowerShell
+            - name: Resolução de problemas de acesso
               href: core-powershell/web-access/troubleshooting-access-problems-in-windows-powershell-web-access.md
             - name: Desinstalar o Acesso Web do Windows PowerShell
               href: core-powershell/web-access/uninstall-windows-powershell-web-access.md
-            - name: Utilizar a consola do Windows PowerShell baseada na Web
+            - name: Utilizar a consola do PowerShell baseada na web
               href: core-powershell/web-access/use-the-web-based-windows-powershell-console.md
         - name: Guia dos Fluxos de Trabalho
           href: core-powershell/workflows-guide.md
