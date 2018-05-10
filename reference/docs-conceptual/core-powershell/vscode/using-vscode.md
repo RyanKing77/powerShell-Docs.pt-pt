@@ -25,7 +25,7 @@ Para cargas de trabalho do Windows PowerShell tradicionais, consulte [instalar o
 > [!IMPORTANT]
 > No macOS, tem de instalar OpenSSL para a extensão do PowerShell para funcionar corretamente.
 > A forma mais fácil para realizar esta tarefa é instalar [Homebrew](http://brew.sh/) e, em seguida, execute `brew install openssl`.
-> A extensão do PowerShell irá agora ser capaz de ser carregada com êxito.
+> O VS Code agora pode carregar a extensão do PowerShell com êxito.
 
 - **Windows**: Siga as instruções de instalação no [a executar o VS Code no Windows](https://code.visualstudio.com/docs/setup/windows) página
 
@@ -38,13 +38,13 @@ Para cargas de trabalho do Windows PowerShell tradicionais, consulte [instalar o
 
 - Iniciar **rápida abra** premindo **Ctrl + P** (**Cmd + P** no Mac).
 - Na rápida aberta, escreva `ext install powershell` e acessos **Enter**.
-- O **extensões** vista abrirá na barra lateral. Selecione a extensão do PowerShell da Microsoft.
-  Verá algo, conforme mostrado abaixo:
+- O **extensões** vista abre na barra lateral. Selecione a extensão do PowerShell da Microsoft.
+  Deverá ver algo, conforme mostrado abaixo:
 
   ![VSCode](../../images/vscode.png)
 
 - Clique em de **instalar** botão na extensão do PowerShell da Microsoft.
-- Depois da instalação, verá o **instalar** botão passa a **recarregar**.
+- Depois da instalação, consulte o **instalar** botão passa a **recarregar**.
   Clique em **recarregar**.
 - Depois do Visual Studio Code tem recarregar, está pronto para editar.
 
@@ -58,7 +58,7 @@ Para sair do Visual Studio Code, **ficheiro -> saída**.
 Se pretender utilizar uma instalação específica do PowerShell com o Visual Studio Code, terá de adicionar uma nova variável ao seu ficheiro de definições de utilizador.
 
 1. Clique em **ficheiro -> Preferências -> definições**
-1. Serão apresentada a dois painéis do editor.
+1. Aparecem dois painéis do editor.
    No painel de mais à direita (`settings.json`), inserir a definição abaixo apropriado para o SO algures entre as dois chavetas (`{` e `}`) e substitua *<version>* com o instalado Versão do PowerShell:
 
   ```json
@@ -96,7 +96,7 @@ Recomendamos as seguintes definições de configuração para o Visual Studio Co
 
 A partir da versão do Visual Studio Code 1.9 pode depurar scripts do PowerShell sem ter de abrir a pasta que contém o script do PowerShell.
 Basta abrir o ficheiro de script do PowerShell com **ficheiro -> Abra o ficheiro...** , defina um ponto de interrupção de uma linha (prima F9) e, em seguida, prima F5 para iniciar a depuração.
-Verá o painel de ações de depuração aparecer que lhe permite interromper o depurador, passo, retomar e pare a depuração.
+Deverá ver o painel de ações de depuração aparecer que lhe permite interromper o depurador, passo, retomar e pare a depuração.
 
 ### <a name="workspace-debugging"></a>A depuração de área de trabalho
 
@@ -116,11 +116,11 @@ Siga estes passos para criar o ficheiro de configuração de depuração:
 
 1. Abra o **depurar** vista premindo **Ctrl + Shift + D** (**Cmd + Shift + D** no Mac).
 1. Prima a **configurar** engrenagem ícone na barra de ferramentas.
-1. Visual Studio Code solicitará a **selecione ambiente**.
+1. Visual Studio Code pede-lhe para **selecione ambiente**.
    Escolha **PowerShell**.
 
    Ao fazê-lo, o Visual Studio Code cria um diretório e um ficheiro de ".vscode\launch.json" na raiz da pasta à sua área de trabalho.
-   Este é onde está armazenada a configuração de depuração. Se os ficheiros estiverem num repositório de Git, normalmente, irá querer consolidar o ficheiro launch.json.
+   Este é onde está armazenada a configuração de depuração. Se os ficheiros estiverem num repositório de Git, que, normalmente, pretende consolidar o ficheiro launch.json.
    O conteúdo do ficheiro launch.json é:
 
 ```json
