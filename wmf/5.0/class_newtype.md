@@ -1,13 +1,11 @@
 ---
 ms.date: 06/12/2017
-author: JKeithB
-ms.topic: reference
 keywords: wmf,powershell,setup
-ms.openlocfilehash: 85e9206ffef76fb4bd7714d847888e6e5bbcc4ec
-ms.sourcegitcommit: cf195b090b3223fa4917206dfec7f0b603873cdf
+ms.openlocfilehash: 9aa7e92632c671751020687ddbfc374eeda7148b
+ms.sourcegitcommit: 54534635eedacf531d8d6344019dc16a50b8b441
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 04/09/2018
+ms.lasthandoff: 05/16/2018
 ---
 # <a name="new-language-features-in-powershell-50"></a>Novas funcionalidades de idioma no PowerShell 5.0
 
@@ -58,7 +56,7 @@ enum SomeEnum { Max = 42 }
 enum OtherEnum { Max = [SomeEnum]::Max + 1 }
 ```
 
-## <a name="import-dscresource"></a>Import-DscResource
+## <a name="import-dscresource"></a>Importar DscResource
 
 **Importar DscResource** agora é uma palavra-chave dinâmica verdadeira.
 PowerShell analisa o módulo de raiz do módulo especificado, a procurar classes que contêm o **DscResource** atributo.

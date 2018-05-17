@@ -1,22 +1,19 @@
 ---
-description: ''
-ms.topic: article
-ms.prod: powershell
+ms.topic: reference
 keywords: PowerShell, o cmdlet
 ms.date: 12/12/2016
-title: cmdlets de acesso Web
-ms.technology: powershell
-ms.openlocfilehash: 6930fd6a08de69078576fb0d0fbabb04e05d0814
-ms.sourcegitcommit: cf195b090b3223fa4917206dfec7f0b603873cdf
+title: Cmdlets do PowerShell Web Access
+ms.openlocfilehash: 34a7a01f154b2e43416dfe8ea43d4d8e937816d9
+ms.sourcegitcommit: 54534635eedacf531d8d6344019dc16a50b8b441
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 04/09/2018
+ms.lasthandoff: 05/16/2018
 ---
 # <a name="windows-powershell-web-access-cmdlets"></a>Cmdlets do Windows PowerShell Web Access
 
 Esta referência fornece sintaxe e descrições de cmdlet para todos os cmdlets do Windows PowerShell® Web acesso específico. Lista os cmdlets por ordem alfabética baseados no verbo no início do cmdlet.
 
-## <a name="add-pswaauthorizationruleadd-pswaauthorizationrulemd"></a>[Add-PswaAuthorizationRule](add-pswaauthorizationrule.md)
+## <a name="add-pswaauthorizationruleadd-pswaauthorizationrulemd"></a>[Adicionar-PswaAuthorizationRule](add-pswaauthorizationrule.md)
 
 Adiciona uma nova regra de autorização para o conjunto de regras de autorização de acesso de Web do Windows PowerShell®.
 
@@ -36,7 +33,7 @@ Remove uma regra de autorização especificada do acesso Web Windows PowerShell.
 
 Os testes de regras de autorização para validar que um determinado utilizador, computador, o pedido de acesso de ponto final está autorizado.
 
-## <a name="uninstall-pswawebapplicationuninstall-pswawebapplicationmd"></a>[Uninstall-PswaWebApplication](uninstall-pswawebapplication.md)
+## <a name="uninstall-pswawebapplicationuninstall-pswawebapplicationmd"></a>[Desinstalar-PswaWebApplication](uninstall-pswawebapplication.md)
 
 Desinstala a aplicação web do Windows PowerShell a partir do IIS.
 

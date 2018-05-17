@@ -1,13 +1,12 @@
 ---
 ms.date: 06/12/2017
-ms.topic: conceptual
 keywords: DSC, do powershell, a configuração, a configuração
 title: Criar um pipeline de integração contínua e a implementação contínua com DSC
-ms.openlocfilehash: a3803a8e6fe6ff1b93758a73ccd54754d7bb2a84
-ms.sourcegitcommit: cf195b090b3223fa4917206dfec7f0b603873cdf
+ms.openlocfilehash: ce0f2ed79f5f96a1c38e0beaf32529aba7538963
+ms.sourcegitcommit: 54534635eedacf531d8d6344019dc16a50b8b441
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 04/09/2018
+ms.lasthandoff: 05/16/2018
 ---
 # <a name="building-a-continuous-integration-and-continuous-deployment-pipeline-with-dsc"></a>Criar um pipeline de integração contínua e a implementação contínua com DSC
 
@@ -373,7 +372,7 @@ Agora iremos definir um acionador que faz com que o projeto para qualquer tempo 
 1. No TFS, clique em de **compilar & versão** separador
 1. Selecione o `DNS Infra` Criar definição e clique em **editar**
 1. Clique em de **Acionadores** separador
-1. Selecione **integração contínua (CI)**e selecione `refs/heads/ci-cd-example` na lista pendente sucursal
+1. Selecione **integração contínua (CI)** e selecione `refs/heads/ci-cd-example` na lista pendente sucursal
 1. Clique em **guardar** e, em seguida, **OK**
 
 Agora qualquer alteração nos acionadores de repositório de git do TFS uma compilação automatizada.

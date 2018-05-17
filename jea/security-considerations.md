@@ -1,14 +1,12 @@
 ---
 ms.date: 06/12/2017
-author: rpsqrd
-ms.topic: conceptual
 keywords: jea, powershell, segurança
 title: Considerações de segurança JEA
-ms.openlocfilehash: 1b83a73c047b056a4cc094d7e4b0bbf31f75f53a
-ms.sourcegitcommit: cf195b090b3223fa4917206dfec7f0b603873cdf
+ms.openlocfilehash: 46ea5cc3e9bc7b6759524aa466e900950a6dee26
+ms.sourcegitcommit: 54534635eedacf531d8d6344019dc16a50b8b441
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 04/09/2018
+ms.lasthandoff: 05/16/2018
 ---
 # <a name="jea-security-considerations"></a>Considerações de segurança JEA
 
@@ -79,7 +77,7 @@ Isto significa que as definições de função deixarão de funcionar conforme e
 
 Não deve utilizar um RunAsCredential um ponto final JEA devido a dificuldade em ações para utilizadores específicos e a falta de suporte para o mapeamento de utilizadores a funções de rastreio.
 
-## <a name="winrm-endpoint-acl"></a>WinRM Endpoint ACL
+## <a name="winrm-endpoint-acl"></a>ACL de ponto final WinRM
 
 Como com regulares PowerShell remota pontos finais, cada ponto final JEA tem uma lista de controlo de acesso separado (ACL) definida na configuração do WinRM que controla quem pode autenticar com o ponto final JEA.
 Se configurado incorretamente, utilizadores fidedignos poderão não conseguir aceder ao ponto final JEA e/ou os utilizadores não fidedignos, podem obter acesso.

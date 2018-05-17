@@ -1,21 +1,18 @@
 ---
-description: ''
-ms.topic: article
-ms.prod: powershell
+ms.topic: reference
 keywords: PowerShell, o cmdlet
 ms.date: 12/12/2016
-title: Adicionar pswaauthorizationrule
-ms.technology: powershell
+title: Add-PswaAuthorizationRule
 schema: 2.0.0
-ms.openlocfilehash: 07ddd4df6a776f3ef6763242f8682747b9b97061
-ms.sourcegitcommit: cf195b090b3223fa4917206dfec7f0b603873cdf
+ms.openlocfilehash: b8020f8b034ab24d79a96da3908e9b63bf017cd9
+ms.sourcegitcommit: 54534635eedacf531d8d6344019dc16a50b8b441
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 04/09/2018
+ms.lasthandoff: 05/16/2018
 ---
 # <a name="add-pswaauthorizationrule"></a>Add-PswaAuthorizationRule
 
-## <a name="synopsis"></a>SYNOPSIS
+## <a name="synopsis"></a>RESUMO
 
 Adiciona uma nova regra de autorização para o conjunto de regras de autorização de acesso de Web do Windows PowerShell®.
 
@@ -150,7 +147,7 @@ Especifica o nome de um ou mais grupos de utilizador no AD DS ou grupos locais p
 | Aceitar Entrada de Pipeline?               | VERDADEIRO (ByPropertyName)                |
 | Aceitar Carateres Universais?          | falso                                |
 
-### <a name="-usernameltstringgt"></a>-UserName&lt;String\[\]&gt;
+### <a name="-usernameltstringgt"></a>-UserName&lt;cadeia\[\]&gt;
 
 Especifica um ou mais utilizadores ao qual esta regra concede acesso. O nome de utilizador pode ser uma conta de utilizador local no computador gateway ou um utilizador no AD DS.
 O formato é `domain\user` ou `computer\user`.
@@ -164,7 +161,7 @@ O formato é `domain\user` ou `computer\user`.
 | Aceitar Entrada de Pipeline?               | VERDADEIRO (ByValue, ByPropertyName)       |
 | Aceitar Carateres Universais?          | falso                                |
 
-### <a name="ltcommonparametersgt"></a>&lt;CommonParameters&gt;
+### <a name="ltcommonparametersgt"></a>&lt;Parâmetroscomuns&gt;
 
 Este cmdlet suporta os parâmetros comuns: -Verbose, -Debug, -ErrorAction, -ErrorVariable, -OutBuffer, e -OutVariable.
 Para obter mais informações, consulte [about_CommonParameters](https://msdn.microsoft.com/powershell/reference/5.1/microsoft.powershell.core/about/about_commonparameters).
@@ -251,6 +248,6 @@ Add-PswaAuthorizationRule –UserName * -ComputerName * -ConfigurationName *
 - [Remove-PswaAuthorizationRule](https://technet.microsoft.com/en-us/library/jj592893(v=wps.630).aspx)
 - [Test-PswaAuthorizationRule](https://technet.microsoft.com/en-us/library/jj592892(v=wps.630).aspx)
 - [Install-PswaWebApplication](https://technet.microsoft.com/en-us/library/jj592894(v=wps.630).aspx)
-- [Add-Member](http://go.microsoft.com/fwlink/p/?LinkId=113280)
+- [Adicionar membros](http://go.microsoft.com/fwlink/p/?LinkId=113280)
 - [New-Object](http://go.microsoft.com/fwlink/p/?LinkId=113355)
 - [Get-Credential](http://go.microsoft.com/fwlink/?LinkID=293936)

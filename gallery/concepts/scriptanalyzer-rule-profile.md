@@ -3,14 +3,14 @@ ms.date: 06/12/2017
 contributor: JKeithB
 ms.topic: conceptual
 keywords: cmdlet do powershell do galeria, psgallery
-title: Perfil de regra ScriptAnazlyer para da Galeria
-ms.openlocfilehash: 74eab49e4c4a546655451ef21b30cfcafaeb9584
-ms.sourcegitcommit: e9ad4d85fd7eb72fb5bc37f6ca3ae1282ae3c6d7
-ms.translationtype: MT
+title: Perfil de regra ScriptAnalyzer para da Galeria
+ms.openlocfilehash: 22b95f0901fe95d5ad79df0e23e675ab52313fee
+ms.sourcegitcommit: f8a37df92db22b9368469fb07378399b2ab90cea
+ms.translationtype: HT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 05/10/2018
+ms.lasthandoff: 05/14/2018
 ---
-# <a name="scriptanazlyer-rule-profile-for-gallery"></a>Perfil de regra ScriptAnazlyer para da Galeria
+# <a name="scriptanalyzer-rule-profile-for-gallery"></a>Perfil de regra ScriptAnalyzer para da Galeria
 
 Para garantir a qualidade dos itens de galeria do PowerShell publicado, iremos executar [PSScriptAnalyzer](https://github.com/PowerShell/PSScriptAnalyzer) regras para determinar se existem quaisquer violações em scripts submetidos.
 

@@ -1,13 +1,12 @@
 ---
 ms.date: 06/12/2017
-ms.topic: conceptual
 keywords: DSC, do powershell, a configuração, a configuração
 title: Resolução de Problemas de DSC
-ms.openlocfilehash: 6bb639febc3f413e909c3e61559059adb5c96389
-ms.sourcegitcommit: cf195b090b3223fa4917206dfec7f0b603873cdf
+ms.openlocfilehash: c08f91b514aae438578fa278228fe5ec879a4012
+ms.sourcegitcommit: 54534635eedacf531d8d6344019dc16a50b8b441
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 04/09/2018
+ms.lasthandoff: 05/16/2018
 ---
 # <a name="troubleshooting-dsc"></a>Resolução de Problemas de DSC
 
@@ -27,7 +26,7 @@ Um objeto avançado é devolvido que inclui informações de alto nível sobre o
 * Todos os recursos que falhou
 * Qualquer recurso pedido um reinício
 * Definições de configuração de metadados no momento da configuração de executar
-* Etc.
+* etc.
 
 O conjunto de parâmetros seguinte devolve as informações de estado para a última configuração executar:
 

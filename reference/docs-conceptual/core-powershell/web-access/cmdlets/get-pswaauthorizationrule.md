@@ -1,20 +1,17 @@
 ---
-description: ''
-ms.topic: article
-ms.prod: powershell
+ms.topic: reference
 keywords: PowerShell, o cmdlet
 ms.date: 12/12/2016
-title: obter pswaauthorizationrule
-ms.technology: powershell
-ms.openlocfilehash: 74c044c329d8b6a305b86c9056a7041fb5fd046b
-ms.sourcegitcommit: cf195b090b3223fa4917206dfec7f0b603873cdf
+title: Get-PswaAuthorizationRule
+ms.openlocfilehash: d61dce18e87311d7d815a689ba675db44aaec3cb
+ms.sourcegitcommit: 54534635eedacf531d8d6344019dc16a50b8b441
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 04/09/2018
+ms.lasthandoff: 05/16/2018
 ---
 # <a name="get-pswaauthorizationrule"></a>Get-PswaAuthorizationRule
 
-## <a name="synopsis"></a>SYNOPSIS
+## <a name="synopsis"></a>RESUMO
 
 Devolve um conjunto de regras de autorização de acesso de Web do Windows PowerShell®.
 
@@ -50,7 +47,7 @@ Especifica os identificadores (IDs), as regras que deve receber este cmdlet. Se 
 | Aceitar Entrada de Pipeline?               | VERDADEIRO (ByValue, ByPropertyName)       |
 | Aceitar Carateres Universais?          | falso                                |
 
-### <a name="-rulenameltstringgt"></a>-RuleName&lt;String\[\]&gt;
+### <a name="-rulenameltstringgt"></a>-RuleName&lt;cadeia\[\]&gt;
 
 Especifica os nomes das regras de autorização para obter. Este parâmetro devolve quaisquer regras que correspondem exatamente os nomes de regra de cadeias nesta matriz.
 
@@ -63,14 +60,14 @@ Especifica os nomes das regras de autorização para obter. Este parâmetro devo
 | Aceitar Entrada de Pipeline?               | VERDADEIRO (ByValue, ByPropertyName)       |
 | Aceitar Carateres Universais?          | falso                                |
 
-### <a name="ltcommonparametersgt"></a>&lt;CommonParameters&gt;
+### <a name="ltcommonparametersgt"></a>&lt;Parâmetroscomuns&gt;
 
 Este cmdlet suporta os parâmetros comuns: -Verbose, -Debug, -ErrorAction, -ErrorVariable, -OutBuffer, e -OutVariable.
 Para obter mais informações, consulte [about_CommonParameters](http://go.microsoft.com/fwlink/p/?LinkID=113216).
 
 ## <a name="inputs"></a>ENTRADAS
 
-### <a name="int"></a>int\[\]
+### <a name="int"></a>Int\[\]
 
 Este cmdlet aceita uma matriz de números inteiros ou uma matriz de valores de cadeia como entrada.
 
@@ -114,7 +111,7 @@ Um id de regra e um nome de regra são transmitidos este cmdlet.
 
 ## <a name="related-topics"></a>Tópicos relacionados
 
-- [Add-PswaAuthorizationRule](add-pswaauthorizationrule.md)
+- [Adicionar-PswaAuthorizationRule](add-pswaauthorizationrule.md)
 - [Remove-PswaAuthorizationRule](remove-pswaauthorizationrule.md)
 - [Test-PswaAuthorizationRule](test-pswaauthorizationrule.md)
 - [Install-PswaWebApplication](install-pswawebapplication.md)

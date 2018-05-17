@@ -1,13 +1,11 @@
 ---
 ms.date: 06/12/2017
-author: JKeithB
-ms.topic: reference
 keywords: wmf,powershell,setup
-ms.openlocfilehash: 9a8c261c01a7970f2e7f89172007768b63295673
-ms.sourcegitcommit: cf195b090b3223fa4917206dfec7f0b603873cdf
+ms.openlocfilehash: 272843efb68c42105af6eb88ad6a95b581da47ae
+ms.sourcegitcommit: 54534635eedacf531d8d6344019dc16a50b8b441
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 04/09/2018
+ms.lasthandoff: 05/16/2018
 ---
 # <a name="unified-and-consistent-state-and-status-representation"></a>Estado Unificado e Consistente e Representação de Estado
 
@@ -23,7 +21,7 @@ A representação de estado do MMC e o estado da operação de DSC são Revisita
 
 A tabela abaixo ilustra o resultante Estado relacionadas com propriedades em alguns cenários típicos.
 
-| **Cenário**                    | **LCMState\***       | **Status** | **Reiniciar o computador solicitado**  | **ResourcesInDesiredState**  | **ResourcesNotInDesiredState** |
+| **Cenário**                    | **LCMState\***       | **Estado** | **Reiniciar o computador solicitado**  | **ResourcesInDesiredState**  | **ResourcesNotInDesiredState** |
 |---------------------------------|----------------------|------------|---------------|------------------------------|--------------------------------|
 | S**^**                          | Inativo                 | Sucesso    | $false        | S                            | $null                          |
 | F**^**                          | PendingConfiguration | Falha    | $false        | $null                        | F                              |

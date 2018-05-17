@@ -1,24 +1,21 @@
 ---
-description: ''
-ms.topic: article
-ms.prod: powershell
+ms.topic: reference
 keywords: PowerShell, o cmdlet
 ms.date: 12/12/2016
-title: desinstalar pswawebapplication
-ms.technology: powershell
-ms.openlocfilehash: 139c8358a24e54dec630f8c78737728330ba4aa2
-ms.sourcegitcommit: cf195b090b3223fa4917206dfec7f0b603873cdf
+title: Desinstalar-PswaWebApplication
+ms.openlocfilehash: b2a3e4d584fd04ee49e1e6408dba39fd8bc555dc
+ms.sourcegitcommit: 54534635eedacf531d8d6344019dc16a50b8b441
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 04/09/2018
+ms.lasthandoff: 05/17/2018
 ---
-# <a name="uninstall-pswawebapplication"></a>Uninstall-PswaWebApplication
+# <a name="uninstall-pswawebapplication"></a>Desinstalar-PswaWebApplication
 
-## <a name="synopsis"></a>SYNOPSIS
+## <a name="synopsis"></a>RESUMO
 
 Desinstala a aplicação de web Windows PowerShell®.
 
-## <a name="syntax"></a>SYNTAX
+## <a name="syntax"></a>SINTAXE
 
 ### <a name="default"></a>Predefinido
 ```
@@ -96,7 +93,7 @@ O cmdlet não é executado.
 | Aceitar Entrada de Pipeline?               | falso                                |
 | Aceitar Carateres Universais?          | falso                                |
 
-### <a name="ltcommonparametersgt"></a>&lt;CommonParameters&gt;
+### <a name="ltcommonparametersgt"></a>&lt;Parâmetroscomuns&gt;
 
 Este cmdlet suporta os parâmetros comuns: -Verbose, -Debug, -ErrorAction, -ErrorVariable, -OutBuffer, e -OutVariable.
 Para obter mais informações, consulte [about_CommonParameters](http://go.microsoft.com/fwlink/p/?LinkID=113216).
@@ -140,7 +137,7 @@ Uninstall-PswaWebApplication -WebApplicationName TestApplication -WebsiteName My
 
 ## <a name="related-topics"></a>Tópicos relacionados
 
-- [Add-PswaAuthorizationRule](add-pswaauthorizationrule.md)
+- [Adicionar-PswaAuthorizationRule](add-pswaauthorizationrule.md)
 - [Get-PswaAuthorizationRule](get-pswaauthorizationrule.md)
 - [Install-PswaWebApplication](install-pswawebapplication.md)
 - [Remove-PswaAuthorizationRule](remove-pswaauthorizationrule.md)

@@ -1,15 +1,14 @@
 ---
 ms.date: 06/12/2017
-ms.topic: conceptual
 keywords: DSC, do powershell, a configuração, a configuração
-title: DSC PackageManagementSource Resource
-ms.openlocfilehash: 8c0cb5a3b0a019ddb5ed995406f499298103b07c
-ms.sourcegitcommit: cf195b090b3223fa4917206dfec7f0b603873cdf
+title: Recursos do DSC PackageManagementSource
+ms.openlocfilehash: 3e67cec9058ecb0e43f882f98f5ec8b92e261a09
+ms.sourcegitcommit: 54534635eedacf531d8d6344019dc16a50b8b441
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 04/09/2018
+ms.lasthandoff: 05/16/2018
 ---
-# <a name="dsc-packagemanagementsource-resource"></a>DSC PackageManagementSource Resource
+# <a name="dsc-packagemanagementsource-resource"></a>Recursos do DSC PackageManagementSource
 
 > Aplica-se a: O Windows PowerShell 4.0, Windows PowerShell 5.0
 

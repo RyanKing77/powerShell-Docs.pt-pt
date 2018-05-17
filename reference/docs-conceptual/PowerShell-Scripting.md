@@ -2,11 +2,11 @@
 ms.date: 06/05/2017
 keywords: PowerShell, o cmdlet
 title: Scripts do PowerShell
-ms.openlocfilehash: 3304ecc3129b710a003725715803a03b68f79b45
-ms.sourcegitcommit: cf195b090b3223fa4917206dfec7f0b603873cdf
+ms.openlocfilehash: 7de5a3f3149d8d464b34101d94a5f9430d9b0f23
+ms.sourcegitcommit: 54534635eedacf531d8d6344019dc16a50b8b441
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 04/09/2018
+ms.lasthandoff: 05/17/2018
 ---
 # <a name="powershell"></a>PowerShell
 
@@ -25,18 +25,18 @@ Windows PowerShell foi concebido para melhorar o ambiente de linha de comandos e
 ### <a name="discoverability"></a>Capacidade de deteção
 Windows PowerShell torna mais fácil detetar as respetivas funcionalidades. Por exemplo, para encontrar uma lista de cmdlets que ver e alterar os serviços do Windows, escreva:
 
-```
+```powershell
 Get-Command *-Service
 ```
 
 Depois de descobrir qual cmdlet concretiza uma tarefa, pode saber mais sobre o cmdlet utilizando o cmdlet Get-Help. Por exemplo, para apresentar a ajuda sobre o cmdlet Get-Service, escreva:
 
-```
+```powershell
 Get-Help Get-Service
 ```
 A maioria dos cmdlets emitir objetos que podem ser manipulados e, em seguida, apresentados em texto para apresentação. Para compreender o resultado que cmdlet, encaminhe o resultado para o cmdlet Get-membro. Por exemplo, o comando seguinte apresenta informações sobre os membros da saída de objeto pelo cmdlet Get-Service.
 
-```
+```powershell
 Get-Service | Get-Member
 ```
 

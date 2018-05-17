@@ -1,24 +1,21 @@
 ---
-description: ''
-ms.topic: article
-ms.prod: powershell
+ms.topic: reference
 keywords: PowerShell, o cmdlet
 ms.date: 12/12/2016
-title: instalar pswawebapplication
-ms.technology: powershell
-ms.openlocfilehash: c7f7768a41b6784d8c29afa1fccf0b855160b777
-ms.sourcegitcommit: cf195b090b3223fa4917206dfec7f0b603873cdf
+title: Install-PswaWebApplication
+ms.openlocfilehash: 68455d9490f7d5c33c1a928ac262a76a78ad7128
+ms.sourcegitcommit: 54534635eedacf531d8d6344019dc16a50b8b441
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 04/09/2018
+ms.lasthandoff: 05/16/2018
 ---
 # <a name="install-pswawebapplication"></a>Install-PswaWebApplication
 
-## <a name="synopsis"></a>SYNOPSIS
+## <a name="synopsis"></a>RESUMO
 
 Configura a aplicação web do Windows PowerShell® Web Access no IIS.
 
-## <a name="syntax"></a>SYNTAX
+## <a name="syntax"></a>SINTAXE
 
 ### <a name="default"></a>Predefinido
 ```
@@ -44,7 +41,7 @@ Especifica que é criado um certificado de teste. Se este parâmetro estiver def
 | Aceitar Entrada de Pipeline?               | falso                                |
 | Aceitar Carateres Universais?          | falso                                |
 
-### <a name="-webapplicationnameltstringgt"></a>-WebApplicationName&lt;String&gt;
+### <a name="-webapplicationnameltstringgt"></a>-WebApplicationName&lt;cadeia&gt;
 
 Especifica o nome da sua aplicação web. Isto é apresentado como a última parte do URL de acesso Web do Windows PowerShell.
 
@@ -57,7 +54,7 @@ Especifica o nome da sua aplicação web. Isto é apresentado como a última par
 | Aceitar Entrada de Pipeline?               | falso                                |
 | Aceitar Carateres Universais?          | falso                                |
 
-### <a name="-websitenameltstringgt"></a>-WebSiteName&lt;String&gt;
+### <a name="-websitenameltstringgt"></a>-WebSiteName&lt;cadeia&gt;
 
 Especifica o nome do site do servidor Web (IIS) em que pretende instalar esta aplicação web do acesso Web Windows PowerShell.
 
@@ -95,7 +92,7 @@ O cmdlet não é executado.
 | Aceitar Entrada de Pipeline?               | falso                                |
 | Aceitar Carateres Universais?          | falso                                |
 
-### <a name="ltcommonparametersgt"></a>&lt;CommonParameters&gt;
+### <a name="ltcommonparametersgt"></a>&lt;Parâmetroscomuns&gt;
 
 Este cmdlet suporta os parâmetros comuns: -Verbose, -Debug, -ErrorAction, -ErrorVariable, -OutBuffer, e -OutVariable.
 Para obter mais informações, consulte [about_CommonParameters](http://go.microsoft.com/fwlink/p/?LinkID=113216).
@@ -128,7 +125,7 @@ Install-PswaWebApplication -UseTestCertificate
 
 ## <a name="related-topics"></a>Tópicos relacionados
 
-- [Add-PswaAuthorizationRule](add-pswaauthorizationrule.md)
+- [Adicionar-PswaAuthorizationRule](add-pswaauthorizationrule.md)
 - [Get-PswaAuthorizationRule](get-pswaauthorizationrule.md)
 - [Remove-PswaAuthorizationRule](remove-pswaauthorizationrule.md)
 - [Test-PswaAuthorizationRule](test-pswaauthorizationrule.md)
