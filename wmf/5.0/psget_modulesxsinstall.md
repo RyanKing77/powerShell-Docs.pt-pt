@@ -1,20 +1,18 @@
 ---
 ms.date: 06/12/2017
-author: JKeithB
-ms.topic: reference
 keywords: wmf,powershell,setup
-ms.openlocfilehash: f9a121c320ffb780503dbe0c278f698a6fa40289
-ms.sourcegitcommit: cf195b090b3223fa4917206dfec7f0b603873cdf
+ms.openlocfilehash: d4168640f67cb1dd44e91d1867e87fd7a6b7f549
+ms.sourcegitcommit: 54534635eedacf531d8d6344019dc16a50b8b441
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 04/09/2018
+ms.lasthandoff: 05/17/2018
 ---
-# <a name="side-by-side-version-support-on-powershell-50-or-newer"></a><span data-ttu-id="82bb4-102">Suporte da versão lado a lado no PowerShell 5.0 ou mais recente</span><span class="sxs-lookup"><span data-stu-id="82bb4-102">Side-by-Side Version Support on PowerShell 5.0 or newer</span></span>
+# <a name="side-by-side-version-support-on-powershell-50-or-newer"></a><span data-ttu-id="96756-102">Suporte da versão lado a lado no PowerShell 5.0 ou mais recente</span><span class="sxs-lookup"><span data-stu-id="96756-102">Side-by-Side Version Support on PowerShell 5.0 or newer</span></span>
 
-<span data-ttu-id="82bb4-103">Está agora lado a lado (SxS) módulo suporte para a versão no módulo de instalação, atualização-Module e cmdlets do módulo de publicação que são executados no Windows PowerShell 5.0 ou mais recente.</span><span class="sxs-lookup"><span data-stu-id="82bb4-103">There is now side-by-side (SxS) module version support in Install-Module, Update-Module, and Publish-Module cmdlets that run in Windows PowerShell 5.0 or newer.</span></span>
-<span data-ttu-id="82bb4-104">Além disso, ter adicionámos um parâmetro - RequiredVersion para o cmdlet do módulo de publicar para especificar a versão a serem publicadas.</span><span class="sxs-lookup"><span data-stu-id="82bb4-104">Also, we have added a -RequiredVersion parameter to the Publish-Module cmdlet to specify the version to be published.</span></span> <span data-ttu-id="82bb4-105">O parâmetro de caminho suporta agora o caminho de base do módulo com a pasta de versão.</span><span class="sxs-lookup"><span data-stu-id="82bb4-105">The Path parameter now supports the module base path with the version folder.</span></span>
+<span data-ttu-id="96756-103">Está agora lado a lado (SxS) módulo suporte para a versão no módulo de instalação, atualização-Module e cmdlets do módulo de publicação que são executados no Windows PowerShell 5.0 ou mais recente.</span><span class="sxs-lookup"><span data-stu-id="96756-103">There is now side-by-side (SxS) module version support in Install-Module, Update-Module, and Publish-Module cmdlets that run in Windows PowerShell 5.0 or newer.</span></span>
+<span data-ttu-id="96756-104">Além disso, ter adicionámos um parâmetro - RequiredVersion para o cmdlet do módulo de publicar para especificar a versão a serem publicadas.</span><span class="sxs-lookup"><span data-stu-id="96756-104">Also, we have added a -RequiredVersion parameter to the Publish-Module cmdlet to specify the version to be published.</span></span> <span data-ttu-id="96756-105">O parâmetro de caminho suporta agora o caminho de base do módulo com a pasta de versão.</span><span class="sxs-lookup"><span data-stu-id="96756-105">The Path parameter now supports the module base path with the version folder.</span></span>
 
-<span data-ttu-id="82bb4-106">**Exemplos de módulo de instalação:**</span><span class="sxs-lookup"><span data-stu-id="82bb4-106">**Install-Module examples:**</span></span>
+<span data-ttu-id="96756-106">**Exemplos de módulo de instalação:**</span><span class="sxs-lookup"><span data-stu-id="96756-106">**Install-Module examples:**</span></span>
 ```powershell
 Install-Module -Name PSScriptAnalyzer -RequiredVersion 1.1.0 -Repository PSGallery
 Get-Module -ListAvailable -Name PSScriptAnalyzer | Format-List Name,Version,ModuleBase
