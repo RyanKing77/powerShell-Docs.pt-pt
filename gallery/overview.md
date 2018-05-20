@@ -1,13 +1,4 @@
----
-ms.date: 06/12/2017
-contributor: JKeithB
-keywords: Galeria, powershell, cmdlet, psgallery, psget
-title: A galeria do PowerShell
-ms.openlocfilehash: 65e0c427310ac20621109a6620e926a7894cf8f8
-ms.sourcegitcommit: 54534635eedacf531d8d6344019dc16a50b8b441
-ms.translationtype: MT
-ms.contentlocale: pt-PT
-ms.lasthandoff: 05/16/2018
+ e ---MS. Date: 06/12/2017 Contribuidor: palavras-chave de JKeithB: galeria do powershell, cmdlet, psgallery, psget título: A Galeria do PowerShell
 ---
 # <a name="the-powershell-gallery"></a>A galeria do PowerShell
 
@@ -27,9 +18,9 @@ Veja o [introdução](getting-started.md) página para obter mais informações 
 
 ## <a name="supported-operating-systems"></a>Sistemas operativos suportados
 
-O **PowerShellGet** módulo requer **PowerShell 3.0 ou mais recente**.
+O **PowerShellGet** módulo requer **do Windows PowerShell 3.0 ou mais recente**, ou **PowerShell Core 6.0 ou mais recente**.
 
-Por conseguinte, **PowerShellGet** necessita de um dos seguintes sistemas operativos:
+Uma versão adequada do **do Windows PowerShell** está disponível para estes sistemas operativos:
 
 - 10 do Windows
 - Windows 8.1 Pro
@@ -40,6 +31,10 @@ Por conseguinte, **PowerShellGet** necessita de um dos seguintes sistemas operat
 - Windows Server 2008 R2 SP1
 
 **PowerShellGet** também requer o .NET Framework 4.5 ou superior. Pode instalar o .NET Framework 4.5 ou superior do [aqui](https://msdn.microsoft.com/library/5a4x27ek.aspx).
+
+**PowerShell Core** suporta muitos sistemas operativos. Consulte [neste artigo](https://blogs.msdn.microsoft.com/powershell/2018/01/10/powershell-core-6-0-generally-available-ga-and-supported/) para uma lista completa.
+
+Muitos módulos alojados na Galeria suporta sos diferentes e têm requisitos adicionais. Consulte a documentação para os módulos para obter mais informações.
 
 ## <a name="got-a-question-have-feedback"></a>Recebeu uma pergunta? Tem comentários?
 
