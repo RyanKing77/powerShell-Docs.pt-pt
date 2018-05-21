@@ -28,11 +28,11 @@ PowerShell oficialmente suporta agora macOS e do Linux, incluindo:
 - Red Hat Enterprise Linux 7
 - OpenSUSE 42.2
 - Fedora 25, 26
-- macOS 10.12+
+- macOS 10.12 +
 
 A nossa Comunidade também tem contribuíram pacotes para as seguintes plataformas, mas não são suportados oficialmente:
 
-- Arch Linux
+- Arquitetura de Linux
 - Kali Linux
 - AppImage (funciona em várias plataformas Linux)
 
@@ -59,7 +59,7 @@ Outras pessoas só estão presentes ou aplicável em instalações de não-Windo
 No macOS, PowerShell utiliza o nativo `os_log` APIs para iniciar sessão da Apple [unified registo sistema][os_log].
 No Linux, PowerShell utiliza [Syslog][], uma solução de registo ubíquo.
 
-### <a name="filesystem"></a>Filesystem
+### <a name="filesystem"></a>Sistema de ficheiros
 
 Um número de alterações foram efetuado no macOS e Linux para suportar carateres tradicionalmente não suportadas no Windows:
 
@@ -172,8 +172,8 @@ PowerShell Core altera a codificação predefinida a estar em conformidade com a
 Isto significa que todos os cmdlets incorporados a utilizar o `-Encoding` utilização do parâmetro de `UTF8NoBOM` valor por predefinição.
 Os seguintes cmdlets são afetados por esta alteração:
 
-- Add-Content
-- Export-Clixml
+- Adicionar conteúdo
+- Exportação Clixml
 - Export-Csv
 - Export-PSSession
 - Format-Hex
@@ -181,7 +181,7 @@ Os seguintes cmdlets são afetados por esta alteração:
 - Import-Csv
 - Out-File
 - Selecione cadeia
-- Send-MailMessage
+- Enviar-MailMessage
 - Set-Content
 
 Estes cmdlets também ter sido atualizados para que o `-Encoding` parâmetro universalmente aceita `System.Text.Encoding`.
@@ -272,7 +272,7 @@ Para mais informações sobre as tarefas do PowerShell, consulte [about_Jobs](ht
 - Adicionar explícita `ContentType` deteção para `Invoke-RestMethod` (#4692)
 - Corrigir web cmdlets `-SkipHeaderValidation` para trabalhar com os cabeçalhos de agente de utilizador não padrão. (#4479 & #4512) (Obrigado @markekraus)
 
-### <a name="json-cmdlets"></a>JSON cmdlets
+### <a name="json-cmdlets"></a>Cmdlets JSON
 
 - Adicionar `-AsHashtable` para `ConvertFrom-Json` para devolver um `Hashtable` em vez disso. (#5043) (Obrigado @bergmeister!)
 - Utilize o formatador prettier com `ConvertTo-Json` saída. (#2787) (Thanks para @kittholland!)
@@ -373,7 +373,7 @@ Pode encontrar mais informações sobre como utilizamos esses dados deste [blogu
 [os_log]: https://developer.apple.com/documentation/os/logging
 [Syslog]: https://en.wikipedia.org/wiki/Syslog
 [ssh-remoting]: ../core-powershell/SSH-Remoting-in-PowerShell-Core.md
-[breaking-changes]: https://github.com/PowerShell/PowerShell/tree/master/docs/BREAKINGCHANGES.md
+[breaking-changes]: breaking-changes-ps6.md
 [changelog]: https://github.com/PowerShell/PowerShell/tree/master/CHANGELOG.md
 [community-dashboard]: https://aka.ms/PSGitHubBI
 [telemetry-blog]: https://blogs.msdn.microsoft.com/powershell/2017/01/31/powershell-open-source-community-dashboard/
