@@ -2,11 +2,11 @@
 ms.date: 06/05/2017
 keywords: PowerShell, o cmdlet
 title: Tornando-o segundo hop comunicação remota do PowerShell
-ms.openlocfilehash: 893b4353c4244dc96c4b234bb4062b583a5cd36d
-ms.sourcegitcommit: cf195b090b3223fa4917206dfec7f0b603873cdf
+ms.openlocfilehash: 1d24473178bc50321a81ebf1115a20f17078844f
+ms.sourcegitcommit: 735ccab3fb3834ccd8559fab6700b798e8e5ffbf
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 04/09/2018
+ms.lasthandoff: 05/25/2018
 ---
 # <a name="making-the-second-hop-in-powershell-remoting"></a>Tornando-o segundo hop comunicação remota do PowerShell
 
@@ -21,7 +21,7 @@ Existem várias formas para resolver este problema. Neste tópico, vamos ver vá
 
 ## <a name="credssp"></a>CredSSP
 
-Pode utilizar o [Credential Security Support Provider (CredSSP)](https://msdn.microsoft.com/en-us/library/windows/desktop/bb931352.aspx) para autenticação. CredSSP coloca em cache as credenciais no servidor remoto (_ServerB_), por isso, utilizá-la abre até ataques de roubo de credenciais. Se o computador remoto for comprometido, o atacante tem acesso às credenciais do utilizador. CredSSP está desativada por predefinição nos computadores cliente e servidor. Deve ativar o CredSSP apenas nos ambientes de maior confiança. Por exemplo, um administrador de domínio ligação a um controlador de domínio porque o controlador de domínio é altamente fidedigno.
+Pode utilizar o [Credential Security Support Provider (CredSSP)](https://msdn.microsoft.com/library/windows/desktop/bb931352.aspx) para autenticação. CredSSP coloca em cache as credenciais no servidor remoto (_ServerB_), por isso, utilizá-la abre até ataques de roubo de credenciais. Se o computador remoto for comprometido, o atacante tem acesso às credenciais do utilizador. CredSSP está desativada por predefinição nos computadores cliente e servidor. Deve ativar o CredSSP apenas nos ambientes de maior confiança. Por exemplo, um administrador de domínio ligação a um controlador de domínio porque o controlador de domínio é altamente fidedigno.
 
 Para obter mais informações sobre as questões de segurança quando utilizar o CredSSP para comunicação remota do PowerShell, consulte [sabotagem instalações acidental: cuidado com do CredSSP](http://www.powershellmagazine.com/2014/03/06/accidental-sabotage-beware-of-credssp).
 
@@ -175,7 +175,7 @@ Invoke-Command -ComputerName $ServerB.Name -Credential $cred -ScriptBlock {
 }
 ```
 
-Neste exemplo, o `$using` variável é utilizada para efetuar o `$ServerC` variável visível para _ServerB_. Para obter mais informações sobre o `$using` variável, consulte [about_Remote_Variables](https://technet.microsoft.com/en-us/library/jj149005.aspx).
+Neste exemplo, o `$using` variável é utilizada para efetuar o `$ServerC` variável visível para _ServerB_. Para obter mais informações sobre o `$using` variável, consulte [about_Remote_Variables](https://technet.microsoft.com/library/jj149005.aspx).
 
 Para permitir que vários servidores delegar as credenciais para _ServerC_, defina o valor da **PrincipalsAllowedToDelegateToAccount** parâmetro no _ServerC_ numa matriz:
 
@@ -212,8 +212,8 @@ Set-ADComputer -Identity $ServerC -PrincipalsAllowedToDelegateToAccount $null
 - [Como o Windows Server 2012 Eases tensão de Kerberos a delegação restrita, parte 1](http://windowsitpro.com/security/how-windows-server-2012-eases-pain-kerberos-constrained-delegation-part-1)
 - [Como o Windows Server 2012 Eases tensão de Kerberos a delegação restrita, faz parte 2](http://windowsitpro.com/security/how-windows-server-2012-eases-pain-kerberos-constrained-delegation-part-2)
 - [Restrita de Kerberos de compreender a delegação para implementações de Proxy de aplicações do Azure Active Directory com a autenticação integrada do Windows](http://aka.ms/kcdpaper)
-- [[MS-ADA2]: msDS-AllowedToActOnBehalfOfOtherIdentity de atributo do M2.210 de atributos de esquema do Active Directory](https://msdn.microsoft.com/en-us/library/hh554126.aspx)
-- [[MS-SFU]: extensões de protocolo do Kerberos: serviço para utilizador e a delegação restrita protocolo 1.3.2 S4U2proxy](https://msdn.microsoft.com/en-us/library/cc246079.aspx)
+- [[MS-ADA2]: msDS-AllowedToActOnBehalfOfOtherIdentity de atributo do M2.210 de atributos de esquema do Active Directory](https://msdn.microsoft.com/library/hh554126.aspx)
+- [[MS-SFU]: extensões de protocolo do Kerberos: serviço para utilizador e a delegação restrita protocolo 1.3.2 S4U2proxy](https://msdn.microsoft.com/library/cc246079.aspx)
 - [Recursos com base em Kerberos a delegação restrita](https://blog.kloud.com.au/2013/07/11/kerberos-constrained-delegation/)
 - [Administração remota sem PrincipalsAllowedToDelegateToAccount a utilizar a delegação restrita](https://blogs.msdn.microsoft.com/taylorb/2012/11/06/remote-administration-without-constrained-delegation-using-principalsallowedtodelegatetoaccount/)
 
@@ -236,7 +236,7 @@ Para obter informações sobre como utilizar PSSessionConfiguration e RunAs para
 
 JEA permite-lhe restringir os comandos que um administrador pode ser executado durante uma sessão do PowerShell. Pode ser utilizado para resolver o problema de salto segundo.
 
-Para obter informações sobre JEA, consulte [apenas suficiente administração](https://docs.microsoft.com/en-us/powershell/jea/overview).
+Para obter informações sobre JEA, consulte [apenas suficiente administração](https://docs.microsoft.com/powershell/jea/overview).
 
 ### <a name="pros"></a>Vantagens
 
@@ -249,7 +249,7 @@ Para obter informações sobre JEA, consulte [apenas suficiente administração]
 
 ## <a name="pass-credentials-inside-an-invoke-command-script-block"></a>Introduzir credenciais dentro de um bloco de script de Invoke-Command
 
-Pode passar credenciais dentro de **ScriptBlock** parâmetro de uma chamada para o [Invoke-Command](https://msdn.microsoft.com/en-us/powershell/reference/5.1/microsoft.powershell.core/invoke-command) cmdlet.
+Pode passar credenciais dentro de **ScriptBlock** parâmetro de uma chamada para o [Invoke-Command](https://msdn.microsoft.com/powershell/reference/5.1/microsoft.powershell.core/invoke-command) cmdlet.
 
 ### <a name="pros"></a>Vantagens
 

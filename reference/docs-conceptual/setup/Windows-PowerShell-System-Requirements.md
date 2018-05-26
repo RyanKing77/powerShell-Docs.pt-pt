@@ -3,11 +3,11 @@ ms.date: 06/05/2017
 keywords: PowerShell, o cmdlet
 title: Requisitos de Sistema do Windows PowerShell
 ms.assetid: 6d1d3c75-3be4-4fc9-8805-ca9b2c454d42
-ms.openlocfilehash: a15b5b33b5296befae833e520cfdfbd41a07b122
-ms.sourcegitcommit: cf195b090b3223fa4917206dfec7f0b603873cdf
+ms.openlocfilehash: 74c65a97a30227997c48a23c42b0431189f9ed76
+ms.sourcegitcommit: 735ccab3fb3834ccd8559fab6700b798e8e5ffbf
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 04/09/2018
+ms.lasthandoff: 05/25/2018
 ---
 # <a name="windows-powershell-system-requirements"></a>Requisitos de Sistema do Windows PowerShell
 Este tópico lista os requisitos de sistema para o Windows PowerShell 3.0, o Windows PowerShell 4.0 e o Windows PowerShell 5.0 e para funcionalidades especiais, como o Windows PowerShell Integrated Scripting Environment (ISE), comandos CIM e fluxos de trabalho.
@@ -83,19 +83,19 @@ No entanto, alguns itens, tais como o seguinte, necessitam de uma interface grá
 
 - Cmdlets
 
-    1.  [Out-GridView](https://docs.microsoft.com/en-us/powershell/module/microsoft.powershell.utility/out-gridview)
+    1.  [Out-GridView](https://docs.microsoft.com/powershell/module/microsoft.powershell.utility/out-gridview)
 
-    2.  [Show-Command](https://docs.microsoft.com/en-us/powershell/module/Microsoft.PowerShell.Utility/Show-Command)
+    2.  [Mostrar comando](https://docs.microsoft.com/powershell/module/Microsoft.PowerShell.Utility/Show-Command)
 
-    3.  [Show-ControlPanelItem](https://docs.microsoft.com/en-us/powershell/module/Microsoft.PowerShell.Management/Show-ControlPanelItem)
+    3.  [Mostrar ControlPanelItem](https://docs.microsoft.com/powershell/module/Microsoft.PowerShell.Management/Show-ControlPanelItem)
 
-    4.  [Show-EventLog](https://docs.microsoft.com/en-us/powershell/module/Microsoft.PowerShell.Management/Show-EventLog)
+    4.  [Mostrar-registo de eventos](https://docs.microsoft.com/powershell/module/Microsoft.PowerShell.Management/Show-EventLog)
 
 - Parâmetros
 
-    1.  **ShowWindow** parâmetro o [Get-Help](https://docs.microsoft.com/en-us/powershell/module/Microsoft.PowerShell.Core/Get-Help) cmdlet.
+    1.  **ShowWindow** parâmetro o [Get-Help](https://docs.microsoft.com/powershell/module/Microsoft.PowerShell.Core/Get-Help) cmdlet.
 
-    2.  **ShowSecurityDescriptorUI** parâmetro o [Register-PSSessionConfiguration](https://docs.microsoft.com/en-us/powershell/module/Microsoft.PowerShell.Core/Register-PSSessionConfiguration) e [Set-PSSessionConfiguration](https://docs.microsoft.com/en-us/powershell/module/Microsoft.PowerShell.Core/Set-PSSessionConfiguration) cmdlets.
+    2.  **ShowSecurityDescriptorUI** parâmetro o [Register-PSSessionConfiguration](https://docs.microsoft.com/powershell/module/Microsoft.PowerShell.Core/Register-PSSessionConfiguration) e [Set-PSSessionConfiguration](https://docs.microsoft.com/powershell/module/Microsoft.PowerShell.Core/Set-PSSessionConfiguration) cmdlets.
 
 ## <a name="windows-powershell-engine-requirements"></a>Requisitos do Windows PowerShell motor
 Windows PowerShell 4.0 está concebido para ser retrocompatíveis com o Windows PowerShell 3.0 e o Windows PowerShell 2.0. Os cmdlets, fornecedores, snap-ins, módulos e scripts escritos para o Windows PowerShell 2.0 e Windows PowerShell 3.0 executam inalterados no Windows PowerShell 4.0.
@@ -111,13 +111,13 @@ O Windows PowerShell 2.0, o Windows PowerShell 3.0 e o Windows PowerShell 4.0 ex
 
 - [Cmdlets de serviço (BITS) de transferência inteligente em segundo plano](http://go.microsoft.com/fwlink/?LinkId=257514)
 
-- [Get-EventLog](https://docs.microsoft.com/en-us/powershell/module/Microsoft.PowerShell.Management/Get-EventLog)
+- [Get-EventLog](https://docs.microsoft.com/powershell/module/Microsoft.PowerShell.Management/Get-EventLog)
 
-- [Get-WinEvent](https://docs.microsoft.com/en-us/powershell/module/Microsoft.PowerShell.Diagnostics/Get-WinEvent)
+- [Get-WinEvent](https://docs.microsoft.com/powershell/module/Microsoft.PowerShell.Diagnostics/Get-WinEvent)
 
-- [Save-Help](https://docs.microsoft.com/en-us/powershell/module/Microsoft.PowerShell.Core/Save-Help)
+- [Save-Help](https://docs.microsoft.com/powershell/module/Microsoft.PowerShell.Core/Save-Help)
 
-- [Update-Help](https://docs.microsoft.com/en-us/powershell/module/Microsoft.PowerShell.Core/Update-Help)
+- [Update-Help](https://docs.microsoft.com/powershell/module/Microsoft.PowerShell.Core/Update-Help)
 
 Além disso, o **WinRM** serviço não está presente no Windows PE.
 

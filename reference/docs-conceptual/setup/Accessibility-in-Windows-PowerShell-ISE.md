@@ -3,11 +3,11 @@ ms.date: 06/05/2017
 keywords: PowerShell, o cmdlet
 title: Acessibilidade no ISE do Windows PowerShell
 ms.assetid: a078f9d1-dd6b-4323-b16d-0622cd993aa8
-ms.openlocfilehash: 65d159905660f4f3e025b385626679e02a785fd7
-ms.sourcegitcommit: cf195b090b3223fa4917206dfec7f0b603873cdf
+ms.openlocfilehash: 272dd502ff9d220e82236c93cbffaf4e12054cfe
+ms.sourcegitcommit: 735ccab3fb3834ccd8559fab6700b798e8e5ffbf
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 04/09/2018
+ms.lasthandoff: 05/25/2018
 ---
 # <a name="accessibility-in-windows-powershell-ise"></a>Acessibilidade no ISE do Windows PowerShell
 
@@ -27,7 +27,7 @@ ISE do Windows PowerShell suporta o modo de alto contraste. Para visualmente deb
 
 - Atalhos de teclado
 
-- Tabela Coloring sintaxe e a capacidade de modificar várias outras definições de cor a utilizar o [$psISE.Options](https://technet.microsoft.com/en-us/library/75e2a76f-f3d1-490b-ad5d-e3829946aabb) objeto de scripting.
+- Tabela Coloring sintaxe e a capacidade de modificar várias outras definições de cor a utilizar o [$psISE.Options](https://technet.microsoft.com/library/75e2a76f-f3d1-490b-ad5d-e3829946aabb) objeto de scripting.
 
 - Alteração do tamanho de texto
 
@@ -62,12 +62,12 @@ Pode utilizar os seguintes atalhos de teclado ao editar o texto.
 |Ação|Atalhos de teclado|Utilize|
 |----------|----------------------|----------|
 |**Copiar**|CTRL + C|Painel de script, o painel de consola|
-|**Cut**|CTRL + X|Painel de script, o painel de consola|
+|**Cortar**|CTRL + X|Painel de script, o painel de consola|
 |**Localizar o script**|CTRL + L|Painel de script|
 |**Localizar o seguinte script**|F3|Painel de script|
 |**Localizar anterior no Script**|SHIFT + F3|Painel de script|
 |**Paste**|CTRL + V|Painel de script, o painel de consola|
-|**Redo**|CTRL + Y|Painel de script, o painel de consola|
+|**Ação de Refazer**|CTRL + Y|Painel de script, o painel de consola|
 |**Substituir o script**|CTRL + H|Painel de script|
 |**Guardar**|CTRL+S|Painel de script|
 |**Selecionar tudo**|CTRL + T|Painel de script, o painel de consola|
@@ -81,7 +81,7 @@ Pode utilizar os seguintes atalhos de teclado quando executar scripts no painel 
 |----------|---------------------|
 |**novo**|CTRL + N|
 |**Abrir**|CTRL + O|
-|**Run**|F5|
+|**executar**|F5|
 |**Executar seleção**|F8|
 |**Parar a execução**|CTRL + BREAK. CTRL + C podem ser utilizado quando o contexto é inequívoca (quando não existe nenhum texto selecionado).|
 |**Separador** (para o script seguinte)|CTRL + TAB **Nota:** separador para o script seguinte funciona apenas quando tiver um separador de PowerShell único abrir, ou quando tem mais do que um separador de PowerShell abrir, mas centra-se no painel de Script.|
@@ -110,7 +110,7 @@ Pode utilizar os seguintes atalhos de teclado quando depurar scripts.
 
 |Ação|Atalho de teclado|Utilize|
 |----------|---------------------|----------|
-|**Run/Continue**|F5|Painel de script, quando um script de depuração|
+|**Executar/continuar**|F5|Painel de script, quando um script de depuração|
 |**Avance para**|F11|Painel de script, quando um script de depuração|
 |**Passo ao longo do**|F10|Painel de script, quando um script de depuração|
 |**Passo**|SHIFT + F11|Painel de script, quando um script de depuração|

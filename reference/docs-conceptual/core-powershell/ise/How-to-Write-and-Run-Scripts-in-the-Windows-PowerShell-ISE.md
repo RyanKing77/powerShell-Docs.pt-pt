@@ -3,11 +3,11 @@ ms.date: 06/05/2017
 keywords: PowerShell, o cmdlet
 title: Como Escrever e Executar Scripts no ISE do Windows PowerShell
 ms.assetid: 62f916d9-b3a1-484a-bdfb-41f57112c22b
-ms.openlocfilehash: 4b8a9c0c3a710f3b3b9b6077c3c84e174a141db2
-ms.sourcegitcommit: cf195b090b3223fa4917206dfec7f0b603873cdf
+ms.openlocfilehash: 4d7c5352ef1dac6f63a50433676068f83a920db5
+ms.sourcegitcommit: 735ccab3fb3834ccd8559fab6700b798e8e5ffbf
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 04/09/2018
+ms.lasthandoff: 05/25/2018
 ---
 # <a name="how-to-write-and-run-scripts-in-the-windows-powershell-ise"></a>Como Escrever e Executar Scripts no ISE do Windows PowerShell
 
@@ -130,7 +130,7 @@ Prima **CTRL + G** ou, na barra de ferramentas, clique em de **guardar** ícone,
 
 ### <a name="to-save-a-script-in-ascii-encoding"></a>Para guardar um script num codificação ASCII
 
-Por predefinição, ISE do Windows PowerShell guarda novos ficheiros de script (. ps1), ficheiros de dados do script (. psd1) e os ficheiros do módulo de script (. psm1) como Unicode (BigEndianUnicode) por predefinição. Â para guardar um script na codificação outro, tais como ASCII (ANSI), utilize o **guardar** ou **SaveAs** os métodos no [$psISE.CurrentFile](https://technet.microsoft.com/en-us/library/bc3300e4-9c17-4f00-a621-c8867126e3b3#CurrentFile) objeto.
+Por predefinição, ISE do Windows PowerShell guarda novos ficheiros de script (. ps1), ficheiros de dados do script (. psd1) e os ficheiros do módulo de script (. psm1) como Unicode (BigEndianUnicode) por predefinição. Â para guardar um script na codificação outro, tais como ASCII (ANSI), utilize o **guardar** ou **SaveAs** os métodos no [$psISE.CurrentFile](https://technet.microsoft.com/library/bc3300e4-9c17-4f00-a621-c8867126e3b3#CurrentFile) objeto.
 
 O comando seguinte guarda um script novo como MyScript.ps1 com codificação ASCII.
 

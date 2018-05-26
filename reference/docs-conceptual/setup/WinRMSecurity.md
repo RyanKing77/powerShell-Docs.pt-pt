@@ -2,11 +2,11 @@
 ms.date: 06/05/2017
 keywords: PowerShell, o cmdlet
 title: WinRMSecurity
-ms.openlocfilehash: e390a84b6f7a1932afdad84c7b09ce7da2ec5370
-ms.sourcegitcommit: cf195b090b3223fa4917206dfec7f0b603873cdf
+ms.openlocfilehash: 43e77067e301cdf1b792cb0d24b72ee0abb3349a
+ms.sourcegitcommit: 735ccab3fb3834ccd8559fab6700b798e8e5ffbf
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 04/09/2018
+ms.lasthandoff: 05/25/2018
 ---
 # <a name="powershell-remoting-security-considerations"></a>Considerações de segurança de comunicação remota do PowerShell
 
@@ -71,7 +71,7 @@ Em vez disso, deve considerar a definição de TrustedHosts para ser a lista de 
 
 ### <a name="ongoing-communication"></a>Comunicação em curso
 
-Assim que a autenticação inicial estiver concluída, o [protocolo de comunicação remota de PowerShell](https://msdn.microsoft.com/en-us/library/dd357801.aspx) encripta todas as comunicações em curso com uma chave simétrica por sessão AES 256.
+Assim que a autenticação inicial estiver concluída, o [protocolo de comunicação remota de PowerShell](https://msdn.microsoft.com/library/dd357801.aspx) encripta todas as comunicações em curso com uma chave simétrica por sessão AES 256.
 
 
 ## <a name="making-the-second-hop"></a>Tornar o segundo hop

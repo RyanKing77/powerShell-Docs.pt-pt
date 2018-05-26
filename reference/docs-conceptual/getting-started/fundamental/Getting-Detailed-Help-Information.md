@@ -3,11 +3,11 @@ ms.date: 06/05/2017
 keywords: PowerShell, o cmdlet
 title: Obter Informações de Ajuda Detalhadas
 ms.assetid: 6fb4daf7-8607-4a3e-b692-f77631adc1b9
-ms.openlocfilehash: bb0fac4eb338354e411458fad575c726a5f0da35
-ms.sourcegitcommit: cf195b090b3223fa4917206dfec7f0b603873cdf
+ms.openlocfilehash: 29c24af3f688f9388893044952442910e793842d
+ms.sourcegitcommit: 735ccab3fb3834ccd8559fab6700b798e8e5ffbf
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 04/09/2018
+ms.lasthandoff: 05/25/2018
 ---
 # <a name="getting-detailed-help-information"></a>Obter Informações de Ajuda Detalhadas
 O Windows PowerShell inclui tópicos de ajuda detalhada que explicam conceitos do Windows PowerShell e o idioma do Windows PowerShell. Também existem tópicos de ajuda para cada fornecedor e o cmdlet e tópicos de ajuda para muitas funções e scripts.
@@ -128,7 +128,7 @@ get-help c:\ps-test\TestScript.ps1
 
 Os parâmetros que foram concebidos para apresentar cmdlet ajudam, tais como *detalhados*, *completa*, *exemplos*, e *parâmetro*, funcionam para as funções e scripts ajuda ajudam, demasiado. No entanto, quando apresentar todos os ajuda, escrevendo "get-help \*", a ajuda para as funções e scripts não é apresentada.
 
-Para obter informações sobre como escrever tópicos de ajuda para as suas funções e scripts, consulte [about_Functions [m2]](https://technet.microsoft.com/en-us/library/61d40692-5300-4de9-a9b5-bae31815e105), [about_Scripts](https://technet.microsoft.com/en-us/library/7dc08334-dcfe-450b-b949-0554855623af), e [about_Comment_Based_Help](https://technet.microsoft.com/en-us/library/99a81ccc-21a0-49ec-a1b3-9efe2b4c0bbf).
+Para obter informações sobre como escrever tópicos de ajuda para as suas funções e scripts, consulte [about_Functions [m2]](https://technet.microsoft.com/library/61d40692-5300-4de9-a9b5-bae31815e105), [about_Scripts](https://technet.microsoft.com/library/7dc08334-dcfe-450b-b949-0554855623af), e [about_Comment_Based_Help](https://technet.microsoft.com/library/99a81ccc-21a0-49ec-a1b3-9efe2b4c0bbf).
 
 ## <a name="getting-help-online"></a>Obter Ajuda Online
 Se estiver ligado à Internet, uma das formas melhor para obter ajuda é ver tópicos de ajuda online. Porque tópicos online são fáceis de atualização, é provável que forneça o conteúdo mais recente.
@@ -165,10 +165,10 @@ A primeira linha na secção do tópico ligações relacionadas é mostrada abai
 Online version: http://go.microsoft.com/fwlink/?LinkID=135194
 ```
 
-Para obter informações sobre como fornecer suporte online para os tópicos de ajuda, consulte [about_Comment_Based_Help](https://technet.microsoft.com/en-us/library/99a81ccc-21a0-49ec-a1b3-9efe2b4c0bbf)e ver [como escrever ajuda do Cmdlet](https://go.microsoft.com/fwlink/?LinkID=123415) na biblioteca da MSDN.
+Para obter informações sobre como fornecer suporte online para os tópicos de ajuda, consulte [about_Comment_Based_Help](https://technet.microsoft.com/library/99a81ccc-21a0-49ec-a1b3-9efe2b4c0bbf)e ver [como escrever ajuda do Cmdlet](https://go.microsoft.com/fwlink/?LinkID=123415) na biblioteca da MSDN.
 
 ## <a name="see-also"></a>Consulte Também
-- [about_Functions [m2]](https://technet.microsoft.com/en-us/library/61d40692-5300-4de9-a9b5-bae31815e105)
-- [about_Scripts](https://technet.microsoft.com/en-us/library/7dc08334-dcfe-450b-b949-0554855623af)
-- [about_Comment_Based_Help](https://technet.microsoft.com/en-us/library/99a81ccc-21a0-49ec-a1b3-9efe2b4c0bbf)
+- [about_Functions [m2]](https://technet.microsoft.com/library/61d40692-5300-4de9-a9b5-bae31815e105)
+- [about_Scripts](https://technet.microsoft.com/library/7dc08334-dcfe-450b-b949-0554855623af)
+- [about_Comment_Based_Help](https://technet.microsoft.com/library/99a81ccc-21a0-49ec-a1b3-9efe2b4c0bbf)
 - [Get-Help [m2]](https://technet.microsoft.com/library/2d7fe1b4-0025-4580-a911-d81922dd6cd2)
