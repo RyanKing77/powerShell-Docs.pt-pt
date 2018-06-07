@@ -3,21 +3,22 @@ ms.date: 06/05/2017
 keywords: PowerShell, o cmdlet
 title: Remover objetos a partir do Pipeline onde-objeto
 ms.assetid: 01df8b22-2d22-4e2c-a18d-c004cd3cc284
-ms.openlocfilehash: 2d89defdb1b234a9d0021fc06e1f05a95bb1bce9
-ms.sourcegitcommit: cf195b090b3223fa4917206dfec7f0b603873cdf
+ms.openlocfilehash: 46f210e1418098f4809174cd975ab8d783580285
+ms.sourcegitcommit: 01d6985ed190a222e9da1da41596f524f607a5bc
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 04/09/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34753843"
 ---
 # <a name="removing-objects-from-the-pipeline-where-object"></a>Remover objetos a partir do Pipeline (onde-objeto)
 
 No Windows PowerShell, muitas vezes gerar e transferem mais objetos para um pipeline que quiser. Pode especificar as propriedades de objetos específicos para apresentar, utilizando o **formato** cmdlets, mas isto não ajuda com o problema de remover objetos de todos a partir do ecrã. Poderá filtrar objetos antes do fim de um pipeline, pelo que pode realizar ações em apenas um subconjunto dos objetos gerou inicialmente.
 
-O Windows PowerShell inclui um **Where-Object** cmdlet permite-lhe testar cada objeto no pipeline e transmita-apenas pelo pipeline se cumpre uma condição de teste específica. Objetos que não são transmitidas o teste são removidos a partir do pipeline. Forneça a condição de teste como o valor de **onde ObjectFilterScript** parâmetro.
+O Windows PowerShell inclui um `Where-Object` cmdlet permite-lhe testar cada objeto no pipeline e transmita-apenas pelo pipeline se cumpre uma condição de teste específica. Objetos que não são transmitidas o teste são removidos a partir do pipeline. Forneça a condição de teste como o valor de `Where-Object` **FilterScript** parâmetro.
 
 ### <a name="performing-simple-tests-with-where-object"></a>Efetuar testes simples com Where-Object
 
-O valor de **FilterScript** é um *bloco de script* - um ou mais comandos do Windows PowerShell rodeados por chavetas {-} - que avalia como VERDADEIRO ou FALSO. Estes blocos de script podem ser muito simples, mas a criação de-los requer saber sobre outro conceito de Windows PowerShell, operadores de comparação. Um operador de comparação compara os itens que são apresentados em cada lado do mesmo. Operadores de comparação de começar com um '-' caráter e seguido de um nome. Operadores de comparação básica funcionam em praticamente qualquer tipo de objeto. Os operadores de comparação mais avançados só poderão funcionar em texto ou de matrizes.
+O valor de **FilterScript** é um *bloco de script* -um ou mais comandos do Windows PowerShell rodeados por chavetas {} -que avalia como VERDADEIRO ou FALSO. Estes blocos de script podem ser muito simples, mas a criação de-los requer saber sobre outro conceito de Windows PowerShell, operadores de comparação. Um operador de comparação compara os itens que são apresentados em cada lado do mesmo. Operadores de comparação de começar com um '-' caráter e seguido de um nome. Operadores de comparação básica funcionam em praticamente qualquer tipo de objeto. Os operadores de comparação mais avançados só poderão funcionar em texto ou de matrizes.
 
 > [!NOTE]
 > Por predefinição, quando trabalhar com o texto, operadores de comparação do Windows PowerShell são sensível.
@@ -26,11 +27,11 @@ Devido a considerações de análise, símbolos, tais como <>, e = não são uti
 
 |Operador de comparação|Significado|Exemplo (devolve true)|
 |-----------------------|-----------|--------------------------|
-|-eq|é igual a|1 -eq 1|
+|-eq|é igual a|1 - eq 1|
 |-ne|Não é igual a|1 - ne 2|
-|-lt|É inferior a|1 -lt 2|
+|-lt|É inferior a|1 - lt 2|
 |-le|é menor ou igual a|1 - le 2|
-|-gt|É maior do que|2 -gt 1|
+|-gt|É maior do que|2 - gt 1|
 |-ge|é maior que ou igual a|2 -ge 1|
 |-como|É semelhante (comparação de caráter universal para texto)|"file.doc"-como "f\*.do?"|
 |-notlike|Não é como (comparação de caráter universal para texto)|"file.doc"-notlike "p\*. doc"|
@@ -100,7 +101,7 @@ Os padrão operadores lógicos estão listados na seguinte tabela.
 
 |Operador lógico|Significado|Exemplo (devolve true)|
 |--------------------|-----------|--------------------------|
-|- e|Lógica e; TRUE se ambos os lados forem verdadeiros|(1 -eq 1) -and (2 -eq 2)|
+|- e|Lógica e; TRUE se ambos os lados forem verdadeiros|(1 - eq 1) - e (2 - eq 2).|
 |- ou|Lógico ou; TRUE se ambos os lados for VERDADEIRO|(1 - eq 1) - ou (1 - eq 2).|
 |-não|Não lógico; Inverte true e false|-não (1 - eq 2)|
-|\!|Não lógico; Inverte true e false|\!(1 -eq 2)|
+|\!|Não lógico; Inverte true e false|\!(1 - eq 2)|
