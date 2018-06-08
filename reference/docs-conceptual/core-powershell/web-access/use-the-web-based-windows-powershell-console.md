@@ -3,10 +3,11 @@ ms.date: 08/23/2017
 keywords: PowerShell, o cmdlet
 title: Utilize a consola web baseado em windows powershell
 ms.openlocfilehash: 5d29a6f97fddf4b329fcc7097cf7d40d47d22cca
-ms.sourcegitcommit: 735ccab3fb3834ccd8559fab6700b798e8e5ffbf
+ms.sourcegitcommit: 01d6985ed190a222e9da1da41596f524f607a5bc
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 05/25/2018
+ms.lasthandoff: 06/07/2018
+ms.locfileid: "34483156"
 ---
 # <a name="use-the-web-based-windows-powershell-console"></a>Utilizar a Consola do Windows PowerShell baseada na Web
 

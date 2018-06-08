@@ -3,10 +3,11 @@ ms.date: 06/05/2017
 keywords: PowerShell, o cmdlet
 title: Tornando-o segundo hop comunicação remota do PowerShell
 ms.openlocfilehash: 1d24473178bc50321a81ebf1115a20f17078844f
-ms.sourcegitcommit: 735ccab3fb3834ccd8559fab6700b798e8e5ffbf
+ms.sourcegitcommit: 01d6985ed190a222e9da1da41596f524f607a5bc
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 05/25/2018
+ms.lasthandoff: 06/07/2018
+ms.locfileid: "34483020"
 ---
 # <a name="making-the-second-hop-in-powershell-remoting"></a>Tornando-o segundo hop comunicação remota do PowerShell
 
