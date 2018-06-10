@@ -3,11 +3,12 @@ ms.date: 06/05/2017
 keywords: PowerShell, o cmdlet
 title: Alterar o Estado do Computador
 ms.assetid: 8093268b-27f8-4a49-8871-142c5cc33f01
-ms.openlocfilehash: 3d3983c6d9e9b11db62bd71805da51be83331fdb
-ms.sourcegitcommit: cf195b090b3223fa4917206dfec7f0b603873cdf
+ms.openlocfilehash: c659ad54325b0f7305f882e1cb9607062abad6a4
+ms.sourcegitcommit: 2ffb9fa92129c2001379ca2c17646466721f7165
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 04/09/2018
+ms.lasthandoff: 06/09/2018
+ms.locfileid: "35251522"
 ---
 # <a name="changing-computer-state"></a>Alterar o Estado do Computador
 
@@ -49,16 +50,16 @@ Para obter mais informações e para localizar outras funcionalidades do método
 
 Encerrar e reiniciar os computadores são, geralmente, os mesmos tipos de tarefas. As ferramentas que encerrar um computador, geralmente, serão reiniciá-lo, bem como — e vice-versa. Existem duas opções simples para reiniciar um computador a partir do Windows PowerShell. Utilize Tsshutdn.exe ou Shutdown.exe com argumentos adequados. Pode obter informações de utilização detalhada do **tsshutdn.exe /?** ou **shutdown.exe /?**.
 
-Também pode efetuar encerrar e reiniciar operações utilizando **Win32_OperatingSystem** diretamente a partir do Windows PowerShell, bem como.
+Também pode efetuar encerrar e reiniciar operações diretamente a partir do Windows PowerShell, bem como.
 
-Para encerrar o computador, utilize o método Win32Shutdown com o **1** sinalizador.
+Para encerrar o computador, utilize o comando de reiniciar o computador
 
 ```powershell
-(Get-WmiObject -Class Win32_OperatingSystem -ComputerName .).Win32Shutdown(1)
+stop-computer
 ```
 
-Para reiniciar o sistema operativo, utilize o método Win32Shutdown com o **2** sinalizador.
+Para reiniciar o sistema operativo, utilize o comando de reiniciar o computador
 
 ```powershell
-(Get-WmiObject -Class Win32_OperatingSystem -ComputerName .).Win32Shutdown(2)
+restart-computer
 ```

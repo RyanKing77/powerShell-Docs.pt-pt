@@ -1,11 +1,12 @@
 ---
 ms.date: 06/12/2017
 keywords: wmf,powershell,setup
-ms.openlocfilehash: 2627b9d02788bd31a5384587406df533faf2cfaf
-ms.sourcegitcommit: 54534635eedacf531d8d6344019dc16a50b8b441
+ms.openlocfilehash: b8f175cee0a1de501b64890fdc2798f4f6421a14
+ms.sourcegitcommit: 2ffb9fa92129c2001379ca2c17646466721f7165
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 05/17/2018
+ms.lasthandoff: 06/09/2018
+ms.locfileid: "35251488"
 ---
 # <a name="script-tracing-and-logging"></a>Registo e Rastreio de Scripts
 
@@ -104,4 +105,4 @@ $sortedScripts = $created | sort { $_.Properties[0].Value }
 $mergedScript = -join ($sortedScripts | % { $_.Properties[2].Value })
 ```
 
-Tal como acontece com todos os sistemas de registo que tenham uma retenção limitada de memória intermédia (ou seja, registos ETW), um ataque contra esta infraestrutura é inundar o registo de eventos spurious para ocultar provas anterior. Para proteger-se contra este ataque, certifique-se de que tem alguma forma de recolha de registos de eventos de multimédia (ou seja, Windows reencaminhamento de eventos, [Spotting o adversário com a monitorização de registo de eventos do Windows](http://www.nsa.gov/ia/_files/app/Spotting_the_Adversary_with_Windows_Event_Log_Monitoring.pdf)) para mover os registos de eventos retire o computador como logo que possível.
+Tal como acontece com todos os sistemas de registo que tenham uma retenção limitada de memória intermédia (ou seja, registos ETW), um ataque contra esta infraestrutura é inundar o registo de eventos spurious para ocultar provas anterior. Para proteger-se contra este ataque, certifique-se de que tem alguma forma de recolha de registos de eventos de multimédia (ou seja, Windows reencaminhamento de eventos, [Spotting o adversário com a monitorização de registo de eventos do Windows](https://www.iad.gov/iad/library/reports/spotting-the-adversary-with-windows-event-log-monitoring.cfm)) para mover os registos de eventos retire o computador como logo que possível.
