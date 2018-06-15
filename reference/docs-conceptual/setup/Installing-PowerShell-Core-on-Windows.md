@@ -2,17 +2,17 @@
 
 ## <a name="msi"></a>MSI
 
-Para instalar o PowerShell num cliente Windows ou Windows Server (funciona no Windows 7 SP1, Server 2008 R2 e posterior), transfira o pacote MSI da nossa GitHub [versões][] página.
+Para instalar o PowerShell num cliente Windows ou Windows Server (funciona no Windows 7 SP1, Server 2008 R2 e posterior), transfira o pacote MSI da nossa página do GitHub [versões] [].
 
-O ficheiro MSI aspeto- `PowerShell-6.0.0.<buildversion>.<os-arch>.msi`
+O ficheiro MSI aspeto- `PowerShell-<version>-win-<os-arch>.msi`
 <!-- TODO: should be updated to point to the Download Center as well -->
 
 Depois de transferido, faça duplo clique o instalador e siga as instruções.
 
 Não há um atalho colocado no Menu Iniciar após a instalação.
 
-- Por predefinição, o pacote está instalado para `$env:ProgramFiles\PowerShell\`
-- Pode iniciar PowerShell através do Menu Iniciar ou `$env:ProgramFiles\PowerShell\pwsh.exe`
+- Por predefinição, o pacote está instalado para `$env:ProgramFiles\PowerShell\<version>`
+- Pode iniciar PowerShell através do Menu Iniciar ou `$env:ProgramFiles\PowerShell\<version>\pwsh.exe`
 
 ### <a name="prerequisites"></a>Pré-requisitos
 
@@ -126,12 +126,12 @@ Os seguintes passos guiá-lo através da implementação do PowerShell Core para
 PowerShell Core suporta o protocolo de comunicação remota do PowerShell (PSRP) através de SSH e WSMan.
 Para mais informações, consulte:
 
-- [SSH comunicação remota do PowerShell Core][ssh-remoting]
-- [Comunicação remota do WSMan no PowerShell Core][wsman-remoting]
+- [SSH comunicação remota do PowerShell Core] [ssh-gestão remota]
+- [WSMan sistema de interação remota no PowerShell Core] [wsman-sistema de interação remota]
 
 ## <a name="artifact-installation-instructions"></a>Instruções de instalação de artefactos
 
-Está a publicar um arquivo com CoreCLR bits em cada compilação CI com [AppVeyor][].
+Está a publicar um arquivo com CoreCLR bits em cada compilação CI com [AppVeyor] [-].
 
 Para instalar o PowerShell Core de artefacto CoreCLR:
 
@@ -140,8 +140,4 @@ Para instalar o PowerShell Core de artefacto CoreCLR:
 3. Extrair o ficheiro zip para `bin` diretório
 4. `./bin/pwsh.exe`
 
-<!-- [download-center]: TODO -->
-[versões]: https://github.com/PowerShell/PowerShell/releases
-[ssh-remoting]: ../core-powershell/SSH-Remoting-in-PowerShell-Core.md
-[wsman-remoting]: ../core-powershell/WSMan-Remoting-in-PowerShell-Core.md
-[AppVeyor]: https://ci.appveyor.com/project/PowerShell/powershell
+<!-- [download-center]: TODO --> [versões]: https://github.com/PowerShell/PowerShell/releases [ssh-gestão remota]:... /Core-PowerShell/SSH-Remoting-in-PowerShell-Core.MD [wsman-sistema de interação remota]:... /Core-PowerShell/wsman-Remoting-in-PowerShell-Core.MD [AppVeyor]: https://ci.appveyor.com/project/PowerShell/powershell
