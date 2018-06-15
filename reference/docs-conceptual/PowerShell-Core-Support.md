@@ -7,7 +7,7 @@ No entanto, o PowerShell Core é suportado em tradicionais contratos de suporte 
 Também pode paga [assistido suporte][] para PowerShell Core através da apresentação de um pedido de suporte para o seu problema.
 
 Podemos também oferecem [suporte da Comunidade][] no GitHub, onde pode ficheiro um problema, erros ou pedido de funcionalidade.
-Em alternativa, pode encontrar ajuda dos outros membros da Comunidade a gerais [Microsoft Community][] ou o Microsoft [PowerShell técnico Comunidade][].
+Em alternativa, pode encontrar ajuda dos outros membros da Comunidade a gerais [Comunidade do Microsoft][] ou o Microsoft [Comunidade do PowerShell técnico][].
 Que não oferecemos nenhuma garantia de existir se o problema será resolvido ou resolvido de forma atempada.
 Se tiver um problema que necessite de atenção imediata, deve utilizar tradicional, paga as opções de suporte.
 
@@ -41,12 +41,12 @@ PowerShell Core oficialmente é suportada nas seguintes plataformas:
 * CentOS 7
 * Red Hat Enterprise Linux 7
 * OpenSUSE 42.2
-* Fedora 25, 26
-* macOS 10.12+
+* Fedora 27, 28
+* macOS 10.12 +
 
 A nossa Comunidade também tem contribuíram pacotes para as seguintes plataformas, mas não estão oficialmente suppported:
 
-* Arch Linux
+* Arquitetura de Linux
 * Kali Linux
 * AppImage (funciona em várias plataformas Linux)
 
@@ -62,7 +62,7 @@ Suporte para o PowerShell Core se estendem aos outros módulos de produto, a men
 Por exemplo, utilizando o `ActiveDirectory` módulo que é fornecido como parte do Windows Server é um cenário não suportado.
 
 No entanto, os módulos que não suportam explicitamente PowerShell Core podem ser compatíveis em alguns casos.
-Ao instalar o [`WindowsPSModulePath`][] módulo, pode acrescentar o Windows PowerShell `PSModulePath` para o PowerShell Core `PSModulePath`.
+Ao instalar o [ `WindowsPSModulePath` ][] módulo, pode acrescentar o Windows PowerShell `PSModulePath` para o PowerShell Core `PSModulePath`.
 
 Em primeiro lugar, instalar o `WindowsPSModulePath` módulo a partir da galeria do PowerShell:
 
@@ -82,11 +82,11 @@ Add-WindowsPSModulePath
 [enterprise-agreement]: https://www.microsoft.com/en-us/licensing/licensing-programs/enterprise.aspx
 [assurance]: https://www.microsoft.com/en-us/licensing/licensing-programs/software-assurance-default.aspx
 [suporte da Comunidade]: https://github.com/powershell/powershell/issues
-[Microsoft Community]: https://answers.microsoft.com/
-[PowerShell técnico Comunidade]: https://techcommunity.microsoft.com/t5/PowerShell/ct-p/WindowsPowerShell
+[Comunidade do Microsoft]: https://answers.microsoft.com/
+[Comunidade do PowerShell técnico]: https://techcommunity.microsoft.com/t5/PowerShell/ct-p/WindowsPowerShell
 [assistido suporte]: https://support.microsoft.com/assistedsupportproducts
 [modern]: https://support.microsoft.com/help/30881/modern-lifecycle-policy
 [lifecycle-chart]: ./images/modern-lifecycle.png
 [semi-annual]: https://docs.microsoft.com/windows-server/get-started/semi-annual-channel-overview
-[licença MIT]: https://github.com/PowerShell/PowerShell/blob/master/LICENSE.txt
-[`WindowsPSModulePath`]: https://www.powershellgallery.com/packages/WindowsPSModulePath/
+[Licença MIT]: https://github.com/PowerShell/PowerShell/blob/master/LICENSE.txt
+['WindowsPSModulePath']: https://www.powershellgallery.com/packages/WindowsPSModulePath/
