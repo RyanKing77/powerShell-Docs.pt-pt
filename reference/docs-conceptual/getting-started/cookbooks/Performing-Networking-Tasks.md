@@ -8,6 +8,7 @@ ms.sourcegitcommit: cf195b090b3223fa4917206dfec7f0b603873cdf
 ms.translationtype: MT
 ms.contentlocale: pt-PT
 ms.lasthandoff: 04/09/2018
+ms.locfileid: "30954131"
 ---
 # <a name="performing-networking-tasks"></a><span data-ttu-id="59e7b-103">Executar Tarefas de Rede</span><span class="sxs-lookup"><span data-stu-id="59e7b-103">Performing Networking Tasks</span></span>
 

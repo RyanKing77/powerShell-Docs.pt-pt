@@ -8,6 +8,7 @@ ms.sourcegitcommit: cf195b090b3223fa4917206dfec7f0b603873cdf
 ms.translationtype: MT
 ms.contentlocale: pt-PT
 ms.lasthandoff: 04/09/2018
+ms.locfileid: "30950051"
 ---
 # <a name="how-to-create-a-powershell-tab-in-windows-powershell-ise"></a><span data-ttu-id="cbd25-103">Como Criar um Separador do PowerShell no ISE do Windows PowerShell</span><span class="sxs-lookup"><span data-stu-id="cbd25-103">How to Create a PowerShell Tab in Windows PowerShell ISE</span></span>
 

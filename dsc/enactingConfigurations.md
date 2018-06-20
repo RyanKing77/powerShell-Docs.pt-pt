@@ -7,6 +7,7 @@ ms.sourcegitcommit: 54534635eedacf531d8d6344019dc16a50b8b441
 ms.translationtype: MT
 ms.contentlocale: pt-PT
 ms.lasthandoff: 05/16/2018
+ms.locfileid: "34188484"
 ---
 # <a name="enacting-configurations"></a><span data-ttu-id="be2b4-103">Aplicar configurações</span><span class="sxs-lookup"><span data-stu-id="be2b4-103">Enacting configurations</span></span>
 

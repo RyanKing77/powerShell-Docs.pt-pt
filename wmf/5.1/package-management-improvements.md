@@ -9,6 +9,7 @@ ms.sourcegitcommit: 54534635eedacf531d8d6344019dc16a50b8b441
 ms.translationtype: MT
 ms.contentlocale: pt-PT
 ms.lasthandoff: 05/16/2018
+ms.locfileid: "34187464"
 ---
 # <a name="improvements-to-package-management-in-wmf-51"></a><span data-ttu-id="8abea-103">Melhorias na gestão de pacotes no WMF 5.1#</span><span class="sxs-lookup"><span data-stu-id="8abea-103">Improvements to Package Management in WMF 5.1#</span></span>
 

@@ -6,6 +6,7 @@ ms.sourcegitcommit: 54534635eedacf531d8d6344019dc16a50b8b441
 ms.translationtype: MT
 ms.contentlocale: pt-PT
 ms.lasthandoff: 05/16/2018
+ms.locfileid: "34189810"
 ---
 # <a name="nonewline-parameter"></a><span data-ttu-id="942ab-102">Parâmetro NoNewLine</span><span class="sxs-lookup"><span data-stu-id="942ab-102">NoNewLine parameter</span></span>
 <span data-ttu-id="942ab-103">**Out-File**, **adicionar conteúdo**, e **conjunto conteúdo** agora tem um novo **– NoNewline** comutador que omite simplesmente uma nova linha depois do resultado.</span><span class="sxs-lookup"><span data-stu-id="942ab-103">**Out-File**, **Add-Content**, and **Set-Content** now have a new **–NoNewline** switch which simply omits a new line after the output.</span></span>

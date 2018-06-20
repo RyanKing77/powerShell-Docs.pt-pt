@@ -7,6 +7,7 @@ ms.sourcegitcommit: 54534635eedacf531d8d6344019dc16a50b8b441
 ms.translationtype: MT
 ms.contentlocale: pt-PT
 ms.lasthandoff: 05/16/2018
+ms.locfileid: "34189895"
 ---
 # <a name="desired-state-configuration-overview-for-engineers"></a><span data-ttu-id="b9e3a-103">Descrição Geral do Desired State Configuration para Engenheiros</span><span class="sxs-lookup"><span data-stu-id="b9e3a-103">Desired State Configuration Overview for Engineers</span></span>
 

@@ -5,8 +5,10 @@ keywords: PowerShell
 title: Valores de manifesto do item que afetam a IU de galeria do PowerShell
 ms.openlocfilehash: 39522396b179c54b981e6292cddacec27b32506c
 ms.sourcegitcommit: e9ad4d85fd7eb72fb5bc37f6ca3ae1282ae3c6d7
+ms.translationtype: MT
 ms.contentlocale: pt-PT
 ms.lasthandoff: 05/10/2018
+ms.locfileid: "34049106"
 ---
 # <a name="item-manifest-values-that-impact-the-powershell-gallery-ui"></a><span data-ttu-id="74de1-103">Valores de manifesto do item que afetam a IU de galeria do PowerShell</span><span class="sxs-lookup"><span data-stu-id="74de1-103">Item manifest values that impact the PowerShell Gallery UI</span></span>
 

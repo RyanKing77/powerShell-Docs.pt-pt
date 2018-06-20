@@ -8,6 +8,7 @@ ms.sourcegitcommit: cf195b090b3223fa4917206dfec7f0b603873cdf
 ms.translationtype: MT
 ms.contentlocale: pt-PT
 ms.lasthandoff: 04/09/2018
+ms.locfileid: "30953478"
 ---
 # <a name="learning-windows-powershell-names"></a><span data-ttu-id="6ed1e-103">Saber Mais sobre os Nomes do Windows PowerShell</span><span class="sxs-lookup"><span data-stu-id="6ed1e-103">Learning Windows PowerShell Names</span></span>
 <span data-ttu-id="6ed1e-104">Nomes de aprendizagem dos comandos e parâmetros de comando é um investimento de muito tempo com a maioria das interfaces de linha de comandos.</span><span class="sxs-lookup"><span data-stu-id="6ed1e-104">Learning names of commands and command parameters is a significant time investment with most command-line interfaces.</span></span> <span data-ttu-id="6ed1e-105">O problema é que existem padrões muito poucos, pelo que é a única forma de saber por memorizing cada comando e cada um dos parâmetros que tem de utilizar regularmente.</span><span class="sxs-lookup"><span data-stu-id="6ed1e-105">The issue is that there are very few patterns, so the only way to learn is by memorizing each command and each parameter that you need to use on a regular basis.</span></span>

@@ -9,6 +9,7 @@ ms.sourcegitcommit: 54534635eedacf531d8d6344019dc16a50b8b441
 ms.translationtype: MT
 ms.contentlocale: pt-PT
 ms.lasthandoff: 05/16/2018
+ms.locfileid: "34188688"
 ---
 <span data-ttu-id="7a334-103">Os cmdlets do Gestor de comutador de rede pode ser utilizados para gerir os comutadores de rede através de WSMAN.</span><span class="sxs-lookup"><span data-stu-id="7a334-103">The Network Switch Manager cmdlets can be used to manage network switches over WSMAN.</span></span>
 <span data-ttu-id="7a334-104">Alguns cmdlets deste módulo são capazes de aceitar os valores de pipelines.</span><span class="sxs-lookup"><span data-stu-id="7a334-104">A few cmdlets of this module are capable of accepting values from pipelines.</span></span>

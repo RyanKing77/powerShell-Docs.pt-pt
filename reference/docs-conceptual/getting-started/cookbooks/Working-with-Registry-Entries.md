@@ -8,6 +8,7 @@ ms.sourcegitcommit: cf195b090b3223fa4917206dfec7f0b603873cdf
 ms.translationtype: MT
 ms.contentlocale: pt-PT
 ms.lasthandoff: 04/09/2018
+ms.locfileid: "30952380"
 ---
 # <a name="working-with-registry-entries"></a><span data-ttu-id="d8387-103">Trabalhar com Entradas do Registo</span><span class="sxs-lookup"><span data-stu-id="d8387-103">Working with Registry Entries</span></span>
 

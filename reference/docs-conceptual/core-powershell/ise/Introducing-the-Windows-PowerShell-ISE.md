@@ -7,6 +7,7 @@ ms.sourcegitcommit: cf195b090b3223fa4917206dfec7f0b603873cdf
 ms.translationtype: MT
 ms.contentlocale: pt-PT
 ms.lasthandoff: 04/09/2018
+ms.locfileid: "30952907"
 ---
 # <a name="introducing-the-windows-powershell-ise"></a><span data-ttu-id="ebdf8-103">Introdução ao ISE do Windows PowerShell</span><span class="sxs-lookup"><span data-stu-id="ebdf8-103">Introducing the Windows PowerShell ISE</span></span>
 

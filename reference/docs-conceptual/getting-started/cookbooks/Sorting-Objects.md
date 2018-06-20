@@ -8,6 +8,7 @@ ms.sourcegitcommit: cf195b090b3223fa4917206dfec7f0b603873cdf
 ms.translationtype: MT
 ms.contentlocale: pt-PT
 ms.lasthandoff: 04/09/2018
+ms.locfileid: "30949983"
 ---
 # <a name="sorting-objects"></a><span data-ttu-id="f1082-103">Ordenar Objetos</span><span class="sxs-lookup"><span data-stu-id="f1082-103">Sorting Objects</span></span>
 

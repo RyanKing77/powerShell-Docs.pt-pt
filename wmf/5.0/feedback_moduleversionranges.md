@@ -6,6 +6,7 @@ ms.sourcegitcommit: 54534635eedacf531d8d6344019dc16a50b8b441
 ms.translationtype: MT
 ms.contentlocale: pt-PT
 ms.lasthandoff: 05/17/2018
+ms.locfileid: "34225696"
 ---
 # <a name="modules-support-for-declaring-version-ranges-1-etc"></a><span data-ttu-id="5cdcd-102">Suporte de módulos para declarar intervalos de versão (1.\*, etc.)</span><span class="sxs-lookup"><span data-stu-id="5cdcd-102">Modules support for declaring version ranges (1.\*, etc)</span></span>
 <span data-ttu-id="5cdcd-103">Combinado com **- MinimumVersion**, **- MaximumVersion** agora permite ao utilizador para o módulo get/importação dentro do intervalo específico.</span><span class="sxs-lookup"><span data-stu-id="5cdcd-103">Combined with **-MinimumVersion**, **-MaximumVersion** now allows user to get/import module within specific range.</span></span> <span data-ttu-id="5cdcd-104">O parâmetro também suporta **.** \*.</span><span class="sxs-lookup"><span data-stu-id="5cdcd-104">The parameter also support **.**\*.</span></span> <span data-ttu-id="5cdcd-105">O exemplo seguinte mostra como funciona:</span><span class="sxs-lookup"><span data-stu-id="5cdcd-105">The following example shows how it works:</span></span>

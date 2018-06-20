@@ -8,6 +8,7 @@ ms.sourcegitcommit: cf195b090b3223fa4917206dfec7f0b603873cdf
 ms.translationtype: MT
 ms.contentlocale: pt-PT
 ms.lasthandoff: 04/09/2018
+ms.locfileid: "30954505"
 ---
 # <a name="working-with-printers"></a><span data-ttu-id="bdcf1-103">Trabalhar com Impressoras</span><span class="sxs-lookup"><span data-stu-id="bdcf1-103">Working with Printers</span></span>
 

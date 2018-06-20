@@ -8,6 +8,7 @@ ms.sourcegitcommit: cf195b090b3223fa4917206dfec7f0b603873cdf
 ms.translationtype: MT
 ms.contentlocale: pt-PT
 ms.lasthandoff: 04/09/2018
+ms.locfileid: "30952584"
 ---
 # <a name="powershellexe-command-line-help"></a><span data-ttu-id="32040-103">Ajuda da linha de comandos PowerShell.exe</span><span class="sxs-lookup"><span data-stu-id="32040-103">PowerShell.exe Command-Line Help</span></span>
 

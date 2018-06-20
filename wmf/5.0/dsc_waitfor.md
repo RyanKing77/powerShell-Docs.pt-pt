@@ -6,6 +6,7 @@ ms.sourcegitcommit: 54534635eedacf531d8d6344019dc16a50b8b441
 ms.translationtype: MT
 ms.contentlocale: pt-PT
 ms.lasthandoff: 05/16/2018
+ms.locfileid: "34187211"
 ---
 # <a name="specifying-cross-node-dependencies"></a><span data-ttu-id="7abc9-102">Especificar Dependências entre Nós</span><span class="sxs-lookup"><span data-stu-id="7abc9-102">Specifying Cross Node Dependencies</span></span>
 

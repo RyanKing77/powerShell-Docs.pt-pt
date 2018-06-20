@@ -6,6 +6,7 @@ ms.sourcegitcommit: 54534635eedacf531d8d6344019dc16a50b8b441
 ms.translationtype: MT
 ms.contentlocale: pt-PT
 ms.lasthandoff: 05/17/2018
+ms.locfileid: "34218727"
 ---
 # <a name="reporting-on-jea"></a><span data-ttu-id="a4b1b-102">Criar Relatórios na JEA</span><span class="sxs-lookup"><span data-stu-id="a4b1b-102">Reporting on JEA</span></span>
 <span data-ttu-id="a4b1b-103">Para gerar relatórios sobre o estado da configuração JEA, pode utilizar:</span><span class="sxs-lookup"><span data-stu-id="a4b1b-103">In order to report on the state of your JEA configuration, you can use:</span></span>

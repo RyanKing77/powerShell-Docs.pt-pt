@@ -8,6 +8,7 @@ ms.sourcegitcommit: cf195b090b3223fa4917206dfec7f0b603873cdf
 ms.translationtype: MT
 ms.contentlocale: pt-PT
 ms.lasthandoff: 04/09/2018
+ms.locfileid: "30951074"
 ---
 # <a name="understanding-the-windows-powershell-pipeline"></a><span data-ttu-id="0c56a-103">Noções sobre o Pipeline do Windows PowerShell</span><span class="sxs-lookup"><span data-stu-id="0c56a-103">Understanding the Windows PowerShell Pipeline</span></span>
 <span data-ttu-id="0c56a-104">Piping em praticamente qualquer lugar funciona no Windows PowerShell.</span><span class="sxs-lookup"><span data-stu-id="0c56a-104">Piping works virtually everywhere in Windows PowerShell.</span></span> <span data-ttu-id="0c56a-105">Apesar de ver o texto no ecrã, o Windows PowerShell pipe não texto entre comandos.</span><span class="sxs-lookup"><span data-stu-id="0c56a-105">Although you see text on the screen, Windows PowerShell does not pipe text between commands.</span></span> <span data-ttu-id="0c56a-106">Em vez disso, este encaminha objetos.</span><span class="sxs-lookup"><span data-stu-id="0c56a-106">Instead, it pipes objects.</span></span>

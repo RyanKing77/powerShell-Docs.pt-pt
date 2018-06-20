@@ -7,6 +7,7 @@ ms.sourcegitcommit: 54534635eedacf531d8d6344019dc16a50b8b441
 ms.translationtype: MT
 ms.contentlocale: pt-PT
 ms.lasthandoff: 05/17/2018
+ms.locfileid: "34218999"
 ---
 # <a name="nesting-dsc-configurations"></a><span data-ttu-id="ca899-103">Aninhamento de configurações de DSC</span><span class="sxs-lookup"><span data-stu-id="ca899-103">Nesting DSC configurations</span></span>
 

@@ -6,6 +6,7 @@ ms.sourcegitcommit: 54534635eedacf531d8d6344019dc16a50b8b441
 ms.translationtype: MT
 ms.contentlocale: pt-PT
 ms.lasthandoff: 05/17/2018
+ms.locfileid: "34225560"
 ---
 # <a name="direct-access-to-dsc-resource-methods"></a><span data-ttu-id="e22c6-102">Acesso direto aos métodos de recursos de DSC</span><span class="sxs-lookup"><span data-stu-id="e22c6-102">Direct access to DSC resource methods</span></span>
 

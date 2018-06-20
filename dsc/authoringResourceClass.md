@@ -7,6 +7,7 @@ ms.sourcegitcommit: 54534635eedacf531d8d6344019dc16a50b8b441
 ms.translationtype: MT
 ms.contentlocale: pt-PT
 ms.lasthandoff: 05/16/2018
+ms.locfileid: "34189470"
 ---
 # <a name="writing-a-custom-dsc-resource-with-powershell-classes"></a><span data-ttu-id="81101-103">Escrever um recurso personalizado de DSC com classes de PowerShell</span><span class="sxs-lookup"><span data-stu-id="81101-103">Writing a custom DSC resource with PowerShell classes</span></span>
 

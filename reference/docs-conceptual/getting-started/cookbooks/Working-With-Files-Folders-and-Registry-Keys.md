@@ -8,6 +8,7 @@ ms.sourcegitcommit: cf195b090b3223fa4917206dfec7f0b603873cdf
 ms.translationtype: MT
 ms.contentlocale: pt-PT
 ms.lasthandoff: 04/09/2018
+ms.locfileid: "30952312"
 ---
 # <a name="working-with-files-folders-and-registry-keys"></a><span data-ttu-id="6af38-103">Trabalhar com ficheiros, pastas e chaves de registo</span><span class="sxs-lookup"><span data-stu-id="6af38-103">Working With Files, Folders and Registry Keys</span></span>
 

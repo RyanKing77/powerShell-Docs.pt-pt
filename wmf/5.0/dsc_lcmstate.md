@@ -6,6 +6,7 @@ ms.sourcegitcommit: 54534635eedacf531d8d6344019dc16a50b8b441
 ms.translationtype: MT
 ms.contentlocale: pt-PT
 ms.lasthandoff: 05/17/2018
+ms.locfileid: "34219866"
 ---
 # <a name="detailed-information-about-lcm-state"></a><span data-ttu-id="dd0aa-102">Informações detalhadas sobre o estado de MMC</span><span class="sxs-lookup"><span data-stu-id="dd0aa-102">Detailed information about LCM state</span></span>
 

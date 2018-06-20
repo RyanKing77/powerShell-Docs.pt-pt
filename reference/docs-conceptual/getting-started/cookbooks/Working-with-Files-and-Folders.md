@@ -8,6 +8,7 @@ ms.sourcegitcommit: ece1794c94be4880a2af5a2605ed4721593643b6
 ms.translationtype: MT
 ms.contentlocale: pt-PT
 ms.lasthandoff: 04/16/2018
+ms.locfileid: "31201024"
 ---
 # <a name="working-with-files-and-folders"></a><span data-ttu-id="4fcc4-103">Trabalhar com Ficheiros e Pastas</span><span class="sxs-lookup"><span data-stu-id="4fcc4-103">Working with Files and Folders</span></span>
 

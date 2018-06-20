@@ -7,6 +7,7 @@ ms.sourcegitcommit: 54534635eedacf531d8d6344019dc16a50b8b441
 ms.translationtype: MT
 ms.contentlocale: pt-PT
 ms.lasthandoff: 05/16/2018
+ms.locfileid: "34189623"
 ---
 # <a name="calling-dsc-resource-methods-directly"></a><span data-ttu-id="6cd32-103">Chamar os métodos de recursos de DSC diretamente</span><span class="sxs-lookup"><span data-stu-id="6cd32-103">Calling DSC resource methods directly</span></span>
 

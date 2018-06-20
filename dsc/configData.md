@@ -7,6 +7,7 @@ ms.sourcegitcommit: 54534635eedacf531d8d6344019dc16a50b8b441
 ms.translationtype: MT
 ms.contentlocale: pt-PT
 ms.lasthandoff: 05/16/2018
+ms.locfileid: "34189691"
 ---
 # <a name="using-configuration-data-in-dsc"></a><span data-ttu-id="fbfc5-103">A utilização de dados de configuração DSC</span><span class="sxs-lookup"><span data-stu-id="fbfc5-103">Using configuration data in DSC</span></span>
 
