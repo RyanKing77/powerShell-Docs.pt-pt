@@ -8,6 +8,7 @@ ms.sourcegitcommit: cf195b090b3223fa4917206dfec7f0b603873cdf
 ms.translationtype: MT
 ms.contentlocale: pt-PT
 ms.lasthandoff: 04/09/2018
+ms.locfileid: "30951074"
 ---
 # <a name="understanding-the-windows-powershell-pipeline"></a>Noções sobre o Pipeline do Windows PowerShell
 Piping em praticamente qualquer lugar funciona no Windows PowerShell. Apesar de ver o texto no ecrã, o Windows PowerShell pipe não texto entre comandos. Em vez disso, este encaminha objetos.

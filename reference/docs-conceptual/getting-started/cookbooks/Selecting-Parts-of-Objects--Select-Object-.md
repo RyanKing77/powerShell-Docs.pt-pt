@@ -8,6 +8,7 @@ ms.sourcegitcommit: cf195b090b3223fa4917206dfec7f0b603873cdf
 ms.translationtype: MT
 ms.contentlocale: pt-PT
 ms.lasthandoff: 04/09/2018
+ms.locfileid: "30953893"
 ---
 # <a name="selecting-parts-of-objects-select-object"></a>Selecionar partes de objetos (selecionar-objeto)
 

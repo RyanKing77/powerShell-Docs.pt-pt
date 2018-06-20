@@ -8,6 +8,7 @@ ms.sourcegitcommit: cf195b090b3223fa4917206dfec7f0b603873cdf
 ms.translationtype: MT
 ms.contentlocale: pt-PT
 ms.lasthandoff: 04/09/2018
+ms.locfileid: "30952686"
 ---
 # <a name="using-familiar-command-names"></a>Utilizar Nomes de Comandos Familiares
 Utilizar um mecanismo chamado *aliasing*, do Windows PowerShell permite que os utilizadores fazer referência aos comandos por nomes alternativos. Aliasing permite aos utilizadores com a experiência de outros shells reutilizar nomes comuns do comando que já conhecem para efetuar operações similares no Windows PowerShell. Apesar de não, vamos abordar os aliases de Windows PowerShell em detalhe, pode ainda utilizá-los como começar com o Windows PowerShell.

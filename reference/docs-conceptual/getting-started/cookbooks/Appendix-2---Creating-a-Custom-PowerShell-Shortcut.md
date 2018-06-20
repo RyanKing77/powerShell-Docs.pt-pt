@@ -8,6 +8,7 @@ ms.sourcegitcommit: cf195b090b3223fa4917206dfec7f0b603873cdf
 ms.translationtype: MT
 ms.contentlocale: pt-PT
 ms.lasthandoff: 04/09/2018
+ms.locfileid: "30949269"
 ---
 # <a name="appendix-2---creating-a-custom-powershell-shortcut"></a>Apêndice 2 - criar um atalho personalizados do PowerShell
 

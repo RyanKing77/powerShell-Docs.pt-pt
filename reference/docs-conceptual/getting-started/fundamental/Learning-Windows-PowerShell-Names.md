@@ -8,6 +8,7 @@ ms.sourcegitcommit: cf195b090b3223fa4917206dfec7f0b603873cdf
 ms.translationtype: MT
 ms.contentlocale: pt-PT
 ms.lasthandoff: 04/09/2018
+ms.locfileid: "30953478"
 ---
 # <a name="learning-windows-powershell-names"></a>Saber Mais sobre os Nomes do Windows PowerShell
 Nomes de aprendizagem dos comandos e parâmetros de comando é um investimento de muito tempo com a maioria das interfaces de linha de comandos. O problema é que existem padrões muito poucos, pelo que é a única forma de saber por memorizing cada comando e cada um dos parâmetros que tem de utilizar regularmente.

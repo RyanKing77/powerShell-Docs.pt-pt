@@ -8,6 +8,7 @@ ms.sourcegitcommit: cf195b090b3223fa4917206dfec7f0b603873cdf
 ms.translationtype: MT
 ms.contentlocale: pt-PT
 ms.lasthandoff: 04/09/2018
+ms.locfileid: "30950539"
 ---
 # <a name="windows-powershell-basics"></a>Noções Básicas sobre o Windows PowerShell
 Interfaces de utilizador gráfica utilizam alguns conceitos básicos que são bem conhecidos para a maioria dos utilizadores do computador. Os utilizadores dependem familiaridade essas interfaces para realizar tarefas. Sistemas operativos apresentar os utilizadores com uma representação gráfica de itens que podem ser pesquisados, normalmente com menus de lista pendente para aceder ao menus de contexto e funcionalidades específicos para aceder às funcionalidades específicas do contexto.

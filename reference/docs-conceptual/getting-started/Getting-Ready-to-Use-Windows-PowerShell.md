@@ -8,6 +8,7 @@ ms.sourcegitcommit: cf195b090b3223fa4917206dfec7f0b603873cdf
 ms.translationtype: MT
 ms.contentlocale: pt-PT
 ms.lasthandoff: 04/09/2018
+ms.locfileid: "30950972"
 ---
 # <a name="getting-ready-to-use-windows-powershell"></a>Preparar-se para Utilizar o Windows PowerShell
 Quando o Windows PowerShell está instalado e iniciado, considere as seguintes opções de configuração. Pode efetuar estas tarefas em qualquer altura.

@@ -8,6 +8,7 @@ ms.sourcegitcommit: a9aa5e8d0fab0cbb3e4e6cff0e3ca8c0339ab4e6
 ms.translationtype: MT
 ms.contentlocale: pt-PT
 ms.lasthandoff: 04/27/2018
+ms.locfileid: "32018064"
 ---
 # <a name="getting-wmi-objects-get-wmiobject"></a>Obter os objetos WMI (Get-WmiObject)
 

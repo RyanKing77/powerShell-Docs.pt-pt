@@ -6,6 +6,7 @@ ms.sourcegitcommit: 54534635eedacf531d8d6344019dc16a50b8b441
 ms.translationtype: MT
 ms.contentlocale: pt-PT
 ms.lasthandoff: 05/17/2018
+ms.locfileid: "34218727"
 ---
 # <a name="reporting-on-jea"></a>Criar Relatórios na JEA
 Para gerar relatórios sobre o estado da configuração JEA, pode utilizar:

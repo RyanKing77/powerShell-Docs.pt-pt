@@ -8,6 +8,7 @@ ms.sourcegitcommit: 54534635eedacf531d8d6344019dc16a50b8b441
 ms.translationtype: MT
 ms.contentlocale: pt-PT
 ms.lasthandoff: 05/17/2018
+ms.locfileid: "34225747"
 ---
 # <a name="scriptanalyzer-rule-profile-for-gallery"></a>Perfil de regra ScriptAnalyzer para da Galeria
 

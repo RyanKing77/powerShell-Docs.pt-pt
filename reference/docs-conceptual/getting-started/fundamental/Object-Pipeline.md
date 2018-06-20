@@ -8,6 +8,7 @@ ms.sourcegitcommit: cf195b090b3223fa4917206dfec7f0b603873cdf
 ms.translationtype: MT
 ms.contentlocale: pt-PT
 ms.lasthandoff: 04/09/2018
+ms.locfileid: "30948215"
 ---
 # <a name="object-pipeline"></a>Pipeline de Objeto
 Pipelines atuam como uma série de segmentos ligados do pipe. Itens de mover pelo pipeline passaram cada segmento. Para criar um pipeline no Windows PowerShell, ligar os comandos juntamente com o operador de pipe "|". O resultado de cada comando é utilizado como entrada para o comando seguinte.
