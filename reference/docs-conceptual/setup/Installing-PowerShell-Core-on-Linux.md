@@ -1,6 +1,6 @@
 # <a name="installing-powershell-core-on-linux"></a>Instalar o PowerShell Core no Linux
 
-Supports <bpt id="p1">[</bpt>Ubuntu 14.04<ept id="p1">]</ept><bpt id="p2">[</bpt><ept id="p2">u14]</ept>, <bpt id="p3">[</bpt>Ubuntu 16.04<ept id="p3">]</ept><bpt id="p4">[</bpt><ept id="p4">u16]</ept>, <bpt id="p5">[</bpt>Ubuntu 17.04<ept id="p5">]</ept><bpt id="p6">[</bpt><ept id="p6">u17]</ept>, <bpt id="p7">[</bpt>Debian 8<ept id="p7">]</ept><bpt id="p8">[</bpt><ept id="p8">deb8]</ept>, <bpt id="p9">[</bpt>Debian 9<ept id="p9">]</ept><bpt id="p10">[</bpt><ept id="p10">deb9]</ept>, <bpt id="p11">[</bpt>CentOS 7<ept id="p11">]</ept><bpt id="p12">[</bpt><ept id="p12">cos]</ept>, <bpt id="p13">[</bpt>Red Hat Enterprise Linux (RHEL) 7<ept id="p13">]</ept><bpt id="p14">[</bpt><ept id="p14">rhel7]</ept>, <bpt id="p15">[</bpt>OpenSUSE 42.2<ept id="p15">]</ept><bpt id="p16">[</bpt><ept id="p16">opensuse]</ept>, <bpt id="p17">[</bpt>Fedora 27<ept id="p17">]</ept><bpt id="p18">[</bpt><ept id="p18">fedora]</ept>, <bpt id="p19">[</bpt>Fedora 28<ept id="p19">]</ept><bpt id="p20">[</bpt><ept id="p20">fedora]</ept>, and <bpt id="p21">[</bpt>Arch Linux<ept id="p21">]</ept><bpt id="p22">[</bpt><ept id="p22">arch]</ept>.
+Supports [Ubuntu 14.04][u14], [Ubuntu 16.04][u16], [Ubuntu 17.10][u17], [Debian 8][deb8], [Debian 9][deb9], [CentOS 7][cos], [Red Hat Enterprise Linux (RHEL) 7][rhel7], [OpenSUSE 42.2][opensuse], [Fedora 27][fedora], [Fedora 28][fedora], and [Arch Linux][arch].
 
 Para as distribuições do Linux que não são suportadas oficialmente, pode tentar utilizar o [PowerShell AppImage][lai].
 Também pode tentar implementar os binários de PowerShell diretamente com o Linux [ `tar.gz` arquivo][tar], mas terá de configurar as dependências necessárias com base no SO em passos separados.
@@ -10,7 +10,7 @@ Depois do pacote está instalado, executar `pwsh` de um terminal.
 
 [u14]: #ubuntu-1404
 [u16]: #ubuntu-1604
-[u17]: #ubuntu-1704
+[u17]: #ubuntu-1710
 [deb8]: #debian-8
 [deb9]: #debian-9
 [cos]: #centos-7
@@ -112,9 +112,11 @@ sudo apt-get install -f
 sudo apt-get remove powershell
 ```
 
-## <a name="ubuntu-1704"></a>Ubuntu 17.04
+## <a name="ubuntu-1710"></a>Ubuntu 17.10
 
-### <a name="installation-via-package-repository---ubuntu-1704"></a>Instalação através do repositório de pacote - Ubuntu 17.04
+> Nota: Foi adicionado suporte para Ubuntu 18.04 após `6.1.0-preview.2`
+
+### <a name="installation-via-package-repository---ubuntu-1710"></a>Instalação através do repositório de pacote - Ubuntu 17.10
 
 PowerShell Core, para o Linux, é publicado para repositórios de pacote de instalação fácil (e para atualizações).
 Este é o método preferido.
@@ -124,7 +126,7 @@ Este é o método preferido.
 curl https://packages.microsoft.com/keys/microsoft.asc | sudo apt-key add -
 
 # Register the Microsoft Ubuntu repository
-sudo curl -o /etc/apt/sources.list.d/microsoft.list https://packages.microsoft.com/config/ubuntu/17.04/prod.list
+sudo curl -o /etc/apt/sources.list.d/microsoft.list https://packages.microsoft.com/config/ubuntu/17.10/prod.list
 
 # Update the list of products
 sudo apt-get update
@@ -138,20 +140,67 @@ pwsh
 
 Depois de registar o repositório de Microsoft uma vez como Superutilizador, de ora em diante, apenas terá de utilizar `sudo apt-get upgrade powershell` atualizá-lo.
 
-### <a name="installation-via-direct-download---ubuntu-1704"></a>Instalação através de transferência direta - Ubuntu 17.04
+### <a name="installation-via-direct-download---ubuntu-1710"></a>Instalação através de transferência direta - Ubuntu 17.10
 
-Transferir o pacote Debian `powershell_6.0.2-1.ubuntu.17.04_amd64.deb` do [versões][] página para a máquina Ubuntu.
+Transferir o pacote Debian `powershell_6.0.2-1.ubuntu.17.10_amd64.deb` do [versões][] página para a máquina Ubuntu.
 
 Em seguida, execute o seguinte no terminal:
 
 ```sh
-sudo dpkg -i powershell_6.0.2-1.ubuntu.17.04_amd64.deb
+sudo dpkg -i powershell_6.0.2-1.ubuntu.17.10_amd64.deb
 sudo apt-get install -f
 ```
 
 > Tenha em atenção que `dpkg -i` irá falhar com dependências unmet; o comando seguinte, `apt-get install -f` resolve estes e, em seguida, termina a configurar o pacote do PowerShell.
 
-### <a name="uninstallation---ubuntu-1704"></a>Desinstalação - Ubuntu 17.04
+### <a name="uninstallation---ubuntu-1710"></a>Desinstalação - Ubuntu 17.10
+
+```sh
+sudo apt-get remove powershell
+```
+
+## <a name="ubuntu-1804"></a>Ubuntu 18.04
+
+> Nota: Foi adicionado suporte para Ubuntu 18.04 após `6.1.0-preview.2`
+
+### <a name="installation-via-package-repository---ubuntu-1804"></a>Instalação através do repositório de pacote - Ubuntu 18.04
+
+PowerShell Core, para o Linux, é publicado para repositórios de pacote de instalação fácil (e para atualizações).
+Este é o método preferido.
+
+```sh
+# Import the public repository GPG keys
+curl https://packages.microsoft.com/keys/microsoft.asc | sudo apt-key add -
+
+# Register the Microsoft Ubuntu repository
+sudo curl -o /etc/apt/sources.list.d/microsoft.list https://packages.microsoft.com/config/ubuntu/18.04/prod.list
+
+# Update the list of products
+sudo apt-get update
+
+# Install PowerShell
+sudo apt-get install -y powershell
+
+# Start PowerShell
+pwsh
+```
+
+Depois de registar o repositório de Microsoft uma vez como Superutilizador, de ora em diante, apenas terá de utilizar `sudo apt-get upgrade powershell` atualizá-lo.
+
+### <a name="installation-via-direct-download---ubuntu-1804"></a>Instalação através de transferência direta - Ubuntu 18.04
+
+Transferir o pacote Debian `powershell_6.1.0-preview.3-1.ubuntu.18.04_amd64.deb` do [versões][] página para a máquina Ubuntu.
+
+Em seguida, execute o seguinte no terminal:
+
+```sh
+sudo dpkg -i powershell_6.1.0-preview.3-1.ubuntu.18.04_amd64.deb
+sudo apt-get install -f
+```
+
+> Tenha em atenção que `dpkg -i` irá falhar com dependências unmet; o comando seguinte, `apt-get install -f` resolve estes e, em seguida, termina a configurar o pacote do PowerShell.
+
+### <a name="uninstallation---ubuntu-1710"></a>Desinstalação - Ubuntu 17.10
 
 ```sh
 sudo apt-get remove powershell
@@ -409,6 +458,8 @@ sudo zypper remove powershell
 
 ## <a name="fedora"></a>Fedora
 
+> Tenha em atenção, Fedora 28 só é suportada no PowerShell Core 6.1 e mais recentes.
+
 ### <a name="installation-via-package-repository-preferred---fedora-27-fedora-28"></a>Instalação através do pacote repositório (preferencial) - Fedora 27, Fedora 28
 
 Núcleo de PowerShell para Linux é publicado para repositórios de Microsoft oficiais para instalação fácil (e para atualizações).
@@ -587,7 +638,8 @@ O gráfico seguinte mostra as dependências de .NET Core 2.0 oficialmente são s
 | ------------------ | ------------ |
 | Ubuntu 14.04       | libc6, libgcc1, libgssapi-krb5-2, liblttng-ust0, libstdc + + 6, <br> libcurl3, libunwind8, libuuid1, zlib1g, libssl1.0.0, libicu52 |
 | Ubuntu 16.04       | libc6, libgcc1, libgssapi-krb5-2, liblttng-ust0, libstdc + + 6, <br> libcurl3 libunwind8, libuuid1, zlib1g, libssl1.0.0, libicu55 |
-| Ubuntu 17.04       | libc6, libgcc1, libgssapi-krb5-2, liblttng-ust0, libstdc + + 6, <br> libcurl3, libunwind8, libuuid1, zlib1g, libssl1.0.0, libicu57 |
+| Ubuntu 17.10       | libc6, libgcc1, libgssapi-krb5-2, liblttng-ust0, libstdc + + 6, <br> libcurl3, libunwind8, libuuid1, zlib1g, libssl1.0.0, libicu57 |
+| Ubuntu 18.04       | libc6, libgcc1, libgssapi-krb5-2, liblttng-ust0, libstdc + + 6, <br> libcurl3 libunwind8, libuuid1, zlib1g, libssl1.0.0, libicu60 |
 | 8 debian (Jessie)  | libc6, libgcc1, libgssapi-krb5-2, liblttng-ust0, libstdc + + 6, <br> libcurl3, libunwind8, libuuid1, zlib1g, libssl1.0.0, libicu52 |
 | Debian 9 (Stretch) | libc6, libgcc1, libgssapi-krb5-2, liblttng-ust0, libstdc + + 6, <br> libcurl3, libunwind8, libuuid1, zlib1g, libssl1.0.2, libicu57 |
 | CentOS 7 <br> Oracle Linux 7 <br> RHEL 7 <br> OpenSUSE 42.2 | libunwind, libcurl, bibliotecas de openssl, libicu |
