@@ -2,16 +2,16 @@
 ms.date: 06/12/2017
 keywords: DSC, do powershell, a configuração, a configuração
 title: Utilizar dados de configuração
-ms.openlocfilehash: d42c43fddb54050adcbac949e7f67f3b41b540f1
-ms.sourcegitcommit: 54534635eedacf531d8d6344019dc16a50b8b441
+ms.openlocfilehash: 9b0b213e2d71bfdb473fd98f8080de5c874c70e2
+ms.sourcegitcommit: 68093cc12a7a22c53d11ce7d33c18622921a0dd1
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 05/16/2018
-ms.locfileid: "34189691"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36940383"
 ---
 # <a name="using-configuration-data-in-dsc"></a>A utilização de dados de configuração DSC
 
->Aplica-se a: O Windows PowerShell 4.0, Windows PowerShell 5.0
+> Aplica-se a: O Windows PowerShell 4.0, Windows PowerShell 5.0
 
 Ao utilizar o DSC incorporada **ConfigurationData** parâmetro, pode definir os dados que podem ser utilizados dentro de uma configuração.
 Isto permite-lhe criar uma configuração única que pode ser utilizada para vários nós ou para os diferentes ambientes.
@@ -25,10 +25,11 @@ Para obter exemplos de como utilizar os dados de configuração, consulte [separ
 Uma configuração de DSC assume um parâmetro comum, **ConfigurationData**, que especifica quando compilar a configuração.
 Para obter informações sobre configurações de compilação, consulte [configurações de DSC](configurations.md).
 
-O **ConfigurationData** parâmetro é uma hasthtable que têm de ter, pelo menos, uma chave denominada **AllNodes**.
+O **ConfigurationData** parâmetro é uma tabela hash que têm de ter, pelo menos, uma chave denominada **AllNodes**.
 Também pode ter uma ou mais chaves.
 
->**Nota:** os exemplos neste tópico utilizam uma única chave adicional (que não seja o nomeado **AllNodes** chave) com o nome `NonNodeData`, mas pode incluir qualquer número de chaves adicionais e nome que pretende.
+> [!NOTE]
+> Os exemplos neste tópico utilizam uma única chave adicional (que não seja o nomeado **AllNodes** chave) com o nome `NonNodeData`, mas pode incluir qualquer número de chaves adicionais e nome que pretende.
 
 ```powershell
 $MyData =
@@ -188,6 +189,7 @@ O DSC fornece três variáveis especiais que podem ser utilizadas um script de c
 
 - **$AllNodes** refere-se para o conjunto completo de nós definido no **ConfigurationData**. Pode filtrar o **AllNodes** coleção utilizando **. WHERE()** e **. ForEach()**.
 - **Nó** refere-se a uma entrada específico no **AllNodes** coleção depois-é filtrado utilizando **. WHERE()** ou **. ForEach()**.
+  - Pode ler mais sobre estes métodos em [about_arrays](/powershell/reference/3.0/Microsoft.PowerShell.Core/About/about_Arrays.md)
 - **ConfigurationData** refere-se a tabela hash completo que é transmitida como o parâmetro ao compilar uma configuração.
 
 ## <a name="using-non-node-data"></a>Utilização de dados do nó não
@@ -199,5 +201,6 @@ No entanto, pode definir qualquer número de chaves adicionais e nome tudo o que
 Para obter um exemplo de utilização de dados do nó não, consulte [separação de dados de configuração e ambiente](separatingEnvData.md).
 
 ## <a name="see-also"></a>Consulte Também
+
 - [Opções de credenciais nos dados de configuração](configDataCredentials.md)
 - [Configurações de DSC](configurations.md)
