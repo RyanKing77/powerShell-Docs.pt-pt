@@ -42,7 +42,7 @@ Além disso, terá de ativar a autenticação de palavra-passe e, opcionalmente,
     New-PSSession [-HostName] <string[]> [-Name <string[]>] [-UserName <string>] [-KeyFilePath <string>] [-SSHTransport] [<CommonParameters>]
     ```
 
-1. Instalar a versão mais recente [O Win32 OpenSSH] incorporar a partir do GitHub utilizando o [instalação] instruções
+1. Instalar a versão mais recente [Win32 OpenSSH] incorporar a partir do GitHub utilizando o [instalação] instruções
 1. Edite o ficheiro de sshd_config na localização onde instalou Win32 OpenSSH
     - Certifique-se a autenticação de palavra-passe está ativada
 
@@ -54,6 +54,22 @@ Além disso, terá de ativar a autenticação de palavra-passe e, opcionalmente,
 
     ```
     Subsystem    powershell c:/program files/powershell/6.0.0/pwsh.exe -sshs -NoLogo -NoProfile
+    ```
+    
+    > [!NOTE]
+    Não há um erro OpenSSH para Windows que impede que os espaços de trabalhar em caminhos de executável do subsistema.
+    Consulte [este problema no GitHub para obter mais informações](https://github.com/PowerShell/Win32-OpenSSH/issues/784).
+    
+    É uma solução criar um symlink para o diretório de instalação do Powershell não contém espaços:
+    
+    ```powershell
+    mklink /D c:\pwsh "C:\Program Files\PowerShell\6.0.0"
+    ```
+
+    e, em seguida, introduza-o no subsistema:
+ 
+    ```
+    Subsystem    powershell c:\pwsh\pwsh.exe -sshs -NoLogo -NoProfile
     ```
 
     - Opcionalmente, ativar a autenticação de chave
@@ -74,7 +90,7 @@ Além disso, terá de ativar a autenticação de palavra-passe e, opcionalmente,
 
 ## <a name="setup-on-linux-ubuntu-1404-machine"></a>A configuração no computador Linux (Ubuntu 14.04)
 
-1. Instalar a versão mais recente [Núcleo de PowerShell para Linux] incorporar a partir do GitHub
+1. Instalar a versão mais recente [PowerShell Core para Linux] incorporar a partir do GitHub
 1. Instalar [Ubuntu SSH] conforme necessário
 
     ```bash
@@ -111,7 +127,7 @@ Além disso, terá de ativar a autenticação de palavra-passe e, opcionalmente,
 
 1. Instalar a versão mais recente [núcleo de PowerShell para MacOS] criar
     - Certifique-se a que comunicação remota SSH está ativada, seguindo estes passos:
-      - Abrir `System Preferences`
+      - abrir `System Preferences`
       - Clique em `Sharing`
       - Verifique `Remote Login` -deverá indicar `Remote Login: On`
       - Permitir o acesso aos utilizadores adequados
@@ -242,8 +258,8 @@ GitCommitId                    v6.0.0-alpha.17
 1. comando sudo não funcionar na sessão remota, a máquina do Linux.
 
 [Núcleo de PowerShell para Windows]: ../setup/installing-powershell-core-on-windows.md#msi
-[Núcleo de PowerShell para Linux]: ../setup/installing-powershell-core-on-linux.md#ubuntu-1404
+[PowerShell Core para Linux]: ../setup/installing-powershell-core-on-linux.md#ubuntu-1404
 [Núcleo de PowerShell para MacOS]: ../setup/installing-powershell-core-on-macos.md
-[O Win32 OpenSSH]: https://github.com/PowerShell/Win32-OpenSSH/releases
+[Win32 OpenSSH]: https://github.com/PowerShell/Win32-OpenSSH/releases
 [Instalação]: https://github.com/PowerShell/Win32-OpenSSH/wiki/Install-Win32-OpenSSH
 [Ubuntu SSH]: https://help.ubuntu.com/lts/serverguide/openssh-server.html

@@ -21,6 +21,21 @@ Depois do pacote está instalado, executar `pwsh` de um terminal.
 [lai]: #linux-appimage
 [tar]: #binary-archives
 
+## <a name="installing-preview-releases"></a>Instalar versões Preview
+
+Ao instalar uma versão de pré-visualização de núcleo do PowerShell para o Linux através de um repositório de pacote, o nome do pacote é alterado de `powershell` para `powershell-preview`.
+
+A instalar através de transferência direta não se altera, diferente do nome de ficheiro.
+
+Eis uma tabela dos comandos para instalar os pacotes de estável e de pré-visualização com os vários gestores de pacote:
+
+|Distrobution(s)|Comando estável | Comando de pré-visualização |
+|---------------|---------------|-----------------|
+| Ubuntu, Debian |`sudo apt-get install -y powershell`| `sudo apt-get install -y powershell-preview`|
+| CentOS, VM de RedHat |`sudo yum install -y powershell` | `sudo yum install -y powershell-preview`|
+| openSUSE |`sudo zypper install powershell` | `sudo zypper install powershell-preview`|
+| Fedora   |`sudo dnf install -y powershell` | `sudo dnf install -y powershell-preview`|
+
 ## <a name="ubuntu-1404"></a>Ubuntu 14.04
 
 ### <a name="installation-via-package-repository---ubuntu-1404"></a>Instalação através do repositório de pacote - Ubuntu 14.04
@@ -59,7 +74,9 @@ sudo dpkg -i powershell_6.0.2-1.ubuntu.14.04_amd64.deb
 sudo apt-get install -f
 ```
 
-> Tenha em atenção que `dpkg -i` irá falhar com dependências unmet; o comando seguinte, `apt-get install -f` resolve estes e, em seguida, termina a configurar o pacote do PowerShell.
+> [!NOTE]
+> O `dpkg -i` comando falha com dependências unmet.
+> O comando seguinte, `apt-get install -f` resolve estes problemas, em seguida, termina a configurar o pacote do PowerShell.
 
 ### <a name="uninstallation---ubuntu-1404"></a>Desinstalação - Ubuntu 14.04
 
@@ -104,7 +121,9 @@ sudo dpkg -i powershell_6.0.2-1.ubuntu.16.04_amd64.deb
 sudo apt-get install -f
 ```
 
-> Tenha em atenção que `dpkg -i` irá falhar com dependências unmet; o comando seguinte, `apt-get install -f` resolve estes e, em seguida, termina a configurar o pacote do PowerShell.
+> [!NOTE]
+> O `dpkg -i` comando falha com dependências unmet.
+> O comando seguinte, `apt-get install -f` resolve estes problemas, em seguida, termina a configurar o pacote do PowerShell.
 
 ### <a name="uninstallation---ubuntu-1604"></a>Desinstalação - Ubuntu 16.04
 
@@ -114,7 +133,8 @@ sudo apt-get remove powershell
 
 ## <a name="ubuntu-1710"></a>Ubuntu 17.10
 
-> Nota: Foi adicionado suporte para Ubuntu 18.04 após `6.1.0-preview.2`
+> [!NOTE]
+> Foi adicionado suporte para Ubuntu 17.04 após `6.1.0-preview.2`
 
 ### <a name="installation-via-package-repository---ubuntu-1710"></a>Instalação através do repositório de pacote - Ubuntu 17.10
 
@@ -151,7 +171,9 @@ sudo dpkg -i powershell_6.0.2-1.ubuntu.17.10_amd64.deb
 sudo apt-get install -f
 ```
 
-> Tenha em atenção que `dpkg -i` irá falhar com dependências unmet; o comando seguinte, `apt-get install -f` resolve estes e, em seguida, termina a configurar o pacote do PowerShell.
+> [!NOTE]
+> O `dpkg -i` comando falha com dependências unmet.
+> O comando seguinte, `apt-get install -f` resolve estes problemas, em seguida, termina a configurar o pacote do PowerShell.
 
 ### <a name="uninstallation---ubuntu-1710"></a>Desinstalação - Ubuntu 17.10
 
@@ -161,7 +183,8 @@ sudo apt-get remove powershell
 
 ## <a name="ubuntu-1804"></a>Ubuntu 18.04
 
-> Nota: Foi adicionado suporte para Ubuntu 18.04 após `6.1.0-preview.2`
+> [!NOTE]
+> Foi adicionado suporte para Ubuntu 18.04 após `6.1.0-preview.2`
 
 ### <a name="installation-via-package-repository---ubuntu-1804"></a>Instalação através do repositório de pacote - Ubuntu 18.04
 
@@ -198,7 +221,9 @@ sudo dpkg -i powershell_6.1.0-preview.3-1.ubuntu.18.04_amd64.deb
 sudo apt-get install -f
 ```
 
-> Tenha em atenção que `dpkg -i` irá falhar com dependências unmet; o comando seguinte, `apt-get install -f` resolve estes e, em seguida, termina a configurar o pacote do PowerShell.
+> [!NOTE]
+> O `dpkg -i` comando falha com dependências unmet.
+> O comando seguinte, `apt-get install -f` resolve estes problemas, em seguida, termina a configurar o pacote do PowerShell.
 
 ### <a name="uninstallation---ubuntu-1710"></a>Desinstalação - Ubuntu 17.10
 
@@ -248,8 +273,8 @@ sudo apt-get install -f
 ```
 
 > [!NOTE]
-> Tenha em atenção que `dpkg -i` irá falhar com dependências unmet.
-> O comando seguinte, `apt-get install -f` resolve estes e, em seguida, termina a configurar o pacote do PowerShell.
+> O `dpkg -i` comando falha com dependências unmet.
+> O comando seguinte, `apt-get install -f` resolve estes problemas, em seguida, termina a configurar o pacote do PowerShell.
 
 ### <a name="uninstallation---debian-8"></a>Desinstalação - Debian 8
 
@@ -298,10 +323,6 @@ sudo dpkg -i powershell_6.0.2-1.debian.9_amd64.deb
 sudo apt-get install -f
 ```
 
-> [!NOTE]
-> Tenha em atenção que `dpkg -i` irá falhar com dependências unmet.
-> O comando seguinte, `apt-get install -f` resolve estes e, em seguida, termina a configurar o pacote do PowerShell.
-
 ### <a name="uninstallation---debian-9"></a>Desinstalação - Debian 9
 
 ```sh
@@ -310,6 +331,7 @@ sudo apt-get remove powershell
 
 ## <a name="centos-7"></a>CentOS 7
 
+> [!NOTE]
 > Este pacote também funciona no Oracle Linux 7.
 
 ### <a name="installation-via-package-repository-preferred---centos-7"></a>Instalação através do repositório de pacote (preferencial) - CentOS 7
@@ -396,22 +418,21 @@ sudo yum remove powershell
 
 ## <a name="opensuse-422"></a>OpenSUSE 42.2
 
-> [!NOTE]
-> Ao instalar o PowerShell Core, `zypper` pode comunicar o seguinte erro:
->
-> ```Output
-> Problem: nothing provides libcurl needed by powershell-6.0.1-1.rhel.7.x86_64
->  Solution 1: do not install powershell-6.0.1-1.rhel.7.x86_64
->  Solution 2: break powershell-6.0.1-1.rhel.7.x86_64 by ignoring some of its dependencies
-> ```
->
-> Neste caso, certifique-se de que um ecrã compatível com `libcurl` biblioteca encontra-se ao verificar que o seguinte comando mostra o `libcurl4` pacote como instalado:
->
-> ```sh
-> zypper search --file-list --match-exact '/usr/lib64/libcurl.so.4'
-> ```
->
-> Em seguida, escolha o `break powershell-6.0.1-1.rhel.7.x86_64 by ignoring some of its dependencies` solução quando instalar o pacote do PowerShell.
+Ao instalar o PowerShell Core, `zypper` pode comunicar o seguinte erro:
+
+```Output
+Problem: nothing provides libcurl needed by powershell-6.0.1-1.rhel.7.x86_64
+ Solution 1: do not install powershell-6.0.1-1.rhel.7.x86_64
+ Solution 2: break powershell-6.0.1-1.rhel.7.x86_64 by ignoring some of its dependencies
+```
+
+Neste caso, certifique-se de que um ecrã compatível com `libcurl` biblioteca encontra-se ao verificar que o seguinte comando mostra o `libcurl4` pacote como instalado:
+
+```sh
+zypper search --file-list --match-exact '/usr/lib64/libcurl.so.4'
+```
+
+Em seguida, escolha o `break powershell-6.0.1-1.rhel.7.x86_64 by ignoring some of its dependencies` solução quando instalar o pacote do PowerShell.
 
 ### <a name="installation-via-package-repository-preferred---opensuse-422"></a>Instalação através do repositório de pacote (preferencial) - OpenSUSE 42.2
 
@@ -458,7 +479,8 @@ sudo zypper remove powershell
 
 ## <a name="fedora"></a>Fedora
 
-> Tenha em atenção, Fedora 28 só é suportada no PowerShell Core 6.1 e mais recentes.
+> [!NOTE]
+> Fedora 28 só é suportada no PowerShell Core 6.1 e mais recentes.
 
 ### <a name="installation-via-package-repository-preferred---fedora-27-fedora-28"></a>Instalação através do pacote repositório (preferencial) - Fedora 27, Fedora 28
 
@@ -510,7 +532,10 @@ sudo dnf remove powershell
 
 ## <a name="arch-linux"></a>Arquitetura de Linux
 
-PowerShell está disponível a partir de [Arquitetura de Linux][] utilizador repositório (AUR).
+> [!NOTE]
+> Suporte de arquitetura é experimental.
+
+PowerShell está disponível a partir de [arquitetura Linux][] utilizador repositório (AUR).
 
 * Pode ser compilada com a [mais recente etiquetados versão][arch-release]
 * Pode ser compilado do [consolidação mais recente mestre][arch-git]
@@ -520,12 +545,15 @@ Pacotes no AUR Comunidade mantida - não são suportadas oficial.
 
 Para obter mais informações sobre como instalar pacotes do AUR, consulte o [arquitetura Linux wiki](https://wiki.archlinux.org/index.php/Arch_User_Repository#Installing_packages) ou Comunidade [DockerFile](https://github.com/PowerShell/PowerShell/blob/master/docker/community/archlinux/Dockerfile).
 
-[Arquitetura de Linux]: https://www.archlinux.org/download/
+[arquitetura Linux]: https://www.archlinux.org/download/
 [arch-release]: https://aur.archlinux.org/packages/powershell/
 [arch-git]: https://aur.archlinux.org/packages/powershell-git/
 [arch-bin]: https://aur.archlinux.org/packages/powershell-bin/
 
 ## <a name="linux-appimage"></a>AppImage do Linux
+
+> [!NOTE]
+> Suporte de AppImage é experimental
 
 Com uma distribuição Linux recente, transfira o AppImage `powershell-6.0.1-x86_64.AppImage` do [versões][] página para a máquina do Linux.
 
@@ -543,6 +571,9 @@ Este pacote é um binário único que funciona independentemente da distribuiç�
 [appimage]: http://appimage.org/
 
 ## <a name="kali"></a>Kali
+
+> [!NOTE]
+> O suporte de Kali está experimental.
 
 ### <a name="installation"></a>Instalação
 
@@ -579,6 +610,9 @@ sudo dpkg -r powershell_6.0.2-1.ubuntu.16.04_amd64.deb
 ```
 
 ## <a name="raspbian"></a>Raspbian
+
+> [!NOTE]
+> O suporte de Raspbian está experimental.
 
 Atualmente, o PowerShell só é suportado em Raspbian Stretch.
 
