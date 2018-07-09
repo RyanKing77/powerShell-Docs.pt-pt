@@ -1,20 +1,19 @@
 ---
 ms.date: 06/12/2017
-keywords: DSC, do powershell, a configuração, a configuração
+keywords: DSC, powershell, configuração, a configuração
 title: Método RollBack da classe MSFT_DSCLocalConfigurationManager
-ms.openlocfilehash: d2f9b7025d611912e119800408e25fcb66bc0228
-ms.sourcegitcommit: 54534635eedacf531d8d6344019dc16a50b8b441
+ms.openlocfilehash: 4956900ecd2c9cb7f2e2b5bcab94616f9f5d5565
+ms.sourcegitcommit: 8b076ebde7ef971d7465bab834a3c2a32471ef6f
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 05/17/2018
-ms.locfileid: "34219883"
+ms.lasthandoff: 07/06/2018
+ms.locfileid: "37893023"
 ---
 # <a name="rollback-method-of-the-msftdsclocalconfigurationmanager-class"></a>Método RollBack da classe MSFT_DSCLocalConfigurationManager
 
 Reverte a configuração para uma versão anterior.
 
-<a name="syntax"></a>Sintaxe
-------
+## <a name="syntax"></a>Sintaxe
 
 ```mof
 uint32 RollBack(
@@ -22,13 +21,11 @@ uint32 RollBack(
 );
 ```
 
-<a name="parameters"></a>Parâmetros
-----------
+## <a name="parameters"></a>Parâmetros
 
-*configurationNumber* \[no\] Especifica a configuração solicitada.
+*configurationNumber* \[no\] Especifica a configuração pedida.
 
-## <a name="return-value"></a>Valor devolvido
-------------
+## <a name="return-value"></a>Valor de retorno
 
 Devolve zero com êxito; caso contrário, devolve um código de erro.
 
@@ -37,13 +34,11 @@ Devolve zero com êxito; caso contrário, devolve um código de erro.
 Este é um método estático.
 
 ## <a name="requirements"></a>Requisitos
-------------
->**MOF:** DscCore.mof
 
->**Namespace**: Root\Microsoft\Windows\DesiredStateConfiguration
+**MOF:** DscCore.mof
 
+**Namespace**: Root\Microsoft\Windows\DesiredStateConfiguration
 
 ## <a name="see-also"></a>Consulte também
-
 
 [**MSFT_DSCLocalConfigurationManager**](msft-dsclocalconfigurationmanager.md)

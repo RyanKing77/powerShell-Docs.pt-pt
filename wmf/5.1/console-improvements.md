@@ -1,29 +1,29 @@
 ---
 ms.date: 06/12/2017
 keywords: wmf,powershell,setup
-title: Melhorias na consola no WMF 5.1
-ms.openlocfilehash: fb689002caf42203d760f11acc64e52cfa681069
-ms.sourcegitcommit: 54534635eedacf531d8d6344019dc16a50b8b441
+title: Melhorias de consola no WMF 5.1
+ms.openlocfilehash: a8e82e2f973916c2ed5007eba90ee6f2b7a9a769
+ms.sourcegitcommit: 8b076ebde7ef971d7465bab834a3c2a32471ef6f
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 05/16/2018
-ms.locfileid: "34189317"
+ms.lasthandoff: 07/06/2018
+ms.locfileid: "37892931"
 ---
-# <a name="console-improvements-in-wmf-51"></a>Melhorias na consola no WMF 5.1#
+# <a name="console-improvements-in-wmf-51"></a>Melhorias de consola no WMF 5.1
 
-## <a name="powershell-console-improvements"></a>Melhorias na consola do PowerShell
+## <a name="powershell-console-improvements"></a>Melhorias da consola do PowerShell
 
-As seguintes alterações foram efetuadas para o powershell.exe no WMF 5.1 para melhorar a experiência de consola:
+As seguintes alterações foram feitas para powershell.exe no WMF 5.1 para melhorar a experiência de consola:
 
-###<a name="vt100-support"></a>Suporte de VT100
+### <a name="vt100-support"></a>Suporte de VT100
 
-Windows 10 suporte adicionado para [sequências de escape VT100](https://msdn.microsoft.com/en-us/library/windows/desktop/mt638032(v=vs.85).aspx).
-PowerShell ignorará sequências de escape formatação determinadas VT100 quando se calcular larguras de tabela.
+Windows 10 foi adicionado suporte para [seqüências de escape VT100](/windows/console/console-virtual-terminal-sequences).
+PowerShell irá ignorar determinadas seqüências de escape formatação VT100 ao calcular larguras de tabela.
 
-PowerShell também adicionada uma nova API que pode ser utilizada na formatação código para determinar se VT100 é suportada.
+PowerShell também adicionou uma nova API que pode ser utilizada na formatação de código para determinar se VT100 é suportada.
 Por exemplo:
 
-```
+```powershell
 if ($host.UI.SupportsVirtualTerminal)
 {
     $esc = [char]0x1b
@@ -34,21 +34,22 @@ else
     "A default hello"
 }
 ```
-Eis um concluída [exemplo](https://gist.github.com/lzybkr/dcb973dccd54900b67783c48083c28f7) que podem ser utilizados para realçar correspondências de cadeia de selecione.
-Guardar o exemplo num ficheiro denominado `MatchInfo.format.ps1xml`, em seguida, utilizá-lo, o perfil ou noutro local, execute `Update-FormatData -Prepend MatchInfo.format.ps1xml`.
 
-Tenha em atenção que as sequências de escape VT100 só são suportadas a partir da atualização do Windows 10 Anniversary; não são suportadas em sistemas anteriores.
+Aqui está uma completa [exemplo](https://gist.github.com/lzybkr/dcb973dccd54900b67783c48083c28f7) que pode ser utilizado para destacar as correspondências de `Select-String`.
+Guarde o exemplo num arquivo chamado `MatchInfo.format.ps1xml`, em seguida, usá-lo, no seu perfil ou noutro local, execute `Update-FormatData -Prepend MatchInfo.format.ps1xml`.
 
-### <a name="vi-mode-support-in-psreadline"></a>Suporte do modo de VI no PSReadline
+Tenha em atenção que seqüências de escape VT100 só são suportadas a partir da atualização de aniversário do Windows 10; não são suportadas em sistemas anteriores.
 
-[PSReadline](https://github.com/lzybkr/PSReadLine) adiciona suporte para o modo de vi. Para utilizar o modo de vi, execute `Set-PSReadlineOption -EditMode Vi`.
+### <a name="vi-mode-support-in-psreadline"></a>Suporte de modo VI em PSReadline
 
-### <a name="redirected-stdin-with-interactive-input"></a>Stdin redirecionada com entrada interativa
+[PSReadline](https://github.com/lzybkr/PSReadLine) adiciona suporte para o modo de vi. Para utilizar o modo de vi, executar `Set-PSReadlineOption -EditMode Vi`.
 
-Nas versões anteriores, a partir do PowerShell com `powershell -File -` era necessário quando foi redirecionada stdin e quer introduza comandos interativamente.
+### <a name="redirected-stdin-with-interactive-input"></a>Redirecionada stdin com entrada interativa
 
-Com 5.1 WMF neste disco rígido detetar a opção já não é necessária.
-Pode iniciar PowerShell sem quaisquer opções, por exemplo, `powershell`.
+Nas versões anteriores, a partir do PowerShell com `powershell -File -` era necessária quando foi redirecionada stdin e quer introduzir os comandos de forma interativa.
 
-Tenha em atenção que PSReadline não suporta atualmente redirecionado stdin e a experiência de edição da linha de comandos incorporada com stdin redirecionado é extremamente limitada, por exemplo, as teclas de seta não funcionam.
+Com o WMF 5.1, nesse difícil descobrir a opção já não é necessária.
+Pode iniciar o PowerShell sem quaisquer opções, por exemplo, `powershell`.
+
+Tenha em atenção que não suportam atualmente PSReadline redirecionado stdin e a experiência de edição da linha de comandos incorporada com stdin redirecionada é extremamente limitada, por exemplo, as teclas de seta não funcionam.
 Uma versão futura do PSReadline deve resolver este problema.

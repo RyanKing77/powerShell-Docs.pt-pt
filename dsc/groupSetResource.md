@@ -1,24 +1,25 @@
 ---
 ms.date: 06/12/2017
-keywords: DSC, do powershell, a configuração, a configuração
+keywords: DSC, powershell, configuração, a configuração
 description: Fornece um mecanismo para gerir grupos locais no nó de destino.
-title: Recursos do DSC GroupSet
-ms.openlocfilehash: 3d6fdcaef6053964d3fb3b709a5263d291a7c840
-ms.sourcegitcommit: 54534635eedacf531d8d6344019dc16a50b8b441
+title: Recurso GroupSet de DSC
+ms.openlocfilehash: 487a76ca7703b2c57b940b4c5bd176eada6c8019
+ms.sourcegitcommit: 8b076ebde7ef971d7465bab834a3c2a32471ef6f
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 05/17/2018
-ms.locfileid: "34222358"
+ms.lasthandoff: 07/06/2018
+ms.locfileid: "37892431"
 ---
-# <a name="dsc-groupset-resource"></a>Recursos do DSC GroupSet
+# <a name="dsc-groupset-resource"></a>Recurso GroupSet de DSC
 
-> Aplica-se a: Windows do Windows PowerShell 5.0
+> Aplica-se a: Windows Windows PowerShell 5.0
 
-O **GroupSet** recursos no Windows PowerShell pretendido Estado Configuration (DSC) fornece um mecanismo para gerir grupos locais no nó de destino. Este recurso se encontra um [recursos composto](authoringResourceComposite.md) que chama o [grupo recursos](groupResource.md) para cada grupo especificado no `GroupName` parâmetro.
+O **GroupSet** recursos no Windows PowerShell Desired State Configuration (DSC) fornece um mecanismo para gerir grupos locais no nó de destino. Este recurso é um [recursos compostos](authoringResourceComposite.md) que chama o [grupo de recursos](groupResource.md) para cada grupo especificado no `GroupName` parâmetro.
 
-Utilize este recurso quando se pretende adicionar e/ou remover a mesma lista de membros de mais de um grupo, remover mais do que um grupo ou adicione mais de um grupo com a mesma lista de membros.
+Utilize este recurso quando deseja adicionar e/ou remova a mesma lista de membros de mais de um grupo, remover mais de um grupo ou adicionar mais de um grupo com a mesma lista de membros.
 
-##<a name="syntax"></a>Sintaxe # #
+## <a name="syntax"></a>Sintaxe
+
 ```
 Group [string] #ResourceName
 {
@@ -35,17 +36,17 @@ Group [string] #ResourceName
 
 |  Propriedade  |  Descrição   |
 |---|---|
-| GroupName| Os nomes dos grupos para os quais pretender certificar-se num estado específico.|
-| MembersToExclude| Utilize esta propriedade para remover membros da associação dos grupos. O valor desta propriedade é uma matriz de cadeias de formato *domínio*\\*UserName*. Se definir esta propriedade numa configuração, não utilize o **membros** propriedade. Se o fizer, irá gerar um erro.|
-| credencial| As credenciais necessárias para aceder a recursos remotos. **Tenha em atenção**: esta conta tem de ter as permissões adequadas do Active Directory para adicionar todas as contas não local ao grupo; caso contrário, ocorrerá um erro.
-| Certifique-se| Indica se os grupos de existirem. Defina esta propriedade para "Ausente", certifique-se de que os grupos não existir. Defini-la para "Apresentar" (o valor predefinido) assegura que os grupos de existirem.|
-| Membros| Utilize esta propriedade para substituir a associação do grupo atual com os membros especificados. O valor desta propriedade é uma matriz de cadeias de formato *domínio*\\*UserName*. Se definir esta propriedade numa configuração, não utilizar o **MembersToExclude** ou **MembersToInclude** propriedade. Se o fizer, irá gerar um erro.|
-| MembersToInclude| Utilize esta propriedade para adicionar membros à associação do grupo existente. O valor desta propriedade é uma matriz de cadeias de formato *domínio*\\*UserName*. Se definir esta propriedade numa configuração, não utilize o **membros** propriedade. Se o fizer, irá gerar um erro.|
-| dependsOn | Indica que a configuração de outro recurso tem de executar antes deste recurso é configurado. Por exemplo, se o ID da configuração do recurso de script bloco de que pretende executar primeiro é __ResourceName__ e o respetivo tipo é __ResourceType__, a sintaxe para utilizar esta propriedade é ' DependsOn = "[ ResourceName ResourceType]"'.|
+| GroupName| Os nomes dos grupos para o qual pretende garantir um estado específico.|
+| MembersToExclude| Use essa propriedade para remover membros da associação existente dos grupos. O valor desta propriedade é uma matriz de cadeias de caracteres do formulário *domínio*\\*UserName*. Se definir esta propriedade numa configuração, não utilize o **membros** propriedade. Se o fizer, irá gerar um erro.|
+| Credencial| As credenciais necessárias para aceder a recursos remotos. **Tenha em atenção**: esta conta tem de ter as permissões adequadas do Active Directory para adicionar todas as contas de não-local para o grupo; caso contrário, ocorrerá um erro.
+| Certifique-se| Indica se os grupos de existem. Defina esta propriedade para "Ausente", certifique-se de que os grupos não existem. Defini-la para "Apresentar" (o valor predefinido) garante que os grupos de existam.|
+| Membros| Use essa propriedade para substituir a associação do grupo atual com os membros especificados. O valor desta propriedade é uma matriz de cadeias de caracteres do formulário *domínio*\\*UserName*. Se definir esta propriedade numa configuração, não utilizar o **MembersToExclude** ou **MembersToInclude** propriedade. Se o fizer, irá gerar um erro.|
+| MembersToInclude| Use essa propriedade para adicionar membros para a associação existente do grupo. O valor desta propriedade é uma matriz de cadeias de caracteres do formulário *domínio*\\*UserName*. Se definir esta propriedade numa configuração, não utilize o **membros** propriedade. Se o fizer, irá gerar um erro.|
+| DependsOn | Indica que a configuração de outro recurso deve ser executado antes deste recurso está configurado. Por exemplo, se o ID da configuração do recurso do bloco que pretende executar script primeiro será __ResourceName__ e seu tipo é __ResourceType__, a sintaxe para utilizar esta propriedade é "DependsOn ="[ ResourceName ResourceType]"'.|
 
-## <a name="example-1"></a>Exemplo 1
+## <a name="example-1-ensuring-groups-are-present"></a>Exemplo 1: Grupos de garantir que estão presentes
 
-O exemplo seguinte mostra como Certifique-se de que existem dois grupos chamado "myGroup" e "myOtherGroup".
+O exemplo seguinte mostra como Certifique-se de que existem dois grupos, chamado "myGroup" e "myOtherGroup".
 
 ```powershell
 configuration GroupSetTest
@@ -73,8 +74,8 @@ $cd = @{
     )
 }
 
-
 GroupSetTest -ConfigurationData $cd
 ```
 
->**Nota:** este exemplo utiliza credenciais de texto simples de simplicidade. Para obter informações sobre como encriptar as credenciais no ficheiro MOF configuração, consulte [proteger o ficheiro MOF](secureMOF.md).
+> [!NOTE] 
+> Este exemplo utiliza credenciais de texto sem formatação para manter a simplicidade. Para obter informações sobre como encriptar as credenciais no arquivo MOF de configuração, consulte [proteger o ficheiro MOF](secureMOF.md).

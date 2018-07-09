@@ -1,20 +1,22 @@
 ---
 ms.date: 06/12/2017
-keywords: DSC, do powershell, a configuração, a configuração
+keywords: DSC, powershell, configuração, a configuração
 title: Lista de verificação de criação de recursos
-ms.openlocfilehash: 76d9fecca8618fcc178975465f45cda0d0e04064
-ms.sourcegitcommit: 54534635eedacf531d8d6344019dc16a50b8b441
+ms.openlocfilehash: 91942a174bc6f38fa77c1925dc3c690ecf2ab34b
+ms.sourcegitcommit: 8b076ebde7ef971d7465bab834a3c2a32471ef6f
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 05/16/2018
-ms.locfileid: "34189963"
+ms.lasthandoff: 07/06/2018
+ms.locfileid: "37893560"
 ---
 # <a name="resource-authoring-checklist"></a>Lista de verificação de criação de recursos
-Esta lista de verificação se uma lista de melhores práticas quando criar um novo recurso do DSC.
-## <a name="resource-module-contains-psd1-file-and-schemamof-for-every-resource"></a>Módulo de recursos contém ficheiros. psd1 e schema.mof para cada recurso
-Certifique-se de que o recurso tem estrutura correta e contém todos os ficheiros necessários. Cada módulo de recurso deve conter um ficheiro. psd1 e todos os recursos de compostos não devem ter schema.mof ficheiro. Recursos que contém o esquema não serão listados por **Get-DscResource** e os utilizadores não poderão utilizar o intellisense ao escrever código contra os módulos no ISE.
-A estrutura de diretórios para xRemoteFile recurso, o que faz parte do [módulo de recurso xPSDesiredStateConfiguration](https://github.com/PowerShell/xPSDesiredStateConfiguration), procura da seguinte forma:
 
+Esta lista de verificação é uma lista de melhores práticas durante a criação de um novo recurso de DSC.
+
+## <a name="resource-module-contains-psd1-file-and-schemamof-for-every-resource"></a>Módulo de recursos contém o ficheiro. psd1 e schema.mof para todos os recursos
+
+Verifique se o seu recurso tem a estrutura correta e contém todos os ficheiros necessários. Cada módulo de recurso deve conter um ficheiro. psd1 e todos os recursos compostos não devem ter schema.mof ficheiro. Recursos que contém o esquema não serão listados por `Get-DscResource` e os utilizadores não poderão usar o intellisense ao escrever código contra esses módulos no ISE.
+A estrutura de diretórios para o recurso de xRemoteFile, que faz parte do [módulo do recurso de xPSDesiredStateConfiguration](https://github.com/PowerShell/xPSDesiredStateConfiguration), seria semelhante ao seguinte:
 
 ```
 xPSDesiredStateConfiguration
@@ -31,42 +33,48 @@ xPSDesiredStateConfiguration
     xPSDesiredStateConfiguration.psd1
 ```
 
-## <a name="resource-and-schema-are-correct"></a>Recursos e de esquema estão corretos # #
-Verifique o esquema de recursos (*. schema.mof) ficheiros. Pode utilizar o [Designer de recursos de DSC](https://www.powershellgallery.com/packages/xDSCResourceDesigner/) para ajudar a desenvolver e testar o esquema.
+## <a name="resource-and-schema-are-correct"></a>Esquema e de recursos estão corretos
+
+Verifique se o esquema de recursos (*. schema.mof) ficheiros. Pode utilizar o [Designer de recursos de DSC](https://www.powershellgallery.com/packages/xDSCResourceDesigner) para ajudar a desenvolver e testar o seu esquema.
 Certifique-se de que:
-- Tipos de propriedade são corretos (por exemplo, não utilize cadeia para propriedades que aceitam valores numéricos, deve utilizar UInt32 ou outros tipos numéricos em vez disso)
-- Atributos de propriedade estão corretamente especificados como: ([chave], [necessário], [escrever], [ler])
+
+- Tipos de propriedade estão corretos (por exemplo, não utilizar cadeia de caracteres para propriedades que aceitam os valores numéricos, deve usar UInt32 ou outros tipos numéricos em vez disso)
+- Atributos da propriedade estão corretamente especificados como: ([chave], [necessário], [escrever], [ler])
 - Pelo menos um parâmetro no esquema tem de ser marcado como [chave]
 - [ler] propriedade não coexistir juntamente com qualquer um dos: [necessário], [a chave], [escrever]
-- Se forem especificadas várias qualificadores exceto [leitura], [a chave] tem precedência
-- Se [escrever] e [necessário] especificado, em seguida, tem precedência [necessário]
-- ValueMap especificado apropriado
+- Se vários qualificadores forem especificados, exceto [leitura], [a chave] tem precedência
+- Se [escrever] e [necessário] são especificados, em seguida, tem precedência de [necessário]
+- ValueMap é especificada quando apropriado exemplo:
 
-Exemplo:
-```
-[Read, ValueMap{"Present", "Absent"}, Values{"Present", "Absent"}, Description("Says whether DestinationPath exists on the machine")] String Ensure;
-```
+  ```
+  [Read, ValueMap{"Present", "Absent"}, Values{"Present", "Absent"}, Description("Says whether DestinationPath exists on the machine")] String Ensure;
+  ```
 
-- Nome amigável for especificado e confirma para as convenções de nomenclatura de DSC
+- Nome amigável é especificado e confirma as convenções de nomenclatura de DSC
 
-Exemplo: ```[ClassVersion("1.0.0.0"), FriendlyName("xRemoteFile")]```
+  Exemplo: `[ClassVersion("1.0.0.0"), FriendlyName("xRemoteFile")]`
 
-- Cada campo tem uma descrição com significado. O repositório do PowerShell GitHub tem bons exemplos, tais como [o. schema.mof para xRemoteFile](https://github.com/PowerShell/xPSDesiredStateConfiguration/blob/dev/DSCResources/MSFT_xRemoteFile/MSFT_xRemoteFile.schema.mof)
+- Cada campo tem descrição relevante. O repositório do GitHub do PowerShell possui bons exemplos, como [o. schema.mof para xRemoteFile](https://github.com/PowerShell/xPSDesiredStateConfiguration/blob/dev/DSCResources/MSFT_xRemoteFile/MSFT_xRemoteFile.schema.mof)
 
-Além disso, deve utilizar **teste xDscResource** e **teste xDscSchema** os cmdlets da [Designer de recursos de DSC](https://www.powershellgallery.com/packages/xDSCResourceDesigner/) para verificar automaticamente o recurso e o esquema:
+Além disso, deve usar **teste xDscResource** e **teste xDscSchema** cmdlets da [Designer de recursos de DSC](https://www.powershellgallery.com/packages/xDSCResourceDesigner) para verificar automaticamente o recurso e o esquema:
+
 ```
 Test-xDscResource <Resource_folder>
 Test-xDscSchema <Path_to_resource_schema_file>
 ```
+
 Por exemplo:
+
 ```powershell
 Test-xDscResource ..\DSCResources\MSFT_xRemoteFile
 Test-xDscSchema ..\DSCResources\MSFT_xRemoteFile\MSFT_xRemoteFile.schema.mof
 ```
 
-## <a name="resource-loads-without-errors"></a>Recurso carrega sem erros ##
+## <a name="resource-loads-without-errors"></a>Recurso for carregada sem erros
+
 Verifique se o módulo de recurso pode ser carregado com êxito.
-Isto pode ser conseguido manualmente, executando `Import-Module <resource_module> -force ` e confirmar que ocorreram sem erros ou ao escrever a automatização de teste. Em caso desta última opção, pode seguir esta estrutura no seu caso de teste:
+Isso pode ser conseguido manualmente, executando `Import-Module <resource_module> -force` e confirmar que nenhum erro ocorreu, ou ao escrever automação de teste. Em caso da última opção, pode seguir esta estrutura no seu caso de teste:
+
 ```powershell
 $error = $null
 Import-Module <resource_module> –force
@@ -74,62 +82,79 @@ If ($error.count –ne 0) {
     Throw “Module was not imported correctly. Errors returned: $error”
 }
 ```
-## <a name="resource-is-idempotent-in-the-positive-case"></a>Recurso é idempotent no caso de positivo
-Uma das características fundamentais de recursos de DSC está a ser idempotence. Significa que aplicar uma configuração de DSC que contém esse recurso várias vezes será sempre alcançar o mesmo resultado. Por exemplo, vamos criar uma configuração que contém o seguinte recurso do ficheiro:
+
+## <a name="resource-is-idempotent-in-the-positive-case"></a>Recurso é idempotent no caso positivo
+
+Uma das características fundamentais de recursos de DSC está a ser idempotence. Isso significa que a aplicação de uma configuração de DSC contendo esse recurso várias vezes será sempre alcançar o mesmo resultado. Por exemplo, se criarmos uma configuração que contém o seguinte recurso do ficheiro:
+
 ```powershell
 File file {
     DestinationPath = "C:\test\test.txt"
     Contents = "Sample text"
 }
 ```
-Depois de aplicá-la pela primeira vez, deverá aparecer test.txt de ficheiro na pasta C:\test. No entanto, as execuções subsequentes da configuração da mesma não devem alterar o estado da máquina (por exemplo, não existem cópias do ficheiro test.txt devem ser criadas).
-Para garantir a um recurso idempotent repetidamente pode chamar **conjunto TargetResource** quando testar o recurso diretamente ou chamar **início DscConfiguration** várias vezes ao fazer o teste de ponto a ponto. O resultado deve ser o mesmo após cada execução.
 
+Depois de aplicá-lo pela primeira vez, o ficheiro txt deve aparecer na `C:\test` pasta. No entanto, as execuções posteriores da configuração do mesmo não devem alterar o estado da máquina (por exemplo, não existem cópias do `test.txt` ficheiro deve ser criado).
+Para garantir que um recurso é idempotente pode chamar repetidamente `Set-TargetResource` quando o recurso de teste diretamente ou chamar `Start-DscConfiguration` várias vezes fazendo quando o teste de ponto a ponto. O resultado deve ser o mesmo após cada execução.
 
-## <a name="test-user-modification-scenario"></a>Cenário de modificação de utilizador de teste ##
-Ao alterar o estado da máquina e, em seguida, volte a executar DSC, pode verificar que **conjunto TargetResource** e **teste TargetResource** funcionar corretamente. Seguem-se passos que deve tomar:
-1.  Começar a utilizar o recurso não no estado pretendido.
-2.  Execute a configuração com o seu recurso
-3.  Certifique-se **teste DscConfiguration** devolve True
-4.  Modificar o item configurado para ser fora do estado pretendido
-5.  Certifique-se **teste DscConfiguration** devolve false Eis um exemplo mais concreto através de recursos de registo:
-1.  Começar a utilizar a chave de registo não no estado pretendido
-2.  Executar **início DscConfiguration** com uma configuração para colocá-la no estado pretendido e certifique-se de passa.
-3.  Executar **teste DscConfiguration** e certifique-se de que devolve true
-4.  Modifique o valor da chave para que não esteja no estado pretendido
-5.  Executar **teste DscConfiguration** e certifique-se de que devolve false
-6.  Funcionalidade de GET-TargetResource foi verificada através de Get-DscConfiguration
+## <a name="test-user-modification-scenario"></a>Cenário de modificação de utilizador de teste
 
-Detalhes do estado atual do recurso deve ser devolvido por Get-TargetResource. Certifique-se para testá-lo por Get-DscConfiguration ao chamar depois de aplicar a configuração e a verificar que saída corretamente reflete o estado atual da máquina. É importante para testá-lo em separado, uma vez que os problemas nesta área deixa de aparecer quando chamar DscConfiguration de início.
+Ao alterar o estado da máquina e, em seguida, volte a executar a DSC, pode verificar que `Set-TargetResource` e `Test-TargetResource` funcionar corretamente. Eis os passos que deve tomar:
 
-## <a name="call-getsettest-targetresource-functions-directly"></a>Chamar **Get/conjunto/teste-TargetResource** funciona diretamente ##
+1. Comece com o recurso não no estado pretendido.
+2. Configuração de execução com o seu recurso
+3. Certifique-se de `Test-DscConfiguration` retorna True
+4. Modificar o item configurado para ser sair do estado pretendido
+5. Certifique-se de `Test-DscConfiguration` retorna FALSO
 
-Certifique-se de que testa o **Get/conjunto/teste-TargetResource** funções implementadas no seu recurso pelo diretamente ao chamá-los e verificar que estão a funcionar conforme esperado.
+Eis um exemplo mais concreto usando o recurso de Registro:
 
-## <a name="verify-end-to-end-using-start-dscconfiguration"></a>Certifique-se através de ponto a ponto **DscConfiguration de início** ##
+1. Começar com a chave de registo não no estado pretendido
+2. Executar `Start-DscConfiguration` com uma configuração para colocá-la no estado pretendido e verifique se ele passa.
+3. Executar `Test-DscConfiguration` e certifique-se de que ela retorna verdadeiro
+4. Modifique o valor da chave, para que não esteja no estado pretendido
+5. Executar `Test-DscConfiguration` e certifique-se de que ele retornará false
+6. `Get-TargetResource` funcionalidade foi verificada através de `Get-DscConfiguration`
 
-Testar **Get/conjunto/teste-TargetResource** funções chamando-los diretamente é importante, mas não todos os problemas serão detetados desta forma. Deve focar-se parte significativo dos testes no utilizando **início DscConfiguration** ou o servidor de solicitação. Na verdade, esta é a forma como os utilizadores utilizarão o recurso de, pelo que não underestimate significância deste tipo de testes.
-Tipos possíveis problemas:
-- Credenciais/sessão pode comportar-se de forma diferente porque o agente de DSC é executado como um serviço.  Lembre-se de que testar quaisquer funcionalidades aqui ponto a ponto.
-- Erros de saída por **início DscConfiguration** poderão ser diferentes das apresentado ao chamar o **conjunto TargetResource** diretamente a funcionar.
+`Get-TargetResource` deverá devolver os detalhes do estado atual do recurso. Certifique-se de testá-lo chamando `Get-DscConfiguration` depois de aplicar a configuração e verificar que saída corretamente reflete o estado atual da máquina. É importante testá-lo em separado, uma vez que todos os problemas nessa área não será apresentado ao chamar `Start-DscConfiguration`.
 
-## <a name="test-compatability-on-all-dsc-supported-platforms"></a>Teste de compatibilidade no DSC todas as plataformas suportadas ##
-Recursos deverão funcionar em todas as plataformas de DSC suportada (Windows Server 2008 R2 e mais recentes). Instale o WMF mais recente (Windows Management Framework) no seu SO para obter a versão mais recente do DSC. Se o recurso não funciona em algumas destas plataformas por predefinição, uma mensagem de erro específica deve ser devolvida. Além disso, certifique-se de que o seu recurso verifica se os cmdlets que são chamar são presentes no computador específico. Windows Server 2012 adicionados um grande número de novos cmdlets que não estão disponíveis no Windows Server 2008 R2 o, mesmo com WMF instalado.
+## <a name="call-getsettest-targetresource-functions-directly"></a>Chamar **Get/Set/teste-TargetResource** diretamente de funções
 
-## <a name="verify-on-windows-client-if-applicable"></a>Certifique-se num cliente Windows (se aplicável) ##
-Um intervalo de teste muito comum está a verificar o recurso apenas em versões de servidor do Windows. Muitos recursos também foram concebidos para funcionar no SKUs de cliente, para que o se o que acontece no seu caso, não se esqueça de testá-lo no bem essas plataformas.
-## <a name="get-dscresource-lists-the-resource"></a>Get-DSCResource apresenta uma lista de recursos ##
-Depois de implementar o módulo, chamar Get-DscResource deve listar o recurso dos restantes como resultado. Se não é possível localizar o recurso na lista, certifique-se de que o ficheiro schema.mof para esse recurso existe.
-## <a name="resource-module-contains-examples"></a>Módulo de recursos contém exemplos ##
-Criar exemplos de qualidade que irão ajudar os outros compreender como utilizá-la. Isto é crucial, especialmente, uma vez que muitos utilizadores tratar código de exemplo como documentação.
+Certifique-se de que teste o **Get/Set/teste-TargetResource** funções implementadas no seu recurso chamando-las diretamente e verificar que estão a funcionar conforme esperado.
+
+## <a name="verify-end-to-end-using-start-dscconfiguration"></a>Certifique-se de que ponto a ponto com **início-dscconfiguration para**
+
+Testes **Get/Set/teste-TargetResource** funções ao chamá-los diretamente é importante, mas nem todos os problemas serão detetados dessa maneira. Deve focar-se uma parte significativa de teste sobre como utilizar `Start-DscConfiguration` ou o servidor de solicitação. Na verdade, isso é como os usuários usarão o recurso, portanto, não subestime a importância desse tipo de testes.
+Possíveis tipos de problemas:
+
+- Credenciais/sessão pode ter um comportamento diferente porque o agente DSC é executado como um serviço.  Certifique-se de que quaisquer funcionalidades aqui de teste ponta a ponta.
+- Erros de saída por `Start-DscConfiguration` podem ser diferentes dos apresentados ao chamar o `Set-TargetResource` função diretamente.
+
+## <a name="test-compatability-on-all-dsc-supported-platforms"></a>Teste de compatibilidade no DSC todas as plataformas suportadas
+
+Recurso deverá funcionar em todas as plataformas suportada do DSC (Windows Server 2008 R2 e versões mais recentes). Instale o WMF mais recente (Windows Management Framework) no seu SO para obter a versão mais recente do DSC. Se o recurso não funciona em algumas dessas plataformas por design, uma mensagem de erro específico deve ser devolvida. Além disso, certifique-se de que o seu recurso verifica se está a chamar de cmdlets estão presentes na máquina específica. Windows Server 2012 adicionados um grande número de novos cmdlets que não estão disponíveis no Windows Server 2008 R2, mesmo com WMF instalado.
+
+## <a name="verify-on-windows-client-if-applicable"></a>Certifique-se no cliente do Windows (se aplicável)
+
+Um intervalo de teste muito comum é a verificar o recurso apenas em versões de servidor do Windows. Muitos recursos também foram concebidos para funcionar em SKUs de cliente, portanto, se isso for verdade no seu caso, não se esqueça de testá-lo nessas plataformas também.
+
+## <a name="get-dscresource-lists-the-resource"></a>O recurso apresenta uma lista de GET-DSCResource
+
+Depois de implementar o módulo, chamar `Get-DscResource` deve listar assim o seu recurso, entre outros. Se não encontrar o recurso na lista, certifique-se esse arquivo schema.mof esse recurso de existência.
+
+## <a name="resource-module-contains-examples"></a>Módulo de recursos contém exemplos
+
+Criar exemplos de qualidade que irão ajudar os outros entenderem como usá-lo. Isso é crucial, especialmente, uma vez que muitos usuários tratam o código de exemplo como documentação.
+
 - Em primeiro lugar, deve determinar os exemplos que serão incluídos com o módulo – no mínimo, deve abranger os casos de utilização mais importantes para o seu recurso:
-- Se o módulo contiver vários recursos que necessitam para funcionarem em conjunto para um cenário ponto-a-ponto, o exemplo básico do ponto-a-ponto ideal seria ter primeiro.
-- Os exemplos iniciais devem ser muito simples – como começar com os recursos em pequenos segmentos geríveis (por exemplo, criar um novo VHD)
-- Exemplos subsequentes devem tirar partido dessas exemplos (por exemplo, criar uma VM a partir de um VHD, remover a VM, modificar VM) e mostram a funcionalidade avançada (por exemplo, criar uma VM com memória dinâmica)
-- Configurações de exemplo devem ser parametrizadas (todos os valores devem ser transmitidos para a configuração como parâmetros e não deverá haver nenhum valores codificado):
-```powershell
-configuration Sample_xRemoteFile_DownloadFile
-{
+- Se o seu módulo contém vários recursos que precisam para trabalharem em conjunto para um cenário ponto-a-ponto, o exemplo básico do ponto-a-ponto ideal seria ter primeiro.
+- Os exemplos iniciais devem ser muito simples – como começar com os seus recursos em pequenas partes gerenciáveis (por exemplo, criar um novo VHD)
+- Exemplos de subsequentes devem compilar nesses exemplos (por exemplo, criar uma VM a partir de um VHD, remover a VM, VM de modificação) e mostrar funcionalidades avançadas (por exemplo, criar uma VM com a memória dinâmica)
+- As configurações de exemplo devem ser parametrizadas (todos os valores devem ser passados para a configuração como parâmetros e não deve haver nenhum valores embutidos em código):
+
+  ```powershell
+  configuration Sample_xRemoteFile_DownloadFile
+  {
     param
     (
         [string[]] $nodeName = 'localhost',
@@ -159,38 +184,47 @@ configuration Sample_xRemoteFile_DownloadFile
             Headers = $headers
         }
     }
-}
-```
-- É uma boa prática incluir (comentado out) exemplo de como chamar a configuração com os valores reais no final do script de exemplo.
-Por exemplo, na configuração acima não se encontra necessariamente óbvios que é a melhor forma de o especificar UserAgent:
+  }
+  ```
 
-`UserAgent = [Microsoft.PowerShell.Commands.PSUserAgent]::InternetExplorer` Caso em que um comentário pode clarificar a execução da configuração pretendida:
-```
-<#
-Sample use (parameter values need to be changed according to your scenario):
+- É uma boa prática para incluir (comentado horizontalmente) de exemplo de como chamar a configuração com os valores reais no final do script de exemplo.
+  Por exemplo, na configuração acima não é necessariamente óbvio que é a melhor maneira de especificar UserAgent:
 
-Sample_xRemoteFile_DownloadFile -destinationPath "$env:SystemDrive\fileName.jpg" -uri "http://www.contoso.com/image.jpg"
+  `UserAgent = [Microsoft.PowerShell.Commands.PSUserAgent]::InternetExplorer` Caso em que um comentário pode esclarecer a execução pretendida da configuração:
 
-Sample_xRemoteFile_DownloadFile -destinationPath "$env:SystemDrive\fileName.jpg" -uri "http://www.contoso.com/image.jpg" `
--userAgent [Microsoft.PowerShell.Commands.PSUserAgent]::InternetExplorer -headers @{"Accept-Language" = "en-US"}
-#>
-```
-- Para cada exemplo, escreva uma breve descrição que explica o que faz e o significado dos parâmetros.
-- Certifique-se exemplos abrangem a maioria dos cenários importantes para o seu recurso e se não há nada em falta, certifique-se de que todos os executar e colocar a máquina no estado pretendido.
+  ```powershell
+  <#
+  Sample use (parameter values need to be changed according to your scenario):
 
-## <a name="error-messages-are-easy-to-understand-and-help-users-solve-problems"></a>Mensagens de erro são fáceis de compreender e ajudar utilizadores a resolver problemas ##
-Mensagens de erro boa devem ser:
-- Não existe: O problema maior com mensagens de erro é que não existem muitas vezes, por isso, certifique-se de que existem.
-- Fácil de compreender: códigos de erros humanos legível, não obscura
-- Preciso: Descrevem o que é exatamente o problema
-- Constructive: Conselhos saber como corrigir o problema
-- Um: Não blame utilizador ou marca-los sentir incorretos Certifique-se verificar erros em cenários de ponto a ponto (utilizando **início DscConfiguration**), porque diferem das devolvido ao executar diretamente as funções de recursos.
+  Sample_xRemoteFile_DownloadFile -destinationPath "$env:SystemDrive\fileName.jpg" -uri "http://www.contoso.com/image.jpg"
 
-## <a name="log-messages-are-easy-to-understand-and-informative-including-verbose-debug-and-etw-logs"></a>Mensagens de registo são fáceis de compreender e informativo (incluindo-verbose,-debug e registos ETW) ##
-Certifique-se de que os registos debitados pelo recurso são fáceis de compreender e forneça o valor ao utilizador. Recursos devem saída todas as informações que poderão ser úteis para o utilizador, mas mais registos nem sempre é melhor. Deve evitar redundância e exportar dados que não fornecer valor adicional – não se alguém passar por centenas de entradas de registo para encontrar aquilo procura. Obviamente, não existem registos não é uma solução aceitável para este problema seja.
+  Sample_xRemoteFile_DownloadFile -destinationPath "$env:SystemDrive\fileName.jpg" -uri "http://www.contoso.com/image.jpg" `
+  -userAgent [Microsoft.PowerShell.Commands.PSUserAgent]::InternetExplorer -headers @{"Accept-Language" = "en-US"}
+  #>
+  ```
 
-Quando o testar, também deve analisar verboso e registos de depuração (executando **início DscConfiguration** com-verbose e – depurar comutadores adequadamente), bem como registos ETW. Para ver registos de DSC ETW, aceda ao Visualizador de eventos e abra a seguinte pasta: aplicações e serviços da Microsoft - Windows - configuração de estado pretendido.  Por predefinição existe irá ser canal operacional, mas certifique-se de ativar registos analíticos e de depuração canais antes de executar a configuração.
-Para ativar registos analíticos/depuração canais, pode executar o script abaixo:
+- Para cada exemplo, escreva uma descrição breve que explica o que ele faz e o significado dos parâmetros.
+- Certifique-se exemplos abrangem a maioria dos cenários importantes para o seu recurso e se não há nada em falta, certifique-se de que todos são executados e colocar a máquina do estado pretendido.
+
+## <a name="error-messages-are-easy-to-understand-and-help-users-solve-problems"></a>Mensagens de erro são fáceis de compreender e ajudar os utilizadores a resolver problemas
+
+Boas mensagens de erro devem ser:
+
+- : O maior problema com mensagens de erro é que, muitas vezes, não existem, por isso, certifique-se de que eles estão lá.
+- Fácil de compreender: códigos de erro de leitura e não obscuro humano
+- Preciso: Descrever o que é exatamente o problema
+- Construtivos: Conselhos como corrigir o problema
+- Educado: Não o culparia usuário ou torná-los se aflija
+
+Certifique-se de verificar a erros em cenários de ponto a ponto (usando `Start-DscConfiguration`), porque eles podem ser diferentes das devolvido ao executar as funções de recurso diretamente.
+
+## <a name="log-messages-are-easy-to-understand-and-informative-including-verbose-debug-and-etw-logs"></a>Mensagens de registo são fáceis de compreender e informativos (incluindo – verboso, – depuração e os registos ETW)
+
+Certifique-se de que registos produzidos pelo recurso são fáceis de compreender e fornecer valor ao utilizador. Recursos devem produzir todas as informações que poderão ser úteis para os utilizadores, mas os registos mais nem sempre é melhor. Deve evitar redundância e saída de dados que não agregam valor adicional ao – não faça alguém passar por centenas de entradas de registo para encontrar aquilo procura. É claro, não existem registos não é uma solução aceitável para este problema seja.
+
+Ao testar, também deve analisar verboso e registos de depuração (executando `Start-DscConfiguration` com `–Verbose` e `–Debug` muda adequadamente), bem como os registos ETW. Para ver os registos DSC ETW, vá para o Visualizador de eventos e abra a seguinte pasta: aplicações e serviços da Microsoft - Windows - Desired State Configuration.  Por predefinição lá irá ser canal operacional, mas certifique-se de ativar a análise e depurar canais antes de executar a configuração.
+Para ativar canais analíticos/depuração, pode executar o script abaixo:
+
 ```powershell
 $statusEnabled = $true
 # Use "Analytic" to enable Analytic channel
@@ -204,47 +238,66 @@ if($statusEnabled -eq $log.IsEnabled)
 }
 Invoke-Expression $commandToExecute
 ```
-## <a name="resource-implementation-does-not-contain-hardcoded-paths"></a>Implementação de recursos não contém codificado caminhos ##
-Certifique-se existem não existem caminhos codificado da implementação de recursos, particularmente se estes partem do princípio de idioma (en-us), ou quando existem variáveis do sistema que podem ser utilizadas.
-Se o recurso necessário aceder aos caminhos específicos, utilize as variáveis de ambiente em vez de codificar o caminho, dado que pode divergir nas outras máquinas.
+
+## <a name="resource-implementation-does-not-contain-hardcoded-paths"></a>Implementação de recursos não contém caminhos codificados
+
+Certifique-se não há nenhum caminho codificado na implementação de recursos, especialmente se partem do princípio de idioma (en-us), ou quando existem variáveis de sistema que podem ser utilizadas.
+Se precisar do recurso aceder aos caminhos específicos, utilize as variáveis de ambiente em vez de codificar o caminho, porque ele poderá ser diferente em outras máquinas.
 
 Exemplo:
 
 Em vez de:
-```
+
+```powershell
 $tempPath = "C:\Users\kkaczma\AppData\Local\Temp\MyResource"
 $programFilesPath = "C:\Program Files (x86)"
- ```
-Pode escrever:
 ```
+
+Pode escrever:
+
+```powershell
 $tempPath = Join-Path $env:temp "MyResource"
 $programFilesPath = ${env:ProgramFiles(x86)}
 ```
-## <a name="resource-implementation-does-not-contain-user-information"></a>Implementação de recursos não contém informações de utilizador ##
-Certificar-se de que não são nomes de e-mail, as informações da conta ou nomes de pessoas no código.
-## <a name="resource-was-tested-with-validinvalid-credentials"></a>Recurso foi testado com credenciais válidas/inválido. ##
-Se o seu recurso aceita uma credencial como parâmetro:
-- Certifique-se o recurso funciona quando o sistema Local (ou a conta de computador para recursos remotos) não tem acesso.
-- Certifique-se de que funciona a recursos com uma credencial especificada para obter, definir e teste
-- Se o seu recurso acede partilhas, teste todos os variantes que tem de suportar, tais como:
+
+## <a name="resource-implementation-does-not-contain-user-information"></a>Implementação de recursos não contém informações de utilizador
+
+Certifique-se de que não são nomes de e-mail, as informações da conta ou nomes de pessoas no código.
+
+## <a name="resource-was-tested-with-validinvalid-credentials"></a>Recurso foi testado com credenciais válidas/inválido
+
+Se o seu recurso usa uma credencial como parâmetro:
+
+- Verifique se o recurso funciona quando o sistema Local (ou a conta de computador para recursos remotos) não tem acesso.
+- Certifique-se de que a funciona de recursos com uma credencial especificada para obter, definir e teste
+- Se o recurso aceder a partilhas, teste todas as variantes que tem de suportar, tais como:
   - Partilhas de padrão do windows.
   - Partilhas DFS.
-  - Partilhas SAMBA (se pretende suportar Linux.)
+  - Partilhas do SAMBA (se quiser suporte Linux.)
 
-## <a name="resource-does-not-require-interactive-input"></a>Recurso não necessita de entrada interativa ##
-**Get/conjunto/teste-TargetResource** funções deve ser executadas automaticamente e não terá de aguardar para o utilizador de entrada em qualquer fase de execução (por exemplo, não deve utilizar **Get-Credential** dentro estas funções). Se necessitar de intervenção do utilizador, deve transmiti-lo para a configuração como parâmetro durante a fase de compilação.
-## <a name="resource-functionality-was-thoroughly-tested"></a>Funcionalidade de recurso foi testada exaustivamente ##
-Esta lista de verificação contém itens que são importantes para testar e/ou são frequentemente omitidos. Será bunch dos testes, principalmente funcionais aqueles que serão específicos para o recurso estiver a testar e não são aqui mencionados. Não se esqueça sobre casos de teste negativos.
-## <a name="best-practice-resource-module-contains-tests-folder-with-resourcedesignertestsps1-script"></a>Recomendado: módulo de recursos contém a pasta de testes com script de ResourceDesignerTests.ps1 ##
-É uma boa prática para criar a pasta "testes" no interior do módulo de recurso, criar ficheiro de ResourceDesignerTests.ps1 e adicionar testes utilizando **teste xDscResource** e **teste xDscSchema** para todos os recursos em determinados módulo.
-Desta forma pode validar rapidamente esquemas de todos os recursos dos módulos indicados e efetue uma sanity verificar antes de publicar.
-Para xRemoteFile, ResourceTests.ps1 pode ter um aspeto tão simples como:
+## <a name="resource-does-not-require-interactive-input"></a>Recurso não necessita de entrada interativa
+
+**Get/Set/teste-TargetResource** funções deve ser executadas automaticamente e não terá de aguardar para a entrada do utilizador em qualquer fase de execução (por exemplo, não deve usar `Get-Credential` dentro dessas funções). Se precisar de fornecer a entrada do usuário, deve passá-lo para a configuração como parâmetro durante a fase de compilação.
+
+## <a name="resource-functionality-was-thoroughly-tested"></a>Funcionalidade de recursos foi totalmente testada
+
+Esta lista de verificação contém itens que são importantes a serem testados e/ou muitas vezes seja perdidas. Haverá vários testes, principalmente aqueles funcionais que serão específicos para o recurso estiver a testar e não são mencionadas aqui. Não se esqueça de sobre casos de teste negativos.
+
+## <a name="best-practice-resource-module-contains-tests-folder-with-resourcedesignertestsps1-script"></a>Melhor prática: módulo de recursos contém a pasta de testes com ResourceDesignerTests.ps1 script
+
+É uma boa prática para criar a pasta "testes" no módulo de recursos, crie `ResourceDesignerTests.ps1` de ficheiros e adicionar testes usando **teste xDscResource** e **teste xDscSchema** para todos os recursos em determinados módulo.
+Dessa forma pode validar rapidamente esquemas de todos os recursos dos módulos de determinado e fazer uma sanidade verificar antes de publicar.
+Para xRemoteFile, `ResourceTests.ps1` pode ter um aspeto tão simples como:
+
 ```powershell
 Test-xDscResource ..\DSCResources\MSFT_xRemoteFile
 Test-xDscSchema ..\DSCResources\MSFT_xRemoteFile\MSFT_xRemoteFile.schema.mof
 ```
-##<a name="best-practice-resource-folder-contains-resource-designer-script-for-generating-schema"></a>Recomendado: a pasta do recurso contém script estruturador do recurso para gerar o esquema # #
-Cada recurso deve conter um script de estruturador do recurso que gera um esquema de mof do recurso. Este ficheiro deve ser colocado na <ResourceName>\ResourceDesignerScripts e será nomeado gerar<ResourceName>Schema.ps1 para o recurso de xRemoteFile este ficheiro deverá ser chamado GenerateXRemoteFileSchema.ps1 e conter:
+
+## <a name="best-practice-resource-folder-contains-resource-designer-script-for-generating-schema"></a>Melhor prática: pasta de recurso contém o script do estruturador de recurso para gerar esquema
+
+Cada recurso deve conter um script de designer de recursos que gera um esquema de mof do recurso. Este ficheiro deve ser colocado na `<ResourceName>\ResourceDesignerScripts` e ter o nome gerar `<ResourceName>Schema.ps1` para o recurso de xRemoteFile este ficheiro seria chamado `GenerateXRemoteFileSchema.ps1` e conter:
+
 ```powershell
 $DestinationPath = New-xDscResourceProperty -Name DestinationPath -Type String -Attribute Key -Description 'Path under which downloaded or copied file should be accessible after operation.'
 $Uri = New-xDscResourceProperty -Name Uri -Type String -Attribute Required -Description 'Uri of a file which should be copied or downloaded. This parameter supports HTTP and HTTPS values.'
@@ -256,10 +309,13 @@ $CertificateThumbprint = New-xDscResourceProperty -Name CertificateThumbprint -T
 
 New-xDscResource -Name MSFT_xRemoteFile -Property @($DestinationPath, $Uri, $Headers, $UserAgent, $Ensure, $Credential, $CertificateThumbprint) -ModuleName xPSDesiredStateConfiguration2 -FriendlyName xRemoteFile
 ```
-## <a name="best-practice-resource-supports--whatif"></a>Recomendado: recurso suporta - whatif ##
-Se o recurso está a efetuar operações "perigosos", é recomendável implementar - whatif funcionalidade. Depois de terminar, certifique-se de que a saída de whatif descreve corretamente operações que aconteceria se o comando foi executado sem whatif comutador.
-Além disso, certifique-se de que não é executado operações (são efetuadas sem alterações para o estado do nó) quando o comutador – whatif está presente.
-Por exemplo, vamos supor que iremos estiver a testar o recurso do ficheiro. Segue-se configuração simple que cria o ficheiro "test.txt" com conteúdo "teste":
+
+## <a name="best-practice-resource-supports--whatif"></a>Melhor prática: - WhatIf oferece suporte a recursos
+
+Se o recurso está a efetuar operações de "perigosas", é uma boa prática para implementar `-WhatIf` funcionalidade. Depois de terminar, certifique-se de que `-WhatIf` saída corretamente descreve as operações que acontecem se o comando foi executado sem `-WhatIf` mudar.
+Além disso, certifique-se de que as operações não é executado (não para o estado do nó são feitas alterações) quando `–WhatIf` comutador está presente.
+Por exemplo, vamos supor que está a testar o recurso de ficheiros. Segue-se configuração simples que cria o ficheiro `test.txt` com conteúdo "teste":
+
 ```powershell
 configuration config
 {
@@ -274,9 +330,14 @@ configuration config
 }
 config
 ```
-Se podemos compilar e, em seguida, executar a configuração com o parâmetro – whatif, o resultado é informar-nos exatamente que acontece quando é executada a configuração. A configuração do próprio no entanto não foi executada (o ficheiro de test.txt não foi criado).
+
+Se vamos compilar e, em seguida, executar a configuração com o `-WhatIf` comutador, a saída é a indicar exatamente o que aconteceria quando executamos a configuração. A configuração do próprio no entanto não foi executada (`test.txt` ficheiro não foi criado).
+
 ```powershell
-Start-DscConfiguration -path .\config -ComputerName localhost -wait -verbose -whatif
+Start-DscConfiguration -Path .\config -ComputerName localhost -Wait -Verbose -WhatIf
+```
+
+```output
 VERBOSE: Perform operation 'Invoke CimMethod' with following parameters, ''methodName' =
 SendConfigurationApply,'className' = MSFT_DSCLocalConfigurationManager,'namespaceName' =
 root/Microsoft/Windows/DesiredStateConfiguration'.
@@ -299,4 +360,4 @@ VERBOSE: [X]: LCM:  [ End    Set      ]    in  0.1050 seconds.
 VERBOSE: Operation 'Invoke CimMethod' complete.
 ```
 
-Esta lista não é exaustiva, mas abrange a muitas questões importantes que podem ser encontrados ao conceber, desenvolver e testar a recursos de DSC.
+Esta lista não é exaustiva, mas abrange vários problemas importantes que podem ser encontrados durante a criação, desenvolvimento e teste de recursos de DSC.

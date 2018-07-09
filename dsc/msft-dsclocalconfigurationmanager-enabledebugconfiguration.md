@@ -1,20 +1,19 @@
 ---
 ms.date: 06/12/2017
-keywords: DSC, do powershell, a configuração, a configuração
+keywords: DSC, powershell, configuração, a configuração
 title: Método EnableDebugConfiguration da classe MSFT_DSCLocalConfigurationManager
-ms.openlocfilehash: 9e2a978f9d16abaed959be022229db4da5fd65bd
-ms.sourcegitcommit: 54534635eedacf531d8d6344019dc16a50b8b441
+ms.openlocfilehash: b2eaebfa901cb5d93fd0183287073e6b31f975d1
+ms.sourcegitcommit: 8b076ebde7ef971d7465bab834a3c2a32471ef6f
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 05/17/2018
-ms.locfileid: "34218200"
+ms.lasthandoff: 07/06/2018
+ms.locfileid: "37892404"
 ---
 # <a name="enabledebugconfiguration-method-of-the-msftdsclocalconfigurationmanager-class"></a>Método EnableDebugConfiguration da classe MSFT_DSCLocalConfigurationManager
 
-Ativa a depuração de recursos de DSC.
+Permite a depuração de recursos de DSC.
 
-<a name="syntax"></a>Sintaxe
-------
+## <a name="syntax"></a>Sintaxe
 
 ```mof
 uint32 EnableDebugConfiguration(
@@ -22,13 +21,11 @@ uint32 EnableDebugConfiguration(
 );
 ```
 
-<a name="parameters"></a>Parâmetros
-----------
+## <a name="parameters"></a>Parâmetros
 
-*BreakAll* \[no\] define um ponto de interrupção em cada linha no script de recursos.
+*BreakAll* \[no\] define um ponto de interrupção em cada linha do script de recursos.
 
-## <a name="return-value"></a>Valor devolvido
-------------
+## <a name="return-value"></a>Valor de retorno
 
 Devolve zero com êxito; caso contrário, devolve um código de erro.
 
@@ -37,13 +34,11 @@ Devolve zero com êxito; caso contrário, devolve um código de erro.
 Este é um método estático.
 
 ## <a name="requirements"></a>Requisitos
-------------
->**MOF:** DscCore.mof
 
->**Namespace**: Root\Microsoft\Windows\DesiredStateConfiguration
+**MOF:** DscCore.mof
 
+**Namespace**: Root\Microsoft\Windows\DesiredStateConfiguration
 
 ## <a name="see-also"></a>Consulte também
-
 
 [**MSFT_DSCLocalConfigurationManager**](msft-dsclocalconfigurationmanager.md)

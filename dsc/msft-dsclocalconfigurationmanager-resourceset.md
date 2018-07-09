@@ -1,20 +1,19 @@
 ---
 ms.date: 06/12/2017
-keywords: DSC, do powershell, a configuração, a configuração
+keywords: DSC, powershell, configuração, a configuração
 title: Método ResourceSet da classe MSFT_DSCLocalConfigurationManager
-ms.openlocfilehash: 0c9c1d33117067d76d61036d5839f0b676eb4a97
-ms.sourcegitcommit: 54534635eedacf531d8d6344019dc16a50b8b441
+ms.openlocfilehash: 2712b7ff0a19e643c1f343d436c084f8970c9dd4
+ms.sourcegitcommit: 8b076ebde7ef971d7465bab834a3c2a32471ef6f
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 05/17/2018
-ms.locfileid: "34219621"
+ms.lasthandoff: 07/06/2018
+ms.locfileid: "37892105"
 ---
 # <a name="resourceset-method-of-the-msftdsclocalconfigurationmanager-class"></a>Método ResourceSet da classe MSFT_DSCLocalConfigurationManager
 
-Chamadas diretamente a **definir** método de um recurso de DSC.
+Chama diretamente a **definir** método de um recurso de DSC.
 
-<a name="syntax"></a>Sintaxe
-------
+## <a name="syntax"></a>Sintaxe
 
 ```mof
 uint32 ResourceSet(
@@ -25,19 +24,17 @@ uint32 ResourceSet(
 );
 ```
 
-<a name="parameters"></a>Parâmetros
-----------
+## <a name="parameters"></a>Parâmetros
 
-*ResourceType* \[no\] o nome do recurso para chamar.
+*ResourceType* \[no\] o nome do recurso a chamar.
 
-*ModuleName* \[no\] o nome do módulo que contém o recurso a chamada.
+*ModuleName* \[no\] o nome do módulo que contém o recurso para chamar.
 
-*resourceProperty* \[no\] Especifica o nome de propriedade de recursos e o respetivo valor numa tabela hash como chave e valor, respetivamente. Utilize o [Get-DscResource](https://technet.microsoft.com/library/dn521625.aspx) cmdlet para detetar as propriedades de recurso e os respetivos tipos.
+*resourceProperty* \[no\] Especifica o nome de propriedade de recursos e seu valor numa tabela de hash como chave e valor, respectivamente. Utilize o [Get-DscResource](/powershell/module/PSDesiredStateConfiguration/Get-DscResource) cmdlet para detetar as propriedades de recurso e os respetivos tipos.
 
-*RebootRequired* \[saída\] no retorno, esta propriedade está definida como **verdadeiro** se o nó de destino tem de ser reiniciado.
+*RebootRequired* \[horizontalmente\] em retorno, esta propriedade é definida como **verdadeiro** se o nó de destino tem de ser reiniciado.
 
-## <a name="return-value"></a>Valor devolvido
-------------
+## <a name="return-value"></a>Valor de retorno
 
 Devolve zero com êxito; caso contrário, devolve um código de erro.
 
@@ -46,13 +43,11 @@ Devolve zero com êxito; caso contrário, devolve um código de erro.
 Este é um método estático.
 
 ## <a name="requirements"></a>Requisitos
-------------
->**MOF:** DscCore.mof
 
->**Namespace**: Root\Microsoft\Windows\DesiredStateConfiguration
+**MOF:** DscCore.mof
 
+**Namespace**: Root\Microsoft\Windows\DesiredStateConfiguration
 
 ## <a name="see-also"></a>Consulte também
-
 
 [**MSFT_DSCLocalConfigurationManager**](msft-dsclocalconfigurationmanager.md)

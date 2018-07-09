@@ -2,41 +2,41 @@
 ms.date: 06/12/2017
 ms.topic: conceptual
 keywords: wmf,powershell,setup
-title: Melhoramentos de motor do PowerShell no WMF 5.1
-ms.openlocfilehash: 98095904157a675bbe84616b1d9cbb22689cd059
-ms.sourcegitcommit: 54534635eedacf531d8d6344019dc16a50b8b441
+title: Melhorias do mecanismo do PowerShell no WMF 5.1
+ms.openlocfilehash: 738f72b910de7d44f48309013237d523d0dd40a4
+ms.sourcegitcommit: 8b076ebde7ef971d7465bab834a3c2a32471ef6f
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 05/17/2018
-ms.locfileid: "34218523"
+ms.lasthandoff: 07/06/2018
+ms.locfileid: "37892897"
 ---
-#<a name="powershell-engine-improvements"></a>Melhoramentos do motor de PowerShell
+# <a name="powershell-engine-improvements"></a>Melhorias do mecanismo do PowerShell
 
-Os seguintes melhoramentos para o motor de PowerShell core têm sido implementados em WMF 5.1:
+Os seguintes aprimoramentos para o motor do PowerShell core foram implementados no WMF 5.1:
 
+## <a name="performance"></a>Desempenho
 
-## <a name="performance"></a>Desempenho ##
-
-Desempenho melhorou em algumas áreas importantes:
+O desempenho melhorou em algumas áreas importantes:
 
 - Arranque
-- Pipelines para cmdlets, como ForEach-Object e Where-Object é aproximadamente 50% mais rápido
+- Para cmdlets, como o pipelining `ForEach-Object` e `Where-Object` aproximadamente 50% mais rápida
 
-Alguns melhoramentos de exemplo (os resultados podem variar consoante o hardware):
+Alguns aperfeiçoamentos de exemplo (os resultados podem variar consoante o hardware):
 
 | Cenário | 5.0 tempo de (ms) | 5.1 tempo (ms) |
 | -------- | :---------------: | :---------------: |
 | `powershell -command "echo 1"` | 900 | 250 |
-| Primeiro alguma vez execução de PowerShell: `powershell -command "Unknown-Command"` | 30000 | 13000 |
-| Cache de análise de comandos incorporada: `powershell -command "Unknown-Command"` | 7000 | 520 |
+| Primeiro nunca executar o PowerShell: `powershell -command "Unknown-Command"` | 30000 | 13000 |
+| Cache de análise de um comando incorporado: `powershell -command "Unknown-Command"` | 7000 | 520 |
 | <code>1..1000000 &#124; % { }</code> | 1400 | 750 |
 
-> Tenha em atenção, uma alteração relacionados com o arranque pode afetar alguns não suportado cenários.
-> PowerShell já não lê os ficheiros `$pshome\*.ps1xml` – estes ficheiros tem sido convertidos em c# para evitar alguns ficheiros e CPU sobrecarga de processamento XML ficheiros.
-Os ficheiros continuarão a existir para suportar V2 lado lado a lado, para que o se alterar o conteúdo do ficheiro, não terá qualquer efeito para V5, apenas V2.
-Tenha em atenção que o conteúdo desses ficheiros a alteração nunca foi um cenário suportado.
+> [!Note]
+> Uma alteração relacionada à inicialização pode afetar alguns cenários não suportados.
+> PowerShell já não lê os arquivos `$pshome\*.ps1xml` - - esses arquivos foram convertidos em c# para evitar alguns ficheiros e sobrecarga de CPU de processamento XML ficheiros.
+> Os arquivos ainda existem para suporte V2 lado a lado, para que se alterar o conteúdo do arquivo, ele não terá qualquer efeito para V5, apenas V2.
+> Tenha em atenção que a alteração do conteúdo desses arquivos nunca foi um cenário suportado.
 
-Outra alteração visível é como PowerShell coloca em cache os comandos exportados e outras informações para módulos que são instaladas num sistema.
+Outra alteração visível é como PowerShell coloca em cache os comandos exportados e outras informações para módulos que estão instalados num sistema.
 Anteriormente, esta cache foi armazenado no diretório `$env:LOCALAPPDATA\Microsoft\Windows\PowerShell\CommandAnalysis`.
-WMF 5.1, a cache é um ficheiro único `$env:LOCALAPPDATA\Microsoft\Windows\PowerShell\ModuleAnalysisCache`.
-Consulte [módulo Analysis Cache](scenarios-features.md#module-analysis-cache) para obter mais detalhes.
+No WMF 5.1, a cache é um único arquivo `$env:LOCALAPPDATA\Microsoft\Windows\PowerShell\ModuleAnalysisCache`.
+Ver [Cache de análise de módulo](scenarios-features.md#module-analysis-cache) para obter mais detalhes.

@@ -3,22 +3,22 @@ ms.date: 06/12/2017
 contributor: manikb
 keywords: cmdlet do powershell do galeria, psget
 title: Cmdlets de resolução de problemas
-ms.openlocfilehash: e8890cb6bbe661b8524d83cabf91483acbde8095
-ms.sourcegitcommit: 54534635eedacf531d8d6344019dc16a50b8b441
+ms.openlocfilehash: c0a1fbcafd8c4443dc9d628c54c4c525d9701861
+ms.sourcegitcommit: 8b076ebde7ef971d7465bab834a3c2a32471ef6f
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 05/17/2018
-ms.locfileid: "34219832"
+ms.lasthandoff: 07/06/2018
+ms.locfileid: "37892479"
 ---
 # <a name="troubleshooting-cmdlets"></a>Cmdlets de resolução de problemas
 
-## <a name="how-to-resolve-warning-package-your-package-name-failed-to-download-issue"></a>Como resolver "Aviso: Falha ao transferir o pacote 'nome do seu pacote'" problema?
+## <a name="how-to-resolve-warning-package-your-package-name-failed-to-download-issue"></a>Como resolver "Aviso: não foi possível transferir o pacote 'nome do seu pacote'" problema
 
-Foi reportado que instalar módulo módulo de atualização, por vezes, falha ou em algumas máquinas.
-Com base na nossa investigação, é algo com a ligação de rede.
-Foi actualizado recentemente fornecedor NuGet para que pode transferir pacotes de forma fiável.
-Pode seguir as instruções abaixo para instalar a compilação mais recente do fornecedor do NuGet e, em seguida, instalar ou atualizar o seu módulo.
-Vamos utilizar o módulo de 'Azure' como um exemplo abaixo.
+É reportado que `Install-Module` ou `Update-Module` falhar, às vezes, em algumas máquinas.
+Com base na nossa investigação, é algo a ver com a ligação de rede.
+Recentemente atualizámos fornecedor NuGet, de modo a que pode transferir pacotes de forma fiável.
+Pode seguir as instruções abaixo para instalar a compilação mais recente do fornecedor NuGet e, em seguida, instalar ou atualizar o seu módulo.
+Vamos utilizar o módulo "Azure" como exemplo abaixo.
 
 ```powershell
 Install-PackageProvider NuGet -MinimumVersion 2.8.5.206 -Force

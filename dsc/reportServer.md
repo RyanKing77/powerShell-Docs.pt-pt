@@ -1,32 +1,32 @@
 ---
 ms.date: 06/12/2017
-keywords: DSC, do powershell, a configuração, a configuração
+keywords: DSC, powershell, configuração, a configuração
 title: Utilizar um servidor de relatório de DSC
-ms.openlocfilehash: 143e0bdd9b637cee87a676ed327fe6ff3a7fd719
-ms.sourcegitcommit: 54534635eedacf531d8d6344019dc16a50b8b441
+ms.openlocfilehash: bcd414e9cc6d3b321676aaab6bbc3ca1b02e80aa
+ms.sourcegitcommit: 8b076ebde7ef971d7465bab834a3c2a32471ef6f
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 05/16/2018
-ms.locfileid: "34188552"
+ms.lasthandoff: 07/06/2018
+ms.locfileid: "37893142"
 ---
 # <a name="using-a-dsc-report-server"></a>Utilizar um servidor de relatório de DSC
 
-> Aplica-se a: O Windows PowerShell 5.0
+Aplica-se a: O Windows PowerShell 5.0
 
 > [!IMPORTANT]
-> O servidor de solicitação (funcionalidade do Windows *DSC serviço*) é um componente suportado do Windows Server no entanto, são não planos para oferecer novas funcionalidades ou capacidades. É recomendado para começar a transição geridos os clientes [Automation DSC do Azure](/azure/automation/automation-dsc-getting-started) (inclui funcionalidades além do servidor de solicitação no Windows Server) ou uma das soluções de Comunidade listados [aqui](pullserver.md#community-solutions-for-pull-service).
+> O servidor de solicitação (recurso do Windows *DSC-serviço*) é um componente suportado do Windows Server no entanto, não existem planos para oferecer novas funcionalidades ou capacidades. É recomendado para começar a fazer a transição geridos os clientes [DSC de automatização do Azure](/azure/automation/automation-dsc-getting-started) (inclui funcionalidades além do servidor de solicitação de mensagens em fila no Windows Server) ou uma das soluções da Comunidade listados [aqui](pullserver.md#community-solutions-for-pull-service).
+>
+> **Tenha em atenção** o servidor de relatórios descrito neste tópico não está disponível no PowerShell 4.0.
 
->**Nota:** o servidor de relatórios descrito neste tópico não está disponível no PowerShell 4.0.
-
-O Gestor de configuração Local (MMC) de um nó pode ser configurado para enviar relatórios sobre o estado de configuração para um servidor de solicitação, que, em seguida, pode ser consultado para obter os dados. Sempre que o nó verifica e aplica-se de uma configuração, envia um relatório para o servidor de relatórios. Estes relatórios são armazenados numa base de dados no servidor e podem ser obtidos ao chamar o serviço web de relatórios. Cada relatório contém informações sobre como as configurações foram aplicadas e se estes foi concluída com êxito, os recursos utilizados, quaisquer erros que foram iniciados e iniciarem e concluir vezes.
+O Gestor de configuração Local (LCM) de um nó pode ser configurado para enviar relatórios sobre o estado de configuração para um servidor de solicitação, em seguida, pode ser consultado para obter esses dados. Sempre que o nó verifica e aplica-se de uma configuração, envia um relatório para o servidor de relatórios. Estes relatórios são armazenados numa base de dados no servidor e podem ser obtidos chamando o serviço web de relatórios. Cada relatório contém informações como que configurações foram aplicadas e se eles foi concluída com êxito, os recursos utilizados, quaisquer erros que foram lançados e iniciar e terminar vezes.
 
 ## <a name="configuring-a-node-to-send-reports"></a>Configurar um nó para enviar relatórios
 
-Indique um nó para enviar relatórios para um servidor utilizando um **ReportServerWeb** bloquear na configuração de MMC do nó (para obter informações sobre como configurar o MMC, consulte [configurar o Gestor de configuração Local](metaConfig.md) ). O servidor ao qual o nó envia relatórios tem de ser configurado como um servidor de solicitação web (não é possível enviar relatórios para uma partilha SMB). Para obter informações sobre como configurar um servidor de solicitação, consulte [configurar um servidor de solicitação do DSC web](pullServer.md). O servidor de relatórios pode ser o mesmo serviço a partir do qual o nó obtém as configurações e obtém os recursos ou pode ser um serviço diferente.
+Diz que um nó para enviar relatórios a um servidor com uma **ReportServerWeb** Bloquear configuração de LCM do nó (para obter informações sobre como configurar o LCM, consulte [configurar o Gestor de configuração Local](metaConfig.md) ). O servidor ao qual o nó envia relatórios tem de ser definido como um servidor de solicitação da web (não é possível enviar relatórios para uma partilha SMB). Para obter informações sobre como configurar um servidor de solicitação, consulte [como configurar um servidor de solicitação do DSC web](pullServer.md). O servidor de relatórios pode ser o mesmo serviço a partir do qual o nó obtém configurações e obtém os recursos, ou pode ser um serviço diferente.
 
-No **ReportServerWeb** bloco, especifique o URL do serviço de solicitação e uma chave de registo que é conhecida no servidor.
+Na **ReportServerWeb** bloco, especifica a URL do serviço pull e uma chave de registo que é conhecida para o servidor.
 
-A seguinte configuração configura um nó para as configurações de solicitação a partir de um serviço e enviar relatórios para um serviço num servidor diferente.
+A seguinte configuração configura um nó para as configurações de solicitação de um serviço e enviar relatórios para um serviço num servidor diferente.
 
 ```powershell
 [DSCLocalConfigurationManager()]
@@ -56,10 +56,11 @@ configuration ReportClientConfig
         }
     }
 }
+
 ReportClientConfig
 ```
 
-A seguinte configuração configura um nó para utilizar um servidor único para configurações, recursos e relatórios.
+A seguinte configuração configura um nó para utilizar um único servidor para configurações, recursos e geração de relatórios.
 
 ```powershell
 [DSCLocalConfigurationManager()]
@@ -91,20 +92,26 @@ configuration PullClientConfig
 PullClientConfig
 ```
 
->**Nota:** pode atribuir o nome do serviço web que pretender quando configurar um servidor de solicitação, mas o **ServerURL** propriedade tem de corresponder ao nome do serviço.
+> [!NOTE]
+> Pode nomear o serviço web que quiser ao configurar um servidor de solicitação, mas a **ServerURL** propriedade tem de corresponder ao nome do serviço.
 
-## <a name="getting-report-data"></a>Obter dados do relatório
+## <a name="getting-report-data"></a>Obter dados de relatório
 
-Relatórios enviados para o servidor de solicitação são introduzidos numa base de dados no servidor. Os relatórios estão disponíveis através de chamadas para o serviço web. Para obter relatórios para um nó específico, enviar um pedido de HTTP para o serviço de web de relatório no seguinte formato: `http://CONTOSO-REPORT:8080/PSDSCReportServer.svc/Nodes(AgentId= 'MyNodeAgentId')/Reports` onde `MyNodeAgentId` é AgentId do nó para o qual pretende obter relatórios. Pode obter o AgentID para um nó ao chamar [Get-DscLocalConfigurationManager](https://technet.microsoft.com/library/dn407378.aspx) nesse nó.
+Relatórios enviados para o servidor de solicitação são inseridos num banco de dados no servidor. Os relatórios estão disponíveis por meio de chamadas para o serviço web. Para obter relatórios para um nó específico, enviar um pedido HTTP para o serviço da web de relatório no seguinte formato: `http://CONTOSO-REPORT:8080/PSDSCReportServer.svc/Nodes(AgentId='MyNodeAgentId')/Reports` onde `MyNodeAgentId` é AgentId do nó para o qual pretende obter relatórios. Pode obter o AgentID para um nó chamando [Get-dsclocalconfigurationmanager para](/powershell/module/PSDesiredStateConfiguration/Get-DscLocalConfigurationManager) nesse nó.
 
-Os relatórios são devolvidos como uma matriz de objetos JSON.
+Os relatórios são retornados como uma matriz de objetos JSON.
 
-O script seguinte devolve os relatórios para o nó no qual é executada:
+O script a seguir devolve os relatórios para o nó no qual é executado:
 
 ```powershell
 function GetReport
 {
-    param($AgentId = "$((glcm).AgentId)", $serviceURL = "http://CONTOSO-REPORT:8080/PSDSCPullServer.svc")
+    param
+    (
+        $AgentId = "$((glcm).AgentId)", 
+        $serviceURL = "http://CONTOSO-REPORT:8080/PSDSCPullServer.svc"
+    )
+
     $requestUri = "$serviceURL/Nodes(AgentId= '$AgentId')/Reports"
     $request = Invoke-WebRequest -Uri $requestUri  -ContentType "application/json;odata=minimalmetadata;streaming=true;charset=utf-8" `
                -UseBasicParsing -Headers @{Accept = "application/json";ProtocolVersion = "2.0"} `
@@ -114,15 +121,16 @@ function GetReport
 }
 ```
 
-## <a name="viewing-report-data"></a>Visualizar dados de relatório
+## <a name="viewing-report-data"></a>Ver os dados de relatório
 
-Se definir uma variável para o resultado do **GetReport** função, pode ver os campos individuais num elemento da matriz devolvido:
+Se definir uma variável para o resultado do **GetReport** função, pode ver os campos individuais num elemento da matriz que é devolvido:
 
 ```powershell
 $reports = GetReport
 $reports[1]
+```
 
-
+```output
 JobId                : 019dfbe5-f99f-11e5-80c6-001dd8b8065c
 OperationType        : Consistency
 RefreshMode          : Pull
@@ -156,19 +164,21 @@ StatusData           : {{"StartDate":"2016-04-03T06:21:43.7220000-07:00","IPV6Ad
 AdditionalData       : {}
 ```
 
-Por predefinição, os relatórios são ordenados por **JobID**. Para obter o relatório mais recente, pode ordenar os relatórios, descendente **StartTime** propriedade e, em seguida, obter o primeiro elemento da matriz:
+Por predefinição, os relatórios são ordenados pelo **JobID**. Para obter o relatório mais recente, pode ordenar os relatórios por descendentes **StartTime** propriedade e, em seguida, obter o primeiro elemento da matriz:
 
 ```powershell
 $reportsByStartTime = $reports | Sort-Object {$_."StartTime" -as [DateTime] } -Descending
 $reportMostRecent = $reportsByStartTime[0]
 ```
 
-Tenha em atenção que o **StatusData** propriedade é um objeto com um número de propriedades. Esta é onde muito os dados de relatórios. Vamos observar os campos individuais do **StatusData** propriedade para o relatório mais recente:
+Tenha em atenção que o **StatusData** propriedade é um objeto com várias propriedades. Esta é onde muito do que os dados de relatório. Vamos examinar os campos individuais do **StatusData** propriedade para o relatório mais recente:
 
 ```powershell
 $statusData = $reportMostRecent.StatusData | ConvertFrom-Json
 $statusData
+```
 
+```output
 StartDate                  : 2016-04-04T11:21:41.2990000-07:00
 IPV6Addresses              : {2001:4898:d8:f2f2:852b:b255:b071:283b, fe80::852b:b255:b071:283b%12, ::2000:0:0:0, ::1...}
 DurationInSeconds          : 25
@@ -201,11 +211,13 @@ Locale                     : en-US
 Mode                       : Pull
 ```
 
-Entre outras coisas, isto mostra que a configuração mais recente chamado dois recursos e se uma no estado pretendido, e um deles não era. Pode obter uma saída mais legível de apenas o **ResourcesNotInDesiredState** propriedade:
+Entre outras coisas, isso mostra que a configuração mais recente chamado dois recursos e que um deles estava no estado pretendido e uma delas não era. Pode obter uma saída mais legível de apenas o **ResourcesNotInDesiredState** propriedade:
 
 ```powershell
 $statusData.ResourcesInDesiredState
+```
 
+```output
 SourceInfo        : C:\ReportTest\Sample_xFirewall_AddFirewallRule.ps1::16::9::Archive
 ModuleName        : PSDesiredStateConfiguration
 DurationInSeconds : 2.672
@@ -219,9 +231,12 @@ ConfigurationName : Sample_ArchiveFirewall
 InDesiredState    : True
 ```
 
-Tenha em atenção que estes exemplos se destinam a ter uma ideia do que pode fazer com dados de relatório. Para uma introdução sobre como trabalhar com JSON no PowerShell, consulte [reproduzir com JSON e PowerShell](https://blogs.technet.microsoft.com/heyscriptingguy/2015/10/08/playing-with-json-and-powershell/).
+Tenha em atenção que estes exemplos destinam-se para dar uma idéia do que pode fazer com dados de relatório. Para obter uma introdução sobre como trabalhar com JSON no PowerShell, consulte [Brincando com o JSON e o PowerShell](https://blogs.technet.microsoft.com/heyscriptingguy/2015/10/08/playing-with-json-and-powershell/).
 
 ## <a name="see-also"></a>Consulte Também
-- [Configurar o Gestor de configuração Local](metaConfig.md)
-- [Configurar um servidor de solicitação do DSC web](pullServer.md)
-- [Configurar um cliente de solicitação através de nomes de configuração](pullClientConfigNames.md)
+
+[Configurar o Gestor de configuração Local](metaConfig.md)
+
+[Como configurar um servidor de solicitação da web de DSC](pullServer.md)
+
+[Configurar um cliente de solicitação através de nomes de configuração](pullClientConfigNames.md)

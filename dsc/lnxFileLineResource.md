@@ -1,17 +1,17 @@
 ---
 ms.date: 06/12/2017
-keywords: DSC, do powershell, a configuração, a configuração
-title: DSC de Linux nxFileLine recursos
-ms.openlocfilehash: 6b927839c23478aa9916a5d23836b31fccc58484
-ms.sourcegitcommit: 54534635eedacf531d8d6344019dc16a50b8b441
+keywords: DSC, powershell, configuração, a configuração
+title: DSC para Linux nxFileLine recursos
+ms.openlocfilehash: f2a989dd3a6746948e09ba94e279c02be8ebe2de
+ms.sourcegitcommit: 8b076ebde7ef971d7465bab834a3c2a32471ef6f
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 05/17/2018
-ms.locfileid: "34219638"
+ms.lasthandoff: 07/06/2018
+ms.locfileid: "37893302"
 ---
-# <a name="dsc-for-linux-nxfileline-resource"></a>DSC de Linux nxFileLine recursos
+# <a name="dsc-for-linux-nxfileline-resource"></a>DSC para Linux nxFileLine recursos
 
-O **nxFileLine** recursos no PowerShell pretendido Estado Configuration (DSC) fornece um mecanismo para gerir linhas dentro de um ficheiro de configuração num nó de Linux.
+O **nxFileLine** recursos no PowerShell Desired State Configuration (DSC) fornece um mecanismo para a gerir linhas dentro de um ficheiro de configuração num nó de Linux.
 
 ## <a name="syntax"></a>Sintaxe
 
@@ -30,17 +30,17 @@ nxFileLine <string> #ResourceName
 
 |  Propriedade |  Descrição |
 |---|---|
-| filePath| O caminho completo para o ficheiro para gerir linhas no nó de destino.|
-| ContainsLine| Uma linha para garantir que existe no ficheiro. Esta linha será anexada ao ficheiro se não existir no ficheiro. **ContainsLine** é obrigatório, mas pode ser definido como uma cadeia vazia ("ContainsLine = ' ') se não for necessário.|
-| DoesNotContainPattern| Um padrão de expressão regular para as linhas que não deve existir no ficheiro. Para as linhas de que existe no ficheiro que correspondem a esta expressão regular, a linha será removida do ficheiro.|
-| dependsOn | Indica que a configuração de outro recurso tem de executar antes deste recurso é configurado. Por exemplo, se o **ID** do recurso de bloco de script de configuração que pretende executar primeiro é **ResourceName** e o respetivo tipo é **ResourceType**, a sintaxe para utilizar esta a propriedade é `DependsOn = "[ResourceType]ResourceName"`.|
+| Caminho do ficheiro| O caminho completo para o ficheiro para gerir as linhas no nó de destino.|
+| ContainsLine| Uma linha para garantir que existe no ficheiro. Essa linha será anexada ao ficheiro se não existir no ficheiro. **ContainsLine** é obrigatório, mas pode ser definido como uma cadeia vazia (`ContainsLine = ""`) se não for necessário.|
+| DoesNotContainPattern| Um padrão de expressão regular para linhas que não deve existir no ficheiro. Para as linhas existentes no arquivo que correspondem essa expressão regular, a linha será removida do ficheiro.|
+| DependsOn | Indica que a configuração de outro recurso deve ser executado antes deste recurso está configurado. Por exemplo, se o **ID** do recurso de bloco de script de configuração que pretende executar primeiro é **ResourceName** e seu tipo é **ResourceType**, a sintaxe para usar isso a propriedade é `DependsOn = "[ResourceType]ResourceName"`.|
 
 ## <a name="example"></a>Exemplo
 
-Este exemplo mostra como utilizar o **nxFileLine** recursos para configurar o `/etc/sudoers` ficheiro, garantindo que o utilizador: monuser está configurado para não requiretty.
+Este exemplo demonstra como utilizar o **nxFileLine** recurso para configurar o `/etc/sudoers` arquivo, assegurando que o utilizador: monuser está configurado para não requiretty.
 
-```
-Import-DSCResource -Module nx
+```powershell
+Import-DscResource -Module nx
 
 nxFileLine DoNotRequireTTY
 {

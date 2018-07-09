@@ -1,48 +1,51 @@
 ---
 ms.date: 06/12/2017
-keywords: DSC, do powershell, a configuração, a configuração
-title: Configurar uma máquinas virtuais em cima de arranque inicial através da utilização de DSC
-ms.openlocfilehash: d6dd997e607152d09d24b55370bb2f85810b333e
-ms.sourcegitcommit: 54534635eedacf531d8d6344019dc16a50b8b441
+keywords: DSC, powershell, configuração, a configuração
+title: Configurar uma máquina virtual no arranque inicial através da utilização de DSC
+ms.openlocfilehash: 2f228a38379d1e65b31c03594e876f7226474fc3
+ms.sourcegitcommit: 8b076ebde7ef971d7465bab834a3c2a32471ef6f
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 05/16/2018
-ms.locfileid: "34190269"
+ms.lasthandoff: 07/06/2018
+ms.locfileid: "37893357"
 ---
->Aplica-se a: O Windows PowerShell 5.0
+# <a name="configure-a-virtual-machines-at-initial-boot-up-by-using-dsc"></a>Configurar uma máquina virtual no arranque inicial através da utilização de DSC
 
->**Nota:** o **DSCAutomationHostEnabled** chave de registo descrito neste tópico não está disponível no PowerShell 4.0.
-Para obter informações sobre como configurar novas máquinas virtuais em cima de arranque inicial no PowerShell 4.0, consulte [pretende automaticamente configurar seu máquinas utilizando DSC no arranque inicial de segurança?](https://blogs.msdn.microsoft.com/powershell/2014/02/28/want-to-automatically-configure-your-machines-using-dsc-at-initial-boot-up/)
-
-# <a name="configure-a-virtual-machines-at-initial-boot-up-by-using-dsc"></a>Configurar uma máquinas virtuais em cima de arranque inicial através da utilização de DSC
+> [!IMPORTANT]
+> Aplica-se a: O Windows PowerShell 5.0
 
 ## <a name="requirements"></a>Requisitos
 
-Para executar estes exemplos, necessitará de:
+> [!NOTE] 
+> O **DSCAutomationHostEnabled** chave de registo descrito neste tópico não está disponível no PowerShell 4.0.
+> Para obter informações sobre como configurar novas máquinas virtuais no arranque inicial no PowerShell 4.0, consulte [pretende automaticamente configurar seu máquinas usando o DSC no inicial arranque?] > (https://blogs.msdn.microsoft.com/powershell/2014/02/28/want-to-automatically-configure-your-machines-using-dsc-at-initial-boot-up/)
 
-- Um VHD de arranque para trabalhar com. Pode transferir uma imagem ISO com uma cópia de avaliação do Windows Server 2016 em [TechNet Evaluation Center](https://www.microsoft.com/evalcenter/evaluate-windows-server-2016). Pode encontrar instruções sobre como criar um VHD a partir de uma imagem ISO na [criar suportes os discos rígidos virtuais](https://technet.microsoft.com/library/gg318049.aspx).
-- Um computador anfitrião que tenha o Hyper-V ativada. Para informações, consulte [descrição geral do Hyper-V](https://technet.microsoft.com/library/hh831531.aspx).
+Para executar estes exemplos, terá de:
 
-Ao utilizar o DSC, pode automatizar a instalação de software e configuração para um computador em cima de arranque inicial.
-Fazê-lo ao ou inserirem-se um documento MOF de configuração ou uma configuração meta para suportes de dados (por exemplo, um VHD) para que forem executadas durante o processo de arranque de segurança inicial.
-Este comportamento é especificado pelo [chave de registo DSCAutomationHostEnabled](DSCAutomationHostEnabled.md) chave de registo em **HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Policies**.
-Por predefinição, o valor desta chave é 2, que lhe permite DSC executar no momento do arranque.
+- Um VHD de arranque para trabalhar com. Pode baixar uma imagem ISO com uma cópia de avaliação do Windows Server 2016 em [Centro de avaliação TechNet](https://www.microsoft.com/en-us/evalcenter/evaluate-windows-server-2016). Pode encontrar instruções sobre como criar um VHD a partir de uma imagem ISO na [criar suportes discos de rígido virtuais](/previous-versions/windows/it-pro/windows-7/gg318049(v=ws.10)).
+- Um computador anfitrião que tenha o Hyper-V ativada. Para obter informações, consulte [descrição geral do Hyper-V](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/hh831531(v=ws.11)).
 
-Se não pretender DSC para executar no momento do arranque, defina o valor da [chave de registo DSCAutomationHostEnabled](DSCAutomationHostEnabled.md) chave de registo para 0.
+  Ao utilizar o DSC, pode automatizar a instalação de software e configuração para um computador no arranque inicial.
+  Pode fazê-lo por qualquer um dos injetar um documento de MOF de configuração ou um metaconfiguration suportes de dados (por exemplo, um VHD) para que estas são executadas durante o processo de inicialização inicial.
+  Este comportamento é especificado pela [de registo dscautomationhostenabled](DSCAutomationHostEnabled.md) chave de Registro em `HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Policies`.
+  Por predefinição, o valor desta chave é 2, que permite a DSC ser executado no momento da inicialização.
 
-- Inserir um documento MOF de configuração num VHD
-- Inserir uma configuração meta do DSC num VHD
-- Desativar o DSC no momento do arranque
+  Se não pretender DSC para ser executado no momento da inicialização, defina o valor do [de registo dscautomationhostenabled](DSCAutomationHostEnabled.md) chave de registo para 0.
 
->**Nota:** pode inserir ambos `Pending.mof` e `MetaConfig.mof` para um computador ao mesmo tempo.
-Se ambos os ficheiros estiverem presentes, as definições especificadas no `MetaConfig.mof` têm precedência.
+- Inserir um documento de MOF de configuração num VHD
+- Injetar um metaconfiguration DSC num VHD
+- Desativar o DSC no momento da inicialização
 
-## <a name="inject-a-configuration-mof-document-into-a-vhd"></a>Inserir um documento MOF de configuração num VHD
+> [!NOTE]
+> Pode injetar ambos `Pending.mof` e `MetaConfig.mof` num computador ao mesmo tempo.
+> Se ambos os ficheiros estiverem presentes, as definições especificadas no `MetaConfig.mof` têm precedência.
 
-Para enact uma configuração de segurança de arranque inicial, pode inserir um documento MOF configuração compilados num VHD como respetivo `Pending.mof` ficheiro.
-Se o **DSCAutomationHostEnabled** chave de registo está definida como 2 (o valor predefinido), DSC será aplicada a configuração definida pelo `Pending.mof` quando o computador arranca para a primeira vez.
+## <a name="inject-a-configuration-mof-document-into-a-vhd"></a>Inserir um documento de MOF de configuração num VHD
 
-Neste exemplo, utilizamos a seguinte configuração, irá instalar o IIS no novo computador:
+Adotar uma configuração no arranque inicial, pode injetar um documento MOF de configuração compilada no VHD como seu `Pending.mof` ficheiro.
+Se o **DSCAutomationHostEnabled** chave de registo está definida como 2 (o valor predefinido), DSC irá aplicar a configuração definida por `Pending.mof` quando o computador é inicializado na primeira vez.
+
+Neste exemplo, utilizamos a configuração seguinte, que irá instalar o IIS no novo computador:
 
 ```powershell
 Configuration SampleIISInstall
@@ -62,46 +65,49 @@ Configuration SampleIISInstall
 
 ### <a name="to-inject-the-configuration-mof-document-on-the-vhd"></a>Para inserir o documento de MOF de configuração no VHD
 
-1. Montar o VHD para o qual pretende inserir a configuração ao chamar o [montar VHD](https://technet.microsoft.com/library/hh848551.aspx) cmdlet. Por exemplo:
+1. Montar o VHD para o qual deseja injetar a configuração ao chamar o [montagem VHD](/powershell/module/hyper-v/mount-vhd) cmdlet. Por exemplo:
 
-    ```powershell
-    Mount-VHD -Path C:\users\public\documents\vhd\Srv16.vhd
-    ```
-2. Num computador com o PowerShell 5.0 ou posterior, guarde a configuração de acima (**SampleIISInstall**) como um ficheiro de script (. ps1) do PowerShell.
+   ```powershell
+   Mount-VHD -Path C:\users\public\documents\vhd\Srv16.vhd
+   ```
+
+2. Num computador com o PowerShell 5.0 ou posterior, guarde a configuração acima (**SampleIISInstall**) como um ficheiro de script (. ps1) do PowerShell.
 
 3. Na consola do PowerShell, navegue para a pasta onde guardou o ficheiro. ps1.
 
-4. Execute os seguintes comandos do PowerShell para compilar o documento MOF (para obter informações sobre configurações de DSC a compilação, consulte [configurações de DSC](configurations.md):
+4. Execute os seguintes comandos do PowerShell para compilar o documento MOF (para obter informações sobre como compilar configurações de DSC, veja [configurações de DSC](configurations.md):
 
-    ```powershell
-    . .\SampleIISInstall.ps1
-    SampleIISInstall
-    ```
+   ```powershell
+   . .\SampleIISInstall.ps1
+   SampleIISInstall
+   ```
 
-5. Esta ação irá criar um `localhost.mof` ficheiros numa pasta nova denominada `SampleIISInstall`.
-Mudar o nome e mover esse ficheiro para a localização correta no VHD como `Pending.mof` utilizando o [Mover Item](https://technet.microsoft.comlibrary/hh849852.aspx) cmdlet. Por exemplo:
+5. Esta ação irá criar um `localhost.mof` arquivo numa nova pasta chamada `SampleIISInstall`.
+   Mudar o nome e mover esse arquivo para a localização correta no VHD como `Pending.mof` utilizando o [Move-Item](https://technet.microsoft.comlibrary/hh849852.aspx) cmdlet. Por exemplo:
 
-    ```powershell
-        Move-Item -Path C:\DSCTest\SampleIISInstall\localhost.mof -Destination E:\Windows\System32\Configuration\Pending.mof
-    ```
-6. Desmontar o VHD ao chamar o [Dismount-VHD](https://technet.microsoft.com/library/hh848562.aspx) cmdlet. Por exemplo:
+   ```powershell
+       Move-Item -Path C:\DSCTest\SampleIISInstall\localhost.mof -Destination E:\Windows\System32\Configuration\Pending.mof
+   ```
 
-    ```powershell
-    Dismount-VHD -Path C:\users\public\documents\vhd\Srv16.vhd
-    ```
+6. Desmonte o VHD ao chamar o [Dismount-VHD](/powershell/module/hyper-v/dismount-vhd) cmdlet. Por exemplo:
 
-7. Crie uma VM utilizando o VHD onde instalou o documento de DSC MOF.
-Depois de iniciais existentes de segurança de arranque e instalação do sistema operativo, será instalado o IIS.
+   ```powershell
+   Dismount-VHD -Path C:\users\public\documents\vhd\Srv16.vhd
+   ```
+
+7. Crie uma VM com o VHD onde instalou o documento MOF de DSC.
+
+Depois do de segurança de arranque e instalação do sistema operativo, será instalado o IIS.
 Pode verificar isto ao chamar o [Get-WindowsFeature](https://technet.microsoft.com/library/jj205469.aspx) cmdlet.
 
-## <a name="inject-a-dsc-metaconfiguration-into-a-vhd"></a>Inserir uma configuração meta do DSC num VHD
+## <a name="inject-a-dsc-metaconfiguration-into-a-vhd"></a>Injetar um metaconfiguration DSC num VHD
 
-Também pode configurar um computador para solicitar uma configuração no arranque iniciais existentes-se ao inserirem uma configuração meta do (consulte [configurar o Gestor de configuração Local (MMC)](metaConfig.md)) para o VHD como respetivo `MetaConfig.mof` ficheiro.
-Se o **DSCAutomationHostEnabled** chave de registo está definida como 2 (o valor predefinido), DSC será aplicada a configuração meta do definido pelo `MetaConfig.mof` para MMC quando o computador arranca para a primeira vez.
-Se a configuração meta Especifica que o MMC deve solicitar a configurações de um servidor de solicitação, o computador irá tentar solicitar uma configuração a partir desse servidor de solicitação em cima de arranque inicial.
-Para obter informações sobre como configurar um servidor de solicitação do DSC, consulte [configurar um servidor de solicitação do DSC web](pullServer.md).
+Também pode configurar um computador para solicitar uma configuração no arranque o injetando um metaconfiguration (consulte [configurar o Gestor de configuração Local (LCM)](metaConfig.md)) no VHD como seu `MetaConfig.mof` ficheiro.
+Se o **DSCAutomationHostEnabled** chave de registo é definida como 2 (o valor predefinido), DSC irá aplicar metaconfiguration definido pelo `MetaConfig.mof` para o LCM quando o computador arranca tendo em vista a primeira vez.
+Se o metaconfiguration Especifica que o LCM deve solicitar configurações a partir de um servidor de solicitação, o computador irá tentar extrair uma configuração a partir desse servidor de solicitação no arranque inicial.
+Para obter informações sobre como configurar um servidor de solicitação de DSC, veja [como configurar um servidor de solicitação do DSC web](pullServer.md).
 
-Neste exemplo, utilizamos ambas a configuração descrita na secção anterior (**SampleIISInstall**) e a configuração meta do seguinte:
+Neste exemplo, utilizamos os dois a configuração descrita na secção anterior (**SampleIISInstall**) e o metaconfiguration seguinte:
 
 ```powershell
 [DSCLocalConfigurationManager()]
@@ -125,82 +131,86 @@ configuration PullClientBootstrap
 }
 ```
 
-### <a name="to-inject-the-metaconfiguration-mof-document-on-the-vhd"></a>Para inserir o documento MOF configuração meta no VHD
+### <a name="to-inject-the-metaconfiguration-mof-document-on-the-vhd"></a>Para inserir o documento MOF metaconfiguration no VHD
 
-1. Montar o VHD para o qual pretende inserir a configuração meta ao chamar o [montar VHD](https://technet.microsoft.com/library/hh848551.aspx) cmdlet. Por exemplo:
+1. Montar o VHD para o qual deseja injetar o metaconfiguration ao chamar o [montagem VHD](/powershell/module/hyper-v/mount-vhd) cmdlet. Por exemplo:
 
-    ```powershell
-    Mount-VHD -Path C:\users\public\documents\vhd\Srv16.vhd
-    ```
+   ```powershell
+   Mount-VHD -Path C:\users\public\documents\vhd\Srv16.vhd
+   ```
 
-2. [Configurar um servidor de solicitação do DSC web](pullServer.md)e guarde o **SampleIISInistall** configuração para a pasta adequada.
+2. [Configurar um servidor de solicitação da web de DSC](pullServer.md)e guarde o **SampleIISInistall** configuração para a pasta adequada.
 
-3. Num computador com o PowerShell 5.0 ou posterior, guarde a configuração meta do acima (**PullClientBootstrap**) como um ficheiro de script (. ps1) do PowerShell.
+3. Num computador com o PowerShell 5.0 ou posterior, guarde o metaconfiguration acima (**PullClientBootstrap**) como um ficheiro de script (. ps1) do PowerShell.
 
 4. Na consola do PowerShell, navegue para a pasta onde guardou o ficheiro. ps1.
 
-5. Execute os seguintes comandos do PowerShell para compilar o documento MOF configuração meta (para obter informações sobre configurações de DSC a compilação, consulte [configurações de DSC](configurations.md):
+5. Execute os seguintes comandos do PowerShell para compilar o documento MOF metaconfiguration (para obter informações sobre como compilar configurações de DSC, veja [configurações de DSC](configurations.md):
 
-    ```powershell
-    . .\PullClientBootstrap.ps1
-    PullClientBootstrap
-    ```
+   ```powershell
+   . .\PullClientBootstrap.ps1
+   PullClientBootstrap
+   ```
 
-6. Esta ação irá criar um `localhost.meta.mof` ficheiros numa pasta nova denominada `PullClientBootstrap`.
-Mudar o nome e mover esse ficheiro para a localização correta no VHD como `MetaConfig.mof` utilizando o [Mover Item](https://technet.microsoft.comlibrary/hh849852.aspx) cmdlet.
+6. Esta ação irá criar um `localhost.meta.mof` arquivo numa nova pasta chamada `PullClientBootstrap`.
+   Mudar o nome e mover esse arquivo para a localização correta no VHD como `MetaConfig.mof` utilizando o [Move-Item](https://technet.microsoft.comlibrary/hh849852.aspx) cmdlet.
 
-    ```powershell
-    Move-Item -Path C:\DSCTest\PullClientBootstrap\localhost.meta.mof -Destination E:\Windows\Sytem32\Configuration\MetaConfig.mof
-    ```
+   ```powershell
+   Move-Item -Path C:\DSCTest\PullClientBootstrap\localhost.meta.mof -Destination E:\Windows\System32\Configuration\MetaConfig.mof
+   ```
 
-7. Desmontar o VHD ao chamar o [Dismount-VHD](https://technet.microsoft.com/library/hh848562.aspx) cmdlet. Por exemplo:
+7. Desmonte o VHD ao chamar o [Dismount-VHD](/powershell/module/hyper-v/dismount-vhd) cmdlet. Por exemplo:
 
-    ```powershell
-    Dismount-VHD -Path C:\users\public\documents\vhd\Srv16.vhd
-    ```
+   ```powershell
+   Dismount-VHD -Path C:\users\public\documents\vhd\Srv16.vhd
+   ```
 
-8. Crie uma VM utilizando o VHD onde instalou o documento de DSC MOF.
-Depois de iniciais existentes de segurança de arranque e instalação do sistema operativo, DSC irá solicitar a configuração do servidor de solicitação e IIS será instalado.
+8. Crie uma VM com o VHD onde instalou o documento MOF de DSC.
+
+Depois do de segurança de arranque e instalação do sistema operativo, DSC irá fazer com que a configuração do servidor de solicitação e IIS será instalado.
 Pode verificar isto ao chamar o [Get-WindowsFeature](https://technet.microsoft.com/library/jj205469.aspx) cmdlet.
 
-## <a name="disable-dsc-at-boot-time"></a>Desativar o DSC no momento do arranque
+## <a name="disable-dsc-at-boot-time"></a>Desativar o DSC no momento da inicialização
 
-Por predefinição, o valor da **HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Policies\DSCAutomationHostEnabled** chave está definida como 2, que permite uma configuração de DSC executar se o computador está pendente ou atual Estado. Se não pretender que uma configuração para ser executada em cima de arranque inicial, por isso, tem de definir o valor desta chave como 0:
+Por predefinição, o valor da `HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Policies\DSCAutomationHostEnabled` chave está definida como 2, que permite uma configuração de DSC para ser executada se o computador está no estado atual ou pendente. Se não pretender que uma configuração de executar no arranque inicial, por isso, precisa definir o valor desta chave como 0:
 
-1. Montar o VHD ao chamar o [montar VHD](https://technet.microsoft.com/library/hh848551.aspx) cmdlet. Por exemplo:
+1. Montar o VHD ao chamar o [montagem VHD](/powershell/module/hyper-v/mount-vhd) cmdlet. Por exemplo:
 
-    ```powershell
-    Mount-VHD -Path C:\users\public\documents\vhd\Srv16.vhd
-    ```
+   ```powershell
+   Mount-VHD -Path C:\users\public\documents\vhd\Srv16.vhd
+   ```
 
-2. Carregar o registo **HKLM\Software** subchave do VHD chamando `reg load`.
+2. Carregar o Registro `HKLM\Software` subchave de VHD chamando `reg load`.
 
-    ```
-    reg load HKLM\Vhd E:\Windows\System32\Config\Software`
-    ```
+   ```powershell
+   reg load HKLM\Vhd E:\Windows\System32\Config\Software`
+   ```
 
-3. Navegue para o **HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Policies\***  utilizando o fornecedor de registo do PowerShell.
+3. Navegue para o `HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Policies\*` utilizando o fornecedor de registo do PowerShell.
 
-    ```powershell
-    Set-Location HKLM:\Software\Microsoft\Windows\CurrentVersion\Policies`
-    ```
+   ```powershell
+   Set-Location HKLM:\Software\Microsoft\Windows\CurrentVersion\Policies`
+   ```
 
-4. Altere o valor de `DSCAutomationHostEnabled` como 0.
+4. Alterar o valor de `DSCAutomationHostEnabled` como 0.
 
-    ```powershell
-    Set-ItemProperty -Path . -Name DSCAutomationHostEnabled -Value 0
-    ```
+   ```powershell
+   Set-ItemProperty -Path . -Name DSCAutomationHostEnabled -Value 0
+   ```
 
-5. Descarregar o registo executando os seguintes comandos:
+5. Descarrega o registo ao executar os comandos seguintes:
 
-    ```powershell
-    [gc]::Collect()
-    reg unload HKLM\Vhd
-    ```
+   ```powershell
+   [gc]::Collect()
+   reg unload HKLM\Vhd
+   ```
 
 ## <a name="see-also"></a>Consulte Também
 
-- [Configurações de DSC](configurations.md)
-- [Chave de registo DSCAutomationHostEnabled](DSCAutomationHostEnabled.md)
-- [Configurar o Gestor de Configuração Local (LCM)](metaConfig.md)
-- [Configurar um servidor de solicitação do DSC web](pullServer.md)
+[Configurações de DSC](configurations.md)
+
+[Chave de registo DSCAutomationHostEnabled](DSCAutomationHostEnabled.md)
+
+[Configurar o Gestor de Configuração Local (LCM)](metaConfig.md)
+
+[Como configurar um servidor de solicitação da web de DSC](pullServer.md)

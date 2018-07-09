@@ -1,20 +1,19 @@
 ---
 ms.date: 06/12/2017
-keywords: DSC, do powershell, a configuração, a configuração
+keywords: DSC, powershell, configuração, a configuração
 title: Método GetConfigurationStatus da classe MSFT_DSCLocalConfigurationManager
-ms.openlocfilehash: 725b1a2a62510a4e9b59aabdec8a7e502c737bfc
-ms.sourcegitcommit: 54534635eedacf531d8d6344019dc16a50b8b441
+ms.openlocfilehash: c66ccc4eefaef2d0c3a68fa8a96c5abb9bda6e4c
+ms.sourcegitcommit: 8b076ebde7ef971d7465bab834a3c2a32471ef6f
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 05/17/2018
-ms.locfileid: "34221770"
+ms.lasthandoff: 07/06/2018
+ms.locfileid: "37893064"
 ---
 # <a name="getconfigurationstatus-method-of-the-msftdsclocalconfigurationmanager-class"></a>Método GetConfigurationStatus da classe MSFT_DSCLocalConfigurationManager
 
 Obter o histórico do Estado de configuração.
 
-<a name="syntax"></a>Sintaxe
-------
+## <a name="syntax"></a>Sintaxe
 
 ```mof
 uint32 GetConfigurationStatus(
@@ -23,15 +22,13 @@ uint32 GetConfigurationStatus(
 );
 ```
 
-<a name="parameters"></a>Parâmetros
-----------
+## <a name="parameters"></a>Parâmetros
 
-*Todos os* \[no\] **verdadeiro** se este método deverá devolver informações sobre todas a configuração é executada na máquina, incluindo a aplicação de configuração e a verificação de consistência.
+*Todos os* \[na\] **verdadeiro** se esse método deve retornar informações sobre todas a configuração é executada na máquina, incluindo o aplicativo de configuração e a verificação de consistência.
 
-*configurationStatus* \[saída\] no retorno, contém uma instância do embedded o **MSFT_DSCConfigurationStatus** classe que define as definições.
+*configurationStatus* \[horizontalmente\] no retorno, contém uma instância incorporada do **MSFT_DSCConfigurationStatus** classe que define as definições.
 
-## <a name="return-value"></a>Valor devolvido
-------------
+## <a name="return-value"></a>Valor de retorno
 
 Devolve zero com êxito; caso contrário, devolve um código de erro.
 
@@ -40,13 +37,11 @@ Devolve zero com êxito; caso contrário, devolve um código de erro.
 Este é um método estático.
 
 ## <a name="requirements"></a>Requisitos
-------------
->**MOF:** DscCore.mof
 
->**Namespace**: Root\Microsoft\Windows\DesiredStateConfiguration
+**MOF:** DscCore.mof
 
+**Namespace**: Root\Microsoft\Windows\DesiredStateConfiguration
 
 ## <a name="see-also"></a>Consulte também
-
 
 [**MSFT_DSCLocalConfigurationManager**](msft-dsclocalconfigurationmanager.md)

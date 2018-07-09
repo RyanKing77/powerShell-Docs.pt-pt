@@ -1,92 +1,94 @@
 ---
 ms.date: 08/09/2017
-keywords: PowerShell, cmdlet, transferir, instalar, a configuração, o windows 10, windows 8.1, windows 8.0, windows 7
+keywords: PowerShell, cmdlet, download, instalação, configuração, o windows 10, windows 8.1, windows 8.0, windows 7
 title: Instalar o Windows PowerShell
-ms.openlocfilehash: 89f0f689ebfcd34dd4c8ec3824ec8ab4bddc34d9
-ms.sourcegitcommit: 01d6985ed190a222e9da1da41596f524f607a5bc
+ms.openlocfilehash: e703d3444b1d661c482b314781cf9a1cb16ef7ed
+ms.sourcegitcommit: 8b076ebde7ef971d7465bab834a3c2a32471ef6f
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 06/07/2018
-ms.locfileid: "34483003"
+ms.lasthandoff: 07/06/2018
+ms.locfileid: "37893526"
 ---
 # <a name="installing-windows-powershell"></a>Instalar o Windows PowerShell
+
 Windows PowerShell é instalado por predefinição em todos os Windows, começando com o Windows 7 SP1 e Windows Server 2008 R2 SP1.
 
-Se estiver interessado no PowerShell 6 e posterior, terá de instalar o PowerShell Core em vez do Windows PowerShell. Para tal, consulte [instalação principal do PowerShell no Windows](Installing-PowerShell-Core-on-Windows.md).
+Se estiver interessado no PowerShell 6 e posterior, tem de instalar o PowerShell Core em vez do Windows PowerShell. Para isso, consulte [instalar o PowerShell Core no Windows](Installing-PowerShell-Core-on-Windows.md).
 
 ## <a name="finding-powershell-in-windows-10-81-80-and-7"></a>Localizar o PowerShell no Windows 10, 8.1, 8.0 e 7
 
-Por vezes, localizar PowerShell consola ou ISE (ambiente de Scripting integrado) no Windows pode ser difícil, como localização de move de uma versão do Windows para o seguinte.
+Às vezes, localizando PowerShell consola ou ISE (ambiente de script integrado) no Windows pode ser difícil, à medida que sua localização passa de uma versão do Windows para a próxima.
 
-As tabelas seguintes deverão ajudar a encontrar PowerShell na sua versão do Windows.
-Todas as versões listadas aqui tem a versão original, à lançadas com não existem atualizações.
+As tabelas seguintes devem ajudá-lo a encontrar PowerShell na sua versão do Windows.
+Todas as versões listadas aqui são a versão original, conforme lançado, não existem atualizações.
 
 ### <a name="for-console"></a>Para a consola
 
 Versão | Localização
 -- | --
-10 do Windows | Clique em ícone do Windows canto inferior esquerdo, comece a escrever o PowerShell
-Windows 8.1, 8.0 | No ecrã Iniciar, comece a escrever o PowerShell.<br/>Se, no ambiente de trabalho, clique em ícone do Windows canto inferior esquerdo, comece a escrever o PowerShell
-Windows 7 SP1 | Clique em esquerdo inferior canto ícone do Windows, no início de caixa de pesquisa escrevendo o PowerShell
+10 do Windows | Ícone de Windows canto inferior esquerdo de clique, comece a escrever o PowerShell
+Windows 8.1, 8.0 | Na tela iniciar, comece a escrever o PowerShell.<br/>Se, na área de trabalho, clique o ícone de Windows canto inferior esquerdo, comece a escrever o PowerShell
+O Windows 7 SP1 | Clique em esquerdo inferior Windows ícone de canto, sobre o início de caixa de pesquisa digitando o PowerShell
 
 ### <a name="for-ise"></a>Para ISE
 
 Versão | Localização
 -- | --
-10 do Windows | Clique em ícone do Windows canto inferior esquerdo, comece a escrever ISE
-Windows 8.1, 8.0 | No ecrã Iniciar, escreva **ISE do PowerShell**.<br/>Se no ambiente de trabalho, clique em deixado ícone do Windows canto inferior, escreva **ISE do PowerShell**
-Windows 7 SP1 | Clique em esquerdo inferior canto ícone do Windows, no início de caixa de pesquisa escrevendo o PowerShell
+10 do Windows | Ícone de Windows canto inferior esquerdo de clique, começa a digitar ISE
+Windows 8.1, 8.0 | Na tela iniciar, digite **ISE do PowerShell**.<br/>Se, na área de trabalho, clique em deixado o ícone de Windows de canto inferior, escreva **ISE do PowerShell**
+O Windows 7 SP1 | Clique em esquerdo inferior Windows ícone de canto, sobre o início de caixa de pesquisa digitando o PowerShell
 
-## <a name="finding-powershell-in-windows-server-versions"></a>Localizar PowerShell em versões do Windows Server
+## <a name="finding-powershell-in-windows-server-versions"></a>Localizar PowerShell nas versões do Windows Server
 
-A partir do Windows Server 2008 R2, sistema operativo Windows pode ser instalado sem a interface de utilizador gráfica (GUI).
-Edições do Windows Server sem GUI são denominadas **Core** edições e edições com a GUI são denominados **ambiente de trabalho**.
+A partir do Windows Server 2008 R2, sistema de operativo do Windows podem ser instalado sem a interface de usuário gráfica (GUI).
+Edições do Windows Server sem GUI são nomeadas **Core** edições e edições com a GUI são nomeados **ambiente de trabalho**.
 
 ### <a name="windows-server-core-editions"></a>Edições do Windows Server Core
 
-Em todas as edições Core, quando iniciar sessão para o servidor de obter uma janela de linha de comandos do Windows.
+Todas as edições Core, iniciar a sessão para o servidor obtém uma janela de linha de comandos do Windows.
 
 Tipo `powershell` e prima **ENTER** para iniciar o PowerShell dentro da sessão de linha de comandos.
-Tipo `exit` para terminar a sessão do PowerShell e regressar à linha de comandos.
+Tipo de `exit` para terminar a sessão do PowerShell e voltar ao prompt de comando.
 
-### <a name="windows-server-desktop-editions"></a>Edições de ambiente de trabalho do Windows Server
+### <a name="windows-server-desktop-editions"></a>Edições de área de trabalho do Windows Server
 
-Todas as edições de ambiente de trabalho, clique no ícone de Windows canto inferior esquerdo, comece a escrever o PowerShell.
-Obter a consola e opções de ISE.
+Em todas as edições de área de trabalho, clique no ícone de Windows do canto inferior esquerdo, comece a escrever o PowerShell.
+Obtenha o console e opções do ISE.
 
-A única exceção à regra acima é o ISE do Windows Server 2008 R2 SP1; Neste caso, clique no ícone de Windows canto inferior esquerdo, escreva o ISE do PowerShell.
+A única exceção à regra acima é o ISE do Windows Server 2008 R2 SP1; Neste caso, clique no ícone de Windows do canto inferior esquerdo, escreva o ISE do PowerShell.
 
 ## <a name="how-to-check-the-version-of-powershell"></a>Como verificar a versão do PowerShell
 
-Para localizar a versão do PowerShell que instalou o, inicie uma consola do PowerShell (ou o ISE) e o tipo `$PSVersionTable` e prima **ENTER**. Procure o `PSVersion` valor.
+Para encontrar a versão do PowerShell tiver instalado, inicie uma consola do PowerShell (ou ISE) e o tipo `$PSVersionTable` e prima **ENTER**. Procure o `PSVersion` valor.
 
-## <a name="upgrading-existing-windows-powershell"></a>Atualizar existentes do Windows PowerShell
+## <a name="upgrading-existing-windows-powershell"></a>Atualizar existente do Windows PowerShell
 
-O pacote de instalação para o PowerShell ficar no interior de um programa de instalação do WMF.
-A versão do programa de instalação do WMF corresponde à versão do PowerShell; Não há nenhum instalador autónomo do Windows PowerShell.
+O pacote de instalação para o PowerShell vem de dentro de um instalador do WMF.
+A versão do programa de instalação WMF corresponde à versão do PowerShell; Não é sem instalador autônomo para o Windows PowerShell.
 
-Se precisar de atualizar a versão existente do PowerShell, no Windows, utilize a seguinte tabela para localizar o instalador para a versão do PowerShell que pretende atualizar para.
+Se precisar de atualizar a versão existente do PowerShell, no Windows, utilize a tabela seguinte para localizar o instalador para a versão do PowerShell que pretende atualizar para.
 
 Windows | PS 3.0 | PS 4.0 | PS 5.0 | PS 5.1 |
 --|--|--|--|--|
 Windows 10 (consulte Note1)<br/>Windows Server 2016 | - | - | - | instalado
 Windows 8.1<br/>Windows Server 2012 R2 | - | instalado | [WMF 5.0](https://www.microsoft.com/en-us/download/details.aspx?id=50395) | [WMF 5.1](https://www.microsoft.com/en-us/download/details.aspx?id=54616)
 Windows 8<br/>Windows Server 2012 | instalado | [WMF 4.0](https://www.microsoft.com/en-us/download/details.aspx?id=40855) | [WMF 5.0](https://www.microsoft.com/en-us/download/details.aspx?id=50395) | [WMF 5.1](https://www.microsoft.com/en-us/download/details.aspx?id=54616)
-Windows 7 SP1<br/>Windows Server 2008 R2 SP1 | [WMF 3.0](https://www.microsoft.com/en-us/download/details.aspx?id=34595) | [WMF 4.0](https://www.microsoft.com/en-us/download/details.aspx?id=40855) | [WMF 5.0](https://www.microsoft.com/en-us/download/details.aspx?id=50395) | [WMF 5.1](https://www.microsoft.com/en-us/download/details.aspx?id=54616)
+O Windows 7 SP1<br/>Windows Server 2008 R2 SP1 | [WMF 3.0](https://www.microsoft.com/en-us/download/details.aspx?id=34595) | [WMF 4.0](https://www.microsoft.com/en-us/download/details.aspx?id=40855) | [WMF 5.0](https://www.microsoft.com/en-us/download/details.aspx?id=50395) | [WMF 5.1](https://www.microsoft.com/en-us/download/details.aspx?id=54616)
 
-> **Tenha em atenção 1**:
-  >>
-  >> A edição inicial do Windows 10, com as atualizações automáticas ativada, PowerShell obtém atualizado da versão 5.0 para 5.1.
-  >>
-  >> Se a versão original do Windows 10 não for atualizada através de atualizações do Windows, a versão do PowerShell é 5.0.
+> [!NOTE]
+>
+> Na versão inicial do Windows 10, com as atualizações automáticas ativadas, o PowerShell é atualizado da versão 5.0 para 5.1.
+>
+> Se a versão original do Windows 10 não forem atualizada por meio de atualizações do Windows, a versão do PowerShell é 5.0.
 
-## <a name="need-azure-powershell"></a>Precisa do Azure PowerShell
+## <a name="need-azure-powershell"></a>Precisa do PowerShell do Azure
 
-Se estiver à procura de **Azure PowerShell**, poderá começar pela [descrição geral do Azure PowerShell](https://docs.microsoft.com/powershell/azure).
+Se estiver procurando **do Azure PowerShell**, pode começar com [descrição geral do Azure PowerShell](/powershell/azure/overview).
 
-Caso contrário, o que poderá ser necessário é [instalar e configurar o Azure PowerShell](https://docs.microsoft.com/powershell/azure/install-azurerm-ps)
+Caso contrário, o que poderá ser necessário é [instalar e configurar o Azure PowerShell](/powershell/azure/install-azurerm-ps)
 
 ## <a name="see-also"></a>Consulte Também
 
-- [Requisitos de sistema do PowerShell do Windows](Windows-PowerShell-System-Requirements.md)
-- [A partir do Windows PowerShell](Starting-Windows-PowerShell.md)
+[Requisitos de sistema do PowerShell do Windows](Windows-PowerShell-System-Requirements.md)
+
+[Iniciar o Windows PowerShell](Starting-Windows-PowerShell.md)

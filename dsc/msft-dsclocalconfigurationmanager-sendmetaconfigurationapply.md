@@ -1,20 +1,19 @@
 ---
 ms.date: 06/12/2017
-keywords: DSC, do powershell, a configuração, a configuração
+keywords: DSC, powershell, configuração, a configuração
 title: Método SendMetaConfigurationApply da classe MSFT_DSCLocalConfigurationManager
-ms.openlocfilehash: 46acd86ac52b7b6b39f06fc65af2498b4f5348ed
-ms.sourcegitcommit: 54534635eedacf531d8d6344019dc16a50b8b441
+ms.openlocfilehash: b372a6c0ab9d4561dcf67026275e7d3ca6aa2584
+ms.sourcegitcommit: 8b076ebde7ef971d7465bab834a3c2a32471ef6f
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 05/17/2018
-ms.locfileid: "34218846"
+ms.lasthandoff: 07/06/2018
+ms.locfileid: "37892962"
 ---
 # <a name="sendmetaconfigurationapply-method-of-the-msftdsclocalconfigurationmanager-class"></a>Método SendMetaConfigurationApply da classe MSFT_DSCLocalConfigurationManager
 
-Define as definições do Gestor de configuração locais que são utilizadas para controlar o agente de configuração.
+Define as definições do Gestor de configuração Local que são utilizadas para controlar o agente de configuração.
 
-<a name="syntax"></a>Sintaxe
-------
+## <a name="syntax"></a>Sintaxe
 
 ```mof
 uint32 SendMetaConfigurationApply(
@@ -23,15 +22,13 @@ uint32 SendMetaConfigurationApply(
 );
 ```
 
-<a name="parameters"></a>Parâmetros
-----------
+## <a name="parameters"></a>Parâmetros
 
 *ConfigurationData* \[no\] os dados de ambiente para a configuração.
 
-*Forçar* \[no\] **verdadeiro** para forçar a configuração para parar.
+*Forçar* \[na\] **verdadeiro** para forçar a configuração para parar.
 
-## <a name="return-value"></a>Valor devolvido
-------------
+## <a name="return-value"></a>Valor de retorno
 
 Devolve zero com êxito; caso contrário, devolve um código de erro.
 
@@ -40,13 +37,11 @@ Devolve zero com êxito; caso contrário, devolve um código de erro.
 Este é um método estático.
 
 ## <a name="requirements"></a>Requisitos
-------------
->**MOF:** DscCore.mof
 
->**Namespace**: Root\Microsoft\Windows\DesiredStateConfiguration
+**MOF:** DscCore.mof
 
+**Namespace**: Root\Microsoft\Windows\DesiredStateConfiguration
 
 ## <a name="see-also"></a>Consulte também
-
 
 [**MSFT_DSCLocalConfigurationManager**](msft-dsclocalconfigurationmanager.md)

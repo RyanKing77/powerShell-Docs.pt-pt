@@ -1,24 +1,21 @@
 ---
 ms.date: 06/12/2017
-keywords: DSC, do powershell, a configuração, a configuração
+keywords: DSC, powershell, configuração, a configuração
 title: Recurso de utilizador de DSC
-ms.openlocfilehash: f2660933aec43967e3f4082a983ef328a5b93851
-ms.sourcegitcommit: 54534635eedacf531d8d6344019dc16a50b8b441
+ms.openlocfilehash: 04543351df19160a2da05ccea96e5d392d8c55bf
+ms.sourcegitcommit: 8b076ebde7ef971d7465bab834a3c2a32471ef6f
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 05/16/2018
-ms.locfileid: "34189657"
+ms.lasthandoff: 07/06/2018
+ms.locfileid: "37892530"
 ---
-#<a name="dsc-user-resource"></a>Recursos de DSC utilizador #
+# <a name="dsc-user-resource"></a>Recurso de utilizador de DSC
 
+Aplica-se a: O Windows PowerShell 4.0, Windows PowerShell 5.0
 
->Aplica-se a: O Windows PowerShell 4.0, Windows PowerShell 5.0
+O **utilizador** recursos no Windows PowerShell Desired State Configuration (DSC) fornece um mecanismo para gerir contas de utilizador local no nó de destino.
 
-
-O __utilizador__ recursos no Windows PowerShell pretendido Estado Configuration (DSC) fornece um mecanismo para gerir contas de utilizador local no nó de destino.
-
-
-##<a name="syntax"></a>Sintaxe # #
+## <a name="syntax"></a>Sintaxe
 
 ```
 User [string] #ResourceName
@@ -37,18 +34,19 @@ User [string] #ResourceName
 ```
 
 ## <a name="properties"></a>Propriedades
+
 |  Propriedade  |  Descrição   |
 |---|---|
-| UserName| Indica o nome de conta para o qual pretende garantir um estado específico.|
+| UserName| Indica o nome da conta para o qual pretende garantir um estado específico.|
 | Descrição| Indica a descrição que pretende utilizar para a conta de utilizador.|
-| Desativado| Indica se a conta está ativada. Defina esta propriedade como __$true__ para se certificar de que esta conta está desativada e defina-o como __$false__ para se certificar de que está ativada.|
-| Certifique-se| Indica se a conta existe. Definir esta propriedade para "Presente" para garantir que a conta existe e defina-o para "Ausente", certifique-se de que a conta não existe.|
-| FullName| Representa uma cadeia com o nome completo que pretende utilizar para a conta de utilizador.|
+| Desativado| Indica se a conta está ativada. Defina esta propriedade como `$true` para se certificar de que esta conta está desativada e defini-lo como `$false` para se certificar de que está ativada.|
+| Certifique-se| Indica se a conta existe. Definir esta propriedade para "Presente" para se certificar de que a conta existe e defini-lo como "Ausente", certifique-se de que a conta não existe.|
+| FullName| Representa uma cadeia de caracteres com o nome completo que pretende utilizar para a conta de utilizador.|
 | Palavra-passe| Indica a palavra-passe que pretende utilizar para esta conta. |
-| PasswordChangeNotAllowed| Indica se o utilizador pode alterar a palavra-passe. Defina esta propriedade como __$true__ para se certificar de que o utilizador não é possível alterar a palavra-passe e defina-o como __$false__ para permitir ao utilizador alterar a palavra-passe. O valor predefinido é __$false__.|
-| PasswordChangeRequired| Indica se o utilizador tem de alterar a palavra-passe no próximo início de sessão. Defina esta propriedade como __$true__ se o utilizador tem de alterar a palavra-passe. O valor predefinido é __$true__.|
-| PasswordNeverExpires| Indica se a palavra-passe expira. Para se certificar de que a palavra-passe para esta conta nunca irá expirar, defina esta propriedade como __$true__e defina-o como __$false__ se a palavra-passe expira. O valor predefinido é __$false__.|
-| dependsOn | Indica que a configuração de outro recurso tem de executar antes deste recurso é configurado. Por exemplo, se o ID da configuração do recurso de script bloco de que pretende executar primeiro é __ResourceName__ e o respetivo tipo é __ResourceType__, a sintaxe para utilizar esta propriedade é `DependsOn = "[ResourceType]ResourceName"`.|
+| PasswordChangeNotAllowed| Indica se o utilizador pode alterar a palavra-passe. Defina esta propriedade como `$true` para se certificar de que o utilizador não é possível alterar a palavra-passe e defini-lo como `$false` para permitir que o utilizador altere a palavra-passe. O valor predefinido é `$false`.|
+| PasswordChangeRequired| Indica se o utilizador tem de alterar a palavra-passe no próximo início de sessão. Defina esta propriedade como `$true` se o utilizador tem de alterar a palavra-passe. O valor predefinido é `$true`.|
+| PasswordNeverExpires| Indica se a palavra-passe irá expirar. Para se certificar de que a palavra-passe para esta conta nunca irá expirar, defina esta propriedade como `$true`e defina-o como `$false` se a palavra-passe expirar. O valor predefinido é `$false`.|
+| DependsOn | Indica que a configuração de outro recurso deve ser executado antes deste recurso está configurado. Por exemplo, se o ID da configuração do recurso do bloco que pretende executar script primeiro será **ResourceName** e seu tipo é **ResourceType**, a sintaxe para utilizar esta propriedade é `DependsOn = "[ResourceType]ResourceName"`.|
 
 ## <a name="example"></a>Exemplo
 

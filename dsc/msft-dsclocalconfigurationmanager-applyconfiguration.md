@@ -1,23 +1,21 @@
 ---
 ms.date: 06/12/2017
-keywords: DSC, do powershell, a configuração, a configuração
+keywords: DSC, powershell, configuração, a configuração
 title: Método ApplyConfiguration da classe MSFT_DSCLocalConfigurationManager
-ms.openlocfilehash: ef8488246b2c8614452d32009e45535f0ff2e184
-ms.sourcegitcommit: 54534635eedacf531d8d6344019dc16a50b8b441
+ms.openlocfilehash: 559ff1793a18e28dad2f176bdb20eb53bc08630d
+ms.sourcegitcommit: 8b076ebde7ef971d7465bab834a3c2a32471ef6f
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 05/17/2018
-ms.locfileid: "34222144"
+ms.lasthandoff: 07/06/2018
+ms.locfileid: "37892620"
 ---
 # <a name="applyconfiguration-method-of-the-msftdsclocalconfigurationmanager-class"></a>Método ApplyConfiguration da classe MSFT_DSCLocalConfigurationManager
 
 Utiliza o agente de configuração para aplicar a configuração que está pendente.
 
-Se não houver nenhuma configuração pendentes, este método volta a configuração atual.
-
+Se não houver nenhuma configuração pendentes, este método de volta a aplicar a configuração atual.
 
 ## <a name="syntax"></a>Sintaxe
-------
 
 ```mof
 uint32 ApplyConfiguration(
@@ -26,12 +24,10 @@ uint32 ApplyConfiguration(
 ```
 
 ## <a name="parameters"></a>Parâmetros
-----------
 
-*Forçar* \[no\] se este for **verdadeiro**, a configuração atual é reaplicada, mesmo se houver uma configuração pendentes.
+*Forçar* \[na\] se se tratar de **verdadeiro**, a configuração atual é reaplicada, mesmo que haja uma configuração pendentes.
 
-## <a name="return-value"></a>Valor devolvido
-------------
+## <a name="return-value"></a>Valor de retorno
 
 Devolve zero com êxito; caso contrário, devolve um código de erro.
 
@@ -40,13 +36,11 @@ Devolve zero com êxito; caso contrário, devolve um código de erro.
 Este é um método estático.
 
 ## <a name="requirements"></a>Requisitos
-------------
->**MOF:** DscCore.mof
 
->**Namespace**: Root\Microsoft\Windows\DesiredStateConfiguration
+**MOF:** DscCore.mof
 
+**Namespace**: Root\Microsoft\Windows\DesiredStateConfiguration
 
 ## <a name="see-also"></a>Consulte também
-
 
 [**MSFT_DSCLocalConfigurationManager**](msft-dsclocalconfigurationmanager.md)

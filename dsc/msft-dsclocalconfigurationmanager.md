@@ -1,24 +1,23 @@
 ---
 ms.date: 06/12/2017
-keywords: DSC, do powershell, a configuração, a configuração
+keywords: DSC, powershell, configuração, a configuração
 title: Classe MSFT_DSCLocalConfigurationManager
-ms.openlocfilehash: 615f2998b11a0a927d3868d852e0d408f500c86d
-ms.sourcegitcommit: 54534635eedacf531d8d6344019dc16a50b8b441
+ms.openlocfilehash: 7f6aaf209601e99b0120407eb301d32fcfda9eb8
+ms.sourcegitcommit: 8b076ebde7ef971d7465bab834a3c2a32471ef6f
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 05/16/2018
-ms.locfileid: "34188840"
+ms.lasthandoff: 07/06/2018
+ms.locfileid: "37892278"
 ---
 # <a name="msftdsclocalconfigurationmanager-class"></a>Classe MSFT_DSCLocalConfigurationManager
 
-O Local Configuration Manager (MMC) que controla os Estados dos ficheiros de configuração e utiliza o agente de configuração para aplicar as configurações.
+O Local Configuration Manager (LCM) que controla os Estados dos arquivos de configuração e utiliza o agente de configuração para aplicar as configurações.
 
-A seguinte sintaxe é simplificada a partir do código de objeto formato MOF (Managed) e inclui todas as propriedades herdadas.
+A seguinte sintaxe é simplificada a partir do código de formato MOF (Managed Object) e inclui todas as propriedades herdadas.
 
 ## <a name="syntax"></a>Sintaxe
-------
 
-``` syntax
+```
 [ClassVersion("1.0.0"), dynamic, provider("dsccore"), AMENDMENT]
 class MSFT_DSCLocalConfigurationManager
 {
@@ -26,44 +25,39 @@ class MSFT_DSCLocalConfigurationManager
 ```
 
 ## <a name="members"></a>Membros
--------
 
 O **MSFT_DSCLocalConfigurationManager** classe tem os seguintes membros:
 
--   [Métodos] []
+- [Métodos] []
 
 ### <a name="methods"></a>Métodos
 
-O **MSFT_DSCLocalConfigurationManager** classe tem estes métodos.
+O **MSFT_DSCLocalConfigurationManager** classe tem esses métodos.
 
 |Método |Descrição |
 |:--- |:---|
 | [ApplyConfiguration](msft-dsclocalconfigurationmanager-applyconfiguration.md)| Utiliza o agente de configuração para aplicar a configuração que está pendente.|
 | [DisableDebugConfiguration](msft-dsclocalconfigurationmanager-disabledebugconfiguration.md)| Desativa a depuração de recursos de DSC.|
-| [EnableDebugConfiguration](msft-dsclocalconfigurationmanager-enabledebugconfiguration.md)| Ativa a depuração de recursos de DSC.|
-| [GetConfiguration](msft-dsclocalconfigurationmanager-getconfiguration.md)| Envia o documento de configuração para o nó gerido e utiliza o **obter** método do agente de configuração para aplicar a configuração.|
-| [GetConfigurationResultOutput](msft-dsclocalconfigurationmanager-getconfigurationresultoutput.md)| Obtém o resultado de agente de configuração relacionados com uma tarefa específica.|
+| [EnableDebugConfiguration](msft-dsclocalconfigurationmanager-enabledebugconfiguration.md)| Permite a depuração de recursos de DSC.|
+| [GetConfiguration](msft-dsclocalconfigurationmanager-getconfiguration.md)| Envia o documento de configuração para o nó gerido e utiliza a **obter** método do agente de configuração para aplicar a configuração.|
+| [GetConfigurationResultOutput](msft-dsclocalconfigurationmanager-getconfigurationresultoutput.md)| Obtém o resultado de agente de configuração relacionadas com uma tarefa específica.|
 | [GetConfigurationStatus](msft-dsclocalconfigurationmanager-getconfigurationstatus.md)| Obter o histórico do Estado de configuração.|
-| [GetMetaConfiguration](msft-dsclocalconfigurationmanager-getmetaconfiguration.md)| Obtém as definições de MMC que são utilizadas para controlar o agente de configuração.|
+| [Getconfigurationstatus](msft-dsclocalconfigurationmanager-getmetaconfiguration.md)| Obtém as definições de LCM que são utilizadas para controlar o agente de configuração.|
 | [PerformRequiredConfigurationChecks](msft-dsclocalconfigurationmanager-performrequiredconfigurationchecks.md)| Inicia a verificação de consistência.|
 | [RemoveConfiguration](msft-dsclocalconfigurationmanager-removeconfiguration.md)| Remove os ficheiros de configuração.|
-| [ResourceGet](msft-dsclocalconfigurationmanager-resourceget.md)| Chamadas diretamente a **obter** método de um recurso de DSC.|
-| [resourceSet](msft-dsclocalconfigurationmanager-resourceset.md)| Chamadas diretamente a **definir** método de um recurso de DSC.|
-| [ResourceTest](msft-dsclocalconfigurationmanager-resourcetest.md)| Chamadas diretamente a **teste** método de um recurso de DSC.|
+| [ResourceGet](msft-dsclocalconfigurationmanager-resourceget.md)| Chama diretamente a **obter** método de um recurso de DSC.|
+| [ResourceSet](msft-dsclocalconfigurationmanager-resourceset.md)| Chama diretamente a **definir** método de um recurso de DSC.|
+| [ResourceTest](msft-dsclocalconfigurationmanager-resourcetest.md)| Chama diretamente a **teste** método de um recurso de DSC.|
 | [Reversão](msft-dsclocalconfigurationmanager-rollback.md)| Rolls novamente para uma configuração anterior.|
-| [SendConfiguration](msft-dsclocalconfigurationmanager-sendconfiguration.md)| Envia o documento de configuração para o nó gerido e guarda-o como uma alteração pendente.|
+| [SendConfiguration](msft-dsclocalconfigurationmanager-sendconfiguration.md)| Envia o documento de configuração para o nó gerido e o salva como uma alteração pendente.|
 | [SendConfigurationApply](msft-dsclocalconfigurationmanager-sendconfigurationapply.md)| Envia o documento de configuração para o nó gerido e utiliza o agente de configuração para aplicar a configuração.|
-| [SendConfigurationApplyAsync](msft-dsclocalconfigurationmanager-sendconfigurationapplyasync.md)| Enviar o documento de configuração para o nó gerido e começar a utilizar o agente de configuração para aplicar a configuração. Utilize GetConfigurationResultOutput para obter a saída de resultado.|
-| [SendMetaConfigurationApply](msft-dsclocalconfigurationmanager-sendmetaconfigurationapply.md)| Define as definições de MMC que são utilizadas para controlar o agente de configuração.|
+| [SendConfigurationApplyAsync](msft-dsclocalconfigurationmanager-sendconfigurationapplyasync.md)| Enviar o documento de configuração para o nó gerido e começar a utilizar o agente de configuração para aplicar a configuração. Utilize GetConfigurationResultOutput para obter a saída do resultado.|
+| [SendMetaConfigurationApply](msft-dsclocalconfigurationmanager-sendmetaconfigurationapply.md)| Define as definições de LCM que são utilizadas para controlar o agente de configuração.|
 | [StopConfiguration](msft-dsclocalconfigurationmanager-stopconfiguration.md)| Interrompe a configuração que está em curso.|
 | [TestConfiguration](msft-dsclocalconfigurationmanager-testconfiguration.md)| Envia o documento de configuração para o nó gerido e verifica a configuração atual contra o documento.|
 
-
-
-
-
 ## <a name="requirements"></a>Requisitos
-------------
->**MOF:** DscCore.mof
 
->**Namespace**: Root\Microsoft\Windows\DesiredStateConfiguration
+**MOF:** DscCore.mof
+
+**Namespace**: Root\Microsoft\Windows\DesiredStateConfiguration

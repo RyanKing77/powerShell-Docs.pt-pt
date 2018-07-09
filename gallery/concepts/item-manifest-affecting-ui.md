@@ -2,94 +2,93 @@
 ms.date: 06/09/2017
 schema: 2.0.0
 keywords: PowerShell
-title: Valores de manifesto do item que afetam a IU de galeria do PowerShell
-ms.openlocfilehash: 39522396b179c54b981e6292cddacec27b32506c
-ms.sourcegitcommit: e9ad4d85fd7eb72fb5bc37f6ca3ae1282ae3c6d7
+title: Valores de manifestos de item que têm impacto sobre a interface do Usuário de galeria do PowerShell
+ms.openlocfilehash: fd5e48f8cc36795742ae597fc7715f7377605b6f
+ms.sourcegitcommit: 8b076ebde7ef971d7465bab834a3c2a32471ef6f
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34049106"
+ms.lasthandoff: 07/06/2018
+ms.locfileid: "37893482"
 ---
-# <a name="item-manifest-values-that-impact-the-powershell-gallery-ui"></a>Valores de manifesto do item que afetam a IU de galeria do PowerShell
+# <a name="item-manifest-values-that-impact-the-powershell-gallery-ui"></a>Valores de manifestos de item que têm impacto sobre a interface do Usuário de galeria do PowerShell
 
-Este tópico fornece os publicadores com informações de resumo sobre como modificar o manifesto para as publicações de galeria do PowerShell para que as funcionalidades de PowerShellGet cmdlets e a IU de galeria do PowerShell serão afetadas.
-Este conteúdo está organizado por onde a alteração será apresentada, começando com a secção do System center, em seguida, a área de navegação à esquerda. Há uma secção de detalhes de etiquetas de abrangente, que identifica importante etiquetas, bem como algumas das mais frequentemente utilizadas etiquetas.
-Existem dois tópicos fornecem exemplos de manifesto:
+Este tópico fornece os publicadores com informações de resumo sobre como modificar o manifesto para suas publicações de galeria do PowerShell para que as funcionalidades de cmdlets do PowerShellGet e a interface do Usuário de galeria do PowerShell serão afetadas.
+Este conteúdo está organizado por onde a alteração será exibida, partida com a secção de center, em seguida, a área de navegação à esquerda. Existe uma secção de detalhes de etiquetas de abrangente, que identifica importante etiquetas, bem como alguns dos mais comumente usadas etiquetas.
+Existem dois tópicos que fornecem exemplos manifestos:
 
-- Para módulos, consulte [manifesto de módulo de atualização](https://docs.microsoft.com/powershell/gallery/psget/module/psget_update-modulemanifest)
-- Para scripts, consulte [criar ficheiro de Script com metadados](https://docs.microsoft.com/powershell/gallery/psget/script/psget_new-scriptfileinfo)
+- Para módulos, consulte [manifesto de módulo de atualização](/powershell/module/powershellget/Update-ModuleManifest)
+- Para scripts, consulte [criar ficheiro de Script com metadados](/powershell/module/powershellget/New-ScriptFileInfo)
 
-## <a name="powershell-gallery-feature-elements-controlled-by-the-manifest"></a>Elementos da galeria do PowerShell de funcionalidade controlados pelo manifesto
+## <a name="powershell-gallery-feature-elements-controlled-by-the-manifest"></a>Elementos de recurso de galeria do PowerShell controlados pelo manifesto
 
-A tabela abaixo mostra os elementos da página de item de galeria do PowerShell da IU que são controlados pelo fabricante.
-Cada item indica se pode ser controlado pelo manifesto de módulo ou script.
+A tabela abaixo mostra os elementos da página de item de galeria do PowerShell da interface do Usuário que são controlados pelo editor.
+Cada item indica se ele pode ser controlado pelo manifesto do módulo ou script.
 
-| Elemento de IU | Descrição | Módulo | Script |
+| Elemento de interface do Usuário | Descrição | Módulo | Script |
 | --- | --- | --- | --- |
-| **Título** | Este é o nome do item de que é publicado na Galeria  | Não | Não |
-| **Versão** | A versão apresentada é a cadeia de versão nos metadados, e um pré-lançamento se for especificado. A parte da versão de um manifesto de módulo principal é o ModuleVersion. Para obter um script, é identificado como. VERSÃO. Se não for especificada uma cadeia de versão de pré-lançamento,-será anexado ao ModuleVersion de módulos, ou especificada como parte da. VERSÃO de scripts. Não há documentação para especificar as cadeias de pré-lançamento no [módulos](https://docs.microsoft.com/en-us/powershell/gallery/psget/module/prereleasemodule)e, em [scripts](https://docs.microsoft.com/en-us/powershell/gallery/psget/script/prereleasescript) | Sim | Sim |
-| **Descrição** | Esta é a descrição no manifesto do módulo, e um manifesto do ficheiro de script é. DESCRIÇÃO | Sim | Sim |
-| **Solicite a aceitação de licença** | Um módulo pode exigir que o utilizador aceitar uma licença, modificando o manifesto de módulo com RequireLicenseAcceptance = $true, fornecendo um LicenseURI e fornecer um ficheiro de license.txt na raiz da pasta do módulo. Estão disponíveis informações adicionais no [exigir a aceitação de licença](https://docs.microsoft.com/en-us/powershell/gallery/psgallery/psgallery_requires_license_acceptance) tópico. | Sim | Não |
-| **Notas de versão** | Para módulos, esta informação é desenhada da secção ReleaseNotes, sob PSData\PrivateData. Manifestos de script, é o. Elemento RELEASENOTES. | Sim | Sim |
-| **Proprietários** | Os proprietários são a lista de utilizadores na galeria do PowerShell que pode atualizar um item. A lista de proprietário não está incluída no manifesto de item. Documentação adicional descreve como [Gerir proprietários do item](https://docs.microsoft.com/en-us/powershell/gallery/psgallery/managing-item-owners). | Não | Não |
-| **autor** | Isto está incluído no manifesto como o autor do módulo e no manifesto script como. AUTOR. O campo autor é frequentemente utilizado para especificar uma empresa ou organização associada a um item. | Sim | Sim |
-| **Direitos de autor** | Este é o campo de direitos de autor no manifesto do módulo, e. COPYRIGHT no manifesto script. | Sim | Sim |
-| **FileList** | A lista de ficheiros é desenhada do pacote quando este for publicado na galeria do PowerShell. Não é controllable pelas informações de manifesto. Nota: existe é um ficheiro de .nuspec adicionais listado com cada item da galeria do PowerShell que não está presente depois de instalar o item num sistema. Este é o manifesto do pacote Nuget para o item e pode ser ignorada. | Não | Não |
-| **Etiquetas** | Para módulos, as etiquetas estão incluídas em PSData\PrivateData. Para scripts, a secção é assinaladas como. ETIQUETAS. Tenha em atenção que as etiquetas não podem conter espaços, mesmo quando são aspas. As etiquetas têm requisitos adicionais e significados, que são descritos mais à frente neste tópico na seção Detalhes da etiqueta. | Sim | Sim |
-| **Cmdlets** | Isto é fornecido no manifesto do módulo CmdletsToExport a utilizar. Tenha em atenção que a melhor prática é explicitamente lista os itens, em vez de utilizar o caráter universal "*", conforme que irá melhorar o desempenho do módulo de carga para os utilizadores. | Sim | Não |
-| **Funções** | Isto é fornecido no manifesto do módulo FunctionsToExport a utilizar. Tenha em atenção que a melhor prática é explicitamente lista os itens, em vez de utilizar o caráter universal "*", conforme que irá melhorar o desempenho do módulo de carga para os utilizadores. | Sim | Não |
-| **Recursos de DSC** | Para módulos que serão utilizados no PowerShell versão 5.0 e posterior, isto é fornecido no manifesto utilizando DscResourcesToExport. Se o módulo está a ser utilizado no PowerShell 4, o DSCResourcesToExport não deve ser utilizada como não é uma chave de manifesto suportada. (O DSC não estava disponível antes de PowerShell 4). | Sim | Não |
-| **Fluxos de Trabalho** | Fluxos de trabalho são publicados para a galeria do PowerShell, como scripts e identificados como fluxos de trabalho (consulte [Connect-AzureVM](https://www.powershellgallery.com/packages/Connect-AzureVM/1.0/Content/Connect-AzureVM.ps1) para obter um exemplo) no código. Isto não for controlado pelo manifesto. | Não | Não |
-| **Capacidades de função** | Esta será listada quando o módulo publicado na galeria do PowerShell contém um ou mais ficheiros de capacidade (.psrc) de função, que são utilizados pelo JEA. Consulte a documentação de JEA para obter mais detalhes sobre [capacidades de função](https://docs.microsoft.com/en-us/powershell/jea/role-capabilities). | Sim | Não |
-| **Edições de PowerShell** | Isto é especificado no manifesto de módulo ou script. Para módulos concebidos para serem utilizados com o PowerShell 5.0 e abaixo, este são controlados utilizando etiquetas. Para ambiente de trabalho, utilize a tag PSEdition_Desktop e para o principal, utilizar a tag PSEdition_Core. Para módulos que serão utilizados apenas no PowerShell 5.1 e acima, há uma chave de CompatiblePSEditions no manifesto principal. Para obter detalhes adicionais, consulte a funcionalidade de edição de PS no [a documentação do PowerShell Get](https://docs.microsoft.com/en-us/powershell/gallery/psget/module/modulewithpseditionsupport). | Sim | Sim |
-| **Dependências** | As dependências são os módulos na galeria do PowerShell que são declarados no módulo como RequiredModules ou no manifesto de script como #Requires – módulo (nome). | Sim | Sim |
-| **Versão mínima do Powershell** | Isto pode ser especificado no manifesto módulo como PowerShellVersion | Sim | Não |
-| **Histórico da versão** | O histórico da versão reflete as atualizações efetuadas a um módulo na galeria do PowerShell. Se uma versão de um item está oculta a utilizar a funcionalidade de eliminação, que será não ser apresentado no histórico de versão, exceto para os proprietários do item. | Não | Não |
-| **Site do projeto** | O site de projeto é fornecido para módulos na secção Privatedata\PSData do manifesto do módulo especificando um ProjectURI. No manifesto de script, é controlada ao especificar. PROJECTURI. | Sim | Sim |
-| **Licença** | É fornecida uma ligação de licença de módulos na secção Privatedata\PSData do manifesto do módulo especificando um LicenseURI. No manifesto de script, é controlada ao especificar. LICENSEURI. É importante ter em conta que se uma licença não é fornecida através de LicenseURI ou dentro de um módulo, em seguida, os termos de utilização para a galeria do PowerShell especificar os termos de utilização para o item. Consulte os termos de utilização para obter mais detalhes. | Sim | Sim |
+| **Título** | Este é o nome do item que é publicado na Galeria  | Não | Não |
+| **Versão** | A versão apresentada é a cadeia de versão dos metadados e um pré-lançamento se for especificado. A parte principal da versão num manifesto de módulo é o ModuleVersion. Para obter um script, é identificado como. VERSÃO. Se for especificada uma cadeia de versão de pré-lançamento, ele será acrescentado ao ModuleVersion para módulos, ou especificado como parte da. VERSÃO de scripts. Há documentação para especificar cadeias de caracteres de pré-lançamento no [módulos](/powershell/gallery/concepts/module-prerelease-support)e, em [scripts](/powershell/gallery/concepts/script-prerelease-support) | Sim | Sim |
+| **Descrição** | Esta é a descrição no manifesto do módulo e, num manifesto do arquivo de script é. DESCRIÇÃO | Sim | Sim |
+| **Exigir a aceitação da licença** | Um módulo pode exigir que o utilizador aceitar uma licença, ao modificar o manifesto de módulo com RequireLicenseAcceptance = $true, fornecendo um LicenseURI e fornecer um ficheiro de license.txt na raiz da pasta do módulo. Estão disponíveis informações adicionais no [exigem a aceitação da licença](/powershell/gallery/how-to/working-with-items/items-that-require-license-acceptance) tópico. | Sim | Não |
+| **Notas de versão** | Para módulos, estas informações são retiradas da secção de ReleaseNotes, sob PSData\PrivateData. Nos manifestos de script, é o. Elemento RELEASENOTES. | Sim | Sim |
+| **Proprietários** | Os proprietários são a lista de utilizadores na galeria do PowerShell que pode atualizar um item. A lista de proprietários não está incluída no manifesto de item. Documentação adicional descreve como [gerir os proprietários de itens](/powershell/gallery/how-to/publishing-items/managing-item-owners). | Não | Não |
+| **Autor** | Isso está incluído no manifesto do módulo como autor e, num manifesto de script como. AUTOR. O campo de autor, muitas vezes, é utilizado para especificar uma empresa ou organização associada um item. | Sim | Sim |
+| **Direitos de autor** | Este é o campo de direitos de autor no manifesto do módulo, e. COPYRIGHT num manifesto de script. | Sim | Sim |
+| **FileList** | A lista de ficheiros é desenhada do pacote quando é publicado na galeria do PowerShell. Não é controlável pelas informações de manifesto. Nota: existe um ficheiro de .nuspec adicionais listado com cada item da galeria do PowerShell que não está presente depois de instalar o item num sistema. Isso é o manifesto de pacote Nuget para o item e pode ser ignorado. | Não | Não |
+| **Etiquetas** | Para módulos, as etiquetas estão incluídas no PSData\PrivateData. Para scripts, a seção é assinaladas como. AS ETIQUETAS. Tenha em atenção que as etiquetas não pode conter espaços, mesmo quando estão aspas. Etiquetas têm requisitos adicionais e os significados, que são descritos posteriormente neste tópico na seção Detalhes da etiqueta. | Sim | Sim |
+| **Cmdlets** | Isto é fornecido no manifesto do módulo CmdletsToExport a utilizar. Tenha em atenção que a melhor prática é explicitamente os itens de lista, em vez de utilizar o caráter universal "*", uma vez que irá melhorar o desempenho de carga-module para os utilizadores. | Sim | Não |
+| **Funções** | Isto é fornecido no manifesto do módulo FunctionsToExport a utilizar. Tenha em atenção que a melhor prática é explicitamente os itens de lista, em vez de utilizar o caráter universal "*", uma vez que irá melhorar o desempenho de carga-module para os utilizadores. | Sim | Não |
+| **Recursos de DSC** | Para os módulos que serão utilizados no PowerShell versão 5.0 e posteriores, isto é fornecido no manifesto usando DscResourcesToExport. Se o módulo está a ser utilizado no PowerShell 4, o DSCResourcesToExport não deve ser utilizada porque não é uma chave de manifesto suportada. (O DSC não estava disponível antes de PowerShell 4). | Sim | Não |
+| **Fluxos de Trabalho** | Fluxos de trabalho são publicados na galeria do PowerShell, como scripts e identificados como fluxos de trabalho (consulte [Connect-AzureVM](https://www.powershellgallery.com/packages/Connect-AzureVM/1.0/Content/Connect-AzureVM.ps1) para obter um exemplo) no código. Não é controlada pelo manifesto. | Não | Não |
+| **Funcionalidades de função** | Isto irá ser apresentado quando o módulo publicado na galeria do PowerShell contém um ou mais arquivos de recurso (.psrc) de função, que são utilizados pelo JEA. Veja a documentação de JEA para obter mais detalhes sobre [funcionalidades de função](https://docs.microsoft.com/en-us/powershell/jea/role-capabilities). | Sim | Não |
+| **Edições do PowerShell** | Isto é especificado num manifesto de módulo ou script. Para os módulos devem ser utilizadas com o PowerShell 5.0 e abaixo, isso são controlados utilizando etiquetas. Para o Desktop, usar a marca PSEdition_Desktop e para o núcleo, usar a marca PSEdition_Core. Para os módulos que serão utilizados apenas no PowerShell 5.1 e versões posteriores, existe uma chave de CompatiblePSEditions no manifesto do principal. Para obter detalhes adicionais, reveja a funcionalidade de edição de PS no [a documentação do PowerShell Get](/powershell/gallery/concepts/module-psedition-support). | Sim | Sim |
+| **Dependências** | As dependências são os módulos na galeria do PowerShell que são declarados no módulo como RequiredModules ou no manifesto do script como #Requires – módulo (nome). | Sim | Sim |
+| **Versão mínima do Powershell** | Isto pode ser especificado num manifesto de módulo como PowerShellVersion | Sim | Não |
+| **Histórico de versões** | O histórico de versões reflete as atualizações feitas a um módulo na galeria do PowerShell. Se uma versão de um item está oculta a utilizar a funcionalidade de eliminação, ele não será apresentado no histórico de versões, exceto para os proprietários do item. | Não | Não |
+| **Site do projeto** | O site do projeto é fornecido para módulos na seção Privatedata\PSData do manifesto do módulo especificando um ProjectURI. No manifesto do script, ele é controlado através da especificação. PROJECTURI. | Sim | Sim |
+| **Licença** | É fornecida uma ligação de licença para os módulos na seção Privatedata\PSData do manifesto do módulo especificando um LicenseURI. No manifesto do script, ele é controlado através da especificação. LICENSEURI. É importante observar que, se uma licença não é fornecida através do LicenseURI ou dentro de um módulo, em seguida, os termos de utilização para a galeria do PowerShell especifique os termos de utilização para o item. Consulte os termos de utilização para obter detalhes. | Sim | Sim |
 
 ## <a name="editing-item-details"></a>Editar detalhes do item
 
-A página de item a editar de galeria do PowerShell permite alterar vários campos apresentados para um item, especificamente os publicadores:
+A página de item editar de galeria do PowerShell permite aos editores alterar vários dos campos apresentados para um item, especificamente:
 
 - Título
 - Descrição
 - Resumo
 - URL de ícone
-- URL de página inicial do projeto
+- URL da home page de projeto
 - Autores
 - Copyright
 - Etiquetas
 - Notas de versão
 - Necessita de licença
 
-Esta abordagem não é, geralmente, recomendada, exceto quando for necessário para corrigir o que é apresentado para uma versão mais antiga de um módulo.
-Os utilizadores que adquirir o módulo irão ver que os metadados não corresponde ao conteúdo que é apresentado na galeria do PowerShell, gera as questões sobre o item.
-Frequentemente esta operação resultará compras vai para os proprietários do item para confirmar a alteração.
-É vivamente recomendado que qualquer altura que esta abordagem é utilizada, uma nova versão do item deve ser publicada com as alterações do mesmas.
+Essa abordagem não é normalmente recomendada, exceto quando for necessário para corrigir o que é apresentado para uma versão mais antiga de um módulo.
+Os utilizadores que adquirir o módulo irão ver que os metadados não coincide com o que é apresentado na galeria do PowerShell, o que gera preocupações sobre o item.
+Com freqüência isso resultará em consultas que vão para os proprietários de item para confirmar a alteração.
+É vivamente recomendado que sempre que esta abordagem é utilizada, uma nova versão do item deve ser publicada com as mesmas alterações.
 
 ## <a name="tag-details"></a>Detalhes da etiqueta
 
-As etiquetas são cadeias simples consumidores utilizado para localizar itens.
-As etiquetas são mais importantes quando são utilizados consistentemente entre o número de itens relacionados com o mesmo tópico. A utilização de várias versões do mesmo word (por exemplo da base de dados e bases de dados, ou teste e testar) fornece normalmente benefício pouco.
-As etiquetas são cadeias sensível de palavra única e não podem incluir espaços em branco. Se existir uma frase de acesso que se considerar que irão procurar utilizadores, adicione que a descrição do item e irá ser possível encontrá-lo nos resultados da pesquisa. Se estiver a tentar melhorar a legibilidade, utilize Pascal tem maiúsculas e minúsculas, hífen, um caráter de sublinhado ou período. Tenha cuidado sobre a criação de etiquetas invulgares, longas e complexas, como estes são frequentemente mal escritos.
+As etiquetas são a utilização de consumidores de cadeias de caracteres simples para localizar itens.
+As etiquetas são mais importantes quando são utilizadas consistentemente em muitos itens relacionados com o mesmo tópico. Word (por exemplo da base de dados e bases de dados, ou teste e teste), normalmente, com diversas versões do mesmo fornece poucas vantagens.
+As etiquetas são cadeias de caracteres de maiúsculas e minúsculas de palavra única e não podem incluir espaços em branco. Se houver uma frase que acreditar que irão procurar utilizadores, adicioná-la para a descrição do item e ele será encontrado nos resultados da pesquisa. Utilize Pascal casing, hífen, caráter de sublinhado ou período, se estiver a tentar melhorar a legibilidade. Tenha cuidado ao criar etiquetas de longo, complexas e incomuns, como eles são, muitas vezes, um erro ortográfico.
 
-Existem etiquetas que são importantes a ter em atenção, como a galeria do PowerShell e PowerShellGet cmdlets tratá-los exclusivamente. PSEdition_Desktop PSEdition_Core são os exemplos específicos e descritas acima.
+Existem etiquetas que são importantes para tenha em atenção, como a galeria do PowerShell e o PowerShellGet cmdlets tratá-los com exclusividade. PSEdition_Desktop PSEdition_Core são os exemplos específicos e são descritos acima.
 
-Conforme indicado acima, as etiquetas fornecem o máximo valor quando são específicos e utilizados consistentemente entre o número de itens.
-Como um publicador tentar localizar as melhores etiquetas a utilizar, a abordagem mais fácil é procurar a galeria do PowerShell para as etiquetas que estiver a considerar.
-Idealmente, será devolvido de número de itens e as descrições de item irão alinhar com a utilização dessa palavra-chave.
+Conforme indicado acima, etiquetas fornecem o máximo valor quando eles estão específico e é utilizado consistentemente em vários itens.
+Como um publicador tentar localizar as melhores marcas usar, a abordagem mais fácil é procurar na galeria do PowerShell para etiquetas que estiver a considerar.
+O ideal é que haverá muitos itens retornados e as descrições de item serão alinhado com a utilização dessa palavra-chave.
 
-Para referência, aqui estão algumas etiquetas frequentemente utilizadas a partir de 14/12/2017.
-Em alguns casos, existem semelhante, mas talvez menos ideais das opções apresentadas junto a etiqueta.
-É uma melhor prática para utilizar a Tag preferencial, como, que irá resultar num menor ruído e melhor resultados da pesquisa para consumidores.
-
+Para referência, eis algumas marcas mais comumente usadas a partir de 12/14/2017.
+Em alguns casos, há semelhante, mas talvez menos opções ideais listadas ao lado da marca.
+É a melhor prática para utilizar a marca preferencial, como, que irá resultar em menos ruído e os resultados da pesquisa melhor para os consumidores.
 
 | **Etiqueta preferencial** | **Alternativas e notas** |
 | --- | --- |
 | **Azure** |  |
-| **DSC** | DesiredStateConfiguration é desejável inferior, é demasiado longo |
-| **ResourceManager** | É utilizada para descrever o grupo de processadores ARM e não deve ser utilizada para o Azure Resource Manager | **DSCResourceKit** |  |
+| **DSC** | DesiredStateConfiguration é menos desejável, é demasiado longo |
+| **ResourceManager** | É usado para descrever o grupo de processadores ARM e não deve ser utilizada para o Azure Resource Manager | **DSCResourceKit** |  |
 | **SQL** |  |
 | **AWS** |  |
 | **DSCResource** |  |
@@ -99,17 +98,17 @@ Em alguns casos, existem semelhante, mas talvez menos ideais das opções aprese
 | **SQLServer** |  |
 | **DBA** |  |
 | **Segurança** | Defesa é menos precisa |
-| **base de dados** | Bases de dados (plural) é desejável inferior |
+| **Base de dados** | Bases de dados (plural) é menos desejável |
 | **DevOps** |  |
 | **Windows** |  |
 | **Compilação** |  |
-| **Implementação** | Implementar é utilizado um pouco menos frequentemente |
-| **Na nuvem** |  |
+| **Implementação** | Implementar é utilizado um pouco menos frequência |
+| **Na cloud** |  |
 | **GIT** |  |
-| **Teste** | Teste é inferior desejável |
-| **VersionControl** | A versão é menos exatos, embora utilizados mais frequentemente  |
-| **Registo** | Utilize preferencial de início de sessão como uma ação |
-| **Registo** | Utilização preferencial de registo como uma coisa |
+| **Teste** | O teste é menos desejável |
+| **VersionControl** | Versão é menos preciso, embora usado com mais frequência  |
+| **Registro em log** | Uso preferencial de Registro em log como uma ação |
+| **Registo** | Uso preferencial de Log como uma coisa |
 | **Cópia de segurança** |  |
 | **IaaS** |  |
 | **Linux** |  |
@@ -119,9 +118,9 @@ Em alguns casos, existem semelhante, mas talvez menos ideais das opções aprese
 | **GitHub** |  |
 | **Json** |  |
 | **Exchange** |  |
-| **Rede** | Funcionamento em rede é semelhante, menos frequentemente utilizados |
+| **Rede** | Funcionamento em rede é semelhante, com menos frequência utilizada |
 | **SharePoint** |  |
-| **Relatórios** | Relatórios é uma ação, o relatório é uma coisa |
+| **Geração de relatórios** | Geração de relatórios é uma ação, o relatório é uma coisa |
 | **Relatório** | Relatório é uma coisa |
 | **WinRM** |  |
 | **Monitorização** |  |
@@ -130,11 +129,11 @@ Em alguns casos, existem semelhante, mas talvez menos ideais das opções aprese
 | **Google** |  |
 | **Cor** |  |
 | **DNS** |  |
-| **Office365** | É preferível spelling saída Office. Office 365 é utilizado com menos frequência, embora mais curto | **Gitlab** |  |
+| **Office365** | O Office de ortografia é preferível. Office 365 é menos usados, embora mais curto | **Gitlab** |  |
 | **Pester** |  |
 | **AzureAD** |  |
 | **HTML** |  |
-| **Hyper-V** | Hyper-v é menos comuns, como uma etiqueta |
+| **Hyper-V** | Hyper-v é menos comum como uma etiqueta |
 | **Configuração** |  |
 | **ChatOps** |  |
 | **PackageManagement** |  |
@@ -142,7 +141,7 @@ Em alguns casos, existem semelhante, mas talvez menos ideais das opções aprese
 | **Firewall** |  |
 | **Docker** |  |
 | **Appveyor** |  |
-| **AzureRm** | Utilizada principalmente para os módulos AzureRM |
+| **AzureRm** | Utilizado principalmente para os módulos AzureRM |
 | **Zip** |  |
 | **MSI** |  |
 | **Mac** |  |

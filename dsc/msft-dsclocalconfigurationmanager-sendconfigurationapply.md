@@ -1,20 +1,19 @@
 ---
 ms.date: 06/12/2017
-keywords: DSC, do powershell, a configuração, a configuração
+keywords: DSC, powershell, configuração, a configuração
 title: Método SendConfigurationApply da classe MSFT_DSCLocalConfigurationManager
-ms.openlocfilehash: c578f4f52d3ea70e7bcf683ac204d6e484d4630d
-ms.sourcegitcommit: 54534635eedacf531d8d6344019dc16a50b8b441
+ms.openlocfilehash: da3a08307122ab38ee4a6fd5d4a9b97579a988f7
+ms.sourcegitcommit: 8b076ebde7ef971d7465bab834a3c2a32471ef6f
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 05/17/2018
-ms.locfileid: "34222161"
+ms.lasthandoff: 07/06/2018
+ms.locfileid: "37893176"
 ---
 # <a name="sendconfigurationapply-method-of-the-msftdsclocalconfigurationmanager-class"></a>Método SendConfigurationApply da classe MSFT_DSCLocalConfigurationManager
 
 Envia o documento de configuração para o nó gerido e utiliza o agente de configuração para aplicar a configuração.
 
-<a name="syntax"></a>Sintaxe
-------
+## <a name="syntax"></a>Sintaxe
 
 ```mof
 uint32 SendConfigurationApply(
@@ -23,15 +22,13 @@ uint32 SendConfigurationApply(
 );
 ```
 
-<a name="parameters"></a>Parâmetros
-----------
+## <a name="parameters"></a>Parâmetros
 
 *ConfigurationData* \[no\] os dados de ambiente para a configuração.
 
-*Forçar* \[no\] **verdadeiro** para forçar a configuração para parar.
+*Forçar* \[na\] **verdadeiro** para forçar a configuração para parar.
 
-## <a name="return-value"></a>Valor devolvido
-------------
+## <a name="return-value"></a>Valor de retorno
 
 Devolve zero com êxito; caso contrário, devolve um código de erro.
 
@@ -40,13 +37,11 @@ Devolve zero com êxito; caso contrário, devolve um código de erro.
 Este é um método estático.
 
 ## <a name="requirements"></a>Requisitos
-------------
->**MOF:** DscCore.mof
 
->**Namespace**: Root\Microsoft\Windows\DesiredStateConfiguration
+**MOF:** DscCore.mof
 
+**Namespace**: Root\Microsoft\Windows\DesiredStateConfiguration
 
 ## <a name="see-also"></a>Consulte também
-
 
 [**MSFT_DSCLocalConfigurationManager**](msft-dsclocalconfigurationmanager.md)
