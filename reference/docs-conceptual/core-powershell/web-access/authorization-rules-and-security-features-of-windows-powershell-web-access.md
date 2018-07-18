@@ -2,12 +2,12 @@
 ms.date: 06/27/2017
 keywords: PowerShell, o cmdlet
 title: Regras de Autorização e Funcionalidades de Segurança do Windows PowerShell Web Access
-ms.openlocfilehash: a3a743d83ae3e387ee51056042c98753104e925e
-ms.sourcegitcommit: 8b076ebde7ef971d7465bab834a3c2a32471ef6f
+ms.openlocfilehash: 14bb18cfc5d9826523a239aede42307a7688eaf5
+ms.sourcegitcommit: 77f62a55cac8c13d69d51eef5fade18f71d66955
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 07/06/2018
-ms.locfileid: "37893727"
+ms.lasthandoff: 07/17/2018
+ms.locfileid: "39094250"
 ---
 # <a name="authorization-rules-and-security-features-of-windows-powershell-web-access"></a>Regras de Autorização e Funcionalidades de Segurança do Windows PowerShell Web Access
 
@@ -163,9 +163,8 @@ Seguem-se alguns exemplos deste cenário.
 
 - Um administrador configurou um ambiente de teste privado e pretende permitir que todos os utilizadores autorizados tenham acesso de rede a todos os computadores na rede a que normalmente tenham acesso, tendo acesso a todas as configurações de sessão às que têm normalmente acesso. Por ser um ambiente de teste privado, o administrador cria uma regra de autorização que não é segura. -O administrador executa o cmdlet `Add-PswaAuthorizationRule * * *`, que utiliza o caráter universal **\*** para representar todos os utilizadores, todos os computadores e todas as configurações. -Esta regra é o equivalente dos seguintes procedimentos: `Add-PswaAuthorizationRule -UserName * -ComputerName * -ConfigurationName *`.
 
-  >[!NOTE]
-  >
-  >Esta regra não é recomendada num ambiente seguro e ignora a camada de regra de autorização de segurança fornecida pelo Windows PowerShell Web Access.
+  > [!NOTE]
+  > Esta regra não é recomendada num ambiente seguro e ignora a camada de regra de autorização de segurança fornecida pelo Windows PowerShell Web Access.
 
 - Um administrador tem de permitir que os utilizadores se liguem a computadores de destino de um ambiente que inclua os grupos de trabalho e domínios, onde os computadores do grupo de trabalho são ocasionalmente utilizados para ligar a computadores de destino em domínios, da mesma forma que os computadores em domínios são ocasionalmente utilizados para ligar a computadores de destino em grupos de trabalho. O administrador tem um servidor de gateway, *PswaServer*, no grupo de trabalho e o computador de destino *srv1.contoso.com* está num domínio. Usuário *Chris* é um utilizador local autorizado no servidor de gateway do grupo de trabalho e o computador de destino. Nome de utilizador no servidor do grupo de trabalho é *chrisLocal*; e o seu nome de utilizador no computador de destino é *contoso\\chris*. Para autorizar o acesso de Chris ao srv1.contoso.com, o administrador adiciona a seguinte regra.
 
@@ -180,10 +179,9 @@ No cenário anterior, o Windows PowerShell Web Access estabelece uma ligação c
 
 1. Autenticação no servidor de gateway do grupo de trabalho ao adicionar um nome de utilizador no formato *server_name*\\*user_name* para a regra de autorização
 
-2. Autenticação no computador de destino utilizando credenciais alternativas fornecidas na página de início de sessão, o **definições de ligação opcionais** área
+1. Autenticação no computador de destino utilizando credenciais alternativas fornecidas na página de início de sessão, o **definições de ligação opcionais** área
 
    > [!NOTE]
-   >
    > Se os computadores de gateway e de destino se encontrarem em diferentes grupos de trabalho ou domínios, é necessário estabelecer uma relação de fidedignidade entre os dois computadores de grupo de trabalho, os dois domínios, ou entre o grupo de trabalho e o domínio. Esta relação não pode ser configurada utilizando os cmdlets de regra de autorização do Windows PowerShell Web Access. As regras de autorização não definem uma relação de fidedignidade entre computadores; apenas podem autorizar os utilizadores a ligar para computadores de destino específicos e configurações de sessão. Para obter mais informações sobre como configurar uma relação de confiança entre domínios diferentes, consulte [domínio criação e confianças de floresta](https://technet.microsoft.com/library/cc794775.aspx").
    > Para obter mais informações sobre como adicionar computadores do grupo de trabalho a uma lista de anfitriões fidedignos, consulte [com o Gestor de servidor de gestão remota](https://technet.microsoft.com/library/dd759202.aspx)
 

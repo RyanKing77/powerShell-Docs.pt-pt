@@ -1,21 +1,21 @@
 ---
 ms.date: 06/12/2017
 keywords: wmf,powershell,setup
-ms.openlocfilehash: 66db78cfb136f22cad9078d7113dad085ee667a5
-ms.sourcegitcommit: 54534635eedacf531d8d6344019dc16a50b8b441
+ms.openlocfilehash: e4910e95a417da61661aaddd98b2dc7da9f98a3d
+ms.sourcegitcommit: 77f62a55cac8c13d69d51eef5fade18f71d66955
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 05/16/2018
-ms.locfileid: "34188433"
+ms.lasthandoff: 07/17/2018
+ms.locfileid: "39093723"
 ---
 # <a name="creating-and-connecting-to-a-jea-endpoint"></a>Criar e Estabelecer Ligação a um Ponto Final da JEA
-Para criar um ponto final JEA, tem de criar e registar um ficheiro de configuração de sessão do PowerShell especial configurada, o que pode ser gerado com o **New-PSSessionConfigurationFile** cmdlet.
+Para criar um ponto final JEA, terá de criar e registar um ficheiro de configuração de sessão do PowerShell especialmente configurado, o que pode ser gerado com o **New-PSSessionConfigurationFile** cmdlet.
 
 ```powershell
 New-PSSessionConfigurationFile -SessionType RestrictedRemoteServer -TranscriptDirectory "C:\ProgramData\JEATranscripts" -RunAsVirtualAccount -RoleDefinitions @{ 'CONTOSO\NonAdmin_Operators' = @{ RoleCapabilities = 'Maintenance' }} -Path "$env:ProgramData\JEAConfiguration\Demo.pssc"
 ```
 
-Isto irá criar um ficheiro de configuração de sessão que tem este aspeto:
+Isto irá criar um ficheiro de configuração de sessão parecido com este:
 ```powershell
 @{
 
@@ -53,20 +53,20 @@ RoleDefinitions = @{
 
 }
 ```
-Ao criar um ponto final JEA, os seguintes parâmetros de comando (e as correspondentes chaves no ficheiro) tem de ser definidos:
+Ao criar um ponto final JEA, tem de definir os seguintes parâmetros do comando (e as chaves correspondentes no arquivo):
 1.  SessionType para RestrictedRemoteServer
 2.  RunAsVirtualAccount para **$true**
-3.  TranscriptPath para o diretório onde "ombro o" transcrições serão guardadas após cada sessão
-4.  RoleDefinitions para uma tabela hash que define quais os grupos têm acesso a quais "capacidades de função".  Este campo define **quem** pode fazer **que** neste ponto final.   Capacidades de função são ficheiros especiais que serão explicados em breve.
+3.  TranscriptPath para o diretório em que "por cima do ombro" transcrições serão guardadas depois de cada sessão
+4.  RoleDefinitions para uma tabela de hash que define os grupos que têm acesso para qual "funcionalidades de função".  Este campo define **quem** pode fazer **o que** neste ponto final.   Funcionalidades de função são arquivos especiais que serão explicados brevemente.
 
 
-O campo de RoleDefinitions define os grupos que tinham acesso que capacidades de função.  Uma capacidade de função é um ficheiro que define um conjunto de capacidades que irá ser disponibilizado para os utilizadores a ligar.  Pode criar capacidades de função com o **New-PSRoleCapabilityFile** comando.
+O campo de RoleDefinitions define os grupos que tinham acesso para as funcionalidades de função.  Um recurso de função é um ficheiro que define um conjunto de recursos que vão ser expostas para conectar usuários.  Pode criar capacidades de função com o **New-PSRoleCapabilityFile** comando.
 
 ```powershell
 New-PSRoleCapabilityFile -Path "$env:ProgramFiles\WindowsPowerShell\Modules\DemoModule\RoleCapabilities\Maintenance.psrc"
 ```
 
-Esta ação irá gerar uma capacidade de função de modelo que tem este aspeto:
+Esta ação irá gerar um recurso de função de modelo que tem esta aparência:
 ```
 @{
 
@@ -128,22 +128,24 @@ Copyright = '(c) 2015 Administrator. All rights reserved.'
 # AssembliesToLoad = 'System.Web', 'System.OtherAssembly, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a'
 
 }
-
 ```
-Para ser utilizado por uma configuração de sessão JEA, capacidades de função tem de ser guardadas como um módulo do PowerShell válido num diretório com o nome "RoleCapabilities". Um módulo pode ter vários ficheiros de capacidade de função, se assim o desejar.
 
-Para iniciar a configuração que os cmdlets, funções, aliases e scripts um utilizador pode aceder ao ligar a uma sessão JEA, adicione as suas próprias regras para o ficheiro de capacidade de função, seguindo o comentado os modelos. Para ver mais profundo na forma como pode configurar capacidades de função, veja o completo [experiência guia](http://aka.ms/JEA).
+Para ser utilizado por uma configuração de sessão JEA, funcionalidades de função tem de ser guardadas como um módulo do PowerShell válido num diretório chamado "RoleCapabilities". Um módulo pode ter vários arquivos de recurso de função, se assim o desejar.
 
-Por fim, assim que tiver concluído a personalizar a configuração de sessão e as capacidades de função relacionados, registar esta configuração de sessão e criar o ponto final executando **Register-PSSessionConfiguration**.
+Para começar a configurar os cmdlets, funções, aliases e scripts de um utilizador pode aceder ao ligar a uma sessão JEA, adicione suas próprias regras para o ficheiro de recurso de função a seguir o comentado modelos. Para obter uma visão mais profunda sobre como pode configurar funcionalidades de função, verifique o completo [guia de experiência](http://aka.ms/JEA).
+
+Por fim, quando tiver terminado de personalizar a sua configuração de sessão e as capacidades de função relacionadas, registar esta configuração de sessão e criar o ponto final, executando **Register-PSSessionConfiguration**.
 
 ```powershell
 Register-PSSessionConfiguration -Name Maintenance -Path "C:\ProgramData\JEAConfiguration\Demo.pssc"
 ```
 
 ## <a name="connect-to-a-jea-endpoint"></a>Ligar a um ponto final JEA
-Ligar a um ponto final JEA funciona da mesma forma que a ligação a quaisquer outros trabalhos de ponto final do PowerShell.  Basta ter que dar o nome do ponto final JEA o parâmetro "ConfigurationName" **New-PSSession**, **Invoke-Command**, ou **Enter-PSSession**.
+
+Ligar a um ponto final JEA funciona da mesma forma, ligar a quaisquer outros trabalhos de ponto final do PowerShell.  Simplesmente tem que dar o parâmetro de "ConfigurationName" para o seu nome de ponto final JEA **New-PSSession**, **Invoke-Command**, ou **Enter-PSSession**.
 
 ```powershell
 Enter-PSSession -ConfigurationName Maintenance -ComputerName localhost
 ```
-Assim que tiver estabelecido ligação à sessão JEA, será limitado em execução na lista de comandos permissões nas capacidades de função que tenha acesso. Se tentar executar qualquer comando não permitido para a sua função, irá encontrar um erro.
+
+Depois de ter ligado à sessão JEA, estará limitada em execução na lista de permissões a comandos nas capacidades de função tem acesso. Se tentar executar qualquer comando não é permitido para a sua função, irá encontrar um erro.

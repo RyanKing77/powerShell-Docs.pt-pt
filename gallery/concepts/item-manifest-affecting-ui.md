@@ -3,12 +3,12 @@ ms.date: 06/09/2017
 schema: 2.0.0
 keywords: PowerShell
 title: Valores de manifestos de item que têm impacto sobre a interface do Usuário de galeria do PowerShell
-ms.openlocfilehash: fd5e48f8cc36795742ae597fc7715f7377605b6f
-ms.sourcegitcommit: 8b076ebde7ef971d7465bab834a3c2a32471ef6f
+ms.openlocfilehash: 00350d3558e2bfa487fb116304956ffa7291ee05
+ms.sourcegitcommit: 77f62a55cac8c13d69d51eef5fade18f71d66955
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 07/06/2018
-ms.locfileid: "37893482"
+ms.lasthandoff: 07/17/2018
+ms.locfileid: "39093978"
 ---
 # <a name="item-manifest-values-that-impact-the-powershell-gallery-ui"></a>Valores de manifestos de item que têm impacto sobre a interface do Usuário de galeria do PowerShell
 
@@ -84,65 +84,67 @@ Para referência, eis algumas marcas mais comumente usadas a partir de 12/14/201
 Em alguns casos, há semelhante, mas talvez menos opções ideais listadas ao lado da marca.
 É a melhor prática para utilizar a marca preferencial, como, que irá resultar em menos ruído e os resultados da pesquisa melhor para os consumidores.
 
-| **Etiqueta preferencial** | **Alternativas e notas** |
+| Etiqueta preferencial | Alternativas e notas |
 | --- | --- |
-| **Azure** |  |
-| **DSC** | DesiredStateConfiguration é menos desejável, é demasiado longo |
-| **ResourceManager** | É usado para descrever o grupo de processadores ARM e não deve ser utilizada para o Azure Resource Manager | **DSCResourceKit** |  |
-| **SQL** |  |
-| **AWS** |  |
-| **DSCResource** |  |
-| **Automatização** |  |
-| **REST** |  |
-| **ActiveDirectory** | AD não é atualmente utilizado por si só  |
-| **SQLServer** |  |
-| **DBA** |  |
-| **Segurança** | Defesa é menos precisa |
-| **Base de dados** | Bases de dados (plural) é menos desejável |
-| **DevOps** |  |
-| **Windows** |  |
-| **Compilação** |  |
-| **Implementação** | Implementar é utilizado um pouco menos frequência |
-| **Na cloud** |  |
-| **GIT** |  |
-| **Teste** | O teste é menos desejável |
-| **VersionControl** | Versão é menos preciso, embora usado com mais frequência  |
-| **Registro em log** | Uso preferencial de Registro em log como uma ação |
-| **Registo** | Uso preferencial de Log como uma coisa |
-| **Cópia de segurança** |  |
-| **IaaS** |  |
-| **Linux** |  |
-| **IIS** |  |
-| **AzureAutomation** |  |
-| **Armazenamento** |  |
-| **GitHub** |  |
-| **Json** |  |
-| **Exchange** |  |
-| **Rede** | Funcionamento em rede é semelhante, com menos frequência utilizada |
-| **SharePoint** |  |
-| **Geração de relatórios** | Geração de relatórios é uma ação, o relatório é uma coisa |
-| **Relatório** | Relatório é uma coisa |
-| **WinRM** |  |
-| **Monitorização** |  |
-| **VSTS** |  |
-| **Excel** |  |
-| **Google** |  |
-| **Cor** |  |
-| **DNS** |  |
-| **Office365** | O Office de ortografia é preferível. Office 365 é menos usados, embora mais curto | **Gitlab** |  |
-| **Pester** |  |
-| **AzureAD** |  |
-| **HTML** |  |
-| **Hyper-V** | Hyper-v é menos comum como uma etiqueta |
-| **Configuração** |  |
-| **ChatOps** |  |
-| **PackageManagement** |  |
-| **WMI** |  |
-| **Firewall** |  |
-| **Docker** |  |
-| **Appveyor** |  |
-| **AzureRm** | Utilizado principalmente para os módulos AzureRM |
-| **Zip** |  |
-| **MSI** |  |
-| **Mac** |  |
-| **PoshBot** |  |
+| Azure |  |
+| DSC | DesiredStateConfiguration é menos desejável, é demasiado longo |
+| ResourceManager | É usado para descrever o grupo de processadores ARM e não deve ser utilizada para o Azure Resource Manager |
+| DSCResourceKit |  |
+| SQL |  |
+| AWS |  |
+| DSCResource |  |
+| Automatização |  |
+| REST |  |
+| ActiveDirectory | AD não é atualmente utilizado por si só  |
+| SQLServer |  |
+| DBA |  |
+| Segurança | Defesa é menos precisa |
+| Base de Dados | Bases de dados (plural) é menos desejável |
+| DevOps |  |
+| Windows |  |
+| Compilação |  |
+| Implementação | Implementar é utilizado um pouco menos frequência |
+| Na cloud |  |
+| GIT |  |
+| Teste | O teste é menos desejável |
+| VersionControl | Versão é menos preciso, embora usado com mais frequência  |
+| Registo | Uso preferencial de Registro em log como uma ação |
+| Registo | Uso preferencial de Log como uma coisa |
+| Telefone Alternativo |  |
+| IaaS |  |
+| Linux |  |
+| IIS |  |
+| AzureAutomation |  |
+| Armazenamento |  |
+| GitHub |  |
+| JSON |  |
+| Exchange |  |
+| Rede | Funcionamento em rede é semelhante, com menos frequência utilizada |
+| SharePoint |  |
+| Relatórios | Geração de relatórios é uma ação, o relatório é uma coisa |
+| Relatório | Relatório é uma coisa |
+| WinRM |  |
+| Monitorização |  |
+| VSTS |  |
+| Excel |  |
+| Google |  |
+| Cor |  |
+| DNS |  |
+| Office 365 | O Office de ortografia é preferível. Office 365 é menos usados, embora mais curto |
+| Gitlab |  |
+| Pester |  |
+| AzureAD |  |
+| HTML |  |
+| Hyper-V | Hyper-v é menos comum como uma etiqueta |
+| Configuração |  |
+| ChatOps |  |
+| PackageManagement |  |
+| WMI |  |
+| Firewall |  |
+| Docker |  |
+| Appveyor |  |
+| AzureRm | Utilizado principalmente para os módulos AzureRM |
+| Zip |  |
+| MSI |  |
+| Mac |  |
+| PoshBot |  |

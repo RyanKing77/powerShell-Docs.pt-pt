@@ -1,12 +1,12 @@
 ---
 ms.date: 06/12/2017
 keywords: wmf,powershell,setup
-ms.openlocfilehash: 0e8d0cb1e4afa7bc791d45bfb0b981654cb09ed5
-ms.sourcegitcommit: 8b076ebde7ef971d7465bab834a3c2a32471ef6f
+ms.openlocfilehash: b279d388754c5ee42215f21317f7b3d8089b7608
+ms.sourcegitcommit: 77f62a55cac8c13d69d51eef5fade18f71d66955
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 07/06/2018
-ms.locfileid: "37892574"
+ms.lasthandoff: 07/17/2018
+ms.locfileid: "39093886"
 ---
 # <a name="unified-and-consistent-state-and-status-representation"></a>Estado Unificado e Consistente e Representação de Estado
 
@@ -15,11 +15,11 @@ Uma série de aprimoramentos foram feitos nesta versão para automatizações de
 A representação de estado do LCM e o estado da operação de DSC são revisitada e unificação de acordo com as seguintes regras:
 
 1. Recursos de Notprocessed não afetam o estado do LCM e o estado de DSC.
-2. LCM parar recursos de processamento adicionais depois de encontrar um recurso que pede o reinício.
-3. Um recurso que pede o reinício não está no estado pretendido até que realmente acontece reinício.
-4. Depois de encontrar um recurso que não consegue, LCM mantém processar ainda mais recursos, desde que não são dependentes de uma falha.
-5. O estado geral devolvido pelo `Get-DscConfigurationStatus` cmdlet é o conjunto super de estado de todos os recursos.
-6. O estado de PendingReboot é um superconjunto do Estado de PendingConfiguration.
+1. LCM parar recursos de processamento adicionais depois de encontrar um recurso que pede o reinício.
+1. Um recurso que pede o reinício não está no estado pretendido até que realmente acontece reinício.
+1. Depois de encontrar um recurso que não consegue, LCM mantém processar ainda mais recursos, desde que não são dependentes de uma falha.
+1. O estado geral devolvido pelo `Get-DscConfigurationStatus` cmdlet é o conjunto super de estado de todos os recursos.
+1. O estado de PendingReboot é um superconjunto do Estado de PendingConfiguration.
 
    A tabela abaixo ilustra o resultante Estado relacionadas com as propriedades em alguns cenários típicos.
 

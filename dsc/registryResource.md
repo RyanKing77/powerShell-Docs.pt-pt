@@ -1,19 +1,19 @@
 ---
 ms.date: 06/12/2017
-keywords: DSC, do powershell, a configuração, a configuração
-title: Recursos de registo DSC
-ms.openlocfilehash: 8819b3704fa1a61d2be5ce11c974542f48177e09
-ms.sourcegitcommit: 54534635eedacf531d8d6344019dc16a50b8b441
+keywords: DSC, powershell, configuração, a configuração
+title: Recurso de registro de DSC
+ms.openlocfilehash: b77710d7a6fc599949e78c17af309ad88a1a0872
+ms.sourcegitcommit: 77f62a55cac8c13d69d51eef5fade18f71d66955
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 05/16/2018
-ms.locfileid: "34188705"
+ms.lasthandoff: 07/17/2018
+ms.locfileid: "39093590"
 ---
-# <a name="dsc-registry-resource"></a>Recursos de registo DSC
+# <a name="dsc-registry-resource"></a>Recurso de registro de DSC
 
 > Aplica-se a: O Windows PowerShell 4.0, Windows PowerShell 5.0
 
-O **registo** recursos no Windows PowerShell pretendido Estado Configuration (DSC) fornece um mecanismo para gerir as chaves de registo e valores num nó de destino.
+O **Registro** recursos no Windows PowerShell Desired State Configuration (DSC) fornece um mecanismo para gerir as chaves de registro e os valores num nó de destino.
 
 ## <a name="syntax"></a>Sintaxe
 
@@ -32,35 +32,22 @@ Registry [string] #ResourceName
 ```
 
 ## <a name="properties"></a>Propriedades
+
 |  Propriedade  |  Descrição   |
 |---|---|
-| Tecla| Indica o caminho da chave do registo para o qual pretende garantir um estado específico. Este caminho tem de incluir o ramo de registo.|
-| ValueName| Indica o nome do valor de registo. Para adicionar ou remover uma chave de registo, especificar esta propriedade como uma cadeia vazia sem a especificação ValueType ou ValueData. Para modificar ou remover o valor predefinido de uma chave de registo, ao especificar também um ValueType ou ValueData de especificar esta propriedade como uma cadeia vazia.|
-| Certifique-se| Indica se a chave e valor existem. Para garantir que fazem, defina esta propriedade para "Presente". Para garantir que estes não existirem, defina a propriedade "Ausente". O valor predefinido é "Presente".|
-| Force| Se a chave de registo especificado estiver presente, __Force__ substitui-lo com o novo valor. Se eliminar uma chave de registo com subchaves, este tem de ser __$true__|
-| Hexadecimal| Indica se os dados irão ser expressos numa formato hexadecimal. Se for especificado, os dados do valor DWORD/QWORD são apresentados no formato hexadecimal. Não é válido para outros tipos. O valor predefinido é __$false__.|
-| dependsOn| Indica que a configuração de outro recurso tem de executar antes deste recurso é configurado. Por exemplo, se o ID da configuração do recurso de script bloco de que pretende executar primeiro é __ResourceName__ e o respetivo tipo é __ResourceType__, a sintaxe para utilizar esta propriedade é `DependsOn = "[ResourceType]ResourceName"`.|
+| Tecla| Indica o caminho da chave do registo para o qual pretende garantir um estado específico. Este caminho tem de incluir o hive.|
+| valueName| Indica o nome do valor do Registro. Para adicionar ou remover uma chave de registo, especifique esta propriedade como uma cadeia vazia sem especificar ValueType ou ValueData. Para modificar ou remover o valor predefinido de uma chave de registo, especifique esta propriedade como uma cadeia vazia ao especificar também o ValueType ou ValueData.|
+| Certifique-se| Indica se a chave e valor existirem. Para garantir que eles fazem, defina esta propriedade para "Presente". Para garantir que não existam, defina a propriedade como "Ausente". O valor predefinido é "Presente".|
+| Force| Se a chave de registo especificado estiver presente, **força** é substituído pelo novo valor. Se eliminar uma chave de registo com subchaves, esse processo precisa ser **$true** |
+| Hexadecimal| Indica se os dados irão ser expressos em formato hexadecimal. Se for especificado, os dados do valor DWORD/QWORD são apresentados em formato hexadecimal. Não é válido para outros tipos. O valor predefinido é **$false**.|
+| DependsOn| Indica que a configuração de outro recurso deve ser executado antes deste recurso está configurado. Por exemplo, se o ID da configuração do recurso do bloco que pretende executar script primeiro será **ResourceName** e seu tipo é **ResourceType**, a sintaxe para utilizar esta propriedade é `DependsOn = "[ResourceType]ResourceName"`.|
 | ValueData| Os dados para o valor de registo.|
-| ValueType| Indica o tipo do valor. Os tipos suportados são:
-<ul><li>Cadeia (REG_SZ)</li>
-
-
-<li>Binário (REG binário)</li>
-
-
-<li>DWORD 32 bits (REG_DWORD)</li>
-
-
-<li>QWORD 64-bit (REG_QWORD)</li>
-
-
-<li>Cadeia múltipla (REG_MULTI_SZ)</li>
-
-
-<li>Cadeia expansível (REG_EXPAND_SZ)</li></ul>
+| ValueType| Indica o tipo do valor. Os tipos suportados são: cadeia (REG_SZ), o binário (REG binário), Dword de 32 bits (REG_DWORD), Qword 64-bit (REG_QWORD), cadeia de caracteres múltipla (REG_MULTI_SZ), (REG_EXPAND_SZ) de cadeia expansível |
 
 ## <a name="example"></a>Exemplo
-Neste exemplo garante que uma chave denominada "ExampleKey" está presente no **HKEY\_LOCAL\_máquina** ramo de registo.
+
+Neste exemplo, garante que uma chave denominada "ExampleKey" está presente no **HKEY\_locais\_máquina** hive.
+
 ```powershell
 Configuration RegistryTest
 {
@@ -74,5 +61,5 @@ Configuration RegistryTest
 }
 ```
 
->**Nota:** alterar uma definição de registo no **HKEY\_atual\_utilizador** hive requer que a configuração é executada com as credenciais de utilizador, em vez do sistema.
->Pode utilizar o **PsDscRunAsCredential** propriedade para especificar as credenciais de utilizador para a configuração. Por exemplo, consulte [DSC em execução com as credenciais do utilizador](runAsUser.md)
+> [!NOTE]
+> Alterar uma definição de registo no **HKEY\_atual\_utilizador** hive requer que a configuração seja executado com credenciais do usuário, em vez de como o sistema. Pode utilizar o **PsDscRunAsCredential** propriedade para especificar as credenciais de utilizador para a configuração. Por exemplo, veja [a executar o DSC com as credenciais de utilizador](runAsUser.md).

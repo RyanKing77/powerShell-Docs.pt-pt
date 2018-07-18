@@ -2,12 +2,12 @@
 ms.date: 06/12/2017
 keywords: DSC, powershell, configuração, a configuração
 title: Configurações parciais de PowerShell Desired State Configuration
-ms.openlocfilehash: 1f5ec5bd5055ccc3d83a60712aebe635f2548828
-ms.sourcegitcommit: 8b076ebde7ef971d7465bab834a3c2a32471ef6f
+ms.openlocfilehash: 6d344b666421aba5745945f6148570e4c8229c1a
+ms.sourcegitcommit: 77f62a55cac8c13d69d51eef5fade18f71d66955
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 07/06/2018
-ms.locfileid: "37893006"
+ms.lasthandoff: 07/17/2018
+ms.locfileid: "39093937"
 ---
 # <a name="powershell-desired-state-configuration-partial-configurations"></a>Configurações parciais de PowerShell Desired State Configuration
 
@@ -217,7 +217,7 @@ SharePointConfig.mof.checksum
 
 ### <a name="naming-and-placing-the-configuration-documents-on-the-pull-server-configurationid"></a>Atribuição de nomes e colocar os documentos de configuração no servidor de solicitação (ConfigurationID)
 
-Os documentos de configuração parcial tem de ser colocados na pasta especificada como a **ConfigurationPath** no `web.config` ficheiro para o servidor de solicitação (normalmente `C:\Program Files\WindowsPowerShell\DscService\Configuration`). Os documentos de configuração tem de ter o nome da seguinte forma: *ConfigurationName*. * ConfigurationID8`.mof`, onde *ConfigurationName* é o nome da configuração parcial e *ConfigurationID* é o ID de configuração é definido no LCM no nó de destino. No nosso exemplo, os documentos de configuração devem ter o nome da seguinte forma:
+Os documentos de configuração parcial tem de ser colocados na pasta especificada como a **ConfigurationPath** no `web.config` ficheiro para o servidor de solicitação (normalmente `C:\Program Files\WindowsPowerShell\DscService\Configuration`). Os documentos de configuração tem de ter o nome da seguinte forma: _ConfigurationName_. * ConfigurationID8`.mof`, onde _ConfigurationName_ é o nome da configuração parcial e _ConfigurationID_ é o ID de configuração é definido no LCM no nó de destino. No nosso exemplo, os documentos de configuração devem ter o nome da seguinte forma:
 
 ```
 ServiceAccountConfig.1d545e3b-60c3-47a0-bf65-5afc05182fd0.mof
@@ -330,7 +330,6 @@ Configuration ServiceAccountConfig
 
     Import-DscResource -ModuleName PSDesiredStateConfiguration
 
-
     Node localhost
     {
         Group LocalAdmins
@@ -340,7 +339,6 @@ Configuration ServiceAccountConfig
                                   'admins@example.domain'
             Ensure              = 'Present'
             Credential          = $Credential
-
         }
 
         WindowsFeature Telnet
@@ -351,7 +349,6 @@ Configuration ServiceAccountConfig
     }
 }
 ServiceAccountConfig
-
 ```
 
 ## <a name="example-sharepointconfig-partial-configuration"></a>Exemplo de configuração de SharePointConfig parcial

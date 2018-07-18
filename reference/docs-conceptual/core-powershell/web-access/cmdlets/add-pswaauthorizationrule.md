@@ -4,12 +4,12 @@ keywords: PowerShell, o cmdlet
 ms.date: 12/12/2016
 title: Add-PswaAuthorizationRule
 schema: 2.0.0
-ms.openlocfilehash: a5e55611ac59ff5bfecee59ba2b7d7669d08f840
-ms.sourcegitcommit: 8b076ebde7ef971d7465bab834a3c2a32471ef6f
+ms.openlocfilehash: a8904ac36f7fd9fe3c649ad4ca709a98c31b63c3
+ms.sourcegitcommit: 77f62a55cac8c13d69d51eef5fade18f71d66955
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 07/06/2018
-ms.locfileid: "37893744"
+ms.lasthandoff: 07/17/2018
+ms.locfileid: "39094233"
 ---
 # <a name="add-pswaauthorizationrule"></a>Add-PswaAuthorizationRule
 
@@ -191,8 +191,10 @@ Este cmdlet devolve a um objeto de regra de autorização.
 
 ### <a name="example-1"></a>EXEMPLO 1
 
-Neste exemplo concede acesso à configuração de sessão *PSWAEndpoint*, um restritas espaço de execução, na *srv2* para utilizadores no *SMAdmins* grupo. \
-**Tenha em atenção**: O nome do computador tem de ser um nome de domínio completamente qualificado (FQDN). Os administradores de definir uma configuração de sessão restritas ou espaço de execução, o que é um intervalo limitado de cmdlets e tarefas que os utilizadores finais podem ser executadas. Definir um espaço de execução restrito pode impedir que os utilizadores acedam a outros computadores que não estiver num espaço de execução permitido do Windows PowerShell®, portanto, oferecendo uma conexão mais segura. Para obter mais informações sobre configurações de sessão, consulte [about_Session_Configurations](https://msdn.microsoft.com/powershell/reference/5.1/microsoft.powershell.core/about/about_session_configurations) ou o [instalar e utilizar o acesso Web Windows PowerShell](../install-and-use-windows-powershell-web-access.md).
+Neste exemplo concede acesso à configuração de sessão _PSWAEndpoint_, um restritas espaço de execução, na _srv2_ para utilizadores no _SMAdmins_ grupo.
+
+> [!NOTE]
+> O nome do computador tem de ser um nome de domínio completamente qualificado (FQDN). Os administradores de definir uma configuração de sessão restritas ou espaço de execução, o que é um intervalo limitado de cmdlets e tarefas que os utilizadores finais podem ser executadas. Definir um espaço de execução restrito pode impedir que os utilizadores acedam a outros computadores que não estiver num espaço de execução permitido do Windows PowerShell®, portanto, oferecendo uma conexão mais segura. Para obter mais informações sobre configurações de sessão, consulte [about_Session_Configurations](https://msdn.microsoft.com/powershell/reference/5.1/microsoft.powershell.core/about/about_session_configurations) ou o [instalar e utilizar o acesso Web Windows PowerShell](../install-and-use-windows-powershell-web-access.md).
 
 ```PowerShell
 Add-PswaAuthorizationRule -ComputerName srv2.contoso.com -UserGroupName contoso\SMAdmins -ConfigurationName PSWAEndpoint
@@ -240,8 +242,10 @@ Add-PswaAuthorizationRule –UserName PswaServer\ChrisLocal –ComputerName srv1
 ### <a name="example-6"></a>EXEMPLO 6
 
 Este exemplo permite todos os utilizadores o acesso a todos os pontos finais em todos os computadores.
-Isto desativa essencialmente regras de autorização. \
-**Tenha em atenção**: utilizar o `*` caráter universal não é recomendada para implementações de protegida e deve apenas ser considerado para ambientes de teste ou utilizado em implementações em que pode ser Relaxada segurança.
+Essencialmente, isso se desligar as regras de autorização.
+
+> [!NOTE]
+> Utilizar o `*` caráter universal não é recomendada para implementações de protegida e deve apenas ser considerado para ambientes de teste ou utilizado em implementações em que pode ser Relaxada segurança.
 
 ````PowerShell
 Add-PswaAuthorizationRule –UserName * -ComputerName * -ConfigurationName *

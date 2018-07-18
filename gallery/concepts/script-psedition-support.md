@@ -2,15 +2,15 @@
 ms.date: 06/12/2017
 contributor: manikb
 keywords: cmdlet do powershell do galeria, psget
-title: Script de edições de PowerShell compatíveis
-ms.openlocfilehash: 27b50be4e99b6c6b8fa089d1d4a436a27eeb17c9
-ms.sourcegitcommit: 54534635eedacf531d8d6344019dc16a50b8b441
+title: Scripts com edições do PowerShell compatíveis
+ms.openlocfilehash: 386e65295641fb6932c13047246742531aeaec64
+ms.sourcegitcommit: 77f62a55cac8c13d69d51eef5fade18f71d66955
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 05/17/2018
-ms.locfileid: "34219254"
+ms.lasthandoff: 07/17/2018
+ms.locfileid: "39093665"
 ---
-# <a name="script-with-compatible-powershell-editions"></a>Script de edições de PowerShell compatíveis
+# <a name="script-with-compatible-powershell-editions"></a>Scripts com edições do PowerShell compatíveis
 
 Começando na versão 5.1, o PowerShell está disponível nas diferentes edições que denotam conjuntos de funcionalidade e compatibilidade de plataforma variados.
 
@@ -52,20 +52,18 @@ At line:1 char:1
     + FullyQualifiedErrorId : ScriptRequiresUnmatchedPSEdition
 ```
 
-Utilizadores de galeria do PowerShell podem encontrar a lista de scripts suportado uma edição específica do PowerShell.
-Scripts sem PSEdition_Desktop e PSEditon_Core são considerados para ajustar funcionam nas edições de ambiente de trabalho do PowerShell.
+Os utilizadores da galeria do PowerShell podem encontrar a lista de scripts suportado numa edição específica do PowerShell.
+Scripts sem PSEdition_Desktop e PSEditon_Core são considerados como funcionam bem em edições de ambiente de trabalho do PowerShell.
 
 ```powershell
-
 # Find scripts supported on PowerShell Desktop edition
 Find-Script -Tag PSEditon_Desktop
 
 # Find scripts supported on PowerShell Core editions
 Find-Script -Tag PSEditon_Core
-
 ```
 
-## <a name="more-details"></a>obter mais detalhes
+## <a name="more-details"></a>Obter mais detalhes
 
 - [Módulos com Edições do PowerShell](module-psedition-support.md)
-- [Suporte de PSEditions em PowerShellGallery](../how-to/finding-items/searching-by-psedition.md)
+- [Suporte de edições do PowerShell no PowerShellGallery](../how-to/finding-items/searching-by-psedition.md)

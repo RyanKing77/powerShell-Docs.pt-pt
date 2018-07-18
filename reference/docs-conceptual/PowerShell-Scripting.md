@@ -1,62 +1,78 @@
 ---
 ms.date: 06/05/2017
 keywords: PowerShell, o cmdlet
-title: Scripts do PowerShell
-ms.openlocfilehash: 7de5a3f3149d8d464b34101d94a5f9430d9b0f23
-ms.sourcegitcommit: 54534635eedacf531d8d6344019dc16a50b8b441
+title: Script do PowerShell
+ms.openlocfilehash: c6ba3abc2544834e2cbec16a524f79399a1d2599
+ms.sourcegitcommit: 77f62a55cac8c13d69d51eef5fade18f71d66955
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 05/17/2018
-ms.locfileid: "34222405"
+ms.lasthandoff: 07/17/2018
+ms.locfileid: "39094056"
 ---
 # <a name="powershell"></a>PowerShell
 
-Incorporado no .NET Framework, PowerShell é uma shell da linha de comandos baseada em tarefas e linguagem de scripts; foi concebido especificamente para os administradores de sistema e utilizadores avançados automatizar rapidamente a administração de vários sistemas operativos (Linux, macOS, Unix e Windows) e os processos relacionados com as aplicações que são executadas nesses sistemas operativos.
+Baseado no .NET Framework, o PowerShell é um shell de linha de comandos baseada em tarefas e linguagem de script; foi concebido especificamente para os administradores de sistemas e usuários avançados, rapidamente a automatizar a administração de vários sistemas operacionais (Linux, macOS, Unix e Windows) e os processos relacionados com os aplicativos executados nesses sistemas operacionais.
 
-## <a name="powershell-is-open-source"></a>PowerShell é open source
+## <a name="powershell-is-open-source"></a>O PowerShell é o código-fonte aberto
 
-Código de origem base do PowerShell está agora disponível no GitHub e aberto para contribuições da Comunidade. Consulte [PowerShell origem no GitHub](https://github.com/powershell/powershell).
+Código-fonte base do PowerShell está agora disponível no GitHub e aberta a contribuições da Comunidade.
+Ver [PowerShell fonte no GitHub](https://github.com/powershell/powershell).
 
-Pode começar com o bits tem em [obter PowerShell](https://github.com/PowerShell/PowerShell#get-powershell).
-Ou, talvez, com uma visita guiada em [introdução](https://github.com/PowerShell/PowerShell/blob/master/docs/learning-powershell)
+Pode começar com os bits que necessita em [PowerShell obter](https://github.com/PowerShell/PowerShell#get-powershell).
+Ou, talvez, com um tour rápido, [introdução](https://github.com/PowerShell/PowerShell/blob/master/docs/learning-powershell)
 
-## <a name="powershell-design-goals"></a>Objetivos de design do PowerShell
-Windows PowerShell foi concebido para melhorar o ambiente de linha de comandos e script, eliminando os problemas long-standing e adicionando novas funcionalidades.
+## <a name="powershell-design-goals"></a>Metas de design do PowerShell
+PowerShell foi projetado para melhorar o ambiente de criação de scripts e linha de comandos, eliminando consideravelmente os problemas de longa data e a acrescentar novas funcionalidades.
 
 ### <a name="discoverability"></a>Capacidade de deteção
-Windows PowerShell torna mais fácil detetar as respetivas funcionalidades. Por exemplo, para encontrar uma lista de cmdlets que ver e alterar os serviços do Windows, escreva:
+PowerShell torna mais fácil detetar os seus recursos. Por exemplo, para encontrar uma lista de cmdlets que ver e alterar os serviços do Windows, escreva:
 
 ```powershell
 Get-Command *-Service
 ```
 
-Depois de descobrir qual cmdlet concretiza uma tarefa, pode saber mais sobre o cmdlet utilizando o cmdlet Get-Help. Por exemplo, para apresentar a ajuda sobre o cmdlet Get-Service, escreva:
+Depois de descobrir qual cmdlet realiza uma tarefa, pode saber mais sobre o cmdlet, utilizando o `Get-Help` cmdlet.
+Por exemplo, para apresentar a ajuda sobre o `Get-Service` cmdlet, tipo:
 
 ```powershell
 Get-Help Get-Service
 ```
-A maioria dos cmdlets emitir objetos que podem ser manipulados e, em seguida, apresentados em texto para apresentação. Para compreender o resultado que cmdlet, encaminhe o resultado para o cmdlet Get-membro. Por exemplo, o comando seguinte apresenta informações sobre os membros da saída de objeto pelo cmdlet Get-Service.
+A maioria dos cmdlets emitir objetos que podem ser manipulados e, em seguida, processados em texto para exibição.
+Para compreender totalmente o resultado desse cmdlet, encaminhar o resultado para o `Get-Member` cmdlet.
+Por exemplo, o comando seguinte apresenta informações sobre os membros da saída de objeto pelo `Get-Service` cmdlet.
 
 ```powershell
 Get-Service | Get-Member
 ```
 
 ### <a name="consistency"></a>Consistência
-Gestão de sistemas pode ser um endeavor complexa e ferramentas que tenha uma interface consistente ajudam a controlar a complexidade inerente. Infelizmente, não as ferramentas de linha de comandos nem pode ser passível de ter scripts objectos COM foi conhecidos para as suas consistência.
+Gerenciamento de sistemas pode ser um empreendimento complexo e ferramentas que têm uma interface consistente ajudam a controlar a complexidade inerente.
+Infelizmente, nem ferramentas da linha de comandos como objetos de COM programável por scripts já são conhecidos sua consistência.
 
-A consistência do Windows PowerShell é um dos respetivos recursos primários. Por exemplo, se irá aprender a utilizar o cmdlet Sort-Object, pode utilizar esse conhecimento para ordenar a saída de qualquer cmdlet. Não é necessário saber as rotinas de ordenação diferentes de cada cmdlet.
+A consistência do PowerShell é um de seus ativos primários.
+Por exemplo, se aprender a utilizar o `Sort-Object` cmdlet, pode usar esse conhecimento para ordenar a saída de qualquer cmdlet.
+Não é necessário que saber as rotinas de classificação diferentes de cada cmdlet.
 
-Além disso, os programadores de cmdlet não dispõe de funcionalidades de ordenação para os seus cmdlets de design. Windows PowerShell, fornece-lhes uma estrutura que fornece as funcionalidades básicas e força-os para estar consistente sobre muitos aspetos da interface. A estrutura elimina algumas das opções que normalmente são mantidas ao programador, mas, além return, torna o desenvolvimento dos cmdlets robustos e fácil de utilizar muito mais simples.
+Além disso, os desenvolvedores de cmdlet não tem a criação de funcionalidades de classificação para os seus cmdlets.
+PowerShell dá a eles uma estrutura que fornece as funcionalidades básicas e força-os para ser consistente sobre muitos aspectos da interface.
+O framework elimina algumas das opções que são normalmente deixadas para o desenvolvedor, mas, em troca, torna o desenvolvimento dos cmdlets robustos e fácil de usar muito mais simples.
 
-### <a name="interactive-and-scripting-environments"></a>Ambientes interativas e scripts
-O Windows PowerShell é um ambiente combinado interativo e script que lhe dá acesso a objetos COM e ferramentas de linha de comandos e também permite-lhe utilizar a capacidade da biblioteca de classe do .NET Framework (FCL).
+### <a name="interactive-and-scripting-environments"></a>Ambientes de criação de scripts e interativos
+PowerShell é um ambiente de criação de scripts e interativo combinado que lhe dá acesso a ferramentas de linha de comandos e objetos COM e também permite-lhe utilizar o poder do .NET Framework Class Library (FCL).
 
-Este ambiente melhora após Windows linha de comandos, que fornece um ambiente com várias ferramentas da linha de comandos interativo. Melhora também após scripts de Script anfitrião para WSH (Windows), que lhe permitem utilizar várias ferramentas da linha de comandos e objetos de automatização COM, mas não fornece um ambiente interativo.
+Neste ambiente melhora após o Windows linha de comandos, que fornece um ambiente interativo com várias ferramentas de linha de comandos.
+Ele também oferecer melhorias em scripts do Windows Script Host (WSH), que lhe permite utilizar várias ferramentas de linha de comandos e objetos de automação COM, mas não fornecem um ambiente interativo.
 
-Ao combinar o acesso a todas estas funcionalidades, o Windows PowerShell expande a capacidade de utilizador interativo e o escritor de script e torna mais fácil gerir a administração de sistema.
+Ao combinar o acesso a todos esses recursos, o PowerShell amplia a capacidade do usuário interativo e do escritor de script e torna a administração de sistema mais gerenciáveis.
 
-### <a name="object-orientation"></a>Orientação do objeto
-Apesar de interagir com o Windows PowerShell, escrevendo comandos em texto, do Windows PowerShell baseia-se em objetos, não texto. O resultado de um comando é um objeto. Pode enviar o objeto de resultado para outro comando como entrada. Como resultado, o Windows PowerShell fornece uma interface familiar para pessoas teve com outros shells ao introduzir uma paradigma novo e poderosa da linha de comandos. Se expande o conceito de enviar dados entre comandos, permitindo enviar objetos, em vez de texto.
+### <a name="object-orientation"></a>Orientação a objeto
+Embora interage com o PowerShell, digitando comandos em texto, o PowerShell se baseia em objetos, e não texto.
+A saída de um comando é um objeto.
+Pode enviar o objeto de saída para outro comando como entrada.
+Como resultado, o PowerShell fornece uma interface familiar para pessoas experimentadas em outros shells, ao mesmo tempo apresentando um paradigma de linha de comandos novo e poderoso.
+Ele estende o conceito de envio de dados entre comandos, permitindo-lhe para enviar a objetos, em vez de texto.
 
-### <a name="easy-transition-to-scripting"></a>Transição fácil para processamento de scripts
-Windows PowerShell faz com que facilitam a transição de escrever os comandos interativamente para criar e executar scripts. Pode escrever comandos na linha de comandos do Windows PowerShell para detetar os comandos que executar uma tarefa. Em seguida, pode guardar os comandos num transcript ou um histórico antes copiá-las para um ficheiro para utilização como um script.
+### <a name="easy-transition-to-scripting"></a>Transição fácil para a criação de scripts
+PowerShell facilita facilita a transição de digitar comandos interativamente a criação e execução de scripts.
+Pode escrever os comandos na linha de comando do PowerShell para descobrir os comandos que executam uma tarefa.
+Em seguida, pode salvar esses comandos numa transcrição ou um histórico antes de copiá-los para um ficheiro para utilização como um script.
