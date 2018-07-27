@@ -3,12 +3,12 @@ ms.date: 06/12/2017
 contributor: manikb
 keywords: cmdlet do powershell do galeria, psget
 title: Módulos com edições do PowerShell compatíveis
-ms.openlocfilehash: 2b11d833e7abc50f26b1581f678b9509a098c2c5
-ms.sourcegitcommit: 77f62a55cac8c13d69d51eef5fade18f71d66955
+ms.openlocfilehash: 7f38e6e1d4f4d45814bf331f33e962e06f4e03c1
+ms.sourcegitcommit: c3f1a83b59484651119630f3089aa51b6e7d4c3c
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 07/17/2018
-ms.locfileid: "39093529"
+ms.lasthandoff: 07/26/2018
+ms.locfileid: "39268709"
 ---
 # <a name="modules-with-compatible-powershell-editions"></a>Módulos com edições do PowerShell compatíveis
 
@@ -17,7 +17,7 @@ Começando na versão 5.1, o PowerShell está disponível nas diferentes ediçõ
 - **Edição Desktop:** incorporada no .NET Framework e fornece compatibilidade com scripts e módulos de filtragem de versões do PowerShell a executar edições de requisitos de espaço total do Windows, tais como Server Core e o Ambiente de trabalho do Windows.
 - **Edição Core:** incorporada no .NET Core e fornece compatibilidade com scripts e módulos de filtragem de versões do PowerShell a executar edições de requisitos de espaço reduzido do Windows, tais como Servidor Nano e o IoT do Windows.
 
-## <a name="the-running-edition-of-powershell-is-shown-in-the-psedition-property-of-psversiontable"></a>A edição em execução do PowerShell é apresentada na propriedade PSEdition da $PSVersionTable.
+A edição em execução do PowerShell é mostrada na propriedade PSEdition da `$PSVersionTable`.
 
 ```powershell
 $PSVersionTable
@@ -36,7 +36,9 @@ PSRemotingProtocolVersion      2.3
 SerializationVersion           1.1.0.1
 ```
 
-## <a name="module-authors-can-declare-their-modules-to-be-compatible-with-one-or-more-powershell-editions-using-the-compatiblepseditions-module-manifest-key-this-key-is-only-supported-on-powershell-51-or-later"></a>Os autores de módulo podem declarar os módulos para torná-los compatíveis com uma ou mais edições do PowerShell com a chave de manifesto de módulo CompatiblePSEditions. Esta chave apenas é suportada no PowerShell 5.1 ou posterior.
+## <a name="declaring-compatible-editions"></a>Declarando edições compatíveis
+
+Os autores de módulo podem declarar os módulos para torná-los compatíveis com uma ou mais edições do PowerShell com a chave de manifesto de módulo CompatiblePSEditions. Esta chave apenas é suportada no PowerShell 5.1 ou posterior.
 
 > [!NOTE]
 > Depois de um manifesto de módulo é especificado com a chave de CompatiblePSEditions, não pode ser importado em versões mais baixas do PowerShell.
@@ -88,15 +90,15 @@ Desktop
 Core
 ```
 
-## <a name="module-authors-can-publish-a-single-module-targeting-to-either-or-both-powershell-editions-desktop-and-core"></a>Os autores de módulo podem publicar um direcionamento de módulo único para cada um, ou ambas as edições do PowerShell (ambiente de trabalho e núcleos)
+## <a name="targeting-multiple-editions"></a>Direcionamento várias edições
 
-Um mesmo módulo pode trabalhar em edições de ambiente de trabalho e Core, nesse módulo tem de adicionar a lógica necessária em qualquer um dos RootModule ou no manifesto do módulo usando a variável de $PSEdition autor.
-Módulos podem ter dois conjuntos de DLLs compiladas destinados a CoreCLR e FullCLR.
-Aqui estão as duas opções para empacotar seu módulo com a lógica para carregar dlls adequada.
+Os autores de módulo podem publicar um direcionamento de módulo único para cada um, ou ambas as edições do PowerShell (ambiente de trabalho e Core).
+
+Um mesmo módulo pode trabalhar em edições de ambiente de trabalho e Core, nesse módulo tem de adicionar a lógica necessária em qualquer um dos RootModule ou no manifesto do módulo usando a variável de $PSEdition autor. Módulos podem ter dois conjuntos de DLLs compiladas destinados a CoreCLR e FullCLR. Aqui estão as duas opções para empacotar seu módulo com a lógica para carregar dlls adequada.
 
 ### <a name="option-1-packaging-a-module-for-targeting-multiple-versions-and-multiple-editions-of-powershell"></a>Opção 1: Empacotando um módulo para destinados a várias versões e várias edições do PowerShell
 
-#### <a name="module-folder-contents"></a>Conteúdo da pasta de módulo
+Conteúdo da pasta de módulo
 
 - Microsoft.Windows.PowerShell.ScriptAnalyzer.BuiltinRules.dll
 - Microsoft.Windows.PowerShell.ScriptAnalyzer.dll
@@ -116,7 +118,7 @@ Aqui estão as duas opções para empacotar seu módulo com a lógica para carre
 - Settings\ScriptingStyle.psd1
 - Settings\ScriptSecurity.psd1
 
-#### <a name="contents-of-psscriptanalyzerpsd1-file"></a>Conteúdo do arquivo de PSScriptAnalyzer.psd1
+Conteúdo do arquivo de PSScriptAnalyzer.psd1
 
 ```powershell
 @{
@@ -134,9 +136,9 @@ ModuleVersion = '1.6.1'
 }
 ```
 
-#### <a name="contents-of-psscriptanalyzerpsm1-file"></a>Conteúdo do arquivo de PSScriptAnalyzer.psm1
-
 Abaixo lógica carrega os assemblies necessários, consoante a edição atual ou a versão.
+
+Conteúdo do arquivo de PSScriptAnalyzer.psm1:
 
 ```powershell
 #
@@ -157,7 +159,8 @@ if (($PSVersionTable.Keys -contains "PSEdition") -and ($PSVersionTable.PSEdition
 }
 else
 {
-    if ($PSVersionTable.PSVersion -lt [Version]'5.0') {
+    if ($PSVersionTable.PSVersion -lt [Version]'5.0')
+    {
         $binaryModuleRoot = Join-Path -Path $PSModuleRoot -ChildPath 'PSv3'
     }
 }
@@ -173,48 +176,43 @@ $PSModule.OnRemove = {
 
 ### <a name="option-2-use-psedition-variable-in-the-psd1-file-to-load-the-proper-dlls-and-nestedrequired-modules"></a>Opção 2: Utilizar $PSEdition variável no ficheiro PSD1 para carregar as DLLs adequados e os módulos/necessária para aninhados
 
-No PS 5.1 ou mais recente, $PSEdition de variável global é permitida no arquivo de manifesto do módulo.
-Usando esta variável, autor de módulos pode especificar os valores condicionais no arquivo de manifesto do módulo. É possível referenciar a variável $PSEdition no modo de idioma restrito ou uma secção de dados.
+No PS 5.1 ou mais recente, $PSEdition de variável global é permitida no arquivo de manifesto do módulo. Usando esta variável, autor de módulos pode especificar os valores condicionais no arquivo de manifesto do módulo. É possível referenciar a variável $PSEdition no modo de idioma restrito ou uma secção de dados.
 
 > [!NOTE]
-> Depois de um manifesto de módulo é especificado com a chave de CompatiblePSEditions ou utiliza a variável de $PSEdition, não pode ser importado em versões mais baixas do PowerShell.
+> Depois de um manifesto de módulo for especificado com a chave de CompatiblePSEditions ou utiliza `$PSEdition` variável, ele não pode ser importado em versões mais baixas do PowerShell.
 
-#### <a name="sample-module-manifest-file-with-compatiblepseditions-key"></a>Ficheiro de manifesto de módulo de exemplo com a chave de CompatiblePSEditions
+Ficheiro de manifesto de módulo de exemplo com a chave de CompatiblePSEditions
 
 ```powershell
 @{
-# - - -
+    # Script module or binary module file associated with this manifest.
+    RootModule = if($PSEdition -eq 'Core')
+    {
+        'coreclr\MyCoreClrRM.dll'
+    }
+    else # Desktop
+    {
+        'clr\MyFullClrRM.dll'
+    }
 
-# Script module or binary module file associated with this manifest.
-RootModule = if($PSEdition -eq 'Core')
-{
-'coreclr\MyCoreClrRM.dll'
-}
-else # Desktop
-{
-'clr\MyFullClrRM.dll'
-}
+    # Supported PSEditions
+    CompatiblePSEditions = 'Desktop', 'Core'
 
-# Supported PSEditions
-CompatiblePSEditions = 'Desktop', 'Core'
-
-# Modules to import as nested modules of the module specified in RootModule/ModuleToProcess
-NestedModules = if($PSEdition -eq 'Core')
-{
-'coreclr\MyCoreClrNM1.dll',
-'coreclr\MyCoreClrNM2.dll'
-}
-else # Desktop
-{
-'clr\MyFullClrNM1.dll',
-'clr\MyFullClrNM2.dll'
-}
-
-# -- - -
+    # Modules to import as nested modules of the module specified in RootModule/ModuleToProcess
+    NestedModules = if($PSEdition -eq 'Core')
+    {
+        'coreclr\MyCoreClrNM1.dll',
+        'coreclr\MyCoreClrNM2.dll'
+    }
+    else # Desktop
+    {
+        'clr\MyFullClrNM1.dll',
+        'clr\MyFullClrNM2.dll'
+    }
 }
 ```
 
-#### <a name="module-contents"></a>Conteúdo do módulo
+### <a name="module-contents"></a>Conteúdo do módulo
 
 ```powershell
 dir -Recurse
@@ -223,30 +221,30 @@ dir -Recurse
 ```output
     Directory: C:\Users\manikb\Documents\WindowsPowerShell\Modules\ModuleWithEditions
 
-Mode                LastWriteTime         Length Name
-----                -------------         ------ ----
-d-----         7/5/2016   1:37 PM                clr
-d-----         7/5/2016   1:36 PM                coreclr
--a----         7/5/2016   1:34 PM           4906 ModuleWithEditions.psd1
+Mode           LastWriteTime   Length Name
+----           -------------   ------ ----
+d-----    7/5/2016   1:37 PM          clr
+d-----    7/5/2016   1:36 PM          coreclr
+-a----    7/5/2016   1:34 PM     4906 ModuleWithEditions.psd1
 
     Directory: C:\Users\manikb\Documents\WindowsPowerShell\Modules\ModuleWithEditions\clr
 
-Mode                LastWriteTime         Length Name
-----                -------------         ------ ----
--a----         7/5/2016   1:35 PM              0 MyFullClrNM1.dll
--a----         7/5/2016   1:35 PM              0 MyFullClrNM2.dll
--a----         7/5/2016   1:35 PM              0 MyFullClrRM.dl
+Mode           LastWriteTime    Length Name
+----           -------------    ------ ----
+-a----    7/5/2016   1:35 PM         0 MyFullClrNM1.dll
+-a----    7/5/2016   1:35 PM         0 MyFullClrNM2.dll
+-a----    7/5/2016   1:35 PM         0 MyFullClrRM.dl
 
     Directory: C:\Users\manikb\Documents\WindowsPowerShell\Modules\ModuleWithEditions\coreclr
 
-Mode                LastWriteTime         Length Name
-----                -------------         ------ ----
--a----         7/5/2016   1:35 PM              0 MyCoreClrNM1.dll
--a----         7/5/2016   1:35 PM              0 MyCoreClrNM2.dll
--a----         7/5/2016   1:35 PM              0 MyCoreClrRM.dl
+Mode           LastWriteTime   Length Name
+----           -------------   ------ ----
+-a----    7/5/2016   1:35 PM        0 MyCoreClrNM1.dll
+-a----    7/5/2016   1:35 PM        0 MyCoreClrNM2.dll
+-a----    7/5/2016   1:35 PM        0 MyCoreClrRM.dl
 ```
 
-## <a name="powershell-gallery-users-can-find-the-list-of-modules-supported-on-a-specific-powershell-edition-using-tags-pseditiondesktop-and-pseditioncore"></a>Os utilizadores da galeria do PowerShell podem encontrar a lista de módulos suportado numa edição específica do PowerShell, utilizando etiquetas PSEdition_Desktop e PSEdition_Core.
+Os utilizadores da galeria do PowerShell podem encontrar a lista de módulos suportado numa edição específica do PowerShell, utilizando etiquetas PSEdition_Desktop e PSEdition_Core.
 
 Módulos sem etiquetas PSEdition_Desktop e PSEdition_Core são considerados como funcionam bem em edições de ambiente de trabalho do PowerShell.
 

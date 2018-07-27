@@ -3,18 +3,18 @@ ms.topic: reference
 keywords: PowerShell, o cmdlet
 ms.date: 12/12/2016
 title: Install-PswaWebApplication
-ms.openlocfilehash: 68455d9490f7d5c33c1a928ac262a76a78ad7128
-ms.sourcegitcommit: 54534635eedacf531d8d6344019dc16a50b8b441
+ms.openlocfilehash: 29e074b75eeb387640831229c63142e6dd5e991a
+ms.sourcegitcommit: c3f1a83b59484651119630f3089aa51b6e7d4c3c
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 05/16/2018
-ms.locfileid: "34189606"
+ms.lasthandoff: 07/26/2018
+ms.locfileid: "39268304"
 ---
 # <a name="install-pswawebapplication"></a>Install-PswaWebApplication
 
-## <a name="synopsis"></a>RESUMO
+## <a name="synopsis"></a>SINOPSE
 
-Configura a aplicação web do Windows PowerShell® Web Access no IIS.
+Configura o aplicativo web do Windows PowerShell Web Access no IIS.
 
 ## <a name="syntax"></a>SINTAXE
 
@@ -25,13 +25,14 @@ Install-PswaWebApplication [[-WebApplicationName] <String> ] [-UseTestCertificat
 
 ## <a name="description"></a>DESCRIÇÃO
 
-O **Install-PswaWebApplication** cmdlet configura aplicação web de acesso Web Windows PowerShell. Este cmdlet instala a aplicação web, associa-o com um web site e, opcionalmente, cria um teste SSL certificado, utilizando o **useTestCertificate** parâmetro. Segurança de administradores de web de motivos não devem utilizar um certificado de teste para ambientes de produção.
+O **Install-PswaWebApplication** cmdlet configura o aplicativo de web do Windows PowerShell Web Access.
+Este cmdlet instala a aplicação web, associa-à um web site e, opcionalmente, cria um teste SSL certificado com o **useTestCertificate** parâmetro. Segurança de administradores da web motivos não devem utilizar um certificado de teste para ambientes de produção.
 
 ## <a name="parameters"></a>PARÂMETROS
 
 ### <a name="-usetestcertificate"></a>-UseTestCertificate
 
-Especifica que é criado um certificado de teste. Se este parâmetro estiver definido como VERDADEIRO, então este cmdlet cria um certificado de teste e configura a aplicação web de acesso Web Windows PowerShell para utilizar o certificado para pedidos HTTPS. Se este parâmetro estiver definido como FALSO, não é criado nenhum certificado ou o enlace. Defina este valor como FALSO se outro certificado é utilizado para acesso Web Windows PowerShell.
+Especifica que um certificado de teste é criado. Se este parâmetro estiver definido como true, em seguida, este cmdlet cria um certificado de teste e configura o aplicativo web do Windows PowerShell Web Access para utilizar o certificado para pedidos HTTPS. Se este parâmetro estiver definido como false, não é criada nenhum certificado ou a ligação. Defina este valor como FALSO se outro certificado é utilizado para o Windows PowerShell Web Access.
 
 |||
 |-|-|
@@ -42,9 +43,9 @@ Especifica que é criado um certificado de teste. Se este parâmetro estiver def
 | Aceitar Entrada de Pipeline?               | falso                                |
 | Aceitar Carateres Universais?          | falso                                |
 
-### <a name="-webapplicationnameltstringgt"></a>-WebApplicationName&lt;cadeia&gt;
+### <a name="-webapplicationname"></a>-WebApplicationName
 
-Especifica o nome da sua aplicação web. Isto é apresentado como a última parte do URL de acesso Web do Windows PowerShell.
+Especifica o nome da sua aplicação web. É apresentado como a última parte do URL do Windows PowerShell Web Access.
 
 |||
 |-|-|
@@ -55,9 +56,9 @@ Especifica o nome da sua aplicação web. Isto é apresentado como a última par
 | Aceitar Entrada de Pipeline?               | falso                                |
 | Aceitar Carateres Universais?          | falso                                |
 
-### <a name="-websitenameltstringgt"></a>-WebSiteName&lt;cadeia&gt;
+### <a name="-websitename"></a>-WebSiteName
 
-Especifica o nome do site do servidor Web (IIS) em que pretende instalar esta aplicação web do acesso Web Windows PowerShell.
+Especifica o nome do site do servidor Web (IIS) em que pretende instalar esta aplicação web do Windows PowerShell Web Access.
 
 |||
 |-|-|
@@ -93,14 +94,13 @@ O cmdlet não é executado.
 | Aceitar Entrada de Pipeline?               | falso                                |
 | Aceitar Carateres Universais?          | falso                                |
 
-### <a name="ltcommonparametersgt"></a>&lt;Parâmetroscomuns&gt;
+### <a name="ltcommonparametersgt"></a>&lt;CommonParameters&gt;
 
-Este cmdlet suporta os parâmetros comuns: -Verbose, -Debug, -ErrorAction, -ErrorVariable, -OutBuffer, e -OutVariable.
-Para obter mais informações, consulte [about_CommonParameters](http://go.microsoft.com/fwlink/p/?LinkID=113216).
+Este cmdlet suporta os parâmetros comuns: -Verbose, -Debug, -ErrorAction, -ErrorVariable, -OutBuffer, e -OutVariable. Para obter mais informações, consulte [about_CommonParameters](http://go.microsoft.com/fwlink/p/?LinkID=113216).
 
 ## <a name="inputs"></a>ENTRADAS
 
-Este cmdlet não aceita nenhuma entrada.
+Este cmdlet não precisa de entrada.
 
 ## <a name="outputs"></a>SAÍDAS
 
@@ -110,7 +110,7 @@ Este cmdlet não produz nenhuma saída.
 
 ### <a name="example-1"></a>EXEMPLO 1
 
-Este exemplo instala a aplicação de web PSWA utilizando os valores predefinidos para o **WebApplicationName** (*pswa*) e **WebSiteName** (*Default Web Site* ) parâmetros.
+Este exemplo instala a aplicação de web PSWA utilizando os valores predefinidos para o **WebApplicationName** (*pswa*) e **WebSiteName** (*Web Site predefinido* ) parâmetros.
 
 ```
 Install-PswaWebApplication
@@ -118,7 +118,7 @@ Install-PswaWebApplication
 
 ### <a name="example-2"></a>EXEMPLO 2
 
-Este exemplo instala a aplicação de web PSWA com um certificado de teste e utilizando os valores predefinidos para o **WebApplicationName** e **WebSiteName** parâmetros.
+Este exemplo instala o aplicativo da web PSWA com um certificado de teste e utilizar os valores predefinidos para o **WebApplicationName** e **WebSiteName** parâmetros.
 
 ```
 Install-PswaWebApplication -UseTestCertificate

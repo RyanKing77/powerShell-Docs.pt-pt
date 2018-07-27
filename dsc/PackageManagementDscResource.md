@@ -2,12 +2,12 @@
 ms.date: 06/20/2018
 keywords: DSC, powershell, configuração, a configuração
 title: Recursos do DSC PackageManagement
-ms.openlocfilehash: 281aee13eb005f00b23c97870eaefaa332d9c232
-ms.sourcegitcommit: 8b076ebde7ef971d7465bab834a3c2a32471ef6f
+ms.openlocfilehash: 18cbbfe0715c82dcfdf4a5fb6ee36ee814e43d3b
+ms.sourcegitcommit: c3f1a83b59484651119630f3089aa51b6e7d4c3c
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 07/06/2018
-ms.locfileid: "37892506"
+ms.lasthandoff: 07/26/2018
+ms.locfileid: "39268097"
 ---
 # <a name="dsc-packagemanagement-resource"></a>Recursos do DSC PackageManagement
 
@@ -39,8 +39,8 @@ PackageManagement [string] #ResourceName
 
 ## <a name="properties"></a>Propriedades
 
-|  Propriedade  |  Descrição   |
-|---|---|
+| Propriedade | Descrição |
+| --- | --- |
 | Nome| Especifica o nome do pacote a ser instalada ou desinstalada.|
 | AdditionalParameters| Tabela de hash específica do fornecedor de parâmetros transferidos para `Get-Package -AdditionalArguments`. Por exemplo, para o fornecedor de NuGet pode transmitir parâmetros adicionais, como DestinationPath.|
 | Certifique-se| Determina se o pacote é para ser instalada ou desinstalada.|
@@ -54,10 +54,11 @@ PackageManagement [string] #ResourceName
 ## <a name="additional-parameters"></a>Parâmetros adicionais
 
 A tabela seguinte apresenta uma lista de opções para a propriedade AdditionalParameters.
-|  Parâmetro  | Descrição   |
-|---|---|
+
+| Parâmetro | Descrição |
+| --- | --- |
 | DestinationPath| Utilizado por fornecedores, como o fornecedor de Nuget incorporado. Especifica uma localização do ficheiro onde pretende que o pacote a ser instalado.|
-| InstallationPolicy| Utilizado por fornecedores, como o fornecedor de Nuget incorporado. Determina se confiam origem do pacote. Um dos: "Não fidedigno", "Fidedigno".|
+| InstallationPolicy| Utilizado por fornecedores, como o fornecedor de Nuget incorporado. Determina se confiam origem do pacote. Um dos: `Untrusted`, `Trusted`.|
 
 ## <a name="example"></a>Exemplo
 

@@ -3,56 +3,56 @@ ms.date: 06/05/2017
 keywords: PowerShell, o cmdlet
 title: Alterar o Estado do Computador
 ms.assetid: 8093268b-27f8-4a49-8871-142c5cc33f01
-ms.openlocfilehash: c659ad54325b0f7305f882e1cb9607062abad6a4
-ms.sourcegitcommit: 2ffb9fa92129c2001379ca2c17646466721f7165
+ms.openlocfilehash: 4b5b4adb349dd8036117c364ed2ebb1ffaf8c88f
+ms.sourcegitcommit: c3f1a83b59484651119630f3089aa51b6e7d4c3c
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 06/09/2018
-ms.locfileid: "35251522"
+ms.lasthandoff: 07/26/2018
+ms.locfileid: "39267890"
 ---
 # <a name="changing-computer-state"></a>Alterar o Estado do Computador
 
-Para repor um computador no Windows PowerShell, utilize uma ferramenta de linha de comandos padrão ou uma classe WMI. Embora estiver a utilizar o Windows PowerShell apenas para executar a ferramenta, aprender a alterar o estado de energia de um computador no Windows PowerShell ilustra alguns dos detalhes importantes sobre como trabalhar com ferramentas externas no Windows PowerShell.
+Para repor um computador no Windows PowerShell, utilize uma ferramenta de linha de comando padrão ou uma classe WMI. Embora o estiver a utilizar o Windows PowerShell apenas para executar a ferramenta, aprendendo a alterar o estado de energia de um computador no Windows PowerShell ilustra alguns dos detalhes importantes sobre como trabalhar com as ferramentas externas no Windows PowerShell.
 
 ### <a name="locking-a-computer"></a>Bloqueio de um computador
 
-É a única forma de bloquear um computador diretamente com as ferramentas disponíveis padrão para chamar o **LockWorkstation()** funcionar **user32.dll**:
+A única forma de bloquear um computador diretamente com as ferramentas disponíveis padrão é chamar o **LockWorkstation()** funcionar **user32.dll**:
 
 ```
 rundll32.exe user32.dll,LockWorkStation
 ```
 
-Este comando bloqueia imediatamente a estação de trabalho. Utiliza *rundll32.exe*, que é executado DLLs do Windows (e guarda os respetivos bibliotecas para utilização repetida) para executar user32.dll, uma biblioteca de funções de gestão do Windows.
+Este comando bloqueia imediatamente a estação de trabalho. Ele usa *rundll32.exe*, que executa o Windows DLLs (e salva suas bibliotecas para uso repetido) para executar user32.dll, uma biblioteca de funções de gerenciamento do Windows.
 
-Quando bloqueia uma estação de trabalho enquanto a mudança rápida de utilizador estiver ativada, tal como no Windows XP, o computador apresenta o ecrã de início de sessão do utilizador em vez de iniciar a proteção de ecrã ser o utilizador atual.
+Quando bloquear uma estação de trabalho enquanto estiver ativada a troca rápida de usuário, como no Windows XP, o computador apresenta o ecrã de início de sessão do utilizador, em vez de iniciar a proteção de tela do utilizador atual.
 
-Para encerrar sessões específicas num servidor de Terminal, utilize o **tsshutdn.exe** ferramenta da linha de comandos.
+Para desligar sessões particulares num Terminal Server, utilize o **tsshutdn.exe** ferramenta da linha de comandos.
 
 ### <a name="logging-off-the-current-session"></a>Terminar a sessão atual
 
-Pode utilizar várias técnicas diferentes para terminar uma sessão no sistema local. A forma mais simples consiste em utilizar a ferramenta de linha de comandos de serviços de Terminal/ambiente de trabalho remoto, **logoff.exe** (para obter mais detalhes, na linha de comandos do Windows PowerShell, escreva **fim de sessão /?**). Para terminar a sessão atual do Active Directory, escreva **terminar sessão** sem argumentos.
+Pode usar várias técnicas diferentes para terminar sessão numa sessão no sistema local. A forma mais simples é usar a ferramenta de linha de comandos de serviços de Terminal/ambiente de trabalho remoto, **logoff.exe** (para obter detalhes, na linha de comandos da Windows PowerShell, escreva **logoff /?**). Para terminar a sessão atual do Active Directory, escreva **logoff** sem argumentos.
 
-Também pode utilizar o **shutdown.exe** ferramenta com a sua opção de terminar sessão:
+Também pode utilizar o **shutdown.exe** ferramenta com a opção de terminar sessão:
 
 ```
 shutdown.exe -l
 ```
 
-Uma terceira opção consiste em utilizar o WMI. A classe Win32_OperatingSystem tem um método de Win32Shutdown. Invocar o método com o sinalizador 0 inicia a fim de sessão:
+Uma terceira opção é usar o WMI. A classe Win32_OperatingSystem tem um método de Win32Shutdown. Invocando o método com o sinalizador 0 inicia a fim de sessão:
 
 ```powershell
 (Get-WmiObject -Class Win32_OperatingSystem -ComputerName .).Win32Shutdown(0)
 ```
 
-Para obter mais informações e para localizar outras funcionalidades do método Win32Shutdown, consulte "Win32Shutdown método da classe Win32_OperatingSystem" no MSDN.
+Para obter mais informações e para localizar outros recursos do método Win32Shutdown, consulte "Win32Shutdown método da classe Win32_OperatingSystem" no MSDN.
 
 ### <a name="shutting-down-or-restarting-a-computer"></a>Encerrar ou reiniciar um computador
 
-Encerrar e reiniciar os computadores são, geralmente, os mesmos tipos de tarefas. As ferramentas que encerrar um computador, geralmente, serão reiniciá-lo, bem como — e vice-versa. Existem duas opções simples para reiniciar um computador a partir do Windows PowerShell. Utilize Tsshutdn.exe ou Shutdown.exe com argumentos adequados. Pode obter informações de utilização detalhada do **tsshutdn.exe /?** ou **shutdown.exe /?**.
+Encerrar e reiniciar os computadores em geral são os mesmos tipos de tarefas. Ferramentas que encerrar um computador em geral serão reiniciá-lo também — e vice-versa. Existem duas opções simples para reiniciar um computador a partir do Windows PowerShell. Utilize Tsshutdn.exe ou Shutdown.exe com argumentos adequados. Pode obter informações de utilização detalhadas de **tsshutdn.exe /?** ou **shutdown.exe /?**.
 
-Também pode efetuar encerrar e reiniciar operações diretamente a partir do Windows PowerShell, bem como.
+Também pode efetuar encerrar e reiniciar operações diretamente a partir do Windows PowerShell também.
 
-Para encerrar o computador, utilize o comando de reiniciar o computador
+Para encerrar o computador, utilize o comando stop-computer
 
 ```powershell
 stop-computer

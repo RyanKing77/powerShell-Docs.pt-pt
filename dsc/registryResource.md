@@ -2,16 +2,16 @@
 ms.date: 06/12/2017
 keywords: DSC, powershell, configuração, a configuração
 title: Recurso de registro de DSC
-ms.openlocfilehash: b77710d7a6fc599949e78c17af309ad88a1a0872
-ms.sourcegitcommit: 77f62a55cac8c13d69d51eef5fade18f71d66955
+ms.openlocfilehash: 8d74473d167b70182c3a16c1d39d2a9e797afb1b
+ms.sourcegitcommit: c3f1a83b59484651119630f3089aa51b6e7d4c3c
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 07/17/2018
-ms.locfileid: "39093590"
+ms.lasthandoff: 07/26/2018
+ms.locfileid: "39267726"
 ---
 # <a name="dsc-registry-resource"></a>Recurso de registro de DSC
 
-> Aplica-se a: O Windows PowerShell 4.0, Windows PowerShell 5.0
+_Aplica-se a: O Windows PowerShell 4.0, Windows PowerShell 5.0_
 
 O **Registro** recursos no Windows PowerShell Desired State Configuration (DSC) fornece um mecanismo para gerir as chaves de registro e os valores num nó de destino.
 
@@ -33,8 +33,8 @@ Registry [string] #ResourceName
 
 ## <a name="properties"></a>Propriedades
 
-|  Propriedade  |  Descrição   |
-|---|---|
+| Propriedade | Descrição |
+| --- | --- |
 | Tecla| Indica o caminho da chave do registo para o qual pretende garantir um estado específico. Este caminho tem de incluir o hive.|
 | valueName| Indica o nome do valor do Registro. Para adicionar ou remover uma chave de registo, especifique esta propriedade como uma cadeia vazia sem especificar ValueType ou ValueData. Para modificar ou remover o valor predefinido de uma chave de registo, especifique esta propriedade como uma cadeia vazia ao especificar também o ValueType ou ValueData.|
 | Certifique-se| Indica se a chave e valor existirem. Para garantir que eles fazem, defina esta propriedade para "Presente". Para garantir que não existam, defina a propriedade como "Ausente". O valor predefinido é "Presente".|
@@ -62,4 +62,4 @@ Configuration RegistryTest
 ```
 
 > [!NOTE]
-> Alterar uma definição de registo no **HKEY\_atual\_utilizador** hive requer que a configuração seja executado com credenciais do usuário, em vez de como o sistema. Pode utilizar o **PsDscRunAsCredential** propriedade para especificar as credenciais de utilizador para a configuração. Por exemplo, veja [a executar o DSC com as credenciais de utilizador](runAsUser.md).
+> Alterar uma definição de registo no `HKEY\CURRENT\USER` hive requer que a configuração seja executado com credenciais do usuário, em vez de como o sistema. Pode utilizar o **PsDscRunAsCredential** propriedade para especificar as credenciais de utilizador para a configuração. Por exemplo, veja [a executar o DSC com as credenciais de utilizador](runAsUser.md).

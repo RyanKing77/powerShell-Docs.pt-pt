@@ -3,18 +3,19 @@ ms.date: 06/12/2017
 contributor: manikb
 keywords: cmdlet do powershell do galeria, psget
 title: Scripts com edições do PowerShell compatíveis
-ms.openlocfilehash: 386e65295641fb6932c13047246742531aeaec64
-ms.sourcegitcommit: 77f62a55cac8c13d69d51eef5fade18f71d66955
+ms.openlocfilehash: 0ab655ff1c5dd0f48ec41a16ad394251b6c70748
+ms.sourcegitcommit: c3f1a83b59484651119630f3089aa51b6e7d4c3c
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 07/17/2018
-ms.locfileid: "39093665"
+ms.lasthandoff: 07/26/2018
+ms.locfileid: "39267818"
 ---
 # <a name="script-with-compatible-powershell-editions"></a>Scripts com edições do PowerShell compatíveis
 
 Começando na versão 5.1, o PowerShell está disponível nas diferentes edições que denotam conjuntos de funcionalidade e compatibilidade de plataforma variados.
 
 - **Edição Desktop:** incorporada no .NET Framework e fornece compatibilidade com scripts e módulos de filtragem de versões do PowerShell a executar edições de requisitos de espaço total do Windows, tais como Server Core e o Ambiente de trabalho do Windows.
+
 - **Edição Core:** incorporada no .NET Core e fornece compatibilidade com scripts e módulos de filtragem de versões do PowerShell a executar edições de requisitos de espaço reduzido do Windows, tais como Servidor Nano e o IoT do Windows.
 
 A edição em execução do PowerShell é apresentada na propriedade PSEdition da $PSVersionTable.
@@ -34,7 +35,7 @@ PSRemotingProtocolVersion      2.3
 SerializationVersion           1.1.0.1
 ```
 
-Os autores de script podem impedir que um script de executar, exceto se for executado numa edição compatível do PowerShell com o parâmetro PSEdition em #requires statement.
+Os autores de script podem impedir que um script em execução, a menos que ele é executado numa edição compatível do PowerShell com o parâmetro PSEdition num `#requires` instrução.
 
 ```powershell
 Set-Content C:\script.ps1 -Value "#requires -PSEdition Core
