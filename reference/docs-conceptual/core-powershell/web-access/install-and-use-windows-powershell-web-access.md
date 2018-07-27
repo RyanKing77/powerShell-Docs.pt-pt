@@ -2,12 +2,12 @@
 ms.date: 08/23/2017
 keywords: PowerShell, o cmdlet
 title: instalar e utilizar o acesso web windows powershell
-ms.openlocfilehash: c14da421e372f6c4c4f203b16bbd37f28a9ba255
-ms.sourcegitcommit: 77f62a55cac8c13d69d51eef5fade18f71d66955
+ms.openlocfilehash: 8fa965ff30cd9e0b688bcc46d01d843a0f1c2e0b
+ms.sourcegitcommit: c3f1a83b59484651119630f3089aa51b6e7d4c3c
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 07/17/2018
-ms.locfileid: "39094267"
+ms.lasthandoff: 07/26/2018
+ms.locfileid: "39268420"
 ---
 # <a name="install-and-use-windows-powershell-web-access"></a>Instalar e Utilizar o Acesso Web Windows PowerShell
 
@@ -29,8 +29,7 @@ Configuração do Windows PowerShell Web Access e a configuração é um process
 1. [Configurar o Gateway](#configure-the-gateway)
 1. [Configurar uma regra de autorização restrita](#configure-a-restrictive-authorization-rule)
 
-Antes de instalar e configurar o Windows PowerShell Web Access, recomendamos que leia este guia completo, que inclui instruções sobre como instalar, proteger e desinstalar o Windows PowerShell Web Access.
-O [utilizar a consola do PowerShell baseada na Web do Windows](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/hh831417(v=ws.11)) tópico descreve a forma como os utilizadores iniciam sessão na consola baseada na web e abrange as limitações e diferenças entre a consola do Windows PowerShell baseada na web e o  **PowerShell.exe** consola. Os utilizadores finais da consola baseada na web devem ler [utilizam o Web baseado em Windows PowerShell consola](use-the-web-based-windows-powershell-console.md), mas não é necessário ler o restante deste guia.
+Antes de instalar e configurar o Windows PowerShell Web Access, recomendamos que leia este guia completo, que inclui instruções sobre como instalar, proteger e desinstalar o Windows PowerShell Web Access. O [utilizar a consola do PowerShell baseada na Web do Windows](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/hh831417(v=ws.11)) tópico descreve a forma como os utilizadores iniciam sessão na consola baseada na web e abrange as limitações e diferenças entre a consola do Windows PowerShell baseada na web e o  **PowerShell.exe** consola. Os utilizadores finais da consola baseada na web devem ler [utilizam o Web baseado em Windows PowerShell consola](use-the-web-based-windows-powershell-console.md), mas não é necessário ler o restante deste guia.
 
 Este tópico fornece orientações detalhadas de operações servidor Web IIS; apenas os passos necessários para configurar o gateway do Windows PowerShell Web Access são descritos neste tópico. Para mais informações sobre como configurar e proteger Web sites no IIS, consulte os recursos da documentação do IIS na secção Consulte Também.
 
@@ -46,8 +45,8 @@ Windows PowerShell Web Access permite aos utilizadores remotos aceder a computad
 
 ## <a name="browser-and-client-device-support"></a>Suporte de browsers e dispositivos cliente
 
-Windows PowerShell Web Access suporta os seguintes navegadores de Internet.
-Apesar de browsers para dispositivos móveis não serem suportados oficialmente, muitos podem ser capazes de executar a consola do Windows PowerShell baseada na web. Espera-se que outros browsers que aceitam cookies, executam JavaScript e executam Web sites HTTPS funcionem, mas são foram testados oficialmente.
+Windows PowerShell Web Access suporta os seguintes navegadores de Internet. Apesar de browsers para dispositivos móveis não serem suportados oficialmente, muitos podem ser capazes de executar a consola do Windows PowerShell baseada na web.
+Espera-se que outros browsers que aceitam cookies, executam JavaScript e executam Web sites HTTPS funcionem, mas são foram testados oficialmente.
 
 ### <a name="supported-desktop-computer-browsers"></a>Browsers para computadores de secretária suportados
 
@@ -85,17 +84,19 @@ Pode instalar o gateway do Windows PowerShell Web Access num servidor que está 
 #### <a name="to-install-windows-powershell-web-access-by-using-windows-powershell-cmdlets"></a>Para instalar o Acesso Web Windows PowerShell utilizando cmdlets do Windows PowerShell
 
 1. Efetue um dos seguintes procedimentos para abrir uma sessão do Windows PowerShell com direitos de utilizador elevados.
+
    - No ambiente de trabalho do Windows, com o botão direito **do Windows PowerShell** na barra de tarefas e, em seguida, clique em **Executar como administrador**.
    - Sobre o Windows **começar** ecrã, clique com botão direito **Windows PowerShell**e, em seguida, clique em **executar como administrador**.
 
-   > **![Tenha em atenção](images/note.jpeg) nota** no Windows PowerShell 3.0 e 4.0, é necessário importar o módulo de cmdlet do Gestor de servidor para a sessão do Windows PowerShell antes de executar cmdlets que fazem parte do módulo. Um módulo é importado automaticamente na primeira vez que executar um cmdlet que faz parte do módulo. Além disso, os cmdlets do Windows PowerShell não diferenciam maiúsculas de minúsculas.
+   > [!NOTE]
+   > No Windows PowerShell 3.0 e 4.0, não é necessário para importar o módulo de cmdlet do Gestor de servidor para a sessão do Windows PowerShell antes de executar cmdlets que fazem parte do módulo. Um módulo é importado automaticamente na primeira vez que executa um cmdlet que faz parte do módulo.
+   > Além disso, os cmdlets do Windows PowerShell não diferenciam maiúsculas de minúsculas.
 
 1. Escreva o seguinte e, em seguida, prima **Enter**, onde *computer_name* representa um computador remoto no qual pretende instalar o Windows PowerShell Web Access, se aplicável. O parâmetro `-Restart` reinicia automaticamente os servidores de destino, se necessário.
 
    `Install-WindowsFeature -Name WindowsPowerShellWebAccess -ComputerName <computer_name> -IncludeManagementTools -Restart`
 
-   > **![Tenha em atenção](images/note.jpeg) nota**
-   >
+   > [!NOTE]
    > Instalar o Windows PowerShell Web Access, utilizando cmdlets do Windows PowerShell não adicionar ferramentas de gestão de servidor Web (IIS) por predefinição. Se pretende instalar as ferramentas de gestão no mesmo servidor que o gateway do Windows PowerShell Web Access, adicione o `-IncludeManagementTools` parâmetro para o comando de instalação (conforme indicado neste passo). Se estiver a gerir o site do Windows PowerShell Web Access num computador remoto, instale o snap-in Gestor do IIS instalando [remoto servidor administração Toolsfor Windows 8.1](https://www.microsoft.com/en-us/download/details.aspx?id=39296) ou [administração remota do servidor Ferramentas para o Windows 8](https://www.microsoft.com/en-us/download/details.aspx?id=28972) no computador do qual pretende gerir o gateway.
 
    Para instalar funções e funcionalidades num VHD offline, tem de adicionar o parâmetro `-ComputerName` e o parâmetro `-VHD`. O parâmetro `-ComputerName` contém o nome do servidor onde pretende montar o VHD, e o parâmetro `-VHD` contém o caminho para o ficheiro VHD no servidor especificado.
@@ -108,30 +109,25 @@ Pode instalar o gateway do Windows PowerShell Web Access num servidor que está 
 
 ### <a name="configure-the-gateway"></a>Configurar o Gateway
 
-O **Install-PswaWebApplication** cmdlet é uma forma rápida de obter o Windows PowerShell Web Access configurado. Embora possa adicionar o parâmetro `UseTestCertificate` ao cmdlet `Install-PswaWebApplication` para instalar um certificado SSL autoassinado para efeitos de teste, não é um procedimento seguro; para um ambiente de produção seguro, utilize sempre um certificado SSL válido assinado por uma autoridade de certificação (AC).
-Os administradores podem substituir o certificado de teste por um certificado assinado à sua escolha utilizando a consola do Gestor do IIS.
+O **Install-PswaWebApplication** cmdlet é uma forma rápida de obter o Windows PowerShell Web Access configurado. Embora possa adicionar o parâmetro `UseTestCertificate` ao cmdlet `Install-PswaWebApplication` para instalar um certificado SSL autoassinado para efeitos de teste, não é um procedimento seguro; para um ambiente de produção seguro, utilize sempre um certificado SSL válido assinado por uma autoridade de certificação (AC). Os administradores podem substituir o certificado de teste por um certificado assinado à sua escolha utilizando a consola do Gestor do IIS.
 
-Pode concluir a configuração de aplicação web do Windows PowerShell Web Access executando o `Install-PswaWebApplication` cmdlet ou efetuando os passos de configuração baseado na GUI no Gestor do IIS. Por predefinição, o cmdlet instala a aplicação web, **pswa** (e um conjunto aplicacional para o mesmo, **pswa_pool**), no **Web Site predefinido** contentor, conforme mostrado no Gestor do IIS; se assim o desejar, pode instruir o cmdlet para alterar o contentor de sites predefinido do aplicativo web. O Gestor do IIS oferece opções de configuração disponíveis para aplicações Web, como alterar o número de porta ou o certificado SSL (Secure Sockets Layer).
+Pode concluir a configuração de aplicação web do Windows PowerShell Web Access executando o `Install-PswaWebApplication` cmdlet ou efetuando os passos de configuração baseado na GUI no Gestor do IIS.
+Por predefinição, o cmdlet instala a aplicação web, **pswa** (e um conjunto aplicacional para o mesmo, **pswa_pool**), no **Web Site predefinido** contentor, conforme mostrado no Gestor do IIS; se assim o desejar, pode instruir o cmdlet para alterar o contentor de sites predefinido do aplicativo web. O Gestor do IIS oferece opções de configuração disponíveis para aplicações Web, como alterar o número de porta ou o certificado SSL (Secure Sockets Layer).
 
-> **![Nota de segurança](images/securitynote.jpeg) nota de segurança**
->
-> Recomendamos vivamente que os administradores configurem o gateway para utilizar um certificado válido assinado por uma AC.
+> **![Nota de segurança](images/securitynote.jpeg) nota de segurança** é altamente recomendável que os administradores configurem o gateway para utilizar um certificado válido assinado por uma AC.
 
 #### <a name="to-configure-the-windows-powershell-web-access-gateway-with-a-test-certificate-by-using-install-pswawebapplication"></a>Para configurar o gateway do Acesso Web Windows PowerShell com um certificado de teste utilizando Install-PswaWebApplication
 
 1. Efetue um dos seguintes procedimentos para abrir uma sessão do Windows PowerShell.
 
    - Na área de trabalho Windows, clique com botão direito **Windows PowerShell** na barra de tarefas.
-
    - Sobre o Windows **começar** ecrã, clique em **Windows PowerShell**.
 
 2. Escreva o seguinte e, em seguida, prima **Enter**.
 
    `Install-PswaWebApplication -UseTestCertificate`
 
-   > **![Nota de segurança](images/securitynote.jpeg) nota de segurança**
-   >
-   > O parâmetro `UseTestCertificate` só deve ser utilizado num ambiente de teste privado. Para um ambiente de produção seguro, recomendamos que utilize um certificado válido assinado por uma AC.
+   > **![Nota de segurança](images/securitynote.jpeg) nota de segurança** o `UseTestCertificate` parâmetro só deve ser utilizado num ambiente de teste privado. Para um ambiente de produção seguro, recomendamos que utilize um certificado válido assinado por uma AC.
 
    Executar o cmdlet instala a aplicação web do Windows PowerShell Web Access dentro do contentor do IIS Default Web Site. O cmdlet cria a infraestrutura necessária para executar o Windows PowerShell Web Access no Web site predefinido, `https://<server_name>/pswa`. Para instalar a aplicação Web num Web site diferentes, forneça o nome do Web site adicionando o parâmetro `WebSiteName`. Para alterar o nome da aplicação Web (a predefinição é `pswa`), adicione o parâmetro `WebApplicationName`.
 
@@ -142,12 +138,11 @@ Pode concluir a configuração de aplicação web do Windows PowerShell Web Acce
    - EnabledProtocols: http
    - PhysicalPath: `%*windir*%/Web/PowerShellWebAccess/wwwroot`
 
-     **Exemplo**: `Install-PswaWebApplication -webApplicationName myWebApp -useTestCertificate`
+   **Exemplo**: `Install-PswaWebApplication -webApplicationName myWebApp -useTestCertificate`
 
-     Neste exemplo, o Web site resultante para o Windows PowerShell Web Access é `https://<server_name>/myWebApp`.
+   Neste exemplo, o Web site resultante para o Windows PowerShell Web Access é `https://<server_name>/myWebApp`.
 
-   > **![Tenha em atenção](images/note.jpeg) nota**
-   >
+   > [!NOTE]
    > Não é possível iniciar sessão até que tenha sido concedido acesso ao site aos utilizadores adicionando regras de autorização. Para obter mais informações, consulte [configurar uma regra de autorização restrita](#configure-a-restrictive-authorization-rule) e [regras de autorização e segurança recursos do Windows PowerShell Web Access](authorization-rules-and-security-features-of-windows-powershell-web-access.md).
 
 #### <a name="to-configure-the-windows-powershell-web-access-gateway-with-a-genuine-certificate-by-using-install-pswawebapplication-and-iis-manager"></a>Para configurar o gateway do Acesso Web Windows PowerShell com um certificado genuíno utilizando Install-PswaWebApplication e o Gestor do IIS
@@ -155,49 +150,42 @@ Pode concluir a configuração de aplicação web do Windows PowerShell Web Acce
 1. Efetue um dos seguintes procedimentos para abrir uma sessão do Windows PowerShell.
 
    - Na área de trabalho Windows, clique com botão direito **Windows PowerShell** na barra de tarefas.
-
    - Sobre o Windows **começar** ecrã, clique em **Windows PowerShell**.
 
 2. Escreva o seguinte e, em seguida, prima **Enter**.
 
    `Install-PswaWebApplication`
 
-   As definições de gateway seguintes são configuradas ao executar o cmdlet.
-   Pode alterá-las manualmente na consola do Gestor do IIS, se pretender.
-   Também pode especificar valores para os parâmetros `WebsiteName` e `WebApplicationName` do cmdlet `Install-PswaWebApplication`.
+   As definições de gateway seguintes são configuradas ao executar o cmdlet. Pode alterá-las manualmente na consola do Gestor do IIS, se pretender. Também pode especificar valores para os parâmetros `WebsiteName` e `WebApplicationName` do cmdlet `Install-PswaWebApplication`.
 
    - Path: /pswa
-
    - ApplicationPool: pswa_pool
-
    - EnabledProtocols: http
-
    - PhysicalPath: `%*windir*%/Web/PowerShellWebAccess/wwwroot`
 
 3. Abra a consola do Gestor do IIS efetuando um dos procedimentos seguintes.
 
    - Na área de trabalho Windows, inicie o Gestor de servidor clicando **Gestor de servidor** na barra de tarefas do Windows. Sobre o **ferramentas** menu no Gestor de servidores, clique em **Gestor de serviços de informação Internet (IIS)**.
-
    - Sobre o Windows **começar** ecrã, clique em **Gestor de servidor**.
 
 4. No painel de árvore do Gerenciador do IIS, expanda o nó para o servidor no qual o Windows PowerShell Web Access está instalado até as **Sites** pasta está visível. Expanda a **Sites** pasta.
 
-5. Selecione o Web site no qual instalou a aplicação web do Windows PowerShell Web Access. Na **ações** painel, clique em **enlaces**.
+5. Selecione o Web site no qual instalou a aplicação web do Windows PowerShell Web Access.
+   Na **ações** painel, clique em **enlaces**.
 
 6. Na **enlace de Site** caixa de diálogo, clique em **Add**.
 
 7. Na **Adicionar enlace de Site** caixa de diálogo a **tipo** campo, selecione **https**.
 
-8. Na **certificado SSL** campo, selecione o certificado assinado no menu pendente. Clique em **OK**. Ver [para configurar um certificado SSL no Gestor do IIS](#to-configure-an-ssl-certificate-in-iis-Manager) neste tópico para obter mais informações sobre como obter um certificado.
+8. Na **certificado SSL** campo, selecione o certificado assinado no menu pendente.
+   Clique em **OK**. Ver [para configurar um certificado SSL no Gestor do IIS](#to-configure-an-ssl-certificate-in-iis-Manager) neste tópico para obter mais informações sobre como obter um certificado.
 
    A aplicação web do Windows PowerShell Web Access está agora configurada para utilizar o seu certificado SSL assinado.
 
-   Pode acessar o Windows PowerShell Web Access abrindo **https://\<server_name\>/pswa** numa janela do browser.
+   Pode acessar o Windows PowerShell Web Access abrindo `https://<server_name>/pswa` numa janela do browser.
 
-   > **![Tenha em atenção](images/note.jpeg) nota**
-   >
-   > Não é possível iniciar sessão até que tenha sido concedido acesso ao site aos utilizadores adicionando regras de autorização.
-   > Para obter mais informações, consulte [configurar uma regra de autorização restrita](#configure-a-restrictive-authorization-rule), neste tópico, e [regras de autorização e segurança recursos do Windows PowerShell Web Access](authorization-rules-and-security-features-of-windows-powershell-web-access.md).
+   > [!NOTE]
+   > Não é possível iniciar sessão até que tenha sido concedido acesso ao site aos utilizadores adicionando regras de autorização. Para obter mais informações, consulte [configurar uma regra de autorização restrita](#configure-a-restrictive-authorization-rule), neste tópico, e [regras de autorização e segurança recursos do Windows PowerShell Web Access](authorization-rules-and-security-features-of-windows-powershell-web-access.md).
 
 ### <a name="configure-a-restrictive-authorization-rule"></a>Configurar uma regra de autorização restrita
 
@@ -210,7 +198,6 @@ Para obter mais detalhes sobre regras de autorização do Windows PowerShell Web
 1. Efetue um dos seguintes procedimentos para abrir uma sessão do Windows PowerShell com direitos de utilizador elevados.
 
    - No ambiente de trabalho do Windows, com o botão direito **do Windows PowerShell** na barra de tarefas e, em seguida, clique em **Executar como administrador**.
-
    - Sobre o Windows **começar** ecrã, clique com botão direito **Windows PowerShell**e, em seguida, clique em **executar como administrador**.
 
 2. Passo opcional para restringir o acesso de utilizador utilizando configurações de sessão: Certifique-se de que as configurações de sessão que pretende utilizar nas suas regras já existem. Se ainda não tiver sido criados, utilize as instruções para a criação de configurações de sessão no [about_Session_Configuration_Files](/powershell/module/microsoft.powershell.core/about/about_session_configurations).
@@ -227,25 +214,26 @@ Para obter mais detalhes sobre regras de autorização do Windows PowerShell Web
 
 4. Certifique-se de que a regra foi criada através da execução do `Get-PswaAuthorizationRule` cmdlet, ou `Test-PswaAuthorizationRule -UserName <domain\user> -ComputerName <computer-name>`
 
-5. Por exemplo, `Test-PswaAuthorizationRule -UserName 'Contoso\JSmith' -ComputerName Contoso_214`.
+   Por exemplo, `Test-PswaAuthorizationRule -UserName 'Contoso\JSmith' -ComputerName Contoso_214`.
 
 Depois de ter configurado uma regra de autorização, está pronto para os utilizadores autorizados iniciar sessão na consola baseada na web e começar a utilizar o Windows PowerShell Web Access.
 
 ## <a name="custom-deployment"></a>Implementação personalizada
 
-Pode instalar o gateway do Windows PowerShell Web Access num servidor que está a executar o Windows Server 2012 R2 ou Windows Server 2012, utilizando a adicionar assistente funções e funcionalidades no Gestor de servidores. Após a instalação do Windows PowerShell Web Access, pode personalizar a configuração do gateway no Gerenciador do IIS.
+Pode instalar o gateway do Windows PowerShell Web Access num servidor que está a executar o Windows Server 2012 R2 ou Windows Server 2012, utilizando a adicionar assistente funções e funcionalidades no Gestor de servidores.
+Após a instalação do Windows PowerShell Web Access, pode personalizar a configuração do gateway no Gerenciador do IIS.
 
 ### <a name="install-windows-powershell-web-access-using-the-add-roles-and-features-wizard"></a>Instalar o Windows PowerShell Web Access com o Assistente de funcionalidades e para adicionar funções
 
 1. Se o Gestor de servidor já estiver aberto, avance para o passo seguinte. Se o Gestor de servidor não esteja ainda aberto, abra-o efetuando um dos seguintes procedimentos.
 
    - Na área de trabalho Windows, inicie o Gestor de servidor clicando **Gestor de servidor** na barra de tarefas do Windows.
-
    - Sobre o Windows **começar** ecrã, clique em **Gestor de servidor**.
 
 2. Sobre o **Manage** menu, clique em **para adicionar funções e funcionalidades**.
 
-3. Sobre o **selecionar tipo de instalação** , selecione **instalação baseada em funções ou baseada em recursos**. Clique em **Seguinte**.
+3. Sobre o **selecionar tipo de instalação** , selecione **instalação baseada em funções ou baseada em recursos**.
+   Clique em **Seguinte**.
 
 4. Sobre o **selecionar servidor de destino** página, selecione um servidor no agrupamento de servidores ou selecione um VHD offline. Para selecionar um VHD offline como servidor de destino, primeiro selecione o servidor em que pretende montar o VHD e, em seguida, selecione o ficheiro VHD. Para obter informações sobre como adicionar servidores ao agrupamento de servidores, consulte a ajuda do Gestor de servidores. Depois de selecionar o servidor de destino, clique em **seguinte**.
 
@@ -253,8 +241,7 @@ Pode instalar o gateway do Windows PowerShell Web Access num servidor que está 
 
 6. Tenha em atenção que lhe é pedido para adicionar funcionalidades necessárias, como o .NET Framework 4.5 e serviços de função do Servidor Web (IIS). Adicione as funcionalidades necessárias e continue.
 
-   > **![Tenha em atenção](images/note.jpeg) nota**
-   >
+   > [!NOTE]
    > Também é instalar o Windows PowerShell Web Access, utilizando o Assistente de funcionalidades de adicionar funções e instala o servidor Web (IIS), incluindo o snap-in Gestor do IIS. O snap-in e outras ferramentas de gestão do IIS são instaladas por predefinição se utilizar o Assistente Adicionar funções e funcionalidades. Se instalar o Windows PowerShell Web Access, utilizando cmdlets do Windows PowerShell, conforme descrito no procedimento seguinte, as ferramentas de gestão não são adicionadas por predefinição.
 
 7. Sobre o **confirmar seleções de instalação** página, se os ficheiros de funcionalidade para Windows PowerShell Web Access não são armazenadas no servidor de destino que selecionou no passo 4, clique em **Especifica um caminho de origem alternativo**e forneça o caminho para os ficheiros de funcionalidade. Caso contrário, clique em **instalar**.
@@ -270,7 +257,6 @@ As instruções nesta secção destinam-se instalar a aplicação web do Windows
 1. Abra a consola do Gestor do IIS efetuando um dos procedimentos seguintes.
 
    - Na área de trabalho Windows, inicie o Gestor de servidor clicando **Gestor de servidor** na barra de tarefas do Windows. Sobre o **ferramentas** menu no Gestor de servidores, clique em **Gestor de serviços de informação Internet (IIS)**.
-
    - Sobre o Windows **começar** ecrã, escreva qualquer parte do nome **Gestor de serviços de informação Internet (IIS)**. Clique no atalho será apresentado no **aplicações** resultados.
 
 2. Crie um novo conjunto aplicacional para o Windows PowerShell Web Access. Expanda o nó do servidor de gateway no painel de árvore do Gerenciador do IIS, selecione **Pools de aplicativos**e clique em **adicionar conjunto aplicacional** no **ações** painel.
@@ -281,20 +267,18 @@ As instruções nesta secção destinam-se instalar a aplicação web do Windows
 
 5. Com o botão direito do Web site (por exemplo, **Web Site predefinido**) para que gostaria de adicionar o site do Windows PowerShell Web Access e, em seguida, clique em **Adicionar aplicação**.
 
-6. Na **Alias** campo, escreva pswa ou forneça outro alias. O alias torna-se o nome de diretório virtual. Por exemplo, **pswa** no URL seguinte representa o alias especificado neste passo: **https://\<nome do servidor\>/pswa**.
+6. Na **Alias** campo, escreva pswa ou forneça outro alias. O alias torna-se o nome de diretório virtual. Por exemplo, **pswa** no URL seguinte representa o alias especificado neste passo: `https://<server-name>/pswa`.
 
 7. Na **conjunto aplicacional** campo, selecione o conjunto aplicacional que criou no passo 3.
 
-8. Na **caminho físico** campo, navegue para a localização do aplicativo. Pode utilizar a localização predefinida, %windir%/Web/PowerShellWebAccess/wwwroot. Clique em **OK**.
+8. Na **caminho físico** campo, navegue para a localização do aplicativo. Pode utilizar a localização predefinida, `%windir%/Web/PowerShellWebAccess/wwwroot`. Clique em **OK**.
 
-9. Siga os passos do procedimento para configurar um certificado SSL no IIS manager](#to-configure-an-ssl-certificate-in-iis-Manager) neste tópico.
+9. Siga os passos no procedimento [para configurar um certificado SSL no Gestor de IIS](#to-configure-an-ssl-certificate-in-iis-Manager) neste tópico.
 
 10. ![](images/SecurityNote.jpeg) Passo opcional de segurança:
 
     Com o site selecionado no painel de árvore, faça duplo clique em **definições de SSL** no painel de conteúdo.
-    Selecione **exigir SSL**e, em seguida, no **ações** painel, clique em **aplicar**.
-    Opcionalmente, na **definições de SSL** painel, pode exigir que os utilizadores a ligar ao site do Windows PowerShell Web Access têm certificados de cliente. Os certificados de cliente ajudam a verificar a identidade de um utilizador do dispositivo cliente.
-    Para obter mais informações sobre como os certificados de cliente podem aumentar a segurança do Windows PowerShell Web Access, consulte [regras de autorização e segurança recursos do Windows PowerShell Web Access](authorization-rules-and-security-features-of-windows-powershell-web-access.md) neste guia.
+    Selecione **exigir SSL**e, em seguida, no **ações** painel, clique em **aplicar**. Opcionalmente, na **definições de SSL** painel, pode exigir que os utilizadores a ligar ao site do Windows PowerShell Web Access têm certificados de cliente. Os certificados de cliente ajudam a verificar a identidade de um utilizador do dispositivo cliente. Para obter mais informações sobre como os certificados de cliente podem aumentar a segurança do Windows PowerShell Web Access, consulte [regras de autorização e segurança recursos do Windows PowerShell Web Access](authorization-rules-and-security-features-of-windows-powershell-web-access.md) neste guia.
 
 11. Abra uma sessão de browser num dispositivo cliente. Para obter mais informações sobre dispositivos e browsers suportados, consulte [Browser e de dispositivo do cliente suportar](#browser-and-client-device-support) neste tópico.
 
@@ -302,14 +286,12 @@ As instruções nesta secção destinam-se instalar a aplicação web do Windows
 
     O browser deve exibir a consola início de sessão página do Windows PowerShell Web Access.
 
-    > **![Tenha em atenção](images/note.jpeg) nota**
-    >
-    > Não é possível iniciar sessão até que tenha sido concedido acesso ao site aos utilizadores adicionando regras de autorização.
-    > Para obter mais informações, consulte [configurar uma regra de autorização restrita](#configure-a-restrictive-authorization-rule), neste tópico, e [regras de autorização e segurança recursos do Windows PowerShell Web Access](authorization-rules-and-security-features-of-windows-powershell-web-access.md).
+    > [!NOTE]
+    > Não é possível iniciar sessão até que tenha sido concedido acesso ao site aos utilizadores adicionando regras de autorização. Para obter mais informações, consulte [configurar uma regra de autorização restrita](#configure-a-restrictive-authorization-rule), neste tópico, e [regras de autorização e segurança recursos do Windows PowerShell Web Access](authorization-rules-and-security-features-of-windows-powershell-web-access.md).
 
 13. Numa sessão do Windows PowerShell que foi aberta com direitos de utilizador elevados (executar como administrador), execute o script seguinte, no qual *nome_conjunto_aplicacional* representa o nome do conjunto aplicacional que criou no passo 3, Para conceder o conjunto aplicacional direitos de acesso ao ficheiro de autorização.
 
-    ```
+    ```powershell
     $applicationPoolName = "<application_pool_name>"
     $authorizationFile = "C:\windows\web\powershellwebaccess\data\AuthorizationRules.xml"
     c:\windows\system32\icacls.exe $authorizationFile /grant ('"' + "IIS AppPool\$applicationPoolName" + '":R') > $null
@@ -317,7 +299,7 @@ As instruções nesta secção destinam-se instalar a aplicação web do Windows
 
     Para ver os direitos de acesso existentes no ficheiro de autorização, execute o seguinte comando:
 
-    ```
+    ```powershell
     c:\windows\system32\icacls.exe $authorizationFile
     ```
 
@@ -326,7 +308,6 @@ As instruções nesta secção destinam-se instalar a aplicação web do Windows
 1. Abra a consola do Gestor do IIS efetuando um dos procedimentos seguintes.
 
    - Na área de trabalho Windows, inicie o Gestor de servidor clicando **Gestor de servidor** na barra de tarefas do Windows. Sobre o **ferramentas** menu no Gestor de servidores, clique em **Gestor de serviços de informação Internet (IIS)**.
-
    - Sobre o Windows **começar** ecrã, escreva qualquer parte do nome **Gestor de serviços de informação Internet (IIS)**. Clique no atalho será apresentado no **aplicações** resultados.
 
 1. No painel de árvore do Gerenciador do IIS, expanda o nó para o servidor no qual o Windows PowerShell Web Access está instalado até as **Sites** pasta está visível. Selecione o **Sites** pasta.
@@ -341,7 +322,8 @@ As instruções nesta secção destinam-se instalar a aplicação web do Windows
 
 1. Na **tipo** campo a **enlace** área, selecione **https**.
 
-1. Atribua um número de porta ao Web site que ainda não esteja a ser utilizado por outro site ou aplicação. Para localizar portas abertas, pode executar o **netstat** comando numa janela de linha de comando. O número de porta predefinido é 443.
+1. Atribua um número de porta ao Web site que ainda não esteja a ser utilizado por outro site ou aplicação.
+   Para localizar portas abertas, pode executar o **netstat** comando numa janela de linha de comando. O número de porta predefinido é 443.
 
    Altere a porta predefinida se outro Web site já estiver a utilizar a 443 ou se tiver outros motivos de segurança para alterar o número de porta. Se outro Web site que está a executar no seu servidor de gateway estiver a utilizar a porta selecionada, um aviso é apresentado quando clica **OK** no **adicionar Web site** caixa de diálogo. Tem de utilizar uma porta não utilizada para executar o Windows PowerShell Web Access.
 
@@ -353,17 +335,17 @@ As instruções nesta secção destinam-se instalar a aplicação web do Windows
 
 1. Numa sessão do Windows PowerShell que foi aberta com direitos de utilizador elevados (executar como administrador), execute o script seguinte, no qual _nome_conjunto_aplicacional_ representa o nome do conjunto aplicacional que criou no passo 4, Para conceder o conjunto aplicacional direitos de acesso ao ficheiro de autorização.
 
-    ```    
-    $applicationPoolName = "<application_pool_name>"
-    $authorizationFile = "C:\windows\web\powershellwebaccess\data\AuthorizationRules.xml"
-    c:\windows\system32\icacls.exe $authorizationFile /grant ('"' + "IIS AppPool\$applicationPoolName" + '":R') > $null
-    ```
+   ```powershell
+   $applicationPoolName = "<application_pool_name>"
+   $authorizationFile = "C:\windows\web\powershellwebaccess\data\AuthorizationRules.xml"
+   c:\windows\system32\icacls.exe $authorizationFile /grant ('"' + "IIS AppPool\$applicationPoolName" + '":R') > $null
+   ```
 
-    Para ver os direitos de acesso existentes no ficheiro de autorização, execute o seguinte comando:
+   Para ver os direitos de acesso existentes no ficheiro de autorização, execute o seguinte comando:
 
-    ```
-    c:\windows\system32\icacls.exe $authorizationFile
-    ```
+   ```powershell
+   c:\windows\system32\icacls.exe $authorizationFile
+   ```
 
 1. Com o novo site selecionado no painel de árvore do Gestor de IIS, clique em **começar** no **ações** painel para iniciar o Web site.
 
@@ -371,12 +353,10 @@ As instruções nesta secção destinam-se instalar a aplicação web do Windows
 
 1. Abra o novo site do Windows PowerShell Web Access.
 
-    Uma vez que o Web site de raiz aponta para a pasta do Windows PowerShell Web Access, o browser deverá apresentar a página de início de sessão do Windows PowerShell Web Access, quando abre **https://\<*nome_servidor_gateway* \>**. Não é preciso adicionar **/pswa** para o URL.
+   Uma vez que o Web site de raiz aponta para a pasta do Windows PowerShell Web Access, o browser deverá apresentar a página de início de sessão do Windows PowerShell Web Access, quando abre `https://<gateway_server_name>`. Não é preciso adicionar **/pswa** para o URL.
 
-    > **![Tenha em atenção](images/note.jpeg) nota**
-    >
-    > Não é possível iniciar sessão até que tenha sido concedido acesso ao site aos utilizadores adicionando regras de autorização.
-    > Para obter mais informações, consulte [configurar uma regra de autorização restrita](#configure-a-restrictive-authorization-rule), neste tópico, e [regras de autorização e segurança recursos do Windows PowerShell Web Access](authorization-rules-and-security-features-of-windows-powershell-web-access.md).
+   > [!NOTE]
+   > Não é possível iniciar sessão até que tenha sido concedido acesso ao site aos utilizadores adicionando regras de autorização. Para obter mais informações, consulte [configurar uma regra de autorização restrita](#configure-a-restrictive-authorization-rule), neste tópico, e [regras de autorização e segurança recursos do Windows PowerShell Web Access](authorization-rules-and-security-features-of-windows-powershell-web-access.md).
 
 ### <a name="configuring-a-restrictive-authorization-rule"></a>Configurar uma regra de autorização restrita
 
@@ -389,7 +369,6 @@ Para obter mais detalhes sobre regras de autorização do Windows PowerShell Web
 1. Efetue um dos seguintes procedimentos para abrir uma sessão do Windows PowerShell com direitos de utilizador elevados.
 
    - No ambiente de trabalho do Windows, com o botão direito **do Windows PowerShell** na barra de tarefas e, em seguida, clique em **Executar como administrador**.
-
    - Sobre o Windows **começar** ecrã, clique com botão direito **Windows PowerShell**e, em seguida, clique em **executar como administrador**.
 
 1. ![Nota de segurança](images/SecurityNote.jpeg) Passo opcional para restringir o acesso de utilizador utilizando configurações de sessão:
@@ -398,13 +377,13 @@ Para obter mais detalhes sobre regras de autorização do Windows PowerShell Web
 
 1. Escreva o seguinte e, em seguida, prima **Enter**.
 
-   Adicionar-PswaAuthorizationRule - nome de utilizador < domínio \ utilizador | computer\user> > - ComputerName < computer_name > - ConfigurationName < session_configuration_name >
+   `Add-PswaAuthorizationRule -UserName <domain\user | computer\user> -ComputerName <computer_name> -ConfigurationName <session_configuration_name>`
 
    Esta regra de autorização permite um acesso de utilizador específico a um computador na rede para os quais normalmente tenham acesso, com acesso a uma configuração específica de sessão que tem um âmbito para o utilizador '™ necessidades de criação de scripts e o cmdlet típicas no s.
 
    No exemplo seguinte, é concedido o acesso a um utilizador com o nome `JSmith` no domínio `Contoso` para gerir o computador `Contoso_214` e utilizar uma configuração de sessão com o nome `NewAdminsOnly`.
 
-   Adicionar-PswaAuthorizationRule - nome de utilizador 'Contoso\JSmith' - ComputerName Contoso_214 - ConfigurationName NewAdminsOnly
+   `Add-PswaAuthorizationRule -UserName 'Contoso\JSmith' -ComputerName Contoso_214 -ConfigurationName NewAdminsOnly`
 
 1. Certifique-se de que a regra foi criada através da execução de `Get-PswaAuthorizationRule` cmdlet, ou `Test-PswaAuthorizationRule -UserName '<domain\user>' -ComputerName <computer-name>`.
 
@@ -425,10 +404,9 @@ Num ambiente de produção seguro, utilize sempre um certificado SSL válido ass
 1. Na **ações** painel, efetue um dos seguintes procedimentos. Para obter mais informações sobre como configurar certificados de servidor no IIS, consulte [configurar certificados de servidor no IIS 7](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc732230(v=ws.10)).
 
    - Clique em **importar** para importar um certificado válido existente a partir de uma localização na sua rede.
-
    - Clique em **criar pedido de certificado** para pedir um certificado a partir de uma AC, tal como [VeriSign](http://www.verisign.com/), [Thawte](https://www.thawte.com/), ou [GeoTrust](https://www.geotrust.com/). O nome comum do certificado tem de corresponder ao cabeçalho do anfitrião no pedido.
 
-   Por exemplo, se o browser cliente pedir http://www.contoso.com/, em seguida, o nome comum também tem de ser http://www.contoso.com/. Esta é a opção mais segura e recomendada para fornecer o gateway do Windows PowerShell Web Access com um certificado.
+     Por exemplo, se o browser cliente pedir http://www.contoso.com/, em seguida, o nome comum também tem de ser http://www.contoso.com/. Esta é a opção mais segura e recomendada para fornecer o gateway do Windows PowerShell Web Access com um certificado.
 
    - Clique em **criar um certificado autoassinado** para criar um certificado que pode utilizar imediatamente e ser assinado mais tarde por uma AC se assim o desejar. Especifique um nome amigável para o certificado autoassinado, tal como **Windows PowerShell Web Access**. Esta opção não é considerada segura e é recomendada apenas para um ambiente de teste privado.
 

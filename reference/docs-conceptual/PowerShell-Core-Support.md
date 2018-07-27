@@ -48,7 +48,7 @@ Plataformas listadas como `Experimental` não serem suportados oficialmente, mas
 | Debian 8,7 + e 9                                | Suportada   | Suportada   |
 | CentOS 7                                          | Suportada   | Suportada   |
 | Red Hat Enterprise Linux 7                        | Suportada   | Suportada   |
-| OpenSUSE 42.2                                     | Suportada   | Suportada   |
+| OpenSUSE 42.3                                     | Suportada   | Suportada   |
 | Fedora 27                                         | Suportada   | Suportada   |
 | Fedora 28                                         |             | Suportada   |
 | macOS 10.12 +                                      | Suportada   | Suportada   |
