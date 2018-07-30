@@ -13,7 +13,7 @@ ms.locfileid: "34483037"
 # <a name="getting-detailed-help-information"></a>Obter Informações de Ajuda Detalhadas
 O Windows PowerShell inclui tópicos de ajuda detalhada que explicam conceitos do Windows PowerShell e o idioma do Windows PowerShell. Também existem tópicos de ajuda para cada fornecedor e o cmdlet e tópicos de ajuda para muitas funções e scripts.
 
-Pode apresentar estes tópicos de ajuda na linha de comandos ou visualizar as versões mais recentemente atualizadas destes tópicos em do Microsoft TechNet Library. Muitos programas que alojam o Windows PowerShell, como o Windows PowerShell Integrated Scripting ambiente, fornecem funcionalidades adicionais de ajuda, tais como ajuda sensível ao contexto e compilar o ficheiro de ajuda (*.chm).
+Pode apresentar estes tópicos de ajuda na linha de comandos ou visualizar as versões mais recentemente atualizadas destes tópicos em do Microsoft TechNet Library. Muitos programas que alojam o Windows PowerShell, como o Windows PowerShell Integrated Scripting ambiente, fornecem funcionalidades adicionais de ajuda, tais como ajuda sensível ao contexto e compilar o ficheiro de ajuda (.chm).
 
 ## <a name="getting-help-for-cmdlets"></a>Obter ajuda para Cmdlets
 Para obter ajuda sobre cmdlets do Windows PowerShell, utilize o [Get-Help [m2]](https://technet.microsoft.com/library/2d7fe1b4-0025-4580-a911-d81922dd6cd2) cmdlet. Por exemplo, para obter ajuda para o [Get-ChildItem [m2]](https://technet.microsoft.com/library/4b270d63-c995-45b8-b5b4-3f8887efbfcc) cmdlet, tipo:
