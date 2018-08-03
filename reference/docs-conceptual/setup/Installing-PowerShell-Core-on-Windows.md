@@ -2,44 +2,44 @@
 
 ## <a name="msi"></a>MSI
 
-Para instalar o PowerShell num cliente Windows ou Windows Server (funciona no Windows 7 SP1, Server 2008 R2 e posterior), transfira o pacote MSI da nossa página do GitHub [versões] [].
+Para instalar o PowerShell num cliente Windows ou Windows Server (funciona no Windows 7 SP1, Server 2008 R2 e posterior), transferir o pacote MSI a partir do nosso GitHub [versões][] página.
 
-O ficheiro MSI aspeto- `PowerShell-<version>-win-<os-arch>.msi`
+O arquivo MSI é semelhante a esta- `PowerShell-<version>-win-<os-arch>.msi`
 <!-- TODO: should be updated to point to the Download Center as well -->
 
-Depois de transferido, faça duplo clique o instalador e siga as instruções.
+Depois de transferido, clique duas vezes o instalador e siga as instruções.
 
-Não há um atalho colocado no Menu Iniciar após a instalação.
+Existe um atalho colocado no Menu Iniciar, após a instalação.
 
 - Por predefinição, o pacote está instalado para `$env:ProgramFiles\PowerShell\<version>`
-- Pode iniciar PowerShell através do Menu Iniciar ou `$env:ProgramFiles\PowerShell\<version>\pwsh.exe`
+- Pode iniciar o PowerShell, no menu Iniciar ou `$env:ProgramFiles\PowerShell\<version>\pwsh.exe`
 
 ### <a name="prerequisites"></a>Pré-requisitos
 
-Para ativar a comunicação remota do PowerShell através de WSMan, os seguintes pré-requisitos tem de ser cumpridos:
+Para ativar a comunicação remota do PowerShell em WSMan, é necessário ser cumpridos os seguintes pré-requisitos:
 
-- Instalar o [Universal C Runtime](https://www.microsoft.com/download/details.aspx?id=50410) nas versões do Windows antes do Windows 10.
-  Está disponível através de transferência direta ou o Windows Update.
-  Totalmente aplicado (incluindo pacotes opcionais), sistemas suportados já terão isto instalado.
+- Instalar o [Universal C Runtime](https://www.microsoft.com/download/details.aspx?id=50410) em versões do Windows antes do Windows 10.
+  Está disponível através de transferência direta ou atualização do Windows.
+  Com todos os patches (incluindo pacotes opcionais), sistemas suportados já terá esta instalado.
 - Instale o Windows Management Framework (WMF) 4.0 ou mais recente no Windows 7 e Windows Server 2008 R2.
 
 ## <a name="zip"></a>ZIP
 
-PowerShell binários ZIP arquivos são fornecidos para ativar cenários de implementação avançada.
-É de salientar que, ao utilizar o arquivo ZIP, não irá obter a verificação de pré-requisitos, como o pacote MSI.
-Por isso ordem para a gestão remota através de WSMan funcione corretamente no Windows versões anteriores ao Windows 10, terá de certificar-se do [pré-requisitos](#prerequisites) são cumpridos.
+Arquivos ZIP binários do PowerShell são fornecidos para ativar cenários de implementação avançada.
+Se observar que ao usar o arquivo ZIP, não obtém a verificação de pré-requisitos, tal como o pacote MSI.
+Portanto, para a gestão remota em WSMan funcione corretamente em versões do Windows antes do Windows 10, tem de certificar-se a [pré-requisitos](#prerequisites) são cumpridos.
 
-## <a name="deploying-on-windows-iot"></a>A implementar em Windows IoT
+## <a name="deploying-on-windows-iot"></a>Implantando o Windows IoT
 
-Windows IoT é fornecido com o Windows PowerShell que iremos utilizar para implementar PowerShell Core 6.
+Windows IoT já vem com o Windows PowerShell que vamos utilizar para implementar o PowerShell Core 6.
 
-1. Criar `PSSession` para o dispositivo de destino
+1. Criar `PSSession` dispositivo de destino
 
    ```powershell
    $s = New-PSSession -ComputerName <deviceIp> -Credential Administrator
    ```
 
-2. Copie o pacote ZIP para o dispositivo
+2. Copiar o pacote ZIP para o dispositivo
 
    ```powershell
    # change the destination to however you had partitioned it with sufficient
@@ -66,35 +66,35 @@ Windows IoT é fornecido com o Windows PowerShell que iremos utilizar para imple
    # You'll get an error message and will be disconnected from the device because it has to restart WinRM
    ```
 
-5. Ligar ao ponto final de PowerShell Core 6 no dispositivo
+5. Ligar ao ponto final do PowerShell Core 6 no dispositivo
 
    ```powershell
    # Be sure to use the -Configuration parameter.  If you omit it, you will connect to Windows PowerShell 5.1
    Enter-PSSession -ComputerName <deviceIp> -Credential Administrator -Configuration powershell.6.0.2
    ```
 
-## <a name="deploying-on-nano-server"></a>Implementar no servidor de Nano
+## <a name="deploying-on-nano-server"></a>Implementar no servidor Nano
 
-Estas instruções partem do princípio de que uma versão do PowerShell já está em execução a imagem de servidor Nano e que foi gerado pelo [construtor de imagens do servidor Nano](/windows-server/get-started/deploy-nano-server).
-Servidor de nano for um SO "sem interface". Os binários de núcleos pode implementar utilizando dois métodos diferentes.
+Estas instruções partem do princípio de que uma versão do PowerShell já está em execução na imagem do servidor Nano e que tenha sido gerado pela [construtor de imagens do servidor Nano](/windows-server/get-started/deploy-nano-server).
+O servidor nano é um sistema operacional "sem interface". Os binários do principal pode implementar através de dois métodos diferentes.
 
-1. Offline - montar o VHD de servidor Nano e deszipe o conteúdo do ficheiro zip à sua localização escolhida dentro da imagem montada.
-2. Online - transferir o ficheiro zip através de uma sessão do PowerShell e deszipe-lo na sua localização escolhida.
+1. Offline - Monte o VHD do servidor Nano e Descompacte o conteúdo do ficheiro zip para a sua localização escolhida dentro da imagem montada.
+2. Online - transferir o ficheiro zip através de uma sessão do PowerShell e Descompacte-o em seu local escolhido.
 
-Em ambos os casos, terá da versão do Windows 10 x64 ZIP do pacote e terá de executar os comandos dentro de uma instância do PowerShell do "Administrador".
+Em ambos os casos, terá da versão x64 do Windows 10 ZIP do pacote e será necessário executar os comandos dentro de uma instância do PowerShell de "Administrador".
 
-### <a name="offline-deployment-of-powershell-core"></a>Implementação offline do PowerShell Core
+### <a name="offline-deployment-of-powershell-core"></a>Implantação offline do PowerShell Core
 
-1. Utilize o utilitário de favorito zip para descomprimir o pacote para um diretório na imagem de servidor Nano montada.
-2. Desmontar a imagem e efetuar o arranque-lo.
-3. Ligar à instância da pasta a receber do Windows PowerShell.
-4. Siga as instruções para criar um ponto final de gestão remota utilizando o ["outra técnica de instância"](#executed-by-another-instance-of-powershell-on-behalf-of-the-instance-that-it-will-register).
+1. Utilize o utilitário zip Favoritos para descomprimir o pacote para um diretório dentro da imagem montada do servidor Nano.
+2. Desmonte a imagem e inicializá-la.
+3. Ligue à instância da caixa de entrada do Windows PowerShell.
+4. Siga as instruções para criar um ponto de extremidade de comunicação remota utilizando o ["outra técnica de instância"](#executed-by-another-instance-of-powershell-on-behalf-of-the-instance-that-it-will-register).
 
-### <a name="online-deployment-of-powershell-core"></a>Implementação online do PowerShell Core
+### <a name="online-deployment-of-powershell-core"></a>Implantação online do PowerShell Core
 
-Os seguintes passos guiá-lo através da implementação do PowerShell Core para uma instância em execução de servidor Nano e a configuração do seu ponto final remoto.
+Os seguintes passos guiá-lo por meio da implantação do PowerShell Core para uma instância em execução do servidor Nano e a configuração do seu ponto final remoto.
 
-- Ligar à instância da pasta a receber do Windows PowerShell
+- Ligue à instância da caixa de entrada do Windows PowerShell
 
   ```powershell
   $session = New-PSSession -ComputerName <Nano Server IP address> -Credential <An Administrator account on the system>
@@ -112,32 +112,37 @@ Os seguintes passos guiá-lo através da implementação do PowerShell Core para
   Enter-PSSession $session
   ```
 
-- Extrair o ficheiro ZIP
+- Extraia o ficheiro ZIP
 
   ```powershell
   # Insert the appropriate version.
   Expand-Archive -Path C:\powershell-<version>-win-x64.zip -DestinationPath "C:\PowerShellCore_<version>"
   ```
 
-- Se pretender que o sistema de interação remota com base em WSMan, siga as instruções para criar um ponto final de gestão remota utilizando o ["outra técnica de instância"](../core-powershell/WSMan-Remoting-in-PowerShell-Core.md#executed-by-another-instance-of-powershell-on-behalf-of-the-instance-that-it-will-register).
+- Se pretender que a comunicação remota baseada em WSMan, siga as instruções para criar um ponto de extremidade de comunicação remota utilizando o ["outra técnica de instância"](../core-powershell/WSMan-Remoting-in-PowerShell-Core.md#executed-by-another-instance-of-powershell-on-behalf-of-the-instance-that-it-will-register).
 
-## <a name="instructions-to-create-a-remoting-endpoint"></a>Instruções para criar um ponto final de gestão remota
+## <a name="instructions-to-create-a-remoting-endpoint"></a>Instruções para criar um ponto de extremidade de comunicação remota
 
-PowerShell Core suporta o protocolo de comunicação remota do PowerShell (PSRP) através de SSH e WSMan.
+O PowerShell Core suporta o protocolo de comunicação remota do PowerShell (PSRP) através de WSMan e SSH.
 Para mais informações, consulte:
 
-- [SSH comunicação remota do PowerShell Core] [ssh-gestão remota]
-- [WSMan sistema de interação remota no PowerShell Core] [wsman-sistema de interação remota]
+- [SSH comunicação remota no PowerShell Core][ssh-remoting]
+- [Comunicação remota do WSMan no PowerShell Core][wsman-remoting]
 
-## <a name="artifact-installation-instructions"></a>Instruções de instalação de artefactos
+## <a name="artifact-installation-instructions"></a>Instruções de instalação do artefacto
 
-Está a publicar um arquivo com CoreCLR bits em cada compilação CI com [AppVeyor] [-].
+Publicamos um arquivo morto com bits de CoreCLR em todas as compilações CI com [AppVeyor][].
 
-Para instalar o PowerShell Core de artefacto CoreCLR:
+Para instalar o PowerShell Core a partir do artefacto de CoreCLR:
 
-1. Transferir o pacote ZIP da **artefactos** separador de compilação do específica.
-2. Ficheiro ZIP de desbloqueio: rato no Explorador de ficheiros -> propriedades -> Aplicar 'Desbloquear' -> a caixa de verificação
+1. Transferir o pacote ZIP da **artefactos** separador da compilação específica.
+2. Ficheiro ZIP de desbloqueio: botão direito do rato no Explorador de ficheiros -> Properties -> aplica "Desbloquear" -> a caixa de verificação
 3. Extrair o ficheiro zip para `bin` diretório
 4. `./bin/pwsh.exe`
 
-<!-- [download-center]: TODO --> [versões]: https://github.com/PowerShell/PowerShell/releases [ssh-gestão remota]:... /Core-PowerShell/SSH-Remoting-in-PowerShell-Core.MD [wsman-sistema de interação remota]:... /Core-PowerShell/wsman-Remoting-in-PowerShell-Core.MD [AppVeyor]: https://ci.appveyor.com/project/PowerShell/powershell
+<!-- [download-center]: TODO -->
+
+[versões]: https://github.com/PowerShell/PowerShell/releases
+[ssh-remoting]: ../core-powershell/SSH-Remoting-in-PowerShell-Core.md
+[wsman-remoting]: ../core-powershell/WSMan-Remoting-in-PowerShell-Core.md
+[AppVeyor]: https://ci.appveyor.com/project/PowerShell/powershell
