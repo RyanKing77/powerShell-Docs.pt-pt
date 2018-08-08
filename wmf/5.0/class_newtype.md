@@ -1,22 +1,22 @@
 ---
 ms.date: 06/12/2017
 keywords: wmf,powershell,setup
-ms.openlocfilehash: 9aa7e92632c671751020687ddbfc374eeda7148b
-ms.sourcegitcommit: 54534635eedacf531d8d6344019dc16a50b8b441
+ms.openlocfilehash: a96a4a58dafa01fb43f5bdffb52ef833816148e7
+ms.sourcegitcommit: 01ac77cd0b00e4e5e964504563a9212e8002e5e0
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 05/16/2018
-ms.locfileid: "34189419"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39587300"
 ---
-# <a name="new-language-features-in-powershell-50"></a>Novas funcionalidades de idioma no PowerShell 5.0
+# <a name="new-language-features-in-powershell-50"></a>Novos recursos de linguagem no PowerShell 5.0
 
-PowerShell 5.0 apresenta os seguintes elementos de linguagem nova no Windows PowerShell:
+PowerShell 5.0 introduz os seguintes elementos de linguagem de novo no Windows PowerShell:
 
-## <a name="class-keyword"></a>Classe de palavra-chave
+## <a name="class-keyword"></a>Palavra-chave de classe
 
-O **classe** palavra-chave define uma nova classe. Este é um valor de true tipo .NET Framework.
-São membros de classe pública, mas apenas público no âmbito do módulo.
-Não pode referenciar o nome do tipo como uma cadeia (por exemplo, `New-Object` não funciona), e nesta versão, não é possível utilizar um literal do tipo (por exemplo, `[MyClass]`) fora o ficheiro de módulo do script no qual a classe estiver definida.
+O **classe** palavra-chave define uma nova classe. Esta é uma verdadeira tipo do .NET Framework.
+Membros de classe são públicos, mas apenas público dentro do escopo do módulo.
+Não é possível consultar o nome do tipo como cadeia de caracteres (por exemplo, `New-Object` não funciona), e nesta versão, não é possível utilizar um literal de tipo (por exemplo, `[MyClass]`) fora o ficheiro de script/módulo no qual a classe é definida.
 
 ```powershell
 class MyClass
@@ -25,10 +25,10 @@ class MyClass
 }
 ```
 
-## <a name="enum-keyword-and-enumerations"></a>Palavra-chave de enum e enumerações
+## <a name="enum-keyword-and-enumerations"></a>Palavra-chave de enumeração e enumerações
 
-Suporte para o **enum** palavra-chave foi adicionado, que utiliza a nova linha como o delimitador.
-Limitações atuais: não é possível definir um enumerador em termos de si próprio, mas pode inicializar uma enumeração em termos de outro enum, conforme mostrado no exemplo seguinte.
+Suporte para o **enum** palavra-chave tiver sido adicionado, que utiliza o caractere de nova linha como o delimitador.
+Limitações atuais: não é possível definir um enumerador em termos de em si, mas pode inicializar um enum em termos de outro enum, conforme mostrado no exemplo a seguir.
 Além disso, atualmente não é possível especificar o tipo base; é sempre [int].
 
 ```powershell
@@ -50,31 +50,31 @@ enum MyEnum
 }
 ```
 
-As enumerações suportam operações aritméticas, conforme mostrado no exemplo seguinte.
+Enums suporta operações aritméticas, conforme mostrado no exemplo a seguir.
 
 ```powershell
 enum SomeEnum { Max = 42 }
 enum OtherEnum { Max = [SomeEnum]::Max + 1 }
 ```
 
-## <a name="import-dscresource"></a>Importar DscResource
+## <a name="import-dscresource"></a>Import-DscResource
 
-**Importar DscResource** agora é uma palavra-chave dinâmica verdadeira.
-PowerShell analisa o módulo de raiz do módulo especificado, a procurar classes que contêm o **DscResource** atributo.
+**Import-DscResource** agora é uma palavra-chave dynamic verdadeira.
+PowerShell analisa o módulo de raiz do módulo especificado, pesquisa de classes que contêm os **DscResource** atributo.
 
 ## <a name="implementingassembly"></a>ImplementingAssembly
 
-Um novo campo **ImplementingAssembly**, foi adicionada ao ModuleInfo. Está definido para a assemblagem dinâmica criado para um módulo de script, se o script define as classes, ou a assemblagem carregada para módulos binários. Não é definido quando ModuleType = manifesto.
+Um novo campo **ImplementingAssembly**, foi adicionado ao ModuleInfo. Ele é definido para o assembly dinâmico criado para um módulo de script, se o script define classes ou o assembly carregado para módulos binários. Não é definida quando ModuleType = manifesto.
 
-Reflexão no **ImplementingAssembly** campo Deteta recursos num módulo. Isto significa que pode descobrir recursos escritos no PowerShell ou outros idiomas geridos.
+Reflexão sobre o **ImplementingAssembly** campo Deteta os recursos num módulo. Isso significa que pode detetar recursos escritos no PowerShell ou outras linguagens gerenciadas.
 
-Campos com inicializadores:
+Campos com inicializadores de:
 
 ```powershell
 [int] $i = 5
 ```
 
-Estática é suportada; funciona como um atributo, tal como as restrições de tipo, pelo que pode ser especificado por qualquer ordem.
+Estática é suportada; ele funciona como um atributo, tal como as restrições de tipo, portanto, podem ser especificado por qualquer ordem.
 
 ```powershell
 static [int] $count = 0
@@ -88,13 +88,13 @@ $s = "hello"
 
 Todos os membros são públicos.
 
-## <a name="constructors-and-instantiation"></a>Construtores e Instanciação
+## <a name="constructors-and-instantiation"></a>Construtores e a instanciação
 
-Classes do Windows PowerShell podem ter construtores; têm o mesmo nome que a respetiva classe. Construtores podem estar sobrecarregados. São suportados construtores estáticos. Propriedades com expressões de inicialização são inicializadas antes de executar qualquer código num construtor. As propriedades estáticas são inicializadas antes do corpo do construtor estático e as propriedades da instância estão inicializadas antes do corpo do construtor não estático. Atualmente, não há nenhuma sintaxe para chamar um construtor de outro construtor (como o C\# sintaxe ": this()"). A solução é para definir um método Init comum.
+Classes do Windows PowerShell podem ter construtores; eles têm o mesmo nome que sua classe. Construtores podem ser sobrecarregados. São suportados construtores estáticos. Propriedades com expressões de inicialização são inicializadas antes de executar qualquer código num construtor. Propriedades estáticas são inicializadas antes do corpo de um construtor estático e propriedades de instância são inicializadas antes do corpo do construtor não estático. Atualmente, não há nenhuma sintaxe para chamar um construtor de outro construtor (como o C\# sintaxe ": this()"). A solução alternativa é definir um método comum de Init.
 
-Seguem-se formas de classes instanciar nesta versão.
+Seguem-se formas de criar uma instância de classes nesta versão.
 
-Instanciar utilizando o construtor predefinido. Tenha em atenção que o New-Object não é suportado nesta versão.
+Criar uma instância ao utilizar o construtor padrão. Tenha em atenção que New-Object não é suportado nesta versão.
 
 ```powershell
 $a = [MyClass]::new()
@@ -111,17 +111,17 @@ Transmitir uma matriz para um construtor com vários parâmetros
 $c = [MyClass]::new(@(42,43,44), "Hello")
 ```
 
-Nesta versão, New-Object não funciona com classes definidas no Windows PowerShell. Também nesta versão, o nome do tipo só é visível lexically, ou seja, não são visível fora do módulo ou script que define a classe. As funções podem devolver instâncias de uma classe definida no Windows PowerShell e instâncias de trabalho também fora do módulo ou script.
+Nesta versão, New-Object não funciona com classes definidas no Windows PowerShell. Também nesta versão, o nome do tipo só é visível lexicalmente, ou seja, não são visível fora da módulo ou script que define a classe. As funções podem devolver instâncias de uma classe definida no Windows PowerShell e instâncias funcionam bem fora o módulo ou script.
 
-`Get-Member -Static` lista construtores, para que possa vê sobrecargas como qualquer outro método. O desempenho desta sintaxe também é significativamente mais rápido do que New-Object.
+`Get-Member -Static` lista construtores, para que pode exibir sobrecargas como qualquer outro método. O desempenho dessa sintaxe também é consideravelmente mais rápido do que New-Object.
 
-O método pseudo-estático denominado **novo** funciona com tipos de .NET, conforme mostrado no exemplo seguinte.
+O método de pseudo-estático denominado **novo** funciona com tipos .NET, conforme mostrado no exemplo a seguir.
 
 ```powershell
 [hashtable]::new()
 ```
 
-Agora, pode ver as sobrecargas de construtor com membro Get, ou como o mostrado neste exemplo:
+Agora, pode ver as sobrecargas de construtor com Get-Member, ou como mostrado neste exemplo:
 
 ```powershell
 PS> [hashtable]::new
@@ -134,7 +134,7 @@ hashtable new(int capacity, float loadFactor)
 
 ## <a name="methods"></a>Métodos
 
-Um método de classe do Windows PowerShell é implementado como um ScriptBlock que tenha apenas um bloco de fim. Todos os métodos são públicos. O seguinte mostra um exemplo de definir um método denominado **DoSomething**.
+Um método de classe do Windows PowerShell é implementado como um ScriptBlock que tenha apenas um bloco final. Todos os métodos são públicos. O seguinte mostra um exemplo de definir um método chamado **DoSomething**.
 
 ```powershell
 class MyClass
@@ -147,42 +147,42 @@ class MyClass
 }
 ```
 
-Invocação de métodos:
+Invocação de método:
 
 ```powershell
 $b = [MyClass]::new()
 $b.DoSomething(42)
 ```
 
-Sobrecarregado métodos - ou seja, os que são com o mesmo método existente, mas diferenciadas pelos respetivos valores especificados – também são suportados.
+Sobrecarregado métodos – ou seja, aqueles que estão com o mesmo nome como um método existente, mas diferenciadas por seus valores especificados – também são suportados.
 
 ## <a name="properties"></a>Propriedades
 
-Todas as propriedades são públicas. Propriedades necessitam de uma nova linha ou um ponto e vírgula. Não se for especificado nenhum tipo de objeto, o tipo de propriedade é o objeto.
+Todas as propriedades são públicas. As propriedades requerem uma nova linha ou um ponto e vírgula. Se não for especificado nenhum tipo de objeto, o tipo de propriedade é o objeto.
 
-Propriedades que utilizam os atributos de validação ou atributos de transformação do argumento (por exemplo, `[ValidateSet("aaa")]`) funcionam como esperado.
+Propriedades que usam os atributos de validação ou atributos de transformação do argumento (por exemplo, `[ValidateSet("aaa")]`) funcionar conforme esperado.
 
 ## <a name="hidden"></a>Oculto
 
-Uma nova palavra-chave, **Hidden**, foi adicionado. **Oculto** podem ser aplicadas às propriedades e métodos (incluindo construtores).
+Uma nova palavra-chave **Hidden**, foi adicionado. **Oculto** podem ser aplicados a propriedades e métodos (incluindo construtores).
 
-Os membros ocultos são públicos, mas não são apresentados no resultado de Get-membro, a menos que-Force é adicionado o parâmetro.
+Os membros ocultos são públicos, mas não aparecem na saída do Get-Member, a menos que a opção - Force adicionado o parâmetro.
 
-Oculta a membros não estão incluídos quando separador concluir ou utilizando o Intellisense, a menos que ocorre após a conclusão da classe que define o membro oculto.
+Oculto a membros não estão incluídos quando separador a conclusão ou usando o Intellisense, a menos que a conclusão ocorre na classe definindo o membro oculto.
 
-Um novo atributo **System.Management.Automation.HiddenAttribute** foi adicionada para que o código c# pode ter a mesma semântica dentro do Windows PowerShell.
+Um novo atributo **System.Management.Automation.HiddenAttribute** foi adicionado para que o código c# pode ter a mesma semântica dentro do Windows PowerShell.
 
 ## <a name="return-types"></a>Tipos de retorno
 
-Tipo de retorno é um contrato; o valor de retorno é convertido para o tipo esperado. Não se for especificado nenhum tipo de retorno, o tipo de retorno é nulo. Não há nenhum de transmissão em fluxo de objetos; Objetos não podem ser escritos para o pipeline intencionalmente ou acidentalmente.
+Tipo de retorno é um contrato; o valor de retorno é convertido para o tipo esperado. Se não for especificado nenhum tipo de retorno, o tipo de retorno é void. Não existe nenhum de transmissão em fluxo de objetos; Objetos não podem ser escritos para o pipeline, intencionalmente ou acidentalmente.
 
 ## <a name="attributes"></a>Atributos
 
-Dois novos atributos, **DscResource** e **DscProperty** foram adicionados.
+Dois novos atributos **DscResource** e **DscProperty** foram adicionados.
 
-## <a name="lexical-scoping-of-variables"></a>Controlo de âmbito lexical das variáveis
+## <a name="lexical-scoping-of-variables"></a>Controlo de âmbito léxica de variáveis
 
-O seguinte mostra um exemplo de como lexical funciona âmbito nesta versão.
+O seguinte mostra um exemplo de como léxico funciona âmbito nesta versão.
 
 ```powershell
 $d = 42 # Script scope
@@ -210,8 +210,8 @@ $v -eq $d # true
 
 ## <a name="end-to-end-example"></a>Exemplo de ponto a ponto
 
-O exemplo seguinte cria várias classes novas e personalizadas para implementar um idioma de folha de estilo dinâmica HTML (DSL).
-Em seguida, o exemplo adiciona funções de programa auxiliar para criar tipos de elemento específico como parte da classe de elemento, tais como os estilos do cabeçalho e tabelas, porque os tipos não podem ser utilizados fora do âmbito de um módulo.
+O exemplo seguinte cria várias classes novas, personalizados para implementar uma linguagem de folha de estilo dinâmica de HTML (DSL).
+Em seguida, o exemplo adiciona funções de programa auxiliar para criar tipos de elementos específicos como parte da classe elemento, como estilos de cabeçalho e tabelas, porque os tipos não podem ser utilizados fora do escopo de um módulo.
 
 ```powershell
 # Classes that define the structure of the document
@@ -308,7 +308,7 @@ $bodyText += $Properties.foreach{TH $_}
 # Add the rows
 $bodyText += foreach ($row in $Data)
     {
-        TR (-join $Properties.Foreach{ TD ($row.$\_) } )
+        TR (-join $Properties.Foreach{ TD ($row.$_) } )
     }
 
     $table = [Element] @{

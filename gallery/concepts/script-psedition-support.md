@@ -3,12 +3,12 @@ ms.date: 06/12/2017
 contributor: manikb
 keywords: cmdlet do powershell do galeria, psget
 title: Scripts com edições do PowerShell compatíveis
-ms.openlocfilehash: 0ab655ff1c5dd0f48ec41a16ad394251b6c70748
-ms.sourcegitcommit: c3f1a83b59484651119630f3089aa51b6e7d4c3c
+ms.openlocfilehash: 2313131fe17dcd9508db514883ae3dcb837fb07e
+ms.sourcegitcommit: 01ac77cd0b00e4e5e964504563a9212e8002e5e0
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 07/26/2018
-ms.locfileid: "39267818"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39587215"
 ---
 # <a name="script-with-compatible-powershell-editions"></a>Scripts com edições do PowerShell compatíveis
 
@@ -45,7 +45,7 @@ Get-Content C:\script.ps1
 Get-Process -Name PowerShell
 
 C:\script.ps1
-C:\script.ps1 : The script 'script.ps1' cannot be run because it contained a "#requires" statement for PowerShell Core edition. The edition of PowerShell that is required by the script does not match the currently running PowerShell Desktop edition.
+C:\script.ps1 : The script 'script.ps1' cannot be run because it contained a "#requires" statement for PowerShell editions 'Core'. The edition of PowerShell that is required by the script does not match the currently running PowerShell Desktop edition.
 At line:1 char:1
 + C:\script.ps1
 + ~~~~~~~~~~~~~
@@ -54,14 +54,14 @@ At line:1 char:1
 ```
 
 Os utilizadores da galeria do PowerShell podem encontrar a lista de scripts suportado numa edição específica do PowerShell.
-Scripts sem PSEdition_Desktop e PSEditon_Core são considerados como funcionam bem em edições de ambiente de trabalho do PowerShell.
+Scripts sem etiquetas PSEdition_Desktop e PSEdition_Core são considerados para funcionar bem, na edição de ambiente de trabalho do PowerShell.
 
 ```powershell
 # Find scripts supported on PowerShell Desktop edition
-Find-Script -Tag PSEditon_Desktop
+Find-Script -Tag PSEdition_Desktop
 
-# Find scripts supported on PowerShell Core editions
-Find-Script -Tag PSEditon_Core
+# Find scripts supported on PowerShell Core edition
+Find-Script -Tag PSEdition_Core
 ```
 
 ## <a name="more-details"></a>Obter mais detalhes

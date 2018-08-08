@@ -1,3 +1,14 @@
+---
+title: Ciclo de Vida do Suporte do PowerShell Core
+description: As políticas que regem suportam para o PowerShell Core
+ms.date: 08/06/2018
+ms.openlocfilehash: 2e0ca1b9c133e6f316a40aff13365d0489059165
+ms.sourcegitcommit: 01ac77cd0b00e4e5e964504563a9212e8002e5e0
+ms.translationtype: MT
+ms.contentlocale: pt-PT
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39587164"
+---
 # <a name="powershell-core-support-lifecycle"></a>Ciclo de Vida do Suporte do PowerShell Core
 
 O PowerShell Core é um conjunto distinto de ferramentas e componentes que é entregue, instalado e configurado separadamente a partir do Windows PowerShell.
@@ -44,7 +55,8 @@ Plataformas listadas como `Experimental` não serem suportados oficialmente, mas
 | Windows Server 2008 R2, 2012 R2, 2016             | Suportada   | Suportada   |
 | [Canal Semianual do Windows Server][semi-annual] | Suportada   | Suportada   |
 | Ubuntu 14.04 e 16.04                           | Suportada   | Suportada   |
-| Ubuntu 17.10 e 18.04                           |             | Suportada   |
+| Ubuntu 18.04                                      |             | Suportada   |
+| Ubuntu 18.10 (por meio do ajuste pacote)                   |             | Comunidade   |
 | Debian 8,7 + e 9                                | Suportada   | Suportada   |
 | CentOS 7                                          | Suportada   | Suportada   |
 | Red Hat Enterprise Linux 7                        | Suportada   | Suportada   |
@@ -56,6 +68,10 @@ Plataformas listadas como `Experimental` não serem suportados oficialmente, mas
 | Raspbian                                          | Experimentais| Comunidade   |
 | Kali                                              | Comunidade   | Comunidade   |
 | AppImage (funciona em várias plataformas Linux)     | Comunidade   | Comunidade   |
+| [Ajustar o pacote](https://snapcraft.io/powershell)   | Consulte a nota    | Consulte a nota    |
+
+> [!NOTE]
+> Ajuste pacotes estarão experimentais durante um período.  Depois, estamos a certeza de que Snap não introduz novos problemas de suporte, o suporte seguirão a distribuição que está a executar o pacote.
 
 ## <a name="platform-which-are-out-of-support"></a>Plataforma que estão fora de suporte
 
@@ -65,13 +81,14 @@ Por conseguinte, o suporte para as seguintes versões foi terminada pelos propri
 
 | SO       | Versão | Fim de vida                                                                                 |
 |----------|---------|---------------------------------------------------------------------------------------------|
-| Fedora   | 26      | [Maio de 2018](https://fedoramagazine.org/fedora-26-end-life/)                                  |
-| Fedora   | 25      | [Dezembro de 2017](https://fedoramagazine.org/fedora-25-end-life/)                             |
 | Fedora   | 24      | [Agosto de 2017](https://fedoramagazine.org/fedora-24-eol/)                                    |
-| OpenSUSE | 42.2    | [Janeiro de 2018](https://lists.opensuse.org/opensuse-security-announce/2017-11/msg00066.html) |
+| Fedora   | 25      | [Dezembro de 2017](https://fedoramagazine.org/fedora-25-end-life/)                             |
+| Fedora   | 26      | [Maio de 2018](https://fedoramagazine.org/fedora-26-end-life/)                                  |
 | OpenSUSE | 42.1    | [Maio de 2017](https://lists.opensuse.org/opensuse-security-announce/2017-05/msg00053.html)     |
-| Ubuntu   | 17.04   | [Janeiro de 2018](https://lists.ubuntu.com/archives/ubuntu-announce/2018-January.txt)          |
+| OpenSUSE | 42.2    | [Janeiro de 2018](https://lists.opensuse.org/opensuse-security-announce/2017-11/msg00066.html) |
 | Ubuntu   | 16.10   | [Julho de 2017](https://lists.ubuntu.com/archives/ubuntu-announce/2017-July/000223.html)        |
+| Ubuntu   | 17.04   | [Janeiro de 2018](https://lists.ubuntu.com/archives/ubuntu-announce/2018-January.txt)          |
+| Ubuntu   | 17.10   | [Julho de 2018](https://lists.ubuntu.com/archives/ubuntu-announce/2018-July/000232.html)        |
 
 ## <a name="notes-on-licensing"></a>Notas de licenciamento
 
