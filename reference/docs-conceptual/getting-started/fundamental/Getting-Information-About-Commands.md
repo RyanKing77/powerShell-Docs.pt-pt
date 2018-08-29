@@ -1,37 +1,43 @@
 ---
-ms.date: 06/05/2017
+ms.date: 08/27/2018
 keywords: PowerShell, o cmdlet
-title: Obter Informações sobre os Comandos
+title: Obter informações sobre os comandos
 ms.assetid: 56f8e5b4-d97c-4e59-abbe-bf13e464eb0d
-ms.openlocfilehash: c51579fe2cdf4f2a0d3248d1aaf3f1f9cac83868
-ms.sourcegitcommit: 01d6985ed190a222e9da1da41596f524f607a5bc
+ms.openlocfilehash: f4238927f10b4204cd3e23f0b0453011f54cb04a
+ms.sourcegitcommit: 59727f71dc204785a1bcdedc02716d8340a77aeb
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 06/07/2018
-ms.locfileid: "34482731"
+ms.lasthandoff: 08/28/2018
+ms.locfileid: "43134015"
 ---
-# <a name="getting-information-about-commands"></a>Obter Informações sobre os Comandos
-O Windows PowerShell `Get-Command` cmdlet obtém todos os comandos que estão disponíveis na sua sessão atual. Quando escrever `Get-Command` na linha de comandos do PowerShell, aparece um resultado semelhante ao seguinte:
+# <a name="getting-information-about-commands"></a>Obter informações sobre os comandos
 
-```
-PS> Get-Command
-CommandType     Name                            Definition
------------     ----                            ----------
-Cmdlet          Add-Content                     Add-Content [-Path] <String[...
-Cmdlet          Add-History                     Add-History [[-InputObject] ...
-Cmdlet          Add-Member                      Add-Member [-MemberType] <PS...
+O PowerShell `Get-Command` apresenta os comandos que estão disponíveis na sua sessão atual.
+Quando executa o `Get-Command` cmdlet, verá algo semelhante à seguinte saída:
+
+```output
+CommandType     Name                    Version    Source
+-----------     ----                    -------    ------
+Cmdlet          Add-Computer            3.1.0.0    Microsoft.PowerShell.Management
+Cmdlet          Add-Content             3.1.0.0    Microsoft.PowerShell.Management
+Cmdlet          Add-History             3.0.0.0    Microsoft.PowerShell.Core
+Cmdlet          Add-JobTrigger          1.1.0.0    PSScheduledJob
+Cmdlet          Add-LocalGroupMember    1.0.0.0    Microsoft.PowerShell.LocalAccounts
+Cmdlet          Add-Member              3.1.0.0    Microsoft.PowerShell.Utility
+Cmdlet          Add-PSSnapin            3.0.0.0    Microsoft.PowerShell.Core
+Cmdlet          Add-Type                3.1.0.0    Microsoft.PowerShell.Utility
 ...
 ```
 
-Isto de saída procura muito semelhante a saída de ajuda do Cmd.exe: um resumo dos comandos internos tabular. No excerpt do **Get-Command** comando saída mostrada acima, cada comando mostrado tem um CommandType de Cmdlet. Um cmdlet é o tipo de comando intrínseco do Windows PowerShell - um tipo que corresponde aproximadamente ao **dir** e **cd** comandos da Cmd.exe e built-ins no shells de UNIX como BASH.
+Esta saída se parece muito como a saída de ajuda de Cmd.exe: um resumo em tabela de comandos internos. No trecho do `Get-Command` comando mostrada acima, cada comando mostrado de saída tem um CommandType de Cmdlet. Um cmdlet é o tipo de comando intrínsecos do PowerShell. Este tipo corresponde mais ou menos para comandos como `dir` e `cd` em Cmd.exe ou os comandos internos de Unix shells, como bash.
 
-Na saída do `Get-Command` comando, todas as definições de terminar com nas reticências (…) para indicar que o PowerShell não é possível apresentar todo o conteúdo no espaço disponível. Quando o Windows PowerShell apresenta uma saída, formata o resultado como texto e, em seguida, dispõe para verificar os dados ajustar corretamente a janela. Serão abordadas isto mais tarde na secção ao mesmo tempo.
+O `Get-Command` cmdlet tem um **sintaxe** parâmetro que retorna a sintaxe de cada cmdlet. O exemplo seguinte mostra como obter a sintaxe do `Get-Help` cmdlet:
 
-O `Get-Command` cmdlet tem um **sintaxe** parâmetro que obtém a sintaxe de cada cmdlet. Para obter a sintaxe do cmdlet Get-Help, utilize o seguinte comando:
-
-```
+```powershell
 Get-Command Get-Help -Syntax
+```
 
+```output
 Get-Help [[-Name] <String>] [-Path <String>] [-Category <String[]>] [-Component <String[]>] [-Functionality <String[]>]
  [-Role <String[]>] [-Full] [-Online] [-Verbose] [-Debug] [-ErrorAction <ActionPreference>] [-WarningAction <ActionPreference>] [-ErrorVariable <String>] [-WarningVariable <String>] [-OutVariable <String>] [-OutBuffer <Int32>]
 
@@ -45,8 +51,15 @@ Get-Help [[-Name] <String>] [-Path <String>] [-Category <String[]>] [-Component 
  [-Role <String[]>] [-Parameter <String>] [-Online] [-Verbose] [-Debug] [-ErrorAction <ActionPreference>] [-WarningAction <ActionPreference>] [-ErrorVariable <String>] [-WarningVariable <String>] [-OutVariable <String>] [-OutBuffer <Int32>]
 ```
 
-### <a name="displaying-available-command-types"></a>Apresentar os tipos de comando disponíveis
-O **Get-Command** comando não listar todos os comandos que está disponível no Windows PowerShell. Em vez disso, o **Get-Command** comando lista apenas os cmdlets na sessão atual. O Windows PowerShell, na verdade, suporta vários outros tipos de comandos. Aliases, funções e scripts são também comandos do Windows PowerShell, embora estes não são abordados em detalhe no Guia do utilizador do Windows PowerShell. Ficheiros externos que são executável ou que têm um processador de tipo de ficheiros registada, também estão classificados como comandos.
+## <a name="displaying-available-command-by-type"></a>Exibição de comando disponíveis por tipo
+
+O `Get-Command` comando lista apenas os cmdlets na sessão atual. Na verdade, o PowerShell suporta vários outros tipos de comandos:
+
+- Aliases
+- Funções
+- Scripts
+
+Arquivos executáveis externos ou ficheiros que tenham um manipulador de tipo de ficheiros registada, também estão classificados como comandos.
 
 Para obter todos os comandos na sessão, escreva:
 
@@ -54,14 +67,16 @@ Para obter todos os comandos na sessão, escreva:
 Get-Command *
 ```
 
-Porque esta lista inclui ficheiros externos no seu caminho de pesquisa, pode conter a milhares de itens. É mais útil ver um conjunto de comandos reduzido.
-
-Para obter comandos nativos de outros tipos, utilize o **CommandType** parâmetro o `Get-Command` cmdlet.
+Esta lista inclui os comandos externos no seu caminho de pesquisa para que ele pode conter milhares de itens.
+É mais útil examinar um conjunto reduzido de comandos.
 
 > [!NOTE]
-> O asterisco (\*) é utilizado para correspondência nos argumentos de comando do Windows PowerShell de caracteres universais. O \* significa "corresponde uma ou mais caracteres". Pode escrever `Get-Command a*` para localizar todos os comandos que começam com a letra "a". Ao contrário do caráter universal correspondente no Cmd.exe, universal do Windows PowerShell irá também de coincidir com um período.
+> O asterisco (\*) é utilizado para o caráter universal correspondente nos argumentos de comando do PowerShell. O \* significa "corresponde uma ou mais das quaisquer carateres". Pode digitar `Get-Command a*` para localizar todos os comandos que começam com a letra "a". Ao contrário de caráter universal correspondente no Cmd.exe, universais do PowerShell também corresponderá um período.
 
-Para obter os aliases de comando, que são os nicknames atribuídos de comandos, escreva:
+Utilize o **CommandType** parâmetro do `Get-Command` para obter comandos nativos de outros tipos.
+cmdlet.
+
+Para obter os aliases de comandos, que são os nicknames atribuídos de comandos, escreva:
 
 ```powershell
 Get-Command -CommandType Alias
@@ -73,7 +88,7 @@ Para obter as funções na sessão atual, escreva:
 Get-Command -CommandType Function
 ```
 
-Para apresentar scripts no caminho de pesquisa do Windows PowerShell, escreva:
+Para ver scripts no caminho de pesquisa do PowerShell, escreva:
 
 ```powershell
 Get-Command -CommandType Script

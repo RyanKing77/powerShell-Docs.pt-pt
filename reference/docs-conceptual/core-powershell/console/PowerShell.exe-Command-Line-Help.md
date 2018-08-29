@@ -1,18 +1,18 @@
 ---
-ms.date: 06/05/2017
+ms.date: 08/14/2018
 keywords: PowerShell, o cmdlet
 title: Ajuda da Linha de Comandos PowerShell.exe
 ms.assetid: 1ab7b93b-6785-42c6-a1c9-35ff686a958f
-ms.openlocfilehash: 60b6a7e310821a4092b0972b7abbdae0e2d5f738
-ms.sourcegitcommit: cf195b090b3223fa4917206dfec7f0b603873cdf
+ms.openlocfilehash: c7f35511e876e8e5189d8a2b949555603d43f731
+ms.sourcegitcommit: 56b9be8503a5a1342c0b85b36f5ba6f57c281b63
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 04/09/2018
-ms.locfileid: "30952584"
+ms.lasthandoff: 08/21/2018
+ms.locfileid: "43133868"
 ---
-# <a name="powershellexe-command-line-help"></a>Ajuda da linha de comandos PowerShell.exe
+# <a name="powershellexe-command-line-help"></a>Ajuda da linha de comandos do PowerShell.exe
 
-Pode utilizar o PowerShell.exe para iniciar uma sessão do PowerShell na linha de comandos de outra ferramenta, tais como Cmd.exe, ou utilizá-lo na linha de comandos do PowerShell para iniciar uma sessão de novo. Utilize os parâmetros para personalizar a sessão.
+Pode utilizar PowerShell.exe para iniciar uma sessão do PowerShell a partir da linha de comandos de outra ferramenta, como Cmd.exe, ou usá-lo na linha de comandos do PowerShell para iniciar uma nova sessão. Utilize os parâmetros para personalizar a sessão.
 
 ## <a name="syntax"></a>Sintaxe
 
@@ -41,94 +41,91 @@ PowerShell[.exe] -Help | -? | /?
 
 ### <a name="-encodedcommand-base64encodedcommand"></a>-EncodedCommand <Base64EncodedCommand>
 
-Aceita uma versão de cadeia com codificação base-64 de um comando. Utilize este parâmetro para submeter os comandos do PowerShell que requerem aspas complexas ou chavetas.
+Aceita uma versão de cadeia com codificação base-64 de um comando. Utilize este parâmetro para enviar comandos para o PowerShell, que requerem aspas complexas ou chavetas.
 
 ### <a name="-executionpolicy-executionpolicy"></a>-ExecutionPolicy <ExecutionPolicy>
 
-Define a política de execução predefinido para a sessão atual e guarda-o no $env: PSExecutionPolicyPreference variável de ambiente. Este parâmetro não altera a política de execução do PowerShell que está definida no registo. Para obter informações sobre as políticas de execução do PowerShell, incluindo uma lista de valores válidos, consulte [about_Execution_Policies](/powershell/module/microsoft.powershell.core/about/about_execution_policies).
+Define a política de execução padrão para a sessão atual e guarda-o no $env: PSExecutionPolicyPreference variável de ambiente. Este parâmetro não altera a diretiva de execução do PowerShell que é definida no registo. Para obter informações sobre as políticas de execução do PowerShell, incluindo uma lista de valores válidos, consulte [about_Execution_Policies](/powershell/module/microsoft.powershell.core/about/about_execution_policies).
 
-### <a name="-file-filepath-parameters"></a>-Ficheiro <FilePath> \[ <Parameters>]
+### <a name="-file-filepath-parameters"></a>-Arquivo <FilePath> \[ <Parameters>]
 
-Executa o script especificado no âmbito local ("dot-obtido"), para que as funções e as variáveis que cria o script estão disponíveis na sessão atual. Introduza o caminho do ficheiro de script e quaisquer parâmetros. **Ficheiro** tem de ser o último parâmetro no comando, porque todos os caracteres escritos após o **ficheiro** nome do parâmetro são interpretados como o caminho do ficheiro de script seguido os parâmetros do script e os respetivos valores.
+Executa o script especificado no âmbito do local ("dot Source"), para que as funções e variáveis que cria o script estão disponíveis na sessão atual. Introduza o caminho do ficheiro de script e quaisquer parâmetros. **Ficheiro** tem de ser o último parâmetro no comando. Todos os valores que escreveu depois do **-ficheiro** parâmetro são interpretados como o script de caminho do ficheiro e os parâmetros passados para esse script.
 
-Pode incluir os parâmetros de um script e os valores de parâmetros, o valor da **ficheiro** parâmetro. Por exemplo: `-File .\Get-Script.ps1 -Domain Central` tenha em atenção que os parâmetros transmitidos para o script são transmitidos como literal cadeias (após a interpretação através da shell do atual).
-Por exemplo, se estiverem em cmd.exe e pretende transmita um valor de variável de ambiente, teria de utilizar a sintaxe de cmd.exe: `powershell -File .\test.ps1 -Sample %windir%` se pretendesse utilizar a sintaxe do PowerShell, em seguida, neste exemplo, o script receberia o literal "$env: windir" e não o valor do que variável de ambiente: `powershell -File .\test.ps1 -Sample $env:windir`
-
-Normalmente, os parâmetros de comutador de um script estiverem incluídos ou for omitidos. Por exemplo, o seguinte comando utiliza o **todos os** parâmetro do ficheiro de script Get-Script.ps1: `-File .\Get-Script.ps1 -All`
+Parâmetros transmitidos para o script são transmitidos como cadeias de caracteres literais (depois de interpretação pelo shell do atual). Por exemplo, se estiver no cmd.exe e quiser passar um valor da variável de ambiente, usaria a sintaxe de cmd.exe: `powershell -File .\test.ps1 -Sample %windir%` neste exemplo, o script recebe a cadeia literal `$env:windir` e não o valor dessa variável ambiental: `powershell -File .\test.ps1 -Sample $env:windir`
 
 ### <a name="-inputformat-text--xml"></a>\-InputFormat {texto | XML}
 
-Descreve o formato dos dados enviados para o PowerShell. Os valores válidos são "Text" (cadeias de texto) ou "XML" (CLIXML o formato serializado).
+Descreve o formato dos dados enviados para o PowerShell. Valores válidos são "Text" (cadeias de texto) ou "XML" (formato CLIXML serializado).
 
 ### <a name="-mta"></a>-Mta
 
-É iniciado através de um apartment multi-thread do PowerShell. Este parâmetro é apresentado no PowerShell 3.0. No PowerShell 3.0, single-threaded apartment (STA) é a predefinição. PowerShell 2.0, vários threads apartment (MTA) é a predefinição.
+Inicia o PowerShell com um apartment com múltiplos threads. Este parâmetro é introduzido no PowerShell 3.0. No PowerShell 3.0, single-threaded apartment (STA) é a predefinição. No PowerShell 2.0, a predefinição é multithread apartment (MTA).
 
 ### <a name="-noexit"></a>-NoExit
 
-Não for fechada depois de executar os comandos de arranque.
+Não saia depois de executar comandos de inicialização.
 
 ### <a name="-nologo"></a>-NoLogo
 
-Oculta a faixa de copyright no arranque.
+Oculta a faixa de direitos de autor na inicialização.
 
 ### <a name="-noninteractive"></a>-NonInteractive
 
-Não está presente uma linha de comandos interativa ao utilizador.
+Não apresentar uma linha de comandos interativa ao usuário.
 
 ### <a name="-noprofile"></a>-NoProfile
 
-Não carregue o perfil do PowerShell.
+Não carrega o perfil do PowerShell.
 
 ### <a name="-outputformat-text--xml"></a>-OutputFormat {texto | XML}
 
-Determina a forma como saída do PowerShell está formatada. Os valores válidos são "Text" (cadeias de texto) ou "XML" (CLIXML o formato serializado).
+Determina a forma como o resultado do PowerShell é formatado. Valores válidos são "Text" (cadeias de texto) ou "XML" (formato CLIXML serializado).
 
 ### <a name="-psconsolefile-filepath"></a>-PSConsoleFile <FilePath>
 
-Carrega o ficheiro de consola do PowerShell especificado. Introduza o caminho e nome do ficheiro de consola. Para criar um ficheiro de consola, utilize o [ `Export-Console` ](/powershell/module/Microsoft.PowerShell.Core/Export-Console) cmdlet do PowerShell.
+Carrega o ficheiro de consola do PowerShell especificado. Introduza o caminho e nome do arquivo de console. Para criar um arquivo de console, utilize o [ `Export-Console` ](/powershell/module/Microsoft.PowerShell.Core/Export-Console) cmdlet no PowerShell.
 
 ### <a name="-sta"></a>-Sta
 
-Inicia o PowerShell com um apartamento de thread único. No PowerShell 3.0, single-threaded apartment (STA) é a predefinição. PowerShell 2.0, vários threads apartment (MTA) é a predefinição.
+Inicia o PowerShell com um apartamento de thread único. No PowerShell 3.0, single-threaded apartment (STA) é a predefinição. No PowerShell 2.0, a predefinição é multithread apartment (MTA).
 
 ### <a name="-version-powershell-version"></a>-Versão <PowerShell Version>
 
 Inicia a versão especificada do PowerShell. A versão que especificar tem de estar instalada no sistema. Se o PowerShell 3.0 está instalado no computador, os valores válidos são "2.0" e "3.0". O valor predefinido é "3.0".
 
-Se o PowerShell 3.0 não está instalado, o único valor válido é "2.0". Outros valores são ignorados.
+Se o PowerShell 3.0 não estiver instalado, o único valor válido é "2.0". Outros valores são ignorados.
 
-Para obter mais informações, consulte "[instalar o Windows PowerShell](../../setup/installing-windows-powershell.md)".
+Para obter mais informações, consulte [instalar o Windows PowerShell](../../setup/installing-windows-powershell.md).
 
-### <a name="-windowstyle-window-style"></a>-WindowStyle <Window style>
+### <a name="-windowstyle-window-style"></a>-NONE <Window style>
 
-Define o estilo de janela para a sessão. Os valores válidos são Normal, minimizado, maximizado e oculto.
+Define o estilo da janela para a sessão. Valores válidos são Normal, minimizado, maximizado e Hidden.
 
 ### <a name="-command"></a>-Comando
 
-Executa os comandos especificados (e quaisquer parâmetros) como se se tratasse foram escritas na linha de comandos do PowerShell e, em seguida, sai, a menos que o parâmetro NoExit for especificado.
-Essencialmente, qualquer texto após `-Command` é enviada como uma única linha de comandos para o PowerShell (isto é diferente do como `-File` processa parâmetros enviados para um script).
+Executa os comandos especificados (com quaisquer parâmetros) como se eles foram digitados na linha de comando do PowerShell. Após a execução, PowerShell é encerrado, a menos que o `-NoExit` parâmetro for especificado.
+Qualquer texto depois do `-Command` é enviada como uma única linha de comando para o PowerShell. Isso é diferente de como `-File` processa parâmetros enviados para um script.
 
-O valor do comando pode ser "-", uma cadeia. ou um bloco de scripts. Se o valor do comando é "-", o texto de comando é ler a partir da entrada padrão.
+O valor do comando pode ser "-", uma cadeia de caracteres. ou um bloco de scripts. Se for o valor do comando "-", o texto do comando é lidos a partir de entrada padrão.
 
-Blocos de script tem de ser colocado entre chavetas ({}). Pode especificar um bloco de script apenas quando executar o PowerShell.exe no PowerShell. São apresentados os resultados do script para a shell de principal como objetos XML de serialização anulados, objetos não dinâmicos.
+Blocos de script têm de estar entre chavetas ({}). Pode especificar um bloco de scripts apenas quando executar PowerShell.exe no PowerShell. Os resultados do script são devolvidos ao shell principal como objetos XML de serialização anulados, objetos não em direto.
 
-Se o valor do comando é uma cadeia, **comando** tem de ser o último parâmetro no comando, porque os caracteres escritos depois do comando são interpretados como os argumentos de comando.
+Se o valor do comando é uma cadeia de caracteres **comando** tem de ser o último parâmetro no comando, porque qualquer caracteres digitados depois do comando são interpretados como os argumentos de comando.
 
-Para escrever uma cadeia que é executado um comando do PowerShell, utilize o formato:
+Para escrever uma cadeia de caracteres que executa um comando do PowerShell, utilize o formato:
 
 ```powershell
 "& {<command>}"
 ```
 
-onde as aspas indicam uma cadeia e o operador de invoke (&) faz com que o comando ser executada.
+As aspas indicam uma cadeia de caracteres e o operador de invoke (&) faz com que o comando a ser executado.
 
 ### <a name="-help---"></a>-Help,-?, /?
 
-Mostra esta mensagem. Se escrever um comando PowerShell.exe no PowerShell, preceder os parâmetros de comando com um hífen (-), não uma barra (/). Pode utilizar um hífen ou uma barra no Cmd.exe.
+Mostra a sintaxe de powershell.exe. Se estiver escrevendo um comando de PowerShell.exe no PowerShell, preceda os parâmetros de comando com um hífen (-), não uma barra (/). Pode utilizar um hífen ou de uma barra no Cmd.exe.
 
 > [!NOTE]
-> Nota de resolução de problemas: No PowerShell 2.0, começar alguns programas no Windows PowerShell consola falha com um LastExitCode de 0xc0000142.
+> Nota de resolução de problemas: No PowerShell 2.0, a partir de alguns programas no Windows PowerShell consola não com um LastExitCode de 0xc0000142.
 
 ## <a name="examples"></a>EXEMPLOS
 

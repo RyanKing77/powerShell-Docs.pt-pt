@@ -1,21 +1,22 @@
 ---
-ms.date: 06/05/2017
+ms.date: 08/27/2018
 keywords: PowerShell, o cmdlet
 title: Utilizar Variáveis para Armazenar Objetos
 ms.assetid: b1688d73-c173-491e-9ba6-6d0c1cc852de
-ms.openlocfilehash: e52f0a344d0ad13db42b34bed912d584c99b0e30
-ms.sourcegitcommit: cf195b090b3223fa4917206dfec7f0b603873cdf
+ms.openlocfilehash: 3168b64039a601857f9c684108de5770f88329e3
+ms.sourcegitcommit: 59727f71dc204785a1bcdedc02716d8340a77aeb
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 04/09/2018
-ms.locfileid: "30953332"
+ms.lasthandoff: 08/28/2018
+ms.locfileid: "43134063"
 ---
-# <a name="using-variables-to-store-objects"></a>Utilizar Variáveis para Armazenar Objetos
-PowerShell funciona com objetos. PowerShell permite-lhe criar variáveis, essencialmente com o nome de objetos, para preservar a saída para utilização posterior. Se forem utilizados para trabalhar com variáveis noutras shells Lembre-se de que as variáveis de PowerShell são objetos, não texto.
+# <a name="using-variables-to-store-objects"></a>Usando variáveis para armazenar objetos
 
-Variáveis são sempre especificadas com o caráter inicial $ e podem incluir quaisquer carateres alfanuméricos ou o caráter de sublinhado nos respetivos nomes.
+PowerShell funciona com objetos. PowerShell permite-lhe criar objetos nomeados, conhecidos como variáveis.
+Nomes de variáveis podem incluir a lata de caráter de sublinhado quaisquer carateres alfanuméricos. Quando utilizado no PowerShell, uma variável é sempre especificada usando a \$ caracteres seguido pelo nome da variável.
 
-### <a name="creating-a-variable"></a>Criar uma variável
+## <a name="creating-a-variable"></a>Criar uma variável
+
 Pode criar uma variável, escrevendo um nome de variável válido:
 
 ```
@@ -23,13 +24,14 @@ PS> $loc
 PS>
 ```
 
-Esta ação não devolve nenhum resultado porque **$loc** não tem um valor. Pode criar uma variável e atribua-lhe um valor no mesmo passo. PowerShell apenas cria a variável se não existir; caso contrário, atribui o valor especificado para a variável existente. Para armazenar a sua localização atual na variável **$loc**, tipo:
+Neste exemplo não retornará nenhum resultado porque `$loc` não tem um valor. Pode criar uma variável e atribua-lhe um valor na mesma etapa. PowerShell cria a variável apenas se não existir.
+Caso contrário, atribui o valor especificado para a variável existente. O exemplo seguinte armazena a localização atual na variável `$loc`:
 
-```
+```powershell
 $loc = Get-Location
 ```
 
-Não há nenhuma saída apresentada quando escreva este comando porque o resultado é enviado para $loc. No PowerShell, o resultado apresentado é um efeito de facto de dados, que não é; caso contrário, direcionado, sempre são enviados para o ecrã. Escrever $loc mostrará a sua localização atual:
+PowerShell não apresenta nenhuma saída quando digitar este comando. PowerShell envia a saída de Get-Location para `$loc`. No PowerShell, os dados que não estão atribuídos ou redirecionados são enviados para o ecrã. Escrever `$loc` mostra sua localização atual:
 
 ```
 PS> $loc
@@ -39,9 +41,9 @@ Path
 C:\temp
 ```
 
-Pode utilizar **Get-membro** para apresentar informações sobre o conteúdo das variáveis. Encaminhando $loc Get-membro irá mostrar-lhe que é um **PathInfo** objeto, tal como o resultado de Get-localização:
+Pode usar `Get-Member` para apresentar informações sobre o conteúdo das variáveis. `Get-Member` mostra-lhe que `$loc` é um **PathInfo** objeto, assim como a saída do `Get-Location`:
 
-```
+```powershell
 PS> $loc | Get-Member -MemberType Property
 
    TypeName: System.Management.Automation.PathInfo
@@ -54,47 +56,47 @@ Provider     Property   System.Management.Automation.ProviderInfo Provider {...
 ProviderPath Property   System.String ProviderPath {get;}
 ```
 
-### <a name="manipulating-variables"></a>Manipulação de variáveis
-PowerShell fornece vários comandos para manipular variáveis. Pode ver uma lista completa num formulário legível escrevendo:
+## <a name="manipulating-variables"></a>Manipulação de variáveis
 
-```
+PowerShell fornece vários comandos para manipular as variáveis. Pode ver uma lista completa num formato legível digitando:
+
+```powershell
 Get-Command -Noun Variable | Format-Table -Property Name,Definition -AutoSize -Wrap
 ```
 
-Para além das variáveis de que criar na sua sessão atual do PowerShell, existem várias variáveis definidas pelo sistema. Pode utilizar o **Remove-Variable** cmdlet para limpar terminar todas as variáveis que não são controladas através do PowerShell. Escreva o seguinte comando para limpar todas as variáveis:
+PowerShell também cria várias variáveis definidas pelo sistema. Pode utilizar o `Remove-Variable` cmdlet para remover as variáveis, que não são controladas pelo PowerShell, da sessão atual. Escreva o seguinte comando para limpar todas as variáveis:
 
-```
+```powershell
 Remove-Variable -Name * -Force -ErrorAction SilentlyContinue
 ```
 
-Isto produzirá o pedido de confirmação, que veja a seguir.
+Depois de executar o comando anterior, o `Get-Variable` cmdlet mostra as variáveis de sistema do PowerShell.
 
-```
-Confirm
-Are you sure you want to perform this action?
-Performing operation "Remove Variable" on Target "Name: Error".
-[Y] Yes  [A] Yes to All  [N] No  [L] No to All  [S] Suspend  [?] Help
-(default is "Y"):A
-```
+PowerShell também cria uma unidade de variável. Utilize o exemplo a seguir para exibir todas as variáveis do PowerShell usando a unidade de variável:
 
-Se, em seguida, executar o **Get-Variable** cmdlet, verá as variáveis de PowerShell restantes. Uma vez que também é uma variável de unidade do PowerShell, também pode apresentar todas as variáveis de PowerShell, escrevendo:
-
-```
+```powershell
 Get-ChildItem variable:
 ```
 
-### <a name="using-cmdexe-variables"></a>Utilizar variáveis Cmd.exe
-Apesar de PowerShell não Cmd.exe, é executado num ambiente de shell de comandos e pode utilizar as variáveis mesmas disponíveis em qualquer ambiente do Windows. Estas variáveis são expostas através de uma unidade com o nome **env**:. Pode ver estas variáveis, escrevendo:
+## <a name="using-cmdexe-variables"></a>Usando variáveis Cmd.exe
 
-```
+PowerShell, pode utilizar as variáveis de ambiente mesmo disponíveis a qualquer processo do Windows, incluindo Cmd.exe. Estas variáveis são expostas por meio de uma unidade chamada `env:`. Pode ver estas variáveis, escrevendo o seguinte comando:
+
+```powershell
 Get-ChildItem env:
 ```
 
-Embora os cmdlets de variável padrão não foram concebidos para funcionar com **env:** variáveis, pode continuar a utilizá-los, especificando o **env:** prefixo. Por exemplo, para ver o diretório de raiz do sistema operativo, pode utilizar a shell de comandos **% SystemRoot %** variável do PowerShell, escrevendo:
+O padrão `*-Variable` cmdlets não são concebidos para trabalhar com variáveis de ambiente. Variáveis de ambiente são acessadas usando o `env:` prefixo de unidade. Por exemplo, o **% SystemRoot %** variável no Cmd.exe contém o nome de diretório de raiz do sistema operacional. No PowerShell, utilize `$env:SystemRoot` para acessar o mesmo valor.
 
 ```
 PS> $env:SystemRoot
 C:\WINDOWS
 ```
 
-Também pode criar e modificar variáveis de ambiente de PowerShell. Variáveis de ambiente acedidas a partir do Windows PowerShell está em conformidade com as regras normais nas variáveis de ambiente noutro local do Windows.
+Também pode criar e modificar variáveis de ambiente a partir do PowerShell. Variáveis de ambiente no PowerShell, siga as mesmas regras para variáveis de ambiente utilizadas em outro lugar no sistema operativo. O exemplo seguinte cria uma nova variável de ambiente:
+
+```powershell
+$env:LIB_PATH='/usr/local/lib'
+```
+
+Embora não obrigatório, é comum para nomes de variáveis de ambiente utilizar todas as letras maiúsculas.

@@ -1,29 +1,19 @@
 ---
-ms.date: 06/12/2017
-keywords: DSC, do powershell, a configuração, a configuração
-title: Recurso de Script de DSC
-ms.openlocfilehash: 1163d454972d8ee519d1c55b77bb85979faf3536
-ms.sourcegitcommit: 54534635eedacf531d8d6344019dc16a50b8b441
+ms.date: 08/24/2018
+keywords: DSC, powershell, configuração, a configuração
+title: Recursos de Script de DSC
+ms.openlocfilehash: ef84239820a44aab2a028f7f0fe17653a851b72e
+ms.sourcegitcommit: 59727f71dc204785a1bcdedc02716d8340a77aeb
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 05/16/2018
-ms.locfileid: "34189453"
+ms.lasthandoff: 08/28/2018
+ms.locfileid: "43133898"
 ---
-# <a name="dsc-script-resource"></a>Recurso de Script de DSC
+# <a name="dsc-script-resource"></a>Recursos de Script de DSC
 
+> Aplica-se a: Windows PowerShell 4.0, o Windows PowerShell 5.x
 
-> Aplica-se a: O Windows PowerShell 4.0, Windows PowerShell 5.0
-
-O **Script** recursos no Windows PowerShell pretendido Estado Configuration (DSC) fornece um mecanismo para executar os blocos de script do Windows PowerShell em nós de destino. O `Script` recurso tem `GetScript`, `SetScript`, e `TestScript` propriedades. Estas propriedades devem ser definidas para blocos de script que serão executada em cada nó de destino.
-
-O `GetScript` bloco de script deve devolver uma tabela hash que representa o estado do nó atual. A tabela hash só pode conter uma chave `Result` e o valor tem de ser do tipo `String`. Não é necessário para devolver nada. DSC não faz nada com o resultado deste bloco de script.
-
-O `TestScript` bloco de script deve determinar se o nó atual tem de ser modificado. Deverá devolver `$true` se o nó é atualizado. Deverá devolver `$false` se a configuração do nó está desatualizada e devem ser atualizada pelo `SetScript` bloco de script. O `TestScript` bloco de script é chamado pelo DSC.
-
-O `SetScript` bloco de script deve modificar o nó. É denominado pelo DSC se o `TestScript` bloquear retorno `$false`.
-
-Se tiver de utilizar variáveis do seu script de configuração no `GetScript`, `TestScript`, ou `SetScript` blocos de script, utilize o `$using:` âmbito (consulte abaixo para obter um exemplo).
-
+O **Script** recursos no Windows PowerShell Desired State Configuration (DSC) fornece um mecanismo para executar blocos de script do Windows PowerShell em nós de destino. O **Script** utilizações de recursos `GetScript`, `SetScript`, e `TestScript` operações de estado de propriedades que contêm os blocos de script que define para realizar o DSC correspondente.
 
 ## <a name="syntax"></a>Sintaxe
 
@@ -38,37 +28,68 @@ Script [string] #ResourceName
 }
 ```
 
+> [!NOTE]
+> O `GetScript`, `TestScript`, e `SetScript` blocos são armazenados como cadeias de caracteres.
+
 ## <a name="properties"></a>Propriedades
 
-|  Propriedade  |  Descrição   |
-|---|---|
-| GetScript| Fornece um bloco de script do Windows PowerShell que é executado quando invocar o [Get-DscConfiguration](https://technet.microsoft.com/library/dn407379.aspx) cmdlet. Este bloco tem de devolver uma tabela hash. A tabela hash só pode conter uma chave **resultado** e o valor tem de ser do tipo **cadeia**.|
-| SetScript| Fornece um bloco de script do Windows PowerShell. Quando invocar o [início DscConfiguration](https://technet.microsoft.com/library/dn521623.aspx) cmdlet, a **TestScript** bloco executa primeiro. Se o **TestScript** bloquear devolve **$false**, a **SetScript** bloco será executado. Se o **TestScript** bloquear devolve **$true**, a **SetScript** blocos não serão executado.|
-| TestScript| Fornece um bloco de script do Windows PowerShell. Quando invocar o [início DscConfiguration](https://technet.microsoft.com/library/dn521623.aspx) executa o cmdlet, este bloco. Se devolver **$false**, o bloco de SetScript será executado. Se devolver **$true**, SetScript bloco serão não executado. O **TestScript** bloco também é executada quando invocar o [teste DscConfiguration](https://technet.microsoft.com/en-us/library/dn407382.aspx) cmdlet. No entanto, neste caso, o **SetScript** blocos não serão executados, independentemente do valor que o TestScript bloquear devolve. O **TestScript** bloco tem de devolver VERDADEIRO se a configuração real corresponder a configuração atual do estado pretendido e False se não corresponde. (É a última configuração enacted no nó que está a utilizar o DSC da configuração atual do estado pretendido.)|
-| credencial| Indica as credenciais a utilizar para executar este script, se são necessárias credenciais.|
-| dependsOn| Indica que a configuração de outro recurso tem de executar antes deste recurso é configurado. Por exemplo, se o ID da configuração do recurso de script bloco de que pretende executar primeiro é **ResourceName** e o respetivo tipo é **ResourceType**, a sintaxe para utilizar esta propriedade é `DependsOn = "[ResourceType]ResourceName"`.
+|Propriedade|Descrição|
+|--------|-----------|
+|GetScript|Um bloco de script que retorna o estado atual do nó.|
+|SetScript|Um bloco de script que utiliza o DSC para impor a conformidade quando o nó não está no estado pretendido.|
+|TestScript|Um bloco de script que determina se o nó está no estado pretendido.|
+|Credencial| Indica as credenciais a utilizar para executar este script, se as credenciais são necessárias.|
+|DependsOn| Indica que a configuração de outro recurso deve ser executado antes deste recurso está configurado. Por exemplo, se o ID da configuração do recurso do bloco que pretende executar script primeiro será **ResourceName** e seu tipo é **ResourceType**, a sintaxe para utilizar esta propriedade é `DependsOn = "[ResourceType]ResourceName"`.
 
-## <a name="example-1"></a>Exemplo 1
+### <a name="getscript"></a>GetScript
+
+DSC não utiliza a saída do `GetScript`. O [Get-dscconfiguration para](/powershell/module/PSDesiredStateConfiguration/Get-DscConfiguration) cmdlet é executado o `GetScript` para obter o estado atual de um nó. Não é necessário de um valor de retorno `GetScript`. Se especificar um valor de retorno, tem de ser um `hashtable` que contém um **resultado** chave cujo valor é um `String`.
+
+### <a name="testscript"></a>TestScript
+
+O `TestScript` executado pela DSC para determinar se o `SetScript` deve ser executado. Se o `TestScript` devolve `$false`, DSC executa o `SetScript` para colocar o nó para o estado pretendido. Tem de devolver um `boolean` valor. O resultado de `$true` indica que o nó está em conformidade e `SetScript` não deve ser executado.
+
+O [Test-dscconfiguration para](/powershell/module/PSDesiredStateConfiguration/Test-DscConfiguration) cmdlet, executa o `TestScript` para obter a conformidade de nós com o **Script** recursos. No entanto, no caso, o `SetScript` não é executado, não importa o que o `TestScript` bloquear devolve.
+
+> [!NOTE]
+> Todos os resultados da sua `TestScript` faz parte do valor de retorno. PowerShell interpreta unsuppressed saída diferente de zero, que significa que seu `TestScript` retornará `$true` independentemente do Estado de seu nó.
+> Isso resulta em resultados imprevisíveis, falsos positivos e faz com que dificuldade durante a resolução de problemas.
+
+### <a name="setscript"></a>SetScript
+
+O `SetScript` modifica o nó para enfore o estado pretendido. Ela é chamada pelo DSC se o `TestScript` devolve de bloco de script `$false`. O `SetScript` não deve ter nenhum valor de retorno.
+
+## <a name="examples"></a>Exemplos
+
+### <a name="example-1-write-sample-text-using-a-script-resource"></a>Exemplo 1: Escrever texto de exemplo através de um recurso de Script
+
+Neste exemplo, testa a existência de `C:\TempFolder\TestFile.txt` em cada nó. Se não existir, cria-o com o `SetScript`. O `GetScript` devolve o conteúdo do ficheiro e o valor de retorno não é utilizado.
+
 ```powershell
 Configuration ScriptTest
 {
     Import-DscResource –ModuleName 'PSDesiredStateConfiguration'
 
-    Script ScriptExample
+    Node localhost
     {
-        SetScript =
+        Script ScriptExample
         {
-            $sw = New-Object System.IO.StreamWriter("C:\TempFolder\TestFile.txt")
-            $sw.WriteLine("Some sample string")
-            $sw.Close()
+            SetScript = {
+                $sw = New-Object System.IO.StreamWriter("C:\TempFolder\TestFile.txt")
+                $sw.WriteLine("Some sample string")
+                $sw.Close()
+            }
+            TestScript = { Test-Path "C:\TempFolder\TestFile.txt" }
+            GetScript = { @{ Result = (Get-Content C:\TempFolder\TestFile.txt) } }
         }
-        TestScript = { Test-Path "C:\TempFolder\TestFile.txt" }
-        GetScript = { @{ Result = (Get-Content C:\TempFolder\TestFile.txt) } }
     }
 }
 ```
 
-## <a name="example-2"></a>Exemplo 2
+### <a name="example-2-compare-version-information-using-a-script-resource"></a>Exemplo 2: Comparar as informações de versão usando um recurso de Script
+
+Este exemplo obtém o *em conformidade* informações sobre a versão de um ficheiro de texto no computador de criação e armazena-na `$version` variável. Ao gerar o ficheiro MOF do nó, DSC substitui o `$using:version` variáveis em cada script bloquear com o valor do `$version` variável. Durante a execução, o *em conformidade* versão é armazenada num arquivo de texto em cada nó e em comparação com e atualizada sobre as execuções subsequentes.
+
 ```powershell
 $version = Get-Content 'version.txt'
 
@@ -76,27 +97,30 @@ Configuration ScriptTest
 {
     Import-DscResource –ModuleName 'PSDesiredStateConfiguration'
 
-    Script UpdateConfigurationVersion
+    Node localhost
     {
-        GetScript = {
-            $currentVersion = Get-Content (Join-Path -Path $env:SYSTEMDRIVE -ChildPath 'version.txt')
-            return @{ 'Result' = "$currentVersion" }
-        }
-        TestScript = {
-            $state = $GetScript
-            if( $state['Result'] -eq $using:version )
-            {
-                Write-Verbose -Message ('{0} -eq {1}' -f $state['Result'],$using:version)
-                return $true
+        Script UpdateConfigurationVersion
+        {
+            GetScript = {
+                $currentVersion = Get-Content (Join-Path -Path $env:SYSTEMDRIVE -ChildPath 'version.txt')
+                return @{ 'Result' = "$currentVersion" }
             }
-            Write-Verbose -Message ('Version up-to-date: {0}' -f $using:version)
-            return $false
-        }
-        SetScript = {
-            $using:version | Set-Content -Path (Join-Path -Path $env:SYSTEMDRIVE -ChildPath 'version.txt')
+            TestScript = {
+                # Create and invoke a scriptblock using the $GetScript automatic variable, which contains a string representation of the GetScript.
+                $state = [scriptblock]::Create($GetScript).Invoke()
+
+                if( $state['Result'] -eq $using:version )
+                {
+                    Write-Verbose -Message ('{0} -eq {1}' -f $state['Result'],$using:version)
+                    return $true
+                }
+                Write-Verbose -Message ('Version up-to-date: {0}' -f $using:version)
+                return $false
+            }
+            SetScript = {
+                $using:version | Set-Content -Path (Join-Path -Path $env:SYSTEMDRIVE -ChildPath 'version.txt')
+            }
         }
     }
 }
 ```
-
-Este recurso é ao escrever a versão da configuração para um ficheiro de texto. Esta versão está disponível no computador cliente, mas não se encontra em nenhum de nós, pelo que tem de ser transferidos para cada um do `Script` blocos de script do recurso com o do PowerShell `using` âmbito. Quando MOF o nó a gerar ficheiro, o valor da `$version` variável é ler a partir de um ficheiro de texto no computador cliente. Substitui o DSC de `$using:version` bloquear variáveis em cada script com o valor da `$version` variável.
