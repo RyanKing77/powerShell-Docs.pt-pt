@@ -1,31 +1,21 @@
 ---
-ms.date: 06/12/2017
-keywords: DSC, do powershell, a configuração, a configuração
-title: Recurso de Script de DSC
-ms.openlocfilehash: 1163d454972d8ee519d1c55b77bb85979faf3536
-ms.sourcegitcommit: 54534635eedacf531d8d6344019dc16a50b8b441
+ms.date: 08/24/2018
+keywords: DSC, powershell, configuração, a configuração
+title: Recursos de Script de DSC
+ms.openlocfilehash: ef84239820a44aab2a028f7f0fe17653a851b72e
+ms.sourcegitcommit: 59727f71dc204785a1bcdedc02716d8340a77aeb
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 05/16/2018
-ms.locfileid: "34189453"
+ms.lasthandoff: 08/28/2018
+ms.locfileid: "43133898"
 ---
-# <a name="dsc-script-resource"></a><span data-ttu-id="9825a-103">Recurso de Script de DSC</span><span class="sxs-lookup"><span data-stu-id="9825a-103">DSC Script Resource</span></span>
+# <a name="dsc-script-resource"></a><span data-ttu-id="68b09-103">Recursos de Script de DSC</span><span class="sxs-lookup"><span data-stu-id="68b09-103">DSC Script Resource</span></span>
 
+> <span data-ttu-id="68b09-104">Aplica-se a: Windows PowerShell 4.0, o Windows PowerShell 5.x</span><span class="sxs-lookup"><span data-stu-id="68b09-104">Applies To: Windows PowerShell 4.0, Windows PowerShell 5.x</span></span>
 
-> <span data-ttu-id="9825a-104">Aplica-se a: O Windows PowerShell 4.0, Windows PowerShell 5.0</span><span class="sxs-lookup"><span data-stu-id="9825a-104">Applies To: Windows PowerShell 4.0, Windows PowerShell 5.0</span></span>
+<span data-ttu-id="68b09-105">O **Script** recursos no Windows PowerShell Desired State Configuration (DSC) fornece um mecanismo para executar blocos de script do Windows PowerShell em nós de destino.</span><span class="sxs-lookup"><span data-stu-id="68b09-105">The **Script** resource in Windows PowerShell Desired State Configuration (DSC) provides a mechanism to run Windows PowerShell script blocks on target nodes.</span></span> <span data-ttu-id="68b09-106">O **Script** utilizações de recursos `GetScript`, `SetScript`, e `TestScript` operações de estado de propriedades que contêm os blocos de script que define para realizar o DSC correspondente.</span><span class="sxs-lookup"><span data-stu-id="68b09-106">The **Script** resource uses `GetScript`, `SetScript`, and `TestScript` properties that contain script blocks you define to perform the corresponding DSC state operations.</span></span>
 
-<span data-ttu-id="9825a-105">O **Script** recursos no Windows PowerShell pretendido Estado Configuration (DSC) fornece um mecanismo para executar os blocos de script do Windows PowerShell em nós de destino.</span><span class="sxs-lookup"><span data-stu-id="9825a-105">The **Script** resource in Windows PowerShell Desired State Configuration (DSC) provides a mechanism to run Windows PowerShell script blocks on target nodes.</span></span> <span data-ttu-id="9825a-106">O `Script` recurso tem `GetScript`, `SetScript`, e `TestScript` propriedades.</span><span class="sxs-lookup"><span data-stu-id="9825a-106">The `Script` resource has `GetScript`, `SetScript`, and `TestScript` properties.</span></span> <span data-ttu-id="9825a-107">Estas propriedades devem ser definidas para blocos de script que serão executada em cada nó de destino.</span><span class="sxs-lookup"><span data-stu-id="9825a-107">These properties should be set to script blocks that will run on each target node.</span></span>
-
-<span data-ttu-id="9825a-108">O `GetScript` bloco de script deve devolver uma tabela hash que representa o estado do nó atual.</span><span class="sxs-lookup"><span data-stu-id="9825a-108">The `GetScript` script block should return a hashtable representing the state of the current node.</span></span> <span data-ttu-id="9825a-109">A tabela hash só pode conter uma chave `Result` e o valor tem de ser do tipo `String`.</span><span class="sxs-lookup"><span data-stu-id="9825a-109">The hashtable must only contain one key `Result` and the value must be of type `String`.</span></span> <span data-ttu-id="9825a-110">Não é necessário para devolver nada.</span><span class="sxs-lookup"><span data-stu-id="9825a-110">It is not required to return anything.</span></span> <span data-ttu-id="9825a-111">DSC não faz nada com o resultado deste bloco de script.</span><span class="sxs-lookup"><span data-stu-id="9825a-111">DSC doesn't do anything with the output of this script block.</span></span>
-
-<span data-ttu-id="9825a-112">O `TestScript` bloco de script deve determinar se o nó atual tem de ser modificado.</span><span class="sxs-lookup"><span data-stu-id="9825a-112">The `TestScript` script block should determine if the current node needs to be modified.</span></span> <span data-ttu-id="9825a-113">Deverá devolver `$true` se o nó é atualizado.</span><span class="sxs-lookup"><span data-stu-id="9825a-113">It should return `$true` if the node is up-to-date.</span></span> <span data-ttu-id="9825a-114">Deverá devolver `$false` se a configuração do nó está desatualizada e devem ser atualizada pelo `SetScript` bloco de script.</span><span class="sxs-lookup"><span data-stu-id="9825a-114">It should return `$false` if the node's configuration is out-of-date and should be updated by the `SetScript` script block.</span></span> <span data-ttu-id="9825a-115">O `TestScript` bloco de script é chamado pelo DSC.</span><span class="sxs-lookup"><span data-stu-id="9825a-115">The `TestScript` script block is called by DSC.</span></span>
-
-<span data-ttu-id="9825a-116">O `SetScript` bloco de script deve modificar o nó.</span><span class="sxs-lookup"><span data-stu-id="9825a-116">The `SetScript` script block should modify the node.</span></span> <span data-ttu-id="9825a-117">É denominado pelo DSC se o `TestScript` bloquear retorno `$false`.</span><span class="sxs-lookup"><span data-stu-id="9825a-117">It is called by DSC if the `TestScript` block return `$false`.</span></span>
-
-<span data-ttu-id="9825a-118">Se tiver de utilizar variáveis do seu script de configuração no `GetScript`, `TestScript`, ou `SetScript` blocos de script, utilize o `$using:` âmbito (consulte abaixo para obter um exemplo).</span><span class="sxs-lookup"><span data-stu-id="9825a-118">If you need to use variables from your configuration script in the `GetScript`, `TestScript`, or `SetScript` script blocks, use the `$using:` scope (see below for an example).</span></span>
-
-
-## <a name="syntax"></a><span data-ttu-id="9825a-119">Sintaxe</span><span class="sxs-lookup"><span data-stu-id="9825a-119">Syntax</span></span>
+## <a name="syntax"></a><span data-ttu-id="68b09-107">Sintaxe</span><span class="sxs-lookup"><span data-stu-id="68b09-107">Syntax</span></span>
 
 ```
 Script [string] #ResourceName
@@ -38,37 +28,68 @@ Script [string] #ResourceName
 }
 ```
 
-## <a name="properties"></a><span data-ttu-id="9825a-120">Propriedades</span><span class="sxs-lookup"><span data-stu-id="9825a-120">Properties</span></span>
+> [!NOTE]
+> <span data-ttu-id="68b09-108">O `GetScript`, `TestScript`, e `SetScript` blocos são armazenados como cadeias de caracteres.</span><span class="sxs-lookup"><span data-stu-id="68b09-108">The `GetScript`, `TestScript`, and `SetScript` blocks are stored as strings.</span></span>
 
-|  <span data-ttu-id="9825a-121">Propriedade</span><span class="sxs-lookup"><span data-stu-id="9825a-121">Property</span></span>  |  <span data-ttu-id="9825a-122">Descrição</span><span class="sxs-lookup"><span data-stu-id="9825a-122">Description</span></span>   |
-|---|---|
-| <span data-ttu-id="9825a-123">GetScript</span><span class="sxs-lookup"><span data-stu-id="9825a-123">GetScript</span></span>| <span data-ttu-id="9825a-124">Fornece um bloco de script do Windows PowerShell que é executado quando invocar o [Get-DscConfiguration](https://technet.microsoft.com/library/dn407379.aspx) cmdlet.</span><span class="sxs-lookup"><span data-stu-id="9825a-124">Provides a block of Windows PowerShell script that runs when you invoke the [Get-DscConfiguration](https://technet.microsoft.com/library/dn407379.aspx) cmdlet.</span></span> <span data-ttu-id="9825a-125">Este bloco tem de devolver uma tabela hash.</span><span class="sxs-lookup"><span data-stu-id="9825a-125">This block must return a hashtable.</span></span> <span data-ttu-id="9825a-126">A tabela hash só pode conter uma chave **resultado** e o valor tem de ser do tipo **cadeia**.</span><span class="sxs-lookup"><span data-stu-id="9825a-126">The hashtable must only contain one key **Result** and the value must be of type **String**.</span></span>|
-| <span data-ttu-id="9825a-127">SetScript</span><span class="sxs-lookup"><span data-stu-id="9825a-127">SetScript</span></span>| <span data-ttu-id="9825a-128">Fornece um bloco de script do Windows PowerShell.</span><span class="sxs-lookup"><span data-stu-id="9825a-128">Provides a block of Windows PowerShell script.</span></span> <span data-ttu-id="9825a-129">Quando invocar o [início DscConfiguration](https://technet.microsoft.com/library/dn521623.aspx) cmdlet, a **TestScript** bloco executa primeiro.</span><span class="sxs-lookup"><span data-stu-id="9825a-129">When you invoke the [Start-DscConfiguration](https://technet.microsoft.com/library/dn521623.aspx) cmdlet, the **TestScript** block runs first.</span></span> <span data-ttu-id="9825a-130">Se o **TestScript** bloquear devolve **$false**, a **SetScript** bloco será executado.</span><span class="sxs-lookup"><span data-stu-id="9825a-130">If the **TestScript** block returns **$false**, the **SetScript** block will run.</span></span> <span data-ttu-id="9825a-131">Se o **TestScript** bloquear devolve **$true**, a **SetScript** blocos não serão executado.</span><span class="sxs-lookup"><span data-stu-id="9825a-131">If the **TestScript** block returns **$true**, the **SetScript** block will not run.</span></span>|
-| <span data-ttu-id="9825a-132">TestScript</span><span class="sxs-lookup"><span data-stu-id="9825a-132">TestScript</span></span>| <span data-ttu-id="9825a-133">Fornece um bloco de script do Windows PowerShell.</span><span class="sxs-lookup"><span data-stu-id="9825a-133">Provides a block of Windows PowerShell script.</span></span> <span data-ttu-id="9825a-134">Quando invocar o [início DscConfiguration](https://technet.microsoft.com/library/dn521623.aspx) executa o cmdlet, este bloco.</span><span class="sxs-lookup"><span data-stu-id="9825a-134">When you invoke the [Start-DscConfiguration](https://technet.microsoft.com/library/dn521623.aspx) cmdlet, this block runs.</span></span> <span data-ttu-id="9825a-135">Se devolver **$false**, o bloco de SetScript será executado.</span><span class="sxs-lookup"><span data-stu-id="9825a-135">If it returns **$false**, the SetScript block will run.</span></span> <span data-ttu-id="9825a-136">Se devolver **$true**, SetScript bloco serão não executado.</span><span class="sxs-lookup"><span data-stu-id="9825a-136">If it returns **$true**, the SetScript block will not run.</span></span> <span data-ttu-id="9825a-137">O **TestScript** bloco também é executada quando invocar o [teste DscConfiguration](https://technet.microsoft.com/en-us/library/dn407382.aspx) cmdlet.</span><span class="sxs-lookup"><span data-stu-id="9825a-137">The **TestScript** block also runs when you invoke the [Test-DscConfiguration](https://technet.microsoft.com/en-us/library/dn407382.aspx) cmdlet.</span></span> <span data-ttu-id="9825a-138">No entanto, neste caso, o **SetScript** blocos não serão executados, independentemente do valor que o TestScript bloquear devolve.</span><span class="sxs-lookup"><span data-stu-id="9825a-138">However, in this case, the **SetScript** block will not run, no matter what value the TestScript block returns.</span></span> <span data-ttu-id="9825a-139">O **TestScript** bloco tem de devolver VERDADEIRO se a configuração real corresponder a configuração atual do estado pretendido e False se não corresponde.</span><span class="sxs-lookup"><span data-stu-id="9825a-139">The **TestScript** block must return True if the actual configuration matches the current desired state configuration, and False if it does not match.</span></span> <span data-ttu-id="9825a-140">(É a última configuração enacted no nó que está a utilizar o DSC da configuração atual do estado pretendido.)</span><span class="sxs-lookup"><span data-stu-id="9825a-140">(The current desired state configuration is the last configuration enacted on the node that is using DSC.)</span></span>|
-| <span data-ttu-id="9825a-141">credencial</span><span class="sxs-lookup"><span data-stu-id="9825a-141">Credential</span></span>| <span data-ttu-id="9825a-142">Indica as credenciais a utilizar para executar este script, se são necessárias credenciais.</span><span class="sxs-lookup"><span data-stu-id="9825a-142">Indicates the credentials to use for running this script, if credentials are required.</span></span>|
-| <span data-ttu-id="9825a-143">dependsOn</span><span class="sxs-lookup"><span data-stu-id="9825a-143">DependsOn</span></span>| <span data-ttu-id="9825a-144">Indica que a configuração de outro recurso tem de executar antes deste recurso é configurado.</span><span class="sxs-lookup"><span data-stu-id="9825a-144">Indicates that the configuration of another resource must run before this resource is configured.</span></span> <span data-ttu-id="9825a-145">Por exemplo, se o ID da configuração do recurso de script bloco de que pretende executar primeiro é **ResourceName** e o respetivo tipo é **ResourceType**, a sintaxe para utilizar esta propriedade é `DependsOn = "[ResourceType]ResourceName"`.</span><span class="sxs-lookup"><span data-stu-id="9825a-145">For example, if the ID of the resource configuration script block that you want to run first is **ResourceName** and its type is **ResourceType**, the syntax for using this property is `DependsOn = "[ResourceType]ResourceName"`.</span></span>
+## <a name="properties"></a><span data-ttu-id="68b09-109">Propriedades</span><span class="sxs-lookup"><span data-stu-id="68b09-109">Properties</span></span>
 
-## <a name="example-1"></a><span data-ttu-id="9825a-146">Exemplo 1</span><span class="sxs-lookup"><span data-stu-id="9825a-146">Example 1</span></span>
+|<span data-ttu-id="68b09-110">Propriedade</span><span class="sxs-lookup"><span data-stu-id="68b09-110">Property</span></span>|<span data-ttu-id="68b09-111">Descrição</span><span class="sxs-lookup"><span data-stu-id="68b09-111">Description</span></span>|
+|--------|-----------|
+|<span data-ttu-id="68b09-112">GetScript</span><span class="sxs-lookup"><span data-stu-id="68b09-112">GetScript</span></span>|<span data-ttu-id="68b09-113">Um bloco de script que retorna o estado atual do nó.</span><span class="sxs-lookup"><span data-stu-id="68b09-113">A script block that returns the current state of the Node.</span></span>|
+|<span data-ttu-id="68b09-114">SetScript</span><span class="sxs-lookup"><span data-stu-id="68b09-114">SetScript</span></span>|<span data-ttu-id="68b09-115">Um bloco de script que utiliza o DSC para impor a conformidade quando o nó não está no estado pretendido.</span><span class="sxs-lookup"><span data-stu-id="68b09-115">A script block that DSC uses to enforce compliance when the Node is not in the desired state.</span></span>|
+|<span data-ttu-id="68b09-116">TestScript</span><span class="sxs-lookup"><span data-stu-id="68b09-116">TestScript</span></span>|<span data-ttu-id="68b09-117">Um bloco de script que determina se o nó está no estado pretendido.</span><span class="sxs-lookup"><span data-stu-id="68b09-117">A script block that determines if the Node is in the desired state.</span></span>|
+|<span data-ttu-id="68b09-118">Credencial</span><span class="sxs-lookup"><span data-stu-id="68b09-118">Credential</span></span>| <span data-ttu-id="68b09-119">Indica as credenciais a utilizar para executar este script, se as credenciais são necessárias.</span><span class="sxs-lookup"><span data-stu-id="68b09-119">Indicates the credentials to use for running this script, if credentials are required.</span></span>|
+|<span data-ttu-id="68b09-120">DependsOn</span><span class="sxs-lookup"><span data-stu-id="68b09-120">DependsOn</span></span>| <span data-ttu-id="68b09-121">Indica que a configuração de outro recurso deve ser executado antes deste recurso está configurado.</span><span class="sxs-lookup"><span data-stu-id="68b09-121">Indicates that the configuration of another resource must run before this resource is configured.</span></span> <span data-ttu-id="68b09-122">Por exemplo, se o ID da configuração do recurso do bloco que pretende executar script primeiro será **ResourceName** e seu tipo é **ResourceType**, a sintaxe para utilizar esta propriedade é `DependsOn = "[ResourceType]ResourceName"`.</span><span class="sxs-lookup"><span data-stu-id="68b09-122">For example, if the ID of the resource configuration script block that you want to run first is **ResourceName** and its type is **ResourceType**, the syntax for using this property is `DependsOn = "[ResourceType]ResourceName"`.</span></span>
+
+### <a name="getscript"></a><span data-ttu-id="68b09-123">GetScript</span><span class="sxs-lookup"><span data-stu-id="68b09-123">GetScript</span></span>
+
+<span data-ttu-id="68b09-124">DSC não utiliza a saída do `GetScript`.</span><span class="sxs-lookup"><span data-stu-id="68b09-124">DSC does not use the output from `GetScript`.</span></span> <span data-ttu-id="68b09-125">O [Get-dscconfiguration para](/powershell/module/PSDesiredStateConfiguration/Get-DscConfiguration) cmdlet é executado o `GetScript` para obter o estado atual de um nó.</span><span class="sxs-lookup"><span data-stu-id="68b09-125">The [Get-DscConfiguration](/powershell/module/PSDesiredStateConfiguration/Get-DscConfiguration) cmdlet executes the `GetScript` to retrieve a node's current state.</span></span> <span data-ttu-id="68b09-126">Não é necessário de um valor de retorno `GetScript`.</span><span class="sxs-lookup"><span data-stu-id="68b09-126">A return value is not required from `GetScript`.</span></span> <span data-ttu-id="68b09-127">Se especificar um valor de retorno, tem de ser um `hashtable` que contém um **resultado** chave cujo valor é um `String`.</span><span class="sxs-lookup"><span data-stu-id="68b09-127">If you specify a return value, it must be a `hashtable` containing a **Result** key whose value is a `String`.</span></span>
+
+### <a name="testscript"></a><span data-ttu-id="68b09-128">TestScript</span><span class="sxs-lookup"><span data-stu-id="68b09-128">TestScript</span></span>
+
+<span data-ttu-id="68b09-129">O `TestScript` executado pela DSC para determinar se o `SetScript` deve ser executado.</span><span class="sxs-lookup"><span data-stu-id="68b09-129">The `TestScript` is executed by DSC to determine if the `SetScript` should be run.</span></span> <span data-ttu-id="68b09-130">Se o `TestScript` devolve `$false`, DSC executa o `SetScript` para colocar o nó para o estado pretendido.</span><span class="sxs-lookup"><span data-stu-id="68b09-130">If the `TestScript` returns `$false`, DSC executes the `SetScript` to bring the node back to the desired state.</span></span> <span data-ttu-id="68b09-131">Tem de devolver um `boolean` valor.</span><span class="sxs-lookup"><span data-stu-id="68b09-131">It must return a `boolean` value.</span></span> <span data-ttu-id="68b09-132">O resultado de `$true` indica que o nó está em conformidade e `SetScript` não deve ser executado.</span><span class="sxs-lookup"><span data-stu-id="68b09-132">A result of `$true` indicates that the node is compliant and `SetScript` should not executed.</span></span>
+
+<span data-ttu-id="68b09-133">O [Test-dscconfiguration para](/powershell/module/PSDesiredStateConfiguration/Test-DscConfiguration) cmdlet, executa o `TestScript` para obter a conformidade de nós com o **Script** recursos.</span><span class="sxs-lookup"><span data-stu-id="68b09-133">The [Test-DscConfiguration](/powershell/module/PSDesiredStateConfiguration/Test-DscConfiguration) cmdlet, executes the `TestScript` to retrieve the nodes compliance with the  **Script** resources.</span></span> <span data-ttu-id="68b09-134">No entanto, no caso, o `SetScript` não é executado, não importa o que o `TestScript` bloquear devolve.</span><span class="sxs-lookup"><span data-stu-id="68b09-134">However, in this case, the `SetScript` does not run, no matter what the `TestScript` block returns.</span></span>
+
+> [!NOTE]
+> <span data-ttu-id="68b09-135">Todos os resultados da sua `TestScript` faz parte do valor de retorno.</span><span class="sxs-lookup"><span data-stu-id="68b09-135">All output from your `TestScript` is part of its return value.</span></span> <span data-ttu-id="68b09-136">PowerShell interpreta unsuppressed saída diferente de zero, que significa que seu `TestScript` retornará `$true` independentemente do Estado de seu nó.</span><span class="sxs-lookup"><span data-stu-id="68b09-136">PowerShell interprets unsuppressed output as non-zero, which means that your `TestScript` will return `$true` regardless of your node's state.</span></span>
+> <span data-ttu-id="68b09-137">Isso resulta em resultados imprevisíveis, falsos positivos e faz com que dificuldade durante a resolução de problemas.</span><span class="sxs-lookup"><span data-stu-id="68b09-137">This results in unpredictable results, false positives, and causes difficulty during troubleshooting.</span></span>
+
+### <a name="setscript"></a><span data-ttu-id="68b09-138">SetScript</span><span class="sxs-lookup"><span data-stu-id="68b09-138">SetScript</span></span>
+
+<span data-ttu-id="68b09-139">O `SetScript` modifica o nó para enfore o estado pretendido.</span><span class="sxs-lookup"><span data-stu-id="68b09-139">The `SetScript` modifies the node to enfore the desired state.</span></span> <span data-ttu-id="68b09-140">Ela é chamada pelo DSC se o `TestScript` devolve de bloco de script `$false`.</span><span class="sxs-lookup"><span data-stu-id="68b09-140">It is called by DSC if the `TestScript` script block returns `$false`.</span></span> <span data-ttu-id="68b09-141">O `SetScript` não deve ter nenhum valor de retorno.</span><span class="sxs-lookup"><span data-stu-id="68b09-141">The `SetScript` should have no return value.</span></span>
+
+## <a name="examples"></a><span data-ttu-id="68b09-142">Exemplos</span><span class="sxs-lookup"><span data-stu-id="68b09-142">Examples</span></span>
+
+### <a name="example-1-write-sample-text-using-a-script-resource"></a><span data-ttu-id="68b09-143">Exemplo 1: Escrever texto de exemplo através de um recurso de Script</span><span class="sxs-lookup"><span data-stu-id="68b09-143">Example 1: Write sample text using a Script resource</span></span>
+
+<span data-ttu-id="68b09-144">Neste exemplo, testa a existência de `C:\TempFolder\TestFile.txt` em cada nó.</span><span class="sxs-lookup"><span data-stu-id="68b09-144">This example tests for the existence of `C:\TempFolder\TestFile.txt` on each node.</span></span> <span data-ttu-id="68b09-145">Se não existir, cria-o com o `SetScript`.</span><span class="sxs-lookup"><span data-stu-id="68b09-145">If it does not exist, it creates it using the `SetScript`.</span></span> <span data-ttu-id="68b09-146">O `GetScript` devolve o conteúdo do ficheiro e o valor de retorno não é utilizado.</span><span class="sxs-lookup"><span data-stu-id="68b09-146">The `GetScript` returns the contents of the file, and its return value is not used.</span></span>
+
 ```powershell
 Configuration ScriptTest
 {
     Import-DscResource –ModuleName 'PSDesiredStateConfiguration'
 
-    Script ScriptExample
+    Node localhost
     {
-        SetScript =
+        Script ScriptExample
         {
-            $sw = New-Object System.IO.StreamWriter("C:\TempFolder\TestFile.txt")
-            $sw.WriteLine("Some sample string")
-            $sw.Close()
+            SetScript = {
+                $sw = New-Object System.IO.StreamWriter("C:\TempFolder\TestFile.txt")
+                $sw.WriteLine("Some sample string")
+                $sw.Close()
+            }
+            TestScript = { Test-Path "C:\TempFolder\TestFile.txt" }
+            GetScript = { @{ Result = (Get-Content C:\TempFolder\TestFile.txt) } }
         }
-        TestScript = { Test-Path "C:\TempFolder\TestFile.txt" }
-        GetScript = { @{ Result = (Get-Content C:\TempFolder\TestFile.txt) } }
     }
 }
 ```
 
-## <a name="example-2"></a><span data-ttu-id="9825a-147">Exemplo 2</span><span class="sxs-lookup"><span data-stu-id="9825a-147">Example 2</span></span>
+### <a name="example-2-compare-version-information-using-a-script-resource"></a><span data-ttu-id="68b09-147">Exemplo 2: Comparar as informações de versão usando um recurso de Script</span><span class="sxs-lookup"><span data-stu-id="68b09-147">Example 2: Compare version information using a Script resource</span></span>
+
+<span data-ttu-id="68b09-148">Este exemplo obtém o *em conformidade* informações sobre a versão de um ficheiro de texto no computador de criação e armazena-na `$version` variável.</span><span class="sxs-lookup"><span data-stu-id="68b09-148">This example retrieves the *compliant* version information from a text file on the authoring computer and stores it in the `$version` variable.</span></span> <span data-ttu-id="68b09-149">Ao gerar o ficheiro MOF do nó, DSC substitui o `$using:version` variáveis em cada script bloquear com o valor do `$version` variável.</span><span class="sxs-lookup"><span data-stu-id="68b09-149">When generating the node's MOF file, DSC replaces the `$using:version` variables in each script block with the value of the `$version` variable.</span></span> <span data-ttu-id="68b09-150">Durante a execução, o *em conformidade* versão é armazenada num arquivo de texto em cada nó e em comparação com e atualizada sobre as execuções subsequentes.</span><span class="sxs-lookup"><span data-stu-id="68b09-150">During execution, the *compliant* version is stored in a text file on each Node and compared and updated on subsequent executions.</span></span>
+
 ```powershell
 $version = Get-Content 'version.txt'
 
@@ -76,27 +97,30 @@ Configuration ScriptTest
 {
     Import-DscResource –ModuleName 'PSDesiredStateConfiguration'
 
-    Script UpdateConfigurationVersion
+    Node localhost
     {
-        GetScript = {
-            $currentVersion = Get-Content (Join-Path -Path $env:SYSTEMDRIVE -ChildPath 'version.txt')
-            return @{ 'Result' = "$currentVersion" }
-        }
-        TestScript = {
-            $state = $GetScript
-            if( $state['Result'] -eq $using:version )
-            {
-                Write-Verbose -Message ('{0} -eq {1}' -f $state['Result'],$using:version)
-                return $true
+        Script UpdateConfigurationVersion
+        {
+            GetScript = {
+                $currentVersion = Get-Content (Join-Path -Path $env:SYSTEMDRIVE -ChildPath 'version.txt')
+                return @{ 'Result' = "$currentVersion" }
             }
-            Write-Verbose -Message ('Version up-to-date: {0}' -f $using:version)
-            return $false
-        }
-        SetScript = {
-            $using:version | Set-Content -Path (Join-Path -Path $env:SYSTEMDRIVE -ChildPath 'version.txt')
+            TestScript = {
+                # Create and invoke a scriptblock using the $GetScript automatic variable, which contains a string representation of the GetScript.
+                $state = [scriptblock]::Create($GetScript).Invoke()
+
+                if( $state['Result'] -eq $using:version )
+                {
+                    Write-Verbose -Message ('{0} -eq {1}' -f $state['Result'],$using:version)
+                    return $true
+                }
+                Write-Verbose -Message ('Version up-to-date: {0}' -f $using:version)
+                return $false
+            }
+            SetScript = {
+                $using:version | Set-Content -Path (Join-Path -Path $env:SYSTEMDRIVE -ChildPath 'version.txt')
+            }
         }
     }
 }
 ```
-
-<span data-ttu-id="9825a-148">Este recurso é ao escrever a versão da configuração para um ficheiro de texto.</span><span class="sxs-lookup"><span data-stu-id="9825a-148">This resource is writing the configuration's version to a text file.</span></span> <span data-ttu-id="9825a-149">Esta versão está disponível no computador cliente, mas não se encontra em nenhum de nós, pelo que tem de ser transferidos para cada um do `Script` blocos de script do recurso com o do PowerShell `using` âmbito.</span><span class="sxs-lookup"><span data-stu-id="9825a-149">This version is available on the client computer, but isn't on any of the nodes, so it has to be passed to each of the `Script` resource's script blocks with PowerShell's `using` scope.</span></span> <span data-ttu-id="9825a-150">Quando MOF o nó a gerar ficheiro, o valor da `$version` variável é ler a partir de um ficheiro de texto no computador cliente.</span><span class="sxs-lookup"><span data-stu-id="9825a-150">When generating the node's MOF file, the value of the `$version` variable is read from a text file on the client computer.</span></span> <span data-ttu-id="9825a-151">Substitui o DSC de `$using:version` bloquear variáveis em cada script com o valor da `$version` variável.</span><span class="sxs-lookup"><span data-stu-id="9825a-151">DSC replaces the `$using:version` variables in each script block with the value of the `$version` variable.</span></span>
