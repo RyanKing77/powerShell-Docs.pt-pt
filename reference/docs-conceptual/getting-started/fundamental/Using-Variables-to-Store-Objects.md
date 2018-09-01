@@ -3,14 +3,14 @@ ms.date: 08/27/2018
 keywords: PowerShell, o cmdlet
 title: Utilizar Variáveis para Armazenar Objetos
 ms.assetid: b1688d73-c173-491e-9ba6-6d0c1cc852de
-ms.openlocfilehash: 3168b64039a601857f9c684108de5770f88329e3
-ms.sourcegitcommit: 59727f71dc204785a1bcdedc02716d8340a77aeb
+ms.openlocfilehash: f4254199facb914c68a487b281b30070c35550a1
+ms.sourcegitcommit: c170a1608d20d3c925d79c35fa208f650d014146
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 08/28/2018
-ms.locfileid: "43134063"
+ms.lasthandoff: 08/31/2018
+ms.locfileid: "43353223"
 ---
-# <a name="using-variables-to-store-objects"></a>Usando variáveis para armazenar objetos
+# <a name="using-variables-to-store-objects"></a>Utilizar variáveis para armazenar objetos
 
 PowerShell funciona com objetos. PowerShell permite-lhe criar objetos nomeados, conhecidos como variáveis.
 Nomes de variáveis podem incluir a lata de caráter de sublinhado quaisquer carateres alfanuméricos. Quando utilizado no PowerShell, uma variável é sempre especificada usando a \$ caracteres seguido pelo nome da variável.
@@ -78,15 +78,15 @@ PowerShell também cria uma unidade de variável. Utilize o exemplo a seguir par
 Get-ChildItem variable:
 ```
 
-## <a name="using-cmdexe-variables"></a>Usando variáveis Cmd.exe
+## <a name="using-cmdexe-variables"></a>Usando variáveis cmd.exe
 
-PowerShell, pode utilizar as variáveis de ambiente mesmo disponíveis a qualquer processo do Windows, incluindo Cmd.exe. Estas variáveis são expostas por meio de uma unidade chamada `env:`. Pode ver estas variáveis, escrevendo o seguinte comando:
+PowerShell, pode utilizar as variáveis de ambiente mesmo disponíveis a qualquer processo do Windows, incluindo **cmd.exe**. Estas variáveis são expostas por meio de uma unidade chamada `env:`. Pode ver estas variáveis, escrevendo o seguinte comando:
 
 ```powershell
 Get-ChildItem env:
 ```
 
-O padrão `*-Variable` cmdlets não são concebidos para trabalhar com variáveis de ambiente. Variáveis de ambiente são acessadas usando o `env:` prefixo de unidade. Por exemplo, o **% SystemRoot %** variável no Cmd.exe contém o nome de diretório de raiz do sistema operacional. No PowerShell, utilize `$env:SystemRoot` para acessar o mesmo valor.
+O padrão `*-Variable` cmdlets não são concebidos para trabalhar com variáveis de ambiente. Variáveis de ambiente são acessadas usando o `env:` prefixo de unidade. Por exemplo, o **% SystemRoot %** variável **cmd.exe** contém o nome de diretório de raiz do sistema operacional. No PowerShell, utilize `$env:SystemRoot` para acessar o mesmo valor.
 
 ```
 PS> $env:SystemRoot

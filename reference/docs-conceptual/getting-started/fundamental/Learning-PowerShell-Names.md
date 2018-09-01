@@ -1,16 +1,16 @@
 ---
 ms.date: 08/24/2018
 keywords: PowerShell, o cmdlet
-title: Os nomes do PowerShell de aprendizagem
+title: Aprender os nomes do PowerShell
 ms.assetid: b4d0fd22-8298-4ee6-82ae-9b6f2907c986
-ms.openlocfilehash: d4e374530c8628df0d53fd860c4b7a149c58eb60
-ms.sourcegitcommit: 59727f71dc204785a1bcdedc02716d8340a77aeb
+ms.openlocfilehash: 44c66488a20c38d8528c92d753f6b32dda5a2dcb
+ms.sourcegitcommit: c170a1608d20d3c925d79c35fa208f650d014146
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 08/28/2018
-ms.locfileid: "43134197"
+ms.lasthandoff: 08/31/2018
+ms.locfileid: "43353271"
 ---
-# <a name="learning-powershell-names"></a>Os nomes do PowerShell de aprendizagem
+# <a name="learning-powershell-names"></a>Aprender os nomes do PowerShell
 
 Nomes de comandos e parâmetros de aprendizagem exige um investimento de tempo significativo com a maioria das interfaces de linha de comandos. O problema é que existem alguns padrões. Só é memorization forma de aprender os comandos e parâmetros que tem de utilizar todos regularmente.
 
@@ -19,10 +19,13 @@ Isso parece lógico os nomes dos comando uma vez que cada comando é uma ferrame
 
 ## <a name="learning-command-names-in-traditional-shells"></a>Nomes de comandos de shells tradicionais de aprendizagem
 
-Baseiam-se a maioria dos comandos para gerir os elementos do sistema operacional ou aplicativos, como serviços ou processos. Os comandos têm nomes que podem ou não podem caber numa família. Por exemplo, em sistemas Windows, pode utilizar o `net start` e `net stop` comandos para iniciar e parar um serviço. **SC. EXE** é outra ferramenta de controlo de serviço para Windows. Esse nome não se encaixa o padrão de nomenclatura para o `net` comandos de serviço. Para gestão de processos, o Windows tem o `tasklist` comando para processos de lista e o `taskkill` comando para interrompe processos.
+Baseiam-se a maioria dos comandos para gerir os elementos do sistema operacional ou aplicativos, como serviços ou processos. Os comandos têm nomes que podem ou não podem caber numa família. Por exemplo, em sistemas Windows, pode utilizar o `net start` e `net stop` comandos para iniciar e parar um serviço. **Sc.exe** é outra ferramenta de controlo de serviço para Windows. Esse nome não se encaixa o padrão de nomenclatura para o **net.exe** comandos de serviço. Para gestão de processos, o Windows tem o **tasklist.exe** comando para processos de lista e o **taskkill.exe** comando para interrompe processos.
 
-Além disso, estes comandos têm especificações de parâmetro irregular. Não é possível utilizar o `net start` comando para iniciar um serviço num computador remoto. O `sc` comando pode iniciar um serviço num computador remoto.
-Mas, para especificar o computador remoto, terá de preceder o nome com uma barra invertida duplo. Para iniciar o serviço de spooler num computador remoto denominado DC01, escreva `sc \\DC01 start spooler`. A lista de tarefas em execução no DC01, utilize o **/S** parâmetro e o nome de computador sem as barras invertidas. Por exemplo, `tasklist /S DC01`.
+Além disso, estes comandos têm especificações de parâmetro irregular. Não é possível utilizar o `net start` comando para iniciar um serviço num computador remoto. O **sc.exe** comando pode iniciar um serviço num computador remoto. Mas, para especificar o computador remoto, terá de preceder o nome com uma barra invertida duplo. Para iniciar o serviço de spooler num computador remoto denominado DC01, escreva `sc.exe \\DC01 start spooler`.
+A lista de tarefas em execução no DC01, utilize o **/S** parâmetro e o nome de computador sem as barras invertidas. Por exemplo, `tasklist /S DC01`.
+
+> [!NOTE]
+> Antes de PowerShell v6, `sc` era um alias para o `Set-Content` cmdlet. Para executar o **sc.exe** de comando, tem de incluir a extensão de ficheiro.
 
 Serviços e processos são exemplos de elementos gerenciáveis num computador que tenham ciclos de vida bem definidos. Pode iniciar ou parar serviços e processos ou obter uma lista de todos os atualmente em execução os serviços ou processos. Embora existam diferenças técnicas importantes entre eles, as ações que efetuar em serviços e processos conceitualmente são os mesmos. Além disso, as opções que podemos fazer para personalizar uma ação, especificando os parâmetros podem ser um conceito semelhantes também.
 
@@ -37,8 +40,7 @@ PowerShell possui um conjunto recomendado de verbos padrão. Os substantivos sã
 Para este exemplo de dois substantivos e verbos, consistência não simplificar muito de aprendizado. Expanda essa lista para um conjunto padronizado de 10 verbos e 10 substantivos. Agora precisa apenas 20 palavras para compreender.
 Mas essas palavras podem ser combinadas para nomes de comando distintos 100 do formulário.
 
-É fácil de entender o que faz um comando do PowerShell ao ler o seu nome. O comando para desligar um computador é `Stop-Computer`. O comando para listar todos os computadores numa rede é `Get-Computer`.
-O comando para obter a data do sistema é `Get-Date`.
+É fácil de entender o que faz um comando do PowerShell ao ler o seu nome. O comando para desligar um computador é `Stop-Computer`. O comando para listar todos os computadores numa rede é `Get-Computer`. O comando para obter a data do sistema é `Get-Date`.
 
 Pode listar todos os comandos que incluem um determinado verbo com o **verbo** parâmetro para `Get-Command`. Por exemplo, para ver todos os cmdlets que usam o verbo `Get`, tipo:
 

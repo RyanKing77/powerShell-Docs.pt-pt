@@ -3,12 +3,12 @@ ms.date: 08/23/2018
 keywords: PowerShell, o cmdlet
 title: Noções sobre conceitos importantes do PowerShell
 ms.assetid: 3e601e38-4520-4578-a48d-b6779f1d35ee
-ms.openlocfilehash: 5f8192f962cebb8ee5e5384e39b48de811b11003
-ms.sourcegitcommit: 59727f71dc204785a1bcdedc02716d8340a77aeb
+ms.openlocfilehash: 577ea0764a172e1821bc492417d8b4e546e31b0b
+ms.sourcegitcommit: c170a1608d20d3c925d79c35fa208f650d014146
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 08/28/2018
-ms.locfileid: "43134217"
+ms.lasthandoff: 08/31/2018
+ms.locfileid: "43353199"
 ---
 # <a name="understanding-important-powershell-concepts"></a>Noções sobre conceitos importantes do PowerShell
 
@@ -23,10 +23,9 @@ Se já usou as ferramentas de processamento de texto para processar dados no pas
 
 ## <a name="the-command-family-is-extensible"></a>A família de comando é extensível
 
-Interfaces como Cmd.exe não fornecem uma forma de estender diretamente o conjunto de comandos incorporada.
-Pode criar ferramentas de linha de comando externas que são executados em Cmd.exe. Mas essas ferramentas externas não têm a serviços, como integração de ajuda. Cmd.exe automaticamente não sabe que estas ferramentas externas são comandos válidos.
+Como interfaces **cmd.exe**não fornecem uma forma de estender diretamente o conjunto de comandos incorporada. Pode criar ferramentas de linha de comando externas que são executados em **cmd.exe**. Mas essas ferramentas externas não têm a serviços, como integração de ajuda. **cmd.exe**automaticamente não sabe que estas ferramentas externas são comandos válidos.
 
-Os comandos nativos do PowerShell são conhecidos como *cmdlets* (pronuncia-se permite que o comando). Pode criar seus próprios módulos de cmdlets e funções com compilado código ou em scripts. Módulos podem adicionar os cmdlets e provedores para o shell. PowerShell também oferece suporte a scripts que são análogos aos scripts de shell de UNIX e Cmd.exe arquivos em lote.
+Os comandos nativos do PowerShell são conhecidos como *cmdlets* (pronuncia-se permite que o comando). Pode criar seus próprios módulos de cmdlets e funções com compilado código ou em scripts. Módulos podem adicionar os cmdlets e provedores para o shell. PowerShell também oferece suporte a scripts que são análogos aos scripts de shell de UNIX e **cmd.exe** arquivos em lote.
 
 ## <a name="powershell-handles-console-input-and-display"></a>PowerShell cuida de entrada do console e a exibição
 

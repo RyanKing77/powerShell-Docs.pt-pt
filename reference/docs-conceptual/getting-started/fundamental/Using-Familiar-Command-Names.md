@@ -3,12 +3,12 @@ ms.date: 08/27/2018
 keywords: PowerShell, o cmdlet
 title: Utilizar Nomes de Comandos Familiares
 ms.assetid: 021e2424-c64e-4fa5-aa98-aa6405758d5d
-ms.openlocfilehash: 08402aa5b959711c150fff89aa6747b6b43f8aa8
-ms.sourcegitcommit: 59727f71dc204785a1bcdedc02716d8340a77aeb
+ms.openlocfilehash: c5665f64fd832eb9c807f413a8e879f63db7f8c6
+ms.sourcegitcommit: c170a1608d20d3c925d79c35fa208f650d014146
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 08/28/2018
-ms.locfileid: "43134088"
+ms.lasthandoff: 08/31/2018
+ms.locfileid: "43353254"
 ---
 # <a name="using-familiar-command-names"></a>Utilizar nomes de comandos familiares
 
@@ -16,9 +16,9 @@ PowerShell suporta aliases para fazer referência aos comandos por nomes alterna
 
 Aliasing associa um novo nome de outro comando. Por exemplo, o PowerShell tem uma função interna chamada `Clear-Host` que limpa a janela de saída. Pode digitar um a `cls` ou `clear` alias num prompt de comando. PowerShell interpreta estes aliases e executa o `Clear-Host` função.
 
-Esta funcionalidade ajuda os utilizadores para aprender o PowerShell. Primeiro, a maioria dos usuários Cmd.exe e Unix tem um grande repertório de comandos que já conhece os utilizadores por nome. Os equivalentes de PowerShell talvez não produzam resultados idênticos. No entanto, os resultados são fechar suficiente que os utilizadores podem fazer o trabalho sem saber o nome do comando do PowerShell. "Dedo memória" é outra das principais fontes de frustração quando um novo shell de comando de aprendizado. Se tiver utilizado Cmd.exe durante anos, forma reflexiva pode digitar o `cls` comando para limpar o ecrã. Sem o alias para `Clear-Host`, recebe uma mensagem de erro e não saberá o que fazer para limpar a saída.
+Esta funcionalidade ajuda os utilizadores para aprender o PowerShell. Primeira, a maioria **cmd.exe** e usuários do Unix têm um grande repertório de comandos que já conhece os utilizadores por nome. Os equivalentes de PowerShell talvez não produzam resultados idênticos. No entanto, os resultados são fechar suficiente que os utilizadores podem fazer o trabalho sem saber o nome do comando do PowerShell. "Dedo memória" é outra das principais fontes de frustração quando um novo shell de comando de aprendizado. Se tiver utilizado **cmd.exe** durante anos, forma reflexiva pode digitar o `cls` comando para limpar o ecrã. Sem o alias para `Clear-Host`, recebe uma mensagem de erro e não saberá o que fazer para limpar a saída.
 
-A lista seguinte mostra algumas das Cmd.exe e Unix comandos comuns que podem ser usados no PowerShell:
+A lista seguinte mostra algumas do comum **cmd.exe** e comandos de Unix, que podem ser usados no PowerShell:
 
 |||||
 |-|-|-|-|
