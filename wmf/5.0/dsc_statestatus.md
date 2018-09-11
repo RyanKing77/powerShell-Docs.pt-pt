@@ -1,12 +1,12 @@
 ---
 ms.date: 06/12/2017
 keywords: wmf,powershell,setup
-ms.openlocfilehash: bed1186c10082bbdac7249503bf623678f13fccd
-ms.sourcegitcommit: c3f1a83b59484651119630f3089aa51b6e7d4c3c
+ms.openlocfilehash: ff2c2bd7369893d72db001ecabf63991ded0bfd5
+ms.sourcegitcommit: ac20e0faaa37142e9c6e4507a21df2f4a3fdbece
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 07/26/2018
-ms.locfileid: "39267944"
+ms.lasthandoff: 09/10/2018
+ms.locfileid: "44339876"
 ---
 # <a name="unified-and-consistent-state-and-status-representation"></a>Estado Unificado e Consistente e Representação de Estado
 
@@ -25,8 +25,8 @@ A tabela abaixo ilustra o resultante Estado relacionadas com as propriedades em 
 
 | Cenário                        | LCMState             | Estado     | Pedido de reinício | ResourcesInDesiredState   | ResourcesNotInDesiredState |
 |---------------------------------|----------------------|------------|---------------|------------------------------|--------------------------------|
-| S**^**                          | Inativo                 | Sucesso    | $false        | S                            | $null                          |
-| F**^**                          | PendingConfiguration | Falha    | $false        | $null                        | F                              |
+| S<sub>eu</sub>                   | Inativo                 | Sucesso    | $false        | S                            | $null                          |
+| F<sub>eu</sub>                   | PendingConfiguration | Falha    | $false        | $null                        | F                              |
 | S, F                             | PendingConfiguration | Falha    | $false        | S                            | F                              |
 | F, S                             | PendingConfiguration | Falha    | $false        | S                            | F                              |
 | S<sub>1</sub>, F, S<sub>2</sub> | PendingConfiguration | Falha    | $false        | S<sub>1</sub>, S<sub>2</sub> | F                              |
