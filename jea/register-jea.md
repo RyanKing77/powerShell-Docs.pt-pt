@@ -1,35 +1,35 @@
 ---
 ms.date: 06/12/2017
 keywords: jea, powershell, segurança
-title: Registar JEA configurações
-ms.openlocfilehash: cda899b20378b0183a3d88ecfd593aaf7356e967
-ms.sourcegitcommit: 54534635eedacf531d8d6344019dc16a50b8b441
+title: Registar a JEA configurações
+ms.openlocfilehash: 2c4a8f64c966903a6eb8fcabe4cd25ae7f98b2c4
+ms.sourcegitcommit: e46b868f56f359909ff7c8230b1d1770935cce0e
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 05/16/2018
-ms.locfileid: "34188518"
+ms.lasthandoff: 09/13/2018
+ms.locfileid: "45522859"
 ---
-# <a name="registering-jea-configurations"></a>Registar JEA configurações
+# <a name="registering-jea-configurations"></a>Registar a JEA configurações
 
 > Aplica-se a: Windows PowerShell 5.0
 
-O último passo antes de poder utilizar JEA assim que tiver o [capacidades de função](role-capabilities.md) e [ficheiro de configuração de sessão](session-configurations.md) criado é para registar o ponto final JEA.
-Este processo aplica-se as informações de configuração de sessão para o sistema e disponibiliza o ponto final para utilização por utilizadores e de motores de automatização.
+A última etapa antes de poder utilizar JEA depois de ter sua [funcionalidades de função](role-capabilities.md) e [o ficheiro de configuração de sessão](session-configurations.md) criado é registar o ponto final JEA.
+Este processo aplica-se as informações de configuração de sessão para o sistema e torna o ponto final disponíveis para utilização por utilizadores e os mecanismos de automatização.
 
-## <a name="single-machine-configuration"></a>Configuração da máquina único
+## <a name="single-machine-configuration"></a>Configuração de máquina única
 
-Para ambientes pequenos, pode implementar o JEA registando a configuração de sessão ficheiros com o [Register-PSSessionConfiguration](https://msdn.microsoft.com/powershell/reference/5.1/microsoft.powershell.core/register-pssessionconfiguration) cmdlet.
+Em ambientes pequenos, pode implementar a JEA registrando-se a configuração de sessão ficheiro com o [Register-PSSessionConfiguration](https://msdn.microsoft.com/powershell/reference/5.1/microsoft.powershell.core/register-pssessionconfiguration) cmdlet.
 
 Antes de começar, certifique-se de que os seguintes pré-requisitos foram cumpridos:
-- Uma ou mais funções foi criado e colocado na pasta 'RoleCapabilities' de um módulo do PowerShell válida.
-- Foi criado e testado um ficheiro de configuração de sessão.
-- O utilizador ao registar a configuração de JEA tem direitos de administrador sobre os sistemas.
+- Uma ou mais funções foi criado e colocado na pasta "RoleCapabilities" de um módulo do PowerShell válida.
+- Um ficheiro de configuração de sessão tem de ser criado e testado.
+- O utilizador a que se registe a configuração de JEA tem direitos de administrador sobre os sistemas.
 
-Também terá de selecionar um nome para o ponto final JEA.
-O nome do ponto final JEA serão necessário quando os utilizadores que pretende estabelecer ligação ao sistema através da JEA.
+Também terá de selecionar um nome para o ponto de final JEA.
+O nome do ponto final JEA serão necessário quando os utilizadores se quer ligar ao sistema através de JEA.
 Pode utilizar o [Get-PSSessionConfiguration](https://msdn.microsoft.com/powershell/reference/5.1/microsoft.powershell.core/get-pssessionconfiguration) cmdlet para verificar os nomes dos pontos finais existentes no sistema.
-Pontos finais que começam por 'microsoft', normalmente, são fornecidos com o Windows.
-O ponto final 'Microsoft' é o ponto final predefinido utilizado ao ligar a um ponto final de PowerShell remoto.
+Pontos de extremidade que começam por "microsoft", normalmente, são fornecidos com o Windows.
+O ponto final de "Microsoft" é o ponto final predefinido utilizado ao ligar a um ponto de extremidade remoto do PowerShell.
 
 ```powershell
 PS C:\> Get-PSSessionConfiguration | Select-Object Name
@@ -41,48 +41,48 @@ microsoft.powershell.workflow
 microsoft.powershell32
 ```
 
-Quando determinar um nome adequado para o ponto final JEA, execute o seguinte comando para registar o ponto final.
+Quando determinar um nome apropriado para seu ponto final da JEA, execute o seguinte comando para registar o ponto final.
 
 ```powershell
 Register-PSSessionConfiguration -Path .\MyJEAConfig.pssc -Name 'JEAMaintenance' -Force
 ```
 
 > [!WARNING]
-> O comando acima irá reiniciar o serviço WinRM no sistema.
+> O comando acima irá reiniciar o serviço de WinRM no sistema.
 > Isto irá terminar todas as sessões de comunicação remota do PowerShell, bem como quaisquer configurações de DSC em curso.
-> Recomenda-se que colocar as máquinas de produção offline antes de executar o comando para evitar perturbar operações de negócio.
+> Recomenda-se que colocar qualquer máquinas de produção offline antes de executar o comando para evitar interromper as operações de negócio.
 
-Se o registo foi efetuado com êxito, está pronto para [utilizar JEA](using-jea.md).
+Se o registo foi concluída com êxito, está pronto para [utilizar a JEA](using-jea.md).
 Pode eliminar o ficheiro de configuração de sessão em qualquer altura; Não é utilizado após o registo.
 
-## <a name="multi-machine-configuration-with-dsc"></a>Configuração de múltiplos computador com o DSC
+## <a name="multi-machine-configuration-with-dsc"></a>Configuração de várias máquinas com DSC
 
-Se estiver a implementar o JEA em várias máquinas, o modelo de implementação mais simples consiste em utilizar o JEA [configuração de estado pretendido](https://msdn.microsoft.com/en-us/powershell/dsc/overview) recursos para implementar rápida e consistentemente JEA em cada máquina.
+Se estiver implantando JEA em várias máquinas, o modelo de implementação mais simples consiste em utilizar a JEA [Desired State Configuration do](https://msdn.microsoft.com/powershell/dsc/overview) recursos para implementar rápida e consistentemente JEA em cada máquina.
 
-Para implementar JEA com DSC, terá de Certifique-se de que são cumpridos os seguintes pré-requisitos:
-- Um ou mais capacidades de função tenham sido criadas e adicionadas a um módulo do PowerShell válido.
+Para implementar a JEA com DSC, terá de garantir que são cumpridos os seguintes pré-requisitos:
+- Um ou mais funcionalidades de função foram criadas e adicionadas a um módulo do PowerShell válido.
 - O módulo do PowerShell que contém as funções é armazenado numa partilha de ficheiros (só de leitura) acessível por cada máquina.
-- Definições para a configuração de sessão foram identificadas. Não é necessário criar um ficheiro de configuração de sessão ao utilizar o recurso de JEA DSC.
-- Tem de ter credenciais que permitem-lhe efetuar ações administrativas em cada máquina ou ter acesso a um servidor de solicitação do DSC utilizado para gerir as máquinas.
-- Transferiu o [recursos de JEA DSC](https://github.com/PowerShell/JEA/tree/master/DSC%20Resource)
+- Definições para a configuração de sessão foram identificadas. Não é necessário criar um ficheiro de configuração de sessão ao usar o recurso de DSC de JEA.
+- Tem as credenciais que permitem-lhe efetuar ações administrativas em cada máquina ou ter acesso a um servidor de solicitação de DSC utilizado para gerir as máquinas.
+- Transferir o [recursos de DSC de JEA](https://github.com/PowerShell/JEA/tree/master/DSC%20Resource)
 
-Num destino máquina (ou servidor de solicitação, se estiver a utilizar um), crie uma configuração de DSC para o ponto final JEA.
-Nesta configuração, irá utilizar os recursos de JustEnoughAdministration DSC para configurar o ficheiro de configuração de sessão e o recurso de ficheiros a copiar sobre as capacidades de função da partilha de ficheiros.
+Num destino máquina (ou servidor de solicitação, se estiver a utilizar um), crie uma configuração de DSC para o ponto de final JEA.
+Nesta configuração, irá utilizar o recurso de DSC JustEnoughAdministration para configurar o ficheiro de configuração de sessão e o recurso de ficheiro para copiar em relação aos recursos de função da partilha de ficheiros.
 
-As seguintes propriedades são configuráveis com os recursos de DSC:
-- Definições de função
-- Grupos de conta virtuais
+As seguintes propriedades são configuráveis com o recurso de DSC:
+- Definições de funções
+- Grupos de conta virtual
 - Nome de conta de serviço gerida de grupo
-- Diretório de transcript
+- Diretório de transcrição
 - Unidade de utilizador
 - Regras de acesso condicional
-- Scripts de arranque para a sessão JEA
+- Scripts de inicialização para a sessão JEA
 
-A sintaxe para cada uma destas propriedades numa configuração de DSC é consistente com o ficheiro de configuração de sessão do PowerShell.
+A sintaxe para cada uma dessas propriedades numa configuração de DSC é consistente com o ficheiro de configuração de sessão do PowerShell.
 
-Segue-se uma configuração de DSC de exemplo para um módulo de manutenção gerais do servidor.
+Segue-se um exemplo de configuração de DSC para um módulo de manutenção geral do servidor.
 
-Parte do pressuposto de que um módulo do PowerShell válido que contém as capacidades de função numa subpasta 'RoleCapabilities' se encontra localizado no '\\\\myfileshare\\JEA' Partilha de ficheiros.
+Parte do princípio de que um módulo do PowerShell válido que contém as funcionalidades de função numa subpasta do 'RoleCapabilities' está localizado no '\\\\myfileshare\\JEA "partilha de ficheiros.
 
 
 ```powershell
@@ -110,16 +110,16 @@ Configuration JEAMaintenance
 }
 ```
 
-Esta configuração, em seguida, pode ser aplicada num sistema por [diretamente invocar o Gestor de configuração Local](https://msdn.microsoft.com/en-us/powershell/dsc/metaconfig) ou atualizar o [configuração do servidor de solicitação](https://msdn.microsoft.com/en-us/powershell/dsc/pullserver).
+Esta configuração, em seguida, pode ser aplicada num sistema pelo [invocando diretamente o Gestor de configuração Local](https://msdn.microsoft.com/powershell/dsc/metaconfig) ou a atualizar a [configuração de servidor de solicitação](https://msdn.microsoft.com/powershell/dsc/pullserver).
 
-O recurso de DSC também permite-lhe substituir o ponto de final predefinido da gestão remota do Microsoft.
-Se o fizer, o recurso será registado automaticamente um ponto final de cópia de segurança unconstrainted com o nome "Microsoft.PowerShell.Restricted" que tem a predefinição de ACL de WinRM (permitir que utilizadores de gestão remota e os administradores locais membros do grupo para aceder ao mesmo).
+O recurso de DSC também permite que substitua o ponto de extremidade padrão da comunicação remota do Microsoft.
+Se fizer isso, o recurso registar automaticamente um ponto de extremidade unconstrainted cópia de segurança com o nome "Microsoft.PowerShell.Restricted" que tem a ACL de WinRM (permitindo que os utilizadores de gestão remota e os administradores locais membros do grupo para aceder ao mesmo) padrão.
 
-## <a name="unregistering-jea-configurations"></a>A anular registo configurações de JEA
+## <a name="unregistering-jea-configurations"></a>A anular o registo configurações de JEA
 
-Para remover um ponto final de JEA num sistema, utilize o [Unregister-PSSessionConfiguration](https://msdn.microsoft.com/powershell/reference/5.1/microsoft.powershell.core/Unregister-PSSessionConfiguration) cmdlet.
-A anulação do registo um ponto final JEA irá impedir que os novos utilizadores da criação de novas sessões JEA no sistema.
-Também permite-lhe atualizar uma configuração de JEA registando novamente um ficheiro de configuração de sessão atualizadas com o mesmo nome de ponto final.
+Para remover um ponto final JEA num sistema, utilize o [Unregister-PSSessionConfiguration](https://msdn.microsoft.com/powershell/reference/5.1/microsoft.powershell.core/Unregister-PSSessionConfiguration) cmdlet.
+Anular o registo de um ponto final JEA impedirá que os novos utilizadores a criação de novas sessões JEA no sistema.
+Ele também permite-lhe atualizar uma configuração de JEA registando novamente um arquivo de configuração de sessão atualizadas utilizando o mesmo nome de ponto final.
 
 ```powershell
 # Unregister the JEA endpoint called "ContosoMaintenance"
@@ -127,10 +127,10 @@ Unregister-PSSessionConfiguration -Name 'ContosoMaintenance' -Force
 ```
 
 > [!WARNING]
-> A anulação do registo um JEA endpoint fará com que o serviço WinRM para reiniciar.
-> Isto irá interromper a operações de gestão mais remotas em curso, incluindo outras sessões de PowerShell, invocações de WMI e algumas ferramentas de gestão.
-> Anular o registo apenas pontos finais de PowerShell durante as janelas de manutenção planeada.
+> Anular o registo de um JEA endpoint fará com que o serviço WinRM seja reiniciado.
+> Isto interromperá a operações de gestão mais remotas em curso, incluindo outras sessões do PowerShell, invocações do WMI e algumas ferramentas de gerenciamento.
+> Anular o registo apenas pontos finais do PowerShell durante as janelas de manutenção planeada.
 
 ## <a name="next-steps"></a>Próximos passos
 
-- [O ponto final JEA de teste](using-jea.md)
+- [Testar o ponto final da JEA](using-jea.md)
