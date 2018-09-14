@@ -1,24 +1,28 @@
 ---
 ms.date: 06/12/2017
 contributor: JKeithB
-keywords: cmdlet do powershell do galeria, psgallery
-title: Introdução à galeria do PowerShell
-ms.openlocfilehash: 83974698152e75efac66ea725a9c220486676d6f
-ms.sourcegitcommit: 54534635eedacf531d8d6344019dc16a50b8b441
+keywords: Galeria, o powershell, o cmdlet, o psgallery
+title: Comece com a galeria do PowerShell
+ms.openlocfilehash: 39998df1a2bf9363dd008dc96a802157c8d691d7
+ms.sourcegitcommit: e46b868f56f359909ff7c8230b1d1770935cce0e
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 05/16/2018
-ms.locfileid: "34190167"
+ms.lasthandoff: 09/13/2018
+ms.locfileid: "45523061"
 ---
-# <a name="get-started-with-the-powershell-gallery"></a>Introdução à galeria do PowerShell
+# <a name="get-started-with-the-powershell-gallery"></a>Comece com a galeria do PowerShell
 
-Transferência de itens da galeria do PowerShell para o sistema necessita de [PowerShellGet](/powershell/module/powershellget) módulo. Pode encontrar o módulo de PowerShellGet em qualquer um dos seguintes procedimentos. Não é necessário iniciar sessão transferir os itens da galeria do PowerShell.
+O modo adequado para instalar itens a partir da galeria do PowerShell é usar os cmdlets do [PowerShellGet](/powershell/module/powershellget) módulo. Não é necessário iniciar sessão para transferir os itens da galeria do PowerShell.
 
-## <a name="discovering-items-from-the-powershell-gallery"></a>Deteção de itens da galeria do PowerShell
+> [!NOTE]
+> É possível transferir um pacote a partir da galeria do PowerShell diretamente, mas não se trata de uma abordagem recomendada. Para obter mais detalhes, consulte [transferir o pacote Manual](https://msdn.microsoft.com/en-us/powershell/gallery/psgallery/how-to/working-with-items/manual-download.md).  
 
-Pode encontrar itens na galeria do PowerShell, utilizando o **pesquisa** controlo neste Web site ou pela navegação nas páginas de módulos e Scripts. Também pode encontrar itens da galeria do PowerShell, executando o [encontrar o módulo][] e [localizar Script][] cmdlets, consoante o tipo de item com `-Repository PSGallery`.
 
-Filtrar os resultados da galeria do pode ser feito utilizando os seguintes parâmetros:
+## <a name="discovering-items-from-the-powershell-gallery"></a>A detetar itens da galeria do PowerShell
+
+Pode encontrar itens na galeria do PowerShell com o **pesquisa** controle neste site, ou ao navegar por meio das páginas de Scripts e módulos. Também pode encontrar itens da galeria do PowerShell ao executar o [Find-Module][] e [Find-Script][] cmdlets, dependendo do tipo de item, com `-Repository PSGallery`.
+
+Filtragem de resultados a partir da galeria pode ser feito utilizando os seguintes parâmetros:
 
 - Nome
 - AllVersions
@@ -29,72 +33,73 @@ Filtrar os resultados da galeria do pode ser feito utilizando os seguintes parâ
 - DscResource
 - RoleCapability
 - Comando
-- filtro
+- Filtro
 
-Se apenas estiver interessado em detetar recursos de DSC específicos na galeria, pode executar o [localizar DscResource] cmdlet. Localizar DscResource devolve dados contidos na Galeria de recursos de DSC.
-Porque os recursos de DSC são sempre fornecidos como parte de um módulo, é preciso executar [Instalar módulo][] para instalar esses recursos de DSC.
+Se só estiver interessado em detetar recursos de DSC específicos na galeria, pode executar o [Find-DscResource] cmdlet. Find-DscResource devolve dados nos recursos de DSC contidos na galeria.
+Como recursos de DSC sempre são fornecidos como parte de um módulo, ainda precisa executar [Install-Module][] para instalar esses recursos de DSC.
 
-## <a name="learning-about-items-in-the-powershell-gallery"></a>Saber mais sobre itens de galeria do PowerShell
+## <a name="learning-about-items-in-the-powershell-gallery"></a>Saber mais sobre os itens da galeria do PowerShell
 
-Depois de ter identificado um item que está interessado em, poderá querer saber mais acerca do mesmo. Pode fazê-lo, examinando página específica desse item na galeria. Nessa página, poderá ver todos os metadados carregados com do item. Estes metadados de um item é fornecido pelo autor do item e não é verificado pela Microsoft. O proprietário do item vivamente está associado à conta de galeria utilizada para publicar o item e é mais fidedigno que o campo autor.
+Depois de identificar um item que está interessado, pode querer saber mais sobre ele. Pode fazê-lo, examinando a página específica desse item na galeria. Nessa página, poderá ver todos os metadados carregados com o item. Esses metadados para um item é fornecido pelo autor do item e não é verificado pela Microsoft. O proprietário do item está intimamente ligado à conta utilizada para publicar o item de galeria e é mais confiável do que o campo de autor.
 
-Se detetar um item que sentir não está publicado em boa fé, clique em **relatório abuso** na página esse item.
+Se descobrir que um item que se sentir não está publicado em boa fé, clique em **relatar abuso** na página desse item.
 
-Se estiver a executar [encontrar o módulo][] ou [localizar Script][], pode ver estes dados no objeto PSGetModuleInfo devolvido. Por exemplo, executar `Find-Module -Name PSReadLine -Repository PSGallery |Get-Member` devolve dados no módulo PSReadLine na galeria.
+Se estiver a executar [Find-Module][] ou [Find-Script][], pode ver estes dados no objeto PSGetModuleInfo retornado. Por exemplo, executar `Find-Module -Name PSReadLine -Repository PSGallery |Get-Member`
+Devolve os dados no módulo PSReadLine na galeria.
 
 ## <a name="downloading-items-from-the-powershell-gallery"></a>Transferência de itens da galeria do PowerShell
 
-Aconselhamo-o seguinte processo quando a transferência de itens da galeria do PowerShell:
+Recomendamos o seguinte processo quando a transferência de itens da galeria do PowerShell:
 
-### <a name="inspect"></a>Inspecione
+### <a name="inspect"></a>Inspecionar
 
-Para transferir um item da Galeria para inspecção, execute o [guardar-Module][] ou [Guardar Script][] cmdlet, consoante o tipo de item. Isto permite-lhe guardar o item localmente sem instalá-lo e inspecionar os conteúdos do item. Lembre-se ao eliminar o item guardado manualmente.
+Para transferir um item da Galeria para inspeção, execute o [Save-Module][] ou [Save-Script][] cmdlet, dependendo do tipo de item. Isto permite-lhe guardar o item localmente sem instalá-lo e inspecionar os conteúdos de item. Não se esqueça de eliminar o item guardado manualmente.
 
-Alguns destes itens são criados pela Microsoft e outros são criados pela Comunidade do PowerShell.
-A Microsoft recomenda que reveja o conteúdo e o código de itens nesta galeria antes da instalação.
+Alguns desses itens são criados pela Microsoft e outros são criados pela Comunidade do PowerShell.
+A Microsoft recomenda que reveja o conteúdo e o código de itens na Galeria deste antes da instalação.
 
-Se detetar um item que sentir não está publicado em boa fé, clique em **relatório abuso** na página esse item.
+Se descobrir que um item que se sentir não está publicado em boa fé, clique em **relatar abuso** na página desse item.
 
 ### <a name="install"></a>Instalar
 
-Para instalar um item da Galeria para utilização, execute o [Instalar módulo][] ou [Script de instalação][] cmdlet, consoante o tipo de item.
+Para instalar um item da Galeria para uso, execute o [Install-Module][] ou [Script de instalação][] cmdlet, dependendo do tipo de item.
 
-[Instalar módulo][] instala o módulo para `$env:ProgramFiles\WindowsPowerShell\Modules` por predefinição.
-Isto requer uma conta de administrador. Se adicionar o `-Scope CurrentUser` parâmetro, o módulo está instalado para `$env:USERPROFILE\Documents\WindowsPowerShell\Modules` .
+[Install-Module][] instala o módulo para `$env:ProgramFiles\WindowsPowerShell\Modules` por predefinição.
+Isto requer uma conta de administrador. Se adicionar o `-Scope CurrentUser` parâmetro, o módulo é instalado `$env:USERPROFILE\Documents\WindowsPowerShell\Modules` .
 
 [Script de instalação][] instala o script para `$env:ProgramFiles\WindowsPowerShell\Scripts` por predefinição.
-Isto requer uma conta de administrador. Se adicionar o `-Scope CurrentUser` parâmetro, o script está instalado o `$env:USERPROFILE\Documents\WindowsPowerShell\Scripts` .
+Isto requer uma conta de administrador. Se adicionar o `-Scope CurrentUser` parâmetro, o script está instalado para `$env:USERPROFILE\Documents\WindowsPowerShell\Scripts` .
 
-Por predefinição, [Instalar módulo][] e [Script de instalação][] instala a versão mais recente de um item.
+Por predefinição, [Install-Module][] e [Script de instalação][] instala a versão mais atual de um item.
 Para instalar uma versão mais antiga do item, adicione o `-RequiredVersion` parâmetro.
 
 ### <a name="deploy"></a>Implementar
 
-Para implementar um item da galeria do PowerShell a automatização do Azure, clique em **implementar a automatização do Azure** na página de detalhes do item. Será redirecionado para o Portal de gestão do Azure, onde poderá iniciar sessão com as suas credenciais de conta do Azure. Tenha em atenção que implementar itens com dependências irá implementar todas as dependências da automatização do Azure. O botão 'Implementar a automatização do Azure' pode ser desativado através da adição de **AzureAutomationNotSupported** etiquetas para os seus metadados do item.
+Para implementar um item da galeria do PowerShell para automatização do Azure, clique em **implementar a automatização do Azure** na página de detalhes do item. Será redirecionado para o Portal de gestão do Azure, em que inicie sessão com as credenciais da conta do Azure. Tenha em atenção que a implementação de itens com dependências implantará todas as dependências para automatização do Azure. O botão "Implementar a automatização do Azure" pode ser desativado ao adicionar o **AzureAutomationNotSupported** etiqueta para os metadados do item.
 
-Para saber mais sobre a automatização do Azure, consulte o [da automatização do Azure](/azure/automation) documentação.
+Para saber mais sobre a automatização do Azure, veja a [automatização do Azure](/azure/automation) documentação.
 
-## <a name="updating-items-from-the-powershell-gallery"></a>Atualizar itens da galeria do PowerShell
+## <a name="updating-items-from-the-powershell-gallery"></a>A atualizar itens da galeria do PowerShell
 
-Para atualizar itens instalados a partir da galeria do PowerShell, execute [atualização-Module] [-] ou [Script de atualização] [] cmdlet. Quando executar sem quaisquer parâmetros adicionais, [atualização-Module] [-] tenta atualizar cada módulo instalado, executando [Instalar módulo][]. Para atualizar seletivamente módulos, adicione o `-Name` parâmetro.
+Para atualizar itens instalados a partir da galeria do PowerShell, execute o [Update-Module] [-] ou [Script de atualização] [] cmdlet. Quando executado sem quaisquer parâmetros adicionais, [Update-Module] [-] tenta atualizar cada módulo instalado, executando [Install-Module][]. Para atualizar seletivamente módulos, adicione o `-Name` parâmetro.
 
-Da mesma forma, quando executada sem quaisquer parâmetros adicionais, [Script de atualização] [-] também tentar atualizar cada script instalada através da execução [Script de instalação][]. Para atualizar seletivamente scripts, adicione o `-Name` parâmetro.
+Da mesma forma, quando executado sem quaisquer parâmetros adicionais, [Script de atualização] [-] também tenta atualizar cada script instalado, executando [Script de instalação][]. Para atualizar os scripts seletivamente, adicione o `-Name` parâmetro.
 
-## <a name="list-items-that-you-have-installed-from-the-powershell-gallery"></a>Itens de lista que tenha instalado da galeria do PowerShell
+## <a name="list-items-that-you-have-installed-from-the-powershell-gallery"></a>Itens de lista que tiver instalado a partir da galeria do PowerShell
 
-Para saber quais os módulos que instalou da galeria do PowerShell, execute o [Get-InstalledModule][] cmdlet. Este comando lista todos os módulos tem no seu sistema, que foram instalados diretamente a partir da galeria do PowerShell.
+Para saber quais os módulos tiver instalado a partir da galeria do PowerShell, execute o [Get-InstalledModule][] cmdlet. Este comando lista todos os módulos que tem no seu sistema que foram instalados diretamente a partir da galeria do PowerShell.
 
-Da mesma forma, para saber quais os scripts que instalou da galeria do PowerShell, execute o [Get-InstalledScript][] cmdlet. Este comando lista todos os scripts que tem no seu sistema, que foram instalados diretamente a partir da galeria do PowerShell.
+Da mesma forma, para saber quais os scripts tiver instalado a partir da galeria do PowerShell, execute o [Get-InstalledScript][] cmdlet. Este comando lista todos os scripts que tem no seu sistema que foram instalados diretamente a partir da galeria do PowerShell.
 
-[localizar DscResource]: /powershell/module/powershellget/Find-DscResource
-[encontrar o módulo]: /powershell/module/powershellget/Find-Module
-[localizar Script]: /powershell/module/powershellget/Find-Script
+[Find-DscResource]: /powershell/module/powershellget/Find-DscResource
+[Find-Module]: /powershell/module/powershellget/Find-Module
+[Find-Script]: /powershell/module/powershellget/Find-Script
 [Get-InstalledModule]: /powershell/module/powershellget/Get-InstalledModule
 [Get-InstalledScript]: /powershell/module/powershellget/Get-InstalledScript
-[Instalar módulo]: /powershell/module/powershellget/Install-Module
+[Install-Module]: /powershell/module/powershellget/Install-Module
 [Script de instalação]: /powershell/module/powershellget/Install-Script
 [Publish-Module]: /powershell/module/powershellget/Publish-Module
 [Publish-Script]: /powershell/module/powershellget/Publish-Script
 [Register-PSRepository]: /powershell/module/powershellget/Register-Repository
-[guardar-Module]: /powershell/module/powershellget/Save-Module
-[Guardar Script]: /powershell/module/powershellget/Save-Script
+[Save-Module]: /powershell/module/powershellget/Save-Module
+[Save-Script]: /powershell/module/powershellget/Save-Script

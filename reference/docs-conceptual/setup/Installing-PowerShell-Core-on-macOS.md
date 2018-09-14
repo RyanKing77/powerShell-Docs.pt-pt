@@ -2,12 +2,12 @@
 title: Instalar o PowerShell Core no macOS
 description: Informações sobre como instalar o PowerShell Core no macOS
 ms.date: 08/06/2018
-ms.openlocfilehash: ff1814d95b3ca3fa8497069dff249fd2ad5576ef
-ms.sourcegitcommit: 01ac77cd0b00e4e5e964504563a9212e8002e5e0
+ms.openlocfilehash: 50b8dbbf26f02580e4be45978c926d5337da6b63
+ms.sourcegitcommit: b235c58b34d23317076540631f5cf83f1f309c0d
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 08/07/2018
-ms.locfileid: "39587470"
+ms.lasthandoff: 09/13/2018
+ms.locfileid: "45557165"
 ---
 # <a name="installing-powershell-core-on-macos"></a>Instalar o PowerShell Core no macOS
 
@@ -15,73 +15,20 @@ O PowerShell Core suporta o macOS 10.12 e superior.
 Todos os pacotes estão disponíveis no nosso GitHub [versões][] página.
 Depois do pacote está instalado, execute `pwsh` partir de um terminal.
 
-### <a name="installation-via-homebrew-on-macos-1012"></a>Instalação através do Homebrew no macOS 10.12 +
+### <a name="installation-of-latest-preview-release-via-homebrew-on-macos-1012-or-higher"></a>Instalação de pré-visualização mais recente da versão através do Homebrew no macOS 10.12 ou superior
 
 [Homebrew] [ brew] é o Gestor de pacotes preferencial para macOS.
-A partir de uma janela de terminal, escreva `brew` para executar o Homebrew.  Se o `brew` comando não for encontrado, tem de instalar o Homebrew seguintes [suas instruções][brew].
+Se o `brew` comando não for encontrado, tem de instalar o Homebrew seguintes [suas instruções][brew].
 
-> [!NOTE]
-> Se tiver instalado o Homebrew no passado, é sempre uma boa idéia para executar "update-reposição brew" & & 'brew update'.
-```sh
-brew update-reset
-brew update
-```
-
-> Versões mais antigas do Homebrew utilizado o toque em "caskroom/cask', que foi preterido e fizemos a migração para o homebrew/cask.  Obter mais informações podem ser encontradas em [Homebrew-cask][cask]. Utilize o comando de "brew toque" para listar os taps atual.  Se vir "caskroom/cask" pode usar a 'atualização brew' ter Homebrew migrar os toques.
+Depois de instalar o Homebrew, instalar o PowerShell é fácil.
+Primeiro, instale [Homebrew-Cask][cask], por isso, pode instalar mais pacotes e instalar [Cask-versões] [cask-version], que lhe permite instalar alternativas versões dos pacotes:
 
 ```sh
-brew tap
-brew update
+brew tap caskroom/cask
+brew tap caskroom/versions
 ```
 
-Depois de instalado/atualizou o Homebrew, instalar o PowerShell é fácil.
-
-Para instalar o PowerShell:
-
-```sh
-brew cask install powershell
-```
-
-Por fim, certifique-se de que a instalação está a funcionar corretamente:
-
-```sh
-pwsh
-```
-
-Para sair do PowerShell e retornar para bash, utilize o comando de "saída".
-```sh
-exit
-```
-
-Quando são lançadas novas versões do PowerShell, basta atualizar viramos do Homebrew e atualize o PowerShell:
-
-```sh
-brew update
-brew cask upgrade powershell
-```
-
-> [!NOTE]
-> Os comandos acima podem ser chamados a partir de um anfitrião do PowerShell (pwsh), mas, em seguida, o shell do PowerShell tem de estar encerrado e reiniciado para concluir a atualização e atualizar os valores mostrados na $PSVersionTable.
-
-### <a name="installing-preview-via-homebrew-on-macos-1012"></a>Instalar a pré-visualização através do Homebrew no macOS 10.12 +
-
-[Homebrew] [ brew] é o Gestor de pacotes preferencial para macOS.
-A partir de uma janela de terminal, escreva `brew` para executar o Homebrew.  Se o `brew` comando não for encontrado, tem de instalar o Homebrew seguintes [suas instruções][brew].
-
-> [!NOTE]
-> Se tiver instalado o Homebrew no passado, é sempre uma boa idéia para executar "update-reposição brew" & & 'brew update'.
-```sh
-brew update-reset
-brew update
-```
-
-Em seguida, pressione a `versions` repositório casks para obter o pacote de pré-visualização:
-
-```sh
-brew tap homebrew/cask-versions
-```
-
-Para instalar a pré-visualização do PowerShell:
+Agora, pode instalar o PowerShell:
 
 ```sh
 brew cask install powershell-preview
@@ -93,7 +40,7 @@ Por fim, certifique-se de que a instalação está a funcionar corretamente:
 pwsh-preview
 ```
 
-Quando são lançadas novas versões do PowerShell, basta atualizar viramos do Homebrew e atualizar pré-visualização do PowerShell:
+Quando são lançadas novas versões do PowerShell, basta atualizar viramos do Homebrew e atualize o PowerShell:
 
 ```sh
 brew update
@@ -101,16 +48,62 @@ brew cask upgrade powershell-preview
 ```
 
 > [!NOTE]
-> Os comandos acima podem ser chamados a partir de um anfitrião do PowerShell (pwsh), mas, em seguida, o shell do PowerShell tem de estar encerrado e reiniciado para concluir a atualização e atualizar os valores mostrados na $PSVersionTable.
+> Os comandos acima podem ser chamados a partir de um anfitrião do PowerShell (pwsh), mas, em seguida, o shell do PowerShell tem de estar encerrado e reiniciado para concluir a atualização.
+> e atualize os valores mostrados na $PSVersionTable.
+
+[brew]: http://brew.sh/
+[cask]: https://caskroom.github.io/
+[cask-versions]: https://github.com/Homebrew/homebrew-cask-versions
+
+### <a name="installation-of-latest-preview-release-via-homebrew-on-macos-1012-or-higher"></a>Instalação de pré-visualização mais recente da versão através do Homebrew no macOS 10.12 ou superior
+
+[Homebrew] [ brew] é o Gestor de pacotes preferencial para macOS.
+Se o `brew` comando não for encontrado, tem de instalar o Homebrew seguintes [suas instruções][brew].
+
+Depois de instalar o Homebrew, instalar o PowerShell é fácil.
+Primeiro, instale [Homebrew-Cask][cask], por isso, pode instalar mais pacotes e instalar [Cask-versões] [cask-version], que lhe permite instalar alternativas versões dos pacotes:
+
+```sh
+brew tap caskroom/cask
+brew tap caskroom/versions
+```
+
+Agora, pode instalar o PowerShell:
+
+```sh
+brew cask install powershell-preview
+```
+
+Por fim, certifique-se de que a instalação está a funcionar corretamente:
+
+```sh
+pwsh-preview
+```
+
+Quando são lançadas novas versões do PowerShell, basta atualizar viramos do Homebrew e atualize o PowerShell:
+
+```sh
+brew update
+brew cask upgrade powershell-preview
+```
+
+> [!NOTE]
+> Os comandos acima podem ser chamados a partir de um anfitrião do PowerShell (pwsh), mas, em seguida, o shell do PowerShell tem de estar encerrado e reiniciado para concluir a atualização.
+> e atualize os valores mostrados na $PSVersionTable.
+
+[brew]: http://brew.sh/
+[cask]: https://caskroom.github.io/
+[cask-versions]: https://github.com/Homebrew/homebrew-cask-versions
 
 ### <a name="installation-via-direct-download"></a>Instalação através de transferência direta
 
-Transferir o pacote PKG `powershell-6.0.2-osx.10.12-x64.pkg` partir do [versões][] página no seu computador macOS.
+Transferir o pacote PKG `powershell-6.1.0-osx-x64.pkg`
+partir do [versões][] página no seu computador macOS.
 
 Pode clicar duas vezes o arquivo e siga as instruções ou instalá-lo a partir do terminal:
 
 ```sh
-sudo installer -pkg powershell-6.0.2-osx.10.12-x64.pkg -target /
+sudo installer -pkg powershell-6.1.0-osx-x64.pkg -target /
 ```
 
 ## <a name="binary-archives"></a>Arquivos binários
@@ -121,19 +114,19 @@ Binário de PowerShell `tar.gz` arquivos são fornecidos para macOS e Linux plat
 
 ```sh
 # Download the powershell '.tar.gz' archive
-curl -L -o /tmp/powershell.tar.gz https://github.com/PowerShell/PowerShell/releases/download/v6.0.2/powershell-6.0.2-osx-x64.tar.gz
+curl -L -o /tmp/powershell.tar.gz https://github.com/PowerShell/PowerShell/releases/download/v6.1.0/powershell-6.1.0-osx-x64.tar.gz
 
 # Create the target folder where powershell will be placed
-sudo mkdir -p /usr/local/microsoft/powershell/6.0.2
+sudo mkdir -p /usr/local/microsoft/powershell/6.1.0
 
 # Expand powershell to the target folder
-sudo tar zxf /tmp/powershell.tar.gz -C /usr/local/microsoft/powershell/6.0.2
+sudo tar zxf /tmp/powershell.tar.gz -C /usr/local/microsoft/powershell/6.1.0
 
 # Set execute permissions
-sudo chmod +x /usr/local/microsoft/powershell/6.0.2/pwsh
+sudo chmod +x /usr/local/microsoft/powershell/6.1.0/pwsh
 
 # Create the symbolic link that points to pwsh
-sudo ln -s /usr/local/microsoft/powershell/6.0.2/pwsh /usr/local/bin/pwsh
+sudo ln -s /usr/local/microsoft/powershell/6.1.0/pwsh /usr/local/bin/pwsh
 ```
 
 ## <a name="uninstalling-powershell-core"></a>Desinstalar o PowerShell Core
@@ -159,7 +152,7 @@ Para remover os caminhos de PowerShell adicionais, consulte a [caminhos][] secç
 
 ## <a name="paths"></a>Caminhos
 
-* `$PSHOME` é `/usr/local/microsoft/powershell/6.0.2/`
+* `$PSHOME` é `/usr/local/microsoft/powershell/6.1.0/`
 * Perfis de utilizador serão lido a partir `~/.config/powershell/profile.ps1`
 * Perfis predefinidos serão lido a partir `$PSHOME/profile.ps1`
 * Módulos de utilizador serão lido a partir `~/.local/share/powershell/Modules`
@@ -173,14 +166,13 @@ Para que os perfis de anfitrião específico padrão existe em `Microsoft.PowerS
 PowerShell respeita os [XDG Base diretório especificação] [ xdg-bds] em macOS.
 
 Uma vez que macOS é uma derivação do BSD, o prefixo `/usr/local` é utilizado em vez de `/opt`.
-Por isso, `$PSHOME` é `/usr/local/microsoft/powershell/6.0.2/`, e o symlink é colocado em `/usr/local/bin/pwsh`.
+Por isso, `$PSHOME` é `/usr/local/microsoft/powershell/6.1.0/`, e o symlink é colocado em `/usr/local/bin/pwsh`.
 
 ## <a name="additional-resources"></a>Recursos Adicionais
 
 * [Homebrew Web][brew]
 * [Repositório do Github Homebrew][GitHub]
 * [Homebrew Cask][cask]
-
 
 [brew]: http://brew.sh/
 [GitHub]: https://github.com/Homebrew
