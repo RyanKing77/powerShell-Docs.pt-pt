@@ -2,12 +2,12 @@
 title: Quais são as novidades no PowerShell Core 6.1
 description: Novos recursos e alterações lançadas no PowerShell Core 6.1
 ms.date: 09/13/2018
-ms.openlocfilehash: 27e7e846e9ba6ab34d83a084c2589b67a9d5cba9
-ms.sourcegitcommit: b235c58b34d23317076540631f5cf83f1f309c0d
+ms.openlocfilehash: b95b9dd504ea2a165a4689a3b28d2298644e5e68
+ms.sourcegitcommit: aa41249f153bbc6e11667ade60c878980c15abc6
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 09/13/2018
-ms.locfileid: "45557317"
+ms.lasthandoff: 09/14/2018
+ms.locfileid: "45611527"
 ---
 # <a name="whats-new-in-powershell-core-61"></a>Quais são as novidades no PowerShell Core 6.1
 
@@ -34,6 +34,11 @@ No Windows, a equipe .NET fornecido a [Windows Compatibility Pack para .NET Core
 Adicionámos o Compatibility Pack do Windows para a versão 6.1 do PowerShell Core, para que quaisquer módulos ou scripts que usam essas APIs podem basear nas mesmas estejam disponíveis.
 
 O pacote de compatibilidade do Windows permite que o PowerShell Core usar **mais de 1900 cmdlets que vêm com o Windows 10 de Outubro de 2018 Update e Windows Server 2019**.
+
+## <a name="support-for-application-whitelisting"></a>Suporte para permissões de aplicação
+
+6.1 do PowerShell Core tem paridade com suporte do Windows PowerShell 5.1 [AppLocker](https://docs.microsoft.com/en-us/windows/security/threat-protection/windows-defender-application-control/applocker/applocker-overview) e [Device Guard](https://docs.microsoft.com/en-us/windows/security/threat-protection/device-guard/introduction-to-device-guard-virtualization-based-security-and-windows-defender-application-control) permissões de aplicação.
+Permissões de aplicação permite que um controle granular do que binários têm permissão para ser executado utilizado com o PowerShell [modo de idioma restrita](https://blogs.msdn.microsoft.com/powershell/2017/11/02/powershell-constrained-language-mode/).
 
 ## <a name="performance-improvements"></a>Melhoramentos de desempenho
 
@@ -153,7 +158,7 @@ Manifest   1.0.0.0    NetworkSwitchManager        Desk      {Disable-NetworkSwit
 Manifest   1.0.0.0    NetworkTransition           Desk      {Add-NetIPHttpsCertBinding, Disable-NetDnsTransi...
 ```
 
-Para obter mais informações sobre este comportamento, confira [PowerShell RFC0025](https://github.com/PowerShell/PowerShell-RFC/blob/master/2-Draft-Accepted/RFC0025-PSCore6-and-Windows-Modules.md).
+Para obter mais informações sobre este comportamento, confira [PowerShell RFC0025](https://github.com/PowerShell/PowerShell-RFC/blob/master/5-Final/RFC0025-PSCore6-and-Windows-Modules.md).
 
 ## <a name="markdown-cmdlets-and-rendering"></a>Cmdlets de markdown e composição
 
