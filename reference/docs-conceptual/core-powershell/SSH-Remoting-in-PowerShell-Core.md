@@ -2,12 +2,12 @@
 title: Comunicação Remota do PowerShell através de SSH
 description: Comunicação remota do PowerShell Core através de SSH
 ms.date: 08/14/2018
-ms.openlocfilehash: 0605e2400ab23a5ca97910621a59a64d19a80bde
-ms.sourcegitcommit: b235c58b34d23317076540631f5cf83f1f309c0d
+ms.openlocfilehash: 451a55a588381cc9bec265895b2bfad6b6f6e73c
+ms.sourcegitcommit: a652b12a0b87cdd0c8eb76381ae015467dd7b8cd
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 09/13/2018
-ms.locfileid: "45557112"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46134285"
 ---
 # <a name="powershell-remoting-over-ssh"></a>Comunicação Remota do PowerShell através de SSH
 
@@ -167,22 +167,6 @@ Para o Linux, instale o SSH (incluindo sshd server) apropriado para sua platafor
    sudo launchctl stop com.openssh.sshd
    sudo launchctl start com.openssh.sshd
    ```
-
-## <a name="authentication"></a>Autenticação
-
-Comunicação remota do PowerShell através de SSH conta com a troca de autenticação entre o cliente SSH e o serviço SSH e não implementa qualquer esquemas de autenticação em si.
-Isso significa que quaisquer esquemas de autenticação configurado, incluindo multi-factor authentication é manipulado por SSH e independente do PowerShell.
-Por exemplo, pode configurar o serviço SSH para exigir autenticação de chave pública, bem como uma palavra-passe Monouso para maior segurança.
-Configuração da autenticação multifator está fora do escopo desta documentação.
-Consulte a documentação para SSH sobre como configurar a autenticação multifator e validá-la funciona fora do PowerShell antes de tentar usá-lo com o PowerShell remoting corretamente.
-
-## <a name="authentication"></a>Autenticação
-
-Comunicação remota do PowerShell através de SSH conta com a troca de autenticação entre o cliente SSH e o serviço SSH e não implementa qualquer esquemas de autenticação em si.
-Isso significa que quaisquer esquemas de autenticação configurado, incluindo multi-factor authentication é manipulado por SSH e independente do PowerShell.
-Por exemplo, pode configurar o serviço SSH para exigir autenticação de chave pública, bem como uma palavra-passe Monouso para maior segurança.
-Configuração da autenticação multifator está fora do escopo desta documentação.
-Consulte a documentação para SSH sobre como configurar a autenticação multifator e validá-la funciona fora do PowerShell antes de tentar usá-lo com o PowerShell remoting corretamente.
 
 ## <a name="authentication"></a>Autenticação
 

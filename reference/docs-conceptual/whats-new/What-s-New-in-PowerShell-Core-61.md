@@ -2,12 +2,12 @@
 title: Quais são as novidades no PowerShell Core 6.1
 description: Novos recursos e alterações lançadas no PowerShell Core 6.1
 ms.date: 09/13/2018
-ms.openlocfilehash: b95b9dd504ea2a165a4689a3b28d2298644e5e68
-ms.sourcegitcommit: aa41249f153bbc6e11667ade60c878980c15abc6
+ms.openlocfilehash: 5e2fe3c819ed638b2c14d7d40e08b7c32953147f
+ms.sourcegitcommit: 59e568ac9fa8ba28e2c96932b7c84d4a855fed2f
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 09/14/2018
-ms.locfileid: "45611527"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46289230"
 ---
 # <a name="whats-new-in-powershell-core-61"></a>Quais são as novidades no PowerShell Core 6.1
 
@@ -91,9 +91,9 @@ Measure-Command {Get-Content .\foo.json | ConvertFrom-Json}
 | Tempo (seg)   | 0.259                  | 0.577               | 0.125                  |
 | Aceleração (%) | N/A                    | -122.8%             | 78.3% de (51.7% de WPS) |
 
-## <a name="check-system32-for-compatible-inbox-modules-on-windows"></a>Verificar `system32` para módulos de caixa de entrada compatível no Windows
+## <a name="check-system32-for-compatible-in-box-modules-on-windows"></a>Verificar `system32` para compatíveis módulos de incluído no Windows
 
-Na atualização do Windows 10 1809 e Windows Server 2019, atualizámos um número de módulos do PowerShell de caixa de entrada para marcá-los como compatível com o PowerShell Core.
+Na atualização do Windows 10 1809 e Windows Server 2019, atualizámos um número de módulos do PowerShell incluído para marcá-los como compatível com o PowerShell Core.
 
 Quando o PowerShell Core 6.1 é iniciado, ele incluirá automaticamente `$windir\System32` como parte do `PSModulePath` variável de ambiente.
 No entanto, ele expõe apenas dos módulos `Get-Module` e `Import-Module` se sua `CompatiblePSEdition` está marcado como compatível com o `Core`.
@@ -143,7 +143,7 @@ Get-Module Net* -ListAvailable -SkipEditionCheck
 ModuleType Version    Name                        PSEdition ExportedCommands
 ---------- -------    ----                        --------- ----------------
 Manifest   2.0.0.0    NetAdapter                  Core,Desk {Disable-NetAdapter, Disable-NetAdapterBinding, ...
-Manifest   1.0.0.0    NetConnection               Desk      {Get-NetConnectionProfile, Set-NetConnectionProf...
+Manifest   1.0.0.0    NetConnection               Core,Desk {Get-NetConnectionProfile, Set-NetConnectionProf...
 Manifest   1.0.0.0    NetDiagnostics              Desk      Get-NetView
 Manifest   1.0.0.0    NetEventPacketCapture       Core,Desk {New-NetEventSession, Remove-NetEventSession, Ge...
 Manifest   2.0.0.0    NetLbfo                     Core,Desk {Add-NetLbfoTeamMember, Add-NetLbfoTeamNic, Get-...
@@ -151,11 +151,11 @@ Manifest   1.0.0.0    NetNat                      Core,Desk {Get-NetNat, Get-Net
 Manifest   2.0.0.0    NetQos                      Core,Desk {Get-NetQosPolicy, Set-NetQosPolicy, Remove-NetQ...
 Manifest   2.0.0.0    NetSecurity                 Core,Desk {Get-DAPolicyChange, New-NetIPsecAuthProposal, N...
 Manifest   1.0.0.0    NetSwitchTeam               Core,Desk {New-NetSwitchTeam, Remove-NetSwitchTeam, Get-Ne...
-Manifest   1.0.0.0    NetTCPIP                    Desk      {Get-NetIPAddress, Get-NetIPInterface, Get-NetIP...
+Manifest   1.0.0.0    NetTCPIP                    Core,Desk {Get-NetIPAddress, Get-NetIPInterface, Get-NetIP...
 Manifest   1.0.0.0    NetWNV                      Core,Desk {Get-NetVirtualizationProviderAddress, Get-NetVi...
-Manifest   1.0.0.0    NetworkConnectivityStatus   Desk      {Get-DAConnectionStatus, Get-NCSIPolicyConfigura...
-Manifest   1.0.0.0    NetworkSwitchManager        Desk      {Disable-NetworkSwitchEthernetPort, Enable-Netwo...
-Manifest   1.0.0.0    NetworkTransition           Desk      {Add-NetIPHttpsCertBinding, Disable-NetDnsTransi...
+Manifest   1.0.0.0    NetworkConnectivityStatus   Core,Desk {Get-DAConnectionStatus, Get-NCSIPolicyConfigura...
+Manifest   1.0.0.0    NetworkSwitchManager        Core,Desk {Disable-NetworkSwitchEthernetPort, Enable-Netwo...
+Manifest   1.0.0.0    NetworkTransition           Core,Desk {Add-NetIPHttpsCertBinding, Disable-NetDnsTransi...
 ```
 
 Para obter mais informações sobre este comportamento, confira [PowerShell RFC0025](https://github.com/PowerShell/PowerShell-RFC/blob/master/5-Final/RFC0025-PSCore6-and-Windows-Modules.md).
@@ -186,7 +186,7 @@ Pode saber mais sobre esta funcionalidade no [PowerShell RFC0029](https://github
 
 ## <a name="web-cmdlet-improvements"></a>Melhorias de cmdlet da Web
 
-Graças a @markekraus, uma grande quantidade de melhorias foram feitas aos nossos cmdlets web: [`Invoke-WebRequest`](/powershell/module/microsoft.powershell.utility/invoke-webrequest)
+Graças à [ @markekraus ](https://github.com/markekraus), uma grande quantidade de melhorias foram feitas aos nossos cmdlets web: [`Invoke-WebRequest`](/powershell/module/microsoft.powershell.utility/invoke-webrequest)
 e [ `Invoke-RestMethod` ](/powershell/module/microsoft.powershell.utility/invoke-restmethod).
 
 - [6109 de n. º de PR](https://github.com/PowerShell/PowerShell/pull/6109) -padrão de codificação definida como UTF-8 para `application-json` respostas
@@ -268,7 +268,7 @@ Com a adição do SSH como um protocolo de comunicação remota do PowerShell, a
 
 ## <a name="msi-option-to-add-explorer-shell-context-menu-on-windows"></a>Opção de MSI para adicionar o menu de contexto de shell do explorer no Windows
 
-Graças a @bergmeister, agora pode ativar um menu de contexto no Windows. Agora pode abrir a instalação de todo o sistema do PowerShell 6.1 de qualquer pasta no Explorador do Windows:
+Graças à [ @bergmeister ](https://github.com/bergmeister), agora pode ativar um menu de contexto no Windows. Agora pode abrir a instalação de todo o sistema do PowerShell 6.1 de qualquer pasta no Explorador do Windows:
 
 ![Menu de contexto do shell do PowerShell 6](./images/shell_context_menu.png)
 
@@ -276,7 +276,7 @@ Graças a @bergmeister, agora pode ativar um menu de contexto no Windows. Agora 
 
 ### <a name="run-as-administrator-in-the-windows-shortcut-jump-list"></a>"Executar como administrador" da lista de atalhos de atalho do Windows
 
-Graças a @bergmeister, lista de atalhos no atalho PowerShell Core inclui agora "Executar como administrador":
+Graças à [ @bergmeister ](https://github.com/bergmeister), lista de atalhos no atalho PowerShell Core inclui agora "Executar como administrador":
 
 ![Executar como administrador na lista de atalhos do PowerShell 6](./images/jumplist.png)
 
@@ -296,11 +296,11 @@ PS /usr/bin> cd -
 PS /etc>
 ```
 
-Além disso, `cd --` é alterado para `$HOME`.
+Além disso, `cd` e `cd --` alterar para `$HOME`.
 
 ### `Test-Connection`
 
-Graças à @iSazonov, o [ `Test-Connection` ](/powershell/module/microsoft.powershell.management/test-connection) cmdlet tem sido transportado para o PowerShell Core.
+Graças à [ @iSazonov ](https://github.com/iSazonov), o [ `Test-Connection` ](/powershell/module/microsoft.powershell.management/test-connection) cmdlet tem sido transportado para o PowerShell Core.
 
 ### <a name="update-help-as-non-admin"></a>`Update-Help` como não-administrador
 
@@ -309,7 +309,7 @@ Por demanda popular, `Update-Help` já não precisa ser executado como administr
 
 ### <a name="new-methodsproperties-on-pscustomobject"></a>Novos métodos/as propriedades no `PSCustomObject`
 
-Graças à @iSazonov, adicionamos novos métodos e propriedades para `PSCustomObject`.
+Graças à [ @iSazonov ](https://github.com/iSazonov), adicionamos novos métodos e propriedades para `PSCustomObject`.
 `PSCustomObject` inclui agora uma `Count` / `Length` propriedade que indica o número de itens.
 
 Ambos estes exemplos retornam `2` como o número de `PSCustomObjects` na coleção.
@@ -368,7 +368,7 @@ Considerando nossa mudança para BOM sem UTF-8 no PowerShell 6.0, atualizámos o
 
 ### <a name="conversions-from-psmethod-to-delegate"></a>Conversões de PSMethod ao delegado
 
-Graças à @powercode, suportamos agora a conversão de um `PSMethod` num delegado.
+Graças à [ @powercode ](https://github.com/powercode), agora, suportamos a conversão de um `PSMethod` num delegado.
 Isso permite que faça coisas como passagem `PSMethod` `[M]::DoubleStrLen` como um valor de delegado em `[M]::AggregateString`:
 
 ```powershell
@@ -391,7 +391,7 @@ Para obter mais informações sobre esta alteração, confira [PR #5287](https:/
 
 ### <a name="standard-deviation-in-measure-object"></a>Desvio padrão no `Measure-Object`
 
-Graças à @CloudyDino, adicionamos uma `StandardDeviation` propriedade `Measure-Object`:
+Graças à [ @CloudyDino ](https://github.com/CloudyDino), adicionamos uma `StandardDeviation` propriedade `Measure-Object`:
 
 ```powershell
 Get-Process | Measure-Object -Property CPU -AllStats
@@ -409,7 +409,7 @@ Property          : CPU
 
 ### `GetPfxCertificate -Password`
 
-Graças à @maybe-hello-world, `Get-PfxCertificate` tem agora o `Password` parâmetro, que assume um `SecureString`. Isto permite-lhe utilizá-lo de forma não interativa:
+Graças à [ @maybe-hello-world ](https://github.com/maybe-hello-world), `Get-PfxCertificate` tem agora o `Password` parâmetro, que assume um `SecureString`. Isto permite-lhe utilizá-lo de forma não interativa:
 
 ```powershell
 $certFile = '\\server\share\pwd-protected.pfx'
@@ -429,7 +429,7 @@ Também o `help` função alterado para utilizar `more.com` no Windows ou pager 
 
 Anteriormente, utilizando `Set-Location` ou `cd` para regressar a uma PSDrive enviada aos utilizadores para a localização predefinida para essa unidade.
 
-Graças a @mcbobke, os usuários agora são enviados para o último conhecido atual diretório de trabalho da sessão.
+Graças à [ @mcbobke ](https://github.com/mcbobke), os usuários agora são enviados para o último conhecido atual diretório de trabalho da sessão.
 
 ### <a name="windows-powershell-type-accelerators"></a>Aceleradores de tipo do Windows PowerShell
 
@@ -451,11 +451,10 @@ Por exemplo, pode consultar ao utilizar o LDAP:
 [adsi]'LDAP://CN=FooUse,OU=People,DC=contoso,DC=com'
 ```
 
-Ambos estes exemplos criam um objeto de Win32_OperatingSystem CIM:
+Exemplo seguinte cria um objeto de Win32_OperatingSystem CIM:
 
 ```powershell
-[wmi]"win32_operatingsystem=@"
-[wmiclass]"win32_operatingsystem"
+[wmi]"Win32_OperatingSystem=@"
 ```
 
 ```Output
@@ -467,9 +466,23 @@ SerialNumber    : 12345-67890-ABCDE-F0123
 Version         : 10.0.18234
 ```
 
+Este exemplo retorna um objeto de ManagementClass para a classe Win32_OperatingSystem.
+
+```powershell
+[wmiclass]"Win32_OperatingSystem"
+```
+
+```Output
+   NameSpace: ROOT\cimv2
+
+Name                                Methods              Properties
+----                                -------              ----------
+Win32_OperatingSystem               {Reboot, Shutdown... {BootDevice, BuildNumber, BuildType, Caption...}
+```
+
 ### <a name="-lp-alias-for-all--literalpath-parameters"></a>`-lp` alias de todos os `-LiteralPath` parâmetros
 
-Graças à @kvprasoon, agora temos um alias de parâmetro `-lp` todos os os incorporada cmdlets do PowerShell que tenham um `-LiteralPath` parâmetro.
+Graças à [ @kvprasoon ](https://github.com/kvprasoon), agora temos um alias de parâmetro `-lp` todos os incorporada cmdlets do PowerShell que tenham um `-LiteralPath` parâmetro.
 
 ## <a name="breaking-changes"></a>Alterações recentes
 
