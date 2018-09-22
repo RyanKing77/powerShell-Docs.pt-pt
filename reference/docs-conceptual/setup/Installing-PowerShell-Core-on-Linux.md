@@ -2,12 +2,12 @@
 title: Instalar o PowerShell Core no Linux
 description: Informações sobre como instalar o PowerShell Core em várias distribuições do Linux
 ms.date: 08/06/2018
-ms.openlocfilehash: 9abe7d9afda42478159b55f90f4de654f215682d
-ms.sourcegitcommit: b235c58b34d23317076540631f5cf83f1f309c0d
+ms.openlocfilehash: acd88f686ce6a657c9ccda9d2615d4ab355ddcbe
+ms.sourcegitcommit: 601609575a3214ea7086a3bcb586ae0d1df3d418
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 09/13/2018
-ms.locfileid: "45557219"
+ms.lasthandoff: 09/21/2018
+ms.locfileid: "46532957"
 ---
 # <a name="installing-powershell-core-on-linux"></a>Instalar o PowerShell Core no Linux
 
@@ -166,10 +166,10 @@ sudo dpkg -i packages-microsoft-prod.deb
 sudo apt-get update
 
 # Install PowerShell
-sudo apt-get install -y powershell-preview
+sudo apt-get install -y powershell
 
 # Start PowerShell
-pwsh-preview
+pwsh
 ```
 
 Depois de registar o repositório da Microsoft uma vez como Superutilizador, de ora em diante, apenas tem de utilizar `sudo apt-get upgrade powershell` atualizá-la.
