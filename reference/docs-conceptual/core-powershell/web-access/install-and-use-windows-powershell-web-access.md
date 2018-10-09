@@ -2,12 +2,12 @@
 ms.date: 08/23/2017
 keywords: PowerShell, o cmdlet
 title: instalar e utilizar o acesso web windows powershell
-ms.openlocfilehash: 8fa965ff30cd9e0b688bcc46d01d843a0f1c2e0b
-ms.sourcegitcommit: c3f1a83b59484651119630f3089aa51b6e7d4c3c
+ms.openlocfilehash: d718d9b286a8a2189f44f10983cdc0061e41d4b9
+ms.sourcegitcommit: 6749f67c32e05999e10deb9d45f90f45ac21a599
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 07/26/2018
-ms.locfileid: "39268420"
+ms.lasthandoff: 10/08/2018
+ms.locfileid: "48851329"
 ---
 # <a name="install-and-use-windows-powershell-web-access"></a>Instalar e Utilizar o Acesso Web Windows PowerShell
 
@@ -327,7 +327,7 @@ As instruções nesta secção destinam-se instalar a aplicação web do Windows
 
    Altere a porta predefinida se outro Web site já estiver a utilizar a 443 ou se tiver outros motivos de segurança para alterar o número de porta. Se outro Web site que está a executar no seu servidor de gateway estiver a utilizar a porta selecionada, um aviso é apresentado quando clica **OK** no **adicionar Web site** caixa de diálogo. Tem de utilizar uma porta não utilizada para executar o Windows PowerShell Web Access.
 
-1. Opcionalmente, se for necessário para a sua organização, especifique um nome de anfitrião que faça sentido para sua organização e utilizadores, tal como **www.contoso.com**. Clique em **OK**.
+1. Opcionalmente, se for necessário para a sua organização, especifique um nome de anfitrião que faça sentido para sua organização e utilizadores, tal como **`www.contoso.com`**. Clique em **OK**.
 
 1. Para um ambiente de produção mais seguro, recomendamos vivamente que forneça um certificado válido assinado por uma AC. Tem de fornecer um certificado SSL, uma vez que os utilizadores só podem ligar para o Windows PowerShell Web Access por meio de um Web site HTTPS. Ver [para configurar um certificado SSL no Gestor de IIS](#to-configure-an-ssl-certificate-in-iis-Manager) neste tópico para obter mais informações sobre como obter um certificado.
 
@@ -406,7 +406,7 @@ Num ambiente de produção seguro, utilize sempre um certificado SSL válido ass
    - Clique em **importar** para importar um certificado válido existente a partir de uma localização na sua rede.
    - Clique em **criar pedido de certificado** para pedir um certificado a partir de uma AC, tal como [VeriSign](http://www.verisign.com/), [Thawte](https://www.thawte.com/), ou [GeoTrust](https://www.geotrust.com/). O nome comum do certificado tem de corresponder ao cabeçalho do anfitrião no pedido.
 
-     Por exemplo, se o browser cliente pedir http://www.contoso.com/, em seguida, o nome comum também tem de ser http://www.contoso.com/. Esta é a opção mais segura e recomendada para fornecer o gateway do Windows PowerShell Web Access com um certificado.
+     Por exemplo, se o browser cliente pedir `http://www.contoso.com/`, em seguida, o nome comum também tem de ser `http://www.contoso.com/`. Esta é a opção mais segura e recomendada para fornecer o gateway do Windows PowerShell Web Access com um certificado.
 
    - Clique em **criar um certificado autoassinado** para criar um certificado que pode utilizar imediatamente e ser assinado mais tarde por uma AC se assim o desejar. Especifique um nome amigável para o certificado autoassinado, tal como **Windows PowerShell Web Access**. Esta opção não é considerada segura e é recomendada apenas para um ambiente de teste privado.
 

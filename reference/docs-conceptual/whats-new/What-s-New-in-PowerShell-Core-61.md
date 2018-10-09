@@ -2,12 +2,12 @@
 title: Quais são as novidades no PowerShell Core 6.1
 description: Novos recursos e alterações lançadas no PowerShell Core 6.1
 ms.date: 09/13/2018
-ms.openlocfilehash: 5e2fe3c819ed638b2c14d7d40e08b7c32953147f
-ms.sourcegitcommit: 59e568ac9fa8ba28e2c96932b7c84d4a855fed2f
+ms.openlocfilehash: 4e39780a0ff446993005bba6284741f3b4b02549
+ms.sourcegitcommit: 6749f67c32e05999e10deb9d45f90f45ac21a599
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46289230"
+ms.lasthandoff: 10/08/2018
+ms.locfileid: "48851312"
 ---
 # <a name="whats-new-in-powershell-core-61"></a>Quais são as novidades no PowerShell Core 6.1
 
@@ -197,11 +197,11 @@ e [ `Invoke-RestMethod` ](/powershell/module/microsoft.powershell.utility/invoke
 
 ## <a name="remoting-improvements"></a>Melhorias de comunicação remota
 
-### <a name="powershell-direct-tries-to-use-powershell-core-first"></a>PowerShell Direct tenta utilizar o PowerShell Core primeiro
+### <a name="powershell-direct-for-containers-tries-to-use-powershell-core-first"></a>PowerShell Direct para contentores tenta utilizar o PowerShell Core primeiro
 
-[PowerShell Direct](/virtualization/hyper-v-on-windows/user-guide/powershell-direct) é uma funcionalidade do PowerShell e o Hyper-V que permite-lhe ligar a uma VM de Hyper-V sem conectividade de rede ou outros serviços de gestão remota.
+[PowerShell Direct](/virtualization/hyper-v-on-windows/user-guide/powershell-direct) é uma funcionalidade do PowerShell e o Hyper-V que permite-lhe ligar a uma VM de Hyper-V ou o contentor sem conectividade de rede ou outros serviços de gestão remota.
 
-No passado, o PowerShell Direct ligados utilizando a instância do Windows PowerShell de caixa de entrada na VM.
+No passado, o PowerShell Direct ligados utilizando a instância do Windows PowerShell de caixa de entrada no contentor.
 Agora, PowerShell Direct primeiro tenta se conectar usando qualquer disponíveis `pwsh.exe` sobre o `PATH` variável de ambiente.
 Se `pwsh.exe` não estiver disponível, PowerShell Direct retrocede para utilizar `powershell.exe`.
 
@@ -310,45 +310,44 @@ Por demanda popular, `Update-Help` já não precisa ser executado como administr
 ### <a name="new-methodsproperties-on-pscustomobject"></a>Novos métodos/as propriedades no `PSCustomObject`
 
 Graças à [ @iSazonov ](https://github.com/iSazonov), adicionamos novos métodos e propriedades para `PSCustomObject`.
-`PSCustomObject` inclui agora uma `Count` / `Length` propriedade que indica o número de itens.
-
-Ambos estes exemplos retornam `2` como o número de `PSCustomObjects` na coleção.
+`PSCustomObject` inclui agora uma `Count` / `Length` propriedade como outros objetos.
 
 ```powershell
-@(
-[pscustomobject]@{foo = '1'},
-[pscustomobject]@{bar = '2' }).Length
+$PSCustomObject = [pscustomobject]@{foo = 1}
+
+$PSCustomObject.Length
+```
+
+```Output
+1
 ```
 
 ```powershell
-@(
-[pscustomobject]@{foo = '1'},
-[pscustomobject]@{bar = '2' }).Count
+$PSCustomObject.Count
+```
+
+```Output
+1
 ```
 
 Este trabalho também inclui `ForEach` e `Where` métodos que permitem operar e filtrar `PSCustomObject` itens:
 
 ```powershell
-@(
->> [pscustomobject]@{foo = 1},
->> [pscustomobject]@{foo = 2 }).ForEach({$_.foo+1})
+$PSCustomObject.ForEach({$_.foo + 1})
 ```
 
 ```Output
 2
-3
 ```
 
 ```powershell
-@(
->> [pscustomobject]@{foo = 1},
->> [pscustomobject]@{foo = 2 }).Where({$_.foo -gt 1})
+$PSCustomObject.Where({$_.foo -gt 0})
 ```
 
 ```Output
 foo
 ---
-  2
+  1
 ```
 
 ### `Where-Object -Not`
@@ -507,7 +506,7 @@ Para sair desta telemetria, defina a variável de ambiente `POWERSHELL_TELEMETRY
 
 Para impedir a utilização de tráfego não criptografado, a comunicação remota do PowerShell em plataformas Unix agora requer a utilização de NTLM/negociar ou HTTPS.
 
-Para obter mais informações sobre estas alterações, confira [PR #6799](https://github.com/PowerShell/PowerShell/pull/6799).
+Para obter mais informações sobre estas alterações, confira [problema #6779](https://github.com/PowerShell/PowerShell/issues/6779).
 
 ### <a name="removed-visualbasic-as-a-supported-language-in-add-type"></a>Removido `VisualBasic` como um idioma suportado no Add-Type
 
