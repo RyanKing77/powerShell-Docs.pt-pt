@@ -149,6 +149,8 @@ items:
   - name: Novidades
     href: ''
     items:
+    - name: Novidades no PowerShell Core 6.1
+      href: whats-new/what-s-new-in-powershell-core-61.md
     - name: Novidades no PowerShell Core 6.0
       href: whats-new/what-s-new-in-powershell-core-60.md
       items:
@@ -165,7 +167,7 @@ items:
         href: whats-new/what-s-new-in-the-powershell-50-ise.md
   - name: Ciclo de vida do suporte do PowerShell Core
     href: PowerShell-Core-Support.md
-  - name: Mais informações
+  - name: Saiba mais
     href: ''
     items:
     - name: Mais formação sobre o PowerShell
@@ -239,9 +241,9 @@ items:
     href: getting-started/cookbooks/appendix-1---compatibility-aliases.md
   - name: Apêndice 2 – Criar um atalho personalizado para o PowerShell
     href: getting-started/cookbooks/appendix-2---creating-a-custom-powershell-shortcut.md
-ms.openlocfilehash: a3f5f4ba7de337ed1f2f2653625c355f68cfde2b
-ms.sourcegitcommit: 59727f71dc204785a1bcdedc02716d8340a77aeb
+ms.openlocfilehash: 426f1336debdcd8b74b9e1954cebe49bfa7c82ea
+ms.sourcegitcommit: b235c58b34d23317076540631f5cf83f1f309c0d
 ms.translationtype: HT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 08/28/2018
-ms.locfileid: "43133211"
+ms.lasthandoff: 09/13/2018
+ms.locfileid: "45557148"
