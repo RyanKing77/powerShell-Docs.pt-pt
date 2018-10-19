@@ -2,12 +2,12 @@
 ms.date: 05/17/2018
 keywords: PowerShell, core
 title: Problemas conhecidos para o PowerShell 6.0
-ms.openlocfilehash: e3e718be903ff2223064d5790d3d0fe554ef04cd
-ms.sourcegitcommit: c3f1a83b59484651119630f3089aa51b6e7d4c3c
+ms.openlocfilehash: ce40a1925e564fbd2c661e70ec36d3842d915dfe
+ms.sourcegitcommit: 47becf2823ece251a7264db2387bb503cf3abaa9
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 07/26/2018
-ms.locfileid: "39268007"
+ms.lasthandoff: 10/19/2018
+ms.locfileid: "49451001"
 ---
 # <a name="known-issues-for-powershell-60"></a>Problemas conhecidos para o PowerShell 6.0
 
@@ -90,9 +90,9 @@ A capacidade de criar pontos finais de comunicação remota (JEA) de administra�
 
 ### <a name="sudo-exec-and-powershell"></a>`sudo`, `exec`e o PowerShell
 
-Porque o PowerShell executa a maioria dos comandos na memória (como Python ou Ruby), não é possível utilizar o sudo diretamente com o PowerShell built-ins. (Pode, obviamente, executar `powershell` de sudo.) Se for necessário executar um cmdlet do PowerShell a partir do PowerShell com sudo, por exemplo, `sudo `Set-data` 8/18/2016`, em seguida, faria `sudo powershell `conjunto-data` 8/18/2016`. Da mesma forma, não é possível exec PowerShell incorporado diretamente. Em vez disso, teria que fazer `exec powershell item_to_exec`.
+Porque o PowerShell executa a maioria dos comandos na memória (como Python ou Ruby), não é possível utilizar o sudo diretamente com o PowerShell built-ins. (Pode, obviamente, executar `pwsh` de sudo.) Se for necessário executar um cmdlet do PowerShell a partir do PowerShell com sudo, por exemplo, `sudo Set-Date 8/18/2016`, em seguida, faria `sudo pwsh Set-Date 8/18/2016`. Da mesma forma, não é possível exec PowerShell incorporado diretamente. Em vez disso, teria que fazer `exec pwsh item_to_exec`.
 
-Este problema está atualmente a ser controlado como parte da #3232.
+Este problema está atualmente a ser controlado como parte da [#3232](https://github.com/PowerShell/PowerShell/issues/3232).
 
 ### <a name="missing-cmdlets"></a>Cmdlets em falta
 
