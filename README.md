@@ -1,36 +1,38 @@
-## Microsoft Open Source Code of Conduct
+# <a name="microsoft-open-source-code-of-conduct"></a><span data-ttu-id="95a8a-101">Código de Conduta Aberto da Microsoft</span><span class="sxs-lookup"><span data-stu-id="95a8a-101">Microsoft Open Source Code of Conduct</span></span>
 
-This project has adopted the [Microsoft Open Source Code of Conduct](https://opensource.microsoft.com/codeofconduct/).
-For more information see the [Code of Conduct FAQ](https://opensource.microsoft.com/codeofconduct/faq/) or contact [opencode@microsoft.com](mailto:opencode@microsoft.com) with any additional questions or comments.
+<span data-ttu-id="95a8a-102">Este projeto adotou o [Código de Conduta Open Source da Microsoft](https://opensource.microsoft.com/codeofconduct/).</span><span class="sxs-lookup"><span data-stu-id="95a8a-102">This project has adopted the [Microsoft Open Source Code of Conduct](https://opensource.microsoft.com/codeofconduct/).</span></span>
+<span data-ttu-id="95a8a-103">Para obter mais informações, veja a [FAQ do Código de Conduta](https://opensource.microsoft.com/codeofconduct/faq/) ou contacte [opencode@microsoft.com](mailto:opencode@microsoft.com) se tiver dúvidas ou comentários adicionais.</span><span class="sxs-lookup"><span data-stu-id="95a8a-103">For more information see the [Code of Conduct FAQ](https://opensource.microsoft.com/codeofconduct/faq/) or contact [opencode@microsoft.com](mailto:opencode@microsoft.com) with any additional questions or comments.</span></span>
 
-[![Build status](https://ci.appveyor.com/api/projects/status/onshefxnc4g4pv87/branch/staging?svg=true)](https://ci.appveyor.com/project/PowerShell/powershell-docs/branch/staging)
+<span data-ttu-id="95a8a-104">[![Status da compilação](https://ci.appveyor.com/api/projects/status/onshefxnc4g4pv87/branch/staging?svg=true)](https://ci.appveyor.com/project/PowerShell/powershell-docs/branch/staging)</span><span class="sxs-lookup"><span data-stu-id="95a8a-104">[![Build status](https://ci.appveyor.com/api/projects/status/onshefxnc4g4pv87/branch/staging?svg=true)](https://ci.appveyor.com/project/PowerShell/powershell-docs/branch/staging)</span></span>
 
-# PowerShell Documentation
+## <a name="powershell-documentation"></a><span data-ttu-id="95a8a-105">Documentação do PowerShell</span><span class="sxs-lookup"><span data-stu-id="95a8a-105">PowerShell Documentation</span></span>
 
-Welcome to the PowerShell-Docs repository, housing the official Windows PowerShell documentation. 
+<span data-ttu-id="95a8a-106">Bem-vindo ao repositório de documentos do PowerShell, que hospeda a documentação oficial do PowerShell.</span><span class="sxs-lookup"><span data-stu-id="95a8a-106">Welcome to the PowerShell-Docs repository, housing the official PowerShell documentation.</span></span>
 
-## Repository Structure
-Each folder in this repo publishes to [MSDN](https://msdn.microsoft.com/en-us/powershell). The folders correspond to the following PowerShell assets:
-* [/dsc/](https://msdn.microsoft.com/en-us/powershell/dsc/) is  for the Desired State Configuration feature
-* [/gallery/](https://msdn.microsoft.com/powershell/gallery) is for the [PowerShell Gallery](https://www.powershellgallery.com/)
-* [/jea/](https://msdn.microsoft.com/powershell/jea/) is for the Just Enough Administration feature
-* [/reference/](https://msdn.microsoft.com/powershell/reference/) is for PowerShell module reference across versions 2.0, 3.0, 4.0, 5.0, 5.1, and 6.0
-  * This content will be retrieved by the `Get-Help` cmdlet in the future
-* [/scripting/](https://msdn.microsoft.com/en-us/powershell/scripting/) is general PowerShell reference content
-* [/wmf](https://msdn.microsoft.com/en-us/powershell/wmf/readme) contains release notes for the Windows Management Framework, the package used to distribute new versions of PowerShell to previous versions of Windows. 
+## <a name="repository-structure"></a><span data-ttu-id="95a8a-107">Estrutura de repositório</span><span class="sxs-lookup"><span data-stu-id="95a8a-107">Repository Structure</span></span>
 
+<span data-ttu-id="95a8a-108">Cada uma das pastas de nível superior seguintes neste repositório contém um conjunto de documentos que é publicado [Microsoft Docs](https://docs.microsoft.com/powershell).</span><span class="sxs-lookup"><span data-stu-id="95a8a-108">Each of the following top-level folders in this repo contain a DocSet that is published to [Microsoft Docs](https://docs.microsoft.com/powershell).</span></span>
 
+- <span data-ttu-id="95a8a-109">[/Developer/](https://docs.microsoft.com/powershell/developer/) é a página inicial do futuro da documentação do SDK do PowerShell</span><span class="sxs-lookup"><span data-stu-id="95a8a-109">[/developer/](https://docs.microsoft.com/powershell/developer/) is the future home of the PowerShell SDK documentation</span></span>
+  - <span data-ttu-id="95a8a-110">Estamos prestes a migrar este conteúdo do MSDN</span><span class="sxs-lookup"><span data-stu-id="95a8a-110">We are in the process of migrating this content from MSDN</span></span>
+- <span data-ttu-id="95a8a-111">[/DSC/](https://docs.microsoft.com/powershell/dsc/) destina-se a funcionalidade de Desired State Configuration</span><span class="sxs-lookup"><span data-stu-id="95a8a-111">[/dsc/](https://docs.microsoft.com/powershell/dsc/) is for the Desired State Configuration feature</span></span>
+- <span data-ttu-id="95a8a-112">[/Gallery/](https://docs.microsoft.com/powershell/gallery) destina-se a [galeria do PowerShell](https://www.powershellgallery.com/)</span><span class="sxs-lookup"><span data-stu-id="95a8a-112">[/gallery/](https://docs.microsoft.com/powershell/gallery) is for the [PowerShell Gallery](https://www.powershellgallery.com/)</span></span>
+- <span data-ttu-id="95a8a-113">[/jea/](https://docs.microsoft.com/powershell/jea/) destina-se a funcionalidade de administração apenas suficiente</span><span class="sxs-lookup"><span data-stu-id="95a8a-113">[/jea/](https://docs.microsoft.com/powershell/jea/) is for the Just Enough Administration feature</span></span>
+- <span data-ttu-id="95a8a-114">[/Reference/](https://docs.microsoft.com/powershell/scripting/) é para tópicos conceituais do PowerShell e referência de módulo em todas as versões 3.0, 4.0, 5.0, 5.1 e 6.0</span><span class="sxs-lookup"><span data-stu-id="95a8a-114">[/reference/](https://docs.microsoft.com/powershell/scripting/) is for PowerShell conceptual topics and module reference across versions 3.0, 4.0, 5.0, 5.1, and 6.0</span></span>
+  - <span data-ttu-id="95a8a-115">Este conteúdo também é a origem de conteúdo de ajuda obtido pelo `Get-Help` cmdlet</span><span class="sxs-lookup"><span data-stu-id="95a8a-115">This content is also the source of help content retrieved by the `Get-Help` cmdlet</span></span>
+- <span data-ttu-id="95a8a-116">[/WMF](https://docs.microsoft.com/powershell/wmf/readme) contém notas de versão para o Windows Management Framework, o pacote utilizado para distribuir as novas versões do PowerShell para versões anteriores do Windows.</span><span class="sxs-lookup"><span data-stu-id="95a8a-116">[/wmf](https://docs.microsoft.com/powershell/wmf/readme) contains release notes for the Windows Management Framework, the package used to distribute new versions of PowerShell to previous versions of Windows.</span></span>
 
-## Contributing
+## <a name="contributing"></a><span data-ttu-id="95a8a-117">Contribuir</span><span class="sxs-lookup"><span data-stu-id="95a8a-117">Contributing</span></span>
 
-We actively merge contributions into this repository via [pull request](https://help.github.com/articles/using-pull-requests/) into the *staging* branch. 
-Please note that before you submit a pull request you must [sign a Contribution License Agreement](https://cla.microsoft.com/) to ensure that the community is free to use your submissions.
-For more information on contributing, read our [contributions guide](CONTRIBUTING.md).
-There is a draft [style guide](./STYLE.md) to review before making contributions.
-Please use the Issue and Pull Request templates to help keep documentation consistent across versions. 
+<span data-ttu-id="95a8a-118">Unirmos ativamente contribuições para este repositório através de [pedido pull](https://help.github.com/articles/using-pull-requests/) para o *teste* ramo.</span><span class="sxs-lookup"><span data-stu-id="95a8a-118">We actively merge contributions into this repository via [pull request](https://help.github.com/articles/using-pull-requests/) into the *staging* branch.</span></span>
+<span data-ttu-id="95a8a-119">Tenha em atenção que antes de submeter um pedido pull tem [assinar um contrato de licença de contribuição](https://cla.microsoft.com/) para garantir que a Comunidade é livre para usar seus envios.</span><span class="sxs-lookup"><span data-stu-id="95a8a-119">Please note that before you submit a pull request you must [sign a Contribution License Agreement](https://cla.microsoft.com/) to ensure that the community is free to use your submissions.</span></span>
 
-## Licenses
+<span data-ttu-id="95a8a-120">Para obter mais informações sobre a contribuir, leia nossa [Guia do contribuinte](CONTRIBUTING.md).</span><span class="sxs-lookup"><span data-stu-id="95a8a-120">For more information on contributing, read our [contributor's guide](CONTRIBUTING.md).</span></span>
+<span data-ttu-id="95a8a-121">Guia do contribuinte contém informações detalhadas sobre como contribuir documentação, sugestões de ferramentas e o estilo e requisitos de formatação.</span><span class="sxs-lookup"><span data-stu-id="95a8a-121">The contributor's guide contains detail information about how to contribute documentation, suggested tools, and style and formatting requirements.</span></span>
+<span data-ttu-id="95a8a-122">Utilize os modelos de problema e o pedido de solicitação para ajudar a manter a documentação consistente em todas as versões.</span><span class="sxs-lookup"><span data-stu-id="95a8a-122">Please use the Issue and Pull Request templates to help keep documentation consistent across versions.</span></span>
 
-There are two license files for this project. 
-The MIT License applies to the code contained in this repo.
-The Creative Commons license applies to the documentation. 
+## <a name="licenses"></a><span data-ttu-id="95a8a-123">Licenças</span><span class="sxs-lookup"><span data-stu-id="95a8a-123">Licenses</span></span>
+
+<span data-ttu-id="95a8a-124">Existem dois arquivos de licença para este projeto.</span><span class="sxs-lookup"><span data-stu-id="95a8a-124">There are two license files for this project.</span></span>
+<span data-ttu-id="95a8a-125">A licença do MIT aplica-se para o código contido neste repositório.</span><span class="sxs-lookup"><span data-stu-id="95a8a-125">The MIT License applies to the code contained in this repo.</span></span>
+<span data-ttu-id="95a8a-126">A licença Creative Commons aplica-se para a documentação.</span><span class="sxs-lookup"><span data-stu-id="95a8a-126">The Creative Commons license applies to the documentation.</span></span>
