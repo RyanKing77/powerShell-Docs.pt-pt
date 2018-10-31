@@ -1,21 +1,21 @@
 ---
 ms.date: 06/12/2017
-keywords: DSC, do powershell, a configuração, a configuração
+keywords: DSC, powershell, configuração, a configuração
 title: Escrever a ajuda das configurações do DSC
-ms.openlocfilehash: 316fd69ab1eae66ebe141b2575a05b502fc261ea
-ms.sourcegitcommit: 54534635eedacf531d8d6344019dc16a50b8b441
+ms.openlocfilehash: a4b5e688744b9a4519ce06d920ad8f11efeb99ad
+ms.sourcegitcommit: e76665315fd928bf85210778f1fea2be15264fea
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 05/17/2018
-ms.locfileid: "34222668"
+ms.lasthandoff: 10/30/2018
+ms.locfileid: "50225697"
 ---
-# <a name="writing-help-for-dsc-configurations"></a><span data-ttu-id="538ca-103">Escrever a ajuda das configurações do DSC</span><span class="sxs-lookup"><span data-stu-id="538ca-103">Writing help for DSC configurations</span></span>
+# <a name="writing-help-for-dsc-configurations"></a><span data-ttu-id="f6f93-103">Escrever a ajuda das configurações do DSC</span><span class="sxs-lookup"><span data-stu-id="f6f93-103">Writing help for DSC configurations</span></span>
 
-><span data-ttu-id="538ca-104">Aplica-se a: Windows do Windows PowerShell 5.0</span><span class="sxs-lookup"><span data-stu-id="538ca-104">Applies To: Windows Windows PowerShell 5.0</span></span>
+><span data-ttu-id="f6f93-104">Aplica-se a: O Windows PowerShell 5.0</span><span class="sxs-lookup"><span data-stu-id="f6f93-104">Applies To: Windows PowerShell 5.0</span></span>
 
-<span data-ttu-id="538ca-105">Pode utilizar a ajuda baseada no comentário nas configurações de DSC.</span><span class="sxs-lookup"><span data-stu-id="538ca-105">You can use comment-based help in DSC configurations.</span></span> <span data-ttu-id="538ca-106">Os utilizadores podem aceder a ajuda ao chamar a função de configuração com `-?`, ou utilizando o [Get-Help](https://technet.microsoft.com/library/hh849696.aspx) cmdlet.</span><span class="sxs-lookup"><span data-stu-id="538ca-106">Users can access the help by calling the configuration function with `-?`, or by using the [Get-Help](https://technet.microsoft.com/library/hh849696.aspx) cmdlet.</span></span> <span data-ttu-id="538ca-107">Para obter mais informações sobre a ajuda baseada no comentário do PowerShell, consulte [about_Comment_Based_Help](https://technet.microsoft.com/library/hh847834.aspx).</span><span class="sxs-lookup"><span data-stu-id="538ca-107">For more information about PowerShell comment-based help, see [about_Comment_Based_Help](https://technet.microsoft.com/library/hh847834.aspx).</span></span>
+<span data-ttu-id="f6f93-105">Pode utilizar a ajuda baseada no comentário em configurações de DSC.</span><span class="sxs-lookup"><span data-stu-id="f6f93-105">You can use comment-based help in DSC configurations.</span></span> <span data-ttu-id="f6f93-106">Os usuários podem acessar a ajuda, chamando a função de configuração com `-?`, ou utilizando o [Get-Help](https://technet.microsoft.com/library/hh849696.aspx) cmdlet.</span><span class="sxs-lookup"><span data-stu-id="f6f93-106">Users can access the help by calling the configuration function with `-?`, or by using the [Get-Help](https://technet.microsoft.com/library/hh849696.aspx) cmdlet.</span></span> <span data-ttu-id="f6f93-107">Para obter mais informações sobre a ajuda de baseada no comentário do PowerShell, consulte [about_Comment_Based_Help](https://technet.microsoft.com/library/hh847834.aspx).</span><span class="sxs-lookup"><span data-stu-id="f6f93-107">For more information about PowerShell comment-based help, see [about_Comment_Based_Help](https://technet.microsoft.com/library/hh847834.aspx).</span></span>
 
-<span data-ttu-id="538ca-108">O exemplo seguinte mostra um script que contém uma configuração e baseada no comentário ajuda para o mesmo:</span><span class="sxs-lookup"><span data-stu-id="538ca-108">The following example shows a script that contains a configuration and comment-based help for it:</span></span>
+<span data-ttu-id="f6f93-108">O exemplo seguinte mostra um script que contém uma configuração e a ajuda baseada no comentário para o mesmo:</span><span class="sxs-lookup"><span data-stu-id="f6f93-108">The following example shows a script that contains a configuration and comment-based help for it:</span></span>
 
 ```powershell
 <#
@@ -50,18 +50,18 @@ This example will be labeled "EXAMPLE 2" when help is displayed to the user.
 
 configuration HelpSample1
 {
-    param([string]$ComputerName,[string]$FilePath)
-    File f
-    {
+    param([string]$ComputerName,[string]$FilePath)
+    File f
+    {
         Contents="Hello World"
-        DestinationPath = "c:\Destination.txt"
-    }
+        DestinationPath = "c:\Destination.txt"
+    }
 }
 ```
 
-## <a name="viewing-configuration-help"></a><span data-ttu-id="538ca-109">Ajuda da configuração de visualização</span><span class="sxs-lookup"><span data-stu-id="538ca-109">Viewing configuration help</span></span>
+## <a name="viewing-configuration-help"></a><span data-ttu-id="f6f93-109">Ajuda da configuração de visualização</span><span class="sxs-lookup"><span data-stu-id="f6f93-109">Viewing configuration help</span></span>
 
-<span data-ttu-id="538ca-110">Para ver a ajuda para uma configuração, utilize o **Get-Help** o nome da função cmdlet com o nome da função ou tipo seguido `-?`.</span><span class="sxs-lookup"><span data-stu-id="538ca-110">To view the help for a configuration, use the **Get-Help** cmdlet with the name of the function, or type the name of the function followed by `-?`.</span></span> <span data-ttu-id="538ca-111">Segue-se a saída da função anterior quando passada para **Get-Help**:</span><span class="sxs-lookup"><span data-stu-id="538ca-111">The following is the output of the previous function when passed to **Get-Help**:</span></span>
+<span data-ttu-id="f6f93-110">Para ver a ajuda para uma configuração, utilize o **Get-Help** o nome da função cmdlet com o nome da função ou tipo seguido `-?`.</span><span class="sxs-lookup"><span data-stu-id="f6f93-110">To view the help for a configuration, use the **Get-Help** cmdlet with the name of the function, or type the name of the function followed by `-?`.</span></span> <span data-ttu-id="f6f93-111">Segue-se a saída da função anterior quando transmitidos para **Get-Help**:</span><span class="sxs-lookup"><span data-stu-id="f6f93-111">The following is the output of the previous function when passed to **Get-Help**:</span></span>
 
 ```powershell
 PS C:\> Get-Help HelpSample1
@@ -90,5 +90,5 @@ REMARKS
     For technical information, type: "get-help HelpSample1 -full".
 ```
 
-## <a name="see-also"></a><span data-ttu-id="538ca-112">Consulte Também</span><span class="sxs-lookup"><span data-stu-id="538ca-112">See Also</span></span>
-* [<span data-ttu-id="538ca-113">Configurações de DSC</span><span class="sxs-lookup"><span data-stu-id="538ca-113">DSC Configurations</span></span>](configurations.md)
+## <a name="see-also"></a><span data-ttu-id="f6f93-112">Consulte Também</span><span class="sxs-lookup"><span data-stu-id="f6f93-112">See Also</span></span>
+* [<span data-ttu-id="f6f93-113">Configurações de DSC</span><span class="sxs-lookup"><span data-stu-id="f6f93-113">DSC Configurations</span></span>](configurations.md)
