@@ -3,12 +3,12 @@ ms.date: 08/23/2018
 keywords: PowerShell, o cmdlet
 title: Compreender os pipelines do PowerShell
 ms.assetid: 6be50926-7943-4ef7-9499-4490d72a63fb
-ms.openlocfilehash: 3ee03f001668fb24ff9be1ea6ecb3817e319d0ee
-ms.sourcegitcommit: 59727f71dc204785a1bcdedc02716d8340a77aeb
+ms.openlocfilehash: fc7c7f57bdce458185a0f5bdb8bc1fbbd81d0d61
+ms.sourcegitcommit: 98b7cfd8ad5718efa8e320526ca76c3cc4141d78
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 08/28/2018
-ms.locfileid: "43134203"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50002860"
 ---
 # <a name="understanding-pipelines"></a>Noções básicas sobre pipelines
 
@@ -61,7 +61,7 @@ d-----        8/23/2018   5:07 PM                catroot2
 
 Paginação também reduz a utilização de CPU porque o processamento é transferida para o `Out-Host` cmdlet quando tem uma página concluída, pronta para apresentar. Os cmdlets que como prefixo no pipeline de interromper a execução até que a página seguinte da saída esteja disponível.
 
-Pode ver a diferença de Gestor de tarefas do Windows para monitorizar a CPU e memória usada pelo PowerShell. Execute o seguinte comando: `Get-ChildItem C:\\Windows -Recurse`. Comparar a utilização de CPU e memória para este comando: `Get-ChildItem C:\\Windows -Recurse | Out-Host -Paging`.
+Pode ver a diferença de Gestor de tarefas do Windows para monitorizar a CPU e memória usada pelo PowerShell. Execute o seguinte comando: `Get-ChildItem C:\Windows -Recurse`. Comparar a utilização de CPU e memória para este comando: `Get-ChildItem C:\Windows -Recurse | Out-Host -Paging`.
 
 ## <a name="objects-in-the-pipeline"></a>Objetos no pipeline
 

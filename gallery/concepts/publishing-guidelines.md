@@ -4,29 +4,29 @@ contributor: JKeithB
 keywords: Galeria, o powershell, o cmdlet, o psgallery
 description: Diretrizes para editores
 title: Galeria do PowerShell orientações e melhores práticas de publicação
-ms.openlocfilehash: 2ddeae9fdb33a58f97bfeb66079541bb7c5791b1
-ms.sourcegitcommit: 6749f67c32e05999e10deb9d45f90f45ac21a599
+ms.openlocfilehash: 7e9eca8d3372ddf0b94ab42e125991b857456551
+ms.sourcegitcommit: aa1129cc2b0ae6e18918b2b0ea70c74915ed019b
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 10/08/2018
-ms.locfileid: "48851174"
+ms.lasthandoff: 10/30/2018
+ms.locfileid: "50235410"
 ---
 # <a name="powershellgallery-publishing-guidelines-and-best-practices"></a>PowerShellGallery orientações e melhores práticas de publicação
 
-Este tópico descreve os passos recomendados usados pelas equipes da Microsoft para garantir que os itens publicados na galeria do PowerShell irão ser amplamente adotados e fornecem valor elevado aos utilizadores, com base na forma como o da galeria do PowerShell processa dados manifestos e nos comentários dos números grandes de utilizadores da galeria do PowerShell.
-Itens que são publicados a seguir essas diretrizes serão mais probabilidade de ser instalado, confiável e atrair mais usuários.
+Este tópico descreve os passos recomendados usados pelas equipes da Microsoft para garantir que os pacotes publicados na galeria do PowerShell irão ser amplamente adotados e fornecem valor elevado aos utilizadores, com base na forma como o da galeria do PowerShell processa dados manifestos e nos comentários dos grandes números de utilizadores da galeria do PowerShell.
+Pacotes que são publicados a seguir essas diretrizes serão mais probabilidade de ser instalado, confiável e atrair mais usuários.
 
-Incluída abaixo são diretrizes para o que torna um item de galeria do PowerShell boa, quais configurações de manifestos opcionais são mais importantes, melhorar o seu código com comentários dos revisores iniciais e [analisador de Script do Powershell](https://aka.ms/psscriptanalyzer), controle de versão o módulo, documentação, testes e exemplos para saber como utilizar o que tenha partilhado.
+Incluída abaixo são diretrizes para o que faz um bom pacote de galeria do PowerShell, quais configurações de manifestos opcionais são mais importantes, melhorar o seu código com comentários dos revisores iniciais e [analisador de Script do Powershell](https://aka.ms/psscriptanalyzer), controlo de versões do seu módulo, documentação, testes e exemplos para saber como utilizar o que tenha partilhado.
 Grande parte desta documentação segue as diretrizes de publicação [módulos de recursos de DSC de qualidade elevada](https://github.com/PowerShell/DscResources/blob/master/HighQualityModuleGuidelines.md).
 
-Para o mecanismo de publicação de um item da galeria do PowerShell, consulte [criar e publicar um Item](https://msdn.microsoft.com/powershell/gallery/psgallery/creating-and-publishing-an-item).
+Para o mecanismo de publicação de um pacote da galeria do PowerShell, consulte [criar e publicar um pacote](/powershell/gallery/how-to/publishing-packages/publishing-a-package).
 
-Comentários sobre essas diretrizes é welcomed. Se tiver comentários, abra questões no nosso [repositório de documentação do Github](https://github.com/powershell/powershell-docs/).
+Comentários sobre essas diretrizes é welcomed. Se tiver comentários, abra questões no nosso [repositório de documentação do Github](https://github.com/powershell/powershell-docs/issues).
 
-## <a name="best-practices-for-publishing-items"></a>Melhores práticas para a publicação de itens
+## <a name="best-practices-for-publishing-packages"></a>Melhores práticas para a publicação de pacotes
 
 As seguintes melhores práticas são o que dizer que os utilizadores de itens de galeria do PowerShell é importante e estão listadas por ordem de prioridade nominal.
-Itens que siga estas diretrizes são muito mais probabilidade de ser transferidos e adotado por outras pessoas.
+Os pacotes que siga estas diretrizes são muito mais probabilidade de ser transferidos e adotado por outras pessoas.
 
 - Utilizar PSScriptAnalyzer
 - Incluir a documentação e exemplos
@@ -48,7 +48,7 @@ Cada um deles está abrangida resumidamente nas secções abaixo.
 [PSScriptAnalyzer](https://www.powershellgallery.com/packages/PSScriptAnalyzer) é uma ferramenta de análise de código estático gratuito que funciona no código do PowerShell.
 PSScriptAnalyzer irá identificar os problemas mais comuns vistos no código do PowerShell e, muitas vezes, uma recomendação para saber como corrigir o problema.
 A ferramenta é fácil de usar e categoriza os problemas como erros (graves, devem ser resolvidos), aviso (precisam ser examinadas e deve ser resolvido) e as informações (que vale a pena dar uma olhada para práticas recomendadas).
-Todos os itens item, publicado na galeria do PowerShell serão analisados usando PSScriptAnalyzer e todos os erros serão comunicados volta para o proprietário e devem ser resolvidos.
+Publicado na galeria do PowerShell de todos os pacotes serão analisados usando PSScriptAnalyzer e todos os erros serão comunicados volta para o proprietário e devem ser resolvidos.
 
 A prática recomendada é executar `Invoke-ScriptAnalyzer` com `-Recurse` e `-Severity` aviso.
 
@@ -57,27 +57,27 @@ Reveja os resultados e certifique-se de que:
 - Todos os erros são corrigidos ou resolvidos na documentação do
 - Todos os avisos são revistos e tratados quando se aplica
 
-Os utilizadores que adquirir itens da galeria do PowerShell são fortemente encorajados a executar PSScriptAnalyzer e avaliar todos os erros e avisos.
-Os utilizadores são muito provável que entre em contato com os proprietários de itens se Verão que existe um erro comunicado pelo PSScriptAnalyzer.
-Se houver um motivo convincente para seu item manter o código que é sinalizado como um erro, adicione essas informações para a documentação para evitar ter de responder a muitas vezes a mesma pergunta.
+Os utilizadores que adquirir pacotes a partir da galeria do PowerShell são fortemente encorajados a executar PSScriptAnalyzer e avaliar todos os erros e avisos.
+Os utilizadores são muito provável que entre em contato com os proprietários de pacote se Verão que existe um erro comunicado pelo PSScriptAnalyzer.
+Se houver um motivo convincente para seu pacote manter o código que é sinalizado como um erro, adicione essas informações para a documentação para evitar ter de responder a muitas vezes a mesma pergunta.
 
 ## <a name="include-documentation-and-examples"></a>Incluir a documentação e exemplos
 
 Documentação e exemplos são a melhor forma de garantir que os utilizadores podem tirar partido de qualquer código compartilhado.
 
-Documentação é a coisa mais úteis para incluir os itens de publicado na galeria do PowerShell.
-Os usuários geralmente irão ignorar itens sem a documentação, como a alternativa é ler o código para compreender o que é o item e como usá-lo.
-Existem vários artigos disponíveis no MSDN sobre como fornecer documentação com itens de PowerShell, incluindo:
+Documentação é a coisa mais úteis para incluir em pacotes publicados na galeria do PowerShell.
+Os usuários geralmente irão ignorar pacotes sem a documentação, como a alternativa é ler o código para compreender o que é o pacote e como usá-lo.
+Há vários artigos disponíveis sobre como fornecer documentação com os pacotes do PowerShell, incluindo:
 
 - Diretrizes para o fornecimento de ajuda estão em [como escrever ajuda do Cmdlet](https://go.microsoft.com/fwlink/?LinkID=123415)
 - A criação de ajuda do cmdlet, que é a melhor abordagem para qualquer script do PowerShell, a função ou o cmdlet.
-  Para obter informações sobre como criar a ajuda do cmdlet, começar com [como escrever ajuda do Cmdlet](https://go.microsoft.com/fwlink/?LinkID=123415) na biblioteca MSDN.
-  Para adicionar o ajuda num script, consulte [sobre o comentário com base em ajudar](https://msdn.microsoft.com/powershell/reference/5.1/microsoft.powershell.core/about/about_comment_based_help).
+  Para obter informações sobre como criar a ajuda do cmdlet, começar com [como escrever ajuda do Cmdlet](https://go.microsoft.com/fwlink/?LinkID=123415).
+  Para adicionar o ajuda num script, consulte [sobre o comentário com base em ajudar](/powershell/module/microsoft.powershell.core/about/about_comment_based_help).
 - Muitos módulos também incluem a documentação do formato de texto, como ficheiros MarkDown.
   Isso pode ser particularmente útil quando existe um site de projeto no Github, onde o Markdown é um formato muito utilizado.
   A prática recomendada é usar [Markdown característico do Github](https://help.github.com/categories/writing-on-github/)
 
-Exemplos mostram aos utilizadores como o item deve ser usado.
+Exemplos mostram aos utilizadores como o pacote deve ser usado.
 Muitos desenvolvedores dirá que elas ver exemplos antes de documentação para compreender como usar algo.
 O melhor tipo de exemplos mostram a utilização básica, mais um caso de uso realista simulado e o código é bem comentado.
 Exemplos de módulos publicados na galeria do PowerShell devem estar numa pasta de exemplos sob a raiz do módulo.
@@ -87,16 +87,16 @@ Existem quatro casos de utilização de exemplo com uma breve descrição na par
 
 ## <a name="respond-to-feedback"></a>Responder a comentários
 
-Os proprietários de itens que respondem corretamente a comentários altamente são valiosos para a Comunidade.
-Os utilizadores que fornecem comentários construtivos são importantes para responder a, à medida que está interessado no item de forma a ajudar melhorá-la.
+Proprietários de pacote que respondem corretamente a comentários altamente são valiosos para a Comunidade.
+Os utilizadores que fornecem comentários construtivos são importantes para responder a, à medida que está interessado no pacote de forma a ajudar melhorá-la.
 
 Existem dois métodos de comentários disponíveis na galeria do PowerShell:
 
-- Proprietário do contacto: Isso permite que um utilizador enviar um e-mail para proprietários que o item se. Como um proprietário do item, é importante monitorizar o endereço de e-mail utilizado com os itens de galeria do PowerShell e responder a problemas que são gerados. Uma desvantagem desse método é que apenas o utilizador e o proprietário nunca Verão a comunicação, para que o proprietário poderá ter de responder a muitas vezes a mesma pergunta.
-- Comentários: Na parte inferior da página de item é um campo de comentário.
+- Proprietário do contacto: Isso permite que um utilizador enviar um e-mail para proprietários que o pacote se. Como proprietário de um pacote, é importante monitorizar o endereço de e-mail utilizado com os pacotes de galeria do PowerShell e responder a problemas que são gerados. Uma desvantagem desse método é que apenas o utilizador e o proprietário nunca Verão a comunicação, para que o proprietário poderá ter de responder a muitas vezes a mesma pergunta.
+- Comentários: Na parte inferior da página do pacote é um campo de comentário.
   A vantagem para este sistema é que outros utilizadores possam ver os comentários e respostas, que reduz o número de vezes que qualquer pergunta têm de ser respondida.
-  Como um proprietário do item, recomenda-se vivamente que siga os comentários feitos para cada item.
-Ver [fornecer Feedback através de redes sociais ou dos comentários](../how-to/working-with-items/social-media-feedback.md) para obter detalhes sobre como fazer isso.
+  Como proprietário de um pacote, recomenda-se vivamente que siga os comentários feitos para cada pacote.
+Ver [fornecer Feedback através de redes sociais ou dos comentários](../how-to/working-with-packages/social-media-feedback.md) para obter detalhes sobre como fazer isso.
 
 Proprietários que respondem a comentários de crítica são bem-vindos pela Comunidade.
 Usar a oportunidade no relatório para pedir mais informações, se necessário, forneça uma solução alternativa ou identificar se uma atualização corrige um problema.
@@ -109,7 +109,7 @@ Um script de partilha com outros utilizadores é ótimo e fornece exemplos de co
 O problema é que os scripts na galeria do PowerShell são ficheiros únicos sem separado de documentação, exemplos e testes.
 
 Módulos do PowerShell têm uma estrutura de pasta que permite que várias pastas e arquivos a serem incluídos no pacote.
-A estrutura do módulo permite incluindo outros itens listamos como melhores práticas: cmdlet ajuda, documentação, exemplos e testes.
+A estrutura do módulo permite incluindo os outros pacotes listados melhor práticas: cmdlet ajuda, documentação, exemplos e testes.
 A maior desvantagem é que um script dentro de um módulo tem de ser exposto e utilizado como uma função.
 Para obter informações sobre como criar um módulo, consulte [escrever um módulo do Windows PowerShell](http://go.microsoft.com/fwlink/?LinkId=144916).
 
@@ -123,9 +123,9 @@ Fornecer documentação baseada no comentário e uma ligação para um Site de p
 
 ## <a name="provide-a-link-to-a-project-site"></a>Forneça uma ligação para um site de projeto
 
-Um Site de projeto é onde um publicador pode interagir diretamente com os usuários de seus itens de galeria do PowerShell.
-Os usuários prefiram itens que fornecem isso, pois ele permite-los obter informações sobre o item mais facilmente.
-Número de itens na galeria do PowerShell é desenvolvida no GitHub, outras são fornecidas por organizações com uma presença na web dedicado.
+Um Site de projeto é onde um publicador pode interagir diretamente com os usuários de seus pacotes de galeria do PowerShell.
+Os usuários prefiram pacotes que fornecem isso, pois ele permite-los obter informações sobre o pacote mais facilmente.
+Muitos pacotes na galeria do PowerShell são desenvolvidos no GitHub, outras são fornecidas por organizações com uma presença na web dedicado.
 Cada um deles pode ser considerada um site de projeto.
 
 Adicionar uma ligação é feita, incluindo ProjectURI na secção PSData do manifesto, da seguinte forma:
@@ -133,7 +133,7 @@ Adicionar uma ligação é feita, incluindo ProjectURI na secção PSData do man
         # A URL to the main website for this project.
         ProjectUri = 'https://github.com/powershell/powershell'
 
-Quando é fornecido um ProjectURI, a galeria do PowerShell incluirá uma ligação para o Site do projeto no lado esquerdo da página de item.
+Quando é fornecido um ProjectURI, a galeria do PowerShell incluirá uma ligação para o Site do projeto no lado esquerdo da página do pacote.
 
 ## <a name="include-tests"></a>Incluir testes
 
@@ -148,7 +148,7 @@ Os destinos para cobertura de teste são realçados [documentação do módulo d
 
 ## <a name="include-andor-link-to-license-terms"></a>Incluir e/ou ligar a termos de licenciamento
 
-Todos os itens publicados na galeria do PowerShell tem de especificar os termos de licenciamento ou estar vinculados pela licença incluída no [termos de utilização](https://www.powershellgallery.com/policies/Terms) em "Anexo A".
+Todos os pacotes publicados na galeria do PowerShell tem de especificar os termos de licenciamento ou estar vinculados pela licença incluída no [termos de utilização](https://www.powershellgallery.com/policies/Terms) em "Anexo A".
 É a melhor abordagem para especificar uma licença diferente fornecer uma ligação para a licença com o LicenseURI no PSData.
 Pode encontrar um exemplo no tópico recomendado campos de manifesto.
 
@@ -165,7 +165,7 @@ PrivateData = @{
 
 ## <a name="sign-your-code"></a>Inicie o seu código
 
-Assinatura de código fornece aos usuários o mais alto nível de garantia de que publicou o item e que a cópia do código adquirido é exatamente o que o Editor liberados.
+Assinatura de código fornece aos usuários o mais alto nível de garantia de que publicou o pacote e que a cópia do código adquirido é exatamente o que o Editor liberados.
 Para saber mais sobre geralmente de assinatura de código, consulte [introdução à assinatura de código](http://go.microsoft.com/fwlink/?LinkId=106296).
 PowerShell oferece suporte a validação de assinatura por meio de duas abordagens primárias de código:
 
@@ -173,24 +173,24 @@ PowerShell oferece suporte a validação de assinatura por meio de duas abordage
 - Catálogo de um módulo de assinatura
 
 A assinatura de ficheiros do PowerShell é uma abordagem bem estabelecida para garantir que o código a ser executado foi produzido por uma origem confiável e não foi modificado.
-Detalhes sobre como assinar os arquivos de script do PowerShell é abordado o [sobre assinatura](https://msdn.microsoft.com/powershell/reference/5.1/microsoft.powershell.core/about/about_signing) tópico.
+Detalhes sobre como assinar os arquivos de script do PowerShell é abordado o [sobre assinatura](/powershell/module/microsoft.powershell.core/about/about_signing) tópico.
 Descrição geral, uma assinatura pode ser adicionada a qualquer. Arquivo PS1 que valida a PowerShell quando o script é carregado.
-PowerShell pode ser limitado a utilizar o [política de execução](https://msdn.microsoft.com/powershell/reference/5.1/microsoft.powershell.core/about/about_execution_policies) assinado de cmdlets para garantir o uso de scripts.
+PowerShell pode ser limitado a utilizar o [política de execução](/powershell/module/microsoft.powershell.core/about/about_execution_policies) assinado de cmdlets para garantir o uso de scripts.
 
 O catálogo de módulos de assinatura é uma funcionalidade adicionada ao PowerShell na versão 5.1.
-Como assinar um módulo é abordado o [Cmdlets de catálogo](https://msdn.microsoft.com/powershell/wmf/5.1/catalog-cmdlets) tópico.
+Como assinar um módulo é abordado o [Cmdlets de catálogo](/powershell/wmf/5.1/catalog-cmdlets) tópico.
 Na descrição geral, a assinatura do catálogo é feito ao criar um arquivo de catálogo, que contém um valor de hash para todos os ficheiros no módulo, e, em seguida, iniciar esse ficheiro.
-A publicar-module PowerShellGet, install-module, save-module e cmdlets do módulo de atualização irá verificar a assinatura para garantir que é válido, em seguida, confirmar que o valor de hash para cada item corresponde ao que se encontra no catálogo.
+A publicar-module PowerShellGet, install-module, save-module e cmdlets do módulo de atualização irá verificar a assinatura para garantir que é válido, em seguida, confirmar que o valor de hash para cada pacote corresponde ao que se encontra no catálogo.
 Se está instalada uma versão anterior do módulo do sistema, install-module confirma que a autoridade de assinatura para a nova versão corresponde ao que foi anteriormente instalado.
 Catálogo de assinatura funciona com, mas não substitui os ficheiros de script de assinatura. PowerShell não valida as assinaturas de catálogo no tempo de carregamento de módulo.
 
 ## <a name="follow-semver-guidelines-for-versioning"></a>Siga as diretrizes de SemVer para controlo de versões
 
 [SemVer](http://semver.org/) é uma convenção de pública que descreve como estruturar e alterar uma versão para permitir a fácil intepretation das alterações.
-A versão para o item deve ser incluída nos dados de manifestos.
+A versão para o seu pacote deve ser incluída nos dados de manifestos.
 
 - A versão deve ser estruturada como 3 blocos numérico separados por pontos, como no 0.1.1 ou 4.11.192
-- Versões que iniciam com "0" indicam que o item ainda não está pronto para produção e o primeiro número só deve começar com "0", se esse for o número único utilizado
+- Versões que iniciam com "0" indicam que o pacote ainda não está pronto para produção e o primeiro número só deve começar com "0", se esse for o número único utilizado
 - As alterações no primeiro número (1.9.9999 a 2.0.0) indicam alterações principais e de última hora entre as versões
 - As alterações para o segundo número (1.01 para 1,02) indicam alterações ao nível da funcionalidade, por exemplo, adicionar novos cmdlets para um módulo
 - As alterações para o número de terceiro indicam alterações sem interrupções, como novos parâmetros, exemplos atualizados ou novos testes
@@ -213,18 +213,22 @@ Isso pode ser feito de diversas formas, incluindo:
 
 Com qualquer uma destas soluções, use Register-PSRepository para definir um novo "repositório de", que são utilizados na propriedade - repositório para Publish-Module.
 
-Um ponto adicional sobre a publicação de teste: não é possível eliminar a qualquer item publicar na galeria do PowerShell sem a ajuda de que a equipe de operações, que confirma que nada é dependente do item que pretende publicar.
+Um ponto adicional sobre a publicação de teste: não é possível eliminar a qualquer pacote publicar na galeria do PowerShell sem a ajuda de que a equipe de operações, que confirma que nada é dependente do pacote que pretende publicar.
 Por esse motivo, nós não suportam a galeria do PowerShell como um destino de teste e entrará em contacto qualquer fabricante que faz isso.
 
 ## <a name="use-powershellget-to-publish"></a>Utilizar o PowerShellGet para publicar
 
-É altamente recomendável que os publicadores utilizam os cmdlets Publish-Module e Publish-Script, ao trabalhar com a galeria do PowerShell. O PowerShellGet foi criado para ajudar a evitar a lembrar-se detalhes importantes sobre a instalação de uma publicação da galeria do PowerShell. Ocasionalmente, os publicadores optar por ignorar o PowerShellGet e utilizar o cliente NuGet ou os PackageManagement cmdlets, em vez de Publish-Module. Há um número de detalhes que são facilmente perdida, o que resulta numa variedade de pedidos de suporte.
+É altamente recomendável que os publicadores utilizam os cmdlets Publish-Module e Publish-Script, ao trabalhar com a galeria do PowerShell.
+O PowerShellGet foi criado para ajudar a evitar a lembrar-se detalhes importantes sobre a instalação do e publicação na galeria do PowerShell.
+Ocasionalmente, os publicadores optar por ignorar o PowerShellGet e utilizar o cliente NuGet ou os PackageManagement cmdlets, em vez de Publish-Module.
+Há um número de detalhes que são facilmente perdida, o que resulta numa variedade de pedidos de suporte.
 
-Se houver um motivo que não é possível utilizar Publish-Module ou Publish-Script, contacte-nos informar. Enviar um problema no repositório GitHub do PowerShellGet e forneça os detalhes que fazem com que escolha o NuGet ou PackageManagement. 
+Se houver um motivo que não é possível utilizar Publish-Module ou Publish-Script, contacte-nos informar.
+Enviar um problema no repositório GitHub do PowerShellGet e forneça os detalhes que fazem com que escolha o NuGet ou PackageManagement.
 
 ## <a name="recommended-workflow"></a>Fluxo de trabalho recomendado
 
-A abordagem mais bem-sucedidas que encontramos para itens publicados na galeria do PowerShell é o seguinte:
+A abordagem mais bem-sucedidas que encontramos para pacotes publicados na galeria do PowerShell é o seguinte:
 
 - A inicial de desenvolvimento num site de um projeto de código aberto. A equipe de PowerShell usa o Github.
 - Utilize os comentários dos revisores e [analisador de Script do Powershell](https://aka.ms/psscriptanalyzer) para obter o código de estado estável
@@ -233,7 +237,7 @@ A abordagem mais bem-sucedidas que encontramos para itens publicados na galeria 
 - Publicar uma versão estável ou alfa da galeria do PowerShell, certificar-se de que inclui a documentação e a ligação para o site do projeto
 - Recolher comentários e iterar sobre o código no site do projeto, em seguida, publicar atualizações estáveis da galeria do PowerShell
 - Adicione exemplos e os testes de Pester no seu projeto e seu módulo
-- Decida se pretende código assinar seu item
+- Decida se pretende código assinar seu pacote
 - Quando considerar que o projeto está pronto para usar num ambiente de produção, publicar um 1.0.0 versão na galeria do PowerShell
 - Continuar a recolher comentários e reanalisa o seu código com base na entrada do usuário
 

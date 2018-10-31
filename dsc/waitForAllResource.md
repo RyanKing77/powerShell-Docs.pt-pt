@@ -1,21 +1,21 @@
 ---
 ms.date: 06/12/2017
-keywords: DSC, do powershell, a configuração, a configuração
+keywords: DSC, powershell, configuração, a configuração
 title: Recursos do DSC WaitForAll
-ms.openlocfilehash: 4413220bb0b5eeef5fd1599f794cd551f15a2925
-ms.sourcegitcommit: 54534635eedacf531d8d6344019dc16a50b8b441
+ms.openlocfilehash: 367f95caaa71ebec9c8e0a7c31fa5c0f5be27945
+ms.sourcegitcommit: e76665315fd928bf85210778f1fea2be15264fea
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 05/17/2018
-ms.locfileid: "34221787"
+ms.lasthandoff: 10/30/2018
+ms.locfileid: "50226105"
 ---
 # <a name="dsc-waitforall-resource"></a>Recursos do DSC WaitForAll
 
-> Aplica-se a: Windows PowerShell 5.0 e posterior
+> Aplica-se a: PowerShell de Windows 5.0 e posterior
 
-O **WaitForAll** recurso de configuração de estado pretendido (DSC) pode ser utilizado dentro de um bloco de nó num [configuração DSC](configurations.md) para especificar dependências em configurações nos outros nós.
+O **WaitForAll** recursos do Desired State Configuration (DSC) podem ser utilizado dentro de um bloco de nó num [configuração de DSC](configurations.md) para especificar dependências em configurações nos outros nós.
 
-Este recurso é bem sucedida se se o recurso especificado pelo **ResourceName** se encontra no estado pretendido em todos os nós de destino definido na propriedade o **NodeName** propriedade.
+Este recurso é bem-sucedida se o recurso especificado pela **ResourceName** propriedade está no Estado desejado em todos os nós de destino definido no **NodeName** propriedade.
 
 
 ## <a name="syntax"></a>Sintaxe
@@ -36,14 +36,14 @@ WaitForAll [string] #ResourceName
 
 |  Propriedade  |  Descrição   |
 |---|---|
-| ResourceName| O nome de recurso a dependem. Se este recurso pertence a uma configuração diferente, o nome de formato "[__ResourceType__]__ResourceName__:: [__ConfigurationName__]: [ __ConfigurationName__] "|
-| NodeName| Os nós de destino do recurso dependem.|
-| RetryIntervalSec| O número de segundos antes de repetir a operação. Mínimo é 1.|
-| RetryCount| O número máximo de vezes para tentar novamente.|
-| ThrottleLimit| Número de máquinas para ligar em simultâneo. Predefinição é novo-cimsession predefinido.|
-| dependsOn | Indica que a configuração de outro recurso tem de executar antes deste recurso é configurado. Por exemplo, se o ID da configuração do recurso de script bloco de que pretende executar primeiro é __ResourceName__ e o respetivo tipo é __ResourceType__, a sintaxe para utilizar esta propriedade é `DependsOn = "[ResourceType]ResourceName"`.|
+| ResourceName| O nome de recurso a dependem. Se este recurso pertence a uma configuração diferente, formatar o nome como "[__ResourceType__]__ResourceName__:: [__ConfigurationName__]:: [ __ConfigurationName__] "|
+| NodeName| Os nós de destino do recurso a dependem.|
+| RetryIntervalSec| O número de segundos antes de tentar novamente. Mínimo é 1.|
+| RetryCount| O número máximo de vezes a repetir.|
+| ThrottleLimit| Número de máquinas para se conectar simultaneamente. A predefinição é padrão do novo-cimsession.|
+| DependsOn | Indica que a configuração de outro recurso deve ser executado antes deste recurso está configurado. Por exemplo, se o ID da configuração do recurso do bloco que pretende executar script primeiro será __ResourceName__ e seu tipo é __ResourceType__, a sintaxe para utilizar esta propriedade é `DependsOn = "[ResourceType]ResourceName"`.|
 
 
 ## <a name="example"></a>Exemplo
 
-Para obter um exemplo de como utilizar este recurso, consulte [especificar dependências entre nós](crossNodeDependencies.md)
+Para obter um exemplo de como usar este recurso, consulte [especificar dependências entre nós](crossNodeDependencies.md)

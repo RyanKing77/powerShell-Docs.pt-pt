@@ -1,20 +1,20 @@
 ---
 ms.date: 06/12/2017
 contributor: JKeithB
-keywords: cmdlet do powershell do galeria, psgallery
-title: Perfil de regra ScriptAnalyzer para da Galeria
-ms.openlocfilehash: 54100f7a530cbc769e4a0e2dbff18dbc5de88fa6
-ms.sourcegitcommit: 54534635eedacf531d8d6344019dc16a50b8b441
+keywords: Galeria, o powershell, o cmdlet, o psgallery
+title: Perfil de regra de ScriptAnalyzer para Galeria
+ms.openlocfilehash: d91a88981cc2f3269a1f8b6ee864f8333a2f097c
+ms.sourcegitcommit: 98b7cfd8ad5718efa8e320526ca76c3cc4141d78
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 05/17/2018
-ms.locfileid: "34225747"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50002501"
 ---
-# <a name="scriptanalyzer-rule-profile-for-gallery"></a>Perfil de regra ScriptAnalyzer para da Galeria
+# <a name="scriptanalyzer-rule-profile-for-gallery"></a>Perfil de regra de ScriptAnalyzer para Galeria
 
-Para garantir a qualidade dos itens de galeria do PowerShell publicado, iremos executar [PSScriptAnalyzer](https://github.com/PowerShell/PSScriptAnalyzer) regras para determinar se existem quaisquer violações em scripts submetidos.
+Para garantir a qualidade dos pacotes publicados galeria do PowerShell, executamos [PSScriptAnalyzer](https://github.com/PowerShell/PSScriptAnalyzer) regras para determinar se existem quaisquer violações nos scripts de submetido.
 
-Pode encontrar a lista de regras em execução no ScriptAnalyzer [página do GitHub](https://github.com/PowerShell/PSScriptAnalyzer/blob/development/Engine/Settings/PSGallery.psd1).
-Se tiver alguma dúvida sobre as regras em execução, contacte os administradores de galeria do PowerShell ou abra um problema para ScriptAnalzyer.
+Pode encontrar a lista de regras que estão em execução no ScriptAnalyzer [página do GitHub](https://github.com/PowerShell/PSScriptAnalyzer/blob/development/Engine/Settings/PSGallery.psd1).
+Se tiver alguma dúvida sobre as regras que estão em execução, contacte os administradores de galeria do PowerShell ou abra um problema para ScriptAnalzyer.
 
-ScriptAnalyzer resultados serão apresentados em cada página item individuais na galeria na versão próximas. Aconselhamo-os proprietários de item marque os itens para se certificar de que não existirem erros graves nos itens publicados.
+ScriptAnalyzer resultados serão apresentados em cada página individual de pacote na galeria no próximo lançamento. Nós o encorajamos os proprietários de pacote para verificar os pacotes para se certificar de que existem não existem erros graves no pacotes publicados.

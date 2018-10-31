@@ -3,24 +3,24 @@ ms.date: 06/09/2017
 schema: 2.0.0
 keywords: PowerShell
 title: Exigir a aceitação de licença para os scripts
-ms.openlocfilehash: 6374c8c8536dd0c8f27580a5b8895b8db18424f9
-ms.sourcegitcommit: e9ad4d85fd7eb72fb5bc37f6ca3ae1282ae3c6d7
+ms.openlocfilehash: e7101eb6a480dd87965b7b9be9d49583042b603f
+ms.sourcegitcommit: 98b7cfd8ad5718efa8e320526ca76c3cc4141d78
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34049016"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50002587"
 ---
 # <a name="requiring-license-acceptance-for-scripts"></a>Exigir a aceitação de licença para os scripts
 
-Aceitação de licença não é suportada para os scripts. No entanto, o cenário em que um script depende de um módulo que requer a aceitação de licença é suportado.
+Aceitação da licença não é suportada para os scripts. No entanto, o cenário em que um script depende de um módulo que requer a aceitação da licença é suportado.
 
-Script commands(Install-Script/Save-Script/Update-Script) suportar um novo parâmetro - AcceptLicense que funciona como se o utilizador vimos a licença. Se não for especificado - AcceptLicense; o utilizador será apresentado license.txt para o módulo dependente e pedido para aceitar a licença.
+Script commands(Install-Script/Save-Script/Update-Script) suportar um novo parâmetro - AcceptLicense que se comporta como se o utilizador viu a licença. Se não for especificado - AcceptLicense; o utilizador será mostrado license.txt módulo dependente de e -lhe pedido para aceitar a licença.
 
 ## <a name="examples"></a>EXEMPLOS
 
-### <a name="example-1-install-script-with-dependencies-requiring-license-acceptance"></a>Exemplo 1: O Script de instalação com as dependências de exigir a aceitação de licença
+### <a name="example-1-install-script-with-dependencies-requiring-license-acceptance"></a>Exemplo 1: O Script de instalação com as dependências que exigem a aceitação de licença
 
-Script 'ScriptRequireLicenseAcceptance' depende do módulo 'ModuleRequireLicenseAcceptance'. Solicitadas ao utilizador para aceitar licença.
+Script 'ScriptRequireLicenseAcceptance"depende do módulo 'ModuleRequireLicenseAcceptance'. Usuário é solicitado a aceitar a licença.
 
 ```PowerShell
 PS> Install-Script -Name ScriptRequireLicenseAcceptance
@@ -38,16 +38,16 @@ Do you accept the license terms for module 'ModuleRequireLicenseAcceptance'.
 [Y] Yes  [A] Yes to All  [N] No  [L] No to All  [S] Suspend  [?] Help (default is "N"):
 ```
 
-### <a name="example-2-install-script-with-dependencies-requiring-license-acceptance-and--acceptlicense"></a>Exemplo 2: O Script de instalação com as dependências de exigir a aceitação de licença e - AcceptLicense
+### <a name="example-2-install-script-with-dependencies-requiring-license-acceptance-and--acceptlicense"></a>Exemplo 2: O Script de instalação com as dependências que exigem a aceitação da licença e - AcceptLicense
 
-Script 'ScriptRequireLicenseAcceptance' depende do módulo 'ModuleRequireLicenseAcceptance'. Não é pedido ao utilizador para aceitar licença como - AcceptLicense está especificado.
+Script 'ScriptRequireLicenseAcceptance"depende do módulo 'ModuleRequireLicenseAcceptance'. Utilizador não é pedido para aceitar a licença como - AcceptLicense está especificado.
 
 ```PowerShell
 PS> Install-Script -Name ScriptRequireLicenseAcceptance -AcceptLicense
 ```
 
-## <a name="more-details"></a>obter mais detalhes
+## <a name="more-details"></a>Obter mais detalhes
 
-- [Precisar do suporte de aceitação de licença para módulos](module-license-acceptance.md)
-- [Precisam de suporte de aceitação de licença no PowerShellGallery](../how-to/working-with-items/items-that-require-license-acceptance.md)
-- [Solicitar a Aceitação da Licença ao Implementar a Automatização do Azure](../how-to/working-with-items/deploy-to-azure-automation.md)
+- [Necessitar de suporte de aceitação de licença para módulos](module-license-acceptance.md)
+- [Precisam de suporte de aceitação da licença no PowerShellGallery](../how-to/working-with-packages/packages-that-require-license-acceptance.md)
+- [Solicitar a Aceitação da Licença ao Implementar a Automatização do Azure](../how-to/working-with-packages/deploy-to-azure-automation.md)

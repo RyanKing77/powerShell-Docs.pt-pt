@@ -10,37 +10,37 @@ items:
   - name: Localizar Itens na Galeria
     items:
     - name: Searching For Items (Procurar Itens)
-      href: how-to/finding-items/search-syntax.md
+      href: how-to/finding-packages/search-syntax.md
     - name: Searching by PSEdition (Procurar por PSEdition)
-      href: how-to/finding-items/searching-by-psedition.md
+      href: how-to/finding-packages/searching-by-psedition.md
     - name: Filtering Search Results (Filtrar os Resultados da Pesquisa)
-      href: how-to/finding-items/filtering-items.md
+      href: how-to/finding-packages/filtering-packages.md
   - name: Publicar na Galeria
     items:
     - name: Criar e publicar itens
-      href: how-to/publishing-items/publishing-an-item.md
+      href: how-to/publishing-packages/publishing-a-package.md
     - name: Criar uma Conta PowerShellGallery
-      href: how-to/publishing-items/creating-an-account.md
+      href: how-to/publishing-packages/creating-an-account.md
     - name: Remover itens da lista
-      href: how-to/publishing-items/unlisting-items.md
+      href: how-to/publishing-packages/unlisting-packages.md
     - name: Eliminar itens
-      href: how-to/publishing-items/deleting-items.md
+      href: how-to/publishing-packages/deleting-packages.md
     - name: Gerir os proprietários de itens
-      href: how-to/publishing-items/managing-item-owners.md
+      href: how-to/publishing-packages/managing-package-owners.md
   - name: Trabalhar com Itens
     items:
     - name: Vista de Lista de Ficheiros
-      href: how-to/working-with-items/filelist-view.md
+      href: how-to/working-with-packages/filelist-view.md
     - name: Implementar a Automatização do Azure
-      href: how-to/working-with-items/deploy-to-azure-automation.md
+      href: how-to/working-with-packages/deploy-to-azure-automation.md
     - name: Transferência manual de pacotes
-      href: how-to/working-with-items/manual-download.md
+      href: how-to/working-with-packages/manual-download.md
     - name: Items that Require License Acceptance (Itens que Precisam da Aceitação da Licença)
-      href: how-to/working-with-items/items-that-require-license-acceptance.md
+      href: how-to/working-with-packages/packages-that-require-license-acceptance.md
     - name: Contactar os proprietários de itens
-      href: how-to/working-with-items/contacting-item-owners.md
+      href: how-to/working-with-packages/contacting-package-owners.md
     - name: Fornecer Comentários através das Redes Sociais ou dos Comentários
-      href: how-to/working-with-items/social-media-feedback.md
+      href: how-to/working-with-packages/social-media-feedback.md
   - name: Gerir o perfil da conta
     items:
     - name: Definições da Conta da Galeria do PowerShell
@@ -52,7 +52,7 @@ items:
   - name: Orientações e melhores práticas de publicação
     href: concepts/publishing-guidelines.md
   - name: Manifesto de item e IU da Galeria
-    href: concepts/item-manifest-affecting-ui.md
+    href: concepts/package-manifest-affecting-ui.md
   - name: Exigir PSEditions Específicos
     items:
     - name: Writing Scripts with PSEditions Support (Desenvolver Scripts com Suporte de PSEditions)
@@ -91,9 +91,9 @@ items:
   href: faqs.md
 - name: Cmdlets do PowerShellGet
   href: https://docs.microsoft.com/powershell/module/powershellget/
-ms.openlocfilehash: 32577b81229d456922a6be9bfdc8156d337fd719
-ms.sourcegitcommit: e46b868f56f359909ff7c8230b1d1770935cce0e
+ms.openlocfilehash: 386e86b4a27ea840cc688b47f597e845f041af60
+ms.sourcegitcommit: 98b7cfd8ad5718efa8e320526ca76c3cc4141d78
 ms.translationtype: HT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 09/13/2018
-ms.locfileid: "45522927"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50002330"

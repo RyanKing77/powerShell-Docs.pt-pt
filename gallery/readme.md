@@ -1,6 +1,6 @@
 # <a name="readme"></a>LEIA-ME
 
 Esta pasta contém a documentação para a galeria do PowerShell.
-Este é configurado como um docset separado dentro do repositório Docs do PowerShell.
+Este é configurado como um conjunto de documentos separado dentro do repositório de documentos do PowerShell.
 
-Para informações sobre como contribuir para este docset, consulte os Docs do PowerShell [contribuintes guia](https://github.com/PowerShell/PowerShell-Docs/blob/staging/CONTRIBUTING.md).
+Para obter informações sobre a contribuir para este conjunto de documentos, consulte os documentos do PowerShell [Guia do contribuinte](https://github.com/PowerShell/PowerShell-Docs/blob/staging/CONTRIBUTING.md).

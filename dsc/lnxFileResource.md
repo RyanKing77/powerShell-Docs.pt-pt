@@ -1,17 +1,17 @@
 ---
 ms.date: 06/12/2017
-keywords: DSC, do powershell, a configuração, a configuração
-title: DSC de Linux nxFile recursos
-ms.openlocfilehash: f1eb98092049ae837d144ccf99a84fe5614144e0
-ms.sourcegitcommit: 54534635eedacf531d8d6344019dc16a50b8b441
+keywords: DSC, powershell, configuração, a configuração
+title: DSC para Linux nxFile recursos
+ms.openlocfilehash: 80969ba2ea6247fcd616a301d951403a840c851d
+ms.sourcegitcommit: e76665315fd928bf85210778f1fea2be15264fea
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 05/16/2018
-ms.locfileid: "34189861"
+ms.lasthandoff: 10/30/2018
+ms.locfileid: "50225714"
 ---
-# <a name="dsc-for-linux-nxfile-resource"></a>DSC de Linux nxFile recursos
+# <a name="dsc-for-linux-nxfile-resource"></a>DSC para Linux nxFile recursos
 
-O **nxFile** recursos no PowerShell pretendido Estado Configuration (DSC) fornece um mecanismo para gerir ficheiros e diretórios num nó de Linux.
+O **nxFile** recursos no PowerShell Desired State Configuration (DSC) fornece um mecanismo para gerir ficheiros e diretórios num nó de Linux.
 
 ## <a name="syntax"></a>Sintaxe
 
@@ -39,25 +39,25 @@ nxFile <string> #ResourceName
 
 |  Propriedade |  Descrição |
 |---|---|
-| DestinationPath| Especifica a localização onde pretende garantir o estado de um ficheiro ou diretório.|
-| SourcePath| Especifica o caminho a partir dos quais pretende copiar o recurso do ficheiro ou pasta. Este caminho pode ser um caminho local, ou um `http/https/ftp` URL. Remoto `http/https/ftp` URLs só são suportadas quando o valor da **tipo** propriedade é o ficheiro.|
-| Certifique-se| Determina se deve verificar se o ficheiro existe. Defina esta propriedade para "Presente" para garantir que o ficheiro existe. Defina-o para "Ausente", certifique-se de que o ficheiro não existe. O valor predefinido é "Presente".|
-| Tipo| Especifica se o recurso que está a ser configurado é um diretório ou um ficheiro. Defina esta propriedade para "diretório" para indicar que o recurso é um diretório. Defina-o para "do ficheiro" para indicar que o recurso é um ficheiro. O valor predefinido é "ficheiros"|
-| Conteúdos| Especifica o conteúdo de um ficheiro, como uma cadeia específica.|
-| Soma de verificação| Define o tipo a utilizar ao determinar se os dois ficheiros são as mesmas. Se **soma de verificação** não for especificado, apenas o nome de ficheiro ou diretório é utilizado para comparação. Os valores são: "ctime", "mtime" ou "md5".|
-| Recurse| Indica se subdiretórios estão incluídos. Defina esta propriedade como **$true** para indicar que pretende que o subdiretórios a incluir. A predefinição é **$false**. **Nota:** esta propriedade só é válido quando o **tipo** propriedade está definida para o diretório.|
-| Force| Determinadas operações de ficheiros (como substituir um ficheiro ou eliminar um diretório que não está vazio) resultará num erro. Utilizar o **Force** propriedade substitui esses erros. O valor predefinido é **$false**.|
-| Ligações| Especifica o comportamento pretendido para as ligações simbólicas. Definir esta propriedade para "seguir", siga as ligações simbólicas e atuar sobre o destino de ligações (por exemplo. Copie o ficheiro em vez da ligação). Definir esta propriedade para "Gerir" para atuar na ligação (por exemplo. Copie a ligação próprio). Defina esta propriedade para "Ignorar" para ignorar as ligações simbólicas.|
-| Grupo| O nome do **grupo** possuir o ficheiro ou diretório.|
-| Modo| Especifica as permissões pretendidas para o recurso, octal ou simbólica notação. (por exemplo, 777 ou rwxrwxrwx). Se utilizar a notação simbólica, não fornecem o primeiro caráter que indica o diretório ou ficheiro.|
-| dependsOn | Indica que a configuração de outro recurso tem de executar antes deste recurso é configurado. Por exemplo, se o **ID** do recurso de bloco de script de configuração que pretende executar primeiro é **ResourceName** e o respetivo tipo é **ResourceType**, a sintaxe para utilizar esta a propriedade é `DependsOn = "[ResourceType]ResourceName"`.|
+| DestinationPath| Especifica a localização onde pretende garantir que o estado para um ficheiro ou diretório.|
+| SourcePath| Especifica o caminho a partir da qual pretende copiar o recurso de ficheiro ou pasta. Este caminho pode ser um caminho local, ou um `http/https/ftp` URL. Remoto `http/https/ftp` URLs só são suportados quando o valor do **tipo** propriedade é o ficheiro.|
+| Certifique-se| Determina se deve verificar se o ficheiro existe. Defina esta propriedade para "Presente" para garantir que o ficheiro existe. Defini-lo como "Ausente", certifique-se de que o ficheiro não existe. O valor predefinido é "Presente".|
+| Tipo| Especifica se o recurso a ser configurado é um diretório ou um ficheiro. Defina esta propriedade para o "diretório" para indicar que o recurso é um diretório. Defina-o para "file" para indicar que o recurso é um ficheiro. O valor predefinido é "file"|
+| Conteúdos| Especifica o conteúdo de um arquivo, como uma determinada cadeia de caracteres.|
+| Soma de verificação| Define o tipo a utilizar ao determinar se dois arquivos são os mesmos. Se **soma de verificação** não for especificada, apenas o nome de ficheiro ou diretório é utilizado para comparação. Os valores são: "ctime", "mtime", ou "md5".|
+| Recurse| Indica se são incluídos os subdiretórios. Defina esta propriedade como **$true** para indicar que pretende que o subdiretórios a serem incluídos. A predefinição é **$false**. **Nota:** esta propriedade só é válido quando o **tipo** propriedade está definida como o diretório.|
+| Force| Determinadas operações de arquivo (como substituir um ficheiro ou eliminar um diretório que não está vazio) irão resultar num erro. Utilizar o **força** propriedade substitui esses erros. O valor predefinido é **$false**.|
+| Ligações| Especifica o comportamento desejado para links simbólicos. Defina esta propriedade de "seguir" seguir links simbólicos e tomar decisões sobre o destino de ligações (por exemplo. Copie o ficheiro em vez da ligação). Defina esta propriedade para "Gerir" para tomar decisões sobre a ligação (por exemplo. Copie a ligação em si). Defina esta propriedade para "Ignorar" Ignorar links simbólicos.|
+| Grupo| O nome da **grupo** para o proprietário do ficheiro ou diretório.|
+| Modo| Especifica as permissões pretendidas para o recurso na notação octal ou simbólica. (por exemplo, 777 ou rwxrwxrwx). Se utilizar a notação simbólica, não fornecem o primeiro caráter que indica o arquivo ou diretório.|
+| DependsOn | Indica que a configuração de outro recurso deve ser executado antes deste recurso está configurado. Por exemplo, se o **ID** do recurso de bloco de script de configuração que pretende executar primeiro é **ResourceName** e seu tipo é **ResourceType**, a sintaxe para usar isso a propriedade é `DependsOn = "[ResourceType]ResourceName"`.|
 
 ## <a name="additional-information"></a>Informações Adicionais
 
 
-Linux e Windows utilizar carateres de quebra de linha diferente nos ficheiros de texto por predefinição e isto pode causar resultados inesperados quando configurar alguns ficheiros num computador com Linux __nxFile__. Existem várias formas de gerir o conteúdo de um ficheiro de Linux ao evitando problemas causados por carateres de quebra de linha inesperado:
+Linux e Windows utilizam carateres de quebra de linha de diferentes em arquivos de texto por padrão, e isso pode causar resultados inesperados quando configurar alguns ficheiros num computador Linux com __nxFile__. Existem várias formas de gerir o conteúdo de um ficheiro do Linux, evitando problemas causados por carateres de quebra de linha inesperado:
 
-Passo 1: Copiar o ficheiro de uma origem remota (http, https ou ftp): Crie um ficheiro no Linux com os conteúdos pretendidos e testar num servidor web ou de ftp acessível a principais irá configurar. Definir o __SourcePath__ propriedade no __nxFile__ recursos com o URL de web ou de ftp para o ficheiro.
+Passo 1: Copiar o ficheiro de uma origem remota (http, https ou ftp): Crie um ficheiro no Linux com o conteúdo pretendido e testá-los num servidor de ftp ou web acessível o nó (s) que irá configurar. Definir o __SourcePath__ propriedade na __nxFile__ recursos com o URL de web ou de ftp para o ficheiro.
 
 ```
 Import-DSCResource -Module nx
@@ -76,7 +76,7 @@ nxFile resolvConf
 ```
 
 
-Passo 2: Ler o conteúdo do ficheiro no script PowerShell com [Get-Content](https://technet.microsoft.com/library/hh849787.aspx) após a definição de __$OFS__ propriedade para utilizar o caráter de quebra de linha do Linux.
+Passo 2: Ler o conteúdo do ficheiro do script do PowerShell com [Get-Content](https://technet.microsoft.com/library/hh849787.aspx) após a definição a __$OFS__ propriedade para utilizar o caractere de quebra de linha de Linux.
 
 
 ```
@@ -98,7 +98,7 @@ nxFile resolvConf
 ```
 
 
-Passo 3: Utilize uma função do PowerShell para substituir as quebras de linha do Windows com carateres de quebra de linha do Linux.
+Passo 3: Utilize uma função do PowerShell para substituir as quebras de linha do Windows com carateres de quebra de linha de Linux.
 
 ```
 Function LinuxString($inputStr){
@@ -132,7 +132,7 @@ nxFile resolvConf
 
 ## <a name="example"></a>Exemplo
 
-O exemplo seguinte assegura que o diretório `/opt/mydir` existir, e se um ficheiro com conteúdo especificado existe este diretório.
+O exemplo seguinte, garante que o diretório `/opt/mydir` existe, e se um ficheiro com conteúdo especificado existe neste diretório.
 
 ```
 Import-DSCResource -Module nx

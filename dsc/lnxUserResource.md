@@ -1,17 +1,17 @@
 ---
 ms.date: 06/12/2017
-keywords: DSC, do powershell, a configuração, a configuração
-title: DSC de Linux nxUser recursos
-ms.openlocfilehash: ca77bcd1f23a78ddb9e2ac988e4aadfec504bbbe
-ms.sourcegitcommit: 54534635eedacf531d8d6344019dc16a50b8b441
+keywords: DSC, powershell, configuração, a configuração
+title: DSC para Linux nxUser recursos
+ms.openlocfilehash: 1b02be1559957585a2a1733630cb93440e8182f9
+ms.sourcegitcommit: e76665315fd928bf85210778f1fea2be15264fea
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 05/17/2018
-ms.locfileid: "34218931"
+ms.lasthandoff: 10/30/2018
+ms.locfileid: "50226037"
 ---
-# <a name="dsc-for-linux-nxuser-resource"></a>DSC de Linux nxUser recursos
+# <a name="dsc-for-linux-nxuser-resource"></a>DSC para Linux nxUser recursos
 
-O **nxUser** recursos no PowerShell pretendido Estado Configuration (DSC) fornece um mecanismo para gerir utilizadores locais num nó de Linux.
+O **nxUser** recursos no PowerShell Desired State Configuration (DSC) fornece um mecanismo para gerir utilizadores locais num nó de Linux.
 
 ## <a name="syntax"></a>Sintaxe
 
@@ -34,22 +34,22 @@ nxUser <string> #ResourceName
 
 ## <a name="properties"></a>Propriedades
 
-|  Propriedade |  Indica o nome de conta para o qual pretende garantir um estado específico. |
+|  Propriedade |  Indica o nome da conta para o qual pretende garantir um estado específico. |
 |---|---|
-| UserName| Especifica a localização onde pretende garantir o estado de um ficheiro ou diretório.|
-| Certifique-se| Especifica se a conta existe. Definir esta propriedade para "Presente" para garantir que a conta existe e defina-o para "Ausente", certifique-se de que a conta não existe.|
-| FullName| Uma cadeia que contém o nome completo a utilizar para a conta de utilizador.|
+| UserName| Especifica a localização onde pretende garantir que o estado para um ficheiro ou diretório.|
+| Certifique-se| Especifica se a conta existe. Definir esta propriedade para "Presente" para se certificar de que a conta existe e defini-lo como "Ausente", certifique-se de que a conta não existe.|
+| FullName| Uma cadeia que contém o nome completo para utilizar para a conta de utilizador.|
 | Descrição| A descrição da conta de utilizador.|
-| Palavra-passe| O hash da palavra-passe de utilizadores no formato adequado para o computador Linux. Normalmente, trata-se um salted SHA-256, ou um hash SHA-512. Debian e Ubuntu Linux, este valor pode ser gerado com o comando mkpasswd. Para outros distros Linux, o método de crypt da biblioteca de Crypt do Python pode ser utilizado para gerar o hash.|
-| Desativado| Indica se a conta está ativada. Defina esta propriedade como **$true** para se certificar de que esta conta está desativada e defina-o como **$false** para se certificar de que está ativada.|
-| PasswordChangeRequired| Indica se o utilizador pode alterar a palavra-passe. Defina esta propriedade como **$true** para se certificar de que o utilizador não é possível alterar a palavra-passe e defina-o como **$false** para permitir ao utilizador alterar a palavra-passe. O valor predefinido é **$false**. Esta propriedade é avaliada apenas se a conta de utilizador não existia anteriormente e está a ser criada.|
+| Palavra-passe| O hash da palavra-passe de utilizadores no formato adequado para o computador Linux. Normalmente, este é um SALT SHA-256, ou hash SHA-512. No Debian e Ubuntu Linux, este valor pode ser gerado com o comando mkpasswd. Para outras distribuições do Linux, o método crypt da biblioteca de Crypt do Python pode ser utilizado para gerar o hash.|
+| Desativado| Indica se a conta está ativada. Defina esta propriedade como **$true** para se certificar de que esta conta está desativada e defini-lo como **$false** para se certificar de que está ativada.|
+| PasswordChangeRequired| Indica se o utilizador pode alterar a palavra-passe. Defina esta propriedade como **$true** para se certificar de que o utilizador não é possível alterar a palavra-passe e defini-lo como **$false** para permitir que o utilizador altere a palavra-passe. O valor predefinido é **$false**. Esta propriedade é avaliada apenas se a conta de utilizador não existia anteriormente e está a ser criada.|
 | HomeDirectory| O diretório de raiz para o utilizador.|
-| GroupID| O ID do grupo principal para o utilizador.|
-| dependsOn | Indica que a configuração de outro recurso tem de executar antes deste recurso é configurado. Por exemplo, se o ID do bloco de script de configuração de recursos que pretende executar primeiro é "ResourceName" e o respetivo tipo é "ResourceType", a sintaxe para utilizar esta propriedade é `DependsOn = "[ResourceType]ResourceName"`.|
+| GroupID| O ID de grupo principal para o utilizador.|
+| DependsOn | Indica que a configuração de outro recurso deve ser executado antes deste recurso está configurado. Por exemplo, se o ID do bloco de script de configuração de recursos que pretende executar primeiro é "ResourceName" e seu tipo é "ResourceType", a sintaxe para utilizar esta propriedade é `DependsOn = "[ResourceType]ResourceName"`.|
 
 ## <a name="example"></a>Exemplo
 
-O exemplo seguinte assegura que o utilizador "monuser" existe e se é um membro do grupo "DBusers".
+O exemplo seguinte garante que o utilizador "monuser" existe e é um membro do grupo "DBusers".
 
 ```
 Import-DSCResource -Module nx

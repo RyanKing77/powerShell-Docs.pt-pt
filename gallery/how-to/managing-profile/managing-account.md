@@ -2,15 +2,15 @@
 ms.date: 09/05/2018
 contributor: JKeithB
 keywords: Galeria, o powershell, o cmdlet, o psgallery
-title: Definições de conta da galeria do PowerShell
-ms.openlocfilehash: dd7b8b3a99b5b7fbfec5d7f82b81dd6d5cfb906c
-ms.sourcegitcommit: e46b868f56f359909ff7c8230b1d1770935cce0e
+title: Definições da Conta da Galeria do PowerShell
+ms.openlocfilehash: ebe784ec5aae5ff3a4d444d12a168ef38aaef65f
+ms.sourcegitcommit: 98b7cfd8ad5718efa8e320526ca76c3cc4141d78
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 09/13/2018
-ms.locfileid: "45523390"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50002791"
 ---
-# <a name="powershell-gallery-account-settings"></a>Definições de conta da galeria do PowerShell
+# <a name="powershell-gallery-account-settings"></a>Definições da Conta da Galeria do PowerShell
 
 Sua conta da galeria do PowerShell é um nome visível publicamente que está ligado a uma identidade. Essa identidade é a um ID de Microsoft, como `user@hotmail.com` ou `user@outlook.com`, ou uma conta do Azure Active Directory (AAD).
 
@@ -34,7 +34,7 @@ Ao introduzir um novo endereço de e-mail, a galeria do PowerShell envia um e-ma
 Galeria do PowerShell fornece as seguintes opções de notificação:
 
 - Os utilizadores possam contactar-me através da galeria do PowerShell
-- Notificar-me quando um item é enviado para a galeria do PowerShell com a minha conta
+- Notificar-me quando um pacote é enviado para a galeria do PowerShell com a minha conta
 
 ![Alterar o endereço de e-mail](../../Images/PSGallery_AccountEmailOptions.png)
 

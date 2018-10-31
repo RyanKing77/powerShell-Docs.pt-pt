@@ -3,21 +3,21 @@ ms.date: 09/26/2017
 contributor: keithb
 keywords: cmdlet do powershell do galeria, psget
 title: Versões de pré-lançamento do módulo
-ms.openlocfilehash: 9c3ddb623fbcb7f4b3453dd70cdc56a8dc2e9f6a
-ms.sourcegitcommit: c3f1a83b59484651119630f3089aa51b6e7d4c3c
+ms.openlocfilehash: f58b5adfeba7ed06d231c76accbd52508c7d67d6
+ms.sourcegitcommit: 98b7cfd8ad5718efa8e320526ca76c3cc4141d78
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 07/26/2018
-ms.locfileid: "39268624"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50002774"
 ---
 # <a name="prerelease-module-versions"></a>Versões de pré-lançamento do módulo
 
-A partir da versão 1.6.0, PowerShellGet e da galeria do PowerShell fornecem suporte para versões superiores a 1.0.0 como uma versão de pré-lançamento de marcação. Antes desta funcionalidade, os itens de pré-lançamento eram limitadas a ter um início de versão com 0. O objetivo desses recursos é oferecem maior suporte para [SemVer v1.0.0](http://semver.org/spec/v1.0.0.html) Convenção de controle de versão sem perder com versões anteriores a compatibilidade com o PowerShell versões existentes e 3 ou acima versões do PowerShellGet. Este tópico concentra-se nos recursos específicos de módulo. As funcionalidades equivalentes para os scripts estão na [versões de pré-lançamento de Scripts](script-prerelease-support.md) tópico. Utilizar estas funcionalidades, os publicadores podem identificar um módulo ou o script como versão 2.5.0-alpha e mais tarde lançar uma versão de prontos para produção 2.5.0 que substitui a versão de pré-lançamento.
+A partir da versão 1.6.0, PowerShellGet e da galeria do PowerShell fornecem suporte para versões superiores a 1.0.0 como uma versão de pré-lançamento de marcação. Antes desta funcionalidade, os pacotes de pré-lançamento eram limitado a ter um início de versão com 0. O objetivo desses recursos é oferecem maior suporte para [SemVer v1.0.0](http://semver.org/spec/v1.0.0.html) Convenção de controle de versão sem perder com versões anteriores a compatibilidade com o PowerShell versões existentes e 3 ou acima versões do PowerShellGet. Este tópico concentra-se nos recursos específicos de módulo. As funcionalidades equivalentes para os scripts estão na [versões de pré-lançamento de Scripts](script-prerelease-support.md) tópico. Utilizar estas funcionalidades, os publicadores podem identificar um módulo ou o script como versão 2.5.0-alpha e mais tarde lançar uma versão de prontos para produção 2.5.0 que substitui a versão de pré-lançamento.
 
 Num alto nível, as funcionalidades de pré-lançamento do módulo incluem:
 
-- Adicionar uma cadeia de caracteres de pré-lançamento para a secção de PSData do manifesto do módulo identifica o módulo como uma versão de pré-lançamento. Quando o módulo é publicado na galeria do PowerShell, estes dados são extraídos de manifesto e utilizados para identificar itens de pré-lançamento.
-- Aquisição de itens de pré-lançamento exige a inclusão `-AllowPrerelease` sinalizador para os comandos do PowerShellGet `Find-Module`, `Install-Module`, `Update-Module`, e `Save-Module`. Se o sinalizador não for especificado, itens de pré-lançamento não serão apresentados.
+- Adicionar uma cadeia de caracteres de pré-lançamento para a secção de PSData do manifesto do módulo identifica o módulo como uma versão de pré-lançamento. Quando o módulo é publicado na galeria do PowerShell, estes dados são extraídos de manifesto e utilizados para identificar pacotes de pré-lançamento.
+- Aquisição de pacotes de pré-lançamento exige a inclusão `-AllowPrerelease` sinalizador para os comandos do PowerShellGet `Find-Module`, `Install-Module`, `Update-Module`, e `Save-Module`. Se o sinalizador não for especificado, os pacotes de pré-lançamento não será apresentado.
 - Versões do módulo exibidas pelo `Find-Module`, `Get-InstalledModule`e na galeria do PowerShell será apresentada como uma única cadeia de caracteres com a cadeia de pré-lançamento anexada, como no 2.5.0-alpha.
 
 Detalhes para as funcionalidades estão incluídas abaixo.
@@ -51,7 +51,7 @@ Os requisitos detalhados para a cadeia de pré-lançamento são:
 
 - Cadeia de caracteres de pré-lançamento só pode ser especificada quando o ModuleVersion é 3 segmentos para major. Isso se alinha com SemVer v1.0.0.
 - Um hífen é o delimitador entre o número de compilação e a cadeia de pré-lançamento. Um hífen pode ser incluído na cadeia de pré-lançamento, como o primeiro caráter, apenas.
-- A cadeia de caracteres de pré-lançamento pode conter apenas carateres de alfanuméricos ASCII [0-9A-Za - z-]. É melhor prática para iniciar a versão de pré-lançamento de cadeias de caracteres com um caractere alfa, como será mais fácil de identificar que esta é uma versão de pré-lançamento quando efetua a análise de uma lista de itens.
+- A cadeia de caracteres de pré-lançamento pode conter apenas carateres de alfanuméricos ASCII [0-9A-Za - z-]. É melhor prática para iniciar a versão de pré-lançamento de cadeias de caracteres com um caractere alfa, como será mais fácil de identificar que esta é uma versão de pré-lançamento quando efetua a análise de uma lista de pacotes.
 - Apenas SemVer v1.0.0 pré-lançamento cadeias de caracteres são suportadas neste momento. Cadeia de caracteres de pré-lançamento **não podem** conter qualquer um dos ponto ou + [. +], que é permitido em SemVer 2.0.
 - Exemplos de cadeia de caracteres de pré-lançamento suportado são:-alfa, - alpha1,-BETA, - update20171020
 
@@ -61,9 +61,9 @@ Ordem de classificação é alterado quando utilizar uma versão de pré-lançam
 
 Durante a publicação na galeria do PowerShell, por predefinição a versão do módulo a ser publicado tem de ter uma versão maior do que qualquer versão publicada anteriormente que está na galeria do PowerShell.
 
-## <a name="finding-and-acquiring-prerelease-items-using-powershellget-commands"></a>Encontrar e adquirir itens pré-lançamento utilizar comandos do PowerShellGet
+## <a name="finding-and-acquiring-prerelease-packages-using-powershellget-commands"></a>Encontrar e adquirir os pacotes de pré-lançamento utilizar comandos do PowerShellGet
 
-Lidando com itens de pré-lançamento usando Find-Module PowerShellGet, Install-Module, Update-Module, e os comandos de Save-Module é necessário adicionar o sinalizador - AllowPrerelease. Se não for especificado - AllowPrerelease, itens de pré-lançamento serão incluídos, se estiverem presentes. Se não for especificado o sinalizador - AllowPrerelease, itens de pré-lançamento não serão apresentados.
+Lidar com pacotes de pré-lançamento com atualização Find-Module PowerShellGet, Install-Module-Module, e os comandos de Save-Module é necessário adicionar o sinalizador - AllowPrerelease. Se não for especificado - AllowPrerelease, pacotes de pré-lançamento serão incluído, se estiverem presentes. Se não for especificado o sinalizador - AllowPrerelease, pacotes de pré-lançamento não será apresentado.
 
 As únicas exceções a esta nos comandos de módulo PowerShellGet são Get-InstalledModule e alguns casos com o módulo de desinstalação.
 

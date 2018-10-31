@@ -3,16 +3,16 @@ ms.date: 06/12/2017
 keywords: DSC, powershell, configuração, a configuração
 description: Fornece um mecanismo para gerir grupos locais no nó de destino.
 title: Recurso GroupSet de DSC
-ms.openlocfilehash: 487a76ca7703b2c57b940b4c5bd176eada6c8019
-ms.sourcegitcommit: 8b076ebde7ef971d7465bab834a3c2a32471ef6f
+ms.openlocfilehash: 6fa8e9637da896848e859dc60a42add12e973b34
+ms.sourcegitcommit: e76665315fd928bf85210778f1fea2be15264fea
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 07/06/2018
-ms.locfileid: "37892431"
+ms.lasthandoff: 10/30/2018
+ms.locfileid: "50226122"
 ---
 # <a name="dsc-groupset-resource"></a>Recurso GroupSet de DSC
 
-> Aplica-se a: Windows Windows PowerShell 5.0
+> Aplica-se a: O Windows PowerShell 5.0
 
 O **GroupSet** recursos no Windows PowerShell Desired State Configuration (DSC) fornece um mecanismo para gerir grupos locais no nó de destino. Este recurso é um [recursos compostos](authoringResourceComposite.md) que chama o [grupo de recursos](groupResource.md) para cada grupo especificado no `GroupName` parâmetro.
 

@@ -1,31 +1,31 @@
 ---
 ms.date: 06/12/2017
-keywords: DSC, do powershell, a configuração, a configuração
-title: Escrever um recurso personalizado de DSC com classes de PowerShell
-ms.openlocfilehash: f2500bfb41302cbeaf3cb9d23b843f26f01c1d5b
-ms.sourcegitcommit: 54534635eedacf531d8d6344019dc16a50b8b441
+keywords: DSC, powershell, configuração, a configuração
+title: Escrever um recurso personalizado do DSC com classes do PowerShell
+ms.openlocfilehash: a8f08323f2cced8a17de4224bea94a54ba5ef0cd
+ms.sourcegitcommit: e76665315fd928bf85210778f1fea2be15264fea
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 05/16/2018
-ms.locfileid: "34189470"
+ms.lasthandoff: 10/30/2018
+ms.locfileid: "50226088"
 ---
-# <a name="writing-a-custom-dsc-resource-with-powershell-classes"></a>Escrever um recurso personalizado de DSC com classes de PowerShell
+# <a name="writing-a-custom-dsc-resource-with-powershell-classes"></a>Escrever um recurso personalizado do DSC com classes do PowerShell
 
-> Aplica-se a: Windows do Windows PowerShell 5.0
+> Aplica-se a: O Windows PowerShell 5.0
 
-Com a introdução de classes do PowerShell no Windows PowerShell 5.0, agora pode definir um recurso de DSC através da criação de uma classe. A classe define o esquema e a implementação de recursos, pelo que não é necessário para criar um ficheiro MOF separado. A estrutura da pasta para um recurso com base na classe também é mais simples, porque um **DSCResources** pasta não é necessária.
+Com a introdução de classes do PowerShell no Windows PowerShell 5.0, agora pode definir um recurso de DSC através da criação de uma classe. A classe define o esquema e a implementação do recurso, para que não é necessário para criar um arquivo separado do MOF. A estrutura de pastas para um recurso baseado na classe também é mais simples, uma vez que um **DSCResources** pasta não é necessária.
 
-Num recurso DSC baseado em classes, o esquema está definido como propriedades da classe que podem ser modificadas com os atributos para especificar o tipo de propriedade... O recurso é implementado por **Get()**, **set ()**, e **Test()** métodos (equivalente para o **Get-TargetResource**, **Conjunto TargetResource**, e **teste TargetResource** as funções de um recurso de script.
+Num recurso de DSC baseados em classe, o esquema é definido como propriedades da classe que podem ser modificados com atributos para especificar o tipo de propriedade.... O recurso é implementado pela **GET ()**, **Set()**, e **Test()** métodos (equivalente para o **Get-TargetResource**, **Set-TargetResource**, e **teste TargetResource** funções num recurso de script.
 
-Este tópico, vamos criar um recurso simple designado **FileResource** que gere um ficheiro num caminho especificado.
+Neste tópico, vamos criar um recurso simple designado **FileResource** que gere um ficheiro num caminho especificado.
 
-Para obter mais informações sobre os recursos de DSC, consulte [criar Windows PowerShell pretendido estado configuração recursos personalizados](authoringResource.md)
+Para obter mais informações sobre os recursos de DSC, consulte [criar Windows PowerShell Desired State Configuration recursos personalizados](authoringResource.md)
 
 >**Nota:** coleções genéricas não são suportadas em recursos baseados na classe.
 
 ## <a name="folder-structure-for-a-class-resource"></a>Estrutura de pastas para um recurso de classe
 
-Para implementar um recurso personalizado de DSC com uma classe de PowerShell, crie a seguinte estrutura de pasta. A classe está definida no **MyDscResource.psm1** e o manifesto de módulo está definido no **MyDscResource.psd1**.
+Para implementar um recurso personalizado do DSC com uma classe de PowerShell, crie a seguinte estrutura de pasta. A classe é definida no **MyDscResource.psm1** e o manifesto de módulo é definido no **MyDscResource.psd1**.
 
 ```
 $env:ProgramFiles\WindowsPowerShell\Modules (folder)
@@ -36,7 +36,7 @@ $env:ProgramFiles\WindowsPowerShell\Modules (folder)
 
 ## <a name="create-the-class"></a>Criar a classe
 
-Utilize a palavra-chave da classe para criar uma classe do PowerShell. Para especificar que uma classe é um recurso de DSC, utilize o **DscResource()** atributo. O nome da classe é o nome do recurso de DSC.
+Utilize a palavra-chave de classe para criar uma classe do PowerShell. Para especificar que uma classe é um recurso de DSC, utilize o **DscResource()** atributo. O nome da classe é o nome do recurso de DSC.
 
 ```powershell
 [DscResource()]
@@ -44,9 +44,9 @@ class FileResource {
 }
 ```
 
-### <a name="declare-properties"></a>Declarar as propriedades
+### <a name="declare-properties"></a>Declarar propriedades
 
-O esquema de recursos de DSC está definido como propriedades da classe. Iremos declarar três propriedades da seguinte forma.
+O esquema de recursos de DSC é definido como propriedades da classe. Vamos declarar três propriedades da seguinte forma.
 
 ```powershell
 [DscProperty(Key)]
@@ -64,12 +64,12 @@ O esquema de recursos de DSC está definido como propriedades da classe. Iremos 
 
 Tenha em atenção que as propriedades são modificadas por atributos. O significado dos atributos é o seguinte:
 
-- **DscProperty(Key)**: A propriedade é necessária. A propriedade é uma chave. Os valores de todas as propriedades marcado como chaves têm de combinar para identificar exclusivamente uma instância de recurso dentro de uma configuração.
+- **DscProperty(Key)**: A propriedade é necessária. A propriedade é uma chave. Os valores de todas as propriedades marcado como chaves devem combinar para identificar exclusivamente uma instância de recursos dentro de uma configuração.
 - **DscProperty(Mandatory)**: A propriedade é necessária.
-- **DscProperty(NotConfigurable)**: A propriedade é só de leitura. Propriedades marcadas com este atributo não pode ser definidas por uma configuração, mas são preenchidas pelo **Get()** método quando presente.
-- **DscProperty()**: A propriedade é configurável, mas não é necessária.
+- **DscProperty(NotConfigurable)**: A propriedade é só de leitura. Propriedades marcadas com esse atributo não pode ser definidas por uma configuração, mas são preenchidas pela **GET ()** método quando presente.
+- **DscProperty()**: A propriedade pode ser configurada, mas não é necessário.
 
-O **$Path** e **$SourcePath** propriedades são ambas as cadeias. O **$CreationTime** é um [DateTime](https://technet.microsoft.com/library/system.datetime.aspx) propriedade. O **$Ensure** propriedade é um tipo de enumeração definido do seguinte modo.
+O **$Path** e **$SourcePath** propriedades são ambas as cadeias de caracteres. O **$CreationTime** é um [DateTime](https://technet.microsoft.com/library/system.datetime.aspx) propriedade. O **$Ensure** propriedade é um tipo de enumeração, definido da seguinte forma.
 
 ```powershell
 enum Ensure
@@ -79,11 +79,11 @@ enum Ensure
 }
 ```
 
-### <a name="implementing-the-methods"></a>Implementar os métodos
+### <a name="implementing-the-methods"></a>Implementando os métodos
 
-O **Get()**, **set ()**, e **Test()** métodos são análogos ao **Get-TargetResource**, **TargetResource conjunto** , e **teste TargetResource** as funções de um recurso de script.
+O **GET ()**, **Set()**, e **Test()** métodos são análogos para o **Get-TargetResource**, **TargetResource de conjunto** , e **teste TargetResource** funções num recurso de script.
 
-Este código também inclui a função de CopyFile(), uma função de programa auxiliar que copia o ficheiro de **$SourcePath** para **$Path**.
+Esse código também inclui a função de CopyFile(), uma função auxiliar que copia o ficheiro a partir **$SourcePath** ao **$Path**.
 
 ```powershell
 
@@ -216,8 +216,8 @@ Este código também inclui a função de CopyFile(), uma função de programa a
     }
 ```
 
-### <a name="the-complete-file"></a>O ficheiro completo
-O ficheiro de classes completa segue.
+### <a name="the-complete-file"></a>O arquivo completo
+Segue-se o arquivo de classe completa.
 
 ```powershell
 enum Ensure
@@ -415,9 +415,9 @@ class FileResource
 ```
 
 
-## <a name="create-a-manifest"></a>Crie um manifesto
+## <a name="create-a-manifest"></a>Criar um manifesto
 
-Para disponibilizar um recurso com base na classe para o motor de DSC, tem de incluir um **DscResourcesToExport** instrução no ficheiro de manifesto que dá instruções ao módulo a exportar recurso. A nossa manifesto tem o seguinte aspeto:
+Para disponibilizar um recurso baseado em classes para o motor de DSC, tem de incluir um **DscResourcesToExport** declaração no arquivo de manifesto que instrui o módulo para exportar o recurso. Nosso manifesto tem esta aparência:
 
 ```powershell
 @{
@@ -455,7 +455,7 @@ PowerShellVersion = '5.0'
 
 ## <a name="test-the-resource"></a>O recurso de teste
 
-Depois de guardar a classe e ficheiros de manifesto na estrutura da pasta, conforme descrito anteriormente, pode criar uma configuração que utiliza o novo recurso. Para obter informações sobre como executar uma configuração de DSC, consulte [Enacting configurações](enactingConfigurations.md). A seguinte configuração irá verificar se o ficheiro em `c:\test\test.txt` existe e se não, copia o ficheiro de `c:\test.txt` (deve criar `c:\test.txt` antes de executar a configuração).
+Depois de guardar a classe e os ficheiros de manifesto na estrutura de pastas, conforme descrito anteriormente, pode criar uma configuração que utiliza o novo recurso. Para obter informações sobre como executar uma configuração de DSC, veja [aplicar configurações](enactingConfigurations.md). A seguinte configuração verificará se o ficheiro no `c:\test\test.txt` existe e, se não tiver, copia o ficheiro a partir `c:\test.txt` (deve criar `c:\test.txt` antes de executar a configuração).
 
 ```powershell
 Configuration Test
@@ -476,18 +476,18 @@ Start-DscConfiguration -Wait -Force Test
 
 >**Nota:** **PsDscRunAsCredential** é suportada no PowerShell 5.0 e posterior.
 
-O **PsDscRunAsCredential** propriedade pode ser utilizada em [configurações de DSC](configurations.md) blocos de recurso para especificar que o recurso deve ser executado sob um conjunto especificado de credenciais.
-Para obter mais informações, consulte [DSC em execução com as credenciais de utilizador](runAsUser.md).
+O **PsDscRunAsCredential** propriedade pode ser utilizada em [configurações de DSC](configurations.md) bloco de recurso para especificar que o recurso deve ser executado num conjunto especificado de credenciais.
+Para obter mais informações, consulte [a executar o DSC com as credenciais de utilizador](runAsUser.md).
 
-### <a name="require-or-disallow-psdscrunascredential-for-your-resource"></a>Exigir ou não permitir PsDscRunAsCredential para o seu recurso
+### <a name="require-or-disallow-psdscrunascredential-for-your-resource"></a>Exigir ou não PsDscRunAsCredential para o seu recurso
 
-O **DscResource()** atributo assume um parâmetro opcional **RunAsCredential**.
+O **DscResource()** atributo utiliza um parâmetro opcional **RunAsCredential**.
 Este parâmetro assume um de três valores:
 
-- `Optional` **PsDscRunAsCredential** é opcional para as configurações que chamar este recurso. Este é o valor predefinido.
-- `Mandatory` **PsDscRunAsCredential** devem ser utilizadas para qualquer configuração que chama este recurso.
-- `NotSupported` Não é possível utilizar as configurações que chamar este recurso **PsDscRunAsCredential**.
-- `Default` Igual ao `Optional`.
+- `Optional` **PsDscRunAsCredential** é opcional para as configurações que chamam este recurso. Este é o valor predefinido.
+- `Mandatory` **PsDscRunAsCredential** devem ser utilizados para qualquer configuração que chama este recurso.
+- `NotSupported` As configurações que chamam este recurso não é possível utilizar **PsDscRunAsCredential**.
+- `Default` Mesmo que `Optional`.
 
 Por exemplo, utilize o seguinte atributo para especificar que o recurso personalizado não suporta a utilização **PsDscRunAsCredential**:
 
@@ -497,11 +497,11 @@ class FileResource {
 }
 ```
 
-### <a name="access-the-user-context"></a>O contexto de utilizador de acesso
+### <a name="access-the-user-context"></a>Acessar o contexto de utilizador
 
-Para aceder ao contexto de utilizador a partir de um recurso personalizado, pode utilizar a variável automática `$global:PsDscContext`.
+Para acessar o contexto de utilizador a partir de um recurso personalizado, pode utilizar a variável automática `$global:PsDscContext`.
 
-Por exemplo o seguinte código teria de escrever o contexto de utilizador na qual o recurso está em execução no fluxo de saída verbosa:
+Por exemplo, o código a seguir escreveria o contexto do usuário sob a qual o recurso está em execução no fluxo de saída detalhada:
 
 ```powershell
 if (PsDscContext.RunAsUser) {
@@ -511,4 +511,4 @@ if (PsDscContext.RunAsUser) {
 
 ## <a name="see-also"></a>Consulte Também
 ### <a name="concepts"></a>Conceitos
-[Criar recursos de configuração do estado pretendido do PowerShell de personalizada do Windows](authoringResource.md)
+[Criar recursos do Windows personalizados do PowerShell Desired State Configuration](authoringResource.md)

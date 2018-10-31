@@ -3,18 +3,18 @@ ms.date: 03/27/2018
 contributor: JKeithB
 keywords: Galeria, powershell, psgallery, com o GDPR
 title: Conformidade do GDPR de galeria do PowerShell
-ms.openlocfilehash: 14b82fa07df52f02f0d7577cb0eef70faa4285a2
-ms.sourcegitcommit: 8b076ebde7ef971d7465bab834a3c2a32471ef6f
+ms.openlocfilehash: fb1191d8a1cd12d5994e41238c384eb504d0c261
+ms.sourcegitcommit: 98b7cfd8ad5718efa8e320526ca76c3cc4141d78
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 07/06/2018
-ms.locfileid: "37893251"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50002655"
 ---
 # <a name="powershell-gallery-gdpr-compliance"></a>Conformidade do GDPR de galeria do PowerShell
 
 ## <a name="overview"></a>Descrição geral
 
-Em Maio de 2018, uma lei de privacidade na Europa, os dados de proteção Regulamento geral (GDPR), entra em vigor.
+Em Maio de 2018, uma lei de privacidade na Europa, os dados de proteção Regulamento geral (GDPR), que demorou o efeito.
 O GDPR impõe as regras de novo em empresas, organismos públicos, sem fins lucrativos e outras organizações que oferta bens e serviços a pessoas localizadas na União Europeia (UE), ou que recolhem e analisam os dados associados a residentes da UE.
 O GDPR aplica-se, independentemente de onde estão localizados.
 
@@ -26,16 +26,16 @@ O GDPR aplica-se, independentemente de onde estão localizados.
 A galeria do PowerShell armazena as seguintes informações que possam ser fornecidas por utilizadores, que podem conter informações pessoais:
 
 - Conta da galeria do PowerShell
-- Itens publicados na galeria do PowerShell
+- Pacotes publicados na galeria do PowerShell
 - Correspondência de e-mail com a equipe de galeria do PowerShell
 
 A maioria dos usuários não crie uma conta de galeria do PowerShell.
-Não é necessária uma conta, a menos que pretende publicar um item ou utilizar a funcionalidade de "Contacte o proprietário" na galeria do PowerShell.
+Não é necessária uma conta, a menos que pretende publicar um pacote ou utilizar a funcionalidade de "Contacte o proprietário" na galeria do PowerShell.
 Diferente de correspondência de e-mail iniciada pelo utilizador, a galeria do PowerShell não armazena dados pessoalmente identificáveis para os utilizadores que não criou uma conta.
 
-Os utilizadores que criam uma conta de galeria do PowerShell podem publicar itens da galeria do PowerShell.
-Esses itens devem ser de código do PowerShell, mas poderão conter outras informações incluindo informações pessoais.
-As informações abaixo irão mostrar como pode obter todos os itens tiver publicado na galeria do PowerShell.
+Os utilizadores que criam uma conta de galeria do PowerShell podem publicar pacotes da galeria do PowerShell.
+Esses pacotes são esperados que seja o código do PowerShell, mas poderão conter outras informações incluindo informações pessoais.
+As informações abaixo irão mostrar como pode obter todos os pacotes de ter publicado na galeria do PowerShell.
 
 ## <a name="dsr-export-of-powershell-gallery-data"></a>Exportação DSR de dados da galeria do PowerShell
 
@@ -45,9 +45,9 @@ As secções seguintes descrevem como a galeria do PowerShell suporta pedidos de
 
 Correspondência de e-mail pode incluir qualquer um dos seguintes procedimentos:
 
-- E-mail enviado para os proprietários de itens, se a análise de código analisa detetou um problema com qualquer item que tiverem publicado na galeria do PowerShell de galeria do PowerShell
+- E-mail enviado para os proprietários de galeria do PowerShell pacotes se a análise de código analisa detetou um problema com qualquer pacote que tiverem publicado na galeria do PowerShell
 - E-mail enviado por qualquer pessoa para o agrupamento de galeria do PowerShell com o endereço de e-mail na página "Fale Conosco" [cgadmin@microsoft.com](mailto:cgadmin@microsoft.com)
-- Registado utilizadores que utilizam a funcionalidade de "Contacte o proprietário" na galeria do PowerShell para enviar um e-mail para o proprietário de um item na galeria do PowerShell
+- Registado utilizadores que utilizam a funcionalidade de "Contacte o proprietário" na galeria do PowerShell para enviar um e-mail para o proprietário de um pacote na galeria do PowerShell
 
 Mensagens de e-mail enviadas por ou para a galeria do PowerShell têm uma política de retenção de 90 dias para suportar as investigações de segurança possível de código malicioso deverão ser detetado na galeria do PowerShell.
 Mensagens de correio eletrónico são eliminadas por política após 90 dias.
@@ -65,13 +65,13 @@ Se tiver criado uma conta de galeria do PowerShell, pode encontrar todas as info
 
 Se tiver criado mais de uma conta na galeria do PowerShell, terá de repetir essas etapas para cada conta.
 
-### <a name="items-in-the-powershell-gallery"></a>Itens da galeria do PowerShell
+### <a name="packages-in-the-powershell-gallery"></a>Pacotes na galeria do PowerShell
 
-Para facilitar a exportar itens publicados na galeria do PowerShell, publicamos o script "GetPSGalleryItemsForAuthor" para a galeria do PowerShell.
-Este script exporta uma cópia de cada versão de cada item inserida na galeria do PowerShell com base nas informações de autor, armazenadas no item.
+Para facilitar a exportar pacotes publicados na galeria do PowerShell, publicamos o script "GetPSGalleryItemsForAuthor" para a galeria do PowerShell.
+Este script exporta uma cópia de cada versão de cada pacote inserida na galeria do PowerShell com base nas informações de autor, armazenadas no pacote.
 
 > [!NOTE]
-> O autor é armazenado no manifesto do item quando publica o seu item.
+> O autor é armazenado no manifesto do pacote quando publica o seu pacote.
 > Não é garantido que o autor é a mesma identidade que a conta que utiliza na galeria do PowerShell.
 > Se usar algum outro valor no campo de autor, terá de fornecer esse valor ao utilizar este script.
 
@@ -88,16 +88,16 @@ Em seguida, pode executar o script diretamente, executando os seguintes comandos
 .\GetPSGalleryItemsForAuthor.ps1
 ```
 
-Será solicitado a fornecer o autor e uma pasta no seu sistema onde pretende que os itens a serem salvos.
+Será solicitado a fornecer o autor e uma pasta no seu sistema onde pretende que os pacotes a serem salvos.
 
 ## <a name="deleting-personal-data-from-the-powershell-gallery"></a>A eliminar os dados pessoais da galeria do PowerShell
 
-Para eliminar a sua conta da galeria do PowerShell ou de qualquer item que é proprietário na galeria do PowerShell, envie um e-mail para cgadmin@microsoft.com com o título: "Pedido de GDPR para itens relacionados a esta conta".
+Para eliminar a sua conta da galeria do PowerShell ou de qualquer pacote que é proprietário na galeria do PowerShell, envie um e-mail para cgadmin@microsoft.com com o título: "Pedido de GDPR para itens relacionados a esta conta".
 No corpo da mensagem de estado as informações que pretende que foi eliminada. Por exemplo:
 
-- Elimine x.y. z da versão de meu item de "nome do item"
-- Elimine todas as versões do meu item "nome do item"
+- Elimine x.y. z da versão de meu pacote do "nome do pacote"
+- Elimine todas as versões do meu pacote do "nome do pacote"
 - Elimine a minha conta da galeria do PowerShell
 
 Os administradores de galeria do PowerShell irão responder dentro de 7 dias de negócios.
-Os itens especificados serão eliminados dentro de 30 dias após a solicitação é enviada.
+Os pacotes especificados serão eliminados dentro de 30 dias após a solicitação é enviada.
