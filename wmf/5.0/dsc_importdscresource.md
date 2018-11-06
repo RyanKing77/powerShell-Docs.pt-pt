@@ -1,29 +1,29 @@
 ---
 ms.date: 06/12/2017
 keywords: wmf,powershell,setup
-ms.openlocfilehash: ce5afc2f90f78433b64bf5b41946fc7506c43504
-ms.sourcegitcommit: 54534635eedacf531d8d6344019dc16a50b8b441
+ms.openlocfilehash: 46a278b83edb9d8e3d75b0874603710d416be3b5
+ms.sourcegitcommit: f4247d3f91d06ec392c4cd66921ce7d0456a2bd9
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 05/17/2018
-ms.locfileid: "34219655"
+ms.lasthandoff: 11/05/2018
+ms.locfileid: "50998525"
 ---
-# <a name="import-dscresource-keyword-supports--moduleversion-parameter"></a><span data-ttu-id="e6944-102">Palavra-chave de importação DscResource suporta o parâmetro - ModuleVersion</span><span class="sxs-lookup"><span data-stu-id="e6944-102">Import-DscResource keyword supports -ModuleVersion parameter</span></span>
+# <a name="import-dscresource-keyword-supports--moduleversion-parameter"></a><span data-ttu-id="4d1f5-102">Palavra-chave de Import-DscResource suporta o parâmetro - ModuleVersion</span><span class="sxs-lookup"><span data-stu-id="4d1f5-102">Import-DscResource keyword supports -ModuleVersion parameter</span></span>
 
-<span data-ttu-id="e6944-103">Foi adicionado um novo parâmetro para o `Import-DscResource` dinâmica palavra-chave disponível durante a criação de configurações de DSC.</span><span class="sxs-lookup"><span data-stu-id="e6944-103">We have added a new parameter to the `Import-DscResource` dynamic keyword available when authoring DSC configurations.</span></span> <span data-ttu-id="e6944-104">Os autores de configuração podem agora especificar exatamente que versão do módulo para carregar os recursos de DSC de.</span><span class="sxs-lookup"><span data-stu-id="e6944-104">Configuration authors can now specify exactly which module version to load the DSC resources from.</span></span> <span data-ttu-id="e6944-105">A nova sintaxe da palavra-chave é:</span><span class="sxs-lookup"><span data-stu-id="e6944-105">The new syntax of the keyword is:</span></span>
+<span data-ttu-id="4d1f5-103">Adicionámos um novo parâmetro para o `Import-DscResource` palavra-chave dynamic disponível durante a criação de configurações de DSC.</span><span class="sxs-lookup"><span data-stu-id="4d1f5-103">We have added a new parameter to the `Import-DscResource` dynamic keyword available when authoring DSC configurations.</span></span> <span data-ttu-id="4d1f5-104">Podem especificar exatamente qual versão do módulo para carregar os recursos de DSC de autores de configuração.</span><span class="sxs-lookup"><span data-stu-id="4d1f5-104">Configuration authors can now specify exactly which module version to load the DSC resources from.</span></span> <span data-ttu-id="4d1f5-105">A nova sintaxe da palavra-chave é:</span><span class="sxs-lookup"><span data-stu-id="4d1f5-105">The new syntax of the keyword is:</span></span>
 
 ```powershell
 Import-DscResource [-Name <ResourceName(s)>] [-ModuleName <ModuleName(s)>] [-ModuleVersion <ModuleVersion>]
 ```
 
-* <span data-ttu-id="e6944-106">**Nome**: os nomes de um ou mais recursos para importar.</span><span class="sxs-lookup"><span data-stu-id="e6944-106">**Name**: Names of one or more resources to import.</span></span>
-* <span data-ttu-id="e6944-107">**ModuleName**: os nomes de módulo ou ModuleSpecification objetos de um ou mais módulos para importar.</span><span class="sxs-lookup"><span data-stu-id="e6944-107">**ModuleName**: Module names or ModuleSpecification objects of one or more modules to import.</span></span>
-* <span data-ttu-id="e6944-108">**ModuleVersion**: versão de importação do módulo olocar.</span><span class="sxs-lookup"><span data-stu-id="e6944-108">**ModuleVersion**: Version of module ot import.</span></span> <span data-ttu-id="e6944-109">Se utilizados, ModuleName tem de representar apenas um módulo de por nome.</span><span class="sxs-lookup"><span data-stu-id="e6944-109">If used, ModuleName must represent only one module by name.</span></span>
+* <span data-ttu-id="4d1f5-106">**Nome**: nomes de um ou mais recursos para importar.</span><span class="sxs-lookup"><span data-stu-id="4d1f5-106">**Name**: Names of one or more resources to import.</span></span>
+* <span data-ttu-id="4d1f5-107">**ModuleName**: nomes de módulos ou ModuleSpecification objetos de um ou mais módulos para importar.</span><span class="sxs-lookup"><span data-stu-id="4d1f5-107">**ModuleName**: Module names or ModuleSpecification objects of one or more modules to import.</span></span>
+* <span data-ttu-id="4d1f5-108">**ModuleVersion**: versão do módulo para importar.</span><span class="sxs-lookup"><span data-stu-id="4d1f5-108">**ModuleVersion**: Version of module to import.</span></span> <span data-ttu-id="4d1f5-109">Se for utilizado, ModuleName têm de representar apenas um módulo por nome.</span><span class="sxs-lookup"><span data-stu-id="4d1f5-109">If used, ModuleName must represent only one module by name.</span></span>
 
-<span data-ttu-id="e6944-110">No ISE do Windows PowerShell, aparece com IntelliSense:</span><span class="sxs-lookup"><span data-stu-id="e6944-110">In the Windows PowerShell ISE, it shows up with IntelliSense:</span></span>
+<span data-ttu-id="4d1f5-110">No ISE do Windows PowerShell, esta é apresentada com o IntelliSense:</span><span class="sxs-lookup"><span data-stu-id="4d1f5-110">In the Windows PowerShell ISE, it shows up with IntelliSense:</span></span>
 
 ![](../images/Import-DscResource-Modversion.jpg)
 
-<span data-ttu-id="e6944-111">**Tenha em atenção**: o `–ModuleVersion` parâmetro só pode ser utilizado em combinação com o `–ModuleName` parâmetro.</span><span class="sxs-lookup"><span data-stu-id="e6944-111">**Note**: the `–ModuleVersion` parameter can only be used in combination with the `–ModuleName` parameter.</span></span> <span data-ttu-id="e6944-112">Não pode ser utilizado com os nomes de recursos com apenas o `–Name` parâmetro.</span><span class="sxs-lookup"><span data-stu-id="e6944-112">It cannot be used with resource names using only the `–Name` parameter.</span></span>
+<span data-ttu-id="4d1f5-111">**Tenha em atenção**: a `–ModuleVersion` parâmetro só pode ser utilizado em combinação com o `–ModuleName` parâmetro.</span><span class="sxs-lookup"><span data-stu-id="4d1f5-111">**Note**: the `–ModuleVersion` parameter can only be used in combination with the `–ModuleName` parameter.</span></span> <span data-ttu-id="4d1f5-112">Não pode ser utilizado com nomes de recursos utilizando apenas a `–Name` parâmetro.</span><span class="sxs-lookup"><span data-stu-id="4d1f5-112">It cannot be used with resource names using only the `–Name` parameter.</span></span>
 
-<span data-ttu-id="e6944-113">Antes desta ação, a única forma de especificar a versão do módulo ao carregar os recursos de DSC foi, utilizando o objeto de especificação do módulo por ex.: `–ModuleName @{ModuleName="UserConfigProvider";ModuleVersion="3.0"}`</span><span class="sxs-lookup"><span data-stu-id="e6944-113">Before this, the only way to specify the module version when loading DSC resources was by using the Module specification object e.g.: `–ModuleName @{ModuleName="UserConfigProvider";ModuleVersion="3.0"}`</span></span>
+<span data-ttu-id="4d1f5-113">Antes disto, a única forma de especificar a versão do módulo, ao carregar os recursos de DSC era usando o objeto de especificação de módulo p. ex.: `–ModuleName @{ModuleName="UserConfigProvider";ModuleVersion="3.0"}`</span><span class="sxs-lookup"><span data-stu-id="4d1f5-113">Before this, the only way to specify the module version when loading DSC resources was by using the Module specification object e.g.: `–ModuleName @{ModuleName="UserConfigProvider";ModuleVersion="3.0"}`</span></span>
