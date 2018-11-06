@@ -1,29 +1,29 @@
 ---
 ms.date: 06/12/2017
 keywords: wmf,powershell,setup
-ms.openlocfilehash: ce5afc2f90f78433b64bf5b41946fc7506c43504
-ms.sourcegitcommit: 54534635eedacf531d8d6344019dc16a50b8b441
+ms.openlocfilehash: 46a278b83edb9d8e3d75b0874603710d416be3b5
+ms.sourcegitcommit: f4247d3f91d06ec392c4cd66921ce7d0456a2bd9
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 05/17/2018
-ms.locfileid: "34219655"
+ms.lasthandoff: 11/05/2018
+ms.locfileid: "50998525"
 ---
-# <a name="import-dscresource-keyword-supports--moduleversion-parameter"></a>Palavra-chave de importação DscResource suporta o parâmetro - ModuleVersion
+# <a name="import-dscresource-keyword-supports--moduleversion-parameter"></a>Palavra-chave de Import-DscResource suporta o parâmetro - ModuleVersion
 
-Foi adicionado um novo parâmetro para o `Import-DscResource` dinâmica palavra-chave disponível durante a criação de configurações de DSC. Os autores de configuração podem agora especificar exatamente que versão do módulo para carregar os recursos de DSC de. A nova sintaxe da palavra-chave é:
+Adicionámos um novo parâmetro para o `Import-DscResource` palavra-chave dynamic disponível durante a criação de configurações de DSC. Podem especificar exatamente qual versão do módulo para carregar os recursos de DSC de autores de configuração. A nova sintaxe da palavra-chave é:
 
 ```powershell
 Import-DscResource [-Name <ResourceName(s)>] [-ModuleName <ModuleName(s)>] [-ModuleVersion <ModuleVersion>]
 ```
 
-* **Nome**: os nomes de um ou mais recursos para importar.
-* **ModuleName**: os nomes de módulo ou ModuleSpecification objetos de um ou mais módulos para importar.
-* **ModuleVersion**: versão de importação do módulo olocar. Se utilizados, ModuleName tem de representar apenas um módulo de por nome.
+* **Nome**: nomes de um ou mais recursos para importar.
+* **ModuleName**: nomes de módulos ou ModuleSpecification objetos de um ou mais módulos para importar.
+* **ModuleVersion**: versão do módulo para importar. Se for utilizado, ModuleName têm de representar apenas um módulo por nome.
 
-No ISE do Windows PowerShell, aparece com IntelliSense:
+No ISE do Windows PowerShell, esta é apresentada com o IntelliSense:
 
 ![](../images/Import-DscResource-Modversion.jpg)
 
-**Tenha em atenção**: o `–ModuleVersion` parâmetro só pode ser utilizado em combinação com o `–ModuleName` parâmetro. Não pode ser utilizado com os nomes de recursos com apenas o `–Name` parâmetro.
+**Tenha em atenção**: a `–ModuleVersion` parâmetro só pode ser utilizado em combinação com o `–ModuleName` parâmetro. Não pode ser utilizado com nomes de recursos utilizando apenas a `–Name` parâmetro.
 
-Antes desta ação, a única forma de especificar a versão do módulo ao carregar os recursos de DSC foi, utilizando o objeto de especificação do módulo por ex.: `–ModuleName @{ModuleName="UserConfigProvider";ModuleVersion="3.0"}`
+Antes disto, a única forma de especificar a versão do módulo, ao carregar os recursos de DSC era usando o objeto de especificação de módulo p. ex.: `–ModuleName @{ModuleName="UserConfigProvider";ModuleVersion="3.0"}`
