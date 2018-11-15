@@ -7,9 +7,9 @@ items:
   href: getting-started.md
 - name: Procedimentos
   items:
-  - name: Localizar Itens na Galeria
+  - name: Finding Packages in the Gallery (Encontrar Pacotes na Galeria)
     items:
-    - name: Searching For Items (Procurar Itens)
+    - name: Searching For Packages (Procurar Pacotes)
       href: how-to/finding-packages/search-syntax.md
     - name: Searching by PSEdition (Procurar por PSEdition)
       href: how-to/finding-packages/searching-by-psedition.md
@@ -17,17 +17,17 @@ items:
       href: how-to/finding-packages/filtering-packages.md
   - name: Publicar na Galeria
     items:
-    - name: Criar e publicar itens
+    - name: Creating and publishing Packages (Criar e Publicar Pacotes)
       href: how-to/publishing-packages/publishing-a-package.md
     - name: Criar uma Conta PowerShellGallery
       href: how-to/publishing-packages/creating-an-account.md
-    - name: Remover itens da lista
+    - name: Unlisting Packages (Remover Pacotes de Listas)
       href: how-to/publishing-packages/unlisting-packages.md
-    - name: Eliminar itens
+    - name: Deleting Packages (Eliminar Pacotes)
       href: how-to/publishing-packages/deleting-packages.md
-    - name: Gerir os proprietários de itens
+    - name: Managing Packages owners (Gerir os Proprietários de Pacotes)
       href: how-to/publishing-packages/managing-package-owners.md
-  - name: Trabalhar com Itens
+  - name: Working with Packages (Trabalhar com Pacotes)
     items:
     - name: Vista de Lista de Ficheiros
       href: how-to/working-with-packages/filelist-view.md
@@ -35,9 +35,9 @@ items:
       href: how-to/working-with-packages/deploy-to-azure-automation.md
     - name: Transferência manual de pacotes
       href: how-to/working-with-packages/manual-download.md
-    - name: Items that Require License Acceptance (Itens que Precisam da Aceitação da Licença)
+    - name: Packages that Require License Acceptance (Pacotes que Precisam da Aceitação de Licenças)
       href: how-to/working-with-packages/packages-that-require-license-acceptance.md
-    - name: Contactar os proprietários de itens
+    - name: Contacting Packages owners (Contactar os Proprietários de Pacotes)
       href: how-to/working-with-packages/contacting-package-owners.md
     - name: Fornecer Comentários através das Redes Sociais ou dos Comentários
       href: how-to/working-with-packages/social-media-feedback.md
@@ -47,11 +47,13 @@ items:
       href: how-to/managing-profile/managing-account.md
     - name: Gerir chaves de API
       href: how-to/managing-profile/creating-apikeys.md
+  - name: Working with Local PowerShell Get Repositories (Trabalhar com Repositórios PowerShellGet Locais)
+    href: how-to/working-with-local-psrepositories.md
 - name: Conceitos
   items:
   - name: Orientações e melhores práticas de publicação
     href: concepts/publishing-guidelines.md
-  - name: Manifesto de item e IU da Galeria
+  - name: Packages manifest and Gallery UI (Manifesto de Pacotes e IU da Galeria)
     href: concepts/package-manifest-affecting-ui.md
   - name: Exigir PSEditions Específicos
     items:
@@ -65,11 +67,11 @@ items:
       href: concepts/script-license-acceptance.md
     - name: Requiring License Acceptance for Modules (Exigir a Aceitação de Licença para Módulos)
       href: concepts/module-license-acceptance.md
-  - name: Definir Itens como Pré-lançamento
+  - name: Defining Packages as PreRelease (Definir Pacotes como Pré-Lançamento)
     items:
-    - name: Defining a Module as PreRelease (Definir um Módulo como Pré-lançamento)
+    - name: Defining a Module as PreRelease (Definir um Módulo como Pré-Lançamento)
       href: concepts/module-prerelease-support.md
-    - name: Defining a Script as PreRelease (Definir um Script como Pré-lançamento)
+    - name: Defining a Script as PreRelease (Definir um Script como Pré-Lançamento)
       href: concepts/script-prerelease-support.md
   - name: Perfil da Regra PSScriptAnalyzer
     href: concepts/scriptanalyzer-rule-profile.md
@@ -91,9 +93,9 @@ items:
   href: faqs.md
 - name: Cmdlets do PowerShellGet
   href: https://docs.microsoft.com/powershell/module/powershellget/
-ms.openlocfilehash: 386e86b4a27ea840cc688b47f597e845f041af60
-ms.sourcegitcommit: 98b7cfd8ad5718efa8e320526ca76c3cc4141d78
+ms.openlocfilehash: 123607d3ce1139511ee0006b9ec6ed2e9ae99010
+ms.sourcegitcommit: 91786b03704fbd2d185f674df0bc67faddfb6288
 ms.translationtype: HT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50002330"
+ms.lasthandoff: 11/14/2018
+ms.locfileid: "51619131"
