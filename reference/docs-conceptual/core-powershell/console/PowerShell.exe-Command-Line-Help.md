@@ -3,12 +3,12 @@ ms.date: 08/14/2018
 keywords: PowerShell, o cmdlet
 title: Ajuda da Linha de Comandos PowerShell.exe
 ms.assetid: 1ab7b93b-6785-42c6-a1c9-35ff686a958f
-ms.openlocfilehash: c7f35511e876e8e5189d8a2b949555603d43f731
-ms.sourcegitcommit: 56b9be8503a5a1342c0b85b36f5ba6f57c281b63
+ms.openlocfilehash: 0a11ebb11d29adf5853c232b3aa10bc72f92bf0c
+ms.sourcegitcommit: 03c7672ee72698fe88a73e99702ceaadf87e702f
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 08/21/2018
-ms.locfileid: "43133868"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51691835"
 ---
 # <a name="powershellexe-command-line-help"></a>Ajuda da linha de comandos do PowerShell.exe
 
@@ -51,7 +51,10 @@ Define a política de execução padrão para a sessão atual e guarda-o no $env
 
 Executa o script especificado no âmbito do local ("dot Source"), para que as funções e variáveis que cria o script estão disponíveis na sessão atual. Introduza o caminho do ficheiro de script e quaisquer parâmetros. **Ficheiro** tem de ser o último parâmetro no comando. Todos os valores que escreveu depois do **-ficheiro** parâmetro são interpretados como o script de caminho do ficheiro e os parâmetros passados para esse script.
 
-Parâmetros transmitidos para o script são transmitidos como cadeias de caracteres literais (depois de interpretação pelo shell do atual). Por exemplo, se estiver no cmd.exe e quiser passar um valor da variável de ambiente, usaria a sintaxe de cmd.exe: `powershell -File .\test.ps1 -Sample %windir%` neste exemplo, o script recebe a cadeia literal `$env:windir` e não o valor dessa variável ambiental: `powershell -File .\test.ps1 -Sample $env:windir`
+Parâmetros transmitidos para o script são transmitidos como cadeias de caracteres literais, após a interpretação pelo shell atual. Por exemplo, se estiver no cmd.exe e quiser passar um valor da variável de ambiente, usaria a sintaxe de cmd.exe: `powershell.exe -File .\test.ps1 -TestParam %windir%`
+
+Por outro lado, executando `powershell.exe -File .\test.ps1 -TestParam $env:windir` nos resultados de cmd.exe no script de receber a cadeia literal `$env:windir` porque não tem nenhum significado especial para o shell cmd.exe atual.
+O `$env:windir` estilo de referência de variável de ambiente _pode_ ser utilizado dentro de um `-Command` parâmetro, uma vez que existem será interpretado como o código do PowerShell.
 
 ### <a name="-inputformat-text--xml"></a>\-InputFormat {texto | XML}
 
@@ -103,22 +106,31 @@ Define o estilo da janela para a sessão. Valores válidos são Normal, minimiza
 
 ### <a name="-command"></a>-Comando
 
-Executa os comandos especificados (com quaisquer parâmetros) como se eles foram digitados na linha de comando do PowerShell. Após a execução, PowerShell é encerrado, a menos que o `-NoExit` parâmetro for especificado.
-Qualquer texto depois do `-Command` é enviada como uma única linha de comando para o PowerShell. Isso é diferente de como `-File` processa parâmetros enviados para um script.
+Executa os comandos especificados (com quaisquer parâmetros) como se eles foram digitados na linha de comando do PowerShell.
+Após a execução, PowerShell é encerrado, a menos que o **NoExit** parâmetro for especificado.
+Qualquer texto depois do `-Command` é enviada como uma única linha de comando para o PowerShell.
+Isso é diferente de como `-File` processa parâmetros enviados para um script.
 
-O valor do comando pode ser "-", uma cadeia de caracteres. ou um bloco de scripts. Se for o valor do comando "-", o texto do comando é lidos a partir de entrada padrão.
+O valor de `-Command` pode ser "-", uma cadeia de caracteres ou um bloco de script.
+Os resultados do comando são devolvidos ao shell principal como objetos XML de serialização anulados, objetos não em direto.
 
-Blocos de script têm de estar entre chavetas ({}). Pode especificar um bloco de scripts apenas quando executar PowerShell.exe no PowerShell. Os resultados do script são devolvidos ao shell principal como objetos XML de serialização anulados, objetos não em direto.
+Se o valor de `-Command` é "-", o texto do comando é lidos a partir de entrada padrão.
 
-Se o valor do comando é uma cadeia de caracteres **comando** tem de ser o último parâmetro no comando, porque qualquer caracteres digitados depois do comando são interpretados como os argumentos de comando.
+Quando o valor de `-Command` é uma cadeia de caracteres **comando** _tem_ ser o último parâmetro especificado porque nenhum dos caracteres digitados depois do comando são interpretados como os argumentos de comando.
 
-Para escrever uma cadeia de caracteres que executa um comando do PowerShell, utilize o formato:
+O **comando** parâmetro só aceita um bloco de script para execução quando ele pode reconhecer o valor transmitido para `-Command` como um tipo de ScriptBlock.
+Isto é _apenas_ possível durante a execução PowerShell.exe a partir de outro anfitrião do PowerShell.
+O ScriptBlock tipo possa estar contido num existente variável, retornar numa expressão ou analisado os comandos do PowerShell do anfitrião como um bloco de literal script entre chavetas `{}`, antes de que está sendo passada para PowerShell.exe.
 
-```powershell
+No cmd.exe, há sem algo como um bloco de script (ou tipo de ScriptBlock), então, o valor transmitido ao **comando** será _sempre_ ser uma cadeia de caracteres.
+Pode escrever um bloco de script dentro da cadeia, mas em vez de em execução irão comportar-se exatamente como se que o escreveu numa linha de comandos do PowerShell típico, imprimir o conteúdo do script bloquear o novamente para si.
+
+Uma cadeia de caracteres passada para `-Command` ainda será executado como o PowerShell, para que as chaves de bloco por script, muitas vezes, não são necessárias em primeiro lugar quando em execução a partir cmd.exe.
+Para executar um bloco de script inline definido dentro de uma cadeia de caracteres, o [operador de chamada](/powershell/module/microsoft.powershell.core/about/about_operators#call-operator-) `&` pode ser utilizado:
+
+```console
 "& {<command>}"
 ```
-
-As aspas indicam uma cadeia de caracteres e o operador de invoke (&) faz com que o comando a ser executado.
 
 ### <a name="-help---"></a>-Help,-?, /?
 
