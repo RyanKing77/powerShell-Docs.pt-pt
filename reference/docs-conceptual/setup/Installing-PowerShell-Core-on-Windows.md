@@ -2,18 +2,18 @@
 title: Instalar o PowerShell Core no Windows
 description: Informações sobre como instalar o PowerShell Core no Windows
 ms.date: 08/06/2018
-ms.openlocfilehash: 2b21908c38796117308f2ac1219db00ff9086408
-ms.sourcegitcommit: 6749f67c32e05999e10deb9d45f90f45ac21a599
+ms.openlocfilehash: ba159a69df7e117e90e21dd26228b61146260475
+ms.sourcegitcommit: 221b7daab7f597f8b2e4864cf9b5d9dda9b9879b
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 10/08/2018
-ms.locfileid: "48850984"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52320896"
 ---
 # <a name="installing-powershell-core-on-windows"></a>Instalar o PowerShell Core no Windows
 
 ## <a name="msi"></a>MSI
 
-Para instalar o PowerShell num cliente Windows ou Windows Server (funciona no Windows 7 SP1, Server 2008 R2 e posterior), transferir o pacote MSI a partir do nosso GitHub [versões][] página.
+Para instalar o PowerShell num cliente Windows ou Windows Server (funciona no Windows 7 SP1, Server 2008 R2 e posterior), transferir o pacote MSI a partir do nosso GitHub [releases][] página.
 
 O arquivo MSI é semelhante a esta- `PowerShell-<version>-win-<os-arch>.msi`
 <!-- TODO: should be updated to point to the Download Center as well -->
@@ -99,7 +99,7 @@ Em ambos os casos, terá da versão x64 do Windows 10 ZIP do pacote e será nece
 1. Utilize o utilitário zip Favoritos para descomprimir o pacote para um diretório dentro da imagem montada do servidor Nano.
 2. Desmonte a imagem e inicializá-la.
 3. Ligue à instância da caixa de entrada do Windows PowerShell.
-4. Siga as instruções para criar um ponto de extremidade de comunicação remota utilizando o ["outra técnica de instância"](#executed-by-another-instance-of-powershell-on-behalf-of-the-instance-that-it-will-register).
+4. Siga as instruções para criar um ponto de extremidade de comunicação remota utilizando o ["outra técnica de instância"](../core-powershell/wsman-remoting-in-powershell-core.md#executed-by-another-instance-of-powershell-on-behalf-of-the-instance-that-it-will-register).
 
 ### <a name="online-deployment-of-powershell-core"></a>Implantação online do PowerShell Core
 
@@ -153,7 +153,7 @@ Para instalar o PowerShell Core a partir do artefacto de CoreCLR:
 
 <!-- [download-center]: TODO -->
 
-[versões]: https://github.com/PowerShell/PowerShell/releases
+[releases]: https://github.com/PowerShell/PowerShell/releases
 [ssh-remoting]: ../core-powershell/SSH-Remoting-in-PowerShell-Core.md
 [wsman-remoting]: ../core-powershell/WSMan-Remoting-in-PowerShell-Core.md
 [AppVeyor]: https://ci.appveyor.com/project/PowerShell/powershell

@@ -2,12 +2,12 @@
 title: Instalar o PowerShell Core no Linux
 description: Informações sobre como instalar o PowerShell Core em várias distribuições do Linux
 ms.date: 08/06/2018
-ms.openlocfilehash: a20384c768113ed2313591cfa8c29eeadd94f80f
-ms.sourcegitcommit: e76665315fd928bf85210778f1fea2be15264fea
+ms.openlocfilehash: afb11f053517af592fe42754d543f9f4a9966c5b
+ms.sourcegitcommit: 221b7daab7f597f8b2e4864cf9b5d9dda9b9879b
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 10/30/2018
-ms.locfileid: "50226003"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52321116"
 ---
 # <a name="installing-powershell-core-on-linux"></a>Instalar o PowerShell Core no Linux
 
@@ -16,7 +16,7 @@ Suporta [Ubuntu 14.04][u14], [Ubuntu 16.04][u16], [Ubuntu 18.04] [ u1804], [Ubun
 Para as distribuições de Linux que não são suportadas oficialmente, pode tentar usar a [pacote de ajuste do PowerShell][snap].
 Também pode tentar implementar os binários do PowerShell diretamente com a Linux [ `tar.gz` arquivo][tar], mas terá de configurar as dependências necessárias, com base no sistema operacional nos passos separados.
 
-Todos os pacotes estão disponíveis no nosso GitHub [versões][] página.
+Todos os pacotes estão disponíveis no nosso GitHub [releases][] página.
 Depois do pacote está instalado, execute `pwsh` partir de um terminal.
 
 [u14]: #ubuntu-1404
@@ -27,7 +27,7 @@ Depois do pacote está instalado, execute `pwsh` partir de um terminal.
 [deb9]: #debian-9
 [cos]: #centos-7
 [rhel7]: #red-hat-enterprise-linux-rhel-7
-[opensuse]: #opensuse-423
+[opensuse]: #opensuse
 [fedora]: #fedora
 [arch]: #arch-linux
 [snap]: #snap-package
@@ -77,7 +77,7 @@ De ora em diante, apenas tem de utilizar `sudo apt-get upgrade powershell` para 
 ### <a name="installation-via-direct-download---ubuntu-1404"></a>Instalação através de transferência direta - Ubuntu 14.04
 
 Transferir o pacote Debian `powershell_6.1.0-1.ubuntu.14.04_amd64.deb`
-do [versões][] página para o computador do Ubuntu.
+do [releases][] página para o computador do Ubuntu.
 
 Em seguida, execute o seguinte no terminal:
 
@@ -125,7 +125,7 @@ Depois de registar o repositório da Microsoft uma vez como Superutilizador, de 
 ### <a name="installation-via-direct-download---ubuntu-1604"></a>Instalação através de transferência direta - Ubuntu 16.04
 
 Transferir o pacote Debian `powershell_6.1.0-1.ubuntu.16.04_amd64.deb`
-do [versões][] página para o computador do Ubuntu.
+do [releases][] página para o computador do Ubuntu.
 
 Em seguida, execute o seguinte no terminal:
 
@@ -176,7 +176,7 @@ Depois de registar o repositório da Microsoft uma vez como Superutilizador, de 
 ### <a name="installation-via-direct-download---ubuntu-1804"></a>Instalação através de transferência direta - Ubuntu 18.04
 
 Transferir o pacote Debian `powershell_6.1.0-1.ubuntu.18.04_amd64.deb`
-do [versões][] página para o computador do Ubuntu.
+do [releases][] página para o computador do Ubuntu.
 
 Em seguida, execute o seguinte no terminal:
 
@@ -236,7 +236,7 @@ Depois de registar o repositório da Microsoft uma vez como Superutilizador, de 
 ### <a name="installation-via-direct-download---debian-8"></a>Instalação através de transferência direta - Debian 8
 
 Transferir o pacote Debian `powershell_6.1.0-1.debian.8_amd64.deb`
-partir do [versões][] página para o computador Debian.
+partir do [releases][] página para o computador Debian.
 
 Em seguida, execute o seguinte no terminal:
 
@@ -288,7 +288,7 @@ Depois de registar o repositório da Microsoft uma vez como Superutilizador, de 
 ### <a name="installation-via-direct-download---debian-9"></a>Instalação através de transferência direta - Debian 9
 
 Transferir o pacote Debian `powershell_6.1.0-1.debian.9_amd64.deb`
-partir do [versões][] página para o computador Debian.
+partir do [releases][] página para o computador Debian.
 
 Em seguida, execute o seguinte no terminal:
 
@@ -328,7 +328,7 @@ Depois de registar o repositório da Microsoft uma vez como Superutilizador, ape
 ### <a name="installation-via-direct-download---centos-7"></a>Instalação através de transferência direta - CentOS 7
 
 Usando [CentOS 7][], transfira o pacote RPM `powershell-6.1.0-1.rhel.7.x86_64.rpm`
-do [versões][] página para o computador de CentOS.
+do [releases][] página para o computador de CentOS.
 
 Em seguida, execute o seguinte no terminal:
 
@@ -372,7 +372,7 @@ Depois de registar o repositório da Microsoft uma vez como Superutilizador, ape
 ### <a name="installation-via-direct-download---red-hat-enterprise-linux-rhel-7"></a>Instalação através de transferência direta - Red Hat Enterprise Linux (RHEL) 7
 
 Transferir o pacote RPM `powershell-6.1.0-1.rhel.7.x86_64.rpm`
-partir do [versões][] página para o computador Red Hat Enterprise Linux.
+partir do [releases][] página para o computador Red Hat Enterprise Linux.
 
 Em seguida, execute o seguinte no terminal:
 
@@ -482,7 +482,7 @@ pwsh
 ### <a name="installation-via-direct-download---fedora-27-fedora-28"></a>Instalação através de transferência direta - Fedora 27, Fedora 28
 
 Transferir o pacote RPM `powershell-6.1.0-1.rhel.7.x86_64.rpm`
-do [versões][] página na máquina Fedora.
+do [releases][] página na máquina Fedora.
 
 Em seguida, execute o seguinte no terminal:
 
@@ -716,5 +716,5 @@ Os perfis de respeitam a configuração de por anfitrião do PowerShell, para qu
 
 PowerShell respeita os [XDG Base diretório especificação] [ xdg-bds] no Linux.
 
-[versões]: https://github.com/PowerShell/PowerShell/releases/latest
+[releases]: https://github.com/PowerShell/PowerShell/releases/latest
 [xdg-bds]: https://specifications.freedesktop.org/basedir-spec/basedir-spec-latest.html
