@@ -3,18 +3,18 @@ ms.date: 06/05/2017
 keywords: PowerShell, o cmdlet
 title: Selecionar Itens numa Caixa de Listagem
 ms.assetid: 327c7cc5-21d0-4ace-b151-aa1491d1d3c2
-ms.openlocfilehash: 6ff6bff8f6ce4e9236d7877c4cca24a10932cbe0
-ms.sourcegitcommit: cf195b090b3223fa4917206dfec7f0b603873cdf
+ms.openlocfilehash: e3d52839409a2fd58fbdc924a2b92d96fbecee53
+ms.sourcegitcommit: 221b7daab7f597f8b2e4864cf9b5d9dda9b9879b
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 04/09/2018
-ms.locfileid: "30951686"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52320827"
 ---
 # <a name="selecting-items-from-a-list-box"></a>Selecionar Itens numa Caixa de Listagem
 
-Utilize o Windows PowerShell 3.0 e versões posteriores para criar uma caixa de diálogo que permite aos utilizadores selecionar itens a partir de um controlo de caixa de lista.
+Utilize o Windows PowerShell 3.0 e versões posteriores para criar uma caixa de diálogo que permite aos utilizadores selecionar itens a partir de um controle de caixa de lista.
 
-## <a name="create-a-list-box-control-and-select-items-from-it"></a>Criar um controlo de caixa de lista e selecionar itens a partir do mesmo
+## <a name="create-a-list-box-control-and-select-items-from-it"></a>Criar um controle de caixa de lista e selecione os itens do mesmo
 
 Copiar e, em seguida, cole o seguinte no ISE do Windows PowerShell e, em seguida, guarde-o como um script do Windows PowerShell (. ps1).
 
@@ -75,20 +75,20 @@ if ($result -eq [System.Windows.Forms.DialogResult]::OK)
 }
 ```
 
-O script começa por carregar duas classes de .NET Framework: **Drawing por uma questão** e **System.Windows.Forms**. Em seguida, iniciar uma nova instância da classe de .NET Framework **Form**; que fornece uma forma em branco ou controla a janela para o qual pode começar a adicionar.
+O script começa com o carregamento de duas classes do .NET Framework: **System. Drawing** e **Forms**. Em seguida, iniciar uma nova instância da classe .NET Framework **Form**; que fornece um formulário em branco ou controles de janela para o qual pode começar a adicionar.
 
 ```powershell
 Add-Type -AssemblyName System.Windows.Forms
 Add-Type -AssemblyName System.Drawing
 ```
 
-Depois de criar uma instância da classe do formulário, atribua valores a três propriedades desta classe.
+Depois de criar uma instância da classe Form, atribua valores a três propriedades dessa classe.
 
-- **Texto.** Isto torna-se o título da janela.
+- **Texto.** Isso se torna o título da janela.
 
-- **Tamanho.** Este é o tamanho do formulário, em pixels. O script anterior cria um formulário que é de 300 pixéis wide por 200 pixels altura.
+- **Tamanho.** Este é o tamanho do formulário, em pixéis. O script anterior cria um formulário que é de 300 pixels de largura por 200 pixels de altura.
 
-- **StartingPosition.** Esta propriedade opcional é definida como **CenterScreen** no script anterior. Se não adicionar esta propriedade, o Windows seleciona uma localização quando o formulário é aberto. Ao definir o **StartingPosition** para **CenterScreen**, automaticamente estiver a apresentar o formulário no meio do ecrã de cada vez que carrega.
+- **StartingPosition.** Esta propriedade opcional é definida como **CenterScreen** no script anterior. Se não adicionar esta propriedade, o Windows seleciona uma localização quando o formulário for aberto. Definindo a **StartingPosition** ao **CenterScreen**, estiver automaticamente a apresentar o formulário no meio da tela sempre que ele carrega.
 
 ```powershell
 $form.Text = 'Select a Computer'
@@ -96,7 +96,7 @@ $form.Size = New-Object System.Drawing.Size(300,200)
 $form.StartPosition = 'CenterScreen'
 ```
 
-Em seguida, crie um **OK** botão para o formulário. Especifique o tamanho e o comportamento do **OK** botão. Neste exemplo, a posição do botão é 120 pixéis do limite superior do formulário e 75 pixéis do limite esquerdo. A altura do botão é 23 pixéis, enquanto o comprimento do botão for 75 pixéis. O script utiliza tipos de Windows Forms predefinidos para determinar os comportamentos do botão.
+Em seguida, crie uma **OK** botão para seu formulário. Especifique o tamanho e o comportamento do **OK** botão. Neste exemplo, a posição do botão é 120 pixels de limite superior do formulário e 75 pixels da margem esquerda. A altura de botão é 23 pixels, enquanto o comprimento de botão for 75 pixels. O script utiliza os tipos de formulários do Windows predefinidos para determinar os comportamentos de botão.
 
 ```powershell
 $OKButton = New-Object System.Windows.Forms.Button
@@ -108,7 +108,7 @@ $form.AcceptButton = $OKButton
 $form.Controls.Add($OKButton)
 ```
 
-Da mesma forma, crie um **Cancelar** botão. O **Cancelar** botão é 120 pixéis da parte superior, mas 150 pixéis do limite esquerdo da janela.
+Da mesma forma, criar um **Cancelar** botão. O **Cancelar** botão é 120 pixels na parte superior, mas como 150 pixels da margem esquerda da janela.
 
 ```powershell
 $CancelButton = New-Object System.Windows.Forms.Button
@@ -130,7 +130,7 @@ $label.Text = 'Please select a computer:'
 $form.Controls.Add($label)
 ```
 
-Adicione controlo (neste caso, uma caixa de listagem) que permite que os utilizadores que forneça as informações tiver descritos no texto da etiqueta. Existem muitos outros controlos que pode aplicar para além das caixas de listagem Para obter mais controlos, consulte [System.Windows.Forms espaço de nomes](http://msdn.microsoft.com/library/k50ex0x9(v=vs.110).aspx) no MSDN.
+Adicione o controle (neste caso, uma caixa de listagem), que permite que os utilizadores que forneça as informações que descrevi o texto da etiqueta. Existem muitos outros controles, que pode aplicar além de caixas de listagem; Para obter mais controles, consulte [Namespacesystem](https://msdn.microsoft.com/library/k50ex0x9(v=vs.110).aspx) no MSDN.
 
 ```powershell
 $listBox = New-Object System.Windows.Forms.ListBox
@@ -139,10 +139,10 @@ $listBox.Size = New-Object System.Drawing.Size(260,20)
 $listBox.Height = 80
 ```
 
-Na secção seguinte, especifique os valores que pretende que a caixa de lista para apresentar aos utilizadores.
+Na próxima seção, especifique os valores que pretende que a caixa de listagem a apresentar aos utilizadores.
 
 > [!NOTE]
-> A caixa de listagem criada por este script permite a seleção de apenas um. Para criar um controlo de caixa de lista que permite as seleções múltiplas, especifique um valor para o **SelectionMode** propriedade, de forma semelhante ao seguinte: `$listBox.SelectionMode = 'MultiExtended'`. Para obter mais informações, consulte [caixas de listagem de seleção múltipla](Multiple-selection-List-Boxes.md).
+> A caixa de listagem criada por este script permite a seleção de apenas um. Para criar um controle de caixa de lista que permite que várias seleções, especifique um valor para o **SelectionMode** propriedade, da mesma forma como o seguinte: `$listBox.SelectionMode = 'MultiExtended'`. Para obter mais informações, consulte [caixas de listagem de seleção múltipla](Multiple-selection-List-Boxes.md).
 
 ```powershell
 [void] $listBox.Items.Add('atl-dc-001')
@@ -154,31 +154,31 @@ Na secção seguinte, especifique os valores que pretende que a caixa de lista p
 [void] $listBox.Items.Add('atl-dc-007')
 ```
 
-Adicione o controlo de caixa de lista para o formulário e instruir Windows para abrir o formulário visível outros windows e caixas de diálogo quando for aberta.
+Adicionar o controle de caixa de lista ao seu formulário e instruir o Windows para abrir o formulário sobre outras janelas e caixas de diálogo quando for aberta.
 
 ```powershell
 $form.Controls.Add($listBox)
 $form.Topmost = $true
 ```
 
-Adicione a seguinte linha de código para apresentar o formulário no Windows.
+Adicione a seguinte linha de código para exibir o formulário no Windows.
 
 ```powershell
 $result = $form.ShowDialog()
 ```
 
-Por fim, o código no interior do **se** bloco dá instruções ao Windows o que fazer com o formulário, depois dos utilizadores selecionarem uma opção na caixa de listagem e, em seguida, clique no **OK** botão ou prima o **Enter**chave.
+Por fim, o código dentro do **se** bloco instrui o Windows o que fazer com o formulário depois de selecionar uma opção na caixa de lista de utilizadores e, em seguida, clique no **OK** botão ou prima o **Enter**chave.
 
 ```powershell
 if ($result -eq [System.Windows.Forms.DialogResult]::OK)
 {
-    $x = $listBox.SelectedItem
-    $x
+    $x = $listBox.SelectedItem
+    $x
 }
 ```
 
 ## <a name="see-also"></a>Consulte Também
 
-- [Hei responsável pelo script Guy: por que razão estes exemplos do PowerShell GUI não funcionam?](http://go.microsoft.com/fwlink/?LinkId=506644)
+- [EI scripts Guy: por que estes exemplos de GUI do PowerShell não funcionam?](https://go.microsoft.com/fwlink/?LinkId=506644)
 - [GitHub: WinFormsExampleUpdates de Dave Wyatt](https://github.com/dlwyatt/WinFormsExampleUpdates)
-- [Windows PowerShell sugestão da semana: selecionar itens a partir de uma caixa de listagem](http://technet.microsoft.com/library/ff730949.aspx)
+- [Windows PowerShell dica da semana: selecionar itens de uma caixa de listagem](https://technet.microsoft.com/library/ff730949.aspx)

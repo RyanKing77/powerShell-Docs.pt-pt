@@ -3,26 +3,26 @@ ms.date: 06/05/2017
 keywords: PowerShell, o cmdlet
 title: Redirecionar Dados com Cmdlets Out
 ms.assetid: 2a4acd33-041d-43a5-a3e9-9608a4c52b0c
-ms.openlocfilehash: 3ca7984e831a995e80cbd8a4d83ae9225c2a4f4c
-ms.sourcegitcommit: cf195b090b3223fa4917206dfec7f0b603873cdf
+ms.openlocfilehash: f08879f436ce751b176af020aba21e90f09aa61f
+ms.sourcegitcommit: 221b7daab7f597f8b2e4864cf9b5d9dda9b9879b
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 04/09/2018
-ms.locfileid: "30952125"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52321014"
 ---
-# <a name="redirecting-data-with-out--cmdlets"></a>Redirecionar dados com Out-* Cmdlets
+# <a name="redirecting-data-with-out--cmdlets"></a>Redirecionar dados com o Out-* Cmdlets
 
-O Windows PowerShell oferece vários cmdlets que lhe permitem que controlar diretamente a saída de dados. Estes cmdlets partilham características importantes dois.
+Windows PowerShell fornece vários cmdlets que lhe permitam que controlar dados diretamente de saída. Estes cmdlets partilhar duas características importantes.
 
-Em primeiro lugar, geralmente, estes transformar dados em alguma forma de texto. Tal porque estes dados para os componentes de sistema que necessitam de entrada de texto de saída. Isto significa que precisam para representar objetos como texto. Por conseguinte, o texto é formatado como vê-lo na janela da consola do Windows PowerShell.
+Em primeiro lugar, eles geralmente transformam dados de alguma forma de texto. Eles fazer isso, uma vez que os dados para os componentes de sistema que exigem entrada de texto de saída. Isso significa que precisam para representar os objetos como texto. Por conseguinte, o texto esteja formatado como vê-la na janela de consola do Windows PowerShell.
 
-Segundo, estes cmdlets utilizam o Windows PowerShell verbo **saída** porque enviam informações a partir do Windows PowerShell para qualquer outro local. O **out-anfitrião** cmdlet não é exceção: a apresentação da janela de anfitrião está fora do Windows PowerShell. Isto é importante porque, quando são enviados dados fora do Windows PowerShell, na realidade é removido. Pode ver esta se tentar criar um pipeline que páginas os dados para a janela de anfitrião e, em seguida, tentar formate-o como uma lista, conforme mostrado aqui:
+Em segundo lugar, estes cmdlets usam o verbo de Windows PowerShell **horizontalmente** porque eles enviam informações do Windows PowerShell a algum outro lugar. O **out-Host** cmdlet não é exceção: a apresentação da janela de anfitrião está fora do Windows PowerShell. Isso é importante porque quando dados são enviados para fora do Windows PowerShell, na verdade, é removido. Pode ver isso se tentar criar um pipeline que páginas os dados para a janela de anfitrião e, em seguida, tentar formatá-lo como uma lista, conforme mostrado aqui:
 
 ```powershell
 Get-Process | Out-Host -Paging | Format-List
 ```
 
-Que seria de esperar o comando para apresentar as páginas de informações de processo no formato de lista. Em vez disso, apresenta a lista de tabela:
+Pode esperar o comando para exibir páginas de informações do processo num formato de lista. Em vez disso, ele exibe a lista em tabela:
 
 ```output
 Handles  NPM(K)    PM(K)      WS(K) VM(M)   CPU(s)     Id ProcessName
@@ -36,9 +36,9 @@ Handles  NPM(K)    PM(K)      WS(K) VM(M)   CPU(s)     Id ProcessName
 ...
 ```
 
-O **out-anfitrião** cmdlet envia os dados diretamente para a consola, por isso, o **formato-lista** comando nunca recebe nada para formatar.
+O **out-Host** cmdlet envia os dados diretamente para a consola de, pelo que a **Format-List** comando nunca recebe nada para formatar.
 
-A forma correta de estrutura este comando é colocar o **out-anfitrião** cmdlet no fim do pipeline conforme mostrado abaixo. Isto faz com que os dados de processo a formatados numa lista antes de ser do bloco paginado e apresentada.
+A maneira correta de estruturar este comando é colocar o **out-Host** cmdlet no final do pipeline, conforme mostrado abaixo. Isso faz com que o processamento de dados sejam formatados de uma lista antes de ser paginada e apresentada.
 
 ```
 PS> Get-Process | Format-List | Out-Host -Paging
@@ -63,26 +63,26 @@ Name    : explorer
 ...
 ```
 
-Isto aplica-se a todos os o **saída** cmdlets. Um **saída** cmdlet sempre deve aparecer no fim do pipeline.
+Isto aplica-se a todos os **horizontalmente** cmdlets. Uma **horizontalmente** cmdlet sempre deve aparecer no final do pipeline.
 
 > [!NOTE]
-> Todos os o **saída** cmdlets compor o resultado como texto, utilizando a formatação em vigor para a janela de consola, incluindo limites de comprimento de linha.
+> Todos os **horizontalmente** cmdlets compõem uma saída como texto, usando a formatação em vigor para a janela de consola, incluindo limites de tamanho de linha.
 
-#### <a name="paging-console-output-out-host"></a>Resultado da consola de paginação (Out-anfitrião)
+#### <a name="paging-console-output-out-host"></a>Resultado da consola de paginação (Out-Host)
 
-Por predefinição, o Windows PowerShell envia dados para a janela de anfitrião, o que é exatamente o que o Out-anfitrião cmdlet does. A utilização principal para o Out-anfitrião cmdlet é os dados de paginação que discutimos anteriormente. Por exemplo, as seguintes utilizações de comando out-anfitrião para a página a saída do cmdlet Get-Command:
+Por predefinição, o Windows PowerShell envia dados para a janela de anfitrião, o que é exatamente o que o cmdlet out-Host faz. Usada principalmente para o Out-Host cmdlet é dados de paginação, como discutido anteriormente. Por exemplo, o seguinte comando utiliza out-Host para a página a saída do cmdlet Get-Command:
 
 ```powershell
 Get-Command | Out-Host -Paging
 ```
 
-Também pode utilizar o **mais** função para dados de página. No Windows PowerShell, **mais** é uma função que chama **out-alojar-paginação**. O comando seguinte demonstra a utilizar o **mais** função para a página a saída de Get-Command:
+Também pode utilizar o **mais** função para dados de página. No Windows PowerShell, **mais** é uma função que chama **out-Host-paginação**. O comando seguinte demonstra como utilizar o **mais** função para a página a saída de Get-Command:
 
 ```powershell
 Get-Command | more
 ```
 
-Se incluir um ou mais nomes de ficheiros como argumentos para a função mais, a função irá ler os ficheiros especificados e os respetivos conteúdos para o anfitrião de página:
+Se incluir um ou mais nomes de ficheiros como argumentos para a função mais, a função irá ler os ficheiros especificados e seu conteúdo para o anfitrião de página:
 
 ```
 PS> more c:\boot.ini
@@ -93,15 +93,15 @@ default=multi(0)disk(0)rdisk(0)partition(1)\WINDOWS
 ...
 ```
 
-#### <a name="discarding-output-out-null"></a>Rejeitar saída (Out-nulo)
+#### <a name="discarding-output-out-null"></a>Descarte de saída (Out-Null)
 
-O **out-nulo** cmdlet foi concebido para eliminar imediatamente qualquer entrada que receber. Isto é útil para eliminar dados desnecessários que obtém como um efeito de um comando em execução. Quando escrever o seguinte comando, não voltar nada do comando:
+O **out-Null** cmdlet foi desenvolvido para eliminar imediatamente qualquer entrada que recebe. Isto é útil para dados desnecessários obtidas como um efeito colateral de executar um comando de descarte. Quando escreva o seguinte comando, não recebe nada do comando:
 
-```powreshell
+```powershell
 Get-Command | Out-Null
 ```
 
-O **out-nulo** cmdlet não rejeição a saída de erro. Por exemplo, se introduzir o seguinte comando, será apresentada uma mensagem informando-o de que o Windows PowerShell não reconhece 'NotACommand é':
+O **out-Null** cmdlet não elimine a saída de erro. Por exemplo, se introduzir o comando seguinte, é apresentada uma mensagem informando-o de que o Windows PowerShell não reconhece "NotACommand é":
 
 ```
 PS> Get-Command Is-NotACommand | Out-Null
@@ -111,37 +111,37 @@ At line:1 char:12
 + Get-Command  <<<< Is-NotACommand | Out-Null
 ```
 
-#### <a name="printing-data-out-printer"></a>Dados de impressão (Out-impressoras)
+#### <a name="printing-data-out-printer"></a>Dados de impressão (Out-impressora)
 
-Pode imprimir dados utilizando o **Out-impressora** cmdlet. O **Out-impressora** cmdlet utilizará a impressora predefinida se não fornecer um nome de impressora. Pode utilizar qualquer impressora baseado no Windows, especificando o nome a apresentar. Não é necessário para qualquer tipo de mapeamento de portas de impressora ou mesmo uma impressora física real. Por exemplo, se tiver as Microsoft Office documento processamento de imagens as ferramentas instaladas, pode enviar os dados para um ficheiro de imagem, escrevendo:
+Pode imprimir dados ao utilizar o **Out-impressora** cmdlet. O **Out-impressora** cmdlet irá utilizar a sua impressora padrão se não fornecer um nome da impressora. Pode usar qualquer impressora baseados em Windows, especificando seu nome de exibição. Não é necessário para qualquer tipo de mapeamento de portas de impressora ou até mesmo uma impressora física real. Por exemplo, se tiver ferramentas Microsoft Office de geração de imagens documento instaladas, pode enviar os dados para um ficheiro de imagem ao escrever:
 
 ```powershell
 Get-Command Get-Command | Out-Printer -Name 'Microsoft Office Document Image Writer'
 ```
 
-#### <a name="saving-data-out-file"></a>Os dados (out-File)
+#### <a name="saving-data-out-file"></a>Guardar os dados (out-File)
 
-Pode enviar o resultado para um ficheiro em vez da janela de consola utilizando o **out-File** cmdlet. A seguinte linha de comandos envia uma lista de processos para o ficheiro **c:\\temp\\processlist.txt**:
+Pode enviar a saída para um ficheiro em vez da janela de consola utilizando o **out-File** cmdlet. A seguinte linha de comando envia uma lista de processos para o ficheiro **c:\\temp\\processlist.txt**:
 
 ```powershell
 Get-Process | Out-File -FilePath C:\temp\processlist.txt
 ```
 
-Os resultados de utilizar o **out-File** cmdlet não pode ser o que esperar se forem utilizados para redirecionamento de saída tradicional. Para compreender o respetivo comportamento, tem de ser informados da contexto no qual o **out-File** cmdlet funciona.
+Os resultados de utilizar o **out-File** cmdlet pode não ser o que esperar se forem utilizadas para redirecionamento de saída tradicional. Para compreender seu comportamento, deve estar ciente de contexto no qual o **out-File** opera de cmdlet.
 
-Por predefinição, o **out-File** cmdlet cria um ficheiro Unicode. Esta é a predefinição melhor longa run, mas significa que as ferramentas que esperam ficheiros ASCII não funcionarão corretamente com o formato de saída predefinido. Pode alterar o formato de saída predefinido para ASCII utilizando o **codificação** parâmetro:
+Por predefinição, o **out-File** cmdlet cria um ficheiro Unicode. Esta é a predefinição de melhor a longo prazo, mas significa que as ferramentas que esperam ficheiros ASCII não funcionará corretamente com o formato de saída padrão. Pode alterar o formato de saída padrão em ASCII, utilizando o **Encoding** parâmetro:
 
 ```powershell
 Get-Process | Out-File -FilePath C:\temp\processlist.txt -Encoding ASCII
 ```
 
-**Out-file** formatos de ficheiro de conteúdo para o aspeto do resultado da consola. Isto faz com que o resultado a ser truncado tal como faz parte de uma janela da consola na maior parte das circunstâncias. Por exemplo, se executar o seguinte comando:
+**Out-file** conteúdos como resultado da consola do formatos de ficheiro. Isso faz com que a saída para ser truncado, tal como numa janela de consola, na maioria das circunstâncias. Por exemplo, se executar o seguinte comando:
 
 ```powershell
 Get-Command | Out-File -FilePath c:\temp\output.txt
 ```
 
-O resultado será ter este aspeto:
+A saída terá o seguinte aspeto:
 
 ```output
 CommandType     Name                            Definition
@@ -151,10 +151,10 @@ Cmdlet          Add-History                     Add-History [[-InputObject] ...
 ...
 ```
 
-Para obter o resultado não forçar a linha encapsula num wrapper para corresponder a largura do ecrã, pode utilizar o **largura** parâmetro para especificar a largura da linha. Porque **largura** é um parâmetro de número inteiro de 32 bits, o valor máximo pode ter é 2147483647. Escreva o seguinte para definir a largura da linha para este valor máximo:
+Para obter o resultado que não o força inclui de linha de acordo com a largura da tela, pode utilizar o **largura** parâmetro para especificar a largura da linha. Uma vez **largura** é um parâmetro de número inteiro de 32 bits, o valor máximo, ele pode ter é 2147483647. Escreva o seguinte para definir a largura da linha para este valor máximo:
 
 ```powershell
 Get-Command | Out-File -FilePath c:\temp\output.txt -Width 2147483647
 ```
 
-O **out-File** cmdlet é mais útil quando pretende guardar a saída tal como faria ter apresentado na consola. Para melhorar o controlo sobre o formato de saída, terá de ferramentas mais avançadas. Iremos abordar os o capítulo seguinte, juntamente com alguns detalhes sobre a manipulação de objeto.
+O **out-File** cmdlet é mais útil quando pretende guardar a saída tal como seria ter apresentado na consola. Para obter mais controle sobre o formato de saída, precisa de ferramentas mais avançadas. Vamos ver aqueles no capítulo seguinte, juntamente com alguns detalhes sobre a manipulação de objetos.

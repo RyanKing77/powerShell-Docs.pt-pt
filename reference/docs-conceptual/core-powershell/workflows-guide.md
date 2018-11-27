@@ -2,20 +2,20 @@
 ms.date: 06/05/2017
 keywords: PowerShell, o cmdlet
 title: Guia de fluxos de trabalho
-ms.openlocfilehash: 7c4cbcb03bf5abaeba65563156acd588f7671d93
-ms.sourcegitcommit: 01d6985ed190a222e9da1da41596f524f607a5bc
+ms.openlocfilehash: e2c91299f064a10fd27ab195d0309a9bef6a7ded
+ms.sourcegitcommit: 221b7daab7f597f8b2e4864cf9b5d9dda9b9879b
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 06/07/2018
-ms.locfileid: "34482799"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52320385"
 ---
 # <a name="psworkflow-module"></a>Módulo de PSWorkflow
 
-Esta secção inclui os tópicos de ajuda para o **PSWorkflow** módulo, que inclui cmdlets que suportam a funcionalidade de fluxo de trabalho do Windows PowerShell. O **PSWorkflow** módulo é instalado com o Windows PowerShell.
+Esta secção contém tópicos de ajuda para o **PSWorkflow** módulo, que inclui cmdlets que suportam a funcionalidade de fluxo de trabalho do Windows PowerShell. O **PSWorkflow** módulo é instalado com o Windows PowerShell.
 
 ## <a name="help-topics"></a>Tópicos de ajuda
 
-[Cmdlets de fluxo de trabalho](http://go.microsoft.com/fwlink/?LinkID=245865)
+[Cmdlets de fluxo de trabalho](https://go.microsoft.com/fwlink/?LinkID=245865)
 
 [about_Workflows](https://technet.microsoft.com/library/f2897bdd-1b9d-4679-8b19-09840bd40a22)
 
@@ -35,4 +35,4 @@ Esta secção inclui os tópicos de ajuda para o **PSWorkflow** módulo, que inc
 
 [about_Suspend-Workflow](https://technet.microsoft.com/library/be2ded75-1eca-493e-96c1-758f92b5f199)
 
-[Cmdlets de utilitário do fluxo de trabalho do PowerShell](https://technet.microsoft.com/library/a5a32019-0d68-4041-935f-1b1cacaf6d3d)
+[Cmdlets de utilitário de fluxo de trabalho do PowerShell](https://technet.microsoft.com/library/a5a32019-0d68-4041-935f-1b1cacaf6d3d)

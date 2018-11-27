@@ -2,12 +2,12 @@
 ms.date: 06/27/2017
 keywords: PowerShell, o cmdlet
 title: Regras de Autorização e Funcionalidades de Segurança do Windows PowerShell Web Access
-ms.openlocfilehash: e9bed3900263a51b1b8236a3c3430154a5d11886
-ms.sourcegitcommit: 31a221d982305c7f999b1afeb15e3629e9620de8
+ms.openlocfilehash: 95c61d3a0431cda9dee738d1c9f5ec843c1209f3
+ms.sourcegitcommit: 221b7daab7f597f8b2e4864cf9b5d9dda9b9879b
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 08/10/2018
-ms.locfileid: "43133854"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52321087"
 ---
 # <a name="authorization-rules-and-security-features-of-windows-powershell-web-access"></a>Regras de Autorização e Funcionalidades de Segurança do Windows PowerShell Web Access
 
@@ -20,19 +20,19 @@ Windows PowerShell Web Access no Windows Server 2012 R2 e Windows Server 2012 te
 ## <a name="configuring-authorization-rules-and-site-security"></a>Configurar as regras de autorização e de segurança do site
 
 Após instalação do Windows PowerShell Web Access e o gateway está configurado, os utilizadores podem abrir a página de início de sessão num browser, mas não consigo iniciar sessão até que o administrador do Windows PowerShell Web Access conceda explicitamente acesso de utilizadores. Controlo de acesso de 'Windows PowerShell Web Access' gerido com o conjunto de cmdlets do Windows PowerShell descritos na tabela seguinte. Não existe nenhuma GUI comparável para adicionar ou gerir regras de autorização.
-Ver [Cmdlets do Windows PowerShell Web Access](cmdlets/web-access-cmdlets.md).
+Ver [Cmdlets do Windows PowerShell Web Access](/powershell/module/powershellwebaccess/?view=winserver2012r2-ps).
 
 Os administradores podem definir `{0-n}` regras de autenticação para o Windows PowerShell Web Access. A segurança predefinida é restritiva, em vez de permissiva; haver zero regras de autenticação significa que nenhum utilizador tem acesso a nada.
 
-[Adicionar-PswaAuthorizationRule](cmdlets/add-pswaauthorizationrule.md) e [Test-PswaAuthorizationRule](cmdlets/test-pswaauthorizationrule.md) no Windows Server 2012 R2 incluem um parâmetro Credential que lhe permite adicionar e testar regras de autorização do Windows PowerShell Web Access do remoto computador, ou a partir de dentro de uma sessão ativa do Windows PowerShell Web Access. Como com outros cmdlets do Windows PowerShell que têm um parâmetro de credencial, pode especificar um objeto PSCredential como o valor do parâmetro. Para criar um objeto PSCredential que contém as credenciais que pretende passar para um computador remoto, execute o [Get-Credential](/powershell/module/microsoft.powershell.security/Get-Credential) cmdlet.
+[Adicionar-PswaAuthorizationRule](/powershell/module/powershellwebaccess/add-pswaauthorizationrule?view=winserver2012r2-ps) e [Test-PswaAuthorizationRule](/powershell/module/powershellwebaccess/test-pswaauthorizationrule?view=winserver2012r2-ps) no Windows Server 2012 R2 incluem um parâmetro Credential que lhe permite adicionar e testar regras de autorização do Windows PowerShell Web Access do remoto computador, ou a partir de dentro de uma sessão ativa do Windows PowerShell Web Access. Como com outros cmdlets do Windows PowerShell que têm um parâmetro de credencial, pode especificar um objeto PSCredential como o valor do parâmetro. Para criar um objeto PSCredential que contém as credenciais que pretende passar para um computador remoto, execute o [Get-Credential](/powershell/module/microsoft.powershell.security/Get-Credential) cmdlet.
 
-Regras de autenticação do Windows PowerShell Web Access são regras de lista de permissões. Cada regra é uma definição de uma ligação permitida entre utilizadores, computadores de destino e determinado Windows PowerShellÂ [configurações de sessão](/powershell/reference/5.1/microsoft.powershell.core/about/about_session_configurations) (também conhecido como pontos finais ou _espaços de execução_) em computadores de destino especificado.
+Regras de autenticação do Windows PowerShell Web Access são regras de lista de permissões. Cada regra é uma definição de uma ligação permitida entre utilizadores, computadores de destino e específica do Windows PowerShell [configurações de sessão](/powershell/module/microsoft.powershell.core/about/about_session_configurations?view=powershell-5.1) (também conhecido como pontos finais ou _espaços de execução_) em computadores de destino especificado.
 Para obter uma explicação sobre **espaços de execução** consulte [início utilização do PowerShell espaços de execução](https://blogs.technet.microsoft.com/heyscriptingguy/2015/11/26/beginning-use-of-powershell-runspaces-part-1/)
 
 > [!IMPORTANT]
 > Um utilizador precisa apenas que uma regra seja verdadeira para obter acesso. Se um utilizador é dado acesso a um computador com acesso completo de linguagem ou acesso apenas aos cmdlets de gestão remota do Windows PowerShell, a partir da consola baseada na web, o utilizador pode iniciar sessão (ou hop) noutros computadores ligados ao primeiro computador de destino. É a forma mais segura para configurar o Windows PowerShell Web Access permitir aos utilizadores acesso apenas a configurações de sessão restritas que lhes permitem realizar tarefas específicas que normalmente precisam para executarem remotamente.
 
-Os cmdlets referenciados no [Cmdlets do Windows PowerShell Web Access](cmdlets/web-access-cmdlets.md) permitem criar um conjunto de regras de acesso que são utilizados para autorizar um utilizador no gateway do Windows PowerShell Web Access. As regras são diferentes das listas de controlo de acesso (ACL) no computador de destino e fornecem uma camada adicional de segurança para o acesso à Web. Encontram-se mais detalhes sobre a segurança são descritas na secção seguinte.
+Os cmdlets referenciados no [Cmdlets do Windows PowerShell Web Access](/powershell/module/powershellwebaccess/?view=winserver2012r2-ps) permitem criar um conjunto de regras de acesso que são utilizados para autorizar um utilizador no gateway do Windows PowerShell Web Access. As regras são diferentes das listas de controlo de acesso (ACL) no computador de destino e fornecem uma camada adicional de segurança para o acesso à Web. Encontram-se mais detalhes sobre a segurança são descritas na secção seguinte.
 
 Se os utilizadores não é possível passar em alguma das anteriores camadas de segurança, que recebem uma mensagem genérica "acesso negado" nas respetivas janelas do browser. Apesar dos detalhes de segurança serem registados no servidor de gateway, não são mostradas aos utilizadores finais as informações sobre quantas camadas de segurança passaram, ou em que camada ocorreu a falha de início de sessão ou autenticação.
 
@@ -229,4 +229,4 @@ Se o servidor de gateway estiver a executar o Windows Server 2012 R2, permite ac
 
 [about_Session_Configurations](https://technet.microsoft.com/library/dd819508.aspx)
 
-[Cmdlets do Windows PowerShell Web Access](cmdlets/web-access-cmdlets.md)
+[Cmdlets do Windows PowerShell Web Access](/powershell/module/powershellwebaccess/?view=winserver2012r2-ps)

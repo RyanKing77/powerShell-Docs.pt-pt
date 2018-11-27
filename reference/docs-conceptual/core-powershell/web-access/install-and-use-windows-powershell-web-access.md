@@ -2,12 +2,12 @@
 ms.date: 08/23/2017
 keywords: PowerShell, o cmdlet
 title: instalar e utilizar o acesso web windows powershell
-ms.openlocfilehash: d718d9b286a8a2189f44f10983cdc0061e41d4b9
-ms.sourcegitcommit: 6749f67c32e05999e10deb9d45f90f45ac21a599
+ms.openlocfilehash: a129dfeb61531a1f4d333af3e872d16defa1d12f
+ms.sourcegitcommit: 221b7daab7f597f8b2e4864cf9b5d9dda9b9879b
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 10/09/2018
-ms.locfileid: "48851329"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52320691"
 ---
 # <a name="install-and-use-windows-powershell-web-access"></a>Instalar e Utilizar o Acesso Web Windows PowerShell
 
@@ -25,7 +25,7 @@ Após a instalação de gateway com êxito e a configuração, os utilizadores p
 
 Configuração do Windows PowerShell Web Access e a configuração é um processo em três etapas:
 
-1. [Instalar o Windows PowerShell Web Access](#install-windows-powershell-web-access)
+1. [Instalar o Windows PowerShell Web Access](#install-windows-powershell-web-access-using-powershell-cmdlets)
 1. [Configurar o Gateway](#configure-the-gateway)
 1. [Configurar uma regra de autorização restrita](#configure-a-restrictive-authorization-rule)
 
@@ -58,10 +58,10 @@ Espera-se que outros browsers que aceitam cookies, executam JavaScript e executa
 
 ### <a name="minimally-tested-mobile-devices-or-browsers"></a>Dispositivos móveis ou browsers testados minimamente
 
-- Windows Phone 7 e 7.5
-- Google Android WebKit 3.1 Browser Android 2.2.1 do buildship (Kernel 2.6)
+- Windows Phone 7 e 7.5
+- Google Android WebKit 3.1 Browser Android 2.2.1 (Kernel 2.6)
 - Apple Safari para sistema operativo iPhone 5.0.1
-- Apple Safari para sistema de operativo iPad 2 5.0.1
+- Apple Safari para sistema operativo iPad 2 5.0.1
 
 ### <a name="browser-requirements"></a>Requisitos de browsers
 
@@ -75,7 +75,7 @@ Para utilizar a consola baseada na web do Windows PowerShell Web Access, os brow
 
 Pode instalar o gateway do Windows PowerShell Web Access num servidor que está a executar o Windows Server 2012 R2 ou Windows Server 2012, utilizando qualquer um dos cmdlets do Windows PowerShell ou com a adicionar assistente funções e funcionalidades que é aberto a partir do Gestor de servidores. Para instalação e configuração rápidas, utilize os cmdlets do Windows PowerShell, conforme descrito nesta secção.
 
-1. [Instalar o Windows PowerShell Web Access](#install-Windows-powershell-web-access)
+1. [Instalar o Windows PowerShell Web Access](#install-windows-powershell-web-access-using-powershell-cmdlets)
 1. [Configurar o Gateway](#configure-the-gateway)
 1. [Configurar uma regra de autorização restrita](#configure-a-restrictive-authorization-rule)
 
@@ -189,7 +189,7 @@ Por predefinição, o cmdlet instala a aplicação web, **pswa** (e um conjunto 
 
 ### <a name="configure-a-restrictive-authorization-rule"></a>Configurar uma regra de autorização restrita
 
-Após instalação do Windows PowerShell Web Access e o gateway está configurado, os utilizadores podem abrir a página de início de sessão num browser, mas não consigo iniciar sessão até que o administrador do Windows PowerShell Web Access conceda explicitamente acesso de utilizadores. Controlo de acesso do Windows PowerShell Web Access é gerido com o conjunto de cmdlets do Windows PowerShell descritos na tabela seguinte. Não existe nenhuma GUI comparável para adicionar ou gerir regras de autorização. Para obter mais informações sobre os cmdlets do Windows PowerShell Web Access, consulte os tópicos de referência do cmdlet [Cmdlets do Windows PowerShell Web Access](cmdlets/web-access-cmdlets.md).
+Após instalação do Windows PowerShell Web Access e o gateway está configurado, os utilizadores podem abrir a página de início de sessão num browser, mas não consigo iniciar sessão até que o administrador do Windows PowerShell Web Access conceda explicitamente acesso de utilizadores. Controlo de acesso do Windows PowerShell Web Access é gerido com o conjunto de cmdlets do Windows PowerShell descritos na tabela seguinte. Não existe nenhuma GUI comparável para adicionar ou gerir regras de autorização. Para obter mais informações sobre os cmdlets do Windows PowerShell Web Access, consulte os tópicos de referência do cmdlet [Cmdlets do Windows PowerShell Web Access](/powershell/module/powershellwebaccess/?view=winserver2012r2-ps).
 
 Para obter mais detalhes sobre regras de autorização do Windows PowerShell Web Access e a segurança, consulte [regras de autorização e segurança recursos do Windows PowerShell Web Access](authorization-rules-and-security-features-of-windows-powershell-web-access.md).
 
@@ -360,7 +360,7 @@ As instruções nesta secção destinam-se instalar a aplicação web do Windows
 
 ### <a name="configuring-a-restrictive-authorization-rule"></a>Configurar uma regra de autorização restrita
 
-Após instalação do Windows PowerShell Web Access e o gateway está configurado, os utilizadores podem abrir a página de início de sessão num browser, mas não consigo iniciar sessão até que o administrador do Windows PowerShell Web Access conceda explicitamente acesso de utilizadores. Controlo de acesso do Windows PowerShell Web Access é gerido com o conjunto de cmdlets do Windows PowerShell descritos na tabela seguinte. Não existe nenhuma GUI comparável para adicionar ou gerir regras de autorização. Para obter mais informações sobre os cmdlets do Windows PowerShell Web Access, consulte os tópicos de referência do cmdlet [Cmdlets do Windows PowerShell Web Access](cmdlets/web-access-cmdlets.md).
+Após instalação do Windows PowerShell Web Access e o gateway está configurado, os utilizadores podem abrir a página de início de sessão num browser, mas não consigo iniciar sessão até que o administrador do Windows PowerShell Web Access conceda explicitamente acesso de utilizadores. Controlo de acesso do Windows PowerShell Web Access é gerido com o conjunto de cmdlets do Windows PowerShell descritos na tabela seguinte. Não existe nenhuma GUI comparável para adicionar ou gerir regras de autorização. Para obter mais informações sobre os cmdlets do Windows PowerShell Web Access, consulte os tópicos de referência do cmdlet [Cmdlets do Windows PowerShell Web Access](/powershell/module/powershellwebaccess/?view=winserver2012r2-ps).
 
 Para obter mais detalhes sobre regras de autorização do Windows PowerShell Web Access e a segurança, consulte [regras de autorização e segurança recursos do Windows PowerShell Web Access](authorization-rules-and-security-features-of-windows-powershell-web-access.md).
 
@@ -404,7 +404,7 @@ Num ambiente de produção seguro, utilize sempre um certificado SSL válido ass
 1. Na **ações** painel, efetue um dos seguintes procedimentos. Para obter mais informações sobre como configurar certificados de servidor no IIS, consulte [configurar certificados de servidor no IIS 7](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc732230(v=ws.10)).
 
    - Clique em **importar** para importar um certificado válido existente a partir de uma localização na sua rede.
-   - Clique em **criar pedido de certificado** para pedir um certificado a partir de uma AC, tal como [VeriSign](http://www.verisign.com/), [Thawte](https://www.thawte.com/), ou [GeoTrust](https://www.geotrust.com/). O nome comum do certificado tem de corresponder ao cabeçalho do anfitrião no pedido.
+   - Clique em **criar pedido de certificado** para pedir um certificado a partir de uma AC, tal como [VeriSign](https://www.verisign.com/), [Thawte](https://www.thawte.com/), ou [GeoTrust](https://www.geotrust.com/). O nome comum do certificado tem de corresponder ao cabeçalho do anfitrião no pedido.
 
      Por exemplo, se o browser cliente pedir `http://www.contoso.com/`, em seguida, o nome comum também tem de ser `http://www.contoso.com/`. Esta é a opção mais segura e recomendada para fornecer o gateway do Windows PowerShell Web Access com um certificado.
 

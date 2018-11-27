@@ -3,18 +3,18 @@ ms.date: 06/05/2017
 keywords: PowerShell, o cmdlet
 title: Criar um Seletor de Datas Gráfico
 ms.assetid: c1cb722c-41e9-4baa-be83-59b4653222e9
-ms.openlocfilehash: 3727c90c314a6fc1b3a338ec60e44259f153d954
-ms.sourcegitcommit: cf195b090b3223fa4917206dfec7f0b603873cdf
+ms.openlocfilehash: 6dd43a3b1f4c67633ad1755de3db88eb8c6772c8
+ms.sourcegitcommit: 221b7daab7f597f8b2e4864cf9b5d9dda9b9879b
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 04/09/2018
-ms.locfileid: "30954845"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52320334"
 ---
 # <a name="creating-a-graphical-date-picker"></a>Criar um Seletor de Datas Gráfico
 
-Utilize o Windows PowerShell 3.0 e versões posteriores para criar um formulário com um controlo de calendário estilo gráfica, que permite aos utilizadores selecionar um dia do mês.
+Utilize o Windows PowerShell 3.0 e versões posteriores para criar um formulário com um controle de calendário-estilo de gráfico, que permite aos utilizadores selecionar um dia do mês.
 
-## <a name="create-a-graphical-date-picker-control"></a>Criar um controlo de selecionador de data gráfica
+## <a name="create-a-graphical-date-picker-control"></a>Criar um controlo de Seletor de datas gráfico
 
 Copiar e, em seguida, cole o seguinte no ISE do Windows PowerShell e, em seguida, guarde-o como um script do Windows PowerShell (. ps1).
 
@@ -60,19 +60,19 @@ if ($result -eq [System.Windows.Forms.DialogResult]::OK)
 }
 ```
 
-O script começa por carregar duas classes de .NET Framework: **Drawing por uma questão** e **System.Windows.Forms**. Em seguida, iniciar uma nova instância da classe de .NET Framework **Windows.Forms.Form**; que fornece uma forma em branco ou controla a janela para o qual pode começar a adicionar.
+O script começa com o carregamento de duas classes do .NET Framework: **System. Drawing** e **Forms**. Em seguida, iniciar uma nova instância da classe .NET Framework **Windows**; que fornece um formulário em branco ou controles de janela para o qual pode começar a adicionar.
 
 ```powershell
 $form = New-Object Windows.Forms.Form
 ```
 
-Depois de criar uma instância da classe do formulário, atribua valores a três propriedades desta classe.
+Depois de criar uma instância da classe Form, atribua valores a três propriedades dessa classe.
 
-- **Texto.** Isto torna-se o título da janela.
+- **Texto.** Isso se torna o título da janela.
 
-- **Tamanho.** Este é o tamanho do formulário, em pixels. O script anterior cria um formulário que é 243 pixéis wide por 230 pixels altura.
+- **Tamanho.** Este é o tamanho do formulário, em pixéis. O script anterior cria um formulário que é 243 pixels de largura por 230 pixels de altura.
 
-- **StartingPosition.** Esta propriedade opcional é definida como **CenterScreen** no script anterior. Se não adicionar esta propriedade, o Windows seleciona uma localização quando o formulário é aberto. Ao definir o **StartingPosition** para **CenterScreen**, automaticamente estiver a apresentar o formulário no meio do ecrã de cada vez que carrega.
+- **StartingPosition.** Esta propriedade opcional é definida como **CenterScreen** no script anterior. Se não adicionar esta propriedade, o Windows seleciona uma localização quando o formulário for aberto. Definindo a **StartingPosition** ao **CenterScreen**, estiver automaticamente a apresentar o formulário no meio da tela sempre que ele carrega.
 
 ```powershell
 $form.Text = 'Select a Date'
@@ -80,7 +80,7 @@ $form.Size = New-Object Drawing.Size @(243,230)
 $form.StartPosition = 'CenterScreen'
 ```
 
-Em seguida, criar e, em seguida, adicionar um controlo de calendário do formulário. Neste exemplo, o dia atual não realçado ou não está dentro de um círculo. Os utilizadores podem selecionar apenas um dia no calendário em simultâneo.
+Em seguida, criar e, em seguida, adicionar um controle de calendário no seu formulário. Neste exemplo, o dia atual não é realçado ou com círculos. Os utilizadores podem selecionar apenas um dia no calendário de uma só vez.
 
 ```powershell
 $calendar = New-Object System.Windows.Forms.MonthCalendar
@@ -89,7 +89,7 @@ $calendar.MaxSelectionCount = 1
 $form.Controls.Add($calendar)
 ```
 
-Em seguida, crie um **OK** botão para o formulário. Especifique o tamanho e o comportamento do **OK** botão. Neste exemplo, a posição do botão é 165 pixels limite superior do formulário e 38 pixéis do limite esquerdo. A altura do botão é 23 pixéis, enquanto o comprimento do botão for 75 pixéis. O script utiliza tipos de Windows Forms predefinidos para determinar os comportamentos do botão.
+Em seguida, crie uma **OK** botão para seu formulário. Especifique o tamanho e o comportamento do **OK** botão. Neste exemplo, a posição do botão é 165 pixels de limite superior do formulário e 38 pixels da margem esquerda. A altura de botão é 23 pixels, enquanto o comprimento de botão for 75 pixels. O script utiliza os tipos de formulários do Windows predefinidos para determinar os comportamentos de botão.
 
 ```powershell
 $OKButton = New-Object System.Windows.Forms.Button
@@ -101,7 +101,7 @@ $form.AcceptButton = $OKButton
 $form.Controls.Add($OKButton)
 ```
 
-Da mesma forma, crie um **Cancelar** botão. O **Cancelar** botão está 165 pixels da parte superior, mas 113 pixéis do limite esquerdo da janela.
+Da mesma forma, criar um **Cancelar** botão. O **Cancelar** botão é 165 pixels na parte superior, mas 113 pixels da margem esquerda da janela.
 
 ```powershell
 $CancelButton = New-Object System.Windows.Forms.Button
@@ -113,19 +113,19 @@ $form.CancelButton = $CancelButton
 $form.Controls.Add($CancelButton)
 ```
 
-Definir o **Topmost** propriedade **$true** para forçar a janela para o abrir visível outros windows abertas e caixas de diálogo.
+Definir o **Topmost** propriedade **$true** para forçar a janela para abrir sobre outras janelas abertas e caixas de diálogo.
 
 ```powershell
 $form.Topmost = $true
 ```
 
-Adicione a seguinte linha de código para apresentar o formulário no Windows.
+Adicione a seguinte linha de código para exibir o formulário no Windows.
 
 ```powershell
 $result = $form.ShowDialog()
 ```
 
-Por fim, o código no interior do **se** bloco dá instruções ao Windows o que fazer com o formulário, depois dos utilizadores selecionar um dia no calendário e, em seguida, clique no **OK** botão ou prima o **Enter** chave. Windows PowerShell apresenta a data selecionada para os utilizadores.
+Por fim, o código dentro do **se** bloco instrui o Windows o que fazer com o formulário depois dos utilizadores selecionar um dia no calendário e, em seguida, clique no **OK** botão ou prima o **Enter** chave. Windows PowerShell apresenta a data selecionada para os utilizadores.
 
 ```powershell
 if ($result -eq [System.Windows.Forms.DialogResult]::OK)
@@ -137,6 +137,6 @@ if ($result -eq [System.Windows.Forms.DialogResult]::OK)
 
 ## <a name="see-also"></a>Consulte Também
 
-- [Hei responsável pelo script Guy: por que razão estes exemplos do PowerShell GUI não funcionam?](http://go.microsoft.com/fwlink/?LinkId=506644)
+- [EI scripts Guy: por que estes exemplos de GUI do PowerShell não funcionam?](https://go.microsoft.com/fwlink/?LinkId=506644)
 - [GitHub: WinFormsExampleUpdates de Dave Wyatt](https://github.com/dlwyatt/WinFormsExampleUpdates)
-- [Windows PowerShell sugestão da semana: criar um Seletor de data gráfica](http://technet.microsoft.com/library/ff730942.aspx)
+- [Windows PowerShell dica da semana: criar um Seletor de datas gráfico](https://technet.microsoft.com/library/ff730942.aspx)

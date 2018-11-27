@@ -2,12 +2,12 @@
 title: Utilizar o Visual Studio Code para o desenvolvimento de PowerShell
 description: Utilizar o Visual Studio Code para o desenvolvimento de PowerShell
 ms.date: 08/06/2018
-ms.openlocfilehash: 9c06ce72c39d08e75fcb7e5cf9d5f92ae5dd8ed9
-ms.sourcegitcommit: e76665315fd928bf85210778f1fea2be15264fea
+ms.openlocfilehash: 6433a875c233283f94d70c7acd7d394c73029b6d
+ms.sourcegitcommit: 221b7daab7f597f8b2e4864cf9b5d9dda9b9879b
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 10/30/2018
-ms.locfileid: "50225799"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52320453"
 ---
 # <a name="using-visual-studio-code-for-powershell-development"></a>Utilizar o Visual Studio Code para o desenvolvimento de PowerShell
 
@@ -35,7 +35,7 @@ Para as cargas de trabalho tradicionais do Windows PowerShell, consulte [instala
 
   > [!IMPORTANT]
   > No macOS, tem de instalar o OpenSSL para a extensão de PowerShell funcione corretamente.
-  > A maneira mais fácil de realizar isso é instalar [Homebrew](http://brew.sh/) e, em seguida, execute `brew install openssl`.
+  > A maneira mais fácil de realizar isso é instalar [Homebrew](https://brew.sh/) e, em seguida, execute `brew install openssl`.
   > VS Code agora pode carregar a extensão de PowerShell com êxito.
 
 - **Windows**: Siga as instruções de instalação do [executar o VS Code no Windows](https://code.visualstudio.com/docs/setup/windows) página
