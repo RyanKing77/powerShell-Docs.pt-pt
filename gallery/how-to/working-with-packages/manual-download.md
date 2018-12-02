@@ -3,16 +3,16 @@ ms.date: 09/11/2018
 contributor: JKeithB
 keywords: Galeria do powershell, psgallery
 title: Transferência manual de pacotes
-ms.openlocfilehash: 0952aa4ec474850af5219fb2e0e9ee3e954b0f9a
-ms.sourcegitcommit: 98b7cfd8ad5718efa8e320526ca76c3cc4141d78
+ms.openlocfilehash: 57baa14089b803f58c42ccb54553ecace841e34b
+ms.sourcegitcommit: e24525046dd37166b9d83eeecdc534726316f429
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50004143"
+ms.lasthandoff: 12/01/2018
+ms.locfileid: "52742827"
 ---
 # <a name="manual-package-download"></a>Transferência manual de pacotes
 
-A galeria do Powershell suporta baixar um pacote do Web site diretamente, sem utilizar os cmdlets do PowerShellGet. O pacote será transferido como um ficheiro de pacote (. nupkg) do NuGet, que, em seguida, pode ser facilmente copiado para um repositório interno.
+A galeria do Powershell suporta baixar um pacote do Web site diretamente, sem utilizar os cmdlets do PowerShellGet. Pode baixar qualquer pacote como um ficheiro de pacote (. nupkg) do NuGet, que, em seguida, pode copiar para um repositório interno.
 
 > [!NOTE]
 > A transferência de pacotes manual é **não** pretende ser uma substituição para o cmdlet Install-Module.
@@ -45,7 +45,7 @@ A abordagem mais fácil é remover os elementos de NuGet específico a partir da
 1. Extraia o conteúdo do pacote NuGet para uma pasta local.
 2. Elimine os elementos de NuGet específico a partir da pasta.
 3. Renomeie a pasta. O nome da pasta predefinida é normalmente `<name>.<version>`. Pode incluir a versão "-pré-lançamento" se o módulo é identificado como uma versão de pré-lançamento. Renomeie a pasta para apenas o nome do módulo. Por exemplo, "azurerm.storage.5.0.4-pré-visualização" torna-se "azurerm. Storage".
-4. Copie a pasta para sua PSModulePath.
+4. Copie a pasta para uma das pastas no `$env:PSModulePath value`. `$env:PSModulePath` é um conjunto de ponto e vírgula delimitados por de caminhos em que PowerShell deveria procurar módulos.
 
 > [!IMPORTANT]
 > A transferência manual não inclui todas as dependências necessárias pelo módulo. Se o pacote tiver dependências, tem de estar instalados no sistema para este módulo funcione corretamente. A galeria do PowerShell mostra todas as dependências necessárias pelo pacote.

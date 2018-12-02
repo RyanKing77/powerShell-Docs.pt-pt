@@ -2,12 +2,12 @@
 ms.date: 06/12/2017
 keywords: DSC, powershell, configuração, a configuração
 title: Lista de verificação de criação de recursos
-ms.openlocfilehash: 91942a174bc6f38fa77c1925dc3c690ecf2ab34b
-ms.sourcegitcommit: 8b076ebde7ef971d7465bab834a3c2a32471ef6f
+ms.openlocfilehash: 2b6e972776dba4ecc6fd1ab5c21361d653e1a469
+ms.sourcegitcommit: e24525046dd37166b9d83eeecdc534726316f429
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 07/06/2018
-ms.locfileid: "37893560"
+ms.lasthandoff: 12/01/2018
+ms.locfileid: "52742844"
 ---
 # <a name="resource-authoring-checklist"></a>Lista de verificação de criação de recursos
 
@@ -85,7 +85,7 @@ If ($error.count –ne 0) {
 
 ## <a name="resource-is-idempotent-in-the-positive-case"></a>Recurso é idempotent no caso positivo
 
-Uma das características fundamentais de recursos de DSC está a ser idempotence. Isso significa que a aplicação de uma configuração de DSC contendo esse recurso várias vezes será sempre alcançar o mesmo resultado. Por exemplo, se criarmos uma configuração que contém o seguinte recurso do ficheiro:
+Uma das características fundamentais de recursos de DSC é idempotence. Isso significa que a aplicação de uma configuração de DSC contendo esse recurso várias vezes será sempre alcançar o mesmo resultado. Por exemplo, se criarmos uma configuração que contém o seguinte recurso do ficheiro:
 
 ```powershell
 File file {
