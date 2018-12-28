@@ -3,19 +3,19 @@ ms.date: 06/12/2017
 contributor: manikb
 keywords: cmdlet do powershell do galeria, psget
 title: Módulos com edições do PowerShell compatíveis
-ms.openlocfilehash: 0a95b47b506fbdddbb98b455a1d10d0f08ce402b
-ms.sourcegitcommit: 98b7cfd8ad5718efa8e320526ca76c3cc4141d78
+ms.openlocfilehash: bda924393d37ea1596fbf0d813c10cbdea33c218
+ms.sourcegitcommit: 548547b2d5fc73e726bb9fec6175d452a351d975
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50002689"
+ms.lasthandoff: 12/20/2018
+ms.locfileid: "53655332"
 ---
 # <a name="modules-with-compatible-powershell-editions"></a>Módulos com edições do PowerShell compatíveis
 
 Começando na versão 5.1, o PowerShell está disponível nas diferentes edições que denotam conjuntos de funcionalidade e compatibilidade de plataforma variados.
 
-- **Edição Desktop:** incorporada no .NET Framework e fornece compatibilidade com scripts e módulos de filtragem de versões do PowerShell a executar edições de requisitos de espaço total do Windows, tais como Server Core e o Ambiente de trabalho do Windows.
-- **Edição Core:** incorporada no .NET Core e fornece compatibilidade com scripts e módulos de filtragem de versões do PowerShell a executar edições de requisitos de espaço reduzido do Windows, tais como Servidor Nano e o IoT do Windows.
+- **Edição Desktop:** Criado no .NET Framework e fornece compatibilidade com scripts e módulos de filtragem de versões do PowerShell a executar edições de requisitos de espaço total do Windows como núcleo de servidor e Desktop do Windows.
+- **Edição Core:** Incorporada no .NET Core e fornece compatibilidade com scripts e módulos de filtragem de versões do PowerShell a executar edições de requisitos de espaço reduzido do Windows, como o servidor Nano e o Windows IoT.
 
 A edição em execução do PowerShell é mostrada na propriedade PSEdition da `$PSVersionTable`.
 
@@ -174,7 +174,7 @@ $PSModule.OnRemove = {
 }
 ```
 
-### <a name="option-2-use-psedition-variable-in-the-psd1-file-to-load-the-proper-dlls-and-nestedrequired-modules"></a>Opção 2: Utilizar $PSEdition variável no ficheiro PSD1 para carregar as DLLs adequados e os módulos/necessária para aninhados
+### <a name="option-2-use-psedition-variable-in-the-psd1-file-to-load-the-proper-dlls-and-nestedrequired-modules"></a>Opção 2: Utilizar a variável $PSEdition no ficheiro PSD1 para carregar as DLLs adequados e os módulos/necessária para aninhados
 
 No PS 5.1 ou mais recente, $PSEdition de variável global é permitida no arquivo de manifesto do módulo. Usando esta variável, autor de módulos pode especificar os valores condicionais no arquivo de manifesto do módulo. É possível referenciar a variável $PSEdition no modo de idioma restrito ou uma secção de dados.
 
@@ -260,6 +260,6 @@ Find-Module -Tag PSEdition_Core
 
 [Scripts com Edições do PowerShell](script-psedition-support.md)
 
-[Suporte de edições do PowerShell no PowerShellGallery](../how-to/finding-packages/searching-by-psedition.md)
+[Suporte de edições do PowerShell no PowerShellGallery](../how-to/finding-packages/searching-by-compatibility.md)
 
 [Atualizar o manifesto do módulo](/powershell/module/powershellget/update-modulemanifest)

@@ -3,12 +3,12 @@ ms.date: 06/12/2017
 contributor: JKeithB
 keywords: Galeria, o powershell, o cmdlet, o psgallery
 title: Criar e publicar um item
-ms.openlocfilehash: ced892b558b81c3ef9575b5a01e74932515b412a
-ms.sourcegitcommit: 98b7cfd8ad5718efa8e320526ca76c3cc4141d78
+ms.openlocfilehash: 3875c7ae8231f254e655f149c788503cb0b3077c
+ms.sourcegitcommit: 548547b2d5fc73e726bb9fec6175d452a351d975
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50004149"
+ms.lasthandoff: 12/20/2018
+ms.locfileid: "53655434"
 ---
 # <a name="creating-and-publishing-an-item"></a>Criar e publicar um item
 
@@ -36,7 +36,7 @@ Assim que tiver criado uma conta, pode obter a chave de API necessária para pub
 Depois de iniciar sessão com a conta, seu nome de utilizador será apresentado na parte superior das páginas da galeria do PowerShell, em vez de Registro.
 Clicar no nome de utilizador leva-o para a página minha conta, onde encontrará a chave de API.
 
-Nota: A chave de API deve ser tratada com segurança como o início de sessão e palavra-passe.
+Nota: A chave de API deve ser tratada de forma mais segura do início de sessão e palavra-passe.
 Com esta chave,, ou de qualquer outra, pode atualizar qualquer item que é proprietário na galeria do PowerShell.
 Recomendamos que Atualize a chave regularmente, que pode ser feita com a chave de repor a sua página minha conta.
 
@@ -56,10 +56,11 @@ PrivateData suporta a adição de novas chaves, para que os elementos específic
 Manifestos elementos que são mais importantes para preencher para item que publicar na galeria do PowerShell são:
 
 - Script ou o nome do módulo - aqueles são desenhados dos nomes da. PS1 para um script, ou o. PSD1 para um módulo.
-- Versão - esta é uma chave primária necessária, formato deve seguir as diretrizes de SemVer (veja as práticas recomendadas para obter detalhes)
-- Autor - esta é uma chave primária necessária e contém o nome a ser associado com o item (veja a autores e proprietários, abaixo)
+- Versão - esta é uma chave primária necessária, o formato deve seguir as diretrizes de SemVer. Veja as práticas recomendadas para obter detalhes.
+- Autor - esta é uma chave primária necessária e contém o nome a ser associado com o item. Veja os autores e proprietários abaixo.
 - Descrição - Esta é uma chave primária necessária, utilizado para explique brevemente o que faz este item e os requisitos para utilizá-lo
 - ProjectURI - este é um campo URI vivamente recomendado num PSData que fornece uma ligação para um repositório do Github ou localização semelhante em que fizer o desenvolvimento no item
+- Etiquetas - é uma recomendação veemente para etiquetar o pacote com base na respetiva compatibilidade com plataformas e edições do PowerShell. Ver [diretrizes de publicação](/powershell/gallery/concepts/publishing-guidelines.md#tag-your-package-with-the-compatible-pseditions-and-platforms) para obter detalhes.
 
 Itens de autores e proprietários de galeria do PowerShell são conceitos relacionados, mas sempre não correspondem.
 Os proprietários de itens são os utilizadores com contas de galeria do PowerShell que têm permissão para manter o item. Pode haver muitos proprietários que podem atualizar qualquer item.
@@ -104,7 +105,7 @@ A maioria das outras opções na linha de comandos deve ser nos dados de manifes
 Para evitar erros, é altamente recomendável que experimente os comandos usando - Whatif-Verbose, antes da publicação.
 Esta ação irá guardar um tempo considerável, desde sempre que publicar na galeria do PowerShell, tem de atualizar o número de versão na secção de manifesto do item.
 
-Exemplos seriam: ' Publish-Module-caminho ". \MyModule" - RequiredVersion "0.0.1" - NugetAPIKey "GUID" - Whatif-verboso ' ' Publish-Script-o caminho ".\MyScriptFile.PS1" - NugetAPIKey "GUID" - Whatif-Verbose "
+Exemplos seriam: "Publicar-Module-caminho". \MyModule "- RequiredVersion"0.0.1"- NugetAPIKey"GUID"- Whatif-verboso ' ' Script publicar-- NugetAPIKey de".\MyScriptFile.PS1"caminho"GUID"- Whatif-Verbose"
 
 Reveja o resultado com cuidado e, se vir há erros nem avisos, repita o comando sem o parâmetro-Whatif.
 

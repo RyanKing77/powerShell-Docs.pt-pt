@@ -2,12 +2,12 @@
 ms.date: 06/12/2017
 keywords: jea, powershell, segurança
 title: Configurações de sessão JEA
-ms.openlocfilehash: bdf3659357045203d90e8083613e51cce657da1a
-ms.sourcegitcommit: e46b868f56f359909ff7c8230b1d1770935cce0e
+ms.openlocfilehash: 1b598522d43b2c1a26a739a67cee5181b21a7c32
+ms.sourcegitcommit: 548547b2d5fc73e726bb9fec6175d452a351d975
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 09/13/2018
-ms.locfileid: "45522967"
+ms.lasthandoff: 12/20/2018
+ms.locfileid: "53655468"
 ---
 # <a name="jea-session-configurations"></a>Configurações de sessão JEA
 
@@ -80,6 +80,8 @@ Quando é especificado um ou mais grupos de segurança, a conta virtual já não
 RunAsVirtualAccount = $true
 RunAsVirtualAccountGroups = 'NetworkOperator', 'NetworkAuditor'
 ```
+> [!NOTE]
+> Contas virtuais recebem temporariamente o início de sessão como um direito de serviço na política de segurança de servidor local.  Se um dos VirtualAccountGroups especificado já foi concedido este direito na política, a conta virtual individual já não será adicionada e removida da política.  Isso pode ser útil em cenários como controladores de domínio em que a revisões para a política de segurança do controlador de domínio de perto são auditados.  Isso só está disponível no Windows Server 2016 com a Novembro de 2018 ou rollup posterior e Windows Server 2019 com o de 2019 de Janeiro ou rollup posterior.
 
 #### <a name="group-managed-service-account"></a>Conta de Serviço Gerida de Grupo
 

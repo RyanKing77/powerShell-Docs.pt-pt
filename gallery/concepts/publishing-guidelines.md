@@ -4,12 +4,12 @@ contributor: JKeithB
 keywords: Galeria, o powershell, o cmdlet, o psgallery
 description: Diretrizes para editores
 title: Galeria do PowerShell orientações e melhores práticas de publicação
-ms.openlocfilehash: 7e9eca8d3372ddf0b94ab42e125991b857456551
-ms.sourcegitcommit: aa1129cc2b0ae6e18918b2b0ea70c74915ed019b
+ms.openlocfilehash: a996a820d6bd52e796a41659c6f468662dbff0f4
+ms.sourcegitcommit: 548547b2d5fc73e726bb9fec6175d452a351d975
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 10/30/2018
-ms.locfileid: "50235410"
+ms.lasthandoff: 12/20/2018
+ms.locfileid: "53655400"
 ---
 # <a name="powershellgallery-publishing-guidelines-and-best-practices"></a>PowerShellGallery orientações e melhores práticas de publicação
 
@@ -33,6 +33,7 @@ Os pacotes que siga estas diretrizes são muito mais probabilidade de ser transf
 - Ser reativos para com comentários
 - Fornecer módulos em vez de scripts
 - Fornecem ligações para um site de projeto
+- Marcar seu pacote com as plataformas e PSEdition(s) compatível 
 - Incluir testes com seus módulos
 - Incluir e/ou ligar a termos de licenciamento
 - Inicie o seu código
@@ -92,8 +93,8 @@ Os utilizadores que fornecem comentários construtivos são importantes para res
 
 Existem dois métodos de comentários disponíveis na galeria do PowerShell:
 
-- Proprietário do contacto: Isso permite que um utilizador enviar um e-mail para proprietários que o pacote se. Como proprietário de um pacote, é importante monitorizar o endereço de e-mail utilizado com os pacotes de galeria do PowerShell e responder a problemas que são gerados. Uma desvantagem desse método é que apenas o utilizador e o proprietário nunca Verão a comunicação, para que o proprietário poderá ter de responder a muitas vezes a mesma pergunta.
-- Comentários: Na parte inferior da página do pacote é um campo de comentário.
+- Contacte o proprietário: Isso permite que um usuário envia um e-mail para proprietários que o pacote se. Como proprietário de um pacote, é importante monitorizar o endereço de e-mail utilizado com os pacotes de galeria do PowerShell e responder a problemas que são gerados. Uma desvantagem desse método é que apenas o utilizador e o proprietário nunca Verão a comunicação, para que o proprietário poderá ter de responder a muitas vezes a mesma pergunta.
+- Comentários: Na parte inferior do pacote de página é um campo de comentário.
   A vantagem para este sistema é que outros utilizadores possam ver os comentários e respostas, que reduz o número de vezes que qualquer pergunta têm de ser respondida.
   Como proprietário de um pacote, recomenda-se vivamente que siga os comentários feitos para cada pacote.
 Ver [fornecer Feedback através de redes sociais ou dos comentários](../how-to/working-with-packages/social-media-feedback.md) para obter detalhes sobre como fazer isso.
@@ -134,6 +135,16 @@ Adicionar uma ligação é feita, incluindo ProjectURI na secção PSData do man
         ProjectUri = 'https://github.com/powershell/powershell'
 
 Quando é fornecido um ProjectURI, a galeria do PowerShell incluirá uma ligação para o Site do projeto no lado esquerdo da página do pacote.
+
+## <a name="tag-your-package-with-the-compatible-pseditions-and-platforms"></a>Marcar seu pacote com as plataformas e PSEdition(s) compatível 
+
+Utilize as seguintes etiquetas para demonstrar a utilizadores que pacotes funcionará bem com o seu ambiente:
+
+- PSEdition_Desktop: Pacotes que são compatíveis com o Windows PowerShell 
+- PSEdition_Core: Pacotes que são compatíveis com o Powershell Core 
+- Windows: Pacotes que são compatíveis com o sistema de operativo do Windows
+- Linux: Pacotes que são compatíveis com sistemas de operativos do Linux 
+- MacOS: Pacotes que são compatíveis com o sistema de operativo do Mac
 
 ## <a name="include-tests"></a>Incluir testes
 
