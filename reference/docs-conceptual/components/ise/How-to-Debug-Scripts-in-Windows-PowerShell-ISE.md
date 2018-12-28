@@ -1,0 +1,198 @@
+---
+ms.date: 06/05/2017
+keywords: PowerShell, o cmdlet
+title: Como Depurar Scripts no ISE do Windows PowerShell
+ms.openlocfilehash: b7af2de83a3f796a2057514e36ad8b74367e8ce2
+ms.sourcegitcommit: 00ff76d7d9414fe585c04740b739b9cf14d711e1
+ms.translationtype: MT
+ms.contentlocale: pt-PT
+ms.lasthandoff: 12/14/2018
+ms.locfileid: "53405533"
+---
+# <a name="how-to-debug-scripts-in-windows-powershell-ise"></a><span data-ttu-id="58e2b-103">Como Depurar Scripts no ISE do Windows PowerShell</span><span class="sxs-lookup"><span data-stu-id="58e2b-103">How to Debug Scripts in Windows PowerShell ISE</span></span>
+
+<span data-ttu-id="58e2b-104">Este artigo descreve como depurar scripts num computador local, utilizando os recursos de depuração visual do Windows PowerShell Integrated Scripting Environment (ISE).</span><span class="sxs-lookup"><span data-stu-id="58e2b-104">This article describes how to debug scripts on a local computer by using the Windows PowerShell Integrated Scripting Environment (ISE) visual debugging features.</span></span>
+
+## <a name="how-to-manage-breakpoints"></a><span data-ttu-id="58e2b-105">Como gerir pontos de interrupção</span><span class="sxs-lookup"><span data-stu-id="58e2b-105">How to manage breakpoints</span></span>
+
+<span data-ttu-id="58e2b-106">Um ponto de interrupção é um lugar num script designado onde pretende colocar em pausa, para que pode examinar o estado atual de variáveis e o ambiente no qual o script está em execução da operação.</span><span class="sxs-lookup"><span data-stu-id="58e2b-106">A breakpoint is a designated spot in a script where you would like operation to pause so that you can examine the current state of the variables and the environment in which your script is running.</span></span> <span data-ttu-id="58e2b-107">Depois do script está em pausa por um ponto de interrupção, pode executar comandos no painel da consola para examinar o estado do seu script.</span><span class="sxs-lookup"><span data-stu-id="58e2b-107">Once your script is paused by a breakpoint, you can run commands in the Console Pane to examine the state of your script.</span></span>  <span data-ttu-id="58e2b-108">Pode variáveis de saída ou executar outros comandos.</span><span class="sxs-lookup"><span data-stu-id="58e2b-108">You can output variables or run other commands.</span></span> <span data-ttu-id="58e2b-109">Pode até mesmo modificar o valor de todas as variáveis que estão visíveis para o contexto do script em execução.</span><span class="sxs-lookup"><span data-stu-id="58e2b-109">You can even modify the value of any variables that are visible to the context of the currently running script.</span></span> <span data-ttu-id="58e2b-110">Após ter examinado o que pretende ver, é possível retomar o funcionamento do script.</span><span class="sxs-lookup"><span data-stu-id="58e2b-110">After you have examined what you want to see, you can resume operation of the script.</span></span>
+
+<span data-ttu-id="58e2b-111">Pode definir três tipos de pontos de interrupção no ambiente de depuração do Windows PowerShell:</span><span class="sxs-lookup"><span data-stu-id="58e2b-111">You can set three types of breakpoints in the Windows PowerShell debugging environment:</span></span>
+
+1. <span data-ttu-id="58e2b-112">**Ponto de interrupção de linha**.</span><span class="sxs-lookup"><span data-stu-id="58e2b-112">**Line breakpoint**.</span></span> <span data-ttu-id="58e2b-113">O script faz uma pausa quando a linha designada é atingida durante a operação do script</span><span class="sxs-lookup"><span data-stu-id="58e2b-113">The script pauses when the designated line is reached during the operation of the script</span></span>
+
+2. <span data-ttu-id="58e2b-114">**Ponto de interrupção de variável.**</span><span class="sxs-lookup"><span data-stu-id="58e2b-114">**Variable breakpoint.**</span></span> <span data-ttu-id="58e2b-115">O script faz uma pausa sempre que altera o valor da variável designado.</span><span class="sxs-lookup"><span data-stu-id="58e2b-115">The script pauses whenever the designated variable's value changes.</span></span>
+
+3. <span data-ttu-id="58e2b-116">**Ponto de interrupção de comando.**</span><span class="sxs-lookup"><span data-stu-id="58e2b-116">**Command breakpoint.**</span></span> <span data-ttu-id="58e2b-117">O script faz uma pausa sempre que o comando designado está prestes a ser executado durante a operação do script.</span><span class="sxs-lookup"><span data-stu-id="58e2b-117">The script pauses whenever the designated command is about to be run during the operation of the script.</span></span> <span data-ttu-id="58e2b-118">Ele pode incluir parâmetros para filtrar ainda mais o ponto de interrupção para apenas a operação que deseja.</span><span class="sxs-lookup"><span data-stu-id="58e2b-118">It can include parameters to further filter the breakpoint to only the operation you want.</span></span> <span data-ttu-id="58e2b-119">O comando também pode ser uma função que criou.</span><span class="sxs-lookup"><span data-stu-id="58e2b-119">The command can also be a function you created.</span></span>
+
+<span data-ttu-id="58e2b-120">Um deles, no ambiente de depuração do Windows PowerShell ISE, apenas pontos de interrupção da linha podem ser definidos utilizando o menu ou os atalhos de teclado.</span><span class="sxs-lookup"><span data-stu-id="58e2b-120">Of these, in the Windows PowerShell ISE debugging environment, only line breakpoints can be set by using the menu or the keyboard shortcuts.</span></span> <span data-ttu-id="58e2b-121">Os outros dois tipos de pontos de interrupção podem ser definidos, mas eles são definidos do painel de consola utilizando o [Set-PSBreakpoint](https://technet.microsoft.com/library/88d2d9ad-17dc-44ae-99aa-f841125b9dc8) cmdlet.</span><span class="sxs-lookup"><span data-stu-id="58e2b-121">The other two types of breakpoints can be set, but they are set from the Console Pane by using the [Set-PSBreakpoint](https://technet.microsoft.com/library/88d2d9ad-17dc-44ae-99aa-f841125b9dc8) cmdlet.</span></span> <span data-ttu-id="58e2b-122">Esta secção descreve como efetuar tarefas de depuração no ISE do Windows PowerShell com os menus que estiverem disponíveis e executar uma variedade maior de comandos a partir do painel de consola usando o script.</span><span class="sxs-lookup"><span data-stu-id="58e2b-122">This section describes how you can perform debugging tasks in Windows PowerShell ISE by using the menus where available, and perform a wider range of commands from the Console Pane by using scripting.</span></span>
+
+### <a name="to-set-a-breakpoint"></a><span data-ttu-id="58e2b-123">Para definir um ponto de interrupção</span><span class="sxs-lookup"><span data-stu-id="58e2b-123">To set a breakpoint</span></span>
+
+<span data-ttu-id="58e2b-124">Um ponto de interrupção pode ser definido num script apenas depois foi guardado.</span><span class="sxs-lookup"><span data-stu-id="58e2b-124">A breakpoint can be set in a script only after it has been saved.</span></span> <span data-ttu-id="58e2b-125">Com o botão direito a linha em que pretende definir um ponto de interrupção de linha e, em seguida, clique em **Ativar/desativar ponto de interrupção**.</span><span class="sxs-lookup"><span data-stu-id="58e2b-125">Right-click the line where you want to set a line breakpoint, and then click **Toggle Breakpoint**.</span></span> <span data-ttu-id="58e2b-126">Em alternativa, clique na linha em que queira definir um ponto de interrupção de linha, e prima **F9** ou, no **depurar** menu, clique em **Ativar/desativar ponto de interrupção**.</span><span class="sxs-lookup"><span data-stu-id="58e2b-126">Or, click the line where you want to set a line breakpoint, and press **F9** or, on the **Debug** menu, click **Toggle Breakpoint**.</span></span>
+
+<span data-ttu-id="58e2b-127">O script seguinte é um exemplo de como pode definir um ponto de interrupção de variável do painel de consola utilizando o [Set-PSBreakpoint](https://technet.microsoft.com/library/6afd5d2c-a285-4796-8607-3cbf49471420) cmdlet.</span><span class="sxs-lookup"><span data-stu-id="58e2b-127">The following script is an example of how you can set a variable breakpoint from the Console Pane by using the [Set-PSBreakpoint](https://technet.microsoft.com/library/6afd5d2c-a285-4796-8607-3cbf49471420) cmdlet.</span></span>
+
+```powershell
+# This command sets a breakpoint on the Server variable in the Sample.ps1 script.
+Set-PSBreakpoint -Script sample.ps1 -Variable Server
+```
+
+### <a name="list-all-breakpoints"></a><span data-ttu-id="58e2b-128">Lista de todos os pontos de interrupção</span><span class="sxs-lookup"><span data-stu-id="58e2b-128">List all breakpoints</span></span>
+
+<span data-ttu-id="58e2b-129">Mostra todos os pontos de interrupção na sessão atual do Windows PowerShell.</span><span class="sxs-lookup"><span data-stu-id="58e2b-129">Displays all breakpoints in the current Windows PowerShell session.</span></span>
+
+<span data-ttu-id="58e2b-130">Sobre o **depurar** menu, clique em **lista de pontos de interrupção**.</span><span class="sxs-lookup"><span data-stu-id="58e2b-130">On the **Debug** menu, click **List Breakpoints**.</span></span> <span data-ttu-id="58e2b-131">O script seguinte é um exemplo de como pode listar todos os pontos de interrupção do painel de consola utilizando o [Get-PSBreakpoint](https://technet.microsoft.com/library/0bf48936-00ab-411c-b5e0-9b10a812a3c6) cmdlet.</span><span class="sxs-lookup"><span data-stu-id="58e2b-131">The following script is an example of how you can list all breakpoints from the Console Pane by using the [Get-PSBreakpoint](https://technet.microsoft.com/library/0bf48936-00ab-411c-b5e0-9b10a812a3c6) cmdlet.</span></span>
+
+```powershell
+# This command lists all breakpoints in the current session.
+Get-PSBreakpoint
+```
+
+### <a name="remove-a-breakpoint"></a><span data-ttu-id="58e2b-132">Remover um ponto de interrupção</span><span class="sxs-lookup"><span data-stu-id="58e2b-132">Remove a breakpoint</span></span>
+
+<span data-ttu-id="58e2b-133">Remover um ponto de interrupção elimina-a.</span><span class="sxs-lookup"><span data-stu-id="58e2b-133">Removing a breakpoint deletes it.</span></span>
+
+<span data-ttu-id="58e2b-134">Se acha que poderá querer utilizá-lo novamente mais tarde, considere [desativar um ponto de interrupção](#disable-a-breakpoint) -lo em vez disso.</span><span class="sxs-lookup"><span data-stu-id="58e2b-134">If you think you might want to use it again later, consider [Disable a Breakpoint](#disable-a-breakpoint) it instead.</span></span>
+<span data-ttu-id="58e2b-135">Com o botão direito a linha em que pretende remover um ponto de interrupção e, em seguida, clique em **Ativar/desativar ponto de interrupção**.</span><span class="sxs-lookup"><span data-stu-id="58e2b-135">Right-click the line where you want to remove a breakpoint, and then click **Toggle Breakpoint**.</span></span>
+<span data-ttu-id="58e2b-136">Em alternativa, clique na linha em que pretende remover um ponto de interrupção, e, no **depurar** menu, clique em **Ativar/desativar ponto de interrupção**.</span><span class="sxs-lookup"><span data-stu-id="58e2b-136">Or, click the line where you want to remove a breakpoint, and on the **Debug** menu, click **Toggle Breakpoint**.</span></span>
+<span data-ttu-id="58e2b-137">O script seguinte é um exemplo de como remover um ponto de interrupção com um ID especificado a partir do painel de consola utilizando o [Remove-PSBreakpoint](https://technet.microsoft.com/library/4c877a80-0ea0-4790-9281-88c08ef0ddd6) cmdlet.</span><span class="sxs-lookup"><span data-stu-id="58e2b-137">The following script is an example of how to remove a breakpoint with a specified ID from the Console Pane by using the [Remove-PSBreakpoint](https://technet.microsoft.com/library/4c877a80-0ea0-4790-9281-88c08ef0ddd6) cmdlet.</span></span>
+
+```powershell
+# This command deletes the breakpoint with breakpoint ID 2.
+Remove-PSBreakpoint -Id 2
+```
+
+### <a name="remove-all-breakpoints"></a><span data-ttu-id="58e2b-138">Remover todos os pontos de interrupção</span><span class="sxs-lookup"><span data-stu-id="58e2b-138">Remove All Breakpoints</span></span>
+
+<span data-ttu-id="58e2b-139">Para remover todos os pontos de interrupção definidos na sessão atual, sobre o **depurar** menu, clique em **remover todos os pontos de interrupção**.</span><span class="sxs-lookup"><span data-stu-id="58e2b-139">To remove all breakpoints defined in the current session, on the **Debug** menu, click **Remove All Breakpoints**.</span></span>
+
+<span data-ttu-id="58e2b-140">O script seguinte é um exemplo de como remover todos os pontos de interrupção do painel de consola com o [Remove-PSBreakpoint](https://technet.microsoft.com/library/4c877a80-0ea0-4790-9281-88c08ef0ddd6) cmdlet.</span><span class="sxs-lookup"><span data-stu-id="58e2b-140">The following script is an example of how to remove all breakpoints from the Console Pane by using the [Remove-PSBreakpoint](https://technet.microsoft.com/library/4c877a80-0ea0-4790-9281-88c08ef0ddd6) cmdlet.</span></span>
+
+```powershell
+# This command deletes all of the breakpoints in the current session.
+Get-PSBreakpoint | Remove-PSBreakpoint
+```
+
+### <a name="disable-a-breakpoint"></a><span data-ttu-id="58e2b-141">Desativar um ponto de interrupção</span><span class="sxs-lookup"><span data-stu-id="58e2b-141">Disable a Breakpoint</span></span>
+
+<span data-ttu-id="58e2b-142">Desativar um ponto de interrupção não remove-lo. ele a desativa até que seja ativado.</span><span class="sxs-lookup"><span data-stu-id="58e2b-142">Disabling a breakpoint does not remove it; it turns it off until it is enabled.</span></span>  <span data-ttu-id="58e2b-143">Para desativar um ponto de interrupção de linha específica, com o botão direito a linha em que pretende desativar um ponto de interrupção e, em seguida, clique em **desativar ponto de interrupção**.</span><span class="sxs-lookup"><span data-stu-id="58e2b-143">To disable a specific line breakpoint, right-click the line where you want to disable a breakpoint, and then click **Disable Breakpoint**.</span></span> <span data-ttu-id="58e2b-144">Em alternativa, clique na linha em que pretende desativar um ponto de interrupção, e prima **F9** ou, no **depurar** menu, clique em **desativar ponto de interrupção**.</span><span class="sxs-lookup"><span data-stu-id="58e2b-144">Or, click the line where you want to disable a breakpoint, and press **F9** or, on the **Debug** menu, click **Disable Breakpoint**.</span></span> <span data-ttu-id="58e2b-145">O script seguinte é um exemplo de como pode remover um ponto de interrupção com uma ID especificada do painel de consola utilizando o [Disable-PSBreakpoint](https://technet.microsoft.com/library/d4974e9b-0aaa-4e20-b87f-f599a413e4e8) cmdlet.</span><span class="sxs-lookup"><span data-stu-id="58e2b-145">The following script is an example of how you can remove a breakpoint with a specified ID from the Console Pane by using the [Disable-PSBreakpoint](https://technet.microsoft.com/library/d4974e9b-0aaa-4e20-b87f-f599a413e4e8) cmdlet.</span></span>
+
+```powershell
+# This command disables the breakpoint with breakpoint ID 0.
+Disable-PSBreakpoint -Id 0
+```
+
+### <a name="disable-all-breakpoints"></a><span data-ttu-id="58e2b-146">Desativar todos os pontos de interrupção</span><span class="sxs-lookup"><span data-stu-id="58e2b-146">Disable All Breakpoints</span></span>
+
+<span data-ttu-id="58e2b-147">Desativar um ponto de interrupção não remove-lo. ele a desativa até que seja ativado.</span><span class="sxs-lookup"><span data-stu-id="58e2b-147">Disabling a breakpoint does not remove it; it turns it off until it is enabled.</span></span>  <span data-ttu-id="58e2b-148">Para desativar todos os pontos de interrupção na sessão atual, sobre o **depurar** menu, clique em **desativar todos os pontos de interrupção**.</span><span class="sxs-lookup"><span data-stu-id="58e2b-148">To disable all breakpoints in the current session, on the **Debug** menu, click **Disable all Breakpoints**.</span></span> <span data-ttu-id="58e2b-149">O script seguinte é um exemplo de como pode desativar todos os pontos de interrupção do painel de consola, utilizando o [Disable-PSBreakpoint](https://technet.microsoft.com/library/d4974e9b-0aaa-4e20-b87f-f599a413e4e8) cmdlet.</span><span class="sxs-lookup"><span data-stu-id="58e2b-149">The following script is an example of how you can disable all breakpoints from the Console Pane by using the [Disable-PSBreakpoint](https://technet.microsoft.com/library/d4974e9b-0aaa-4e20-b87f-f599a413e4e8) cmdlet.</span></span>
+
+```powershell
+# This command disables all breakpoints in the current session.
+# You can abbreviate this command as: "gbp | dbp".
+Get-PSBreakpoint | Disable-PSBreakpoint
+```
+
+### <a name="enable-a-breakpoint"></a><span data-ttu-id="58e2b-150">Ativar um ponto de interrupção</span><span class="sxs-lookup"><span data-stu-id="58e2b-150">Enable a Breakpoint</span></span>
+
+<span data-ttu-id="58e2b-151">Para ativar um ponto de interrupção específico, clique com botão direito a linha em que pretende ativar um ponto de interrupção e, em seguida, clique em **ativar o ponto de interrupção**.</span><span class="sxs-lookup"><span data-stu-id="58e2b-151">To enable a specific breakpoint, right-click the line where you want to enable a breakpoint, and then click **Enable Breakpoint**.</span></span> <span data-ttu-id="58e2b-152">Em alternativa, clique na linha em que pretende ativar um ponto de interrupção e, em seguida, prima **F9** ou, no **depurar** menu, clique em **ativar o ponto de interrupção**.</span><span class="sxs-lookup"><span data-stu-id="58e2b-152">Or, click the line where you want to enable a breakpoint, and then press **F9** or, on the **Debug** menu, click **Enable Breakpoint**.</span></span> <span data-ttu-id="58e2b-153">O script seguinte é um exemplo de como pode ativar pontos de interrupção específicos do painel de consola utilizando o [Enable-PSBreakpoint](https://technet.microsoft.com/library/739e1091-3b3f-405f-a428-bec7543e5df0) cmdlet.</span><span class="sxs-lookup"><span data-stu-id="58e2b-153">The following script is an example of how you can enable specific breakpoints from the Console Pane by using the [Enable-PSBreakpoint](https://technet.microsoft.com/library/739e1091-3b3f-405f-a428-bec7543e5df0) cmdlet.</span></span>
+
+```powershell
+# This command enables breakpoints with breakpoint IDs 0, 1, and 5.
+Enable-PSBreakpoint -Id 0, 1, 5
+```
+
+### <a name="enable-all-breakpoints"></a><span data-ttu-id="58e2b-154">Ativar todos os pontos de interrupção</span><span class="sxs-lookup"><span data-stu-id="58e2b-154">Enable All Breakpoints</span></span>
+
+<span data-ttu-id="58e2b-155">Para permitir que todos os pontos de interrupção definidos na sessão atual, sobre o **depurar** menu, clique em **ativar todos os pontos de interrupção**.</span><span class="sxs-lookup"><span data-stu-id="58e2b-155">To enable all breakpoints defined in the current session, on the **Debug** menu, click **Enable all Breakpoints**.</span></span> <span data-ttu-id="58e2b-156">O script seguinte é um exemplo de como pode permitir todos os pontos de interrupção do painel de consola utilizando o [Enable-PSBreakpoint](https://technet.microsoft.com/library/739e1091-3b3f-405f-a428-bec7543e5df0) cmdlet.</span><span class="sxs-lookup"><span data-stu-id="58e2b-156">The following script is an example of how you can enable all breakpoints from the Console Pane by using the [Enable-PSBreakpoint](https://technet.microsoft.com/library/739e1091-3b3f-405f-a428-bec7543e5df0) cmdlet.</span></span>
+
+```powershell
+# This command enables all breakpoints in the current session.
+# You can abbreviate the command by using their aliases: "gbp | ebp".
+Get-PSBreakpoint | Enable-PSBreakpoint
+```
+
+## <a name="how-to-manage-a-debugging-session"></a><span data-ttu-id="58e2b-157">Como gerir uma sessão de depuração</span><span class="sxs-lookup"><span data-stu-id="58e2b-157">How to manage a debugging session</span></span>
+
+<span data-ttu-id="58e2b-158">Antes de iniciar a depuração, tem de definir uma ou mais pontos de interrupção.</span><span class="sxs-lookup"><span data-stu-id="58e2b-158">Before you start debugging, you must set one or more breakpoints.</span></span> <span data-ttu-id="58e2b-159">Não é possível definir um ponto de interrupção, a menos que o script que deseja depurar é guardado.</span><span class="sxs-lookup"><span data-stu-id="58e2b-159">You cannot set a breakpoint unless the script that you want to debug is saved.</span></span> <span data-ttu-id="58e2b-160">Para instruções sobre como definir um ponto de interrupção, consulte [como gerir pontos de interrupção](#how-to-manage-breakpoints) ou [conjunto PSBreakpoint](https://docs.microsoft.com/powershell/module/microsoft.powershell.utility/set-psbreakpoint).</span><span class="sxs-lookup"><span data-stu-id="58e2b-160">For directions on of how to set a breakpoint, see [How to manage breakpoints](#how-to-manage-breakpoints) or [Set-PSBreakpoint](https://docs.microsoft.com/powershell/module/microsoft.powershell.utility/set-psbreakpoint).</span></span> <span data-ttu-id="58e2b-161">Depois de iniciar a depuração, não é possível editar um script até que interrompa a depuração.</span><span class="sxs-lookup"><span data-stu-id="58e2b-161">After you start debugging, you cannot edit a script until you stop debugging.</span></span> <span data-ttu-id="58e2b-162">Um script que tenha um ou mais pontos de interrupção definido é guardado automaticamente antes que seja executado.</span><span class="sxs-lookup"><span data-stu-id="58e2b-162">A script that has one or more breakpoints set is automatically saved before it is run.</span></span>
+
+### <a name="to-start-debugging"></a><span data-ttu-id="58e2b-163">Para iniciar a depuração</span><span class="sxs-lookup"><span data-stu-id="58e2b-163">To start debugging</span></span>
+
+<span data-ttu-id="58e2b-164">Prima **F5** ou, na barra de ferramentas, clique nas **executar Script** ícone, ou no **depurar** menu clique **execução/continuar**.</span><span class="sxs-lookup"><span data-stu-id="58e2b-164">Press **F5** or, on the toolbar, click the **Run Script** icon, or on the **Debug** menu click **Run/Continue**.</span></span> <span data-ttu-id="58e2b-165">O script é executado até que ele encontra o primeiro ponto de interrupção.</span><span class="sxs-lookup"><span data-stu-id="58e2b-165">The script runs until it encounters the first breakpoint.</span></span> <span data-ttu-id="58e2b-166">Ele interrompe a operação aí e realça a linha em que em pausa.</span><span class="sxs-lookup"><span data-stu-id="58e2b-166">It pauses operation there and highlights the line on which it paused.</span></span>
+
+### <a name="to-continue-debugging"></a><span data-ttu-id="58e2b-167">Para continuar a depuração</span><span class="sxs-lookup"><span data-stu-id="58e2b-167">To continue debugging</span></span>
+
+<span data-ttu-id="58e2b-168">Prima **F5** ou, na barra de ferramentas, clique nas **executar Script** ícone, ou no **depurar** menu, clique em **execução/continuar** ou, no painel da consola, escreva **C** e, em seguida, prima **ENTER**.</span><span class="sxs-lookup"><span data-stu-id="58e2b-168">Press **F5** or, on the toolbar, click the **Run Script** icon, or on the **Debug** menu, click **Run/Continue** or, in the Console Pane, type **C** and then press **ENTER**.</span></span> <span data-ttu-id="58e2b-169">Isso faz com que o script para continuar a ser executada para o ponto de interrupção seguinte ou para o final do script, se não existem mais pontos de interrupção são encontrados.</span><span class="sxs-lookup"><span data-stu-id="58e2b-169">This causes the script to continue running to the next breakpoint or to the end of the script if no further breakpoints are encountered.</span></span>
+
+### <a name="to-view-the-call-stack"></a><span data-ttu-id="58e2b-170">Para ver a pilha de chamadas</span><span class="sxs-lookup"><span data-stu-id="58e2b-170">To view the call stack</span></span>
+
+<span data-ttu-id="58e2b-171">A pilha de chamadas apresenta a localização de execução do script atual.</span><span class="sxs-lookup"><span data-stu-id="58e2b-171">The call stack displays the current run location in the script.</span></span> <span data-ttu-id="58e2b-172">Se o script é executado numa função que foi chamada por outra função, em seguida, que é representado na exibição por linhas adicionais na saída.</span><span class="sxs-lookup"><span data-stu-id="58e2b-172">If the script is running in a function that was called by a different function, then that is represented in the display by additional rows in the output.</span></span> <span data-ttu-id="58e2b-173">A linha na extremidade inferior mostra o script original e a linha na mesma na qual era chamada de uma função.</span><span class="sxs-lookup"><span data-stu-id="58e2b-173">The bottom-most row displays the original script and the line in it in which a function was called.</span></span> <span data-ttu-id="58e2b-174">A próxima fila mostra essa função e a linha na mesma na qual outra função poderá ter chamada.</span><span class="sxs-lookup"><span data-stu-id="58e2b-174">The next line up shows that function and the line in it in which another function might have been called.</span></span>  <span data-ttu-id="58e2b-175">A linha mais mostra o contexto atual da linha atual no qual o ponto de interrupção está definido.</span><span class="sxs-lookup"><span data-stu-id="58e2b-175">The top-most row shows the current context of the current line on which the breakpoint is set.</span></span>
+
+<span data-ttu-id="58e2b-176">Embora em pausa, para ver a atual pilha de chamada, prima **CTRL + SHIFT + D** ou, no **depurar** menu, clique em **pilha de chamadas de exibição** ou, no painel da consola, escreva **K**  e, em seguida, prima **ENTER**.</span><span class="sxs-lookup"><span data-stu-id="58e2b-176">While paused, to see the current call stack, press **CTRL+SHIFT+D** or, on the **Debug** menu, click **Display Call Stack** or, in the Console Pane, type **K** and then press **ENTER**.</span></span>
+
+### <a name="to-stop-debugging"></a><span data-ttu-id="58e2b-177">Para parar a depuração</span><span class="sxs-lookup"><span data-stu-id="58e2b-177">To stop debugging</span></span>
+
+<span data-ttu-id="58e2b-178">Prima **SHIFT-F5** ou, no **depurar** menu, clique em **parar o depurador**, ou, no painel da consola, escreva **p** e, em seguida, prima  **INTRODUZA**.</span><span class="sxs-lookup"><span data-stu-id="58e2b-178">Press **SHIFT-F5** or, on the **Debug** menu, click **Stop Debugger**, or, in the Console Pane, type **Q** and then press **ENTER**.</span></span>
+
+## <a name="how-to-step-over-step-into-and-step-out-while-debugging"></a><span data-ttu-id="58e2b-179">Como passo ao longo, entrar e sair durante a depuração</span><span class="sxs-lookup"><span data-stu-id="58e2b-179">How to step over, step into, and step out while debugging</span></span>
+
+<span data-ttu-id="58e2b-180">Etapa é o processo de execução de uma instrução por vez.</span><span class="sxs-lookup"><span data-stu-id="58e2b-180">Stepping is the process of running one statement at a time.</span></span> <span data-ttu-id="58e2b-181">Pode parar numa linha de código e examinar os valores de variáveis e o estado do sistema.</span><span class="sxs-lookup"><span data-stu-id="58e2b-181">You can stop on a line of code, and examine the values of variables and the state of the system.</span></span> <span data-ttu-id="58e2b-182">A tabela seguinte descreve as tarefas comuns de depuração como passar ao longo, examinarmos e passar a.</span><span class="sxs-lookup"><span data-stu-id="58e2b-182">The following table describes common debugging tasks such as stepping over, stepping into, and stepping out.</span></span>
+
+| <span data-ttu-id="58e2b-183">Depuração de tarefas</span><span class="sxs-lookup"><span data-stu-id="58e2b-183">Debugging Task</span></span> | <span data-ttu-id="58e2b-184">Descrição</span><span class="sxs-lookup"><span data-stu-id="58e2b-184">Description</span></span> | <span data-ttu-id="58e2b-185">Como realizá-lo no ISE do PowerShell</span><span class="sxs-lookup"><span data-stu-id="58e2b-185">How to accomplish it in PowerShell ISE</span></span> |
+| --- | --- | --- |
+| <span data-ttu-id="58e2b-186">**Avance para**</span><span class="sxs-lookup"><span data-stu-id="58e2b-186">**Step Into**</span></span> | <span data-ttu-id="58e2b-187">Executa a instrução atual e, em seguida, termina com a próxima instrução.</span><span class="sxs-lookup"><span data-stu-id="58e2b-187">Executes the current statement and then stops at the next statement.</span></span> <span data-ttu-id="58e2b-188">Se a instrução atual é uma função ou chamada de script, em seguida, os passos de depurador para essa função ou script, caso contrário, ele será interrompido na próxima instrução.</span><span class="sxs-lookup"><span data-stu-id="58e2b-188">If the current statement is a function or script call, then the debugger steps into that function or script, otherwise it stops at the next statement.</span></span> | <span data-ttu-id="58e2b-189">Prima **F11** ou, no **depurar** menu, clique em **entrar**, ou no painel da consola, escreva **S** e prima **ENTER**.</span><span class="sxs-lookup"><span data-stu-id="58e2b-189">Press **F11** or, on the **Debug** menu, click **Step Into**, or in the Console Pane, type **S** and press **ENTER**.</span></span> |
+| <span data-ttu-id="58e2b-190">**Step Over**</span><span class="sxs-lookup"><span data-stu-id="58e2b-190">**Step Over**</span></span> | <span data-ttu-id="58e2b-191">Executa a instrução atual e, em seguida, termina com a próxima instrução.</span><span class="sxs-lookup"><span data-stu-id="58e2b-191">Executes the current statement and then stops at the next statement.</span></span> <span data-ttu-id="58e2b-192">Se a instrução atual é uma função ou chamada de script, em seguida, o depurador executa a função de toda ou o script e parar na próxima instrução após a chamada de função.</span><span class="sxs-lookup"><span data-stu-id="58e2b-192">If the current statement is a function or script call, then the debugger executes the whole function or script, and it stops at the next statement after the function call.</span></span> | <span data-ttu-id="58e2b-193">Prima **F10** ou, no **depurar** menu, clique em **Pular**, ou no painel da consola, escreva **V** e prima **ENTER**.</span><span class="sxs-lookup"><span data-stu-id="58e2b-193">Press **F10** or, on the **Debug** menu, click **Step Over**, or in the Console Pane, type **V** and press **ENTER**.</span></span> |
+| <span data-ttu-id="58e2b-194">**Krokovat s Vystoupením**</span><span class="sxs-lookup"><span data-stu-id="58e2b-194">**Step Out**</span></span> | <span data-ttu-id="58e2b-195">Passos da função atual e um nível se a função está aninhada acima.</span><span class="sxs-lookup"><span data-stu-id="58e2b-195">Steps out of the current function and up one level if the function is nested.</span></span> <span data-ttu-id="58e2b-196">Se, no corpo principal, o script é executado no final, ou para o ponto de interrupção seguinte.</span><span class="sxs-lookup"><span data-stu-id="58e2b-196">If in the main body, the script is executed to the end, or to the next breakpoint.</span></span> <span data-ttu-id="58e2b-197">As instruções ignoradas são executadas, mas não apresentou.</span><span class="sxs-lookup"><span data-stu-id="58e2b-197">The skipped statements are executed, but not stepped through.</span></span> | <span data-ttu-id="58e2b-198">Prima **SHIFT+F11**, ou no **depurar** menu, clique em **Step Out**, ou no painel da consola, escreva **s** e prima **ENTER**.</span><span class="sxs-lookup"><span data-stu-id="58e2b-198">Press **SHIFT+F11**, or on the **Debug** menu, click **Step Out**, or in the Console Pane, type **O** and press **ENTER**.</span></span> |
+| <span data-ttu-id="58e2b-199">**Continuar**</span><span class="sxs-lookup"><span data-stu-id="58e2b-199">**Continue**</span></span> | <span data-ttu-id="58e2b-200">Continua a execução no final, ou para o ponto de interrupção seguinte.</span><span class="sxs-lookup"><span data-stu-id="58e2b-200">Continues execution to the end, or to the next breakpoint.</span></span> <span data-ttu-id="58e2b-201">As funções ignoradas e as invocações são executadas, mas não apresentou.</span><span class="sxs-lookup"><span data-stu-id="58e2b-201">The skipped functions and invocations are executed, but not stepped through.</span></span> | <span data-ttu-id="58e2b-202">Prima **F5** ou, no **depurar** menu, clique em **execução/continuar**, ou no painel da consola, escreva **C** e prima **ENTER**.</span><span class="sxs-lookup"><span data-stu-id="58e2b-202">Press **F5** or, on the **Debug** menu, click **Run/Continue**, or in the Console Pane, type **C** and press **ENTER**.</span></span> |
+
+## <a name="how-to-display-the-values-of-variables-while-debugging"></a><span data-ttu-id="58e2b-203">Como exibir os valores de variáveis durante a depuração</span><span class="sxs-lookup"><span data-stu-id="58e2b-203">How to display the values of variables while debugging</span></span>
+
+<span data-ttu-id="58e2b-204">Pode exibir os valores atuais das variáveis no script, à medida que avança o código.</span><span class="sxs-lookup"><span data-stu-id="58e2b-204">You can display the current values of variables in the script as you step through the code.</span></span>
+
+### <a name="to-display-the-values-of-standard-variables"></a><span data-ttu-id="58e2b-205">Para apresentar os valores das variáveis padrão</span><span class="sxs-lookup"><span data-stu-id="58e2b-205">To display the values of standard variables</span></span>
+
+<span data-ttu-id="58e2b-206">Utilize um dos seguintes métodos:</span><span class="sxs-lookup"><span data-stu-id="58e2b-206">Use one of the following methods:</span></span>
+
+- <span data-ttu-id="58e2b-207">No painel de Script, coloque o cursor sobre a variável para apresentar o respetivo valor como uma dica de ferramenta.</span><span class="sxs-lookup"><span data-stu-id="58e2b-207">In the Script Pane, hover over the variable to display its value as a tool tip.</span></span>
+
+- <span data-ttu-id="58e2b-208">No painel da consola, escreva o nome da variável e prima **ENTER**.</span><span class="sxs-lookup"><span data-stu-id="58e2b-208">In the Console Pane, type the variable name and press **ENTER**.</span></span>
+
+<span data-ttu-id="58e2b-209">Todos os painéis no ISE são sempre no mesmo âmbito.</span><span class="sxs-lookup"><span data-stu-id="58e2b-209">All panes in ISE are always in the same scope.</span></span> <span data-ttu-id="58e2b-210">Por isso, enquanto faz a depuração um script, executam os comandos que digitar no painel de consola no âmbito de script.</span><span class="sxs-lookup"><span data-stu-id="58e2b-210">Therefore, while you are debugging a script, the commands that you type in the Console Pane run in script scope.</span></span> <span data-ttu-id="58e2b-211">Isto permite-lhe utilizar o painel de consola para localizar os valores das variáveis e chamar funções que são definidas apenas no script.</span><span class="sxs-lookup"><span data-stu-id="58e2b-211">This allows you to use the Console Pane to find the values of variables and call functions that are defined only in the script.</span></span>
+
+### <a name="to-display-the-values-of-automatic-variables"></a><span data-ttu-id="58e2b-212">Para exibir os valores das variáveis automáticas</span><span class="sxs-lookup"><span data-stu-id="58e2b-212">To display the values of automatic variables</span></span>
+
+<span data-ttu-id="58e2b-213">Pode usar o método anterior para exibir o valor de quase todas as variáveis, enquanto faz a depuração um script.</span><span class="sxs-lookup"><span data-stu-id="58e2b-213">You can use the preceding method to display the value of almost all variables while you are debugging a script.</span></span> <span data-ttu-id="58e2b-214">No entanto, esses métodos não trabalharem para as seguintes variáveis automáticas.</span><span class="sxs-lookup"><span data-stu-id="58e2b-214">However, these methods do not work for the following automatic variables.</span></span>
+
+- <span data-ttu-id="58e2b-215">$_</span><span class="sxs-lookup"><span data-stu-id="58e2b-215">$_</span></span>
+
+- <span data-ttu-id="58e2b-216">$Input</span><span class="sxs-lookup"><span data-stu-id="58e2b-216">$Input</span></span>
+
+- <span data-ttu-id="58e2b-217">$MyInvocation</span><span class="sxs-lookup"><span data-stu-id="58e2b-217">$MyInvocation</span></span>
+
+- <span data-ttu-id="58e2b-218">$PSBoundParameters</span><span class="sxs-lookup"><span data-stu-id="58e2b-218">$PSBoundParameters</span></span>
+
+- <span data-ttu-id="58e2b-219">$Args</span><span class="sxs-lookup"><span data-stu-id="58e2b-219">$Args</span></span>
+
+<span data-ttu-id="58e2b-220">Se tentar exibir o valor de qualquer uma destas variáveis, obter o valor dessa variável para num pipeline interno o depurador utiliza, não o valor da variável no script.</span><span class="sxs-lookup"><span data-stu-id="58e2b-220">If you try to display the value of any of these variables, you get the value of that variable for in an internal pipeline the debugger uses, not the value of the variable in the script.</span></span> <span data-ttu-id="58e2b-221">Pode contornar isso para algumas variáveis ($_, $Input, $MyInvocation, $PSBoundParameters e $Args) utilizando o seguinte método:</span><span class="sxs-lookup"><span data-stu-id="58e2b-221">You can work around this for a few variables ($_, $Input, $MyInvocation, $PSBoundParameters, and $Args) by using the following method:</span></span>
+
+1. <span data-ttu-id="58e2b-222">O script, atribua o valor da variável automática para uma nova variável.</span><span class="sxs-lookup"><span data-stu-id="58e2b-222">In the script, assign the value of the automatic variable to a new variable.</span></span>
+
+2. <span data-ttu-id="58e2b-223">Apresenta o valor da variável nova, ao pairar o rato sobre a variável nova no painel de Script ou ao escrever a nova variável no painel da consola.</span><span class="sxs-lookup"><span data-stu-id="58e2b-223">Display the value of the new variable, either by hovering over the new variable in the Script Pane, or by typing the new variable in the Console Pane.</span></span>
+
+<span data-ttu-id="58e2b-224">Por exemplo, para exibir o valor da variável $MyInvocation, no script, Atribuímos o valor para uma nova variável, tais como $scriptname e, em seguida, coloque o cursor sobre ou escreva a variável de $scriptname para apresentar o respetivo valor.</span><span class="sxs-lookup"><span data-stu-id="58e2b-224">For example, to display the value of the $MyInvocation variable, in the script, assign the value to a new variable, such as $scriptname, and then hover over or type the $scriptname variable to display its value.</span></span>
+
+```powershell
+# In C:\ps-test\MyScript.ps1
+$scriptname = $MyInvocation.MyCommand.Path
+```
+
+```output
+# In the Console Pane:
+PS> .\MyScript.ps1
+PS> $scriptname
+C:\ps-test\MyScript.ps1
+```
+
+## <a name="see-also"></a><span data-ttu-id="58e2b-225">Consulte Também</span><span class="sxs-lookup"><span data-stu-id="58e2b-225">See Also</span></span>
+
+- [<span data-ttu-id="58e2b-226">Explorar o ISE do Windows PowerShell</span><span class="sxs-lookup"><span data-stu-id="58e2b-226">Exploring the Windows PowerShell ISE</span></span>](../../getting-started/fundamental/exploring-the-windows-powershell-ise.md)
