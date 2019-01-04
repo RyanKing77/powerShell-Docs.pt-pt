@@ -1,16 +1,16 @@
 ---
 ms.date: 08/24/2018
 keywords: PowerShell, o cmdlet
-title: Aprender os nomes do PowerShell
+title: Nomes de comandos do PowerShell de aprendizagem
 ms.assetid: b4d0fd22-8298-4ee6-82ae-9b6f2907c986
-ms.openlocfilehash: 6ed1f99513f00c174147876e1982c0d12869cacb
-ms.sourcegitcommit: 00ff76d7d9414fe585c04740b739b9cf14d711e1
+ms.openlocfilehash: 3f8ef2648709c4bb5d2eacf30fe9d8fb4f032c13
+ms.sourcegitcommit: 9df29dfc637191b62ca591893c251c1e02d4eb4c
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 12/14/2018
-ms.locfileid: "53405388"
+ms.lasthandoff: 01/04/2019
+ms.locfileid: "54012471"
 ---
-# <a name="learning-powershell-names"></a>Aprender os nomes do PowerShell
+# <a name="learning-powershell-command-names"></a>Nomes de comandos do PowerShell de aprendizagem
 
 Nomes de comandos e parâmetros de aprendizagem exige um investimento de tempo significativo com a maioria das interfaces de linha de comandos. O problema é que existem alguns padrões. Memorization é a única forma de aprender os comandos e parâmetros que tem de utilizar todos regularmente.
 

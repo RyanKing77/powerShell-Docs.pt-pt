@@ -2,12 +2,12 @@
 ms.date: 06/05/2017
 keywords: PowerShell, o cmdlet
 title: Mais formação sobre o PowerShell
-ms.openlocfilehash: da9dfeca3d2d2cfadf6ace0aa98007d16a548aae
-ms.sourcegitcommit: 00ff76d7d9414fe585c04740b739b9cf14d711e1
+ms.openlocfilehash: 5e81801df99a55a358d1d1405bdc79f882aae92f
+ms.sourcegitcommit: 9df29dfc637191b62ca591893c251c1e02d4eb4c
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 12/14/2018
-ms.locfileid: "53405229"
+ms.lasthandoff: 01/04/2019
+ms.locfileid: "54012556"
 ---
 # <a name="more-powershell-learning"></a>Mais formação sobre o PowerShell
 
@@ -29,23 +29,9 @@ Além de ajudar a disponível na linha de comandos, os seguintes recursos fornec
 - [Introdução ao PowerShell 3.0 Introdução rápida ao](https://mva.microsoft.com/en-US/training-courses/getting-started-with-powershell-30-jump-start-8276)
 - [Ferramentas avançadas de & criação de scripts com o PowerShell 3.0 início](https://mva.microsoft.com/en-US/training-courses/advanced-tools-scripting-with-powershell-30-jump-start-8277)
 
-### <a name="script-center-learn"></a>Saiba de centro de scripts
+### <a name="channel-9-videos"></a>Vídeos do Channel 9
 
-#### <a name="windows-powershell-essentials-for-the-busy-admin-series"></a>Windows PowerShell Essentials para a série de administrador ocupado
-
-- [PowerShell "SmowerShell", por isso que deve aprender o Windows PowerShell parte 1](https://dlbmodigital.microsoft.com/webcasts/wmv/23976_Dnl_L.wmv)
-- [Ouvi-lo através do Pipeline — como para comandos do Windows PowerShell por diversão e lucro parte 2](https://dlbmodigital.microsoft.com/webcasts/wmv/23977_Dnl_L.wmv)
-- [Único fornecedor? Não dificilmente — uma olhada no Windows PowerShell fornecedores parte 3](https://dlbmodigital.microsoft.com/webcasts/wmv/23978_Dnl_L.wmv)
-- [O evento principal – Windows PowerShell faz parte de registos de eventos 4](https://dlbmodigital.microsoft.com/webcasts/wmv/23979_Dnl_L.wmv)
-- [Mais do que remotamente possível – usando o Windows PowerShell para gerenciar a parte de área de trabalho remota 5](https://dlbmodigital.microsoft.com/webcasts/wmv/23980_Dnl_L.wmv)
-
-#### <a name="learn-it-now-before-its-an-emergency"></a>Saiba agora, antes de ser uma emergência
-
-- [Windows PowerShell: Saiba agora, antes de ser uma emergência - parte 1](https://dlbmodigital.microsoft.com/webcasts/wmv/1032481530_Dnl_L.wmv)
-- [Windows PowerShell: Saiba agora, antes de ser uma emergência - parte 2](https://dlbmodigital.microsoft.com/webcasts/wmv/1032481542_Dnl_L.wmv)
-- [Windows PowerShell: Saiba agora, antes de ser uma emergência - parte 3](https://dlbmodigital.microsoft.com/webcasts/wmv/1032481548_Dnl_L.wmv)
-- [Windows PowerShell: Saiba agora, antes de ser uma emergência - parte 4](https://dlbmodigital.microsoft.com/webcasts/wmv/1032481552_Dnl_L.wmv)
-- [Windows PowerShell: Saiba agora, antes de ser uma emergência - parte 5](https://dlbmodigital.microsoft.com/webcasts/wmv/1032481554_Dnl_L.wmv)
+O Channel 9 é nossa plataforma de publicação de vídeo. Centenas de vídeos sobre o PowerShell estão disponíveis. [Procure "PowerShell"](https://channel9.msdn.com/Search?term=PowerShell&sortBy=top-rated) para ver os vídeos estão disponíveis.
 
 ## <a name="resources-for-windows-powershell-developers"></a>Recursos para desenvolvedores do Windows PowerShell
 
