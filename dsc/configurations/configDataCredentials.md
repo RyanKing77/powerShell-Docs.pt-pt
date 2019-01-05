@@ -2,12 +2,12 @@
 ms.date: 06/12/2017
 keywords: DSC, powershell, configuração, a configuração
 title: Opções de credenciais nos dados de configuração
-ms.openlocfilehash: c4057457bf6beb2c5fc9dffef9122cd488ccdcd7
-ms.sourcegitcommit: 9df29dfc637191b62ca591893c251c1e02d4eb4c
+ms.openlocfilehash: 10cf3456fcc7104b7dd779db30aebace54ba087a
+ms.sourcegitcommit: e04292a9c10de9a8391d529b7f7aa3753b362dbe
 ms.translationtype: MT
 ms.contentlocale: pt-PT
 ms.lasthandoff: 01/04/2019
-ms.locfileid: "54012437"
+ms.locfileid: "54046646"
 ---
 # <a name="credentials-options-in-configuration-data"></a>Opções de credenciais nos dados de configuração
 >Aplica-se a: Windows PowerShell 5.0
@@ -115,7 +115,8 @@ configuration unencryptedPasswordDemo
     }
 }
 
-# We declared the ConfigurationData in a local variable, but we need to pass it in to our configuration function
+# We declared the ConfigurationData in a local variable, but we need to pass it
+# in to our configuration function
 # We need to invoke the configuration function we created to generate a MOF
 unencryptedPasswordDemo -ConfigurationData $ConfigurationData
 
@@ -127,7 +128,7 @@ unencryptedPasswordDemo -ConfigurationData $ConfigurationData
 Start-DscConfiguration ./unencryptedPasswordDemo -verbose -wait -force
 ```
 
-Este é um trecho do arquivo ". MOF" gerado pela configuração de "TestMachine1". O `System.Security.SecureString` utilizados na configuração foi convertida em texto sem formatação e armazenada no arquivo ". MOF" como um `MSF_Credential`. A `SecureString` é encriptado com o perfil do utilizador atual. Isso funciona bem com todos os formulários de gestão remota do PowerShell. Um arquivo ". MOF" foi criado para ser um mecanismo de configuração apenas de reserva. A partir do PowerShell 5.0, os ficheiros de ". MOF" num nó são encriptados em repouso, mas não em trânsito para o nó. Isso significa que as palavras-passe num arquivo ". MOF" são expostas como texto não encriptado ao aplicar a um nó. Para encriptar as credenciais, tem de utilizar um **servidor de solicitação**. Para obter mais informações, consulte [ficheiros MOF proteger com certificados](./pull-server/secureMOF.md).
+Este é um trecho do arquivo ". MOF" gerado pela configuração de "TestMachine1". O `System.Security.SecureString` utilizados na configuração foi convertida em texto sem formatação e armazenada no arquivo ". MOF" como um `MSF_Credential`. A `SecureString` é encriptado com o perfil do utilizador atual. Isso funciona bem com todos os formulários de gestão remota do PowerShell. Um arquivo ". MOF" foi criado para ser um mecanismo de configuração apenas de reserva. A partir do PowerShell 5.0, os ficheiros de ". MOF" num nó são encriptados em repouso, mas não em trânsito para o nó. Isso significa que as palavras-passe num arquivo ". MOF" são expostas como texto não encriptado ao aplicar a um nó. Para encriptar as credenciais, tem de utilizar um **servidor de solicitação**. Para obter mais informações, consulte [ficheiros MOF proteger com certificados](../pull-server/secureMOF.md).
 
 ```syntax
 instance of MSFT_Credential as $MSFT_Credential1ref

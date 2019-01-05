@@ -2,12 +2,12 @@
 ms.date: 12/12/2018
 keywords: DSC, powershell, configuração, a configuração
 title: Recursos de DSC
-ms.openlocfilehash: 02e1b9856942cf28e77d83dac89681a08cf6bb74
-ms.sourcegitcommit: 9df29dfc637191b62ca591893c251c1e02d4eb4c
+ms.openlocfilehash: 1f77b5e6630a2e3de6e1d1a05638f94d2df039ae
+ms.sourcegitcommit: e04292a9c10de9a8391d529b7f7aa3753b362dbe
 ms.translationtype: MT
 ms.contentlocale: pt-PT
 ms.lasthandoff: 01/04/2019
-ms.locfileid: "54012454"
+ms.locfileid: "54046696"
 ---
 # <a name="dsc-resources"></a>Recursos de DSC
 
@@ -104,3 +104,53 @@ Configuration TestConfig
 > A partir do PowerShell 5.0, intellisense, foi adicionado para DSC. Esta nova funcionalidade permite-lhe utilizar \<SEPARADOR\> e \<Ctrl + espaço\> para nomes de chaves de preenchimento automático.
 
 ![Conclusão de tabulação de recursos](../media/resource-tabcompletion.png)
+
+## <a name="built-in-resources"></a>Recursos incorporados
+
+Além de recursos da Comunidade, existem recursos incorporados para Windows, recursos para Linux e recursos de dependência entre nós. Pode utilizar os passos acima para determinar a sintaxe desses recursos e como utilizá-los. As páginas que atendem a esses recursos estiverem arquivadas sob **referência**.
+
+Recursos incorporados do Windows
+
+* [Recurso Archive](../reference/resources/windows/archiveResource.md)
+* [Recurso Environment](../reference/resources/windows/environmentResource.md)
+* [Recurso File](../reference/resources/windows/fileResource.md)
+* [Recurso Group](../reference/resources/windows/groupResource.md)
+* [Recurso GroupSet](../reference/resources/windows/groupSetResource.md)
+* [Recurso Log](../reference/resources/windows/logResource.md)
+* [Recurso Package](../reference/resources/windows/packageResource.md)
+* [Recurso ProcessSet](../reference/resources/windows/ProcessSetResource.md)
+* [Recurso Registry](../reference/resources/windows/registryResource.md)
+* [Recurso Script](../reference/resources/windows/scriptResource.md)
+* [Recurso Service](../reference/resources/windows/serviceResource.md)
+* [Recurso ServiceSet](../reference/resources/windows/serviceSetResource.md)
+* [Recurso User](../reference/resources/windows/userResource.md)
+* [Recurso WindowsFeature](../reference/resources/windows/windowsFeatureResource.md)
+* [Recurso WindowsFeatureSet](../reference/resources/windows/windowsFeatureSetResource.md)
+* [Recurso WindowsOptionalFeature](../reference/resources/windows/windowsOptionalFeatureResource.md)
+* [Recurso WindowsOptionalFeatureSet](../reference/resources/windows/windowsOptionalFeatureSetResource.md)
+* [Recursos de WindowsPackageCabResource](../reference/resources/windows/windowsPackageCabResource.md)
+* [Recurso WindowsProcess](../reference/resources/windows/windowsProcessResource.md)
+
+[Dependência de entre nós](../configurations/crossNodeDependencies.md) recursos
+
+* [Recursos de WaitForAll](../reference/resources/windows/waitForAllResource.md)
+* [Recursos de WaitForSome](../reference/resources/windows/waitForSomeResource.md)
+* [Recursos de WaitForAny](../reference/resources/windows/waitForAnyResource.md)
+
+Recursos de gerenciamento do pacote
+
+* [Recursos de PackageManagement](../reference/resources/packagemanagement/PackageManagementDscResource.md)
+* [Recursos de PackageManagementSource](../reference/resources/packagemanagement/PackageManagementSourceDscResource.md)
+
+Recursos do Linux
+
+* [Recurso Archive do Linux](../reference/resources/linux/lnxArchiveResource.md)
+* [Recursos de ambiente do Linux](../reference/resources/linux/lnxEnvironmentResource.md)
+* [Recursos de FileLine do Linux](../reference/resources/linux/lnxFileLineResource.md)
+* [Recursos de ficheiro do Linux](../reference/resources/linux/lnxFileResource.md)
+* [Recurso do grupo do Linux](../reference/resources/linux/lnxGroupResource.md)
+* [Recurso de pacote do Linux](../reference/resources/linux/lnxPackageResource.md)
+* [Recursos de Script do Linux](../reference/resources/linux/lnxScriptResource.md)
+* [Recurso de serviço do Linux](../reference/resources/linux/lnxServiceResource.md)
+* [Recursos de SshAuthorizedKeys do Linux](../reference/resources/linux/lnxSshAuthorizedKeysResource.md)
+* [Recurso de utilizador do Linux](../reference/resources/linux/lnxUserResource.md)
