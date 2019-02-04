@@ -1,17 +1,17 @@
 ---
 ms.date: 12/12/2018
 keywords: DSC, powershell, configuração, serviço, configuração
-title: Escreva, Compile e aplicar uma configuração
+title: Escrever, Compilar e Aplicar uma Configuração
 ms.openlocfilehash: fa4d98fd12202439ba7025fd8af3fa398653ca05
-ms.sourcegitcommit: 00ff76d7d9414fe585c04740b739b9cf14d711e1
+ms.sourcegitcommit: b6871f21bd666f9cd71dd336bb3f844cf472b56c
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 12/14/2018
-ms.locfileid: "53404794"
+ms.lasthandoff: 02/03/2019
+ms.locfileid: "55684417"
 ---
 > Aplica-se a: Windows PowerShell 4.0, Windows PowerShell 5.0
 
-# <a name="write-compile-and-apply-a-configuration"></a>Escreva, Compile e aplicar uma configuração
+# <a name="write-compile-and-apply-a-configuration"></a>Escrever, Compilar e Aplicar uma Configuração
 
 Neste exercício explica-criar e aplicar uma configuração do Desired State Configuration (DSC) do início ao fim.
 No exemplo a seguir, aprenderá como escrever e aplicar uma configuração muito simples. A configuração irá garantir que existe um ficheiro de "HelloWorld.txt" no seu computador local. Se eliminar o ficheiro, DSC recriará o da próxima vez que ele atualiza.

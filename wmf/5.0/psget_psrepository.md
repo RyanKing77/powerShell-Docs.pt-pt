@@ -1,21 +1,21 @@
 ---
 ms.date: 06/12/2017
 keywords: wmf,powershell,setup
-ms.openlocfilehash: 9a9bdac652512640209c20e3deb20d7abc0142c6
-ms.sourcegitcommit: 54534635eedacf531d8d6344019dc16a50b8b441
+ms.openlocfilehash: 5ac9566979e1b761249f5cc7c62ed44047a2b9f6
+ms.sourcegitcommit: b6871f21bd666f9cd71dd336bb3f844cf472b56c
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 05/17/2018
-ms.locfileid: "34219536"
+ms.lasthandoff: 02/03/2019
+ms.locfileid: "55685236"
 ---
 # <a name="register-a-powershell-repository"></a>Registar um Repositório do PowerShell
-Pode configurar PowerShellGet operar contra repositórios internos. Isto é feito utilizando as seguintes adições:
-- Registar-PSRepository: Regista um repositório para o utilizador atual.
-- Anular o registo PSRepository: Remove um repositório registado para o utilizador atual.
-- Set-PSRepository: Definir os valores para um repositório registado.
-- Get-PSRepository: Obter repositórios de todos os registado para o utilizador atual.
+Pode configurar o PowerShellGet para operar contra repositórios internos. Isso é feito ao utilizar as seguintes adições:
+- Register-PSRepository: Registra um repositório para o utilizador atual.
+- Unregister-PSRepository: Remove um repositório registado para o utilizador atual.
+- Set-PSRepository: Definir valores para o repositório registado.
+- Get-PSRepository: Obtenha repositórios tudo registados para o utilizador atual.
 
-Depois de um repositório estiver registado, pode utilizar o módulo de localizar e instalar módulo para trabalhar com a mesma.
+Depois de um repositório estiver registado, pode utilizar Find-Module e Install-Module para trabalhar com eles.
 
 ```powershell
 \#Register a default repository

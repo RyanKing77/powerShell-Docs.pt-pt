@@ -4,11 +4,11 @@ keywords: PowerShell, o cmdlet
 title: Como Utilizar Perfis no ISE do Windows PowerShell
 ms.assetid: 0219626a-6da5-4acc-b630-d058e8b29cc6
 ms.openlocfilehash: b319aa089c2a4a7008acd9850f15342dac70aee2
-ms.sourcegitcommit: 00ff76d7d9414fe585c04740b739b9cf14d711e1
+ms.sourcegitcommit: b6871f21bd666f9cd71dd336bb3f844cf472b56c
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 12/14/2018
-ms.locfileid: "53405169"
+ms.lasthandoff: 02/03/2019
+ms.locfileid: "55684466"
 ---
 # <a name="how-to-use-profiles-in-windows-powershell-ise"></a>Como Utilizar Perfis no ISE do Windows PowerShell
 
@@ -80,7 +80,7 @@ if (!(Test-Path -Path $PROFILE.AllUsersAllHosts))
 
 3. Para guardar o ficheiro de perfil, diante a **arquivo** menu, clique em **guardar**. Próxima vez que abrir o ISE do Windows PowerShell, as personalizações são aplicadas.
 
-## <a name="see-also"></a>Consulte Também
+## <a name="see-also"></a>Veja Também
 
 - [about_Profiles](/powershell/module/microsoft.powershell.core/about/about_profiles)
 - [Introdução ao ISE do Windows PowerShell](Introducing-the-Windows-PowerShell-ISE.md)

@@ -2,29 +2,29 @@
 ms.date: 06/12/2017
 ms.topic: conceptual
 keywords: wmf,powershell,setup
-ms.openlocfilehash: d2fa3e22b049b4164e9a44e8f2d62833cab093d0
-ms.sourcegitcommit: 54534635eedacf531d8d6344019dc16a50b8b441
+ms.openlocfilehash: 3a810a21cb959691a910a3ef3767d7885683dce8
+ms.sourcegitcommit: b6871f21bd666f9cd71dd336bb3f844cf472b56c
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 05/16/2018
-ms.locfileid: "34190031"
+ms.lasthandoff: 02/03/2019
+ms.locfileid: "55688694"
 ---
 # <a name="product-compatibility-status"></a>Estado de Compatibilidade de Produtos
 
 ## <a name="compatible"></a>Compatível:
 > Sistemas que estejam a executar as seguintes aplicações de servidor **pode executar** Windows Management Framework 5.1:
 
-- O Microsoft SharePoint Server 2013
-- Skype para empresas servidor 2015 (_ver nota_)
+- Microsoft SharePoint Server 2013
+- Skype para empresas Server 2015 (_consulte nota_)
 - Microsoft Lync Server 2013
 - System Center 2012 Configuration Manager
 
-_Nota: O Skype para empresas servidor 2015 de compatibilidade com WMF 5.1 foi testado apenas com o Windows Server 2012 R2._
+_Nota: Skype para empresas Server 2015 compatibilidade com o WMF 5.1 foi testado apenas com o Windows Server 2012 R2._
 
 ## <a name="not-tested"></a>Não testado:
-> Sistemas que estejam a executar as seguintes aplicações de servidor **não tiver testado** contra Windows Management Framework 5.1:
+> Sistemas que estejam a executar as seguintes aplicações de servidor **não testados** em relação a Windows Management Framework 5.1:
 
-- O Microsoft SharePoint Server 2010
+- Microsoft SharePoint Server 2010
 - System Center 2012 Virtual Machine Manager
 
 ## <a name="incompatible"></a>Incompatível:
@@ -32,5 +32,5 @@ _Nota: O Skype para empresas servidor 2015 de compatibilidade com WMF 5.1 foi te
 
 - Microsoft Exchange Server 2013
 - Microsoft Exchange Server 2010 SP3
-- O Microsoft Lync Server 2010
+- Microsoft Lync Server 2010
 - System Center 2012 R2 Service Management Automation

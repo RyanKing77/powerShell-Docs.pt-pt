@@ -1,14 +1,14 @@
 ---
 ms.date: 06/12/2017
 keywords: wmf,powershell,setup
-ms.openlocfilehash: f929ce4684bb53c3039238ecd465f1c0e432f741
-ms.sourcegitcommit: 54534635eedacf531d8d6344019dc16a50b8b441
+ms.openlocfilehash: db4543b788ad0a5c7aa32706246446533b901d09
+ms.sourcegitcommit: b6871f21bd666f9cd71dd336bb3f844cf472b56c
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 05/17/2018
-ms.locfileid: "34225679"
+ms.lasthandoff: 02/03/2019
+ms.locfileid: "55684508"
 ---
 # <a name="deliver-a-configuration-document-without-applying"></a>Fornecer um documento de configuração sem aplicar
 
-O [publicar DscConfiguration](https://technet.microsoft.com/library/mt517875.aspx) cmdlet copia um ficheiro MOF de configuração para um nó de destino, mas não se aplica a configuração.
-Esta configuração é aplicada durante a próxima passagem de consistência ou ao executar o [atualização DscConfiguration](https://technet.microsoft.com/library/mt143541.aspx) cmdlet.
+O [Publish-dscconfiguration para](https://technet.microsoft.com/library/mt517875.aspx) cmdlet copia um ficheiro MOF de configuração para um nó de destino, mas não se aplica a configuração.
+Esta configuração é aplicada durante o próximo passo de consistência, ou ao executar o [Update-dscconfiguration para](https://technet.microsoft.com/library/mt143541.aspx) cmdlet.

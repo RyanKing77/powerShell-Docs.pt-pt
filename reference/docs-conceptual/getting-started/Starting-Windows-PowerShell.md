@@ -4,11 +4,11 @@ keywords: PowerShell, o cmdlet
 title: Iniciar o Windows PowerShell
 ms.assetid: 59b649a2-c90c-4cf4-bf95-a740c59148e7
 ms.openlocfilehash: 9184e8b0e508610e7f4775f1032f3a69c93bb8c1
-ms.sourcegitcommit: 00ff76d7d9414fe585c04740b739b9cf14d711e1
+ms.sourcegitcommit: b6871f21bd666f9cd71dd336bb3f844cf472b56c
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 12/14/2018
-ms.locfileid: "53405352"
+ms.lasthandoff: 02/03/2019
+ms.locfileid: "55688323"
 ---
 # <a name="starting-windows-powershell"></a>Iniciar o Windows PowerShell
 O PowerShell é uma dll de mecanismo de script que é incorporada em vários anfitriões.  O anfitrião mais comuns que começa são a linha de comandos interativa PowerShell.exe e ambiente PowerShell_ISE.exe interativa de scripts.
@@ -77,7 +77,7 @@ Para ativar o Windows PowerShell ISE do Windows PowerShell 2.0 no Windows Server
 
 #### <a name="to-enable-windows-powershell-integrated-scripting-environment-ise"></a>Para ativar o Windows PowerShell Integrated Scripting Environment (ISE)
 
-1. Inicie o Gestor de Servidor.
+1. Inicie o Gestor de Servidores.
 2. Clique em **funcionalidades** e, em seguida, clique em **adicionar funcionalidades**.
 3. Em Selecionar funcionalidades, clique em Windows PowerShell Integrated Scripting Environment (ISE).
 
@@ -96,7 +96,7 @@ Para iniciar uma versão de 32 bits do Windows PowerShell, utilize qualquer um d
 - Na área de trabalho, mover o cursor para o canto superior direito, clique em **pesquisa**, tipo **PowerShell x86** e, em seguida, clique em **Windows PowerShell (x86)**.
 - Por meio da linha de comandos, introduza: `%SystemRoot%\SysWOW64\WindowsPowerShell\v1.0\powershell.exe`
 
-#### <a name="in-windows-server-2012"></a>No Windows Server® 2012
+#### <a name="in-windows-server-2012"></a>In Windows Server® 2012
 
 - Sobre o **começar** ecrã, escreva **PowerShell** e, em seguida, clique em **(x86) do Windows PowerShell**.
 - Na **Gestor de servidores**, da **ferramentas** menu, selecione **Windows PowerShell (x86)**.

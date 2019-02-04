@@ -1,15 +1,15 @@
 ---
 ms.date: 12/12/2018
 keywords: DSC, powershell, configuração, a configuração
-title: Dependências de recursos com DependsOn
+title: Dependências de recursos com a chave DependsOn
 ms.openlocfilehash: 0d060f7d99bd261b0766028b245d4d32a5e1c349
-ms.sourcegitcommit: 00ff76d7d9414fe585c04740b739b9cf14d711e1
+ms.sourcegitcommit: b6871f21bd666f9cd71dd336bb3f844cf472b56c
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 12/14/2018
-ms.locfileid: "53404902"
+ms.lasthandoff: 02/03/2019
+ms.locfileid: "55688064"
 ---
-# <a name="resource-dependencies-using-dependson"></a>Dependências de recursos com DependsOn
+# <a name="resource-dependencies-using-dependson"></a>Dependências de recursos com a chave DependsOn
 
 Quando escreve [configurações](configurations.md), adicione [blocos de recursos](../resources/resources.md) para configurar os aspectos de um nó de destino. À medida que continua a adicionar os blocos de recursos, as configurações podem crescer muito grande e complicada para gerir. Um esse desafio é a ordem aplicada dos seus blocos de recursos. Normalmente, os recursos são aplicados pela ordem em que são definidas na configuração do. Como a configuração cresce maiores e mais complexas, é possível usar o `DependsOn` chave para alterar a ordem aplicada dos seus recursos, especificando que um recurso depende de outro recurso.
 

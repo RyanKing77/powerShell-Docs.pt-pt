@@ -3,11 +3,11 @@ ms.date: 05/17/2018
 keywords: PowerShell, core
 title: Problemas conhecidos para o PowerShell 6.0
 ms.openlocfilehash: ce40a1925e564fbd2c661e70ec36d3842d915dfe
-ms.sourcegitcommit: 47becf2823ece251a7264db2387bb503cf3abaa9
+ms.sourcegitcommit: b6871f21bd666f9cd71dd336bb3f844cf472b56c
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 10/19/2018
-ms.locfileid: "49451001"
+ms.lasthandoff: 02/03/2019
+ms.locfileid: "55686762"
 ---
 # <a name="known-issues-for-powershell-60"></a>Problemas conhecidos para o PowerShell 6.0
 
@@ -15,7 +15,7 @@ ms.locfileid: "49451001"
 
 Lançamentos alfa do PowerShell no Linux e macOS são predominantemente funcionais, mas têm algumas limitações consideráveis e problemas de usabilidade. Versões beta do PowerShell no Linux e macOS mais funcional e estável do que os lançamentos alfa, mas ainda pode ser na falta de um conjunto de funcionalidades e pode conter bugs. Em alguns casos, esses problemas são simplesmente os erros que ainda não tiverem sido corrigidos ainda. Em outros casos (tal como com os aliases de padrão para ls, cp, etc.), estamos procurando comentários da Comunidade sobre as opções que podemos fazer.
 
-Nota: Devido às semelhanças dos vários subsistemas subjacentes, o PowerShell no Linux e macOS tendem a partilhar o mesmo nível de maturidade em recursos e bugs. Exceto conforme indicado abaixo, os problemas nesta secção aplicam-se para sistemas operacionais.
+Nota: Devido às semelhanças dos vários subsistemas subjacentes, o PowerShell no Linux e macOS tendem partilhar o mesmo nível de maturidade em recursos e bugs. Exceto conforme indicado abaixo, os problemas nesta secção aplicam-se para sistemas operacionais.
 
 ### <a name="case-sensitivity-in-powershell"></a>Sensibilidade do PowerShell
 
@@ -107,7 +107,7 @@ A tabela seguinte lista os comandos que se sabe não funcionam no PowerShell em 
 |`Get-Service`, `New-Service`, `Restart-Service`, `Resume-Service`, `Set-Service`, `Start-Service`, `Stop-Service`, `Suspend-Service`|Não está disponível.|Estes comandos não serão reconhecidos. Isso deve ser corrigido numa versão futura.|
 |`Get-Acl`, `Set-Acl`|Não disponível.|Estes comandos não serão reconhecidos. Isso deve ser corrigido numa versão futura.|
 |`Get-AuthenticodeSignature`, `Set-AuthenticodeSignature`|Não disponível.|Estes comandos não serão reconhecidos. Isso deve ser corrigido numa versão futura.|
-|`Wait-Process`|Disponível, não funciona corretamente. |Por exemplo ' Iniciar o processo gvim - PassThru | Espera-processo de não funciona; Falha ao aguardar o processo.|
+|`Wait-Process`|Disponível, não funciona corretamente. |Por exemplo `Start-Process gvim -PassThru | Wait-Process` não funciona; falhar a aguardar o processo.|
 |`Register-PSSessionConfiguration`, `Unregister-PSSessionConfiguration`, `Get-PSSessionConfiguration`|Disponível mas não funcionam.|Escreve uma mensagem de erro indicando que os comandos não estão a funcionar. Isso devem ser corrigidos numa versão futura.|
 |`Get-Event`, `New-Event`, `Register-EngineEvent`, `Register-WmiEvent`, `Remove-Event`, `Unregister-Event`|Disponível, mas não existem origens de eventos estão disponíveis.|Os comandos de eventos do PowerShell estão presentes, mas a maioria das origens de eventos utilizadas com os comandos (por exemplo, o timer) não está disponível no Linux, fazendo com que os comandos inútil da versão Alpha.|
 |`Set-ExecutionPolicy`|Disponível mas não funcionam.|Devolve uma mensagem a indicar não é suportada nesta plataforma. Política de execução é um voltada para o utilizador "segurança belt" que ajuda a impedir que o usuário erros Caro. Não é um limite de segurança.|

@@ -4,11 +4,11 @@ keywords: PowerShell, o cmdlet
 title: Criar uma Caixa de Entrada Personalizada
 ms.assetid: 0b12e56c-299f-40ee-afbf-d30d23ed2565
 ms.openlocfilehash: 2d04ad6df65cdb4ff13d136dea47bbba6a01f3a2
-ms.sourcegitcommit: 00ff76d7d9414fe585c04740b739b9cf14d711e1
+ms.sourcegitcommit: b6871f21bd666f9cd71dd336bb3f844cf472b56c
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 12/14/2018
-ms.locfileid: "53404704"
+ms.lasthandoff: 02/03/2019
+ms.locfileid: "55687322"
 ---
 # <a name="creating-a-custom-input-box"></a>Criar uma Caixa de Entrada Personalizada
 
@@ -74,9 +74,9 @@ $form = New-Object System.Windows.Forms.Form
 
 Depois de criar uma instância da classe Form, atribua valores a três propriedades dessa classe.
 
-- **Texto.** Isso se torna o título da janela.
+- **Text.** Isso se torna o título da janela.
 
-- **Tamanho.** Este é o tamanho do formulário, em pixéis. O script anterior cria um formulário que é de 300 pixels de largura por 200 pixels de altura.
+- **Size.** Este é o tamanho do formulário, em pixéis. O script anterior cria um formulário que é de 300 pixels de largura por 200 pixels de altura.
 
 - **StartingPosition.** Esta propriedade opcional é definida como **CenterScreen** no script anterior. Se não adicionar esta propriedade, o Windows seleciona uma localização quando o formulário for aberto. Definindo a **StartingPosition** ao **CenterScreen**, estiver automaticamente a apresentar o formulário no meio da tela sempre que ele carrega.
 

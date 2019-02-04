@@ -1,20 +1,20 @@
 ---
 ms.date: 06/12/2017
 keywords: wmf,powershell,setup
-ms.openlocfilehash: db9b48c188b3bfe2e20c06875606a285922f55a6
-ms.sourcegitcommit: 54534635eedacf531d8d6344019dc16a50b8b441
+ms.openlocfilehash: 57152e9f62c34600df63a2db8e9683928e825d93
+ms.sourcegitcommit: b6871f21bd666f9cd71dd336bb3f844cf472b56c
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 05/17/2018
-ms.locfileid: "34219866"
+ms.lasthandoff: 02/03/2019
+ms.locfileid: "55685747"
 ---
-# <a name="detailed-information-about-lcm-state"></a>Informações detalhadas sobre o estado de MMC
+# <a name="detailed-information-about-lcm-state"></a>Informações detalhadas sobre o estado LCM
 
-Efetuamos melhorias no expor os detalhes sobre o estado do MMC. LCMState que é devolvido pelo Get-DscLocalConfigurationManager agora pode conter os seguintes valores:
+Fizemos melhorias em expor detalhes sobre o estado do LCM. O que é devolvido pelo Get-dsclocalconfigurationmanager para LCMState agora pode conter os seguintes valores:
 
-* **Inativo**
+* **Idle**
 * **Ocupado**
 * **PendingReboot**
 * **PendingConfiguration**
 
-Adicionámos tem também uma propriedade de LCMStateDetail contém mais informações sobre o estado.
+Também adicionámos uma propriedade de LCMStateDetail que contém mais informações sobre o estado.

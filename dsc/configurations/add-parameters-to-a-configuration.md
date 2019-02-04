@@ -1,15 +1,15 @@
 ---
 ms.date: 12/12/2018
 keywords: DSC, powershell, recurso, galeria, a configuração
-title: Adicionar parâmetros a uma configuração
+title: Adicionar Parâmetros a uma Configuração
 ms.openlocfilehash: 15213404f0cdd6416baf1f83af91b8f5279cc97f
-ms.sourcegitcommit: 00ff76d7d9414fe585c04740b739b9cf14d711e1
+ms.sourcegitcommit: b6871f21bd666f9cd71dd336bb3f844cf472b56c
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 12/14/2018
-ms.locfileid: "53404950"
+ms.lasthandoff: 02/03/2019
+ms.locfileid: "55685404"
 ---
-# <a name="add-parameters-to-a-configuration"></a>Adicionar parâmetros a uma configuração
+# <a name="add-parameters-to-a-configuration"></a>Adicionar Parâmetros a uma Configuração
 
 Como as funções, [configurações](configurations.md) pode ser parametrizada para permitir que as configurações mais dinâmicas com base na entrada do usuário. Os passos são semelhantes às descritas [as funções com parâmetros](/powershell/module/microsoft.powershell.core/about/about_functions).
 

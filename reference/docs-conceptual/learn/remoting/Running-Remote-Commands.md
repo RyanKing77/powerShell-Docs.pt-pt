@@ -4,11 +4,11 @@ keywords: PowerShell, o cmdlet
 title: Executar Comandos Remotos
 ms.assetid: d6938b56-7dc8-44ba-b4d4-cd7b169fd74d
 ms.openlocfilehash: 2001b5509acde6ec4259bb1442944958a67aa66f
-ms.sourcegitcommit: 00ff76d7d9414fe585c04740b739b9cf14d711e1
+ms.sourcegitcommit: b6871f21bd666f9cd71dd336bb3f844cf472b56c
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 12/14/2018
-ms.locfileid: "53405472"
+ms.lasthandoff: 02/03/2019
+ms.locfileid: "55688596"
 ---
 # <a name="running-remote-commands"></a>Executar Comandos Remotos
 
@@ -29,7 +29,7 @@ Estes cmdlets incluem:
 
 - [Restart-Computer](/powershell/module/microsoft.powershell.management/restart-computer)
 - [Test-Connection](/powershell/module/microsoft.powershell.management/test-connection)
-- [Clear-registo de eventos](/powershell/module/microsoft.powershell.management/clear-eventlog)
+- [Clear-EventLog](/powershell/module/microsoft.powershell.management/clear-eventlog)
 - [Get-EventLog](/powershell/module/microsoft.powershell.management/get-eventlog)
 - [Get-HotFix](/powershell/module/microsoft.powershell.management/get-hotfix)
 - [Get-Process](/powershell/module/microsoft.powershell.management/get-process)

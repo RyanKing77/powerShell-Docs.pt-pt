@@ -3,11 +3,11 @@ ms.date: 06/12/2017
 keywords: DSC, powershell, configuração, a configuração
 title: DSC para Linux nxFile recursos
 ms.openlocfilehash: 80969ba2ea6247fcd616a301d951403a840c851d
-ms.sourcegitcommit: e04292a9c10de9a8391d529b7f7aa3753b362dbe
+ms.sourcegitcommit: b6871f21bd666f9cd71dd336bb3f844cf472b56c
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 01/04/2019
-ms.locfileid: "54048822"
+ms.lasthandoff: 02/03/2019
+ms.locfileid: "55688652"
 ---
 # <a name="dsc-for-linux-nxfile-resource"></a>DSC para Linux nxFile recursos
 
@@ -47,7 +47,7 @@ nxFile <string> #ResourceName
 | Soma de verificação| Define o tipo a utilizar ao determinar se dois arquivos são os mesmos. Se **soma de verificação** não for especificada, apenas o nome de ficheiro ou diretório é utilizado para comparação. Os valores são: "ctime", "mtime", ou "md5".|
 | Recurse| Indica se são incluídos os subdiretórios. Defina esta propriedade como **$true** para indicar que pretende que o subdiretórios a serem incluídos. A predefinição é **$false**. **Nota:** Esta propriedade só é válido quando o **tipo** propriedade está definida como o diretório.|
 | Force| Determinadas operações de arquivo (como substituir um ficheiro ou eliminar um diretório que não está vazio) irão resultar num erro. Utilizar o **força** propriedade substitui esses erros. O valor predefinido é **$false**.|
-| Ligações| Especifica o comportamento desejado para links simbólicos. Defina esta propriedade de "seguir" seguir links simbólicos e tomar decisões sobre o destino de ligações (por exemplo. Copie o ficheiro em vez da ligação). Defina esta propriedade para "Gerir" para tomar decisões sobre a ligação (por exemplo. Copie a ligação em si). Defina esta propriedade para "Ignorar" Ignorar links simbólicos.|
+| Links| Especifica o comportamento desejado para links simbólicos. Defina esta propriedade de "seguir" seguir links simbólicos e tomar decisões sobre o destino de ligações (por exemplo. Copie o ficheiro em vez da ligação). Defina esta propriedade para "Gerir" para tomar decisões sobre a ligação (por exemplo. Copie a ligação em si). Defina esta propriedade para "Ignorar" Ignorar links simbólicos.|
 | Grupo| O nome da **grupo** para o proprietário do ficheiro ou diretório.|
 | Modo| Especifica as permissões pretendidas para o recurso na notação octal ou simbólica. (por exemplo, 777 ou rwxrwxrwx). Se utilizar a notação simbólica, não fornecem o primeiro caráter que indica o arquivo ou diretório.|
 | DependsOn | Indica que a configuração de outro recurso deve ser executado antes deste recurso está configurado. Por exemplo, se o **ID** do recurso de bloco de script de configuração que pretende executar primeiro é **ResourceName** e seu tipo é **ResourceType**, a sintaxe para usar isso a propriedade é `DependsOn = "[ResourceType]ResourceName"`.|

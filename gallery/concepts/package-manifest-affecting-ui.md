@@ -4,11 +4,11 @@ schema: 2.0.0
 keywords: PowerShell
 title: Valores de manifestos do pacote que têm impacto sobre a interface do Usuário de galeria do PowerShell
 ms.openlocfilehash: dcba56d9f7edf0c08a3b9e3f2326b39a6b3be3fa
-ms.sourcegitcommit: 548547b2d5fc73e726bb9fec6175d452a351d975
+ms.sourcegitcommit: b6871f21bd666f9cd71dd336bb3f844cf472b56c
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 12/20/2018
-ms.locfileid: "53655350"
+ms.lasthandoff: 02/03/2019
+ms.locfileid: "55687252"
 ---
 # <a name="package-manifest-values-that-impact-the-powershell-gallery-ui"></a>Valores de manifestos do pacote que têm impacto sobre a interface do Usuário de galeria do PowerShell
 
@@ -30,9 +30,9 @@ A tabela abaixo mostra os elementos da página de pacote de galeria do PowerShel
 | **Notas de versão** | Para módulos, estas informações são retiradas da secção de ReleaseNotes, sob PSData\PrivateData. Nos manifestos de script, é o. Elemento RELEASENOTES. | Sim | Sim |
 | **Proprietários** | Os proprietários são a lista de utilizadores na galeria do PowerShell que pode atualizar um pacote. A lista de proprietários não está incluída no manifesto do pacote. Documentação adicional descreve como [gerir os proprietários de itens](../how-to/publishing-packages/managing-package-owners.md). | Não | Não |
 | **Autor** | Isso está incluído no manifesto do módulo como autor e, num manifesto de script como. AUTOR. O campo de autor, muitas vezes, é utilizado para especificar uma empresa ou organização associada um pacote. | Sim | Sim |
-| **Direitos de autor** | Este é o campo de direitos de autor no manifesto do módulo, e. COPYRIGHT num manifesto de script. | Sim | Sim |
+| **Copyright** | Este é o campo de direitos de autor no manifesto do módulo, e. COPYRIGHT num manifesto de script. | Sim | Sim |
 | **FileList** | A lista de ficheiros é desenhada do pacote quando é publicado na galeria do PowerShell. Não é controlável pelas informações de manifesto. Nota: existe um ficheiro de .nuspec adicionais listado com cada pacote na galeria do PowerShell que não está presente depois de instalar o pacote num sistema. Isso é o manifesto de pacote Nuget para o pacote e pode ser ignorado. | Não | Não |
-| **Etiquetas** | Para módulos, as etiquetas estão incluídas no PSData\PrivateData. Para scripts, a seção é assinaladas como. AS ETIQUETAS. Tenha em atenção que as etiquetas não pode conter espaços, mesmo quando estão aspas. Etiquetas têm requisitos adicionais e os significados, que são descritos posteriormente neste tópico na seção Detalhes da etiqueta. | Sim | Sim |
+| **Tags** | Para módulos, as etiquetas estão incluídas no PSData\PrivateData. Para scripts, a seção é assinaladas como. AS ETIQUETAS. Tenha em atenção que as etiquetas não pode conter espaços, mesmo quando estão aspas. Etiquetas têm requisitos adicionais e os significados, que são descritos posteriormente neste tópico na seção Detalhes da etiqueta. | Sim | Sim |
 | **Cmdlets** | Isto é fornecido no manifesto do módulo CmdletsToExport a utilizar. Tenha em atenção que a melhor prática é explicitamente os itens de lista, em vez de utilizar o caráter universal "*", uma vez que irá melhorar o desempenho de carga-module para os utilizadores. | Sim | Não |
 | **Funções** | Isto é fornecido no manifesto do módulo FunctionsToExport a utilizar. Tenha em atenção que a melhor prática é explicitamente os itens de lista, em vez de utilizar o caráter universal "*", uma vez que irá melhorar o desempenho de carga-module para os utilizadores. | Sim | Não |
 | **Recursos de DSC** | Para os módulos que serão utilizados no PowerShell versão 5.0 e posteriores, isto é fornecido no manifesto usando DscResourcesToExport. Se o módulo está a ser utilizado no PowerShell 4, o DSCResourcesToExport não deve ser utilizada porque não é uma chave de manifesto suportada. (O DSC não estava disponível antes de PowerShell 4). | Sim | Não |
@@ -43,7 +43,7 @@ A tabela abaixo mostra os elementos da página de pacote de galeria do PowerShel
 | **Versão mínima do Powershell** | Isto pode ser especificado num manifesto de módulo como PowerShellVersion | Sim | Não |
 | **Histórico de versões** | O histórico de versões reflete as atualizações feitas a um módulo na galeria do PowerShell. Se uma versão de um pacote está oculta a utilizar a funcionalidade de eliminação, ele não será apresentado no histórico de versões, exceto para os proprietários de pacote. | Não | Não |
 | **Site do projeto** | O site do projeto é fornecido para módulos na seção Privatedata\PSData do manifesto do módulo especificando um ProjectURI. No manifesto do script, ele é controlado através da especificação. PROJECTURI. | Sim | Sim |
-| **Licença** | É fornecida uma ligação de licença para os módulos na seção Privatedata\PSData do manifesto do módulo especificando um LicenseURI. No manifesto do script, ele é controlado através da especificação. LICENSEURI. É importante observar que, se uma licença não é fornecida através do LicenseURI ou dentro de um módulo, em seguida, os termos de utilização para a galeria do PowerShell especifique os termos de utilização para o pacote. Consulte os termos de utilização para obter detalhes. | Sim | Sim |
+| **License** | É fornecida uma ligação de licença para os módulos na seção Privatedata\PSData do manifesto do módulo especificando um LicenseURI. No manifesto do script, ele é controlado através da especificação. LICENSEURI. É importante observar que, se uma licença não é fornecida através do LicenseURI ou dentro de um módulo, em seguida, os termos de utilização para a galeria do PowerShell especifique os termos de utilização para o pacote. Consulte os termos de utilização para obter detalhes. | Sim | Sim |
 | **Ícone** | Pode ser especificado um ícone para qualquer pacote na galeria do PowerShell, fornecendo o sinalizador de definição de IconURI no manifesto do script ou na seção Privatedata PSData do manifesto do módulo. A definição de IconURI deve apontar para uma imagem de 32 x 32 com plano de fundo de transparência. O URI **tem** ser um URL de imagem direta e **não podem** aceda a uma página da web que contém a imagem ou um ficheiro do pacote de galeria do PowerShell. | Sim | Sim |
 
 
@@ -101,14 +101,14 @@ Para referência, eis algumas marcas mais comumente usadas a partir de 12/14/201
 | VersionControl | Versão é menos preciso, embora usado com mais frequência  |
 | Registo | Uso preferencial de Registro em log como uma ação |
 | Registo | Uso preferencial de Log como uma coisa |
-| Telefone Alternativo |  |
+| Cópia de segurança |  |
 | IaaS |  |
 | Linux |  |
 | IIS |  |
 | AzureAutomation |  |
 | Armazenamento |  |
 | GitHub |  |
-| JSON |  |
+| Json |  |
 | Exchange |  |
 | Rede | Funcionamento em rede é semelhante, com menos frequência utilizada |
 | SharePoint |  |
@@ -121,7 +121,7 @@ Para referência, eis algumas marcas mais comumente usadas a partir de 12/14/201
 | Google |  |
 | Cor |  |
 | DNS |  |
-| Office 365 | O Office de ortografia é preferível. Office 365 é menos usados, embora mais curto |
+| Office365 | O Office de ortografia é preferível. Office 365 é menos usados, embora mais curto |
 | Gitlab |  |
 | Pester |  |
 | AzureAD |  |
@@ -137,5 +137,5 @@ Para referência, eis algumas marcas mais comumente usadas a partir de 12/14/201
 | AzureRm | Utilizado principalmente para os módulos AzureRM |
 | Zip |  |
 | MSI |  |
-| macOS |  |
+| MacOS |  |
 | PoshBot |  |

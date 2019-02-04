@@ -4,11 +4,11 @@ keywords: PowerShell, o cmdlet
 title: Objeto ISEMenuItemCollection
 ms.assetid: 0c0f5484-3320-408e-8534-5bd1c8e48512
 ms.openlocfilehash: 7e5030416df394aaa9e9d3f63978e204a7faabf1
-ms.sourcegitcommit: 00ff76d7d9414fe585c04740b739b9cf14d711e1
+ms.sourcegitcommit: b6871f21bd666f9cd71dd336bb3f844cf472b56c
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 12/14/2018
-ms.locfileid: "53405406"
+ms.lasthandoff: 02/03/2019
+ms.locfileid: "55688645"
 ---
 # <a name="the-isemenuitemcollection-object"></a>Objeto ISEMenuItemCollection
 
@@ -16,7 +16,7 @@ Uma **ISEMenuItemCollection** objeto é uma coleção de **ISEMenuItem** objetos
 
 ## <a name="method"></a>Método
 
-### <a name="addstring-displayname-systemmanagementautomationscriptblock-action-systemwindowsinputkeygesture-shortcut-"></a>Adicionar\(DisplayName, ação System.Management.Automation.ScriptBlock, System.Windows.Input.KeyGesture atalho de cadeias de caracteres \)
+### <a name="addstring-displayname-systemmanagementautomationscriptblock-action-systemwindowsinputkeygesture-shortcut-"></a>Add\(string DisplayName, System.Management.Automation.ScriptBlock Action, System.Windows.Input.KeyGesture Shortcut \)
 
 Suportado no Windows PowerShell ISE 2.0 e versões posteriores.
 
@@ -47,7 +47,7 @@ Remove todos os submenus do item de menu.
 $psISE.CurrentPowerShellTab.AddOnsMenu.Submenus.Clear()
 ```
 
-## <a name="see-also"></a>Consulte Também
+## <a name="see-also"></a>Veja Também
 
 - [Objeto ISEMenuItem](The-ISEMenuItem-Object.md)
 - [Objetivo do ISE do Windows PowerShell Scripting o modelo de objeto](Purpose-of-the-Windows-PowerShell-ISE-Scripting-Object-Model.md)

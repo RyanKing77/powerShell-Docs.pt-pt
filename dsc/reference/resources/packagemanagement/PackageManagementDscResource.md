@@ -3,15 +3,15 @@ ms.date: 06/20/2018
 keywords: DSC, powershell, configuração, a configuração
 title: Recursos do DSC PackageManagement
 ms.openlocfilehash: 18cbbfe0715c82dcfdf4a5fb6ee36ee814e43d3b
-ms.sourcegitcommit: e04292a9c10de9a8391d529b7f7aa3753b362dbe
+ms.sourcegitcommit: b6871f21bd666f9cd71dd336bb3f844cf472b56c
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 01/04/2019
-ms.locfileid: "54048485"
+ms.lasthandoff: 02/03/2019
+ms.locfileid: "55686867"
 ---
 # <a name="dsc-packagemanagement-resource"></a>Recursos do DSC PackageManagement
 
-Aplica-se a: Windows PowerShell 4.0, Windows PowerShell 5.0, 5.1 do Windows PowerShell
+Aplica-se a: Windows PowerShell 4.0, Windows PowerShell 5.0, Windows PowerShell 5.1
 
 O **PackageManagement** recursos no Windows PowerShell Desired State Configuration (DSC) fornece um mecanismo para instalar ou desinstalar pacotes de gestão de pacotes num nó de destino. Este recurso requer o **PackageManagement** módulo, disponível no [ http://PowerShellGallery.com ](http://PowerShellGallery.com).
 

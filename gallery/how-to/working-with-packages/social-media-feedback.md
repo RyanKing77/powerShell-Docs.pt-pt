@@ -4,11 +4,11 @@ contributor: JKeithB
 keywords: Galeria, o powershell, o cmdlet, o psgallery
 title: Fornecer Feedback através de redes sociais ou dos comentários
 ms.openlocfilehash: a7cdcc2ff2c18fb606d077adf0bdecf57c90703f
-ms.sourcegitcommit: 98b7cfd8ad5718efa8e320526ca76c3cc4141d78
+ms.sourcegitcommit: b6871f21bd666f9cd71dd336bb3f844cf472b56c
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50004136"
+ms.lasthandoff: 02/03/2019
+ms.locfileid: "55684354"
 ---
 # <a name="providing-feedback-via-social-media-or-comments"></a>Fornecer Feedback através de redes sociais ou dos comentários
 

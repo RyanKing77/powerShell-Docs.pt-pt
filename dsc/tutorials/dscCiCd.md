@@ -2,12 +2,12 @@
 ms.date: 06/12/2017
 keywords: DSC, powershell, configuração, a configuração
 title: Criar um pipeline de integração contínua e implementação contínua com o DSC
-ms.openlocfilehash: c305d9bc7e0f8c659129b5a20d0b7e8b34d09ba8
-ms.sourcegitcommit: 00ff76d7d9414fe585c04740b739b9cf14d711e1
+ms.openlocfilehash: 012057a32ccf85b0d15e76a332cadda4b226180a
+ms.sourcegitcommit: b6871f21bd666f9cd71dd336bb3f844cf472b56c
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 12/14/2018
-ms.locfileid: "53405247"
+ms.lasthandoff: 02/03/2019
+ms.locfileid: "55687266"
 ---
 # <a name="building-a-continuous-integration-and-continuous-deployment-pipeline-with-dsc"></a>Criar um pipeline de integração contínua e implementação contínua com o DSC
 
@@ -25,7 +25,7 @@ Para utilizar este exemplo, deve estar familiarizado com o seguinte:
 - Conceitos do CD de CI. Uma boa referência pode ser encontrada em [o modelo de Pipeline de lançamento](http://aka.ms/thereleasepipelinemodelpdf).
 - [Git](https://git-scm.com/) controlo de origem
 - O [Pester](https://github.com/pester/Pester) estrutura de testes
-- [O Team Foundation Server](https://www.visualstudio.com/tfs/)
+- [Team Foundation Server](https://www.visualstudio.com/tfs/)
 
 ## <a name="what-you-will-need"></a>O que irá precisar
 
@@ -280,7 +280,7 @@ Inicia uma sessão do PowerShell no `TestAgent1` e instala os módulos que cont�
 
 Chamadas a [Start-dscconfiguration para](/powershell/module/psdesiredstateconfiguration/start-dscconfiguration) cmdlet para executar a configuração no `TestAgent1`.
 
-#### <a name="integrationtests"></a>Testesde integração
+#### <a name="integrationtests"></a>IntegrationTests
 
 Executa o [Pester](https://github.com/pester/Pester/wiki) testes de integração.
 
@@ -388,7 +388,7 @@ Vamos criar uma definição de versão, para que o projeto é implementado no am
 
 Para fazer isso, adicione uma nova definição de versão associada a `InfraDNS` Criar definição que criou anteriormente.
 Verifique se seleciona **implementação contínua** para que uma nova versão será acionada sempre que uma nova compilação é concluída.
-([Como: Trabalhar com definições de versão](https://www.visualstudio.com/en-us/docs/build/actions/work-with-release-definitions)) e configurá-lo da seguinte forma:
+([Quais são os pipelines de versão? ](/azure/devops/pipelines/release/what-is-release-management)) e configurá-lo da seguinte forma:
 
 Adicione os seguintes passos para a definição de versão:
 

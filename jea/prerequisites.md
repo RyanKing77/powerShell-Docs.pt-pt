@@ -3,11 +3,11 @@ ms.date: 06/12/2017
 keywords: jea, powershell, segurança
 title: Pré-requisitos JEA
 ms.openlocfilehash: acc16c0c7eec357b621c0706a66b8752ae5578cd
-ms.sourcegitcommit: 8b076ebde7ef971d7465bab834a3c2a32471ef6f
+ms.sourcegitcommit: b6871f21bd666f9cd71dd336bb3f844cf472b56c
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 07/06/2018
-ms.locfileid: "37893040"
+ms.lasthandoff: 02/03/2019
+ms.locfileid: "55688358"
 ---
 # <a name="prerequisites"></a>Pré-requisitos
 

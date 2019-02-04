@@ -4,11 +4,11 @@ ms.topic: conceptual
 keywords: wmf,powershell,setup
 title: Melhorias de DSC no WMF 5.1
 ms.openlocfilehash: 92f82d62550e105a187fd7c0c58b49367c646a7e
-ms.sourcegitcommit: e46b868f56f359909ff7c8230b1d1770935cce0e
+ms.sourcegitcommit: b6871f21bd666f9cd71dd336bb3f844cf472b56c
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 09/13/2018
-ms.locfileid: "45523047"
+ms.lasthandoff: 02/03/2019
+ms.locfileid: "55683801"
 ---
 # <a name="improvements-in-desired-state-configuration-dsc-in-wmf-51"></a>Melhorias na Desired State Configuration (DSC) no WMF 5.1
 
@@ -207,11 +207,11 @@ Esse recurso evita que nós de execução configurações ou arquivos de módulo
 
 ***
 * Ficheiros de configuração (. MOFs): O cmdlet do PowerShell existente [Set-AuthenticodeSignature](https://technet.microsoft.com/library/hh849819.aspx) é expandido para suportar a assinatura de ficheiros MOF.
-* Módulos: Assinatura dos módulos é feito ao iniciar o catálogo de módulo correspondente através dos seguintes passos:
-    1. Criar um arquivo de catálogo: um arquivo de catálogo contém uma coleção de hashes criptográficos ou thumbprints.
+* Módulos: Assinatura de módulos é feito ao iniciar o catálogo de módulo correspondente através dos seguintes passos:
+    1. Crie um ficheiro de catálogo: Um arquivo de catálogo contém uma coleção de hashes criptográficos ou thumbprints.
        Cada thumbprint corresponde a um ficheiro que está incluído no módulo.
        O novo cmdlet [New-FileCatalog](https://technet.microsoft.com/library/cc732148.aspx), foi adicionada para permitir que os utilizadores criar um arquivo de catálogo para o módulo.
-    2. Assinar o ficheiro de catálogo: uso [Set-AuthenticodeSignature](https://technet.microsoft.com/library/hh849819.aspx) para assinar o ficheiro de catálogo.
+    2. Assinar o ficheiro de catálogo: Uso [Set-AuthenticodeSignature](https://technet.microsoft.com/library/hh849819.aspx) para assinar o ficheiro de catálogo.
     3. Coloque o arquivo de catálogo dentro da pasta do módulo.
 Por convenção, o arquivo de catálogo de módulo deve ser colocado sob a pasta de módulo com o mesmo nome que o módulo.
 

@@ -4,11 +4,11 @@ ms.topic: conceptual
 keywords: wmf,powershell,setup
 title: Cmdlets Catalog
 ms.openlocfilehash: ec5fc866fe27a894b23b93d3ea46ad9c0cba288e
-ms.sourcegitcommit: e46b868f56f359909ff7c8230b1d1770935cce0e
+ms.sourcegitcommit: b6871f21bd666f9cd71dd336bb3f844cf472b56c
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 09/13/2018
-ms.locfileid: "45522893"
+ms.lasthandoff: 02/03/2019
+ms.locfileid: "55687308"
 ---
 # <a name="catalog-cmdlets"></a>Cmdlets Catalog
 
@@ -37,7 +37,7 @@ Esta ação cria o arquivo de catálogo.
 Para verificar a integridade de um arquivo de catálogo (Pester.cat no acima exemplo) deve ser assinado com o [Set-AuthenticodeSignature](https://technet.microsoft.com/library/hh849819.aspx) cmdlet.
 
 
-## <a name="test-filecatalog"></a>Teste FileCatalog
+## <a name="test-filecatalog"></a>Test-FileCatalog
 --------------------------------
 
 `Test-FileCatalog` valida o catálogo que representa um conjunto de pastas.

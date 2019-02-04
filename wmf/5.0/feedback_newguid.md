@@ -1,17 +1,17 @@
 ---
 ms.date: 06/12/2017
 keywords: wmf,powershell,setup
-ms.openlocfilehash: 2d6b4e3045bc8cff90576c345d1ccb97b2487426
-ms.sourcegitcommit: 54534635eedacf531d8d6344019dc16a50b8b441
+ms.openlocfilehash: 90fd26f9f27d2398da839b309c17b921bb3b8521
+ms.sourcegitcommit: b6871f21bd666f9cd71dd336bb3f844cf472b56c
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 05/17/2018
-ms.locfileid: "34225594"
+ms.lasthandoff: 02/03/2019
+ms.locfileid: "55685110"
 ---
 # <a name="new-guid"></a>New-Guid
-Muitas vezes, o script (ou talvez ao escrever um recurso de DSC), tem a necessidade de um identificador exclusivo. GUIDs funcionam bem e é fácil chamar a classe de .NET Framework Guid para gerar um, mas com um cmdlet faz com que esta mais detetável para utilizadores finais que já não estiver familiarizados com a classe do .NET Framework:
+Muitas vezes, o script (ou talvez escrever um recurso de DSC), tem a necessidade de um identificador exclusivo. GUIDs funcionam bem e é fácil chamar a classe Guid do .NET Framework para geração de um, mas ter um cmdlet torna isso mais detectáveis para os utilizadores finais que já não estiver familiarizados com a classe do .NET Framework:
 
-PS c:\\ &gt; novo Guid
+PS C:\\&gt; New-Guid
 
 GUID
 

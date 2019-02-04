@@ -1,18 +1,18 @@
 ---
 ms.date: 06/12/2017
 keywords: wmf,powershell,setup
-ms.openlocfilehash: 10f8dd0f5097260eb4a8516f9662df3d219bdfe5
-ms.sourcegitcommit: 54534635eedacf531d8d6344019dc16a50b8b441
+ms.openlocfilehash: 4008a7f91af41150f26c4147135b30aa8835281c
+ms.sourcegitcommit: b6871f21bd666f9cd71dd336bb3f844cf472b56c
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 05/16/2018
-ms.locfileid: "34187566"
+ms.lasthandoff: 02/03/2019
+ms.locfileid: "55688561"
 ---
-# <a name="test-dscconfiguration-cmdlet-supports-reference-configurations"></a>Cmdlet de teste DscConfiguration suporta configurações de referência
+# <a name="test-dscconfiguration-cmdlet-supports-reference-configurations"></a>Suporta o cmdlet Test-dscconfiguration para configurações de referência
 
-O cmdlet de teste DscConfiguration foi atualizado para permitir testes de estado de configuração pretendido de um ou mais nós de destino, especificando um documento de configuração de referência de comparação.
+O cmdlet Test-dscconfiguration para foi atualizado para permitir que o teste de estado de configuração pretendida de um ou mais nós de destino, especificando um documento de configuração de referência de comparação.
 
-Os seguintes conjuntos de parâmetro novo utilizam configurações de DSC no caminho especificado para o teste apenas e nunca aplicam a cada configuração em nós de destino especificado. Tal como acontece com outros cmdlets de DSC e DscConfiguration de início, o nome de cada MOF é utilizado para determinar o nó de destino para testar a configuração.
+Os seguintes conjuntos de parâmetro novo utilizam configurações de DSC no caminho especificado para teste apenas e nunca aplicam cada configuração de nó de destino especificado (s). Tal como acontece com início-dscconfiguration para e os outros cmdlets de DSC, o nome de cada MOF é utilizado para determinar o nó de destino para testar a configuração no.
 
 ```powershell
 Test-DscConfiguration   [-Path] <string>
@@ -29,7 +29,7 @@ Test-DscConfiguration   [-Path] <string>
                         [<CommonParameters>]
 ```
 
-Os seguintes conjuntos de parâmetro novo utilizam uma configuração de DSC única para apenas a testar e nunca aplicar a configuração em nós de destino especificado.
+Os seguintes conjuntos de parâmetro novo usar uma única configuração de DSC para apenas testar e nunca aplicar a configuração do nó de destino especificado (s).
 
 ```powershell
 Test-DscConfiguration   -ReferenceConfiguration <string>

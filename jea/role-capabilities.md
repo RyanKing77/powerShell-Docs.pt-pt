@@ -3,11 +3,11 @@ ms.date: 06/12/2017
 keywords: jea, powershell, segurança
 title: Funcionalidades de função JEA
 ms.openlocfilehash: bd0a995adc60e50049ff99d6b23e7c2aeb745a18
-ms.sourcegitcommit: e46b868f56f359909ff7c8230b1d1770935cce0e
+ms.sourcegitcommit: b6871f21bd666f9cd71dd336bb3f844cf472b56c
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 09/13/2018
-ms.locfileid: "45522947"
+ms.lasthandoff: 02/03/2019
+ms.locfileid: "55685495"
 ---
 # <a name="jea-role-capabilities"></a>Funcionalidades de função JEA
 
@@ -267,7 +267,7 @@ $mergedAandB = @{
 
 
 
-**VisibleExternalCommands, ScriptsToProcess VisibleAliases, VisibleProviders,**
+**VisibleExternalCommands, VisibleAliases, VisibleProviders, ScriptsToProcess**
 
 Todos os outros campos no ficheiro de recurso de função são simplesmente adicionados a um conjunto cumulativo de comandos externos permitidos, aliases, provedores e scripts de inicialização.
 Qualquer comando, o alias, o fornecedor ou o script disponível num recurso de função vai estar disponível para o utilizador JEA.

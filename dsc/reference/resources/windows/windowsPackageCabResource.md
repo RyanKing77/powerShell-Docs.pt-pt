@@ -3,11 +3,11 @@ ms.date: 06/12/2017
 keywords: DSC, powershell, configuração, a configuração
 title: Recurso WindowsPackageCab de DSC
 ms.openlocfilehash: 035944e7ca5c7469250c48a19b79f2f2d5d38e9a
-ms.sourcegitcommit: e04292a9c10de9a8391d529b7f7aa3753b362dbe
+ms.sourcegitcommit: b6871f21bd666f9cd71dd336bb3f844cf472b56c
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 01/04/2019
-ms.locfileid: "54048399"
+ms.lasthandoff: 02/03/2019
+ms.locfileid: "55687217"
 ---
 # <a name="dsc-windowspackagecab-resource"></a>Recurso WindowsPackageCab de DSC
 

@@ -2,12 +2,12 @@
 ms.date: 08/23/2017
 keywords: PowerShell, o cmdlet
 title: resolução de problemas de acesso no acesso web windows powershell
-ms.openlocfilehash: c9b98c7a1685679eb88b718de0351154cb84e92e
-ms.sourcegitcommit: 00ff76d7d9414fe585c04740b739b9cf14d711e1
+ms.openlocfilehash: 314e4a8098988111739705d55b68ff5ed2f5eff3
+ms.sourcegitcommit: b6871f21bd666f9cd71dd336bb3f844cf472b56c
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 12/14/2018
-ms.locfileid: "53404932"
+ms.lasthandoff: 02/03/2019
+ms.locfileid: "55688120"
 ---
 # <a name="troubleshooting-access-problems-in-windows-powershell-web-access"></a>Resolução de Problemas de Acesso no Windows PowerShell Web Access
 
@@ -93,9 +93,9 @@ Não utilize um ponto (.) por si só, para representar o nome do computador.
 
 Parâmetro | Valor
 -- | --
-UserName | Servidor\_name\\utilizador\_nome<br/>Localhost\\utilizador\_nome<br/>. \\utilizador\_nome
-Grupo de utilizadores | Servidor\_name\\utilizador\_grupo<br/>Localhost\\user\_group<br/>. \\utilizador\_grupo
-Grupo de computador | Servidor\_name\\computador\_grupo<br/>Localhost\\computer\_group<br/>. \\computador\_grupo
+UserName | Server\_name\\user\_name<br/>Localhost\\user\_name<br/>.\\user\_name
+UserGroup | Server\_name\\user\_group<br/>Localhost\\user\_group<br/>. \\utilizador\_grupo
+ComputerGroup | Server\_name\\computer\_group<br/>Localhost\\computer\_group<br/>. \\computador\_grupo
 
 #### <a name="gateway-server-is-in-a-domain"></a>Servidor de gateway está num domínio
 
@@ -113,9 +113,9 @@ ComputerName | Nome do servidor
 
 Inicie sessão num servidor de gateway como computador de destino utilizando as credenciais formatadas através de um dos seguintes procedimentos.
 
-- Servidor\_name\\utilizador\_nome
-- Localhost\\utilizador\_nome
-- . \\utilizador\_nome
+- Server\_name\\user\_name
+- Localhost\\user\_name
+- .\\user\_name
 
 ## <a name="a-security-identifier-sid-is-displayed-in-an-authorization-rule"></a>Um identificador de segurança (SID) é apresentado numa regra de autorização
 
@@ -139,4 +139,4 @@ Para obter mais informações sobre os endereços IPv6, consulte [como IPv6 func
 
 - [Regras de autorização e funcionalidades de segurança do Windows PowerShell Web Access](https://technet.microsoft.com/en-us/library/dn282394(v=ws.11).aspx)
 - [Utilizar a consola do PowerShell de Windows baseado na Web](https://technet.microsoft.com/en-us/library/hh831417(v=ws.11).aspx)
-- [about_Remote_Requirements](https://docs.microsoft.com/en-us/powershell/module/microsoft.powershell.core/about/about_remote_requirements)
+- [about_Remote_Requirements](https://docs.microsoft.com/powershell/module/microsoft.powershell.core/about/about_remote_requirements)

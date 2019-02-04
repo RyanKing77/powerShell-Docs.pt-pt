@@ -1,22 +1,22 @@
 ---
 ms.date: 06/12/2017
 keywords: wmf,powershell,setup
-ms.openlocfilehash: 82451c550014c684958aaf0f324457db8f0d8ceb
-ms.sourcegitcommit: 54534635eedacf531d8d6344019dc16a50b8b441
+ms.openlocfilehash: 1c4a7ad30b04d138ba8a840968a6bf1763448ac6
+ms.sourcegitcommit: b6871f21bd666f9cd71dd336bb3f844cf472b56c
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 05/17/2018
-ms.locfileid: "34222009"
+ms.lasthandoff: 02/03/2019
+ms.locfileid: "55688267"
 ---
-# <a name="interact-with-symbolic-links-using-improved-item-cmdlets"></a>Interagir com as ligações simbólicas utilizando cmdlets do Item melhorados
+# <a name="interact-with-symbolic-links-using-improved-item-cmdlets"></a>Interagir com ligações simbólicas através dos cmdlets de Item melhorados
 
-Para suportar ligações simbólicas,  **\*-Item** e cmdlets relacionados uns foram expandidos. Agora pode criar as ligações simbólicas numa linha única, simple com **Novo Item**. Verá que os cmdlets relacionados com o Item (**Remove-Item, Get-ChildItem**) comportar-se uma forma muito semelhante à antes.
+Para oferecer suporte a links simbólicos,  **\*-Item** e alguns cmdlets relacionados foram estendidos. Agora, pode criar links simbólicos numa linha única e simple com **New Item**. Observará que os cmdlets relacionados com o Item (**Remove-Item, Get-ChildItem**) se comportar de forma muito semelhante ao antes.
 
-O seguinte mostra que alguns casos, as novas capacidades de utilização:
+O código a seguir mostra que alguns casos, os novos recursos de utilização:
 
 ## <a name="new-item"></a>NOVO ITEM
 
-### <a name="symbolic-link-files"></a>FICHEIROS DE LIGAÇÃO SIMBÓLICA
+### <a name="symbolic-link-files"></a>ARQUIVOS DE LINK SIMBÓLICO
 
 ```powershell
 # Create a new symbolic link file named MySymLinkFile.txt in C:\Temp which links to $pshome\profile.ps1
@@ -30,7 +30,7 @@ New-Item -ItemType SymbolicLink -Path C:\Temp\MySymLinkFile.txt -Value $pshome\p
 New-Item -ItemType SymbolicLink -Name C:\Temp\MySymLinkFile.txt -Value $pshome\profile.ps1
 ```
 
-### <a name="symbolic-link-directories"></a>LIGAÇÃO SIMBÓLICA DIRETÓRIOS
+### <a name="symbolic-link-directories"></a>DIRETÓRIOS DE LINK SIMBÓLICO
 
 ```powershell
 # Create a new symbolic link directory named MySymLinkDir in C:\Temp which links to the $pshome folder
@@ -52,7 +52,7 @@ New-Item -ItemType HardLink -Path C:\Temp -Name MyHardLinkFile.txt -Value $pshom
 # Same combinations of Path and Name allowed as described above
 ```
 
-### <a name="directory-junctions"></a>DIRETÓRIO JUNCTIONS
+### <a name="directory-junctions"></a>JUNÇÕES DE DIRETÓRIO
 
 ```powershell
 New-Item -ItemType Junction -Path C:\Temp\MyJunctionDir -Value $pshome
@@ -110,7 +110,7 @@ SpecialBuild: False
 Language:
 ```
 
-## <a name="remove-item"></a>REMOVER ITENS
+## <a name="remove-item"></a>REMOVE-ITEM
 
 ```powershell
 # Works like any other item type

@@ -4,11 +4,11 @@ contributor: keithb
 keywords: cmdlet do powershell do galeria, psget
 title: Versões de pré-lançamento de scripts
 ms.openlocfilehash: 4e7eab682008ed57163c51fe3a61a744b347bef2
-ms.sourcegitcommit: 98b7cfd8ad5718efa8e320526ca76c3cc4141d78
+ms.sourcegitcommit: b6871f21bd666f9cd71dd336bb3f844cf472b56c
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50002740"
+ms.lasthandoff: 02/03/2019
+ms.locfileid: "55683983"
 ---
 # <a name="prerelease-versions-of-scripts"></a>Versões de pré-lançamento de scripts
 
@@ -142,8 +142,8 @@ At C:\Program Files\WindowsPowerShell\Modules\PowerShellGet\1.5.0.0\PSModule.psm
 
 - [Versões de pré-lançamento do módulo](module-prerelease-support.md)
 - [Find-script](/powershell/module/powershellget/find-script)
-- [Script de instalação](/powershell/module/powershellget/install-script)
+- [Install-script](/powershell/module/powershellget/install-script)
 - [Save-script](/powershell/module/powershellget/save-script)
-- [Script de atualização](/powershell/module/powershellget/update-script)
+- [Update-script](/powershell/module/powershellget/update-script)
 - [Get-Installedscript](/powershell/module/powershellget/get-installedscript)
-- [Script de desinstalação](/powershell/module/powershellget/uninstall-script)
+- [UnInstall-script](/powershell/module/powershellget/uninstall-script)

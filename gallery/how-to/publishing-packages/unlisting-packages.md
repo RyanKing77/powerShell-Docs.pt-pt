@@ -4,13 +4,13 @@ contributor: JKeithB
 keywords: Galeria, o powershell, o cmdlet, o psgallery
 title: Remover pacotes
 ms.openlocfilehash: fb66fd23dae1d4640056a764c31426f61f56d910
-ms.sourcegitcommit: 98b7cfd8ad5718efa8e320526ca76c3cc4141d78
+ms.sourcegitcommit: b6871f21bd666f9cd71dd336bb3f844cf472b56c
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50004173"
+ms.lasthandoff: 02/03/2019
+ms.locfileid: "55684396"
 ---
-# <a name="unlisting-packages"></a>Pacotes unlisting
+# <a name="unlisting-packages"></a>Unlisting Packages (Remover Pacotes de Listas)
 
 **Por isso que está a remover um pacote de galeria do PowerShell não é exposto como uma opção?**
 

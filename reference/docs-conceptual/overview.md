@@ -2,12 +2,12 @@
 ms.date: 08/27/2018
 keywords: PowerShell, o cmdlet
 title: Script do PowerShell
-ms.openlocfilehash: 07925ce8dcafd33970a703c9b241bf6f76f88d10
-ms.sourcegitcommit: 00ff76d7d9414fe585c04740b739b9cf14d711e1
+ms.openlocfilehash: 281f2e798b3d3fa1c150b079d633cb7e8490dcec
+ms.sourcegitcommit: b6871f21bd666f9cd71dd336bb3f844cf472b56c
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 12/14/2018
-ms.locfileid: "53405205"
+ms.lasthandoff: 02/03/2019
+ms.locfileid: "55685096"
 ---
 # <a name="powershell"></a>PowerShell
 
@@ -50,7 +50,7 @@ Get-Service | Get-Member
 
 ### <a name="consistency"></a>Consistência
 
-Gerenciamento de sistemas pode ser uma tarefa complexa. Ferramentas que têm uma interface consistente que ajudam a controlar a complexidade inerente. Infelizmente, as ferramentas da linha de comandos e objetos de COM programável por scripts não são conhecidos por sua consistência.
+Gerenciamento de sistemas pode ser uma tarefa complexa. Ferramentas que têm uma interface consistente que ajudam a controlar a complexidade inerente. Infelizmente, as ferramentas da linha de comandos e objetos de modelo COM (Component Object) programável por scripts não são conhecidos por sua consistência.
 
 A consistência do PowerShell é um de seus ativos primários. Por exemplo, se aprender a utilizar o `Sort-Object` cmdlet, pode usar esse conhecimento para ordenar a saída de qualquer cmdlet. Não precisa de saber as rotinas de classificação diferentes de cada cmdlet.
 

@@ -2,12 +2,12 @@
 ms.date: 06/05/2017
 keywords: PowerShell, o cmdlet
 title: O que há de novo no Windows PowerShell 5.0
-ms.openlocfilehash: 9bd18b37b53890713faeeabc634876e5f48725da
-ms.sourcegitcommit: 7ed6ff9a3ce0b8b485d12dc2f5107c23d4b6e68b
+ms.openlocfilehash: 06088e4a974ed4fb2a245fb9acfa780710a8ccc4
+ms.sourcegitcommit: b6871f21bd666f9cd71dd336bb3f844cf472b56c
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 12/06/2018
-ms.locfileid: "52978900"
+ms.lasthandoff: 02/03/2019
+ms.locfileid: "55688638"
 ---
 # <a name="whats-new-in-windows-powershell-50"></a>O que há de novo no Windows PowerShell 5.0
 Windows PowerShell 5.0 inclui funcionalidades novas importantes que expandem a sua utilização, melhoram a usabilidade e permitem controlar e gerir ambientes baseados em Windows mais fácil e abrangente.
@@ -38,9 +38,9 @@ Muitas atualizações e melhorias para Windows PowerShell Desired State Configur
   - [Novo DscChecksum](https://technet.microsoft.com/library/dn521622.aspx) agora oferece suporte a caminhos UNC.
 
 - Novos cmdlets no [PSDesiredStateConfiguration](https://technet.microsoft.com/library/dn391651(v=wps.640).aspx) módulo
-  - [Atualização-dscconfiguration para](https://technet.microsoft.com/library/mt143541(v=wps.630).aspx): executa uma verificação de servidor de solicitação a pedido.
-  - [Stop-dscconfiguration para](https://technet.microsoft.com/library/mt143542(v=wps.630).aspx): interrompe uma configuração que já está em execução.
-  - [Remove-DscConfigurationDocument](https://technet.microsoft.com/library/mt143544(v=wps.630).aspx): permite-lhe remover documentos de configuração em várias etapas (pendentes, anteriores ou atuais).
+  - [Update-DscConfiguration](https://technet.microsoft.com/library/mt143541(v=wps.630).aspx):  Executa uma verificação de servidor de solicitação a pedido.
+  - [Stop-DscConfiguration](https://technet.microsoft.com/library/mt143542(v=wps.630).aspx):  Deixa de uma configuração que já está em execução.
+  - [Remove-DscConfigurationDocument](https://technet.microsoft.com/library/mt143544(v=wps.630).aspx):  Permite-lhe remover documentos de configuração em várias etapas (pendentes, anteriores ou atuais).
 
 - Aprimoramentos da linguagem
   - DependsOn agora oferece suporte a recursos compostos.
@@ -64,10 +64,10 @@ Muitas atualizações e melhorias para Windows PowerShell Desired State Configur
 
 - Aperfeiçoamentos de flexibilidade
   - O recurso de LocalConfigurationManager tem uma nova propriedade **ActionAfterReboot**.
-    - ContinueConfiguration (valor predefinido): retoma automaticamente uma configuração depois de um nó de destino ser reiniciado.
+    - ContinueConfiguration (valor predefinido): Retoma automaticamente uma configuração depois de um nó de destino ser reiniciado.
     - StopConfiguration: Não retomada automaticamente uma configuração depois de um nó é reiniciado.
   - Uma execução de consistência agora pode ocorrer com mais frequência do que uma operação de SOLICITAÇÃO, ou vice-versa.
-  - Suporte de controlo de versões: DSC agora pode reconhecer um documento que foi gerado num cliente mais recente (acompanha [WMF 5.0](https://aka.ms/wmf5download)).
+  - Suporte de controlo de versões:  DSC agora pode reconhecer um documento que foi gerado num cliente mais recente (acompanha [WMF 5.0](https://aka.ms/wmf5download)).
 
 - Melhorias de prevenção de erro
   - Versão do módulo foi aplicado antes de uma configuração é aplicada.
@@ -117,7 +117,7 @@ Muitas atualizações e melhorias para Windows PowerShell Desired State Configur
 - Transcrição de Windows PowerShell foi melhorada para aplicar a todos os aplicativos de hospedagem (por exemplo, o Windows PowerShell ISE), além do host de console (**powershell.exe**). Opções de transcrição (incluindo a ativar uma transcrição de todo o sistema) podem ser configuradas, permitindo que o **ativar o PowerShell transcrição** definição de política de grupo, encontrada no administrativos componentes de modelos/Windows/Windows PowerShell.
 - Um novo recurso de rastreamento detalhadas script permite-lhe ativar o controlo detalhado e análise de utilização de criação de scripts de Windows PowerShell num sistema. Depois de ativar o rastreio de detalhado de script, o Windows PowerShell regista todos os blocos de script para o registo de eventos de rastreio eventos para Windows (ETW), **Microsoft-Windows-PowerShell/Operational**.
 - A partir do Windows PowerShell 5.0, novos cmdlets de sintaxe de mensagem criptográfica suportam a encriptação e desencriptação de conteúdo com o formato de padrão IETF para proteger criptograficamente mensagens conforme documentado [RFC5652](https://tools.ietf.org/html/rfc5652). Os cmdlets Get-CmsMessage, proteger CmsMessage e Unprotect-CmsMessage foram adicionados para o [Microsoft.PowerShell.Security](https://technet.microsoft.com/library/hh849807.aspx) módulo.
-- Novos cmdlets no [Utility](https://technet.microsoft.com/library/hh849958.aspx) módulo, Get-Runspace, espaço de execução de depuração, Get-RunspaceDebug, Enable RunspaceDebug e Disable-RunspaceDebug, permitem-lhe definir as opções de depuração num espaço de execução e o início e fim depuração num espaço de execução. Para depuração de espaços de arbitrários execução "ou seja, espaços de execução que não são o espaço de execução padrão para uma consola do Windows PowerShell ou a sessão do Windows PowerShell ISE'" Windows PowerShell permite-lhe definir pontos de interrupção num script e adicionou a pontos de interrupção parar o script de em execução até que pode anexar um depurador para depurar o script de espaço de execução. Foi adicionado suporte de depuração aninhado para espaços de execução arbitrários para o depurador de script do Windows PowerShell para espaços de execução.
+- Novos cmdlets no [Utility](https://technet.microsoft.com/library/hh849958.aspx) módulo, Get-Runspace, espaço de execução de depuração, Get-RunspaceDebug, Enable RunspaceDebug e Disable-RunspaceDebug, permitem-lhe definir as opções de depuração num espaço de execução e o início e fim depuração num espaço de execução. Para depuração arbitrários espaços de execução (ou seja, espaços de execução que não são o espaço de execução padrão para uma consola do Windows PowerShell ou a sessão do Windows PowerShell ISE) o Windows PowerShell permite-lhe definir pontos de interrupção num script e tiver adicionado o script de parar de pontos de interrupção em execução até que pode anexar um depurador para depurar o script de espaço de execução. Foi adicionado suporte de depuração aninhado para espaços de execução arbitrários para o depurador de script do Windows PowerShell para espaços de execução.
 - Foi adicionado um novo cmdlet de formato hexadecimal para o [Utility](https://technet.microsoft.com/library/hh849958.aspx) módulo. Formato hexadecimal permite-lhe ver o texto ou dados binários em formato hexadecimal.
 - Foram adicionados cmdlets Get-Clipboard e Set-área de transferência para o [Utility](https://technet.microsoft.com/library/hh849958.aspx) módulo; eles facilitam a transferência de conteúdo de e para uma sessão do Windows PowerShell. Os cmdlets de área de transferência suporta imagens, arquivos de áudio, listas de ficheiro e texto.
 - Foi adicionado um novo cmdlet, Clear-RecycleBin, para o [Management](https://technet.microsoft.com/library/hh849827(v=wps.640).aspx) módulo; este cmdlet esvazia a Reciclagem de Discretização para uma unidade fixa, o que inclui unidades externas. Por predefinição, lhe for pedido para confirmar se um comando de Clear-RecycleBin, porque a propriedade ConfirmImpact do cmdlet está definida como ConfirmImpact.High.
@@ -134,27 +134,28 @@ Muitas atualizações e melhorias para Windows PowerShell Desired State Configur
 - Agora pode executar a validação de versão do módulo ao executar o cmdlet Test-ModuleManifest.
 - Resultados do cmdlet Get-Command apresentam agora uma coluna de versão; foi adicionada uma nova propriedade de versão para a classe CommandInfo. Get-Command apresenta os comandos de várias versões do módulo do mesmo. A propriedade de versão também faz parte de classes derivadas de CmdletInfo: CmdletInfo e ApplicationInfo.
 - Get-Command tem um novo parâmetro, - ShowCommandInfo, que retorna informações ShowCommand como PSObjects. Essa é uma funcionalidade especialmente útil para quando o comando Show é executado no Windows PowerShell ISE ao utilizar a comunicação remota do Windows PowerShell. O parâmetro - ShowCommandInfo substitui a função de Get-SerializedCommand existente no módulo Utility, mas o script Get-SerializedCommand ainda está disponível para oferecer suporte a scripts de nível inferior.
-- Um novo cmdlet Get-ItemPropertyValue permite-lhe obter o valor de uma propriedade sem usar a notação de ponto. Por exemplo, em versões mais antigas do Windows PowerShell, pode executar o seguinte comando para obter o valor da propriedade Base da aplicação da chave do registo de PowerShellEngine: **(Get-ItemProperty-caminho HKLM:\\SOFTWARE\\ Microsoft\\PowerShell\\3\\PowerShellEngine-nome ApplicationBase como). ApplicationBase como**. A partir do Windows PowerShell 5.0, pode executar **Get ItemPropertyValue-caminho HKLM:\\SOFTWARE\\Microsoft\\PowerShell\\3\\PowerShellEngine-ApplicationBase como do nome** .
+- Um novo cmdlet Get-ItemPropertyValue permite-lhe obter o valor de uma propriedade sem usar a notação de ponto. Por exemplo, em versões mais antigas do Windows PowerShell, pode executar o seguinte comando para obter o valor da propriedade da chave do registo de PowerShellEngine Base do aplicativo: **(Get-ItemProperty-caminho HKLM:\\SOFTWARE\\Microsoft\\PowerShell\\3\\PowerShellEngine-nome ApplicationBase como). ApplicationBase como**. A partir do Windows PowerShell 5.0, pode executar **Get ItemPropertyValue-caminho HKLM:\\SOFTWARE\\Microsoft\\PowerShell\\3\\PowerShellEngine-ApplicationBase como do nome** .
 - Agora, a consola do Windows PowerShell utiliza sintaxe de cores, assim como no ISE do Windows PowerShell.
 - Um novo módulo NetworkSwitch contém cmdlets que permitem-lhe aplicar o comutador, LAN virtual (VLAN) e básica configuração de porta do comutador de rede de camada 2 a comutadores de rede com logótipo de certificação do Windows Server 2012 R2.
 - Foi adicionado o parâmetro FullyQualifiedName para cmdlets Import-Module e Remove-Module, para suportar a armazenar várias versões de um módulo único.
 - Save-Help, Update-Help, Import-PSSession, Export-PSSession e Get-Command tem um novo parâmetro, FullyQualifiedModule, do tipo ModuleSpecification. Adicione este parâmetro para especificar um módulo pelo nome totalmente qualificado.
 - O valor de **$PSVersionTable.PSVersion** foi atualizada para 5.0.
-
+- WMF 5.0 (PowerShell 5.0) inclui a **Pester** módulo.  Pester é uma unidade de estrutura de testes para o PowerShell. Ele fornece alguns simples de usar as palavras-chave que lhe permite criar testes para seus scripts. 
+ 
 ### <a name="new-features-in-windows-powershell-desired-state-configuration"></a>Novos recursos do Windows PowerShell Desired State Configuration
 
-- Aprimoramentos de linguagem do Windows PowerShell permitem-lhe definir os recursos do Windows PowerShell Desired State Configuration (DSC) através da utilização de classes. Import-DscResource agora é uma verdadeira palavra-chave dynamic; Windows PowerShell analisa o módulo especificado '™ módulo de raiz de s, pesquisa de classes que contêm o atributo DscResource. Agora, pode utilizar classes para definir os recursos de DSC, no qual não é necessária um ficheiro MOF nem uma subpasta DSCResource na pasta do módulo. Um arquivo de módulo do Windows PowerShell pode conter várias classes de recursos de DSC.
+- Aprimoramentos de linguagem do Windows PowerShell permitem-lhe definir os recursos do Windows PowerShell Desired State Configuration (DSC) através da utilização de classes. Import-DscResource agora é uma verdadeira palavra-chave dynamic; Windows PowerShell analisa o módulo de raiz do módulo especificado, pesquisa de classes que contêm o atributo DscResource. Agora, pode utilizar classes para definir os recursos de DSC, no qual não é necessária um ficheiro MOF nem uma subpasta DSCResource na pasta do módulo. Um arquivo de módulo do Windows PowerShell pode conter várias classes de recursos de DSC.
 - Foi adicionado um novo parâmetro, ThrottleLimit, para os seguintes cmdlets no módulo PSDesiredStateConfiguration. Adicione o parâmetro de ThrottleLimit para especificar o número de computadores de destino ou dispositivos nos quais pretende que o comando para trabalhar ao mesmo tempo.
-  - Get-dscconfiguration para
+  - Get-DscConfiguration
   - Get-DscConfigurationStatus
-  - Get-dsclocalconfigurationmanager para
-  - Restauro-dscconfiguration para
-  - Test-dscconfiguration para
-  - Compare-dscconfiguration para
-  - Publicar-dscconfiguration para
-  - Set-dsclocalconfigurationmanager para
-  - Start-dscconfiguration para
-  - Atualização-dscconfiguration para
+  - Get-DscLocalConfigurationManager
+  - Restore-DscConfiguration
+  - Test-DscConfiguration
+  - Compare-DscConfiguration
+  - Publish-DscConfiguration
+  - Set-DscLocalConfigurationManager
+  - Start-DscConfiguration
+  - Update-DscConfiguration
 - Com centralizado DSC relatório de erros, informações de erro avançadas não são apenas registadas no caso de log, mas podem ser enviadas para um local central para análise posterior. Pode usar esse local central para armazenar os erros de configuração de DSC que aconteceram para qualquer servidor no seu ambiente. Depois do servidor de relatórios é definido no meta-configuração, todos os erros são enviados para o servidor de relatório e, em seguida, armazenados numa base de dados. Pode configurar esta funcionalidade, independentemente de estar ou não um nó de destino está configurado para solicitar configurações a partir de um servidor de solicitação.
 - Melhorias ao ISE do Windows PowerShell facilitam a criação de recursos de DSC. Pode agora fazer o seguinte.
   - Listar todos os recursos de DSC dentro de um **configuration** ou **nó** bloco ao introduzir **Ctrl + espaço** numa linha em branco dentro do bloco de.
@@ -165,8 +166,8 @@ Muitas atualizações e melhorias para Windows PowerShell Desired State Configur
 - foi adicionado suporte de (baseados em x86) de 32 bits para o **configuração** palavra-chave.
 - Windows PowerShell inclui agora suporte para ajuda personalizada para configurações de DSC, definidas pela adição de \[CmdletBinding()] para a função de configuração gerada.
 - Um novo **dsclocalconfigurationmanager para** atributo designa um bloco de configuração como uma meta-configuração, que é utilizada para configurar o Gestor de configuração de Local de DSC. Este atributo restringe uma configuração para que contém apenas os itens que configurar o Gestor de configuração de Local de DSC. Durante o processamento, esta configuração gera um \*. ficheiro de meta.mof que, ao executar o cmdlet Set-dsclocalconfigurationmanager para, em seguida, é enviado para os nós de destino apropriado.
-- Configurações parciais agora são permitidas no Windows PowerShell 5.0. Pode entregar documentos de configuração para um nó em fragmentos. Para um nó receber vários fragmentos de um documento de configuração, o nó '™ s Gestor de configuração Local tem primeiro de ser definido para especificar os fragmentos esperados
-- Sincronização de computador entre as novidades no DSC no Windows PowerShell 5.0. Ao utilizar o WaitFor incorporada\* recursos (**WaitForAll**, **WaitForAny**, e **WaitForSome**), pode agora especificar dependências entre computadores durante a configuração é executado, sem orquestrações externas. Estes recursos fornecem a sincronização de nó para nó através de ligações de CIM através do protocolo WS-Man. Uma configuração pode aguardar que outro computador "™ s recurso específico alteração do Estado.
+- Configurações parciais agora são permitidas no Windows PowerShell 5.0. Pode entregar documentos de configuração para um nó em fragmentos. Para um nó receber vários fragmentos de um documento de configuração, Gestor de configuração de Local do nó deve primeiro configurar para especificar os fragmentos esperados
+- Sincronização de computador entre as novidades no DSC no Windows PowerShell 5.0. Ao utilizar o WaitFor incorporada\* recursos (**WaitForAll**, **WaitForAny**, e **WaitForSome**), pode agora especificar dependências entre computadores durante a configuração é executado, sem orquestrações externas. Estes recursos fornecem a sincronização de nó para nó através de ligações de CIM através do protocolo WS-Man. Uma configuração pode aguardar por Estado de recurso específico de outro computador alterar.
 - Apenas suficiente administração (JEA), um novo recurso de segurança de delegação, tira partido do DSC e espaços de execução do PowerShell de Windows restrita para ajudar as empresas a proteger contra perda de dados ou o comprometimento por funcionários, seja intencional ou não intencional. Para obter mais informações sobre JEA, incluindo onde pode transferir o recurso de xJEA DSC, veja [administração Just Enough, passo a passo](https://blogs.technet.com/b/privatecloud/archive/2014/05/14/just-enough-administration-step-by-step.aspx).
 - Foram adicionados os seguintes novos cmdlets para o módulo de PSDesiredStateConfiguration.
   - Um novo cmdlet Get-DscConfigurationStatus obtém informações de alto nível sobre o estado de configuração a partir de um nó de destino. Pode obter o estado da última ou de todas as configurações.
@@ -177,7 +178,7 @@ Muitas atualizações e melhorias para Windows PowerShell Desired State Configur
 
 ### <a name="new-features-in-windows-powershell-ise"></a>Novos recursos do Windows PowerShell ISE
 
-- Agora pode editar scripts remotos do Windows PowerShell e arquivos numa cópia local do Windows PowerShell ISE, executando o Enter-PSSession para iniciar uma sessão remota no computador que "™ s armazenar os ficheiros que pretende editar e, em seguida, executar **PSEdit <path and file name on the remote computer>**. Esta funcionalidade facilita a edição ficheiros do Windows PowerShell que são armazenados na opção de instalação Server Core do Windows Server, onde não é possível executar o Windows PowerShell ISE.
+- Agora pode editar scripts remotos do Windows PowerShell e arquivos numa cópia local do Windows PowerShell ISE, ao executar Enter-PSSession para iniciar uma sessão remota no computador que está armazenando os arquivos de que pretende editar e, em seguida, executar **PSEdit \<caminho e nome de ficheiro no computador remoto\>**. Esta funcionalidade facilita a edição ficheiros do Windows PowerShell que são armazenados na opção de instalação Server Core do Windows Server, onde não é possível executar o Windows PowerShell ISE.
 - O cmdlet Start-Transcript é agora suportado no ISE do Windows PowerShell.
 - Agora pode depurar scripts remotos no ISE do Windows PowerShell.
 - Um novo comando de menu, **interromper todos os** (Ctrl + N), divide no depurador para scripts locais e remotamente em execução.
@@ -221,7 +222,7 @@ Windows PowerShell 4.0 inclui as seguintes novas funcionalidades.
 - R **Passthru** parâmetro foi adicionado para o **Enable-JobTrigger** e **Disable-JobTrigger** cmdlets. O parâmetro Passthru apresenta todos os objetos que são criados ou modificados pelo seu comando.
 - Os nomes de parâmetro para especificar um grupo de trabalho do **Add-Computer** e **Remove-Computer** cmdlets agora são consistentes. Ambos os cmdlets agora utilizar o parâmetro **WorkgroupName**.
 - Um novo parâmetro comum, **PipelineVariable**, foi adicionado. PipelineVariable permite-lhe guardar os resultados de um comando de pipe (ou parte de um comando de pipe) como uma variável que pode ser transmitida o resto do pipeline.
-- Coleção de filtrar através de uma sintaxe de método é agora suportada. Isso significa que agora pode filtrar uma coleção de objetos, utilizando uma sintaxe simplificada, semelhante de Where() ou Where-Object, formatados como uma chamada de método. Segue-se um exemplo: (Get-Process) no qual ({$_. Nome – correspondem a "powershell"})
+- Coleção de filtrar através de uma sintaxe de método é agora suportada. Isso significa que agora pode filtrar uma coleção de objetos, utilizando uma sintaxe simplificada, semelhante de Where() ou Where-Object, formatados como uma chamada de método. Segue-se um exemplo: (Get-Process).where({$_.Name -match 'powershell'})
 - O **Get-Process** cmdlet tem um novo parâmetro, **IncludeUserName**.
 - Um novo cmdlet **Get-FileHash**, que devolve um valor de hash de ficheiro em um dos vários formatos para um ficheiro especificado, foi adicionado.
 - No Windows PowerShell 4.0, se um módulo utiliza a **DefaultCommandPrefix** chave em seu manifesto, ou se o utilizador importa um módulo com o **prefixo** parâmetro, o **ExportedCommands**propriedade do módulo mostra os comandos no módulo com o prefixo. Quando executa os comandos, utilizando a sintaxe qualificado do módulo, ModuleName\\CommandName, os nomes de comando tem de incluir o prefixo.
@@ -237,7 +238,7 @@ Windows PowerShell 4.0 inclui as seguintes novas funcionalidades.
 
 - Foi adicionado suporte para uma nova **PipelineVariable** parâmetro comum no contexto de pipelines iterativas, como os utilizados pelo System Center Orchestrator; ou seja, pipelines que são executados comandos simplesmente à esquerda para a direita, em oposição a intercaladas a execução com a transmissão em fluxo.
 - Enlace de parâmetro foi aprimorado significativamente para trabalhar fora de cenários de conclusão de separador, tal como com os comandos que não existem no espaço de execução atual.
-- Foi adicionado suporte para atividades de contentor personalizado para o fluxo de trabalho do Windows PowerShell. Se um parâmetro de atividade é dos tipos **atividade**, **atividade\[]**' "ou é uma coleção genérica de atividades" e o utilizador tiver fornecido um bloco de script como um argumento, em seguida, o Windows Fluxo de trabalho do PowerShell converte o bloco de scripts em XAML, tal como acontece com a compilação de script-para-fluxo de trabalho normal do Windows PowerShell.
+- Foi adicionado suporte para atividades de contentor personalizado para o fluxo de trabalho do Windows PowerShell. Se um parâmetro de atividade é dos tipos **atividade**, **atividade\[]** (ou é uma coleção genérica de atividades) e o utilizador tiver fornecido um bloco de script como um argumento, em seguida, o Windows PowerShell Fluxo de trabalho converte o bloco de scripts em XAML, tal como acontece com a compilação de script-para-fluxo de trabalho normal do Windows PowerShell.
 - Após uma pane, o fluxo de trabalho do Windows PowerShell volta automaticamente para os nós geridos.
 - É agora possível limitar **Foreach-Parallel** instruções de atividade, utilizando o **ThrottleLimit** propriedade.
 - O **ErrorAction** parâmetro comum tem um novo valor válido, **suspender**, que é exclusivamente para fluxos de trabalho.
@@ -315,7 +316,7 @@ Windows PowerShell 3.0 inclui as seguintes novas funcionalidades.
 
 ### <a name="windows-powershell-workflow"></a>O fluxo de trabalho do Windows PowerShell
 
-O fluxo de trabalho do Windows PowerShell traz o poder do Windows Workflow Foundation para Windows PowerShell. Pode escrever fluxos de trabalho em XAML ou no idioma do Windows PowerShell e executá-los tal como faria a executar um cmdlet. O [Get-Command](https://technet.microsoft.com/library/59c6d302-6e8c-48b7-a6f6-f0172df936ad) cmdlet obtém workflw comandos e o [Get-Help](https://technet.microsoft.com/library/1f46eeb4-49d7-4bec-bb29-395d9b42f54a) cmdlet obtém ajuda para fluxos de trabalho.
+O fluxo de trabalho do Windows PowerShell traz o poder do Windows Workflow Foundation para Windows PowerShell. Pode escrever fluxos de trabalho em XAML ou no idioma do Windows PowerShell e executá-los tal como faria a executar um cmdlet. O [Get-Command](https://technet.microsoft.com/library/59c6d302-6e8c-48b7-a6f6-f0172df936ad) cmdlet obtém os comandos de fluxo de trabalho e o [Get-Help](https://technet.microsoft.com/library/1f46eeb4-49d7-4bec-bb29-395d9b42f54a) cmdlet obtém ajuda para fluxos de trabalho.
 
 Fluxos de trabalho são seqüências de atividades de gestão multicomputer que são de longa execução, repetíveis, frequentes, ponto pode ser paralelizada, passível de interrupção, suspendable e reinicializável. Fluxos de trabalho podem ser retomados a partir de uma interrupção intencional ou acidental, como uma falha de rede, um reinício do Windows ou uma falha de energia.
 
@@ -452,36 +453,36 @@ Novos cmdlets foram adicionados à instalação do Windows PowerShell Core, incl
 
 |||
 |-|-|
-|Adicionar-JobTrigger|Novo-JobTrigger|
-|Connect-PSSession|Novo PSSessionConfigurationFile|
+|Add-JobTrigger|New-JobTrigger|
+|Connect-PSSession|New-PSSessionConfigurationFile|
 |ConvertFrom-Json|New-PSTransportOption|
-|ConvertTo-Json|Novo-PSWorkflowExecutionOption|
-|Disable-JobTrigger|Novo PSWorkflowSession|
-|Disable-ScheduledJob|Novo ScheduledJobOption|
-|Desligar-PSSession|Novo-WinEvent|
-|Enable-JobTrigger|Receber-PSSession|
-|Enable-ScheduledJob|Registre-se-CimIndicationEvent|
+|ConvertTo-Json|New-PSWorkflowExecutionOption|
+|Disable-JobTrigger|New-PSWorkflowSession|
+|Disable-ScheduledJob|New-ScheduledJobOption|
+|Disconnect-PSSession|New-WinEvent|
+|Enable-JobTrigger|Receive-PSSession|
+|Enable-ScheduledJob|Register-CimIndicationEvent|
 |Get-CimAssociatedInstance|Register-ScheduledJob|
 |Get-CimClass|Remove-CimInstance|
-|Get-ciminstance|Remove-CimSession|
+|Get-CimInstance|Remove-CimSession|
 |Get-CimSession|Remove-TypeData|
 |Get-ControlPanelItem|Rename-Computer|
-|Get-IseSnippet|Retomar tarefa|
+|Get-IseSnippet|Resume-Job|
 |Get-JobTrigger|Save-Help|
 |Get-ScheduledJob|Set-CimInstance|
 |Get-ScheduledJobOption|Set-JobTrigger|
 |Get-TypeData|Set-ScheduledJob|
-|Importar-IseSnippet|Conjunto ScheduledJobOption|
-|AsWorkflow invocar|Comando show|
-|Invoke-CimMethod|Show ControlPanelItem|
-|RestMethod invocar|Suspend-Job|
-|Invoke-WebRequest|Teste PSSessionConfigurationFile|
-|Novo-CimInstance|Ficheiro de desbloqueio|
-|Novo-CimSession|Anular o registo-ScheduledJob|
-|Novo CimSessionOption|Update-Help|
-|Novo IseSnippet||
+|Import-IseSnippet|Set-ScheduledJobOption|
+|Invoke-AsWorkflow|Comando show|
+|Invoke-CimMethod|Show-ControlPanelItem|
+|Invoke-RestMethod|Suspend-Job|
+|Invoke-WebRequest|Test-PSSessionConfigurationFile|
+|New-CimInstance|Ficheiro de desbloqueio|
+|New-CimSession|Unregister-ScheduledJob|
+|New-CimSessionOption|Update-Help|
+|New-IseSnippet||
 
-### <a name="improvements-to-existing-core-cmdlets-and-providerswindows-powershell-30-includes-new-features-for-existing-cmdlets-including-the-simplified-syntax-and-new-parameters-for-the-following-cmdlets-computer-cmdlets-csv-cmdlets-get-childitem-get-command-get-content-get-history-measure-object-security-cmdlets-select-object-select-string-split-path-start-process-tee-object-test-connection-add-member-and-wmi-cmdlets"></a>Melhorias para Cmdlets de núcleo existentes e ProvidersWindows PowerShell 3.0 inclui funcionalidades novas para cmdlets existentes, incluindo sintaxe simplificada e novos parâmetros para os seguintes cmdlets: cmdlets de computador, os cmdlets CSV, Get-ChildItem, Get-Command, Get-Content, histórico de Get-objeto de medida, cmdlets de segurança, Select-Object, o Select-String, o caminho de divisão, o processo de início, Tee-Object, ligação de teste, Add-Member e cmdlets do WMI.
+### <a name="improvements-to-existing-core-cmdlets-and-providerswindows-powershell-30-includes-new-features-for-existing-cmdlets-including-the-simplified-syntax-and-new-parameters-for-the-following-cmdlets-computer-cmdlets-csv-cmdlets-get-childitem-get-command-get-content-get-history-measure-object-security-cmdlets-select-object-select-string-split-path-start-process-tee-object-test-connection-add-member-and-wmi-cmdlets"></a>Melhorias para Cmdlets de núcleo existentes e ProvidersWindows PowerShell 3.0 inclui novos recursos para cmdlets existentes, incluindo sintaxe simplificada e novos parâmetros para os seguintes cmdlets: Cmdlets de computador, os cmdlets CSV, Get-ChildItem, Get-Command, Get-Content, histórico de Get-objeto de medida, cmdlets de segurança, Select-Object, o Select-String, o caminho de divisão, o processo de início, Tee-Object, ligação de teste, Add-Member e cmdlets do WMI.
 
 Os fornecedores de Windows PowerShell foram também melhoraram significativamente, incluindo suporte de fornecedor de certificados para o gerenciamento de certificados de Secure Socket Layer (SSL) para hospedagem na web, suporte para credenciais, unidades de rede persistente e fluxos de dados alternativo em unidades de sistema de ficheiros.
 

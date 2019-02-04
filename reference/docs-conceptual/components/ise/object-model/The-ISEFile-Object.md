@@ -4,11 +4,11 @@ keywords: PowerShell, o cmdlet
 title: Objeto ISEFile
 ms.assetid: 1c6d91f3-c556-42a2-a017-79b6b7b4b7db
 ms.openlocfilehash: 24549720b8bc35435882533b0eb138de432ede65
-ms.sourcegitcommit: 00ff76d7d9414fe585c04740b739b9cf14d711e1
+ms.sourcegitcommit: b6871f21bd666f9cd71dd336bb3f844cf472b56c
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 12/14/2018
-ms.locfileid: "53405292"
+ms.lasthandoff: 02/03/2019
+ms.locfileid: "55685138"
 ---
 # <a name="the-isefile-object"></a>Objeto ISEFile
 
@@ -16,7 +16,7 @@ Uma **ISEFile** objeto representa um arquivo no Windows PowerShell® Integrated 
 
 ## <a name="methods"></a>Métodos
 
-### <a name="save-saveencoding-"></a>Guarde\( \[saveEncoding\] \)
+### <a name="save-saveencoding-"></a>Save\( \[saveEncoding\] \)
 
 Suportado no Windows PowerShell ISE 2.0 e versões posteriores.
 
@@ -52,7 +52,7 @@ Guarda o ficheiro com o nome de ficheiro especificado e a codificação.
 
 ### <a name="exceptions"></a>Exceções
 
-- **Argumentnullexception**: O **filename** parâmetro é nulo.
+- **System.ArgumentNullException**: O **filename** parâmetro é nulo.
 - **System.ArgumentException**: O **filename** parâmetro está vazio.
 - **System.IO.IOException**: Não foi possível guardar o ficheiro.
 
@@ -88,7 +88,7 @@ A propriedade só de leitura que obtém a [editor de objeto](The-ISEEditor-Objec
 $psISE.CurrentFile.Editor.Text
 ```
 
-### <a name="encoding"></a>Codificação
+### <a name="encoding"></a>Encoding
 
 Suportado no Windows PowerShell ISE 2.0 e versões posteriores.
 
@@ -135,7 +135,7 @@ $psISE.CurrentFile.SaveAs("temp.txt")
 $psISE.CurrentFile.IsUntitled
 ```
 
-## <a name="see-also"></a>Consulte Também
+## <a name="see-also"></a>Veja Também
 
 - [O ISEFileCollectionObject](The-ISEFileCollection-Object.md)
 - [Objetivo do ISE do Windows PowerShell Scripting o modelo de objeto](Purpose-of-the-Windows-PowerShell-ISE-Scripting-Object-Model.md)

@@ -2,12 +2,12 @@
 ms.date: 06/12/2017
 keywords: DSC, powershell, configuração, a configuração
 title: Configurar uma máquina virtual no arranque inicial através da utilização de DSC
-ms.openlocfilehash: 7b9ebc6c818aa39365759945667426c8976997e5
-ms.sourcegitcommit: 00ff76d7d9414fe585c04740b739b9cf14d711e1
+ms.openlocfilehash: 2ae6f7a85af3d08bad9e97b90efaefb2ff8410ca
+ms.sourcegitcommit: b6871f21bd666f9cd71dd336bb3f844cf472b56c
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 12/14/2018
-ms.locfileid: "53405271"
+ms.lasthandoff: 02/03/2019
+ms.locfileid: "55686909"
 ---
 # <a name="configure-a-virtual-machines-at-initial-boot-up-by-using-dsc"></a>Configurar uma máquina virtual no arranque inicial através da utilização de DSC
 
@@ -18,16 +18,17 @@ ms.locfileid: "53405271"
 
 > [!NOTE]
 > O **DSCAutomationHostEnabled** chave de registo descrito neste tópico não está disponível no PowerShell 4.0.
-> Para obter informações sobre como configurar novas máquinas virtuais no arranque inicial no PowerShell 4.0, consulte [pretende automaticamente configurar seu máquinas usando o DSC no inicial arranque?] > (https://blogs.msdn.microsoft.com/powershell/2014/02/28/want-to-automatically-configure-your-machines-using-dsc-at-initial-boot-up/)
+> Para obter informações sobre como configurar novas máquinas virtuais no arranque inicial no PowerShell 4.0, consulte [pretende automaticamente configurar seu máquinas usando o DSC no arranque inicial de segurança?](https://blogs.msdn.microsoft.com/powershell/2014/02/28/want-to-automatically-configure-your-machines-using-dsc-at-initial-boot-up/)
 
 Para executar estes exemplos, terá de:
 
-- Um VHD de arranque para trabalhar com. Pode baixar uma imagem ISO com uma cópia de avaliação do Windows Server 2016 em [Centro de avaliação TechNet](https://www.microsoft.com/en-us/evalcenter/evaluate-windows-server-2016). Pode encontrar instruções sobre como criar um VHD a partir de uma imagem ISO na [criar suportes discos de rígido virtuais](/previous-versions/windows/it-pro/windows-7/gg318049(v=ws.10)).
+- Um VHD de arranque para trabalhar com. Pode baixar uma imagem ISO com uma cópia de avaliação do Windows Server 2016 em [Centro de avaliação TechNet](https://www.microsoft.com/en-us/evalcenter/evaluate-windows-server-2016).
+  Pode encontrar instruções sobre como criar um VHD a partir de uma imagem ISO na [criar suportes discos de rígido virtuais](/previous-versions/windows/it-pro/windows-7/gg318049(v=ws.10)).
 - Um computador anfitrião que tenha o Hyper-V ativada. Para obter informações, consulte [descrição geral do Hyper-V](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/hh831531(v=ws.11)).
 
   Ao utilizar o DSC, pode automatizar a instalação de software e configuração para um computador no arranque inicial.
   Pode fazê-lo por qualquer um dos injetar um documento de MOF de configuração ou um metaconfiguration suportes de dados (por exemplo, um VHD) para que estas são executadas durante o processo de inicialização inicial.
-  Este comportamento é especificado pela [de registo dscautomationhostenabled](DSCAutomationHostEnabled.md) chave de Registro em `HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Policies`.
+  Este comportamento é especificado pela [de registo dscautomationhostenabled](DSCAutomationHostEnabled.md) chave de Registro em `HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Policies\System`.
   Por predefinição, o valor desta chave é 2, que permite a DSC ser executado no momento da inicialização.
 
   Se não pretender DSC para ser executado no momento da inicialização, defina o valor do [de registo dscautomationhostenabled](DSCAutomationHostEnabled.md) chave de registo para 0.
@@ -172,7 +173,7 @@ Pode verificar isto ao chamar o [Get-WindowsFeature](/powershell/module/serverma
 
 ## <a name="disable-dsc-at-boot-time"></a>Desativar o DSC no momento da inicialização
 
-Por predefinição, o valor da `HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Policies\DSCAutomationHostEnabled` chave está definida como 2, que permite uma configuração de DSC para ser executada se o computador está no estado atual ou pendente. Se não pretender que uma configuração de executar no arranque inicial, por isso, precisa definir o valor desta chave como 0:
+Por predefinição, o valor da `HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Policies\System\DSCAutomationHostEnabled` chave está definida como 2, que permite uma configuração de DSC para ser executada se o computador está no estado atual ou pendente. Se não pretender que uma configuração de executar no arranque inicial, por isso, precisa definir o valor desta chave como 0:
 
 1. Montar o VHD ao chamar o [montagem VHD](/powershell/module/hyper-v/mount-vhd) cmdlet. Por exemplo:
 
@@ -186,10 +187,10 @@ Por predefinição, o valor da `HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\Cu
    reg load HKLM\Vhd E:\Windows\System32\Config\Software`
    ```
 
-3. Navegue para o `HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Policies\*` utilizando o fornecedor de registo do PowerShell.
+3. Navegue para o `HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Policies\System` utilizando o fornecedor de registo do PowerShell.
 
    ```powershell
-   Set-Location HKLM:\Software\Microsoft\Windows\CurrentVersion\Policies`
+   Set-Location HKLM:\Software\Microsoft\Windows\CurrentVersion\Policies\System`
    ```
 
 4. Alterar o valor de `DSCAutomationHostEnabled` como 0.

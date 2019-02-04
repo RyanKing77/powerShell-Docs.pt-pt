@@ -3,11 +3,11 @@ ms.date: 06/12/2017
 keywords: DSC, powershell, configuração, a configuração
 title: Usando a ferramenta de Designer de recursos
 ms.openlocfilehash: 3fd2f06cf46602ee30dd34f8e7bd77d3c92b808f
-ms.sourcegitcommit: 00ff76d7d9414fe585c04740b739b9cf14d711e1
+ms.sourcegitcommit: b6871f21bd666f9cd71dd336bb3f844cf472b56c
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 12/14/2018
-ms.locfileid: "53404941"
+ms.lasthandoff: 02/03/2019
+ms.locfileid: "55686657"
 ---
 # <a name="using-the-resource-designer-tool"></a>Usando a ferramenta de Designer de recursos
 
@@ -23,7 +23,7 @@ Utilize o [Install-Module](/powershell/module/PowershellGet/Install-Module) cmdl
 A primeira coisa que precisamos fazer é decidir qual a propriedades que o recurso irá expor. Neste exemplo, iremos definir um utilizador do Active Directory com as seguintes propriedades.
 
 Nome do parâmetro de descrição
-* **Nome de utilizador**: Propriedade de chave que identifica exclusivamente um utilizador.
+* **UserName**: Propriedade de chave que identifica exclusivamente um utilizador.
 * **Certifique-se de**: Especifica se a conta de utilizador deve estar presente ou ausência. Este parâmetro tem apenas dois valores possíveis.
 * **DomainCredential**: A palavra-passe do domínio para o utilizador.
 * **Palavra-passe**: A palavra-passe pretendida para o utilizador permitir que uma configuração alterar a palavra-passe do utilizador, se necessário.

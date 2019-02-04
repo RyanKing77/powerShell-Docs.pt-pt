@@ -3,11 +3,11 @@ ms.date: 08/09/2017
 keywords: PowerShell, cmdlet, download, instalação, configuração, o windows 10, windows 8.1, windows 8.0, windows 7
 title: Instalar o Windows PowerShell
 ms.openlocfilehash: 1630ba445c88953b2729232ae7d80afa326f25e6
-ms.sourcegitcommit: 00ff76d7d9414fe585c04740b739b9cf14d711e1
+ms.sourcegitcommit: b6871f21bd666f9cd71dd336bb3f844cf472b56c
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 12/14/2018
-ms.locfileid: "53404947"
+ms.lasthandoff: 02/03/2019
+ms.locfileid: "55687329"
 ---
 # <a name="installing-windows-powershell"></a>Instalar o Windows PowerShell
 
@@ -26,17 +26,17 @@ Todas as versões listadas aqui são a versão original, conforme lançado, não
 
 Versão | Localização
 -- | --
-10 do Windows | Ícone de Windows canto inferior esquerdo de clique, comece a escrever o PowerShell
+Windows 10 | Ícone de Windows canto inferior esquerdo de clique, comece a escrever o PowerShell
 Windows 8.1, 8.0 | Na tela iniciar, comece a escrever o PowerShell.<br/>Se, na área de trabalho, clique o ícone de Windows canto inferior esquerdo, comece a escrever o PowerShell
-O Windows 7 SP1 | Clique em esquerdo inferior Windows ícone de canto, sobre o início de caixa de pesquisa digitando o PowerShell
+Windows 7 SP1 | Clique em esquerdo inferior Windows ícone de canto, sobre o início de caixa de pesquisa digitando o PowerShell
 
 ### <a name="for-ise"></a>Para ISE
 
 Versão | Localização
 -- | --
-10 do Windows | Ícone de Windows canto inferior esquerdo de clique, começa a digitar ISE
+Windows 10 | Ícone de Windows canto inferior esquerdo de clique, começa a digitar ISE
 Windows 8.1, 8.0 | Na tela iniciar, digite **ISE do PowerShell**.<br/>Se, na área de trabalho, clique em deixado o ícone de Windows de canto inferior, escreva **ISE do PowerShell**
-O Windows 7 SP1 | Clique em esquerdo inferior Windows ícone de canto, sobre o início de caixa de pesquisa digitando o PowerShell
+Windows 7 SP1 | Clique em esquerdo inferior Windows ícone de canto, sobre o início de caixa de pesquisa digitando o PowerShell
 
 ## <a name="finding-powershell-in-windows-server-versions"></a>Localizar PowerShell nas versões do Windows Server
 
@@ -73,7 +73,7 @@ Windows | PS 3.0 | PS 4.0 | PS 5.0 | PS 5.1 |
 Windows 10 (consulte Note1)<br/>Windows Server 2016 | - | - | - | instalado
 Windows 8.1<br/>Windows Server 2012 R2 | - | instalado | [WMF 5.0](https://www.microsoft.com/en-us/download/details.aspx?id=50395) | [WMF 5.1](https://www.microsoft.com/en-us/download/details.aspx?id=54616)
 Windows 8<br/>Windows Server 2012 | instalado | [WMF 4.0](https://www.microsoft.com/en-us/download/details.aspx?id=40855) | [WMF 5.0](https://www.microsoft.com/en-us/download/details.aspx?id=50395) | [WMF 5.1](https://www.microsoft.com/en-us/download/details.aspx?id=54616)
-O Windows 7 SP1<br/>Windows Server 2008 R2 SP1 | [WMF 3.0](https://www.microsoft.com/en-us/download/details.aspx?id=34595) | [WMF 4.0](https://www.microsoft.com/en-us/download/details.aspx?id=40855) | [WMF 5.0](https://www.microsoft.com/en-us/download/details.aspx?id=50395) | [WMF 5.1](https://www.microsoft.com/en-us/download/details.aspx?id=54616)
+Windows 7 SP1<br/>Windows Server 2008 R2 SP1 | [WMF 3.0](https://www.microsoft.com/en-us/download/details.aspx?id=34595) | [WMF 4.0](https://www.microsoft.com/en-us/download/details.aspx?id=40855) | [WMF 5.0](https://www.microsoft.com/en-us/download/details.aspx?id=50395) | [WMF 5.1](https://www.microsoft.com/en-us/download/details.aspx?id=54616)
 
 > [!NOTE]
 >

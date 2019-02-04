@@ -1,12 +1,12 @@
 ---
 ms.date: 06/12/2017
 keywords: wmf,powershell,setup
-ms.openlocfilehash: 9486fdbaeca66c83551564c76ce47482f77c36b9
-ms.sourcegitcommit: 54534635eedacf531d8d6344019dc16a50b8b441
+ms.openlocfilehash: 424e0b7a4d62fc35e5040a7e425950e887021d7e
+ms.sourcegitcommit: b6871f21bd666f9cd71dd336bb3f844cf472b56c
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 05/17/2018
-ms.locfileid: "34225611"
+ms.lasthandoff: 02/03/2019
+ms.locfileid: "55683780"
 ---
 # <a name="call-base-class-constructor"></a>Chamar o Construtor de Classe Base
 
@@ -31,7 +31,7 @@ class B : A
 [B]::new().a # return 103
 ```
 
-Se uma classe base tem um construtor predefinido (sem parâmetros), pode omitir uma chamada do construtor explícita:
+Se uma classe base tem um construtor padrão (nenhum parâmetro), pode omitir uma chamada de construtor explícito:
 
 ```powershell
 class C : B

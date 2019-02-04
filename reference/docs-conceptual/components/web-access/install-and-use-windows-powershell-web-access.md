@@ -2,12 +2,12 @@
 ms.date: 08/23/2017
 keywords: PowerShell, o cmdlet
 title: instalar e utilizar o acesso web windows powershell
-ms.openlocfilehash: a129dfeb61531a1f4d333af3e872d16defa1d12f
-ms.sourcegitcommit: 00ff76d7d9414fe585c04740b739b9cf14d711e1
+ms.openlocfilehash: 5517347560b25f032baa77ecc2d769fb1e74ba4f
+ms.sourcegitcommit: b6871f21bd666f9cd71dd336bb3f844cf472b56c
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 12/14/2018
-ms.locfileid: "53405154"
+ms.lasthandoff: 02/03/2019
+ms.locfileid: "55683829"
 ---
 # <a name="install-and-use-windows-powershell-web-access"></a>Instalar e Utilizar o Acesso Web Windows PowerShell
 
@@ -136,7 +136,7 @@ Por predefinição, o cmdlet instala a aplicação web, **pswa** (e um conjunto 
    - Path: /pswa
    - ApplicationPool: pswa_pool
    - EnabledProtocols: http
-   - PhysicalPath: `%*windir*%/Web/PowerShellWebAccess/wwwroot`
+   - PhysicalPath: %windir%/Web/PowerShellWebAccess/wwwroot
 
    **Exemplo**: `Install-PswaWebApplication -webApplicationName myWebApp -useTestCertificate`
 
@@ -161,7 +161,7 @@ Por predefinição, o cmdlet instala a aplicação web, **pswa** (e um conjunto 
    - Path: /pswa
    - ApplicationPool: pswa_pool
    - EnabledProtocols: http
-   - PhysicalPath: `%*windir*%/Web/PowerShellWebAccess/wwwroot`
+   - PhysicalPath: %windir%/Web/PowerShellWebAccess/wwwroot
 
 3. Abra a consola do Gestor do IIS efetuando um dos procedimentos seguintes.
 
@@ -271,7 +271,7 @@ As instruções nesta secção destinam-se instalar a aplicação web do Windows
 
 7. Na **conjunto aplicacional** campo, selecione o conjunto aplicacional que criou no passo 3.
 
-8. Na **caminho físico** campo, navegue para a localização do aplicativo. Pode utilizar a localização predefinida, `%windir%/Web/PowerShellWebAccess/wwwroot`. Clique em **OK**.
+8. Na **caminho físico** campo, navegue para a localização do aplicativo. Pode utilizar a localização predefinida, `$env:windir/Web/PowerShellWebAccess/wwwroot`. Clique em **OK**.
 
 9. Siga os passos no procedimento [para configurar um certificado SSL no Gestor de IIS](#to-configure-an-ssl-certificate-in-iis-Manager) neste tópico.
 
@@ -318,7 +318,7 @@ As instruções nesta secção destinam-se instalar a aplicação web do Windows
 
 1. É criado automaticamente um conjunto aplicacional para o novo Web site. Para utilizar um conjunto aplicacional diferente, clique em **selecione** para selecionar um conjunto aplicacional para associar o novo Web site. Selecione o conjunto aplicacional alternativo na **selecionar conjunto aplicacional** caixa de diálogo e clique em **OK**.
 
-1. Na **caminho físico** texto caixa, navegue até %*windir*% / Web/PowerShellWebAccess/wwwroot.
+1. Na **caminho físico** texto caixa, navegue até % windir%/Web/PowerShellWebAccess/wwwroot.
 
 1. Na **tipo** campo a **enlace** área, selecione **https**.
 

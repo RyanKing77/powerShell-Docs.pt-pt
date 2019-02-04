@@ -2,11 +2,11 @@
 ms.date: 06/12/2017
 keywords: wmf,powershell,setup
 ms.openlocfilehash: 1556d1e07a3a085346f2cdc48ef6888ad18687ad
-ms.sourcegitcommit: 221b7daab7f597f8b2e4864cf9b5d9dda9b9879b
+ms.sourcegitcommit: b6871f21bd666f9cd71dd336bb3f844cf472b56c
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52320470"
+ms.lasthandoff: 02/03/2019
+ms.locfileid: "55685768"
 ---
 # <a name="powershellget-cmdlets-for-module-management"></a>Cmdlets do PowerShellGet para Gestão de Módulos
 
@@ -17,20 +17,20 @@ ms.locfileid: "52320470"
 - [Get-InstalledScript](https://technet.microsoft.com/library/mt653994.aspx)
 - [Get-PSRepository](https://technet.microsoft.com/library/dn807170.aspx)
 - [Install-Module](https://technet.microsoft.com/library/dn807162.aspx)
-- [Script de instalação](https://technet.microsoft.com/library/mt653998.aspx)
+- [Install-Script](https://technet.microsoft.com/library/mt653998.aspx)
 - [New-ScriptFileInfo](https://technet.microsoft.com/library/mt653995.aspx)
 - [Publish-Module](https://technet.microsoft.com/library/dn807163.aspx)
-- [Publicar-Script](https://technet.microsoft.com/library/mt654003.aspx)
+- [Publish-Script](https://technet.microsoft.com/library/mt654003.aspx)
 - [Register-PSRepository](https://technet.microsoft.com/library/dn807168.aspx)
 - [Save-Module](https://technet.microsoft.com/library/mt653992.aspx)
 - [Save-Script](https://technet.microsoft.com/library/mt654004.aspx)
 - [Set-PSRepository](https://technet.microsoft.com/library/dn807165.aspx)
 - [Test-ScriptFileInfo](https://technet.microsoft.com/library/mt654005.aspx)
 - [Uninstall-Module](https://technet.microsoft.com/library/mt653996.aspx)
-- [Script de desinstalação](https://technet.microsoft.com/library/mt653989.aspx)
+- [Uninstall-Script](https://technet.microsoft.com/library/mt653989.aspx)
 - [Update-Module](https://technet.microsoft.com/library/dn807166.aspx)
 - [Update-ModuleManifest](https://technet.microsoft.com/library/mt654002.aspx)
-- [Script de atualização](https://technet.microsoft.com/library/mt653997.aspx)
+- [Update-Script](https://technet.microsoft.com/library/mt653997.aspx)
 - [Update-ScriptFileInfo](https://technet.microsoft.com/library/mt653991.aspx)
 - [Unregister-PSRepository](https://technet.microsoft.com/library/dn807161.aspx)
 

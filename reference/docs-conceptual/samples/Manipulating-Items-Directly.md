@@ -3,12 +3,12 @@ ms.date: 06/05/2017
 keywords: PowerShell, o cmdlet
 title: Manipular Itens Diretamente
 ms.assetid: 8cbd4867-917d-41ea-9ff0-b8e765509735
-ms.openlocfilehash: 688f9194bd16793331325999c69e88df3e94c976
-ms.sourcegitcommit: 00ff76d7d9414fe585c04740b739b9cf14d711e1
+ms.openlocfilehash: 5f5b6cf4a777229029743b9d9967030effc58215
+ms.sourcegitcommit: b6871f21bd666f9cd71dd336bb3f844cf472b56c
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 12/14/2018
-ms.locfileid: "53405499"
+ms.lasthandoff: 02/03/2019
+ms.locfileid: "55685194"
 ---
 # <a name="manipulating-items-directly"></a>Manipular Itens Diretamente
 
@@ -93,7 +93,7 @@ SKC  VC Name                           Property
   3   0 OptionalComponents             {}
 ```
 
-Embora seria conveniente tratar as entradas do Registro como itens, não é possível especificar um caminho para uma entrada de registo de uma forma que garante que é exclusivo. A notação de caminho não faz distinção entre a subchave de registo com o nome **execute** e o **(predefinida)** entrada de registo no **executar** subchave. Além disso, uma vez que os nomes de entrada de registo podem conter o caráter de barra invertida (**\\**), se as entradas de registo foram itens, em seguida, não podia usar a notação de caminho para uma entrada de registo com o nome de distinguir  **Windows\\CurrentVersion\\executar** da subchave que está localizada em que o caminho.
+Embora seria conveniente tratar as entradas do Registro como itens, não é possível especificar um caminho para uma entrada de registo de uma forma que garante que é exclusivo. A notação de caminho não faz distinção entre a subchave de registo com o nome **execute** e o **(predefinida)** entrada de registo no **executar** subchave. Além disso, uma vez que os nomes de entrada de registo podem conter o caráter de barra invertida (**\\**), se as entradas do Registro foram itens, em seguida, não podia usar a notação de caminho para uma entrada de registo com o nome de distinguir  **Windows\\CurrentVersion\\executar** da subchave que está localizada em que o caminho.
 
 ### <a name="renaming-existing-items-rename-item"></a>Mudar o nome de itens existentes (Rename-Item)
 

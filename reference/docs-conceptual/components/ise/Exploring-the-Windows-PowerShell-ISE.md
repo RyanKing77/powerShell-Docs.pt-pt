@@ -4,11 +4,11 @@ keywords: PowerShell, o cmdlet
 title: Explorar o ISE do Windows PowerShell
 ms.assetid: e0d2c6e8-5126-40e7-a1e1-d1cff29fe94a
 ms.openlocfilehash: 059651f159fb2636a93167709134788e90d062b8
-ms.sourcegitcommit: 00ff76d7d9414fe585c04740b739b9cf14d711e1
+ms.sourcegitcommit: b6871f21bd666f9cd71dd336bb3f844cf472b56c
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 12/14/2018
-ms.locfileid: "53405370"
+ms.lasthandoff: 02/03/2019
+ms.locfileid: "55684480"
 ---
 # <a name="exploring-the-windows-powershell-ise"></a>Explorar o ISE do Windows PowerShell
 
@@ -37,11 +37,11 @@ Os botões seguintes estão localizados na barra de ferramentas.
 |**Novo**|É aberto um novo script.|
 |**Aberto**|Abre-se de um script existente ou um ficheiro.|
 |**Guardar**|Guarda um script ou arquivo.|
-|**Operações de corte**|Reduz o texto selecionado e copia-o para a área de transferência.|
+|**Cut**|Reduz o texto selecionado e copia-o para a área de transferência.|
 |**Cópia**|Copia o texto selecionado para a área de transferência.|
 |**Paste**|Cola o conteúdo da área de transferência ao local do cursor.|
 |**Limpar o painel de resultados**|Limpa a todo o conteúdo no painel de saída.|
-|**Anular**|Reverte a ação que acabou de executar.|
+|**Undo**|Reverte a ação que acabou de executar.|
 |**Refazer**|Executa a ação que foi anulada apenas.|
 |**Executar Script**|Executa um script.|
 |**Executar seleção**|Executa uma parte selecionada de um script.|

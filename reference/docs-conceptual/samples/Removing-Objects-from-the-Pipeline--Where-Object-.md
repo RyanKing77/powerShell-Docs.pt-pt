@@ -4,11 +4,11 @@ keywords: PowerShell, o cmdlet
 title: Remover objetos do Pipeline Where-Object
 ms.assetid: 01df8b22-2d22-4e2c-a18d-c004cd3cc284
 ms.openlocfilehash: c060b93a3823be26ad6c7757acc633bb4fc2fcfa
-ms.sourcegitcommit: 00ff76d7d9414fe585c04740b739b9cf14d711e1
+ms.sourcegitcommit: b6871f21bd666f9cd71dd336bb3f844cf472b56c
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 12/14/2018
-ms.locfileid: "53405478"
+ms.lasthandoff: 02/03/2019
+ms.locfileid: "55685726"
 ---
 # <a name="removing-objects-from-the-pipeline-where-object"></a>Remover objetos do Pipeline (Where-Object)
 
@@ -27,15 +27,15 @@ Devido a considerações de análise, símbolos, como <>, e = não são usados c
 
 |Operador de comparação|Significado|Exemplo (retorna verdadeiro)|
 |-----------------------|-----------|--------------------------|
-|-eq|é igual a|1 - eq 1|
+|-eq|é igual a|1 -eq 1|
 |-ne|Não é igual a|1 - ne 2|
-|-lt|é inferior a|1 - lt 2|
+|-lt|é inferior a|1 -lt 2|
 |-le|É menor ou igual a|1 - le 2|
-|-gt|é maior do que|2 - gt 1|
+|-gt|é maior do que|2 -gt 1|
 |-ge|É maior que ou igual a|2 -ge 1|
-|-como|É como (comparação de caráter universal para texto)|"file.doc"-como "f\*.do?"|
-|-notlike|Não é como (comparação de caráter universal para texto)|"file.doc"-notlike "p\*. doc"|
-|-contém|contém|1,2,3 - contém de 1|
+|-como|É como (comparação de caráter universal para texto)|"file.doc" -like "f\*.do?"|
+|-notlike|Não é como (comparação de caráter universal para texto)|"file.doc" -notlike "p\*.doc"|
+|-contains|contém|1,2,3 -contains 1|
 |-notcontains|não contém|1,2,3 - notcontains 4|
 
 Blocos de script WHERE-Object utilizam a variável especial `$_` para fazer referência ao objeto atual no pipeline. Eis um exemplo de como ele funciona. Se tiver uma lista de números e só quiser retornar os que são menos de 3, pode utilizar Where-Object para filtrar os números ao escrever:
@@ -102,6 +102,6 @@ Os operadores lógicos padrão estão listados na tabela seguinte.
 |Operador lógico|Significado|Exemplo (retorna verdadeiro)|
 |--------------------|-----------|--------------------------|
 |- e|Lógica e; VERDADEIRO se ambos os lados forem verdadeiros|(1 - eq 1) - e (2 - eq 2).|
-|- ou|Lógica ou; VERDADEIRO se ambos os lados for VERDADEIRO|(1 - eq 1) - ou (1 - eq 2).|
-|-não|Não lógico; reverte true e false|-não (1 - eq 2)|
-|\!|Não lógico; reverte true e false|\!(1 - eq 2)|
+|- ou|Lógica ou; VERDADEIRO se ambos os lados for VERDADEIRO|(1 -eq 1) -or (1 -eq 2)|
+|-not|Não lógico; reverte true e false|-not (1 -eq 2)|
+|\!|Não lógico; reverte true e false|\!(1 -eq 2)|

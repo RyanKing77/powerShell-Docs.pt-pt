@@ -2,12 +2,12 @@
 ms.date: 08/14/2018
 keywords: PowerShell, o cmdlet
 title: Introdução ao ISE do Windows PowerShell
-ms.openlocfilehash: 09a28b295855fd2a3c62bba8a681399dae3454f8
-ms.sourcegitcommit: 3402a478cf118c11a5642038eb117bc76553e3ab
+ms.openlocfilehash: 729c8535dbcfcd2c51070b8beac5d328375f36ae
+ms.sourcegitcommit: b6871f21bd666f9cd71dd336bb3f844cf472b56c
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 12/14/2018
-ms.locfileid: "53411587"
+ms.lasthandoff: 02/03/2019
+ms.locfileid: "55685103"
 ---
 # <a name="the-windows-powershell-ise"></a>ISE do Windows PowerShell
 
@@ -15,8 +15,8 @@ O Windows PowerShell Integrated Scripting Environment (ISE) é um aplicativo de 
 
 ## <a name="support"></a>Suporte
 
-O ISE foi introduzido pela primeira vez com o Windows PowerShell V2 e foi reformulado com PowerShell V3. O ISE é suportado em todas as versões suportadas do Windows PowerShell até e incluindo V5.1 de PowerShell do Windows. ISE, no entanto, está no modo de maintennce e não existem novas funcionalidades estão provavelmente seja adicionado.
-Além disso, não há suporte para o ISE com o PowerShell v6 e muito mais. Os utilizadores que pretendem uma ferramenta gráfica com a qual gerenciar scrips do PowerShell, etc., devem considerar [Visual Studio Code](https://code.visualstudio.com/).
+O ISE foi introduzido pela primeira vez com o Windows PowerShell V2 e foi reformulado com PowerShell V3. O ISE é suportado em todas as versões suportadas do Windows PowerShell até e incluindo V5.1 de PowerShell do Windows. ISE, no entanto, está no modo de manutenção e não existem novas funcionalidades estão provavelmente seja adicionado.
+Além disso, não há suporte para o ISE com o PowerShell v6 e muito mais. Os utilizadores que pretendem uma ferramenta gráfica gerir scripts do PowerShell, etc., devem considerar [Visual Studio Code](https://code.visualstudio.com/).
 
 ## <a name="key-features"></a>Principais Funcionalidades
 

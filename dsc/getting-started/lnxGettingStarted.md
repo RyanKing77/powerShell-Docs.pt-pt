@@ -3,11 +3,11 @@ ms.date: 06/12/2017
 keywords: DSC, powershell, configuração, a configuração
 title: Começar com o Desired State Configuration (DSC) para Linux
 ms.openlocfilehash: 69f087434455aae8e97ea07c79c52e493412d134
-ms.sourcegitcommit: 00ff76d7d9414fe585c04740b739b9cf14d711e1
+ms.sourcegitcommit: b6871f21bd666f9cd71dd336bb3f844cf472b56c
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 12/14/2018
-ms.locfileid: "53404908"
+ms.lasthandoff: 02/03/2019
+ms.locfileid: "55686601"
 ---
 # <a name="get-started-with-desired-state-configuration-dsc-for-linux"></a>Começar com o Desired State Configuration (DSC) para Linux
 
@@ -28,10 +28,10 @@ A tabela seguinte descreve as dependências de pacote necessária para DSC para 
 
 |  Pacote necessário |  Descrição |  Versão mínima |
 |---|---|---|
-| glibc| Biblioteca do GNU| 2... 4 – 31.30|
-| Python| Python| 2.4 – 3.4|
+| glibc| Biblioteca do GNU| 2…4 – 31.30|
+| python| Python| 2.4 – 3.4|
 | omiserver| Abrir Infraestrutura de Gestão| 1.0.8.1|
-| OpenSSL| Bibliotecas de OpenSSL| 0.9.8 ou 1.0|
+| openssl| Bibliotecas de OpenSSL| 0.9.8 ou 1.0|
 | ctypes| Biblioteca de Python CTypes| Tem de corresponder à versão do Python|
 | libcurl| biblioteca de clientes de http de cURL| 7.15.1|
 
@@ -185,5 +185,5 @@ Os seguintes ficheiros de registo são gerados para DSC para Linux de mensagens.
 
 |Ficheiro de registo|Diretório|Descrição|
 |---|---|---|
-|**omiserver. log**|`/var/opt/omi/log`|Mensagens relacionadas com a operação do servidor OMI CIM.|
-|**DSC.log**|`/var/opt/omi/log`|Mensagens relacionadas com a operação das operações de recursos do Gestor de configuração Local (LCM) e de DSC.|
+|**omiserver.log**|`/var/opt/omi/log`|Mensagens relacionadas com a operação do servidor OMI CIM.|
+|**dsc.log**|`/var/opt/omi/log`|Mensagens relacionadas com a operação das operações de recursos do Gestor de configuração Local (LCM) e de DSC.|

@@ -1,25 +1,25 @@
 ---
 ms.date: 06/12/2017
 keywords: wmf,powershell,setup
-ms.openlocfilehash: 271f26cf97035e50165e3e6777c00867c7f3ac31
-ms.sourcegitcommit: 54534635eedacf531d8d6344019dc16a50b8b441
+ms.openlocfilehash: f411bfde063615d6ba7c01b8ed50e0b5b9ae6d70
+ms.sourcegitcommit: b6871f21bd666f9cd71dd336bb3f844cf472b56c
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 05/16/2018
-ms.locfileid: "34186760"
+ms.lasthandoff: 02/03/2019
+ms.locfileid: "55685880"
 ---
 # <a name="product-compatibility-status"></a>Estado de Compatibilidade de Produtos
 
 ## <a name="compatible"></a>Compatível:
 > Sistemas que estejam a executar as seguintes aplicações de servidor **pode executar** Windows Management Framework 5.0:
 
-- O Microsoft SharePoint Server 2013
+- Microsoft SharePoint Server 2013
 - System Center 2012 Configuration Manager
 
 ## <a name="not-tested"></a>Não testado:
-> Sistemas que estejam a executar as seguintes aplicações de servidor **não tiver testado** contra Windows Management Framework 5.0:
+> Sistemas que estejam a executar as seguintes aplicações de servidor **não testados** em relação a Windows Management Framework 5.0:
 
-- O Microsoft SharePoint Server 2010
+- Microsoft SharePoint Server 2010
 - System Center 2012 Virtual Machine Manager
 
 ## <a name="incompatible"></a>Incompatível:
@@ -29,5 +29,5 @@ ms.locfileid: "34186760"
 - Microsoft Exchange Server 2010 SP3
 - Skype para Empresas Server 2015
 - Microsoft Lync Server 2013
-- O Microsoft Lync Server 2010
+- Microsoft Lync Server 2010
 - System Center 2012 R2 Service Management Automation
