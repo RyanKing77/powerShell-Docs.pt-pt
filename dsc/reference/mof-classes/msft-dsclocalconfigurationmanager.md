@@ -3,11 +3,11 @@ ms.date: 06/12/2017
 keywords: DSC, powershell, configuração, a configuração
 title: Classe MSFT_DSCLocalConfigurationManager
 ms.openlocfilehash: 7f6aaf209601e99b0120407eb301d32fcfda9eb8
-ms.sourcegitcommit: e04292a9c10de9a8391d529b7f7aa3753b362dbe
+ms.sourcegitcommit: b6871f21bd666f9cd71dd336bb3f844cf472b56c
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 01/04/2019
-ms.locfileid: "54048479"
+ms.lasthandoff: 02/03/2019
+ms.locfileid: "55685397"
 ---
 # <a name="msftdsclocalconfigurationmanager-class"></a>Classe MSFT_DSCLocalConfigurationManager
 
@@ -42,13 +42,13 @@ O **MSFT_DSCLocalConfigurationManager** classe tem esses métodos.
 | [GetConfiguration](msft-dsclocalconfigurationmanager-getconfiguration.md)| Envia o documento de configuração para o nó gerido e utiliza a **obter** método do agente de configuração para aplicar a configuração.|
 | [GetConfigurationResultOutput](msft-dsclocalconfigurationmanager-getconfigurationresultoutput.md)| Obtém o resultado de agente de configuração relacionadas com uma tarefa específica.|
 | [GetConfigurationStatus](msft-dsclocalconfigurationmanager-getconfigurationstatus.md)| Obter o histórico do Estado de configuração.|
-| [Getconfigurationstatus](msft-dsclocalconfigurationmanager-getmetaconfiguration.md)| Obtém as definições de LCM que são utilizadas para controlar o agente de configuração.|
+| [GetMetaConfiguration](msft-dsclocalconfigurationmanager-getmetaconfiguration.md)| Obtém as definições de LCM que são utilizadas para controlar o agente de configuração.|
 | [PerformRequiredConfigurationChecks](msft-dsclocalconfigurationmanager-performrequiredconfigurationchecks.md)| Inicia a verificação de consistência.|
 | [RemoveConfiguration](msft-dsclocalconfigurationmanager-removeconfiguration.md)| Remove os ficheiros de configuração.|
 | [ResourceGet](msft-dsclocalconfigurationmanager-resourceget.md)| Chama diretamente a **obter** método de um recurso de DSC.|
 | [ResourceSet](msft-dsclocalconfigurationmanager-resourceset.md)| Chama diretamente a **definir** método de um recurso de DSC.|
 | [ResourceTest](msft-dsclocalconfigurationmanager-resourcetest.md)| Chama diretamente a **teste** método de um recurso de DSC.|
-| [Reversão](msft-dsclocalconfigurationmanager-rollback.md)| Rolls novamente para uma configuração anterior.|
+| [RollBack](msft-dsclocalconfigurationmanager-rollback.md)| Rolls novamente para uma configuração anterior.|
 | [SendConfiguration](msft-dsclocalconfigurationmanager-sendconfiguration.md)| Envia o documento de configuração para o nó gerido e o salva como uma alteração pendente.|
 | [SendConfigurationApply](msft-dsclocalconfigurationmanager-sendconfigurationapply.md)| Envia o documento de configuração para o nó gerido e utiliza o agente de configuração para aplicar a configuração.|
 | [SendConfigurationApplyAsync](msft-dsclocalconfigurationmanager-sendconfigurationapplyasync.md)| Enviar o documento de configuração para o nó gerido e começar a utilizar o agente de configuração para aplicar a configuração. Utilize GetConfigurationResultOutput para obter a saída do resultado.|
@@ -60,4 +60,4 @@ O **MSFT_DSCLocalConfigurationManager** classe tem esses métodos.
 
 **MOF:** DscCore.mof
 
-**Espaço de nomes**: Root\Microsoft\Windows\DesiredStateConfiguration
+**Namespace**: Root\Microsoft\Windows\DesiredStateConfiguration

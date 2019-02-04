@@ -4,11 +4,11 @@ keywords: PowerShell, o cmdlet
 title: Objeto ISEFileCollection
 ms.assetid: 0f86a427-ea38-4bce-85f8-06c98d30d508
 ms.openlocfilehash: eb4b2784820cbe51f662fd2fd945d8760ef9dbff
-ms.sourcegitcommit: 00ff76d7d9414fe585c04740b739b9cf14d711e1
+ms.sourcegitcommit: b6871f21bd666f9cd71dd336bb3f844cf472b56c
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 12/14/2018
-ms.locfileid: "53405590"
+ms.lasthandoff: 02/03/2019
+ms.locfileid: "55684599"
 ---
 # <a name="the-isefilecollection-object"></a>Objeto ISEFileCollection
 
@@ -16,7 +16,7 @@ O **ISEFileCollection** objeto é uma coleção de **ISEFile** objetos. Um exemp
 
 ## <a name="methods"></a>Métodos
 
-### <a name="add-fullpath-"></a>Adicione\( \[fullPath\] \)
+### <a name="add-fullpath-"></a>Add\( \[fullPath\] \)
 
 Suportado no Windows PowerShell ISE 2.0 e versões posteriores.
 
@@ -67,7 +67,7 @@ $firstfile = $psISE.CurrentPowerShellTab.Files[0]
 $psISE.CurrentPowerShellTab.Files.SetSelectedFile($firstfile)
 ```
 
-## <a name="see-also"></a>Consulte Também
+## <a name="see-also"></a>Veja Também
 
 - [Objeto ISEFile](The-ISEFile-Object.md)
 - [Objetivo do ISE do Windows PowerShell Scripting o modelo de objeto](Purpose-of-the-Windows-PowerShell-ISE-Scripting-Object-Model.md)

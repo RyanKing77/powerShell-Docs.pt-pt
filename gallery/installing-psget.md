@@ -4,11 +4,11 @@ contributor: manikb
 keywords: cmdlet do powershell do galeria, psget
 title: Installing PowerShellGet (Instalar o PowerShellGet)
 ms.openlocfilehash: 5c51cb1c7ea2538cc5f8503ce6c5d80edda70e15
-ms.sourcegitcommit: 98b7cfd8ad5718efa8e320526ca76c3cc4141d78
+ms.sourcegitcommit: b6871f21bd666f9cd71dd336bb3f844cf472b56c
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50002228"
+ms.lasthandoff: 02/03/2019
+ms.locfileid: "55683878"
 ---
 # <a name="installing-powershellget"></a>Installing PowerShellGet (Instalar o PowerShellGet)
 
