@@ -1,15 +1,15 @@
 ---
 ms.date: 06/12/2017
 keywords: DSC, powershell, configuração, a configuração
-title: Criação avançada de DSC para Composição e Colaboração
-ms.openlocfilehash: 3e40ba94de0a53c1c9663553c4ec443b5e0df3fd
-ms.sourcegitcommit: b6871f21bd666f9cd71dd336bb3f844cf472b56c
+title: Noções básicas sobre a função do DSC num pipeline CI/CD
+ms.openlocfilehash: 7aec414b3d8e61d1daa1ce796184ac34dbbb43ce
+ms.sourcegitcommit: c581c4c8036edf55147e7bce4b00c860da6c5a8b
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 02/03/2019
-ms.locfileid: "55687175"
+ms.lasthandoff: 02/25/2019
+ms.locfileid: "56803383"
 ---
-# <a name="advanced-dsc-authoring-for-composition-and-collaboration"></a>Criação avançada de DSC para Composição e Colaboração
+# <a name="understanding-dscs-role-in-a-cicd-pipeline"></a>Noções básicas sobre a função do DSC num pipeline CI/CD
 
 Este artigo descreve os tipos de abordagens disponíveis para a combinação de recursos e configurações.
 O objetivo de cada cenário é o mesmo, para reduzir a complexidade quando várias configurações preferidas para atingir um servidor de estado de ponto de implantação.
