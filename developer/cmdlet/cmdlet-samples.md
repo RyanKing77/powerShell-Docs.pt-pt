@@ -1,0 +1,46 @@
+---
+title: Exemplos de cmdlet | Documentos da Microsoft
+ms.custom: ''
+ms.date: 09/13/2016
+ms.reviewer: ''
+ms.suite: ''
+ms.tgt_pltfrm: ''
+ms.topic: article
+ms.assetid: b99d53fc-0af9-426b-82ce-09955e031d4b
+caps.latest.revision: 13
+ms.openlocfilehash: d919d4ad8554e762230c1448d81b50e27c38ba99
+ms.sourcegitcommit: b6871f21bd666f9cd71dd336bb3f844cf472b56c
+ms.translationtype: MT
+ms.contentlocale: pt-PT
+ms.lasthandoff: 02/03/2019
+ms.locfileid: "56851969"
+---
+# <a name="cmdlet-samples"></a><span data-ttu-id="69604-102">Cmdlet Samples (Exemplos de Cmdlets)</span><span class="sxs-lookup"><span data-stu-id="69604-102">Cmdlet Samples</span></span>
+
+<span data-ttu-id="69604-103">Esta secção descreve o código de exemplo que é fornecido no Windows PowerShell 2.0 SDK.</span><span class="sxs-lookup"><span data-stu-id="69604-103">This section describes sample code that is provided in the Windows PowerShell 2.0 SDK.</span></span> <span data-ttu-id="69604-104">Pode copiar o código dos tópicos nesta secção, ou abra os arquivos de origem instalados com o SDK.</span><span class="sxs-lookup"><span data-stu-id="69604-104">You can copy code from the topics in this section, or open the source files installed with the SDK.</span></span> <span data-ttu-id="69604-105">O [Windows PowerShell 2.0 Software Development Kit (SDK)](https://www.microsoft.com/en-us/download/details.aspx?id=2560) fornece ficheiros Leia-me, arquivos de origem e arquivos de projeto do Visual Studio para cada exemplo.</span><span class="sxs-lookup"><span data-stu-id="69604-105">The [Windows PowerShell 2.0 Software Development Kit (SDK)](https://www.microsoft.com/en-us/download/details.aspx?id=2560) provides ReadMe files, source files, and Visual Studio project files for each sample.</span></span> <span data-ttu-id="69604-106">Com o SDK instalado, pode encontrar exemplos sob o `<Drive>:\Program Files (x86)\Microsoft SDKs\Windows\v7.0\Samples\sysmgmt\WindowsPowerShell\` pasta.</span><span class="sxs-lookup"><span data-stu-id="69604-106">With the SDK installed, you can find the samples under the `<Drive>:\Program Files (x86)\Microsoft SDKs\Windows\v7.0\Samples\sysmgmt\WindowsPowerShell\` folder.</span></span>
+
+## <a name="in-this-section"></a><span data-ttu-id="69604-107">Nesta Secção</span><span class="sxs-lookup"><span data-stu-id="69604-107">In This Section</span></span>
+
+<span data-ttu-id="69604-108">[Exemplo de GetProcessSample01](./getprocesssample01-sample.md) este exemplo mostra como escrever um cmdlet que obtém os processos no computador local.</span><span class="sxs-lookup"><span data-stu-id="69604-108">[GetProcessSample01 Sample](./getprocesssample01-sample.md) This sample shows how to write a cmdlet that retrieves the processes on the local computer.</span></span>
+
+<span data-ttu-id="69604-109">[Exemplo de GetProcessSample02](./getprocesssample02-sample.md) este exemplo mostra como escrever um cmdlet que obtém os processos no computador local.</span><span class="sxs-lookup"><span data-stu-id="69604-109">[GetProcessSample02 Sample](./getprocesssample02-sample.md) This sample shows how to write a cmdlet that retrieves the processes on the local computer.</span></span> <span data-ttu-id="69604-110">Ele fornece um parâmetro de nome que pode ser utilizado para especificar os processos a serem obtidas.</span><span class="sxs-lookup"><span data-stu-id="69604-110">It provides a Name parameter that can be used to specify the processes to be retrieved.</span></span>
+
+<span data-ttu-id="69604-111">[Exemplo de GetProcessSample03](./getprocesssample03-sample.md) este exemplo mostra como escrever um cmdlet que obtém os processos no computador local.</span><span class="sxs-lookup"><span data-stu-id="69604-111">[GetProcessSample03 Sample](./getprocesssample03-sample.md) This sample shows how to write a cmdlet that retrieves the processes on the local computer.</span></span> <span data-ttu-id="69604-112">Ele fornece um parâmetro de nome que pode aceitar um objeto do pipeline ou um valor de uma propriedade de um objeto cujo nome de propriedade é o mesmo que o nome do parâmetro.</span><span class="sxs-lookup"><span data-stu-id="69604-112">It provides a Name parameter that can accept an object from the pipeline or a value from a property of an object whose property name is the same as the parameter name.</span></span>
+
+<span data-ttu-id="69604-113">[Exemplo de GetProcessSample04](./getprocesssample04-sample.md) este exemplo mostra como escrever um cmdlet que obtém os processos no computador local.</span><span class="sxs-lookup"><span data-stu-id="69604-113">[GetProcessSample04 Sample](./getprocesssample04-sample.md) This sample shows how to write a cmdlet that retrieves the processes on the local computer.</span></span> <span data-ttu-id="69604-114">Gera um erro de não terminação se ocorrer um erro ao obter um processo.</span><span class="sxs-lookup"><span data-stu-id="69604-114">It generates a nonterminating error if an error occurs while retrieving a process.</span></span>
+
+<span data-ttu-id="69604-115">[Exemplo de GetProcessSample05](./getprocesssample05-sample.md) este exemplo mostra uma versão completa do cmdlet Get-Proc.</span><span class="sxs-lookup"><span data-stu-id="69604-115">[GetProcessSample05 Sample](./getprocesssample05-sample.md) This sample shows a complete version of the Get-Proc cmdlet.</span></span>
+
+<span data-ttu-id="69604-116">[Exemplo de StopProcessSample01](./stopprocesssample01-sample.md) este exemplo mostra como escrever um cmdlet que solicita tais comentários do usuário antes de ele tenta parar um processo e como implementar um `PassThru` parâmetro que indica que o usuário quer o cmdlet devolver uma objeto.</span><span class="sxs-lookup"><span data-stu-id="69604-116">[StopProcessSample01 Sample](./stopprocesssample01-sample.md) This sample shows how to write a cmdlet that requests feedback from the user before it attempts to stop a process, and how to implement a `PassThru` parameter that indicates that the user wants the cmdlet to return an object.</span></span>
+
+<span data-ttu-id="69604-117">[Exemplo de StopProcessSample02](./stopprocesssample02-sample.md) este exemplo mostra como escrever um cmdlet que escreve as mensagens de aviso e de depuração, verbosa, ao parar os processos no computador local.</span><span class="sxs-lookup"><span data-stu-id="69604-117">[StopProcessSample02 Sample](./stopprocesssample02-sample.md) This sample shows how to write a cmdlet that writes debug, verbose, and warning messages while stopping processes on the local computer.</span></span>
+
+<span data-ttu-id="69604-118">[Exemplo de StopProcessSample03](./stopprocesssample03-sample.md) este exemplo mostra como escrever um cmdlet cujos parâmetros têm aliases e que suporta carateres universais.</span><span class="sxs-lookup"><span data-stu-id="69604-118">[StopProcessSample03 Sample](./stopprocesssample03-sample.md) This sample shows how to write a cmdlet whose parameters have aliases and that support wildcard characters.</span></span>
+
+<span data-ttu-id="69604-119">[Exemplo de StopProcessSample04](./stopprocesssample04-sample.md) este exemplo mostra como escrever um cmdlet que declara conjuntos de parâmetros, especifica o parâmetro predefinido definido e pode aceitar um objeto de entrada.</span><span class="sxs-lookup"><span data-stu-id="69604-119">[StopProcessSample04 Sample](./stopprocesssample04-sample.md) This sample shows how to write a cmdlet that declares parameter sets, specifies the default parameter set, and can accept an input object.</span></span>
+
+<span data-ttu-id="69604-120">[Exemplo de Events01](./events01-sample.md) este exemplo mostra como criar um cmdlet que permite ao utilizador para se registrar para eventos gerados pelo [System.IO.Filesystemwatcher](/dotnet/api/System.IO.FileSystemWatcher).</span><span class="sxs-lookup"><span data-stu-id="69604-120">[Events01 Sample](./events01-sample.md) This sample shows how to create a cmdlet that allows the user to register for events raised by [System.IO.Filesystemwatcher](/dotnet/api/System.IO.FileSystemWatcher).</span></span> <span data-ttu-id="69604-121">Com este cmdlet os utilizadores podem, por exemplo, registar uma ação a executar quando é criado um ficheiro num diretório específico.</span><span class="sxs-lookup"><span data-stu-id="69604-121">With this cmdlet users can, for example, register an action to execute when a file is created under a specific directory.</span></span> <span data-ttu-id="69604-122">Este exemplo deriva de [Microsoft.Powershell.Commands.Objecteventregistrationbase](/dotnet/api/Microsoft.PowerShell.Commands.ObjectEventRegistrationBase) classe base.</span><span class="sxs-lookup"><span data-stu-id="69604-122">This sample derives from the [Microsoft.Powershell.Commands.Objecteventregistrationbase](/dotnet/api/Microsoft.PowerShell.Commands.ObjectEventRegistrationBase) base class.</span></span>
+
+## <a name="see-also"></a><span data-ttu-id="69604-123">Consulte Também</span><span class="sxs-lookup"><span data-stu-id="69604-123">See Also</span></span>
+
+[<span data-ttu-id="69604-124">Escrever um Cmdlet do Windows PowerShell</span><span class="sxs-lookup"><span data-stu-id="69604-124">Writing a Windows PowerShell Cmdlet</span></span>](./writing-a-windows-powershell-cmdlet.md)
