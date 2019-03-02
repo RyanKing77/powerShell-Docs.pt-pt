@@ -2,75 +2,93 @@
 title: Utilizar o Visual Studio Code para o desenvolvimento de PowerShell
 description: Utilizar o Visual Studio Code para o desenvolvimento de PowerShell
 ms.date: 08/06/2018
-ms.openlocfilehash: 3101fa57896996a696385801303333e4a6406d20
-ms.sourcegitcommit: 00ff76d7d9414fe585c04740b739b9cf14d711e1
+ms.openlocfilehash: 1e9b9d811a39656327af2810bd6dc8aaf3fde3a4
+ms.sourcegitcommit: ce46e5098786e19d521b4bf948ff62d2b90bc53e
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 12/14/2018
-ms.locfileid: "53404722"
+ms.lasthandoff: 03/02/2019
+ms.locfileid: "57251392"
 ---
-# <a name="using-visual-studio-code-for-powershell-development"></a><span data-ttu-id="5db47-103">Utilizar o Visual Studio Code para o desenvolvimento de PowerShell</span><span class="sxs-lookup"><span data-stu-id="5db47-103">Using Visual Studio Code for PowerShell Development</span></span>
+# <a name="using-visual-studio-code-for-powershell-development"></a><span data-ttu-id="e25a1-103">Utilizar o Visual Studio Code para o desenvolvimento de PowerShell</span><span class="sxs-lookup"><span data-stu-id="e25a1-103">Using Visual Studio Code for PowerShell Development</span></span>
 
-<span data-ttu-id="5db47-104">Para além da [ISE do PowerShell][ise], PowerShell também é bem suportada no Visual Studio Code.</span><span class="sxs-lookup"><span data-stu-id="5db47-104">In addition to the [PowerShell ISE][ise], PowerShell is also well-supported in Visual Studio Code.</span></span>
-<span data-ttu-id="5db47-105">Além disso, o ISE não é suportado com o PowerShell Core, embora o Visual Studio Code é suportada para o PowerShell Core em todas as plataformas (Windows, macOS e Linux)</span><span class="sxs-lookup"><span data-stu-id="5db47-105">Furthermore, the ISE is not supported with PowerShell Core, while Visual Studio Code is supported for PowerShell Core on all platforms (Windows, macOS, and Linux)</span></span>
+<span data-ttu-id="e25a1-104">Para além da [ISE do PowerShell][ise], PowerShell também é bem suportada no Visual Studio Code.</span><span class="sxs-lookup"><span data-stu-id="e25a1-104">In addition to the [PowerShell ISE][ise], PowerShell is also well-supported in Visual Studio Code.</span></span>
+<span data-ttu-id="e25a1-105">Além disso, o ISE não é suportado com o PowerShell Core, embora o Visual Studio Code é suportada para o PowerShell Core em todas as plataformas (Windows, macOS e Linux)</span><span class="sxs-lookup"><span data-stu-id="e25a1-105">Furthermore, the ISE is not supported with PowerShell Core, while Visual Studio Code is supported for PowerShell Core on all platforms (Windows, macOS, and Linux)</span></span>
 
-<span data-ttu-id="5db47-106">Pode utilizar Visual Studio Code no Windows com o PowerShell versão 5 com o Windows 10 ou instalando [Windows Management Framework 5.0 RTM](https://www.microsoft.com/en-us/download/details.aspx?id=50395) de nível inferior sistemas operacionais do Windows (por exemplo, Windows 8.1, etc.).</span><span class="sxs-lookup"><span data-stu-id="5db47-106">You can use Visual Studio Code on Windows with PowerShell version 5 by using Windows 10 or by installing [Windows Management Framework 5.0 RTM](https://www.microsoft.com/en-us/download/details.aspx?id=50395) for down-level Windows OSs (e.g. Windows 8.1, etc.).</span></span>
+<span data-ttu-id="e25a1-106">Pode utilizar Visual Studio Code no Windows com o PowerShell versão 5 com o Windows 10 ou instalando [Windows Management Framework 5.0 RTM](https://www.microsoft.com/en-us/download/details.aspx?id=50395) de nível inferior sistemas operacionais do Windows (por exemplo, Windows 8.1, etc.).</span><span class="sxs-lookup"><span data-stu-id="e25a1-106">You can use Visual Studio Code on Windows with PowerShell version 5 by using Windows 10 or by installing [Windows Management Framework 5.0 RTM](https://www.microsoft.com/en-us/download/details.aspx?id=50395) for down-level Windows OSs (e.g. Windows 8.1, etc.).</span></span>
 
-<span data-ttu-id="5db47-107">Antes de iniciá-lo, certifique-se de que PowerShell existe no seu sistema.</span><span class="sxs-lookup"><span data-stu-id="5db47-107">Before starting it, please make sure PowerShell exists on your system.</span></span>
-<span data-ttu-id="5db47-108">Para cargas de trabalho modernas no Windows, macOS e Linux, consulte:</span><span class="sxs-lookup"><span data-stu-id="5db47-108">For modern workloads on Windows, macOS, and Linux, see:</span></span>
+<span data-ttu-id="e25a1-107">Antes de iniciá-lo, certifique-se de que PowerShell existe no seu sistema.</span><span class="sxs-lookup"><span data-stu-id="e25a1-107">Before starting it, please make sure PowerShell exists on your system.</span></span>
+<span data-ttu-id="e25a1-108">Para cargas de trabalho modernas no Windows, macOS e Linux, consulte:</span><span class="sxs-lookup"><span data-stu-id="e25a1-108">For modern workloads on Windows, macOS, and Linux, see:</span></span>
 
-- <span data-ttu-id="5db47-109">[Instalar o PowerShell Core no Linux][install-pscore-linux]</span><span class="sxs-lookup"><span data-stu-id="5db47-109">[Installing PowerShell Core on Linux][install-pscore-linux]</span></span>
-- <span data-ttu-id="5db47-110">[Instalar o PowerShell Core no macOS][install-pscore-macos]</span><span class="sxs-lookup"><span data-stu-id="5db47-110">[Installing PowerShell Core on macOS][install-pscore-macos]</span></span>
-- <span data-ttu-id="5db47-111">[Instalar o PowerShell Core no Windows][install-pscore-windows]</span><span class="sxs-lookup"><span data-stu-id="5db47-111">[Installing PowerShell Core on Windows][install-pscore-windows]</span></span>
+- <span data-ttu-id="e25a1-109">[Instalar o PowerShell Core no Linux][install-pscore-linux]</span><span class="sxs-lookup"><span data-stu-id="e25a1-109">[Installing PowerShell Core on Linux][install-pscore-linux]</span></span>
+- <span data-ttu-id="e25a1-110">[Instalar o PowerShell Core no macOS][install-pscore-macos]</span><span class="sxs-lookup"><span data-stu-id="e25a1-110">[Installing PowerShell Core on macOS][install-pscore-macos]</span></span>
+- <span data-ttu-id="e25a1-111">[Instalar o PowerShell Core no Windows][install-pscore-windows]</span><span class="sxs-lookup"><span data-stu-id="e25a1-111">[Installing PowerShell Core on Windows][install-pscore-windows]</span></span>
 
-<span data-ttu-id="5db47-112">Para as cargas de trabalho tradicionais do Windows PowerShell, consulte [instalar o Windows PowerShell][install-winps].</span><span class="sxs-lookup"><span data-stu-id="5db47-112">For traditional Windows PowerShell workloads, see [Installing Windows PowerShell][install-winps].</span></span>
+<span data-ttu-id="e25a1-112">Para as cargas de trabalho tradicionais do Windows PowerShell, consulte [instalar o Windows PowerShell][install-winps].</span><span class="sxs-lookup"><span data-stu-id="e25a1-112">For traditional Windows PowerShell workloads, see [Installing Windows PowerShell][install-winps].</span></span>
 
-## <a name="editing-with-visual-studio-code"></a><span data-ttu-id="5db47-113">Edição com o Visual Studio Code</span><span class="sxs-lookup"><span data-stu-id="5db47-113">Editing with Visual Studio Code</span></span>
+## <a name="editing-with-visual-studio-code"></a><span data-ttu-id="e25a1-113">Edição com o Visual Studio Code</span><span class="sxs-lookup"><span data-stu-id="e25a1-113">Editing with Visual Studio Code</span></span>
 
-### <a name="1-installing-visual-studio-codehttpscodevisualstudiocomdocssetupsetup-overview"></a>[<span data-ttu-id="5db47-114">1. Instalar o Visual Studio Code</span><span class="sxs-lookup"><span data-stu-id="5db47-114">1. Installing Visual Studio Code</span></span>](https://code.visualstudio.com/Docs/setup/setup-overview)
+### <a name="1-installing-visual-studio-codehttpscodevisualstudiocomdocssetupsetup-overview"></a>[<span data-ttu-id="e25a1-114">1. Instalar o Visual Studio Code</span><span class="sxs-lookup"><span data-stu-id="e25a1-114">1. Installing Visual Studio Code</span></span>](https://code.visualstudio.com/Docs/setup/setup-overview)
 
-- <span data-ttu-id="5db47-115">**Linux**: Siga as instruções de instalação do [executar o VS Code no Linux](https://code.visualstudio.com/docs/setup/linux) página</span><span class="sxs-lookup"><span data-stu-id="5db47-115">**Linux**: follow the installation instructions on the [Running VS Code on Linux](https://code.visualstudio.com/docs/setup/linux) page</span></span>
+- <span data-ttu-id="e25a1-115">**Linux**: Siga as instruções de instalação do [executar o VS Code no Linux](https://code.visualstudio.com/docs/setup/linux) página</span><span class="sxs-lookup"><span data-stu-id="e25a1-115">**Linux**: follow the installation instructions on the [Running VS Code on Linux](https://code.visualstudio.com/docs/setup/linux) page</span></span>
 
-- <span data-ttu-id="5db47-116">**macOS**: Siga as instruções de instalação do [executar o VS Code no macOS](https://code.visualstudio.com/docs/setup/mac) página</span><span class="sxs-lookup"><span data-stu-id="5db47-116">**macOS**: follow the installation instructions on the [Running VS Code on macOS](https://code.visualstudio.com/docs/setup/mac) page</span></span>
+- <span data-ttu-id="e25a1-116">**macOS**: Siga as instruções de instalação do [executar o VS Code no macOS](https://code.visualstudio.com/docs/setup/mac) página</span><span class="sxs-lookup"><span data-stu-id="e25a1-116">**macOS**: follow the installation instructions on the [Running VS Code on macOS](https://code.visualstudio.com/docs/setup/mac) page</span></span>
 
   > [!IMPORTANT]
-  > <span data-ttu-id="5db47-117">No macOS, tem de instalar o OpenSSL para a extensão de PowerShell funcione corretamente.</span><span class="sxs-lookup"><span data-stu-id="5db47-117">On macOS, you must install OpenSSL for the PowerShell extension to work correctly.</span></span>
-  > <span data-ttu-id="5db47-118">A maneira mais fácil de realizar isso é instalar [Homebrew](https://brew.sh/) e, em seguida, execute `brew install openssl`.</span><span class="sxs-lookup"><span data-stu-id="5db47-118">The easiest way to accomplish this is to install [Homebrew](https://brew.sh/) and then run `brew install openssl`.</span></span>
-  > <span data-ttu-id="5db47-119">VS Code agora pode carregar a extensão de PowerShell com êxito.</span><span class="sxs-lookup"><span data-stu-id="5db47-119">VS Code can now load the PowerShell extension successfully.</span></span>
+  > <span data-ttu-id="e25a1-117">No macOS, tem de instalar o OpenSSL para a extensão de PowerShell funcione corretamente.</span><span class="sxs-lookup"><span data-stu-id="e25a1-117">On macOS, you must install OpenSSL for the PowerShell extension to work correctly.</span></span>
+  > <span data-ttu-id="e25a1-118">A maneira mais fácil de realizar isso é instalar [Homebrew](https://brew.sh/) e, em seguida, execute `brew install openssl`.</span><span class="sxs-lookup"><span data-stu-id="e25a1-118">The easiest way to accomplish this is to install [Homebrew](https://brew.sh/) and then run `brew install openssl`.</span></span>
+  > <span data-ttu-id="e25a1-119">VS Code agora pode carregar a extensão de PowerShell com êxito.</span><span class="sxs-lookup"><span data-stu-id="e25a1-119">VS Code can now load the PowerShell extension successfully.</span></span>
 
-- <span data-ttu-id="5db47-120">**Windows**: Siga as instruções de instalação do [executar o VS Code no Windows](https://code.visualstudio.com/docs/setup/windows) página</span><span class="sxs-lookup"><span data-stu-id="5db47-120">**Windows**: follow the installation instructions on the [Running VS Code on Windows](https://code.visualstudio.com/docs/setup/windows) page</span></span>
+- <span data-ttu-id="e25a1-120">**Windows**: Siga as instruções de instalação do [executar o VS Code no Windows](https://code.visualstudio.com/docs/setup/windows) página</span><span class="sxs-lookup"><span data-stu-id="e25a1-120">**Windows**: follow the installation instructions on the [Running VS Code on Windows](https://code.visualstudio.com/docs/setup/windows) page</span></span>
 
-### <a name="2-installing-powershell-extension"></a><span data-ttu-id="5db47-121">2. Instalar a extensão de PowerShell</span><span class="sxs-lookup"><span data-stu-id="5db47-121">2. Installing PowerShell Extension</span></span>
+### <a name="2-installing-powershell-extension"></a><span data-ttu-id="e25a1-121">2. Instalar a extensão de PowerShell</span><span class="sxs-lookup"><span data-stu-id="e25a1-121">2. Installing PowerShell Extension</span></span>
 
-- <span data-ttu-id="5db47-122">Lançamento do Visual Studio Code aplicação por:</span><span class="sxs-lookup"><span data-stu-id="5db47-122">Launch the Visual Studio Code app by:</span></span>
-  - <span data-ttu-id="5db47-123">**Windows**: escrever `code` na sessão do PowerShell</span><span class="sxs-lookup"><span data-stu-id="5db47-123">**Windows**: typing `code` in your PowerShell session</span></span>
-  - <span data-ttu-id="5db47-124">**Linux**: escrever `code` no seu terminal</span><span class="sxs-lookup"><span data-stu-id="5db47-124">**Linux**: typing `code` in your terminal</span></span>
-  - <span data-ttu-id="5db47-125">**macOS**: escrever `code` no seu terminal</span><span class="sxs-lookup"><span data-stu-id="5db47-125">**macOS**: typing `code` in your terminal</span></span>
+- <span data-ttu-id="e25a1-122">Lançamento do Visual Studio Code aplicação por:</span><span class="sxs-lookup"><span data-stu-id="e25a1-122">Launch the Visual Studio Code app by:</span></span>
+  - <span data-ttu-id="e25a1-123">**Windows**: escrever `code` na sessão do PowerShell</span><span class="sxs-lookup"><span data-stu-id="e25a1-123">**Windows**: typing `code` in your PowerShell session</span></span>
+  - <span data-ttu-id="e25a1-124">**Linux**: escrever `code` no seu terminal</span><span class="sxs-lookup"><span data-stu-id="e25a1-124">**Linux**: typing `code` in your terminal</span></span>
+  - <span data-ttu-id="e25a1-125">**macOS**: escrever `code` no seu terminal</span><span class="sxs-lookup"><span data-stu-id="e25a1-125">**macOS**: typing `code` in your terminal</span></span>
 
-- <span data-ttu-id="5db47-126">Inicie **Quick Open** pressionando **Ctrl + P** (**Cmd + P** no Mac).</span><span class="sxs-lookup"><span data-stu-id="5db47-126">Launch **Quick Open** by pressing **Ctrl+P** (**Cmd+P** on Mac).</span></span>
-- <span data-ttu-id="5db47-127">Em Quick Open, escreva `ext install powershell` e prima **Enter**.</span><span class="sxs-lookup"><span data-stu-id="5db47-127">In Quick Open, type `ext install powershell` and hit **Enter**.</span></span>
-- <span data-ttu-id="5db47-128">O **extensões** é aberta uma vista na barra do lado.</span><span class="sxs-lookup"><span data-stu-id="5db47-128">The **Extensions** view opens on the Side Bar.</span></span> <span data-ttu-id="5db47-129">Selecione a extensão de PowerShell da Microsoft.</span><span class="sxs-lookup"><span data-stu-id="5db47-129">Select the PowerShell extension from Microsoft.</span></span>
-  <span data-ttu-id="5db47-130">Deverá ver algo, conforme mostrado abaixo:</span><span class="sxs-lookup"><span data-stu-id="5db47-130">You should see something like below:</span></span>
+- <span data-ttu-id="e25a1-126">Inicie **Quick Open** pressionando **Ctrl + P** (**Cmd + P** no Mac).</span><span class="sxs-lookup"><span data-stu-id="e25a1-126">Launch **Quick Open** by pressing **Ctrl+P** (**Cmd+P** on Mac).</span></span>
+- <span data-ttu-id="e25a1-127">Em Quick Open, escreva `ext install powershell` e prima **Enter**.</span><span class="sxs-lookup"><span data-stu-id="e25a1-127">In Quick Open, type `ext install powershell` and hit **Enter**.</span></span>
+- <span data-ttu-id="e25a1-128">O **extensões** é aberta uma vista na barra do lado.</span><span class="sxs-lookup"><span data-stu-id="e25a1-128">The **Extensions** view opens on the Side Bar.</span></span> <span data-ttu-id="e25a1-129">Selecione a extensão de PowerShell da Microsoft.</span><span class="sxs-lookup"><span data-stu-id="e25a1-129">Select the PowerShell extension from Microsoft.</span></span>
+  <span data-ttu-id="e25a1-130">Deverá ver algo, conforme mostrado abaixo:</span><span class="sxs-lookup"><span data-stu-id="e25a1-130">You should see something like below:</span></span>
 
   ![VSCode](../../images/vscode.png)
 
-- <span data-ttu-id="5db47-132">Clique nas **instalar** botão na extensão de PowerShell, da Microsoft.</span><span class="sxs-lookup"><span data-stu-id="5db47-132">Click the **Install** button on the PowerShell extension from Microsoft.</span></span>
-- <span data-ttu-id="5db47-133">Depois da instalação, consulte a **instale** botão passa a **recarregar**.</span><span class="sxs-lookup"><span data-stu-id="5db47-133">After the install, you see the **Install** button turns to **Reload**.</span></span>
-  <span data-ttu-id="5db47-134">Clique em **recarregar**.</span><span class="sxs-lookup"><span data-stu-id="5db47-134">Click on **Reload**.</span></span>
-- <span data-ttu-id="5db47-135">Depois do Visual Studio Code tem recarregar, está pronto para edição.</span><span class="sxs-lookup"><span data-stu-id="5db47-135">After Visual Studio Code has reload, you are ready for editing.</span></span>
+- <span data-ttu-id="e25a1-132">Clique nas **instalar** botão na extensão de PowerShell, da Microsoft.</span><span class="sxs-lookup"><span data-stu-id="e25a1-132">Click the **Install** button on the PowerShell extension from Microsoft.</span></span>
+- <span data-ttu-id="e25a1-133">Depois da instalação, consulte a **instale** botão passa a **recarregar**.</span><span class="sxs-lookup"><span data-stu-id="e25a1-133">After the install, you see the **Install** button turns to **Reload**.</span></span>
+  <span data-ttu-id="e25a1-134">Clique em **recarregar**.</span><span class="sxs-lookup"><span data-stu-id="e25a1-134">Click on **Reload**.</span></span>
+- <span data-ttu-id="e25a1-135">Depois do Visual Studio Code tem recarregar, está pronto para edição.</span><span class="sxs-lookup"><span data-stu-id="e25a1-135">After Visual Studio Code has reload, you are ready for editing.</span></span>
 
-<span data-ttu-id="5db47-136">Por exemplo, para criar um novo ficheiro, clique em **arquivo -> novo**.</span><span class="sxs-lookup"><span data-stu-id="5db47-136">For example, to create a new file, click **File->New**.</span></span>
-<span data-ttu-id="5db47-137">Para guardar, clique em **ficheiro -> Save** e, em seguida, forneça um nome de ficheiro, vamos dizer `HelloWorld.ps1`.</span><span class="sxs-lookup"><span data-stu-id="5db47-137">To save it, click **File->Save** and then provide a file name, let's say `HelloWorld.ps1`.</span></span>
-<span data-ttu-id="5db47-138">Para fechar o ficheiro, clique em "x" junto ao nome do ficheiro.</span><span class="sxs-lookup"><span data-stu-id="5db47-138">To close the file, click on "x" next to the file name.</span></span>
-<span data-ttu-id="5db47-139">Para sair do Visual Studio Code **ficheiro -> saída**.</span><span class="sxs-lookup"><span data-stu-id="5db47-139">To exit Visual Studio Code, **File->Exit**.</span></span>
+<span data-ttu-id="e25a1-136">Por exemplo, para criar um novo ficheiro, clique em **arquivo -> novo**.</span><span class="sxs-lookup"><span data-stu-id="e25a1-136">For example, to create a new file, click **File->New**.</span></span>
+<span data-ttu-id="e25a1-137">Para guardar, clique em **ficheiro -> Save** e, em seguida, forneça um nome de ficheiro, vamos dizer `HelloWorld.ps1`.</span><span class="sxs-lookup"><span data-stu-id="e25a1-137">To save it, click **File->Save** and then provide a file name, let's say `HelloWorld.ps1`.</span></span>
+<span data-ttu-id="e25a1-138">Para fechar o ficheiro, clique em "x" junto ao nome do ficheiro.</span><span class="sxs-lookup"><span data-stu-id="e25a1-138">To close the file, click on "x" next to the file name.</span></span>
+<span data-ttu-id="e25a1-139">Para sair do Visual Studio Code **ficheiro -> saída**.</span><span class="sxs-lookup"><span data-stu-id="e25a1-139">To exit Visual Studio Code, **File->Exit**.</span></span>
 
-#### <a name="using-a-specific-installed-version-of-powershell"></a><span data-ttu-id="5db47-140">Utilizar uma versão específica instalada do PowerShell</span><span class="sxs-lookup"><span data-stu-id="5db47-140">Using a specific installed version of PowerShell</span></span>
+### <a name="installing-the-powershell-extension-on-restricted-systems"></a><span data-ttu-id="e25a1-140">Instalação da extensão de PowerShell em sistemas restritos</span><span class="sxs-lookup"><span data-stu-id="e25a1-140">Installing the PowerShell Extension on Restricted Systems</span></span>
 
-<span data-ttu-id="5db47-141">Se pretender utilizar uma instalação específica do PowerShell com o Visual Studio Code, terá de adicionar uma nova variável para o arquivo de configurações do usuário.</span><span class="sxs-lookup"><span data-stu-id="5db47-141">If you wish to use a specific installation of PowerShell with Visual Studio Code, you need to add a new variable to your user settings file.</span></span>
+<span data-ttu-id="e25a1-141">Alguns sistemas são configurados de forma que requer que todas as assinaturas de código a ser verificado e, portanto, requer os serviços de Editor do PowerShell ser aprovado manualmente para ser executado no sistema.</span><span class="sxs-lookup"><span data-stu-id="e25a1-141">Some systems are set up in a way that requires all code signatures to be checked and thus requires PowerShell Editor Services to be manually approved to run on the system.</span></span>
+<span data-ttu-id="e25a1-142">Uma atualização de política de grupo que altera a política de execução é das causas prováveis se tiver instalado a extensão de PowerShell, mas Contatando um erro, como:</span><span class="sxs-lookup"><span data-stu-id="e25a1-142">A Group Policy update that changes execution policy is a likely cause if you have installed the PowerShell extension but are reaching an error like:</span></span>
 
-1. <span data-ttu-id="5db47-142">Clique em **ficheiro -> Preferências -> definições**</span><span class="sxs-lookup"><span data-stu-id="5db47-142">Click **File -> Preferences -> Settings**</span></span>
-1. <span data-ttu-id="5db47-143">São apresentados dois painéis do editor.</span><span class="sxs-lookup"><span data-stu-id="5db47-143">Two editor panes appear.</span></span>
-   <span data-ttu-id="5db47-144">No painel mais à direita (`settings.json`), inserir a definição abaixo apropriado para seu sistema operacional em algum lugar entre as duas primeiras (`{` e `}`) e substitua **\<versão\>** com a versão instalada do PowerShell:</span><span class="sxs-lookup"><span data-stu-id="5db47-144">In the right-most pane (`settings.json`), insert the setting below appropriate for your OS somewhere between the two curly brackets (`{` and `}`) and replace **\<version\>** with the installed PowerShell version:</span></span>
+```
+Language server startup failed.
+```
+
+<span data-ttu-id="e25a1-143">Para aprovar manualmente os serviços de Editor do PowerShell e, portanto, a extensão de PowerShell para VSCode, abra o PowerShell linha de comandos e execute:</span><span class="sxs-lookup"><span data-stu-id="e25a1-143">To manually approve PowerShell Editor Services and thus the PowerShell extension for VSCode open a PowerShell prompt and run:</span></span>
+
+```powershell
+Import-Module $HOME\.vscode\extensions\ms-vscode.powershell*\modules\PowerShellEditorServices\PowerShellEditorServices.psd1
+```
+
+<span data-ttu-id="e25a1-144">Lhe for pedido com "You want to executar software a partir deste publicador não fidedigno?"</span><span class="sxs-lookup"><span data-stu-id="e25a1-144">You are prompted with "Do you want to run software from this untrusted publisher?"</span></span>
+<span data-ttu-id="e25a1-145">Tipo de `R` para executar o ficheiro.</span><span class="sxs-lookup"><span data-stu-id="e25a1-145">Type `R` to run the file.</span></span> <span data-ttu-id="e25a1-146">Em seguida, abra o Visual Studio Code e verifique se a extensão de PowerShell está a funcionar corretamente.</span><span class="sxs-lookup"><span data-stu-id="e25a1-146">Then, open Visual Studio Code and check that the PowerShell extension is functioning properly.</span></span> <span data-ttu-id="e25a1-147">Se ainda tiver problemas de introdução, fale na [GitHub](https://github.com/PowerShell/vscode-powershell/issues).</span><span class="sxs-lookup"><span data-stu-id="e25a1-147">If you still have issues getting started, let us know on [GitHub](https://github.com/PowerShell/vscode-powershell/issues).</span></span>
+
+#### <a name="using-a-specific-installed-version-of-powershell"></a><span data-ttu-id="e25a1-148">Utilizar uma versão específica instalada do PowerShell</span><span class="sxs-lookup"><span data-stu-id="e25a1-148">Using a specific installed version of PowerShell</span></span>
+
+<span data-ttu-id="e25a1-149">Se pretender utilizar uma instalação específica do PowerShell com o Visual Studio Code, terá de adicionar uma nova variável para o arquivo de configurações do usuário.</span><span class="sxs-lookup"><span data-stu-id="e25a1-149">If you wish to use a specific installation of PowerShell with Visual Studio Code, you need to add a new variable to your user settings file.</span></span>
+
+1. <span data-ttu-id="e25a1-150">Clique em **ficheiro -> Preferências -> definições**</span><span class="sxs-lookup"><span data-stu-id="e25a1-150">Click **File -> Preferences -> Settings**</span></span>
+1. <span data-ttu-id="e25a1-151">São apresentados dois painéis do editor.</span><span class="sxs-lookup"><span data-stu-id="e25a1-151">Two editor panes appear.</span></span>
+   <span data-ttu-id="e25a1-152">No painel mais à direita (`settings.json`), inserir a definição abaixo apropriado para seu sistema operacional em algum lugar entre as duas primeiras (`{` e `}`) e substitua **\<versão\>** com a versão instalada do PowerShell:</span><span class="sxs-lookup"><span data-stu-id="e25a1-152">In the right-most pane (`settings.json`), insert the setting below appropriate for your OS somewhere between the two curly brackets (`{` and `}`) and replace **\<version\>** with the installed PowerShell version:</span></span>
 
    ```json
     // On Windows:
@@ -83,14 +101,14 @@ ms.locfileid: "53404722"
     "powershell.powerShellExePath": "/usr/local/microsoft/powershell/<version>/pwsh"
    ```
 
-1. <span data-ttu-id="5db47-145">Substitua a definição com o caminho para o PowerShell pretendido executável</span><span class="sxs-lookup"><span data-stu-id="5db47-145">Replace the setting with the path to the desired PowerShell executable</span></span>
-1. <span data-ttu-id="5db47-146">Guarde o ficheiro de definições e reinicie o Visual Studio Code</span><span class="sxs-lookup"><span data-stu-id="5db47-146">Save the settings file and restart Visual Studio Code</span></span>
+1. <span data-ttu-id="e25a1-153">Substitua a definição com o caminho para o PowerShell pretendido executável</span><span class="sxs-lookup"><span data-stu-id="e25a1-153">Replace the setting with the path to the desired PowerShell executable</span></span>
+1. <span data-ttu-id="e25a1-154">Guarde o ficheiro de definições e reinicie o Visual Studio Code</span><span class="sxs-lookup"><span data-stu-id="e25a1-154">Save the settings file and restart Visual Studio Code</span></span>
 
-#### <a name="configuration-settings-for-visual-studio-code"></a><span data-ttu-id="5db47-147">Definições de configuração para o Visual Studio Code</span><span class="sxs-lookup"><span data-stu-id="5db47-147">Configuration settings for Visual Studio Code</span></span>
+#### <a name="configuration-settings-for-visual-studio-code"></a><span data-ttu-id="e25a1-155">Definições de configuração para o Visual Studio Code</span><span class="sxs-lookup"><span data-stu-id="e25a1-155">Configuration settings for Visual Studio Code</span></span>
 
-<span data-ttu-id="5db47-148">Utilize os passos no parágrafo anterior pode adicionar definições de configuração no `settings.json`.</span><span class="sxs-lookup"><span data-stu-id="5db47-148">By using the steps in the previous paragraph you can add configuration settings in `settings.json`.</span></span>
+<span data-ttu-id="e25a1-156">Utilize os passos no parágrafo anterior pode adicionar definições de configuração no `settings.json`.</span><span class="sxs-lookup"><span data-stu-id="e25a1-156">By using the steps in the previous paragraph you can add configuration settings in `settings.json`.</span></span>
 
-<span data-ttu-id="5db47-149">Recomendamos as seguintes definições de configuração para o Visual Studio Code:</span><span class="sxs-lookup"><span data-stu-id="5db47-149">We recommend the following configuration settings for Visual Studio Code:</span></span>
+<span data-ttu-id="e25a1-157">Recomendamos as seguintes definições de configuração para o Visual Studio Code:</span><span class="sxs-lookup"><span data-stu-id="e25a1-157">We recommend the following configuration settings for Visual Studio Code:</span></span>
 
 ```json
 {
@@ -98,41 +116,52 @@ ms.locfileid: "53404722"
     "editor.renderWhitespace": "all",
     "editor.renderControlCharacters": true,
     "omnisharp.projectLoadTimeout": 120,
-    "files.trimTrailingWhitespace": true
+    "files.trimTrailingWhitespace": true,
+    "files.encoding": "utf8bom",
+    "files.autoGuessEncoding": true
 }
 ```
 
-## <a name="debugging-with-visual-studio-code"></a><span data-ttu-id="5db47-150">Depuração com o Visual Studio Code</span><span class="sxs-lookup"><span data-stu-id="5db47-150">Debugging with Visual Studio Code</span></span>
+<span data-ttu-id="e25a1-158">Se não pretender que estas definições afetam todos os tipos de ficheiros, VSCode também permite que configurações por idioma.</span><span class="sxs-lookup"><span data-stu-id="e25a1-158">If you don't want these settings to affect all files types, VSCode also allows per-language configurations.</span></span> <span data-ttu-id="e25a1-159">Criar uma configuração específica de idioma ao colocar configurações `[<language-name>]` campo.</span><span class="sxs-lookup"><span data-stu-id="e25a1-159">Create a language specific setting by putting settings in a `[<language-name>]` field.</span></span> <span data-ttu-id="e25a1-160">Por exemplo:</span><span class="sxs-lookup"><span data-stu-id="e25a1-160">For example:</span></span>
 
-### <a name="no-workspace-debugging"></a><span data-ttu-id="5db47-151">Área de trabalho de não depuração</span><span class="sxs-lookup"><span data-stu-id="5db47-151">No-workspace debugging</span></span>
+```json
+"[powershell]": {
+    "files.encoding": "utf8bom",
+    "files.autoGuessEncoding": true
+}
+```
 
-<span data-ttu-id="5db47-152">A partir da versão do Visual Studio Code 1.9 pode depurar scripts do PowerShell sem ter de abrir a pasta que contém o script do PowerShell.</span><span class="sxs-lookup"><span data-stu-id="5db47-152">As of Visual Studio Code version 1.9 you can debug PowerShell scripts without having to open the folder containing the PowerShell script.</span></span>
-<span data-ttu-id="5db47-153">Basta abrir o ficheiro de script do PowerShell com **ficheiro -> Abrir ficheiro...** , defina um ponto de interrupção numa linha (pressionar o F9) e, em seguida, prima F5 para iniciar a depuração.</span><span class="sxs-lookup"><span data-stu-id="5db47-153">Simply open the PowerShell script file with **File->Open File...**, set a breakpoint on a line (press F9) and then press F5 to start debugging.</span></span>
-<span data-ttu-id="5db47-154">Deverá ver o painel de ações de depuração aparecer que permite que invadir o depurador, passo, resume e stop depuração.</span><span class="sxs-lookup"><span data-stu-id="5db47-154">You should see the Debug actions pane appear which allows you to break into the debugger, step, resume and stop debugging.</span></span>
+<span data-ttu-id="e25a1-161">Para obter mais informações sobre o ficheiro codificação no VS Code, consulte [compreender a codificação do ficheiro](understanding-file-encoding.md).</span><span class="sxs-lookup"><span data-stu-id="e25a1-161">For more information about file encoding in VS Code, see [Understanding file encoding](understanding-file-encoding.md).</span></span>
 
-### <a name="workspace-debugging"></a><span data-ttu-id="5db47-155">Depuração de área de trabalho</span><span class="sxs-lookup"><span data-stu-id="5db47-155">Workspace debugging</span></span>
+## <a name="debugging-with-visual-studio-code"></a><span data-ttu-id="e25a1-162">Depuração com o Visual Studio Code</span><span class="sxs-lookup"><span data-stu-id="e25a1-162">Debugging with Visual Studio Code</span></span>
 
-<span data-ttu-id="5db47-156">Depuração de área de trabalho refere-se a depuração no contexto de uma pasta que abriu o no Visual Studio Code com **Abrir pasta...**  partir de **ficheiro** menu.</span><span class="sxs-lookup"><span data-stu-id="5db47-156">Workspace debugging refers to debugging in the context of a folder that you have opened in Visual Studio Code using **Open Folder...** from the **File** menu.</span></span>
-<span data-ttu-id="5db47-157">A pasta que abrir é, normalmente, a pasta do projeto do PowerShell e/ou a raiz do repositório de Git.</span><span class="sxs-lookup"><span data-stu-id="5db47-157">The folder you open is typically your PowerShell project folder and/or the root of your Git repository.</span></span>
+### <a name="no-workspace-debugging"></a><span data-ttu-id="e25a1-163">Área de trabalho de não depuração</span><span class="sxs-lookup"><span data-stu-id="e25a1-163">No-workspace debugging</span></span>
 
-<span data-ttu-id="5db47-158">Mesmo neste modo, pode começar a depurar o script do PowerShell atualmente selecionado, simplesmente pressionando F5.</span><span class="sxs-lookup"><span data-stu-id="5db47-158">Even in this mode, you can start debugging the currently selected PowerShell script by simply pressing F5.</span></span>
-<span data-ttu-id="5db47-159">No entanto, a depuração de área de trabalho permite-lhe definir várias configurações de depuração que não seja de depuração apenas os ficheiros atualmente abertos.</span><span class="sxs-lookup"><span data-stu-id="5db47-159">However, workspace debugging allows you to define multiple debug configurations other than just debugging the currently open file.</span></span>
-<span data-ttu-id="5db47-160">Por exemplo, pode adicionar um configurações para:</span><span class="sxs-lookup"><span data-stu-id="5db47-160">For instance, you can add a configurations to:</span></span>
+<span data-ttu-id="e25a1-164">A partir da versão do Visual Studio Code 1.9 pode depurar scripts do PowerShell sem ter de abrir a pasta que contém o script do PowerShell.</span><span class="sxs-lookup"><span data-stu-id="e25a1-164">As of Visual Studio Code version 1.9 you can debug PowerShell scripts without having to open the folder containing the PowerShell script.</span></span> <span data-ttu-id="e25a1-165">Abra o ficheiro de script do PowerShell com **ficheiro -> abrir o ficheiro...** , defina um ponto de interrupção numa linha (pressionar o F9) e, em seguida, prima F5 para iniciar a depuração.</span><span class="sxs-lookup"><span data-stu-id="e25a1-165">Open the PowerShell script file with **File->Open File...**, set a breakpoint on a line (press F9) and then press F5 to start debugging.</span></span> <span data-ttu-id="e25a1-166">Deverá ver o painel de ações de depuração aparecer que permite que invadir o depurador, passo, resume e stop depuração.</span><span class="sxs-lookup"><span data-stu-id="e25a1-166">You should see the Debug actions pane appear which allows you to break into the debugger, step, resume and stop debugging.</span></span>
 
-- <span data-ttu-id="5db47-161">Inicie os testes de Pester no depurador</span><span class="sxs-lookup"><span data-stu-id="5db47-161">Launch Pester tests in the debugger</span></span>
-- <span data-ttu-id="5db47-162">Iniciar um arquivo específico com argumentos no depurador</span><span class="sxs-lookup"><span data-stu-id="5db47-162">Launch a specific file with arguments in the debugger</span></span>
-- <span data-ttu-id="5db47-163">Iniciar uma sessão interativa no depurador</span><span class="sxs-lookup"><span data-stu-id="5db47-163">Launch an interactive session in the debugger</span></span>
-- <span data-ttu-id="5db47-164">Anexar o depurador a um processo de anfitrião do PowerShell</span><span class="sxs-lookup"><span data-stu-id="5db47-164">Attach the debugger to a PowerShell host process</span></span>
+### <a name="workspace-debugging"></a><span data-ttu-id="e25a1-167">Depuração de área de trabalho</span><span class="sxs-lookup"><span data-stu-id="e25a1-167">Workspace debugging</span></span>
 
-<span data-ttu-id="5db47-165">Siga estes passos para criar o arquivo de configuração de depuração:</span><span class="sxs-lookup"><span data-stu-id="5db47-165">Follow these steps to create your debug configuration file:</span></span>
+<span data-ttu-id="e25a1-168">Depuração de área de trabalho refere-se a depuração no contexto de uma pasta que abriu o no Visual Studio Code com **Abrir pasta...**  partir de **ficheiro** menu.</span><span class="sxs-lookup"><span data-stu-id="e25a1-168">Workspace debugging refers to debugging in the context of a folder that you have opened in Visual Studio Code using **Open Folder...** from the **File** menu.</span></span>
+<span data-ttu-id="e25a1-169">A pasta que abrir é, normalmente, a pasta do projeto do PowerShell e/ou a raiz do repositório de Git.</span><span class="sxs-lookup"><span data-stu-id="e25a1-169">The folder you open is typically your PowerShell project folder and/or the root of your Git repository.</span></span>
 
-  1. <span data-ttu-id="5db47-166">Abra o **depurar** vista pressionando **Ctrl + Shift + D** (**Cmd + Shift + D** no Mac).</span><span class="sxs-lookup"><span data-stu-id="5db47-166">Open the **Debug** view by pressing **Ctrl+Shift+D** (**Cmd+Shift+D** on Mac).</span></span>
-  2. <span data-ttu-id="5db47-167">Prima a **configurar** ícone de engrenagem na barra de ferramentas.</span><span class="sxs-lookup"><span data-stu-id="5db47-167">Press the **Configure** gear icon in the toolbar.</span></span>
-  3. <span data-ttu-id="5db47-168">Pede-lhe para Visual Studio Code **selecionar ambiente**.</span><span class="sxs-lookup"><span data-stu-id="5db47-168">Visual Studio Code prompts you to **Select Environment**.</span></span> <span data-ttu-id="5db47-169">Escolher **PowerShell**.</span><span class="sxs-lookup"><span data-stu-id="5db47-169">Choose **PowerShell**.</span></span>
+<span data-ttu-id="e25a1-170">Mesmo neste modo, pode começar a depurar o script do PowerShell atualmente selecionado, simplesmente pressionando F5.</span><span class="sxs-lookup"><span data-stu-id="e25a1-170">Even in this mode, you can start debugging the currently selected PowerShell script by simply pressing F5.</span></span>
+<span data-ttu-id="e25a1-171">No entanto, a depuração de área de trabalho permite-lhe definir várias configurações de depuração que não seja de depuração apenas os ficheiros atualmente abertos.</span><span class="sxs-lookup"><span data-stu-id="e25a1-171">However, workspace debugging allows you to define multiple debug configurations other than just debugging the currently open file.</span></span>
+<span data-ttu-id="e25a1-172">Por exemplo, pode adicionar um configurações para:</span><span class="sxs-lookup"><span data-stu-id="e25a1-172">For instance, you can add a configurations to:</span></span>
 
-  <span data-ttu-id="5db47-170">Ao fazê-lo, o código do Visual Studio cria um diretório e um arquivo de ".vscode\launch.json" na raiz da sua pasta de área de trabalho.</span><span class="sxs-lookup"><span data-stu-id="5db47-170">When you do this, Visual Studio Code creates a directory and a file ".vscode\launch.json" in the root of your workspace folder.</span></span>
-  <span data-ttu-id="5db47-171">Isso é onde está armazenada a sua configuração de depuração.</span><span class="sxs-lookup"><span data-stu-id="5db47-171">This is where your debug configuration is stored.</span></span> <span data-ttu-id="5db47-172">Se os ficheiros estiverem num repositório de Git, normalmente pretende consolidar o ficheiro Launch JSON.</span><span class="sxs-lookup"><span data-stu-id="5db47-172">If your files are in a Git repository, you typically want to commit the launch.json file.</span></span>
-  <span data-ttu-id="5db47-173">O conteúdo do ficheiro Launch JSON é:</span><span class="sxs-lookup"><span data-stu-id="5db47-173">The contents of the launch.json file are:</span></span>
+- <span data-ttu-id="e25a1-173">Inicie os testes de Pester no depurador</span><span class="sxs-lookup"><span data-stu-id="e25a1-173">Launch Pester tests in the debugger</span></span>
+- <span data-ttu-id="e25a1-174">Iniciar um arquivo específico com argumentos no depurador</span><span class="sxs-lookup"><span data-stu-id="e25a1-174">Launch a specific file with arguments in the debugger</span></span>
+- <span data-ttu-id="e25a1-175">Iniciar uma sessão interativa no depurador</span><span class="sxs-lookup"><span data-stu-id="e25a1-175">Launch an interactive session in the debugger</span></span>
+- <span data-ttu-id="e25a1-176">Anexar o depurador a um processo de anfitrião do PowerShell</span><span class="sxs-lookup"><span data-stu-id="e25a1-176">Attach the debugger to a PowerShell host process</span></span>
+
+<span data-ttu-id="e25a1-177">Siga estes passos para criar o arquivo de configuração de depuração:</span><span class="sxs-lookup"><span data-stu-id="e25a1-177">Follow these steps to create your debug configuration file:</span></span>
+
+  1. <span data-ttu-id="e25a1-178">Abra o **depurar** vista pressionando **Ctrl + Shift + D** (**Cmd + Shift + D** no Mac).</span><span class="sxs-lookup"><span data-stu-id="e25a1-178">Open the **Debug** view by pressing **Ctrl+Shift+D** (**Cmd+Shift+D** on Mac).</span></span>
+  2. <span data-ttu-id="e25a1-179">Prima a **configurar** ícone de engrenagem na barra de ferramentas.</span><span class="sxs-lookup"><span data-stu-id="e25a1-179">Press the **Configure** gear icon in the toolbar.</span></span>
+  3. <span data-ttu-id="e25a1-180">Pede-lhe para Visual Studio Code **selecionar ambiente**.</span><span class="sxs-lookup"><span data-stu-id="e25a1-180">Visual Studio Code prompts you to **Select Environment**.</span></span> <span data-ttu-id="e25a1-181">Escolher **PowerShell**.</span><span class="sxs-lookup"><span data-stu-id="e25a1-181">Choose **PowerShell**.</span></span>
+
+  <span data-ttu-id="e25a1-182">Ao fazê-lo, o código do Visual Studio cria um diretório e um arquivo de ".vscode\launch.json" na raiz da sua pasta de área de trabalho.</span><span class="sxs-lookup"><span data-stu-id="e25a1-182">When you do this, Visual Studio Code creates a directory and a file ".vscode\launch.json" in the root of your workspace folder.</span></span>
+  <span data-ttu-id="e25a1-183">Isso é onde está armazenada a sua configuração de depuração.</span><span class="sxs-lookup"><span data-stu-id="e25a1-183">This is where your debug configuration is stored.</span></span> <span data-ttu-id="e25a1-184">Se os ficheiros estiverem num repositório de Git, normalmente pretende consolidar o ficheiro Launch JSON.</span><span class="sxs-lookup"><span data-stu-id="e25a1-184">If your files are in a Git repository, you typically want to commit the launch.json file.</span></span>
+  <span data-ttu-id="e25a1-185">O conteúdo do ficheiro Launch JSON é:</span><span class="sxs-lookup"><span data-stu-id="e25a1-185">The contents of the launch.json file are:</span></span>
 
   ```json
   {
@@ -163,24 +192,24 @@ ms.locfileid: "53404722"
   }
   ```
 
-  <span data-ttu-id="5db47-174">Isso representa os cenários comuns de depuração.</span><span class="sxs-lookup"><span data-stu-id="5db47-174">This represents the common debug scenarios.</span></span>
-  <span data-ttu-id="5db47-175">No entanto, quando abrir esse arquivo no editor, verá um **configuração adicionar...**  botão.</span><span class="sxs-lookup"><span data-stu-id="5db47-175">However, when you open this file in the editor, you see an **Add Configuration...** button.</span></span>
-  <span data-ttu-id="5db47-176">Pode pressionar este botão para adicionar mais configurações de depuração do PowerShell.</span><span class="sxs-lookup"><span data-stu-id="5db47-176">You can press this button to add more PowerShell debug configurations.</span></span> <span data-ttu-id="5db47-177">É uma configuração útil para adicionar **PowerShell: Inicie o Script**.</span><span class="sxs-lookup"><span data-stu-id="5db47-177">One handy configuration to add is **PowerShell: Launch Script**.</span></span>
-  <span data-ttu-id="5db47-178">Com esta configuração, pode especificar um ficheiro específico com os argumentos opcionais que deve ser iniciado sempre que pressionar F5, independentemente da qual arquivo atualmente ativo no editor.</span><span class="sxs-lookup"><span data-stu-id="5db47-178">With this configuration, you can specify a specific file with optional arguments that should be launched whenever you press F5 no matter which file is currently active in the editor.</span></span>
+  <span data-ttu-id="e25a1-186">Isso representa os cenários comuns de depuração.</span><span class="sxs-lookup"><span data-stu-id="e25a1-186">This represents the common debug scenarios.</span></span>
+  <span data-ttu-id="e25a1-187">No entanto, quando abrir esse arquivo no editor, verá um **configuração adicionar...**  botão.</span><span class="sxs-lookup"><span data-stu-id="e25a1-187">However, when you open this file in the editor, you see an **Add Configuration...** button.</span></span>
+  <span data-ttu-id="e25a1-188">Pode pressionar este botão para adicionar mais configurações de depuração do PowerShell.</span><span class="sxs-lookup"><span data-stu-id="e25a1-188">You can press this button to add more PowerShell debug configurations.</span></span> <span data-ttu-id="e25a1-189">É uma configuração útil para adicionar **PowerShell: Inicie o Script**.</span><span class="sxs-lookup"><span data-stu-id="e25a1-189">One handy configuration to add is **PowerShell: Launch Script**.</span></span>
+  <span data-ttu-id="e25a1-190">Com esta configuração, pode especificar um ficheiro específico com os argumentos opcionais que deve ser iniciado sempre que pressionar F5, independentemente da qual arquivo atualmente ativo no editor.</span><span class="sxs-lookup"><span data-stu-id="e25a1-190">With this configuration, you can specify a specific file with optional arguments that should be launched whenever you press F5 no matter which file is currently active in the editor.</span></span>
 
-  <span data-ttu-id="5db47-179">Depois da configuração de depuração é estabelecida, pode selecionar que configuração que pretende utilizar durante uma sessão de depuração, selecionando uma na configuração de depuração menu pendente na **depurar** barra de ferramentas da exibição.</span><span class="sxs-lookup"><span data-stu-id="5db47-179">Once the debug configuration is established, you can select which configuration you want to use during a debug session by selecting one from the debug configuration drop-down in the **Debug** view's toolbar.</span></span>
+  <span data-ttu-id="e25a1-191">Depois da configuração de depuração é estabelecida, pode selecionar que configuração que pretende utilizar durante uma sessão de depuração, selecionando uma na configuração de depuração menu pendente na **depurar** barra de ferramentas da exibição.</span><span class="sxs-lookup"><span data-stu-id="e25a1-191">Once the debug configuration is established, you can select which configuration you want to use during a debug session by selecting one from the debug configuration drop-down in the **Debug** view's toolbar.</span></span>
 
-<span data-ttu-id="5db47-180">Existem alguns blogs que podem ser úteis para começar a utilizar a extensão de PowerShell para Visual Studio Code:</span><span class="sxs-lookup"><span data-stu-id="5db47-180">There are a few blogs that may be helpful to get you started using PowerShell extension for Visual Studio Code:</span></span>
+<span data-ttu-id="e25a1-192">Existem alguns blogs que podem ser úteis para começar a utilizar a extensão de PowerShell para Visual Studio Code:</span><span class="sxs-lookup"><span data-stu-id="e25a1-192">There are a few blogs that may be helpful to get you started using PowerShell extension for Visual Studio Code:</span></span>
 
-- <span data-ttu-id="5db47-181">[Extensão de PowerShell][ps-extension]</span><span class="sxs-lookup"><span data-stu-id="5db47-181">[PowerShell Extension][ps-extension]</span></span>
-- <span data-ttu-id="5db47-182">[Escreva e Depure os scripts do PowerShell no Visual Studio Code][debug]</span><span class="sxs-lookup"><span data-stu-id="5db47-182">[Write and debug PowerShell scripts in Visual Studio Code][debug]</span></span>
-- <span data-ttu-id="5db47-183">[Depuração de diretrizes de código do Visual Studio][vscode-guide]</span><span class="sxs-lookup"><span data-stu-id="5db47-183">[Debugging Visual Studio Code Guidance][vscode-guide]</span></span>
-- <span data-ttu-id="5db47-184">[Depuração do PowerShell no Visual Studio Code][ps-vscode]</span><span class="sxs-lookup"><span data-stu-id="5db47-184">[Debugging PowerShell in Visual Studio Code][ps-vscode]</span></span>
-- <span data-ttu-id="5db47-185">[Introdução ao desenvolvimento do PowerShell no Visual Studio Code][getting-started]</span><span class="sxs-lookup"><span data-stu-id="5db47-185">[Get started with PowerShell development in Visual Studio Code][getting-started]</span></span>
-- <span data-ttu-id="5db47-186">[Visual Studio Code, edição de recursos para desenvolvimento do PowerShell – parte 1][editing-part1]</span><span class="sxs-lookup"><span data-stu-id="5db47-186">[Visual Studio Code editing features for PowerShell development – Part 1][editing-part1]</span></span>
-- <span data-ttu-id="5db47-187">[Visual Studio Code, edição de recursos para desenvolvimento do PowerShell – parte 2][editing-part2]</span><span class="sxs-lookup"><span data-stu-id="5db47-187">[Visual Studio Code editing features for PowerShell development – Part 2][editing-part2]</span></span>
-- <span data-ttu-id="5db47-188">[Script do PowerShell depuração no Visual Studio Code – parte 1][debugging-part1]</span><span class="sxs-lookup"><span data-stu-id="5db47-188">[Debugging PowerShell script in Visual Studio Code – Part 1][debugging-part1]</span></span>
-- <span data-ttu-id="5db47-189">[Script do PowerShell depuração no Visual Studio Code – parte 2][debugging-part2]</span><span class="sxs-lookup"><span data-stu-id="5db47-189">[Debugging PowerShell script in Visual Studio Code – Part 2][debugging-part2]</span></span>
+- <span data-ttu-id="e25a1-193">[Extensão de PowerShell][ps-extension]</span><span class="sxs-lookup"><span data-stu-id="e25a1-193">[PowerShell Extension][ps-extension]</span></span>
+- <span data-ttu-id="e25a1-194">[Escreva e Depure os scripts do PowerShell no Visual Studio Code][debug]</span><span class="sxs-lookup"><span data-stu-id="e25a1-194">[Write and debug PowerShell scripts in Visual Studio Code][debug]</span></span>
+- <span data-ttu-id="e25a1-195">[Depuração de diretrizes de código do Visual Studio][vscode-guide]</span><span class="sxs-lookup"><span data-stu-id="e25a1-195">[Debugging Visual Studio Code Guidance][vscode-guide]</span></span>
+- <span data-ttu-id="e25a1-196">[Depuração do PowerShell no Visual Studio Code][ps-vscode]</span><span class="sxs-lookup"><span data-stu-id="e25a1-196">[Debugging PowerShell in Visual Studio Code][ps-vscode]</span></span>
+- <span data-ttu-id="e25a1-197">[Introdução ao desenvolvimento do PowerShell no Visual Studio Code][getting-started]</span><span class="sxs-lookup"><span data-stu-id="e25a1-197">[Get started with PowerShell development in Visual Studio Code][getting-started]</span></span>
+- <span data-ttu-id="e25a1-198">[Visual Studio Code, edição de recursos para desenvolvimento do PowerShell – parte 1][editing-part1]</span><span class="sxs-lookup"><span data-stu-id="e25a1-198">[Visual Studio Code editing features for PowerShell development – Part 1][editing-part1]</span></span>
+- <span data-ttu-id="e25a1-199">[Visual Studio Code, edição de recursos para desenvolvimento do PowerShell – parte 2][editing-part2]</span><span class="sxs-lookup"><span data-stu-id="e25a1-199">[Visual Studio Code editing features for PowerShell development – Part 2][editing-part2]</span></span>
+- <span data-ttu-id="e25a1-200">[Script do PowerShell depuração no Visual Studio Code – parte 1][debugging-part1]</span><span class="sxs-lookup"><span data-stu-id="e25a1-200">[Debugging PowerShell script in Visual Studio Code – Part 1][debugging-part1]</span></span>
+- <span data-ttu-id="e25a1-201">[Script do PowerShell depuração no Visual Studio Code – parte 2][debugging-part2]</span><span class="sxs-lookup"><span data-stu-id="e25a1-201">[Debugging PowerShell script in Visual Studio Code – Part 2][debugging-part2]</span></span>
 
 [ise]: ../ise/Introducing-the-Windows-PowerShell-ISE.md
 [install-pscore-linux]:  ../../setup/Installing-PowerShell-Core-on-Linux.md
@@ -197,6 +226,6 @@ ms.locfileid: "53404722"
 [debugging-part1]: https://blogs.technet.microsoft.com/heyscriptingguy/2017/02/06/debugging-powershell-script-in-visual-studio-code-part-1/
 [debugging-part2]: https://blogs.technet.microsoft.com/heyscriptingguy/2017/02/13/debugging-powershell-script-in-visual-studio-code-part-2/
 
-## <a name="powershell-extension-for-visual-studio-code"></a><span data-ttu-id="5db47-190">Extensão de PowerShell para Visual Studio Code</span><span class="sxs-lookup"><span data-stu-id="5db47-190">PowerShell Extension for Visual Studio Code</span></span>
+## <a name="powershell-extension-for-visual-studio-code"></a><span data-ttu-id="e25a1-202">Extensão de PowerShell para Visual Studio Code</span><span class="sxs-lookup"><span data-stu-id="e25a1-202">PowerShell Extension for Visual Studio Code</span></span>
 
-<span data-ttu-id="5db47-191">Código-fonte a extensão de PowerShell pode ser encontrado no [GitHub](https://github.com/PowerShell/vscode-powershell).</span><span class="sxs-lookup"><span data-stu-id="5db47-191">The PowerShell extension's source code can be found on [GitHub](https://github.com/PowerShell/vscode-powershell).</span></span>
+<span data-ttu-id="e25a1-203">Código-fonte a extensão de PowerShell pode ser encontrado no [GitHub](https://github.com/PowerShell/vscode-powershell).</span><span class="sxs-lookup"><span data-stu-id="e25a1-203">The PowerShell extension's source code can be found on [GitHub](https://github.com/PowerShell/vscode-powershell).</span></span>
