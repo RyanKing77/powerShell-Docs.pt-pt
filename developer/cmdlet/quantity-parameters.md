@@ -8,36 +8,24 @@ ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 8c0bd8a9-1749-4885-ab24-38c0a4d9f2cb
 caps.latest.revision: 6
-ms.openlocfilehash: 6a7c66eb94f69029b5abea85c421a0c8db646851
-ms.sourcegitcommit: b6871f21bd666f9cd71dd336bb3f844cf472b56c
+ms.openlocfilehash: 7a3efc60fcc8729d833f6de070016cfd08cc9b88
+ms.sourcegitcommit: ce46e5098786e19d521b4bf948ff62d2b90bc53e
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 02/03/2019
-ms.locfileid: "56847965"
+ms.lasthandoff: 03/02/2019
+ms.locfileid: "57251375"
 ---
 # <a name="quantity-parameters"></a>Quantity Parameters (Parâmetros de Quantidade)
 
 A tabela seguinte lista os nomes recomendados e a funcionalidade para os parâmetros de quantidade.
 
-Tipo de todos os dados: Booleano
-
-Implementar este parâmetro, de modo que `true` indica que todos os recursos devem ser utilizados em vez de um subconjunto de padrão de recursos. Implementar este parâmetro, de modo que `false` indica um subconjunto dos recursos.
-
-Tipo de dados de alocação: Int32
-
-Implemente este parâmetro para que o utilizador pode especificar o número de itens para alocar.
-
-Tipo de dados de BlockCount: Int64
-
-Implemente este parâmetro para que o utilizador pode especificar a contagem de bloco.
-
-Tipo de dados de contagem: Int64
-
-Implemente este parâmetro para que o utilizador pode especificar a contagem.
-
-Tipo de dados de âmbito: Palavra-chave
-
-Implemente este parâmetro para que o utilizador pode especificar o âmbito a trabalhar.
+|Parâmetro|Funcionalidade|
+|---|---|
+|**Todos**<br>Tipo de dados: Booleano|Implementar este parâmetro, de modo que `true` indica que todos os recursos devem ser utilizados em vez de um subconjunto de padrão de recursos. Implementar este parâmetro, de modo que `false` indica um subconjunto dos recursos.|
+|**Alocação**<br>Tipo de dados: Int32|Implemente este parâmetro para que o utilizador pode especificar o número de itens para alocar.|
+|**BlockCount**<br>Tipo de dados: Int64|Implemente este parâmetro para que o utilizador pode especificar a contagem de bloco.|
+|**Contagem**<br>Tipo de dados: Int64|Implemente este parâmetro para que o utilizador pode especificar a contagem.|
+|**Âmbito**<br>Tipo de dados: Palavra-chave|Implemente este parâmetro para que o utilizador pode especificar o âmbito a trabalhar.|
 
 ## <a name="see-also"></a>Veja Também
 
