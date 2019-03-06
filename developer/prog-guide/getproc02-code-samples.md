@@ -8,19 +8,18 @@ ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: a2fd91af-758b-49b9-b57f-106ee01fc8c1
 caps.latest.revision: 5
-ms.openlocfilehash: bdbfa6da322f3d26554b8d49d5d5c7fe2f39c271
-ms.sourcegitcommit: b6871f21bd666f9cd71dd336bb3f844cf472b56c
+ms.openlocfilehash: 00b015f1c16623d8ca4cf6f609aa2547c0385402
+ms.sourcegitcommit: 69abc5ad16e5dd29ddfb1853e266a4bfd1d59d59
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 02/03/2019
-ms.locfileid: "56844794"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57429606"
 ---
 # <a name="getproc02-code-samples"></a>GetProc02 Code Samples (Códigos de Exemplo GetProc02)
 
 Aqui estão os exemplos de código para o cmdlet de exemplo GetProc02. Este é o `Get-Process` cmdlet de exemplo descrito na [adicionando parâmetros essa entrada de linha de comandos do processo](../cmdlet/adding-parameters-that-process-command-line-input.md). Isso `Get-Process` cmdlet obtém processos com base no respetivo nome e, em seguida, apresenta informações sobre os processos na linha de comandos.
 
 > [!NOTE]
-> Pode transferir o C# ficheiro de origem (getproc02.cs) para este cmdlet de Get-Proc usando o Microsoft Windows Software Development Kit para Windows Vista e o .NET Framework 3.0 Runtime Components. Para obter instruções de transferência, consulte [como instalar o Windows PowerShell e transferir o SDK do Windows PowerShell](/powershell/developer/installing-the-windows-powershell-sdk).
 > Pode transferir o C# ficheiro de origem (getproc02.cs) para este cmdlet de Get-Proc usando o Microsoft Windows Software Development Kit para Windows Vista e o .NET Framework 3.0 Runtime Components. Para obter instruções de transferência, consulte [como instalar o Windows PowerShell e transferir o SDK do Windows PowerShell](/powershell/developer/installing-the-windows-powershell-sdk).
 >
 > Os arquivos de fonte transferido estão disponíveis no  **\<exemplos do PowerShell >** diretório.
@@ -32,7 +31,7 @@ Para o código de exemplo completo, consulte os seguintes tópicos.
 |C#|[GetProc02 (C#) o código de exemplo](./getproc02-csharp-sample-code.md)|
 |VB.NET|[GetProc02 código de exemplo (VB.NET)](./getproc02-vb-net-sample-code.md)|
 
-## <a name="see-also"></a>Consulte Também
+## <a name="see-also"></a>Veja Também
 
 [Guia do programador do Windows PowerShell](./windows-powershell-programmer-s-guide.md)
 

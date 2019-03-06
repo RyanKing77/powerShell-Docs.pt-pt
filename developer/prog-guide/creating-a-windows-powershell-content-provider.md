@@ -11,19 +11,18 @@ helpviewer_keywords:
 - providers [PowerShell Programmer's Guide], content provider
 ms.assetid: 3da88ff9-c4c7-4ace-aa24-0a29c8cfa060
 caps.latest.revision: 6
-ms.openlocfilehash: 6e5d79487539d4f58922e2686f1fdba08797f305
-ms.sourcegitcommit: b6871f21bd666f9cd71dd336bb3f844cf472b56c
+ms.openlocfilehash: 5e35d2fdfa4c6bd70c1b69ca1f357ee8d8ebcdc4
+ms.sourcegitcommit: 69abc5ad16e5dd29ddfb1853e266a4bfd1d59d59
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 02/03/2019
-ms.locfileid: "56846327"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57429980"
 ---
 # <a name="creating-a-windows-powershell-content-provider"></a>Creating a Windows PowerShell Content Provider (Criar um Fornecedor de Conteúdos do Windows PowerShell)
 
 Este tópico descreve como criar um fornecedor de Windows PowerShell que permite ao usuário manipular o conteúdo dos itens de um arquivo de dados. Como conseqüência, um provedor que pode manipular o conteúdo de itens é referido como um fornecedor de conteúdos do Windows PowerShell.
 
 > [!NOTE]
-> Pode transferir o C# ficheiro de origem (AccessDBSampleProvider06.cs) para este fornecedor com o Microsoft Windows Software Development Kit para Windows Vista e o .NET Framework 3.0 Runtime Components. Para obter instruções de transferência, consulte [como instalar o Windows PowerShell e transferir o SDK do Windows PowerShell](/powershell/developer/installing-the-windows-powershell-sdk).
 > Pode transferir o C# ficheiro de origem (AccessDBSampleProvider06.cs) para este fornecedor com o Microsoft Windows Software Development Kit para Windows Vista e o .NET Framework 3.0 Runtime Components. Para obter instruções de transferência, consulte [como instalar o Windows PowerShell e transferir o SDK do Windows PowerShell](/powershell/developer/installing-the-windows-powershell-sdk).
 >
 > Os arquivos de fonte transferido estão disponíveis no  **\<exemplos do PowerShell >** diretório.
@@ -233,11 +232,9 @@ Para o código de exemplo completo, consulte [exemplo de código AccessDbProvide
 ## <a name="defining-object-types-and-formatting"></a>Definir tipos de objeto e formatação
 
 Ao escrever um fornecedor, poderá ser necessário adicionar membros a objetos existentes ou definir novos objetos. Quando isso for feito, tem de criar um ficheiro de tipos que pode utilizar o Windows PowerShell para identificar os membros do objeto e um ficheiro de formato que define como o objeto é apresentado. Para obter mais informações, consulte [estendendo tipos de objeto e formatação](http://msdn.microsoft.com/en-us/da976d91-a3d6-44e8-affa-466b1e2bd351).
-Ao escrever um fornecedor, poderá ser necessário adicionar membros a objetos existentes ou definir novos objetos. Quando isso for feito, tem de criar um ficheiro de tipos que pode utilizar o Windows PowerShell para identificar os membros do objeto e um ficheiro de formato que define como o objeto é apresentado. Para obter mais informações, consulte [estendendo tipos de objeto e formatação](http://msdn.microsoft.com/en-us/da976d91-a3d6-44e8-affa-466b1e2bd351).
 
 ## <a name="building-the-windows-powershell-provider"></a>Criando o provedor do Windows PowerShell
 
-Ver [como registar os Cmdlets, fornecedores e alojar aplicações](http://msdn.microsoft.com/en-us/a41e9054-29c8-40ab-bf2b-8ce4e7ec1c8c).
 Ver [como registar os Cmdlets, fornecedores e alojar aplicações](http://msdn.microsoft.com/en-us/a41e9054-29c8-40ab-bf2b-8ce4e7ec1c8c).
 
 ## <a name="testing-the-windows-powershell-provider"></a>Teste o fornecedor do Windows PowerShell
@@ -277,7 +274,7 @@ Zip       : 98089
 Country   : USA
 ```
 
-## <a name="see-also"></a>Consulte Também
+## <a name="see-also"></a>Veja Também
 
 [Criar fornecedores de Windows PowerShell](./how-to-create-a-windows-powershell-provider.md)
 
@@ -285,11 +282,7 @@ Country   : USA
 
 [Estendendo tipos de objeto e formatação](http://msdn.microsoft.com/en-us/da976d91-a3d6-44e8-affa-466b1e2bd351)
 
-[Estendendo tipos de objeto e formatação](http://msdn.microsoft.com/en-us/da976d91-a3d6-44e8-affa-466b1e2bd351)
-
 [Implementar um fornecedor de navegação Windows PowerShell](./creating-a-windows-powershell-navigation-provider.md)
-
-[Como registar os Cmdlets, fornecedores e alojar aplicações](http://msdn.microsoft.com/en-us/a41e9054-29c8-40ab-bf2b-8ce4e7ec1c8c)
 
 [Como registar os Cmdlets, fornecedores e alojar aplicações](http://msdn.microsoft.com/en-us/a41e9054-29c8-40ab-bf2b-8ce4e7ec1c8c)
 

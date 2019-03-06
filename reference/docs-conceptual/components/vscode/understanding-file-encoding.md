@@ -1,15 +1,15 @@
 ---
-title: Compreender a codificação do ficheiro no VSCode e no PowerShell
+title: Compreender a codificação de ficheiros no VSCode e no PowerShell
 description: Configurar a codificação do ficheiro no VSCode e no PowerShell
 ms.date: 02/28/2019
-ms.openlocfilehash: f3b133b4bee7688821a5960429e2f26b69b01e12
-ms.sourcegitcommit: ce46e5098786e19d521b4bf948ff62d2b90bc53e
+ms.openlocfilehash: 9cf445ebd0c2bb2dbdf4438f02dafe3df3a5d1e2
+ms.sourcegitcommit: 69abc5ad16e5dd29ddfb1853e266a4bfd1d59d59
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 03/02/2019
-ms.locfileid: "57251728"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57429810"
 ---
-# <a name="understanding-file-encoding-in-vscode-and-powershell"></a>Compreender a codificação do ficheiro no VSCode e no PowerShell
+# <a name="understanding-file-encoding-in-vscode-and-powershell"></a>Compreender a codificação de ficheiros no VSCode e no PowerShell
 
 Quando utilizar o VS Code para criar e editar scripts do PowerShell, é importante que os ficheiros são guardados com o formato de codificação de caracteres corretas.
 
@@ -68,7 +68,7 @@ Neste útil [referência](https://www.i18nqa.com/debug/utf8-debug.html) apresent
 A extensão de PowerShell interage com os scripts de diversas formas:
 
 1. Quando os scripts são editados no VSCode, o conteúdo será enviado por VSCode para a extensão. O [Protocolo de servidor de idioma][] estipula que este conteúdo é transferido em UTF-8. Por conseguinte, não é possível que a extensão obter a codificação errada.
-2. Quando os scripts são executados diretamente na consola do integrada, eles estão lida no arquivo do PowerShell diretamente. Codificação de TF PowerShell difere do VSCode, algo pode dar errado aqui.
+2. Quando os scripts são executados diretamente na consola do integrada, eles estão lida no arquivo do PowerShell diretamente. Se a codificação do PowerShell difere do VSCode, algo pode dar errado aqui.
 3. Quando um script que está aberto no VSCode faz referência a outro script que não está aberto no VSCode, a extensão é retrocede para carregar o conteúdo desse script do sistema de arquivos. A extensão de PowerShell está predefinido para a codificação UTF-8, mas usa [marca de ordem de byte][], ou BOM, deteção seleciona a codificação correta.
 
 O problema ocorre quando partindo do princípio de que a codificação de formatos de BOM sem (como [UTF-8][] com nenhuma BOM e [Windows-1252][]).

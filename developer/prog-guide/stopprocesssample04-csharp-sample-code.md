@@ -8,12 +8,12 @@ ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 778ce1a2-e16d-4af5-b15b-77ca4326bdc4
 caps.latest.revision: 5
-ms.openlocfilehash: 5a9e7a9ea13c9a62440b7cd80285751c901bcdd4
-ms.sourcegitcommit: b6871f21bd666f9cd71dd336bb3f844cf472b56c
+ms.openlocfilehash: a09efae487dd34238289a6c13dd7786020f15c7d
+ms.sourcegitcommit: 69abc5ad16e5dd29ddfb1853e266a4bfd1d59d59
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 02/03/2019
-ms.locfileid: "56851514"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57429504"
 ---
 # <a name="stopprocesssample04-c-sample-code"></a>StopProcessSample04 (C#) Sample Code (Código de Exemplo StopProcessSample04 [C#])
 
@@ -21,13 +21,12 @@ Aqui está o completa C# código para o cmdlet de exemplo StopProc04 de exemplo.
 
 > [!NOTE]
 > Pode transferir o C# ficheiro de origem (stopprocesssample04.cs) para este cmdlet Stop-Proc usando o Microsoft Windows Software Development Kit para Windows Vista e o .NET Framework 3.0 Runtime Components. Para obter instruções de transferência, consulte [como instalar o Windows PowerShell e transferir o SDK do Windows PowerShell](/powershell/developer/installing-the-windows-powershell-sdk).
-> Pode transferir o C# ficheiro de origem (stopprocesssample04.cs) para este cmdlet Stop-Proc usando o Microsoft Windows Software Development Kit para Windows Vista e o .NET Framework 3.0 Runtime Components. Para obter instruções de transferência, consulte [como instalar o Windows PowerShell e transferir o SDK do Windows PowerShell](/powershell/developer/installing-the-windows-powershell-sdk).
 >
 > Os arquivos de fonte transferido estão disponíveis no  **\<exemplos do PowerShell >** diretório.
 
 [!code-csharp[StopProcessSample04.cs](../../powershell-sdk-samples/SDK-2.0/csharp/StopProcessSample04/StopProcessSample04.cs#L11-L435 "StopProcessSample04.cs")]
 
-## <a name="see-also"></a>Consulte Também
+## <a name="see-also"></a>Veja Também
 
 [Guia do programador do Windows PowerShell](./windows-powershell-programmer-s-guide.md)
 

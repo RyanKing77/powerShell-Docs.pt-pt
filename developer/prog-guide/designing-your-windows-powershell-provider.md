@@ -10,12 +10,12 @@ helpviewer_keywords:
 - providers [PowerShell Programmer's Guide], designing
 ms.assetid: 11d20319-cc40-4227-b810-4af33372b182
 caps.latest.revision: 10
-ms.openlocfilehash: 518040df4df7260a974bfda252c606a051cc35ad
-ms.sourcegitcommit: b6871f21bd666f9cd71dd336bb3f844cf472b56c
+ms.openlocfilehash: 711a85e9b2eade7b9095d7560f53610e709e380a
+ms.sourcegitcommit: 69abc5ad16e5dd29ddfb1853e266a4bfd1d59d59
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 02/03/2019
-ms.locfileid: "56847412"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57429946"
 ---
 # <a name="designing-your-windows-powershell-provider"></a>Designing Your Windows PowerShell Provider (Criar o seu Fornecedor do Windows PowerShell)
 
@@ -160,11 +160,9 @@ O [System.Management.Automation.Provider.Isecuritydescriptorcmdletprovider](/dot
 |`Get-Acl`|Obtém as informações contidas numa lista de controlo de acesso (ACL), que é parte de um descritor de segurança utilizado para proteger os recursos do sistema operativo, por exemplo, um arquivo ou um objeto.|
 |`Set-Acl`|Define as informações de uma ACL. É na forma de uma instância do [System.Security.Accesscontrol.Objectsecurity](/dotnet/api/System.Security.AccessControl.ObjectSecurity) sobre o item (NS) designado para o caminho especificado. Este cmdlet pode definir as informações sobre arquivos, chaves e subchaves no Registro ou qualquer outro item do fornecedor, se o fornecedor de Windows PowerShell suporta a definição de informações de segurança.|
 
-## <a name="see-also"></a>Consulte Também
+## <a name="see-also"></a>Veja Também
 
 [Criar provedores do Windows PowerShell](./how-to-create-a-windows-powershell-provider.md)
-
-[Como funciona o Windows PowerShell](http://msdn.microsoft.com/en-us/ced30e23-10af-4700-8933-49873bd84d58)
 
 [Como funciona o Windows PowerShell](http://msdn.microsoft.com/en-us/ced30e23-10af-4700-8933-49873bd84d58)
 

@@ -8,19 +8,18 @@ ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 48019ceb-0aeb-4cd1-8b42-79f2c29c3e65
 caps.latest.revision: 5
-ms.openlocfilehash: 616fb571caa4b6830a7cfe9794d0334ee8108653
-ms.sourcegitcommit: b6871f21bd666f9cd71dd336bb3f844cf472b56c
+ms.openlocfilehash: c3d8b4670d32a70ddac121e64488e7756d95449a
+ms.sourcegitcommit: 69abc5ad16e5dd29ddfb1853e266a4bfd1d59d59
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 02/03/2019
-ms.locfileid: "56845480"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57430065"
 ---
 # <a name="stopprocesssample04-vbnet-sample-code"></a>StopProcessSample04 (VB.NET) Sample Code (Código de Exemplo StopProcessSample04 [VB.NET])
 
 Aqui está o código de exemplo do VB.NET completo para o cmdlet de exemplo StopProc04. Este é o código para o `Stop-Process` cmdlet descritas [adicionar conjuntos de parâmetros para um Cmdlet](../cmdlet/adding-parameter-sets-to-a-cmdlet.md). O `Stop-Process` cmdlet foi desenvolvido para parar os processos que são obtidos com o cmdlet Get-Proc (descrito na [criando seu primeiro Cmdlet](../cmdlet/creating-a-cmdlet-without-parameters.md)).
 
 > [!NOTE]
-> Pode transferir o ficheiro de origem do VB.NET (stopprocesssample04.vb) para este cmdlet Stop-Proc usando o Microsoft Windows Software Development Kit para Windows Vista e o .NET Framework 3.0 Runtime Components. Para obter instruções de transferência, consulte [como instalar o Windows PowerShell e transferir o SDK do Windows PowerShell](/powershell/developer/installing-the-windows-powershell-sdk).
 > Pode transferir o ficheiro de origem do VB.NET (stopprocesssample04.vb) para este cmdlet Stop-Proc usando o Microsoft Windows Software Development Kit para Windows Vista e o .NET Framework 3.0 Runtime Components. Para obter instruções de transferência, consulte [como instalar o Windows PowerShell e transferir o SDK do Windows PowerShell](/powershell/developer/installing-the-windows-powershell-sdk).
 >
 > Os arquivos de fonte transferido estão disponíveis no  **\<exemplos do PowerShell >** diretório.

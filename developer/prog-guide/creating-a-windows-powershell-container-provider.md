@@ -11,12 +11,12 @@ helpviewer_keywords:
 - container providers [PowerShell Programmer's Guide]
 ms.assetid: a7926647-0d18-45b2-967e-b31f92004bc4
 caps.latest.revision: 5
-ms.openlocfilehash: 8c111f8f2943043e4ad2a6a8677db4afe1b3cdab
-ms.sourcegitcommit: b6871f21bd666f9cd71dd336bb3f844cf472b56c
+ms.openlocfilehash: e0d83a742eae2bcde2e691860a5f2b3e5862d2de
+ms.sourcegitcommit: 69abc5ad16e5dd29ddfb1853e266a4bfd1d59d59
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 02/03/2019
-ms.locfileid: "56851829"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57430046"
 ---
 # <a name="creating-a-windows-powershell-container-provider"></a>Creating a Windows PowerShell Container Provider (Criar um Fornecedor de Contentores do Windows PowerShell)
 
@@ -25,7 +25,6 @@ Este tópico descreve como criar um fornecedor de Windows PowerShell que pode tr
 Fornecedores que podem trabalhar nos arquivos de dados de múltiplos níveis são referidos como fornecedores de contentor do Windows PowerShell. No entanto, lembre-se de que um fornecedor de contentor do Windows PowerShell pode ser usado apenas quando existe um contentor (não existem contentores aninhadas) com os itens no mesmo. Se existirem contêineres aninhados, em seguida, deve implementar um fornecedor de navegação do Windows PowerShell. Para obter mais informações sobre a implementação de fornecedor de navegação do Windows PowerShell, consulte [criar um fornecedor de navegação do Windows PowerShell](./creating-a-windows-powershell-navigation-provider.md).
 
 > [!NOTE]
-> Pode transferir o C# ficheiro de origem (AccessDBSampleProvider04.cs) para este fornecedor com o Microsoft Windows Software Development Kit para Windows Vista e o .NET Framework 3.0 Runtime Components. Para obter instruções de transferência, consulte [como instalar o Windows PowerShell e transferir o SDK do Windows PowerShell](/powershell/developer/installing-the-windows-powershell-sdk).
 > Pode transferir o C# ficheiro de origem (AccessDBSampleProvider04.cs) para este fornecedor com o Microsoft Windows Software Development Kit para Windows Vista e o .NET Framework 3.0 Runtime Components. Para obter instruções de transferência, consulte [como instalar o Windows PowerShell e transferir o SDK do Windows PowerShell](/powershell/developer/installing-the-windows-powershell-sdk).
 >
 > Os arquivos de fonte transferido estão disponíveis no  **\<exemplos do PowerShell >** diretório.
@@ -418,7 +417,6 @@ Para o código de exemplo completo, consulte [exemplo de código AccessDbProvide
 ## <a name="building-the-windows-powershell-provider"></a>Criando o provedor do Windows PowerShell
 
 Ver [como registar os Cmdlets, fornecedores e alojar aplicações](http://msdn.microsoft.com/en-us/a41e9054-29c8-40ab-bf2b-8ce4e7ec1c8c).
-Ver [como registar os Cmdlets, fornecedores e alojar aplicações](http://msdn.microsoft.com/en-us/a41e9054-29c8-40ab-bf2b-8ce4e7ec1c8c).
 
 ## <a name="testing-the-windows-powershell-provider"></a>Teste o fornecedor do Windows PowerShell
 
@@ -537,8 +535,6 @@ Quando o seu fornecedor de Windows PowerShell foi registado com o Windows PowerS
 [Implementando um provedor de PowerShell do Windows de Item](./creating-a-windows-powershell-item-provider.md)
 
 [Implementando um provedor de PowerShell do Windows de navegação](./creating-a-windows-powershell-navigation-provider.md)
-
-[Como registar os Cmdlets, fornecedores e alojar aplicações](http://msdn.microsoft.com/en-us/a41e9054-29c8-40ab-bf2b-8ce4e7ec1c8c)
 
 [Como registar os Cmdlets, fornecedores e alojar aplicações](http://msdn.microsoft.com/en-us/a41e9054-29c8-40ab-bf2b-8ce4e7ec1c8c)
 
