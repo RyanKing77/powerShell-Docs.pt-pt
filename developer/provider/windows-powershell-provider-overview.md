@@ -8,16 +8,15 @@ ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 82244fbd-07b9-47f3-805c-3fb90ebbf58a
 caps.latest.revision: 13
-ms.openlocfilehash: 31ee7222c35e82ee58d6d56f710792dbc5cb24d7
-ms.sourcegitcommit: b6871f21bd666f9cd71dd336bb3f844cf472b56c
+ms.openlocfilehash: 0d4addc0a064873701ae15c204dbd335f3374ab7
+ms.sourcegitcommit: 5990f04b8042ef2d8e571bec6d5b051e64c9921c
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 02/03/2019
-ms.locfileid: "56848651"
+ms.lasthandoff: 03/12/2019
+ms.locfileid: "57795628"
 ---
 # <a name="windows-powershell-provider-overview"></a>Windows PowerShell Provider Overview (Fornecedor do Windows PowerShell: Descrição Geral)
 
-Um fornecedor de Windows PowerShell permite que qualquer arquivo de dados para serem expostas como um sistema de ficheiros, como se fosse uma unidade montada. Por exemplo, o fornecedor de registo incorporado permite-lhe navegar no Registro, como navegaria o `c` unidade do seu computador. Um provedor também pode substituir a `Item` cmdlets (por exemplo, `Get-Item`, `Set-Item`, etc.), de modo que os dados no seu arquivo de dados podem ser tratados como arquivos e diretórios são processados quando navegar de um sistema de ficheiros. Para obter mais informações sobre fornecedores e unidades e os provedores internos no Windows PowerShell, consulte [about_Providers](/powershell/module/microsoft.powershell.core/about/about_providers).
 Um fornecedor de Windows PowerShell permite que qualquer arquivo de dados para serem expostas como um sistema de ficheiros, como se fosse uma unidade montada. Por exemplo, o fornecedor de registo incorporado permite-lhe navegar no Registro, como navegaria o `c` unidade do seu computador. Um provedor também pode substituir a `Item` cmdlets (por exemplo, `Get-Item`, `Set-Item`, etc.), de modo que os dados no seu arquivo de dados podem ser tratados como arquivos e diretórios são processados quando navegar de um sistema de ficheiros. Para obter mais informações sobre fornecedores e unidades e os provedores internos no Windows PowerShell, consulte [about_Providers](/powershell/module/microsoft.powershell.core/about/about_providers).
 
 ## <a name="providers-and-drives"></a>Fornecedores e unidades

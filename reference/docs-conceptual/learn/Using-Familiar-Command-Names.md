@@ -3,12 +3,12 @@ ms.date: 08/27/2018
 keywords: PowerShell, o cmdlet
 title: Utilizar Nomes de Comandos Familiares
 ms.assetid: 021e2424-c64e-4fa5-aa98-aa6405758d5d
-ms.openlocfilehash: c5665f64fd832eb9c807f413a8e879f63db7f8c6
-ms.sourcegitcommit: 00ff76d7d9414fe585c04740b739b9cf14d711e1
+ms.openlocfilehash: b61d647d882d4b2f7ea423a48319e3c104ce96c7
+ms.sourcegitcommit: 5990f04b8042ef2d8e571bec6d5b051e64c9921c
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 12/14/2018
-ms.locfileid: "53405602"
+ms.lasthandoff: 03/12/2019
+ms.locfileid: "57795679"
 ---
 # <a name="using-familiar-command-names"></a>Utilizar nomes de comandos familiares
 
@@ -22,14 +22,14 @@ A lista seguinte mostra algumas do comum **cmd.exe** e comandos de Unix, que pod
 
 |||||
 |-|-|-|-|
-|cat|dir|montagem|RM|
-|CD|eco|mover|rmdir|
-|chdir|Apagar|popd|modo de suspensão|
-|Limpar|H|PS|Ordenação|
-|CLS|histórico|pushd|Tee|
-|Cópia|kill|pwd|tipo|
-|del|LP|r|escrita|
-|diff|Ls|ren||
+|cat|dir|Montagem|rm|
+|cd|echo|mover|rmdir|
+|chdir|Apagar|popd|Modo de suspensão|
+|Limpar|h|ps|Ordenação|
+|cls|Histórico|pushd|Tee|
+|cópia|kill|pwd|tipo|
+|del|lp|r|Escrita|
+|diff|ls|ren||
 
 O `Get-Alias` cmdlet mostra-lhe o nome real do comando do PowerShell nativo, associado com um alias.
 
@@ -45,7 +45,7 @@ Alias           cls -> Clear-Host
 
 ## <a name="interpreting-standard-aliases"></a>Interpretar os aliases padrão
 
-Os aliases que descrevemos anteriores foram projetados para nome de compatibilidade com outros shells de comando.
+Os aliases que descrevemos anteriormente foram projetados para nome de compatibilidade com outros shells de comando.
 A maioria dos aliases incorporados no PowerShell foram concebidos para fins de brevidade. Nomes mais curtos são mais fáceis de tipo, mas são difíceis de ler se não sabe o que dizem respeito a.
 
 Aliases de PowerShell tentam comprometer entre clareza e questões de brevidade. PowerShell utiliza um conjunto padrão de aliases para comum substantivos e verbos.
@@ -54,23 +54,23 @@ Abreviações de exemplo:
 
 | Substantivo ou verbo | Abreviatura |
 |--------------|--------------|
-| Obter          | G            |
+| Obter          | g            |
 | Definir          | s            |
 | Item         | posso            |
-| Localização     | L            |
+| Localização     | l            |
 | Comando      | cm           |
-| Alias        | Al           |
+| Alias        | al           |
 
 Estes aliases são compreensíveis quando sabe os nomes abreviados.
 
 | Nome do cmdlet    | Alias |
 |----------------|-------|
-| `Get-Item `    | GI    |
+| `Get-Item`     | gi    |
 | `Set-Item`     | si    |
-| `Get-Location` | GL    |
-| `Set-Location` | SL    |
-| `Get-Command`  | GCM   |
-| `Get-Alias`    | GAL   |
+| `Get-Location` | gl    |
+| `Set-Location` | sl    |
+| `Get-Command`  | gcm   |
+| `Get-Alias`    | gal   |
 
 Quando estiver familiarizado com o aliasing de PowerShell, é fácil supor que o **sal** alias refere-se ao `Set-Alias`.
 

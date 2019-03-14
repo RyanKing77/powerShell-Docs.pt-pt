@@ -8,12 +8,12 @@ ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: a0ef5ac9-8254-4832-ace8-84b356c10f08
 caps.latest.revision: 13
-ms.openlocfilehash: 9aff23647e55e8c9c41c54e5b62cedc15fb28a2d
-ms.sourcegitcommit: b6871f21bd666f9cd71dd336bb3f844cf472b56c
+ms.openlocfilehash: ff4fe159eedc47fc69f4d783cd90d2b0e888c0d5
+ms.sourcegitcommit: 5990f04b8042ef2d8e571bec6d5b051e64c9921c
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 02/03/2019
-ms.locfileid: "56847629"
+ms.lasthandoff: 03/12/2019
+ms.locfileid: "57794710"
 ---
 # <a name="background-jobs"></a>Background Jobs (Tarefas em Segundo Plano)
 
@@ -21,7 +21,6 @@ Cmdlets pode executar sua ação internamente ou como um Windows PowerShell*tare
 
 ## <a name="background-jobs-child-jobs-and-the-job-repository"></a>Tarefas em segundo plano, tarefas de subordinado e o repositório de tarefa
 
-O objeto de tarefa que é devolvido pelos cmdlets que suportam as tarefas em segundo plano define a tarefa. (A [tarefa de início](/powershell/module/Microsoft.PowerShell.Core/Start-Job) cmdlet também retorna um objeto de tarefa.) O nome da tarefa, um identificador que é utilizado para especificar a tarefa, as informações de estado e das tarefas subordinadas são incluídos nesta definição. A tarefa não realiza o trabalho. Cada tarefa em segundo plano tem pelo menos uma tarefa filho uma vez que a tarefa subordinada executa o trabalho real. Quando executa um cmdlet para que o trabalho é executado como uma tarefa em segundo plano, o cmdlet tem de adicionar o trabalho e das tarefas subordinadas para um repositório comum, conhecido como o *repositório de tarefa*.
 O objeto de tarefa que é devolvido pelos cmdlets que suportam as tarefas em segundo plano define a tarefa. (A [tarefa de início](/powershell/module/Microsoft.PowerShell.Core/Start-Job) cmdlet também retorna um objeto de tarefa.) O nome da tarefa, um identificador que é utilizado para especificar a tarefa, as informações de estado e das tarefas subordinadas são incluídos nesta definição. A tarefa não realiza o trabalho. Cada tarefa em segundo plano tem pelo menos uma tarefa filho uma vez que a tarefa subordinada executa o trabalho real. Quando executa um cmdlet para que o trabalho é executado como uma tarefa em segundo plano, o cmdlet tem de adicionar o trabalho e das tarefas subordinadas para um repositório comum, conhecido como o *repositório de tarefa*.
 
 Para obter mais informações sobre a forma como as tarefas em segundo plano são processadas na linha de comandos, consulte o seguinte:
@@ -90,6 +89,6 @@ Interrompe uma tarefa de plano de fundo do Windows PowerShell.
 
 Suprime a linha de comandos até que uma ou todas as tarefas de segundo plano do Windows PowerShell em execução na sessão estejam concluídas.
 
-## <a name="see-also"></a>Consulte Também
+## <a name="see-also"></a>Veja Também
 
 [Escrever um Cmdlet do Windows PowerShell](./writing-a-windows-powershell-cmdlet.md)

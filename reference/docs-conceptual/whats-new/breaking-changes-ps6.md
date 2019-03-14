@@ -2,12 +2,12 @@
 ms.date: 05/17/2018
 keywords: PowerShell, core
 title: Alterações recentes ao PowerShell 6.0
-ms.openlocfilehash: d477a9b27e8d5df6653ee40f8b606879b60a80c7
-ms.sourcegitcommit: 548547b2d5fc73e726bb9fec6175d452a351d975
+ms.openlocfilehash: 975c978629f81f0f13a235c3d304e5ec03bae6d0
+ms.sourcegitcommit: 5990f04b8042ef2d8e571bec6d5b051e64c9921c
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 12/20/2018
-ms.locfileid: "53655451"
+ms.lasthandoff: 03/12/2019
+ms.locfileid: "57795696"
 ---
 # <a name="breaking-changes-for-powershell-60"></a>Alterações recentes ao PowerShell 6.0
 
@@ -65,6 +65,10 @@ Devido à utilização de APIs sem suporte, `Microsoft.PowerShell.LocalAccounts`
 ### <a name="-counter-cmdlets"></a>Cmdlets `*-Counter`
 
 Devido à utilização de APIs sem suporte, o `*-Counter` foi removido do PowerShell Core até encontra uma solução melhor.
+
+### <a name="-eventlog-cmdlets"></a>Cmdlets `*-EventLog`
+
+Devido à utilização de APIs sem suporte, o `*-EventLog` foi removido do PowerShell Core. até que seja encontrada uma solução melhor. `Get-WinEvent` e `Create-WinEvent` estão disponíveis para obter e criar eventos no Windows.
 
 ## <a name="enginelanguage-changes"></a>Alterações de motor/linguagem
 
@@ -179,9 +183,9 @@ Alterar códigos de saída de `pwsh.exe` para alinhar com as convenções de Uni
 
 Devido a APIs sem suporte, o `LocalAccounts` módulo e o `Counter` cmdlets no `Diagnostics` módulo foram removidas até encontra uma solução melhor.
 
-### <a name="executing-powershell-script-with-bool-parameter-does-not-work-4036httpsgithubcompowershellpowershellissues4036"></a>Executar script do powershell com o parâmetro de bool não funciona [#4036](https://github.com/PowerShell/PowerShell/issues/4036)
+### <a name="executing-powershell-script-with-bool-parameter-does-not-work-4036httpsgithubcompowershellpowershellissues4036"></a>Executar script do PowerShell com o parâmetro de bool não funciona [#4036](https://github.com/PowerShell/PowerShell/issues/4036)
 
-Anteriormente, utilizando powershell.exe (agora `pwsh.exe`) para executar um script do PowerShell com `-File` não fornecia meios para passar $true/$false como valores de parâmetro. Suporte para $true/$false como valores analisados para parâmetros foi adicionado. Valores de comutador também são suportadas como atualmente documentado sintaxe não funciona.
+Anteriormente, utilizando **powershell.exe** (agora **pwsh.exe**) para executar um script do PowerShell com `-File` não fornecia meios para passar `$true` / `$false` como parâmetro valores. Suporte para `$true` / `$false` como valores analisados para parâmetros foi adicionado. Valores de comutador também são suportadas como atualmente documentado sintaxe não funciona.
 
 ### <a name="remove-clrversion-property-from-psversiontable-4027httpsgithubcompowershellpowershellissues4027"></a>Remova `ClrVersion` propriedade a partir `$PSVersionTable` [#4027](https://github.com/PowerShell/PowerShell/issues/4027)
 
@@ -193,7 +197,7 @@ Ative a utilização de shebang do PowerShell em plataformas não Windows. Isso 
 
 ### <a name="implement-unicode-escape-parsing-3958httpsgithubcompowershellpowershellissues3958"></a>Implementar a análise de escape Unicode [#3958](https://github.com/PowerShell/PowerShell/issues/3958)
 
-`` `u#### `` ou `` `u{####} `` é convertido para o caráter Unicode correspondente. Para a saída de um literal `` `u ``, o acento grave de escape: ``` ``u ```.
+`` `u####`` ou `` `u{####}`` é convertido para o caráter Unicode correspondente. Para a saída de um literal `` `u``, o acento grave de escape: ``` ``u```.
 
 ### <a name="change-new-modulemanifest-encoding-to-utf8nobom-on-non-windows-platforms-3940httpsgithubcompowershellpowershellissues3940"></a>Alteração `New-ModuleManifest` codificação `UTF8NoBOM` em plataformas não Windows [#3940](https://github.com/PowerShell/PowerShell/issues/3940)
 

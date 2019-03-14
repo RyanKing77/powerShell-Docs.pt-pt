@@ -2,12 +2,12 @@
 ms.date: 03/04/2019
 keywords: DSC, powershell, configuração, a configuração
 title: Serviço de Solicitação de DSC
-ms.openlocfilehash: 64c22bc021666026ae58a4c4fb4e3d31b25bae5c
-ms.sourcegitcommit: 69abc5ad16e5dd29ddfb1853e266a4bfd1d59d59
+ms.openlocfilehash: 27effe0cd3b9d90dcfaaf1bd4e38edf3c04c9cfb
+ms.sourcegitcommit: 5990f04b8042ef2d8e571bec6d5b051e64c9921c
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57429963"
+ms.lasthandoff: 03/12/2019
+ms.locfileid: "57794727"
 ---
 # <a name="desired-state-configuration-pull-service"></a>Serviço de solicitação do Desired State Configuration
 
@@ -88,7 +88,7 @@ Os passos seguintes explicam como usar o recurso numa configuração de que conf
 2. Obtenha um certificado SSL para o servidor de solicitação de DSC de uma autoridade de certificação fidedigna, se dentro da sua organização ou uma autoridade pública. O certificado recebido da autoridade geralmente se encontra no formato PFX.
 3. Instalar o certificado no nó que irá tornar-se o servidor de solicitação do DSC na localização predefinida, que deve ser `CERT:\LocalMachine\My`.
    - Tome nota do thumbprint do certificado.
-4. Selecione um GUID a ser utilizado como a chave de registo. Para gerar um com o PowerShell, introduza o seguinte na linha de comandos de PS e prima enter: ` [guid]::newGuid()` ou `New-Guid`. Esta chave será utilizada por nós de cliente como uma chave partilhada para autenticar durante o registo. Para obter mais informações, consulte a secção de chave de registo abaixo.
+4. Selecione um GUID a ser utilizado como a chave de registo. Para gerar um com o PowerShell, introduza o seguinte na linha de comandos de PS e prima enter: `[guid]::newGuid()` ou `New-Guid`. Esta chave será utilizada por nós de cliente como uma chave partilhada para autenticar durante o registo. Para obter mais informações, consulte a secção de chave de registo abaixo.
 5. No ISE do PowerShell, iniciar (F5), o seguinte script de configuração (incluído na pasta de exemplos do **xPSDesiredStateConfiguration** módulo como `Sample_xDscWebServiceRegistration.ps1`). Este script configura o servidor de solicitação.
 
     ```powershell

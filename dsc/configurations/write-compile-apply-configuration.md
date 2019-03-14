@@ -2,12 +2,12 @@
 ms.date: 12/12/2018
 keywords: DSC, powershell, configuração, serviço, configuração
 title: Escrever, Compilar e Aplicar uma Configuração
-ms.openlocfilehash: fa4d98fd12202439ba7025fd8af3fa398653ca05
-ms.sourcegitcommit: b6871f21bd666f9cd71dd336bb3f844cf472b56c
+ms.openlocfilehash: c884af9d92ac375457d6eb75d815ae9a9159e273
+ms.sourcegitcommit: 5990f04b8042ef2d8e571bec6d5b051e64c9921c
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 02/03/2019
-ms.locfileid: "55684417"
+ms.lasthandoff: 03/12/2019
+ms.locfileid: "57795424"
 ---
 > Aplica-se a: Windows PowerShell 4.0, Windows PowerShell 5.0
 
@@ -60,7 +60,9 @@ Executar a configuração, como uma função, irá compilar um arquivo de ". MOF
 Para executar a configuração, precisa *origem ponto* seu script de "HelloWorld.ps1" no âmbito atual.
 Para obter mais informações, consulte [about_Scripts](/powershell/module/microsoft.powershell.core/about/about_scripts?view=powershell-6#script-scope-and-dot-sourcing).
 
+<!-- markdownlint-disable MD038 -->
 *Origem de dot* seu script de "HelloWorld.ps1" ao escrever no caminho onde armazenou, depois do `. ` (ponto, espaço). Pode, em seguida, execute a configuração ao chamá-la como uma função.
+<!-- markdownlint-enable MD038 -->
 
 ```powershell
 . C:\Scripts\WebsiteTest.ps1

@@ -11,12 +11,12 @@ helpviewer_keywords:
 - container providers [PowerShell Programmer's Guide]
 ms.assetid: a7926647-0d18-45b2-967e-b31f92004bc4
 caps.latest.revision: 5
-ms.openlocfilehash: e0d83a742eae2bcde2e691860a5f2b3e5862d2de
-ms.sourcegitcommit: 69abc5ad16e5dd29ddfb1853e266a4bfd1d59d59
+ms.openlocfilehash: de75e19abc0ee440e724fba7bf578ce240fbf2df
+ms.sourcegitcommit: 5990f04b8042ef2d8e571bec6d5b051e64c9921c
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57430046"
+ms.lasthandoff: 03/12/2019
+ms.locfileid: "57795458"
 ---
 # <a name="creating-a-windows-powershell-container-provider"></a>Creating a Windows PowerShell Container Provider (Criar um Fornecedor de Contentores do Windows PowerShell)
 
@@ -40,7 +40,7 @@ Aqui está uma lista das secções seguintes deste tópico. Se não estiver fami
 
 - [Definir uma classe de fornecedor de contentor do Windows PowerShell](#Defining-a-Windows-PowerShell-Container-Provider-Class)
 
-- [Definir funcionalidade de Base]()
+- [Definir funcionalidade de Base](#defining-base-functionality)
 
 - [A obter itens subordinados](#Retrieving-Child-Items)
 
@@ -69,8 +69,6 @@ Aqui está uma lista das secções seguintes deste tópico. Se não estiver fami
 - [Os parâmetros dinâmicos para a anexar o `Copy-Item` Cmdlet](#Attaching-Dynamic-Parameters-to-the-Copy-Item-Cmdlet)
 
 - [Exemplo de código](#Code-Sample)
-
-- [Definir tipos de objeto e formatação]()
 
 - [Criando o provedor do Windows PowerShell](#Building-the-Windows-PowerShell-Provider)
 

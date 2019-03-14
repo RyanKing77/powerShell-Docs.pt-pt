@@ -8,12 +8,12 @@ ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 77f94326-8ffe-4d40-bd2a-b79fb0b4a4e5
 caps.latest.revision: 8
-ms.openlocfilehash: e8185eb7221a3be0445eddc537dbca89478c74f2
-ms.sourcegitcommit: b6871f21bd666f9cd71dd336bb3f844cf472b56c
+ms.openlocfilehash: 2d634e7638ec0e0117d65ca0b2d08e68f0068a03
+ms.sourcegitcommit: 5990f04b8042ef2d8e571bec6d5b051e64c9921c
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 02/03/2019
-ms.locfileid: "56849470"
+ms.lasthandoff: 03/12/2019
+ms.locfileid: "57794914"
 ---
 # <a name="defining-default-member-sets-for-objects"></a>Defining Default Member Sets for Objects (Predefinir Conjuntos de Membros para Objetos)
 
@@ -21,7 +21,6 @@ O conjunto de membro de PSStandardMembers é utilizado pelo Windows PowerShell p
 
 ## <a name="member-set-for-systemdiagnosticsprocess"></a>Conjunto de membro para Diagnostics
 
-No exemplo a seguir, o conjunto de membro PSStandardMembers define a propriedade de DefaultDisplayPropertySet definida para [Diagnostics](/dotnet/api/System.Diagnostics.Process) objetos. Este conjunto de propriedade é utilizado pelos [Format-List](/powershell/module/Microsoft.PowerShell.Utility/Format-List) cmdlet.
 No exemplo a seguir, o conjunto de membro PSStandardMembers define a propriedade de DefaultDisplayPropertySet definida para [Diagnostics](/dotnet/api/System.Diagnostics.Process) objetos. Este conjunto de propriedade é utilizado pelos [Format-List](/powershell/module/Microsoft.PowerShell.Utility/Format-List) cmdlet.
 
 ```xml
@@ -44,7 +43,6 @@ No exemplo a seguir, o conjunto de membro PSStandardMembers define a propriedade
   </MemberSet>
 ```
 
-O resultado seguinte mostra as propriedades padrão retornadas pela [Format-List](/powershell/module/Microsoft.PowerShell.Utility/Format-List) cmdlet. Apenas os `Id`, `Handles`, `CPU`, e `Name` propriedades são devolvidas para cada objeto de processo.
 O resultado seguinte mostra as propriedades padrão retornadas pela [Format-List](/powershell/module/Microsoft.PowerShell.Utility/Format-List) cmdlet. Apenas os `Id`, `Handles`, `CPU`, e `Name` propriedades são devolvidas para cada objeto de processo.
 
 ```powershell

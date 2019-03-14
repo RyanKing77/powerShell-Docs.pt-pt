@@ -8,12 +8,12 @@ ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 7674636e-a0f2-4587-bfc5-dd3e6ce5489e
 caps.latest.revision: 6
-ms.openlocfilehash: 8874cc18416937c4d3cb30d801f2714410304c8c
-ms.sourcegitcommit: b6871f21bd666f9cd71dd336bb3f844cf472b56c
+ms.openlocfilehash: 5b6ae54ee6c843996c875189b6ee553be5e4f614
+ms.sourcegitcommit: 5990f04b8042ef2d8e571bec6d5b051e64c9921c
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 02/03/2019
-ms.locfileid: "56850226"
+ms.lasthandoff: 03/12/2019
+ms.locfileid: "57794387"
 ---
 # <a name="how-updatable-help-works"></a>How Updatable Help Works (Como Funciona a Ajuda Atualizável)
 
@@ -21,7 +21,6 @@ Este tópico explica como processos ajuda Atualizável o ficheiro XML de HelpInf
 
 ## <a name="the-update-help-process"></a>O processo de atualização-Help
 
-A lista seguinte descreve as ações do [Update-Help](/powershell/module/Microsoft.PowerShell.Core/Update-Help) cmdlet quando um utilizador executa um comando para atualizar os ficheiros de ajuda para um módulo numa determinada cultura da interface do Usuário.
 A lista seguinte descreve as ações do [Update-Help](/powershell/module/Microsoft.PowerShell.Core/Update-Help) cmdlet quando um utilizador executa um comando para atualizar os ficheiros de ajuda para um módulo numa determinada cultura da interface do Usuário.
 
 1. `Update-Help` obtém o ficheiro XML de HelpInfo remoto do local especificado pelo valor da **HelpInfoURI** da chave no manifesto do módulo e valida o ficheiro no esquema. (Para ver o esquema, consulte [esquema de XML HelpInfo](./helpinfo-xml-schema.md).) Em seguida, `Update-Help` procura um ficheiro XML de HelpInfo local para o módulo no diretório de módulo no computador do usuário.
@@ -36,7 +35,6 @@ A lista seguinte descreve as ações do [Update-Help](/powershell/module/Microso
 
 ## <a name="the-save-help-process"></a>O processo de Save-Help
 
-A lista seguinte descreve as ações do [Save-Help](/powershell/module/Microsoft.PowerShell.Core/Save-Help) e [Update-Help](/powershell/module/Microsoft.PowerShell.Core/Update-Help) cmdlets quando um utilizador executa comandos para atualizar os arquivos da ajuda numa partilha de ficheiros e, em seguida, utilizar esses ficheiros para atualizar os ficheiros de ajuda sobre o computador do usuário.
 A lista seguinte descreve as ações do [Save-Help](/powershell/module/Microsoft.PowerShell.Core/Save-Help) e [Update-Help](/powershell/module/Microsoft.PowerShell.Core/Update-Help) cmdlets quando um utilizador executa comandos para atualizar os arquivos da ajuda numa partilha de ficheiros e, em seguida, utilizar esses ficheiros para atualizar os ficheiros de ajuda sobre o computador do usuário.
 
 O `Save-Help` cmdlet executa as seguintes ações em resposta a um comando para salvar os arquivos de ajuda para um módulo numa partilha de ficheiros especificada pela **DestinationPath** parâmetro.

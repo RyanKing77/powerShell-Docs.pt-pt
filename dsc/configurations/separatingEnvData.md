@@ -2,12 +2,12 @@
 ms.date: 06/12/2017
 keywords: DSC, powershell, configuração, a configuração
 title: Separar dados de configuração e de ambiente
-ms.openlocfilehash: 24a92e5e4f15959498b57a1488a688d5548f3585
-ms.sourcegitcommit: 00ff76d7d9414fe585c04740b739b9cf14d711e1
+ms.openlocfilehash: 305a766fec81d4ea4afce187756188b067a2048b
+ms.sourcegitcommit: 5990f04b8042ef2d8e571bec6d5b051e64c9921c
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 12/14/2018
-ms.locfileid: "53404812"
+ms.lasthandoff: 03/12/2019
+ms.locfileid: "57794931"
 ---
 # <a name="separating-configuration-and-environment-data"></a>Separar dados de configuração e de ambiente
 
@@ -88,7 +88,7 @@ Mode                LastWriteTime         Length Name
 
 Vamos examinar um exemplo completo que utiliza uma configuração única para configurar ambientes de desenvolvimento e produção de um Web site. O ambiente de desenvolvimento, o IIS e SQL Server são instalados num único nós. No ambiente de produção, o IIS e o SQL Server estão instalados em nós separados. Vamos utilizar um ficheiro de. psd1 de dados de configuração para especificar os dados para os dois ambientes diferentes.
 
- ### <a name="configuration-data-file"></a>Ficheiro de dados de configuração
+### <a name="configuration-data-file"></a>Ficheiro de dados de configuração
 
 Vamos definir os dados de ambiente de desenvolvimento e produção num arquivo chamado `DevProdEnvData.psd1` da seguinte forma:
 
@@ -312,7 +312,7 @@ configuration WebsiteConfig
 ```
 
 
-## <a name="see-also"></a>Consulte Também
+## <a name="see-also"></a>Veja Também
 - [Utilizar dados de configuração](configData.md)
 - [Opções de credenciais nos dados de configuração](configDataCredentials.md)
 - [Configurações de DSC](configurations.md)

@@ -2,14 +2,14 @@
 ms.date: 06/12/2017
 keywords: DSC, powershell, configuração, a configuração
 title: Criação de um recurso de DSCC#
-ms.openlocfilehash: dcda36d27f2191f140eaaf209e1c85263d2cd8e1
-ms.sourcegitcommit: 00ff76d7d9414fe585c04740b739b9cf14d711e1
+ms.openlocfilehash: 6f2bb4d411237f13e2735c2e5f630b4f40dc6842
+ms.sourcegitcommit: 5990f04b8042ef2d8e571bec6d5b051e64c9921c
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 12/14/2018
-ms.locfileid: "53404842"
+ms.lasthandoff: 03/12/2019
+ms.locfileid: "57794234"
 ---
-# <a name="authoring-a-dsc-resource-in-c"></a>Criação de um recurso de DSCC#
+# <a name="authoring-a-dsc-resource-in-c"></a>Criação de um recurso de DSC no C\#
 
 > Aplica-se a: Windows PowerShell 4.0, Windows PowerShell 5.0
 
@@ -277,7 +277,7 @@ $env: psmodulepath (folder)
                 |- MSFT_XDemoFile.schema.mof (file, required)
 ```
 
-### <a name="see-also"></a>Consulte Também
+### <a name="see-also"></a>Veja Também
 #### <a name="concepts"></a>Conceitos
 [Escrever um recurso personalizado do DSC com o MOF](authoringResourceMOF.md)
 #### <a name="other-resources"></a>Outros Recursos

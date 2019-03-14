@@ -8,12 +8,12 @@ ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 5d4c8f84-ebd2-4405-bb10-cfc5400d4ad6
 caps.latest.revision: 6
-ms.openlocfilehash: 35efd36fd70c209e3cbeb9eff0ddf978615fffd6
-ms.sourcegitcommit: b6871f21bd666f9cd71dd336bb3f844cf472b56c
+ms.openlocfilehash: 49344d32dfcef36a904772b4a7237646a63cb12a
+ms.sourcegitcommit: 5990f04b8042ef2d8e571bec6d5b051e64c9921c
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 02/03/2019
-ms.locfileid: "56845599"
+ms.lasthandoff: 03/12/2019
+ms.locfileid: "57794642"
 ---
 # <a name="windows-powershell-formatting-files"></a>Windows PowerShell Formatting Files (Ficheiros de Formatação do Windows PowerShell)
 
@@ -26,16 +26,13 @@ DotNetTypes.Format.ps1xml define a exibição dos diversos objetos .NET, como ob
 FileSystem.Format.ps1xml define a exibição de objetos de sistema de ficheiros como objetos de diretório e arquivo.
 
 Define o Help.Format.ps1xml diferentes modos de exibição utilizados pela [Get-Help](/powershell/module/Microsoft.PowerShell.Core/Get-Help) cmdlet, como as vistas detalhadas, de completo, parâmetros e exemplo.
-Define as exibições diferentes utilizadas pelos [Get-Help](/powershell/module/Microsoft.PowerShell.Core/Get-Help) cmdlet, tais como as vistas completas, parâmetros e exemplo detalhadas,.
 
 PowerShellCore.Format.ps1xml define a apresentação dos objetos gerados por cmdlets de núcleo do Windows PowerShell, como aos objectos devolvidos pelos [Get-Member](/powershell/module/Microsoft.PowerShell.Utility/Get-Member) e [Get-histórico](/powershell/module/Microsoft.PowerShell.Core/Get-History) cmdlets.
-Define a apresentação dos objetos gerados por cmdlets de núcleo do Windows PowerShell, como aos objectos devolvidos pelos [Get-Member](/powershell/module/Microsoft.PowerShell.Utility/Get-Member) e [Get-histórico](/powershell/module/Microsoft.PowerShell.Core/Get-History) cmdlets.
 
 PowerShellTrace.Format.ps1xml define a exibição dos objetos de rastreio, como aquelas geradas pela [rastreio-Command](/powershell/module/Microsoft.PowerShell.Utility/Trace-Command) cmdlet.
-Define a exibição dos objetos de rastreio, como aquelas geradas pela [rastreio-Command](/powershell/module/Microsoft.PowerShell.Utility/Trace-Command) cmdlet.
 
 Registry.Format.ps1xml define a exibição de objetos de registo como objetos de chave e a entrada.
 
-## <a name="see-also"></a>Consulte Também
+## <a name="see-also"></a>Veja Também
 
 [Escrever um Cmdlet do Windows PowerShell](../cmdlet/writing-a-windows-powershell-cmdlet.md)

@@ -8,12 +8,12 @@ ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 4d68a8f3-fba0-44c5-97b9-9fc191d269a5
 caps.latest.revision: 13
-ms.openlocfilehash: 2bf2447eba07b74f8cc14c9820fc1c1774370b2f
-ms.sourcegitcommit: b6871f21bd666f9cd71dd336bb3f844cf472b56c
+ms.openlocfilehash: c11e50913d2654b786e0e8cfeaf41454999bf75e
+ms.sourcegitcommit: 5990f04b8042ef2d8e571bec6d5b051e64c9921c
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 02/03/2019
-ms.locfileid: "56845417"
+ms.lasthandoff: 03/12/2019
+ms.locfileid: "57794982"
 ---
 # <a name="strongly-encouraged-development-guidelines"></a>Strongly Encouraged Development Guidelines (Diretrizes de Desenvolvimento Altamente Recomendadas)
 
@@ -107,7 +107,6 @@ Se o parâmetro tem de diferenciar os 3 valores: $true, $false e "não especific
 
 #### <a name="support-arrays-for-parameters"></a>Matrizes de suporte para parâmetros
 
-Com freqüência, os utilizadores tem de efetuar a mesma operação em relação a vários argumentos. Para estes utilizadores, um cmdlet deve aceitar uma matriz como parâmetro de entrada para que um usuário pode passar os argumentos para o parâmetro como uma variável do Windows PowerShell. Por exemplo, o [Get-Process](/powershell/module/Microsoft.PowerShell.Management/Get-Process) cmdlet utiliza uma matriz de cadeias de caracteres que identificam os nomes dos processos para obter.
 Com freqüência, os utilizadores tem de efetuar a mesma operação em relação a vários argumentos. Para estes utilizadores, um cmdlet deve aceitar uma matriz como parâmetro de entrada para que um usuário pode passar os argumentos para o parâmetro como uma variável do Windows PowerShell. Por exemplo, o [Get-Process](/powershell/module/Microsoft.PowerShell.Management/Get-Process) cmdlet utiliza uma matriz de cadeias de caracteres que identificam os nomes dos processos para obter.
 
 #### <a name="support-the-passthru-parameter"></a>Suporta o parâmetro PassThru

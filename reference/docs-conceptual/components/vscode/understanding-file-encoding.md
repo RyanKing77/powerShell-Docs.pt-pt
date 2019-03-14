@@ -2,12 +2,12 @@
 title: Compreender a codificação de ficheiros no VSCode e no PowerShell
 description: Configurar a codificação do ficheiro no VSCode e no PowerShell
 ms.date: 02/28/2019
-ms.openlocfilehash: 9cf445ebd0c2bb2dbdf4438f02dafe3df3a5d1e2
-ms.sourcegitcommit: 69abc5ad16e5dd29ddfb1853e266a4bfd1d59d59
+ms.openlocfilehash: 73e766832d56a08bd5ef16df11899a0aab0badae
+ms.sourcegitcommit: 5990f04b8042ef2d8e571bec6d5b051e64c9921c
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57429810"
+ms.lasthandoff: 03/12/2019
+ms.locfileid: "57795127"
 ---
 # <a name="understanding-file-encoding-in-vscode-and-powershell"></a>Compreender a codificação de ficheiros no VSCode e no PowerShell
 
@@ -55,11 +55,13 @@ Quando esses bytes são descodificados como Windows 1252, eles são interpretado
 
 Algumas seqüências de caracteres estranho que poderá ver incluem:
 
+<!-- markdownlint-disable MD038 -->
 - `â€“` em vez de `–`
 - `â€”` em vez de `—`
 - `Ã„2` em vez de `Ä`
 - `Â` em vez de ` ` (um espaço sem quebra)
 - `Ã©` em vez de `é`
+<!-- markdownlint-enable MD038 -->
 
 Neste útil [referência](https://www.i18nqa.com/debug/utf8-debug.html) apresenta uma lista de padrões comuns que indicar um problema de codificação UTF-8/Windows-1252.
 
