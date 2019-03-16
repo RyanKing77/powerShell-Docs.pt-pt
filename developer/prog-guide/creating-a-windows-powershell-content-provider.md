@@ -11,12 +11,12 @@ helpviewer_keywords:
 - providers [PowerShell Programmer's Guide], content provider
 ms.assetid: 3da88ff9-c4c7-4ace-aa24-0a29c8cfa060
 caps.latest.revision: 6
-ms.openlocfilehash: 1bccbfab55f4ba4476678b130bd9db91eed7df80
-ms.sourcegitcommit: 5990f04b8042ef2d8e571bec6d5b051e64c9921c
+ms.openlocfilehash: 35c68a2b0f8c9bd1ed4fc54c41aa427ddd75907c
+ms.sourcegitcommit: caac7d098a448232304c9d6728e7340ec7517a71
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 03/12/2019
-ms.locfileid: "57795322"
+ms.lasthandoff: 03/16/2019
+ms.locfileid: "58056639"
 ---
 # <a name="creating-a-windows-powershell-content-provider"></a>Creating a Windows PowerShell Content Provider (Criar um Fornecedor de Conteúdos do Windows PowerShell)
 
@@ -206,9 +206,9 @@ As seguintes condições podem aplicar-se para uma implementação do [System.Ma
 
 - Por predefinição, substituições deste método não devem limpar o conteúdo de objetos que estão ocultos do utilizador, a menos que o [System.Management.Automation.Provider.Cmdletprovider.Force*](/dotnet/api/System.Management.Automation.Provider.CmdletProvider.Force) estiver definida como `true`. Deve ser escrito um erro se o caminho representa um item que está oculto do usuário e [System.Management.Automation.Provider.Cmdletprovider.Force*](/dotnet/api/System.Management.Automation.Provider.CmdletProvider.Force) está definida como `false`.
 
-- Sua implementação do [System.Management.Automation.Provider.Icontentcmdletprovider.Clearcontent*](/dotnet/api/System.Management.Automation.Provider.IContentCmdletProvider.ClearContent) deve chamar o método [System.Management.Automation.Provider.Cmdletprovider.Shouldprocess* ](/dotnet/api/System.Management.Automation.Provider.CmdletProvider.ShouldProcess) e verifique se o valor de retorno antes de fazer alterações ao arquivo de dados. Este método é usado para confirmar a execução de uma operação quando é efetuada uma alteração para o armazenamento de dados, como limpar o conteúdo. O [System.Management.Automation.Provider.Cmdletprovider.Shouldprocess*](/dotnet/api/System.Management.Automation.Provider.CmdletProvider.ShouldProcess) método envia o nome do recurso a ser alterados ao usuário, com o tempo de execução do Windows PowerShell tratamento de definições de linha de comandos ou preferência variáveis de determinar o que deverá ser apresentado.
+- Sua implementação do [System.Management.Automation.Provider.Icontentcmdletprovider.Clearcontent*](/dotnet/api/System.Management.Automation.Provider.IContentCmdletProvider.ClearContent) deve chamar o método [System.Management.Automation.Provider.Cmdletprovider.ShouldProcess](/dotnet/api/System.Management.Automation.Provider.CmdletProvider.ShouldProcess) e verifique se o valor de retorno antes de fazer alterações ao arquivo de dados. Este método é usado para confirmar a execução de uma operação quando é efetuada uma alteração para o armazenamento de dados, como limpar o conteúdo. O [System.Management.Automation.Provider.Cmdletprovider.ShouldProcess](/dotnet/api/System.Management.Automation.Provider.CmdletProvider.ShouldProcess) método envia o nome do recurso a ser alterados ao usuário, com o tempo de execução do Windows PowerShell tratamento de definições de linha de comandos ou preferência variáveis de determinar o que deverá ser apresentado.
 
-  Após a chamada para [System.Management.Automation.Provider.Cmdletprovider.Shouldprocess*](/dotnet/api/System.Management.Automation.Provider.CmdletProvider.ShouldProcess) devolve `true`, o [System.Management.Automation.Provider.Icontentcmdletprovider.Clearcontent* ](/dotnet/api/System.Management.Automation.Provider.IContentCmdletProvider.ClearContent) método deve chamar o [System.Management.Automation.Provider.Cmdletprovider.Shouldcontinue*](/dotnet/api/System.Management.Automation.Provider.CmdletProvider.ShouldContinue) método. Este método envia uma mensagem ao utilizador para permitir que os comentários verificar se a operação deve ser contínuo. A chamada para [System.Management.Automation.Provider.Cmdletprovider.Shouldcontinue*](/dotnet/api/System.Management.Automation.Provider.CmdletProvider.ShouldContinue) permite que uma verificação adicional para as modificações de sistema potencialmente perigosas.
+  Após a chamada para [System.Management.Automation.Provider.Cmdletprovider.ShouldProcess](/dotnet/api/System.Management.Automation.Provider.CmdletProvider.ShouldProcess) devolve `true`, o [System.Management.Automation.Provider.Icontentcmdletprovider.Clearcontent*](/dotnet/api/System.Management.Automation.Provider.IContentCmdletProvider.ClearContent) método deve chamar o [System.Management.Automation.Provider.Cmdletprovider.ShouldContinue](/dotnet/api/System.Management.Automation.Provider.CmdletProvider.ShouldContinue) método. Este método envia uma mensagem ao utilizador para permitir que os comentários verificar se a operação deve ser contínuo. A chamada para [System.Management.Automation.Provider.Cmdletprovider.ShouldContinue](/dotnet/api/System.Management.Automation.Provider.CmdletProvider.ShouldContinue) permite que uma verificação adicional para as modificações de sistema potencialmente perigosas.
 
 ## <a name="attaching-dynamic-parameters-to-the-clear-content-cmdlet"></a>Anexar parâmetros dinâmicos para o Cmdlet de Clear-conteúdo
 

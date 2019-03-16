@@ -8,18 +8,18 @@ ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 45c45800-a87d-456e-b07c-12d4d8c27c67
 caps.latest.revision: 8
-ms.openlocfilehash: 431e5d8407b9f689a5224b329d8c7b52802e19e1
-ms.sourcegitcommit: b6871f21bd666f9cd71dd336bb3f844cf472b56c
+ms.openlocfilehash: 2c6a3d678ca68dc0d189f6ab981fdea5fef894cb
+ms.sourcegitcommit: caac7d098a448232304c9d6728e7340ec7517a71
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 02/03/2019
-ms.locfileid: "56846054"
+ms.lasthandoff: 03/16/2019
+ms.locfileid: "58056486"
 ---
 # <a name="displayerror-element-format"></a>DisplayError Element (Format) (Elemento DisplayError [Formatação])
 
 Especifica que a cadeia de caracteres #ERR é apresentada quando ocorre um erro de apresentar um conjunto de dados.
 
-Elemento de configuração do DisplayError elemento (formato) DefaultSettings elemento (formato) (Frmat)
+Elemento de configuração do DisplayError elemento (formato) DefaultSettings elemento (formato) (formato)
 
 ## <a name="syntax"></a>Sintaxe
 

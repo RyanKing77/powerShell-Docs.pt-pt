@@ -8,18 +8,18 @@ ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 71c3f1f6-6fe2-42f1-8260-6974d3871748
 caps.latest.revision: 11
-ms.openlocfilehash: f857f5944b9e971215a06d6f5c39f7c22c6cf99f
-ms.sourcegitcommit: b6871f21bd666f9cd71dd336bb3f844cf472b56c
+ms.openlocfilehash: 7d526372cf80327b3fb9b79b6e83429c57780183
+ms.sourcegitcommit: caac7d098a448232304c9d6728e7340ec7517a71
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 02/03/2019
-ms.locfileid: "56844920"
+ms.lasthandoff: 03/16/2019
+ms.locfileid: "58059019"
 ---
 # <a name="propertyname-element-for-selectioncondition-for-entryselectedby-for-listcontrol-format"></a>PropertyName Element for SelectionCondition for EntrySelectedBy for ListControl (Format) (Elemento PropertyName para SelectionCondition para EntrySelectedBy para ListControl [Formatação])
 
 Especifica a propriedade do .NET que aciona a condição. Quando esta propriedade está presente ou quando ela é avaliada como `true`, a condição é cumprida e é utilizada a entrada da lista.
 
-O elemento (formato) ViewDefinitions elemento (formato) vista elemento (formato) ListControl elemento (formato) ListEntries elemento (formato) ListEntry elemento (formato) EntrySelectedBy elemento de configuração para o elemento de SelectionCondition ListEntry (formato) para EntrySelectedBy para o elemento de PropertyName ListEntry (formato) para SelectionCondition para EmtrySelectedBy para ListEntry (formato)
+O elemento (formato) ViewDefinitions elemento (formato) vista elemento (formato) ListControl elemento (formato) ListEntries elemento (formato) ListEntry elemento (formato) EntrySelectedBy elemento de configuração para o elemento de SelectionCondition ListEntry (formato) para EntrySelectedBy para o elemento de PropertyName ListEntry (formato) para SelectionCondition para EntrySelectedBy para ListEntry (formato)
 
 ## <a name="syntax"></a>Sintaxe
 
@@ -55,7 +55,7 @@ A condição de seleção tem de especificar o nome de pelo menos uma propriedad
 
 Para obter mais informações sobre os outros componentes de uma vista de lista, consulte [Criar vista de lista](./creating-a-list-view.md).
 
-## <a name="see-also"></a>Consulte Também
+## <a name="see-also"></a>Veja Também
 
 [Criar uma vista de lista](./creating-a-list-view.md)
 

@@ -3,16 +3,16 @@ ms.date: 09/11/2018
 contributor: JKeithB
 keywords: Galeria do powershell, psgallery
 title: Transferência manual de pacotes
-ms.openlocfilehash: 57baa14089b803f58c42ccb54553ecace841e34b
-ms.sourcegitcommit: e24525046dd37166b9d83eeecdc534726316f429
+ms.openlocfilehash: af628f99befe50c16c2c0c60f1a352647af34ff4
+ms.sourcegitcommit: caac7d098a448232304c9d6728e7340ec7517a71
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 12/01/2018
-ms.locfileid: "52742827"
+ms.lasthandoff: 03/16/2019
+ms.locfileid: "58054884"
 ---
 # <a name="manual-package-download"></a>Transferência manual de pacotes
 
-A galeria do Powershell suporta baixar um pacote do Web site diretamente, sem utilizar os cmdlets do PowerShellGet. Pode baixar qualquer pacote como um ficheiro de pacote (. nupkg) do NuGet, que, em seguida, pode copiar para um repositório interno.
+A galeria do PowerShell suporta baixar um pacote do Web site diretamente, sem utilizar os cmdlets do PowerShellGet. Pode baixar qualquer pacote como um ficheiro de pacote (. nupkg) do NuGet, que, em seguida, pode copiar para um repositório interno.
 
 > [!NOTE]
 > A transferência de pacotes manual é **não** pretende ser uma substituição para o cmdlet Install-Module.

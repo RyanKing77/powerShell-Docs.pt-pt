@@ -2,12 +2,12 @@
 ms.date: 06/12/2017
 keywords: DSC, powershell, configuração, a configuração
 title: Configurar um cliente de solicitação através de nomes de configuração no PowerShell 5.0 e posterior
-ms.openlocfilehash: fd038a105da7a83ecad9b571e611b65c8ec847b3
-ms.sourcegitcommit: b6871f21bd666f9cd71dd336bb3f844cf472b56c
+ms.openlocfilehash: d591e2a757130ccecaf4eaf9f363f607fca82b93
+ms.sourcegitcommit: caac7d098a448232304c9d6728e7340ec7517a71
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 02/03/2019
-ms.locfileid: "55688078"
+ms.lasthandoff: 03/16/2019
+ms.locfileid: "58058198"
 ---
 # <a name="set-up-a-pull-client-using-configuration-names-in-powershell-50-and-later"></a>Configurar um cliente de solicitação através de nomes de configuração no PowerShell 5.0 e posterior
 
@@ -23,8 +23,9 @@ Antes de configurar um cliente de solicitação, deve configurar um servidor de 
 
 Cada nó de destino pode ser configurado para transferir configurações, recursos e até mesmo comunicou o seu estado. As secções abaixo mostram-lhe como configurar um cliente de solicitação com uma partilha SMB ou o servidor de solicitação de DSC de HTTP. Quando atualiza LCM o nó, será contactado por para a localização configurada para transferir quaisquer configurações atribuídas. Se não existirem quaisquer recursos necessários no nó, será transferida-los automaticamente na localização de configurado. Se o nó está configurado com um [Report Server](reportServer.md), em seguida, esse irá comunicar o estado da operação.
 
-> **Tenha em atenção**: Este tópico aplica-se para PowerShell 5.0.
-Para obter informações sobre como configurar um cliente de solicitação no PowerShell 4.0, consulte [configurar um cliente de solicitação com o ID de configuração no PowerShell 4.0](pullClientConfigID4.md)
+> [!NOTE]
+> Este tópico aplica-se para PowerShell 5.0.
+> Para obter informações sobre como configurar um cliente de solicitação no PowerShell 4.0, consulte [configurar um cliente de solicitação com o ID de configuração no PowerShell 4.0](pullClientConfigID4.md)
 
 ## <a name="configure-the-pull-client-lcm"></a>Configurar o cliente de solicitação LCM
 
@@ -49,7 +50,8 @@ O script a seguir configura o LCM para configurações de solicitação de um se
 - No script, o **ConfigurationRepositoryWeb** bloco define o servidor de solicitação. O **ServerURL** propriedade especifica o ponto final para o servidor de solicitação.
 
 - O **RegistrationKey** propriedade é uma chave partilhada entre todos os nós de cliente para um servidor de solicitação e esse servidor de solicitação. O mesmo valor é armazenado num arquivo no servidor de solicitação.
-  > **Tenha em atenção**: As chaves de registo só funcionam com o **web** extrair servidores. Ainda tem de utilizar **ConfigurationID** com um **SMB** servidor de solicitação.
+  > [!NOTE]
+  > As chaves de registo só funcionam com o **web** extrair servidores. Ainda tem de utilizar **ConfigurationID** com um **SMB** servidor de solicitação.
   > Para obter informações sobre como configurar um servidor de solicitação usando **ConfigurationID**, consulte [como configurar um cliente de solicitação através do ID de configuração](pullClientConfigId.md)
 
 - O **ConfigurationNames** propriedade é uma matriz que especifica os nomes das configurações se destina o nó de cliente.

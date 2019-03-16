@@ -8,12 +8,12 @@ ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: e199bba3-90d3-41ca-9d78-cb502e58508d
 caps.latest.revision: 6
-ms.openlocfilehash: c8b3f907a80d1f6125a5ac04236245503db76ed0
-ms.sourcegitcommit: ce46e5098786e19d521b4bf948ff62d2b90bc53e
+ms.openlocfilehash: 9b4d83aeaf45eab1365dec5fbf48c3c796ed5bde
+ms.sourcegitcommit: caac7d098a448232304c9d6728e7340ec7517a71
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 03/02/2019
-ms.locfileid: "57251307"
+ms.lasthandoff: 03/16/2019
+ms.locfileid: "58057134"
 ---
 # <a name="security-parameters"></a>Security Parameters (Parâmetros de Segurança)
 
@@ -29,7 +29,7 @@ A tabela seguinte lista os nomes recomendados e a funcionalidade para os parâme
 |**CertStoreLocation**<br>Tipo de dados: Cadeia (de carateres)|Implemente este parâmetro para que o utilizador pode especificar a localização do arquivo de certificados. A localização é, normalmente, um caminho de ficheiro.|
 |**CertSubjectName**<br>Tipo de dados: Cadeia (de carateres)|Implemente este parâmetro para que o utilizador pode especificar o emissor de um certificado ou, de modo a que o utilizador pode especificar uma subcadeia.|
 |**CertUsage**<br>Tipo de dados: Cadeia (de carateres)|Implemente este parâmetro para especificar a utilização da chave ou a utilização de chave avançada. A chave pode ser representada como um pouco mascarar, um pouco, um identificador de objeto (OID), ou uma cadeia de caracteres.|
-|**Credencial**<br>Tipo de dados: [System.Management.Automation.Pscredential](/dotnet/api/System.Management.Automation.PSCredential)|Implemente este parâmetro para que o cmdlet automaticamente pedirá ao utilizador para um nome de utilizador ou palavra-passe. Uma linha de comandos para ambos é apresentada se uma credencial completa não é fornecida diretamente.|
+|**Credencial**<br>Tipo de dados: [System.Management.Automation.PSCredential](/dotnet/api/System.Management.Automation.PSCredential)|Implemente este parâmetro para que o cmdlet automaticamente pedirá ao utilizador para um nome de utilizador ou palavra-passe. Uma linha de comandos para ambos é apresentada se uma credencial completa não é fornecida diretamente.|
 |**CSPName**<br>Tipo de dados: Cadeia (de carateres)|Implemente este parâmetro para que o utilizador pode especificar o nome do fornecedor de serviços de certificado (CSP).|
 |**CSPType**<br>Tipo de dados: Número inteiro|Implemente este parâmetro para que o utilizador pode especificar o tipo de CSP.|
 |**Grupo**<br>Tipo de dados: Cadeia (de carateres)|Implemente este parâmetro para que o utilizador pode especificar uma coleção de entidades de segurança para o acesso. Para obter mais informações, consulte a descrição dos **Principal** parâmetro.|

@@ -2,18 +2,18 @@
 ms.date: 06/12/2017
 keywords: DSC, powershell, configuração, a configuração
 title: Depurar os recursos de DSC
-ms.openlocfilehash: 9b2e7dd9b42332b869c4d7fabb21bd4b5a6b8800
-ms.sourcegitcommit: 00ff76d7d9414fe585c04740b739b9cf14d711e1
+ms.openlocfilehash: c088e13a25ba31ceebaf52b2d24b5d32b96ae2fc
+ms.sourcegitcommit: caac7d098a448232304c9d6728e7340ec7517a71
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 12/14/2018
-ms.locfileid: "53404917"
+ms.lasthandoff: 03/16/2019
+ms.locfileid: "58055585"
 ---
 # <a name="debugging-dsc-resources"></a>Depurar os recursos de DSC
 
 > Aplica-se a: Windows PowerShell 5.0
 
-No PowerShell 5.0, um novo recurso foi introduzido no pretendido Estado Configuraiton (DSC) que lhe permite depurar um recurso de DSC pois está a ser aplicada uma configuração.
+No PowerShell 5.0, um novo recurso foi introduzido no Desired State Configuration (DSC) que lhe permite depurar um recurso de DSC pois está a ser aplicada uma configuração.
 
 ## <a name="enabling-dsc-debugging"></a>Ativar a depuração de DSC
 Antes de pode depurar um recurso, tem de ativar a depuração ao chamar o [Enable-DscDebug](/powershell/module/PSDesiredStateConfiguration/Enable-DscDebug) cmdlet.
@@ -107,7 +107,7 @@ Após chamar [Enable-DscDebug](/powershell/module/PSDesiredStateConfiguration/En
 
 >**Nota:** A reiniciar não altera o estado de depuração do LCM. Se estiver ativada a depuração, a partir de uma configuração ainda interromperá no depurador após um reinício.
 
-## <a name="see-also"></a>Consulte Também
+## <a name="see-also"></a>Veja Também
 
 - [Escrever um recurso personalizado do DSC com o MOF](../resources/authoringResourceMOF.md)
 - [Escrever um recurso personalizado do DSC com classes do PowerShell](../resources/authoringResourceClass.md)

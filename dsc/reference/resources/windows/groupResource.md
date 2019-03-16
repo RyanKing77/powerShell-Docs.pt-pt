@@ -2,12 +2,12 @@
 ms.date: 06/12/2017
 keywords: DSC, powershell, configuração, a configuração
 title: Recurso do grupo de DSC
-ms.openlocfilehash: 9894150f6f749fc23efd4ce2b155b18788557d1d
-ms.sourcegitcommit: e04292a9c10de9a8391d529b7f7aa3753b362dbe
+ms.openlocfilehash: 123e09b54a923af942a15f80fa7291c555b4235f
+ms.sourcegitcommit: caac7d098a448232304c9d6728e7340ec7517a71
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 01/04/2019
-ms.locfileid: "54048392"
+ms.lasthandoff: 03/16/2019
+ms.locfileid: "58054973"
 ---
 # <a name="dsc-group-resource"></a>Recurso do grupo de DSC
 
@@ -95,7 +95,7 @@ Group AddADUserToLocalAdminGroup {
 O exemplo seguinte mostra como garantir que um grupo local, TigerTeamAdmins, no servidor TigerTeamSource.Contoso.Com não contém uma conta de domínio específico, Contoso\JerryG.
 
 ```powershell
-Configuration SecureTigerTeamSrouce {
+Configuration SecureTigerTeamSource {
   Import-DscResource -ModuleName 'PSDesiredStateConfiguration'
 
   Node TigerTeamSource.Contoso.Com {

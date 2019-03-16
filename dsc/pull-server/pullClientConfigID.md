@@ -2,12 +2,12 @@
 ms.date: 12/12/2018
 keywords: DSC, powershell, configuração, a configuração
 title: Configurar um cliente de solicitação através de IDs de configuração no PowerShell 5.0 e posterior
-ms.openlocfilehash: 8d8cf478f9127e1b7005d1b9e832e84b11612c9c
-ms.sourcegitcommit: b6871f21bd666f9cd71dd336bb3f844cf472b56c
+ms.openlocfilehash: 14db98d240bc87aca3ee985db08c14b7c65d8bb8
+ms.sourcegitcommit: caac7d098a448232304c9d6728e7340ec7517a71
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 02/03/2019
-ms.locfileid: "55685873"
+ms.lasthandoff: 03/16/2019
+ms.locfileid: "58055721"
 ---
 # <a name="set-up-a-pull-client-using-configuration-ids-in-powershell-50-and-later"></a>Configurar um cliente de solicitação através de IDs de configuração no PowerShell 5.0 e posterior
 
@@ -23,7 +23,8 @@ Antes de configurar um cliente de solicitação, deve configurar um servidor de 
 
 Cada nó de destino pode ser configurado para transferir configurações, recursos e até mesmo comunicou o seu estado. As secções abaixo mostram-lhe como configurar um cliente de solicitação com uma partilha SMB ou o servidor de solicitação de DSC de HTTP. Quando atualiza LCM o nó, será contactado por para a localização configurada para transferir quaisquer configurações atribuídas. Se não existirem quaisquer recursos necessários no nó, será transferida-los automaticamente na localização de configurado. Se o nó está configurado com um [Report Server](reportServer.md), em seguida, esse irá comunicar o estado da operação.
 
-> **Tenha em atenção**: Este tópico aplica-se para PowerShell 5.0. Para obter informações sobre como configurar um cliente de solicitação no PowerShell 4.0, consulte [como configurar um cliente de solicitação com o ID de configuração no PowerShell 4.0](pullClientConfigID4.md)
+> [!NOTE]
+> Este tópico aplica-se para PowerShell 5.0. Para obter informações sobre como configurar um cliente de solicitação no PowerShell 4.0, consulte [como configurar um cliente de solicitação com o ID de configuração no PowerShell 4.0](pullClientConfigID4.md)
 
 ## <a name="configure-the-pull-client-lcm"></a>Configurar o cliente de solicitação LCM
 

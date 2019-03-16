@@ -8,12 +8,12 @@ ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 1550b068-dfbc-4ae0-9aa1-72c9a680ec59
 caps.latest.revision: 15
-ms.openlocfilehash: dd48e82452e83f93e2e005c9db53bbc51d8b2eb4
-ms.sourcegitcommit: b6871f21bd666f9cd71dd336bb3f844cf472b56c
+ms.openlocfilehash: 3942c008e026b0b99db3c77af4a0152b50fffc4e
+ms.sourcegitcommit: caac7d098a448232304c9d6728e7340ec7517a71
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 02/03/2019
-ms.locfileid: "56848854"
+ms.lasthandoff: 03/16/2019
+ms.locfileid: "58054582"
 ---
 # <a name="tablecontrol-element-format"></a>TableControl Element (Format) (Elemento TableControl [Formatação])
 
@@ -48,7 +48,7 @@ Nenhum.
 |[Elemento de dimensionamento automático para TableControl (formato)](./autosize-element-for-tablecontrol-format.md)|Elemento opcional.<br /><br /> Especifica se o tamanho da coluna e o número de colunas são ajustados com base no tamanho dos dados.|
 |[Elemento de HideTableHeaders para TableControl (formato)](./hidetableheaders-element-format.md)|Elemento opcional.<br /><br /> Indica se o cabeçalho da tabela não é apresentado.|
 |[Elemento de TableHeaders para TableControl (formato)](./tableheaders-element-format.md)|Elemento necessário.<br /><br /> Define as etiquetas, as larguras e o alinhamento dos dados para as colunas de vista de tabela.|
-|[Elemento de TableRowEntries para TableCotrol (formato)](./tablerowentries-element-for-tablecontrol-format.md)|Elemento opcional.<br /><br /> Fornece definições de vista de tabela.|
+|[Elemento de TableRowEntries para TableControl (formato)](./tablerowentries-element-for-tablecontrol-format.md)|Elemento opcional.<br /><br /> Fornece definições de vista de tabela.|
 
 ### <a name="parent-elements"></a>Elementos Principais
 
@@ -78,7 +78,7 @@ Este exemplo mostra uma `TableControl` elemento que é utilizado para apresentar
 
 ```
 
-## <a name="see-also"></a>Consulte Também
+## <a name="see-also"></a>Veja Também
 
 [Criar uma vista de tabela](./creating-a-table-view.md)
 

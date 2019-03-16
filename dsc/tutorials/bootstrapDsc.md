@@ -2,12 +2,12 @@
 ms.date: 06/12/2017
 keywords: DSC, powershell, configuração, a configuração
 title: Configurar uma máquina virtual no arranque inicial através da utilização de DSC
-ms.openlocfilehash: 2ae6f7a85af3d08bad9e97b90efaefb2ff8410ca
-ms.sourcegitcommit: b6871f21bd666f9cd71dd336bb3f844cf472b56c
+ms.openlocfilehash: f9634c330832e23fb2c6f08c5b299b55a5505ac9
+ms.sourcegitcommit: caac7d098a448232304c9d6728e7340ec7517a71
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 02/03/2019
-ms.locfileid: "55686909"
+ms.lasthandoff: 03/16/2019
+ms.locfileid: "58059427"
 ---
 # <a name="configure-a-virtual-machines-at-initial-boot-up-by-using-dsc"></a>Configurar uma máquina virtual no arranque inicial através da utilização de DSC
 
@@ -98,12 +98,12 @@ Configuration SampleIISInstall
 
 7. Crie uma VM com o VHD onde instalou o documento MOF de DSC.
 
-Depois do de segurança de arranque e instalação do sistema operativo, será instalado o IIS.
+Depois de inicial de segurança de arranque e instalação do sistema operativo, será instalado o IIS.
 Pode verificar isto ao chamar o [Get-WindowsFeature](/powershell/module/servermanager/get-windowsfeature) cmdlet.
 
 ## <a name="inject-a-dsc-metaconfiguration-into-a-vhd"></a>Injetar um metaconfiguration DSC num VHD
 
-Também pode configurar um computador para solicitar uma configuração no arranque o injetando um metaconfiguration (consulte [configurar o Gestor de configuração Local (LCM)](../managing-nodes/metaConfig.md)) no VHD como seu `MetaConfig.mof` ficheiro.
+Também pode configurar um computador para solicitar uma configuração no arranque inicial injetando um metaconfiguration (consulte [configurar o Gestor de configuração Local (LCM)](../managing-nodes/metaConfig.md)) no VHD como seu `MetaConfig.mof` ficheiro.
 Se o **DSCAutomationHostEnabled** chave de registo é definida como 2 (o valor predefinido), DSC irá aplicar metaconfiguration definido pelo `MetaConfig.mof` para o LCM quando o computador arranca tendo em vista a primeira vez.
 Se o metaconfiguration Especifica que o LCM deve solicitar configurações a partir de um servidor de solicitação, o computador irá tentar extrair uma configuração a partir desse servidor de solicitação no arranque inicial.
 Para obter informações sobre como configurar um servidor de solicitação de DSC, veja [como configurar um servidor de solicitação do DSC web](../pull-server/pullServer.md).
@@ -140,7 +140,7 @@ configuration PullClientBootstrap
    Mount-VHD -Path C:\users\public\documents\vhd\Srv16.vhd
    ```
 
-2. [Configurar um servidor de solicitação da web de DSC](../pull-server/pullServer.md)e guarde o **SampleIISInistall** configuração para a pasta adequada.
+2. [Configurar um servidor de solicitação da web de DSC](../pull-server/pullServer.md)e guarde o **SampleIISInstall** configuração para a pasta adequada.
 
 3. Num computador com o PowerShell 5.0 ou posterior, guarde o metaconfiguration acima (**PullClientBootstrap**) como um ficheiro de script (. ps1) do PowerShell.
 
@@ -168,7 +168,7 @@ configuration PullClientBootstrap
 
 8. Crie uma VM com o VHD onde instalou o documento MOF de DSC.
 
-Depois do de segurança de arranque e instalação do sistema operativo, DSC irá fazer com que a configuração do servidor de solicitação e IIS será instalado.
+Depois de inicial de segurança de arranque e instalação do sistema operativo, DSC irá fazer com que a configuração do servidor de solicitação e IIS será instalado.
 Pode verificar isto ao chamar o [Get-WindowsFeature](/powershell/module/servermanager/get-windowsfeature) cmdlet.
 
 ## <a name="disable-dsc-at-boot-time"></a>Desativar o DSC no momento da inicialização
@@ -206,7 +206,7 @@ Por predefinição, o valor da `HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\Cu
    reg unload HKLM\Vhd
    ```
 
-## <a name="see-also"></a>Consulte Também
+## <a name="see-also"></a>Veja Também
 
 [Configurações de DSC](../configurations/configurations.md)
 

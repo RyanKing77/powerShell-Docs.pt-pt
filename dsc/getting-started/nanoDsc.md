@@ -2,12 +2,12 @@
 ms.date: 06/12/2017
 keywords: DSC, powershell, configuração, a configuração
 title: Utilizar o DSC no Servidor Nano
-ms.openlocfilehash: fd81fe56d16100f45d9ee2dfd8fdc303c2a6c17a
-ms.sourcegitcommit: b6871f21bd666f9cd71dd336bb3f844cf472b56c
+ms.openlocfilehash: ac5eaf3885788f40e12e4f0a0f19025668280f7e
+ms.sourcegitcommit: caac7d098a448232304c9d6728e7340ec7517a71
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 02/03/2019
-ms.locfileid: "55686587"
+ms.lasthandoff: 03/16/2019
+ms.locfileid: "58054667"
 ---
 # <a name="using-dsc-on-nano-server"></a>Utilizar o DSC no Servidor Nano
 
@@ -38,7 +38,7 @@ Modos push e pull
 - [Stop-DscConfiguration](/powershell/module/PSDesiredStateConfiguration/Stop-DscConfiguration)
 - [Get-DscConfiguration](/powershell/module/PSDesiredStateConfiguration/Get-DscConfiguration)
 - [Test-DscConfiguration](/powershell/module/psdesiredstateconfiguration/Test-DSCConfiguration)
-- [Publish-DscConfiguraiton](/powershell/module/PSDesiredStateConfiguration/Publish-DscConfiguration)
+- [Publish-DscConfiguration](/powershell/module/PSDesiredStateConfiguration/Publish-DscConfiguration)
 - [Update-DscConfiguration](/powershell/module/PSDesiredStateConfiguration/Update-DscConfiguration)
 - [Restore-DscConfiguration](/powershell/module/PSDesiredStateConfiguration/Restore-DscConfiguration)
 - [Remove-DscConfigurationDocument](/powershell/module/PSDesiredStateConfiguration/Remove-DscConfigurationDocument)
@@ -83,9 +83,9 @@ Modos push e pull
 - **Arquivo**
 - **Environment**
 - **Ficheiro**
-- **Log**
-- **ProcessSet**
 - **registo**
+- **ProcessSet**
+- **Registo**
 - **Script**
 - **WindowsPackageCab**
 - **WindowsProcess**
@@ -122,6 +122,6 @@ Os seguintes recursos de DSC não estão atualmente disponíveis no servidor Nan
 Devido a um limitado conjuntos de APIs do Windows e bibliotecas CLR disponíveis no servidor Nano, os recursos de DSC que funcionam na versão CLR completa do Windows não necessariamente funcionar no servidor Nano.
 Conclua o teste de ponto-a-ponto antes de implementar quaisquer recursos personalizados de DSC para um ambiente de produção.
 
-## <a name="see-also"></a>Consulte Também
+## <a name="see-also"></a>Veja Também
 
 - [Introdução ao servidor Nano](/windows-server/get-started/getting-started-with-nano-server)

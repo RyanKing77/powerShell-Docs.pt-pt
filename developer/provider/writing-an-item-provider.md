@@ -8,12 +8,12 @@ ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 606c880c-6cf1-4ea6-8730-dbf137bfabff
 caps.latest.revision: 5
-ms.openlocfilehash: e3289e9336b863b5e0998a2beb29353c82a31f79
-ms.sourcegitcommit: b6871f21bd666f9cd71dd336bb3f844cf472b56c
+ms.openlocfilehash: 9285a2f0e673de8b86084157423512bdeeda109d
+ms.sourcegitcommit: caac7d098a448232304c9d6728e7340ec7517a71
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 02/03/2019
-ms.locfileid: "56847307"
+ms.lasthandoff: 03/16/2019
+ms.locfileid: "58058199"
 ---
 # <a name="writing-an-item-provider"></a>Writing an item provider (Escrever um fornecedor de itens)
 
@@ -46,7 +46,7 @@ Declarar o fornecedor de derivar a partir da [System.Management.Automation.Provi
 
 ### <a name="implementing-getitem"></a>Implementando GetItem
 
-O [System.Management.Automation.Provider.Itemcmdletprovider.Getitem*](/dotnet/api/System.Management.Automation.Provider.ItemCmdletProvider.GetItem) é chamado pelo mecanismo do PowerShell quando um usuário chama o [Microsoft.Powershell.Commands.Get Item](/dotnet/api/Microsoft.PowerShell.Commands.Get-Item) cmdlet no seu fornecedor. O método retorna o item no caminho especificado. O exemplo de base de dados de acesso, o método verifica se o item é a unidade em si, uma tabela na base de dados ou uma linha na base de dados. O método envia o item para o motor do PowerShell ao chamar o [System.Management.Automation.Provider.Cmdletprovider.Writeitemobject*](/dotnet/api/System.Management.Automation.Provider.CmdletProvider.WriteItemObject) método.
+O [System.Management.Automation.Provider.Itemcmdletprovider.Getitem*](/dotnet/api/System.Management.Automation.Provider.ItemCmdletProvider.GetItem) é chamado pelo mecanismo do PowerShell quando um usuário chama o [Microsoft.PowerShell.Commands.Get Item](/dotnet/api/Microsoft.PowerShell.Commands.Get-Item) cmdlet no seu fornecedor. O método retorna o item no caminho especificado. O exemplo de base de dados de acesso, o método verifica se o item é a unidade em si, uma tabela na base de dados ou uma linha na base de dados. O método envia o item para o motor do PowerShell ao chamar o [System.Management.Automation.Provider.Cmdletprovider.Writeitemobject*](/dotnet/api/System.Management.Automation.Provider.CmdletProvider.WriteItemObject) método.
 
 ```csharp
 protected override void GetItem(string path)
@@ -85,7 +85,7 @@ protected override void GetItem(string path)
 
 ### <a name="implementing-setitem"></a>Implementando SetItem
 
-O [System.Management.Automation.Provider.Itemcmdletprovider.Setitem*](/dotnet/api/System.Management.Automation.Provider.ItemCmdletProvider.SetItem) método é chamado pelas chamadas de motor do PowerShell quando um usuário chama o [Microsoft.Powershell.Commands.Set Item](/dotnet/api/Microsoft.PowerShell.Commands.Set-Item) cmdlet . Ele define o valor do item no caminho especificado.
+O [System.Management.Automation.Provider.Itemcmdletprovider.Setitem*](/dotnet/api/System.Management.Automation.Provider.ItemCmdletProvider.SetItem) método é chamado pelas chamadas de motor do PowerShell quando um usuário chama o [Microsoft.PowerShell.Commands.Set Item](/dotnet/api/Microsoft.PowerShell.Commands.Set-Item) cmdlet . Ele define o valor do item no caminho especificado.
 
 O exemplo de base de dados de acesso, faz sentido definir o valor de um item somente se esse item é uma linha, para que o método lançar [NotSupportedException](http://msdn.microsoft.com/library/system.notsupportedexception\(v=vs.110\).aspx) quando o item não é uma linha.
 
@@ -145,7 +145,7 @@ protected override void SetItem(string path, object values)
 
 ### <a name="implementing-itemexists"></a>Implementando ItemExists
 
-O [System.Management.Automation.Provider.Itemcmdletprovider.Itemexists*](/dotnet/api/System.Management.Automation.Provider.ItemCmdletProvider.ItemExists) método é chamado pelo mecanismo do PowerShell quando um usuário chama o [Microsoft.Powershell.Commands.Test caminho](/dotnet/api/Microsoft.PowerShell.Commands.Test-Path) cmdlet. O método determina se existe um item no caminho especificado. Se o item existir, o método passa-o novamente para o motor do PowerShell ao chamar [System.Management.Automation.Provider.Cmdletprovider.Writeitemobject*](/dotnet/api/System.Management.Automation.Provider.CmdletProvider.WriteItemObject).
+O [System.Management.Automation.Provider.Itemcmdletprovider.Itemexists*](/dotnet/api/System.Management.Automation.Provider.ItemCmdletProvider.ItemExists) método é chamado pelo mecanismo do PowerShell quando um usuário chama o [Microsoft.PowerShell.Commands.Test caminho](/dotnet/api/Microsoft.PowerShell.Commands.Test-Path) cmdlet. O método determina se existe um item no caminho especificado. Se o item existir, o método passa-o novamente para o motor do PowerShell ao chamar [System.Management.Automation.Provider.Cmdletprovider.Writeitemobject*](/dotnet/api/System.Management.Automation.Provider.CmdletProvider.WriteItemObject).
 
 ```csharp
 protected override bool ItemExists(string path)

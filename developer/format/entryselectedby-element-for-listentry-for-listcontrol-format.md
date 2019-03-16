@@ -8,12 +8,12 @@ ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 0f7a74e9-764d-46ce-ab8e-8b9314ce1659
 caps.latest.revision: 12
-ms.openlocfilehash: 723619e67612b859d0acbab37eecd82141adf923
-ms.sourcegitcommit: b6871f21bd666f9cd71dd336bb3f844cf472b56c
+ms.openlocfilehash: 442565d25f60ae8e04501f3f9ffba35d486fbc8a
+ms.sourcegitcommit: caac7d098a448232304c9d6728e7340ec7517a71
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 02/03/2019
-ms.locfileid: "56846075"
+ms.lasthandoff: 03/16/2019
+ms.locfileid: "58054948"
 ---
 # <a name="entryselectedby-element-for-listentry-for-listcontrol-format"></a>EntrySelectedBy Element for ListEntry for ListControl (Format) (Elemento EntrySelectedBy para ListEntry para ListControl [Formatação])
 
@@ -44,7 +44,7 @@ Nenhum.
 |Elemento|Descrição|
 |-------------|-----------------|
 |[Elemento de SelectionCondition para EntrySelectedBy para ListControl (formato)](./selectioncondition-element-for-entryselectedby-for-listcontrol-format.md)|Elemento opcional.<br /><br /> Define a condição de que tem de existir para esta definição de vista de lista a ser utilizado.|
-|[Elemento de SelectionSetName para EnrtySelectedBy para ListControl (formato)](./selectionsetname-element-for-entryselectedby-for-listcontrol-format.md)|Elemento opcional.<br /><br /> Especifica um conjunto de tipos do .NET que utilizam esta definição de vista de lista.|
+|[Elemento de SelectionSetName para EntrySelectedBy para ListControl (formato)](./selectionsetname-element-for-entryselectedby-for-listcontrol-format.md)|Elemento opcional.<br /><br /> Especifica um conjunto de tipos do .NET que utilizam esta definição de vista de lista.|
 |[Elemento de TypeName para EntrySelectedBy para ListControl (formato)](./typename-element-for-entryselectedby-for-listcontrol-format.md)|Elemento opcional.<br /><br /> Especifica um tipo .NET que utiliza esta definição de vista de lista.|
 
 ### <a name="parent-elements"></a>Elementos Principais
@@ -79,7 +79,7 @@ O exemplo seguinte mostra como definir os objetos para uma vista de lista com o 
 
 [Elemento de SelectionCondition para EntrySelectedBy para ListControl (formato)](./selectioncondition-element-for-entryselectedby-for-listcontrol-format.md)
 
-[Elemento de SelectionSetName para EnrtySelectedBy para ListControl (formato)](./selectionsetname-element-for-entryselectedby-for-listcontrol-format.md)
+[Elemento de SelectionSetName para EntrySelectedBy para ListControl (formato)](./selectionsetname-element-for-entryselectedby-for-listcontrol-format.md)
 
 [Elemento de TypeName para EntrySelectedBy para ListControl (formato)](./typename-element-for-entryselectedby-for-listcontrol-format.md)
 

@@ -8,12 +8,12 @@ ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: fb82827e-fdb7-4cbf-b3d4-093e72b3ff0e
 caps.latest.revision: 28
-ms.openlocfilehash: f7899713dd273b793017adfa0a20b3ff3352b62a
-ms.sourcegitcommit: b6871f21bd666f9cd71dd336bb3f844cf472b56c
+ms.openlocfilehash: 7c2bfca50de4645676eafc01bbf23d9797e8b758
+ms.sourcegitcommit: caac7d098a448232304c9d6728e7340ec7517a71
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 02/03/2019
-ms.locfileid: "56851129"
+ms.lasthandoff: 03/16/2019
+ms.locfileid: "58059784"
 ---
 # <a name="installing-a-powershell-module"></a>Installing a PowerShell Module (Instalar um Módulo do PowerShell)
 
@@ -160,7 +160,7 @@ Para ativar as funcionalidades de deteção de módulo do Windows PowerShell loc
 
 ```powershell
 $p = [Environment]::GetEnvironmentVariable("PSModulePath")
-$p += "C:\Program Files\Fabrikam Technolgies\Fabrikam Manager\Modules\"
+$p += "C:\Program Files\Fabrikam Technologies\Fabrikam Manager\Modules\"
 [Environment]::SetEnvironmentVariable("PSModulePath",$p)
 ```
 
@@ -228,7 +228,7 @@ $p += ";C:\Program Files\Fabrikam\Fabrikam8;C:\Program Files\Fabrikam\Fabrikam9"
 [Environment]::SetEnvironmentVariable("PSModulePath",$p)
 ```
 
-Quando estes passos estiverem concluídos, o **ListAvailable** parâmetro do [Get-Module](/powershell/module/Microsoft.PowerShell.Core/Get-Module) cmdlet obtém ambos os módulos da Fabrikam. Para importar um módulo específico, utilize o `MiminumVersion` ou `RequiredVersion` parâmetros do [Import-Module](/powershell/module/Microsoft.PowerShell.Core/Import-Module) cmdlet.
+Quando estes passos estiverem concluídos, o **ListAvailable** parâmetro do [Get-Module](/powershell/module/Microsoft.PowerShell.Core/Get-Module) cmdlet obtém ambos os módulos da Fabrikam. Para importar um módulo específico, utilize o `MinimumVersion` ou `RequiredVersion` parâmetros do [Import-Module](/powershell/module/Microsoft.PowerShell.Core/Import-Module) cmdlet.
 
 Se ambos os módulos são importados para a mesma sessão, e os módulos contêm cmdlets com os mesmos nomes, os cmdlets que são importados pela última vez são eficazes na sessão.
 
@@ -248,7 +248,7 @@ Para evitar conflitos de nomes, os autores de módulo podem utilizar o **Default
 
 Os utilizadores podem utilizar o **prefixo** parâmetro do `Import-Module` cmdlet para utilizar um prefixo de alternativo. O valor do **prefixo** parâmetro terão precedência sobre o valor da **DefaultCommandPrefix** chave.
 
-## <a name="see-also"></a>Consulte Também
+## <a name="see-also"></a>Veja Também
 
 [about_Command_Precedence](/powershell/module/microsoft.powershell.core/about/about_command_precedence)
 

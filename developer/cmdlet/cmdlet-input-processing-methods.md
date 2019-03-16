@@ -10,12 +10,12 @@ helpviewer_keywords:
 - virtual methods (PowerShell SDK]
 ms.assetid: b0bb8172-c9fa-454b-9f1b-57c3fe60671b
 caps.latest.revision: 12
-ms.openlocfilehash: 7f8d25e03707052b1d5b62e245caae360da11d0b
-ms.sourcegitcommit: 5990f04b8042ef2d8e571bec6d5b051e64c9921c
+ms.openlocfilehash: 065214647dfa6d376b727930fe75140911095faf
+ms.sourcegitcommit: caac7d098a448232304c9d6728e7340ec7517a71
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 03/12/2019
-ms.locfileid: "57794948"
+ms.lasthandoff: 03/16/2019
+ms.locfileid: "58059376"
 ---
 # <a name="cmdlet-input-processing-methods"></a>Cmdlet Input Processing Methods (Métodos de Processamento de Entrada de Cmdlets)
 
@@ -63,7 +63,7 @@ Para obter um exemplo mais detalhado de como usar o [System.Management.Automatio
 
 Cmdlets deve substituir o [System.Management.Automation.Cmdlet.Endprocessing%2A? Displayproperty = Fullname](/dotnet/api/system.management.automation.cmdlet.endprocessing?view=powershellsdk-1.1.0) método adicionar quaisquer operações de pós-processamento que são válidas para todos os registos que foram processados pelo cmdlet. Por exemplo, o seu cmdlet poderá ter de limpar a variáveis de objeto depois de terminar de processamento.
 
-Quando o Windows PowerShell processa um pipeline de comando, Windows PowerShell chama esse método uma vez para cada instância do cmdlet no pipeline. No entanto, é importante lembrar-se de que o tempo de execução do Windows PowerShell não irá chamar o [System.Management.Automation.Cmdlet.Endprocessing%2A? Displayproperty = Fullname](/dotnet/api/system.management.automation.cmdlet.endprocessing?view=powershellsdk-1.1.0) método se o cmdlet é cancelado midway por meio de seu processamento de entrada ou se acabar o erro ocorre em qualquer parte do cmdlet. Por esse motivo, um cmdlet que necessita de limpeza do objeto deve implementar o concluída [System.Idisposable](/dotnet/api/System.IDisposable) padrão, incluindo um finalizador, para que o tempo de execução possa chamar ambos o [ System.Management.Automation.Cmdlet.Endprocessing%2A? Displayproperty = Fullname](/dotnet/api/system.management.automation.cmdlet.endprocessing?view=powershellsdk-1.1.0) e [System.Idisposable.Dispose*](/dotnet/api/System.IDisposable.Dispose) métodos no final do processamento. Para obter mais informações sobre como o Windows PowerShell invoca o pipeline de comando, consulte [ciclo de vida de processamento Cmdlet](https://msdn.microsoft.com/en-us/3202f55c-314d-4ac3-ad78-4c7ca72253c5).
+Quando o Windows PowerShell processa um pipeline de comando, Windows PowerShell chama esse método uma vez para cada instância do cmdlet no pipeline. No entanto, é importante lembrar-se de que o tempo de execução do Windows PowerShell não irá chamar o [System.Management.Automation.Cmdlet.Endprocessing%2A? Displayproperty = Fullname](/dotnet/api/system.management.automation.cmdlet.endprocessing?view=powershellsdk-1.1.0) método se o cmdlet é cancelado midway por meio de seu processamento de entrada ou se acabar o erro ocorre em qualquer parte do cmdlet. Por esse motivo, um cmdlet que necessita de limpeza do objeto deve implementar o concluída [System.IDisposable](/dotnet/api/System.IDisposable) padrão, incluindo um finalizador, para que o tempo de execução possa chamar ambos o [ System.Management.Automation.Cmdlet.Endprocessing%2A? Displayproperty = Fullname](/dotnet/api/system.management.automation.cmdlet.endprocessing?view=powershellsdk-1.1.0) e [System.IDisposable.Dispose*](/dotnet/api/System.IDisposable.Dispose) métodos no final do processamento. Para obter mais informações sobre como o Windows PowerShell invoca o pipeline de comando, consulte [ciclo de vida de processamento Cmdlet](https://msdn.microsoft.com/en-us/3202f55c-314d-4ac3-ad78-4c7ca72253c5).
 
 O código a seguir mostra uma implementação o [System.Management.Automation.Cmdlet.Processrecord%2A? Displayproperty = Fullname](/dotnet/api/system.management.automation.cmdlet.processrecord?view=powershellsdk-1.1.0) método.
 
@@ -88,6 +88,6 @@ Para obter um exemplo mais detalhado de como usar o [System.Management.Automatio
 
 [System.Management.Automation.Cmdlet.Endprocessing%2A?Displayproperty=Fullname](/dotnet/api/system.management.automation.cmdlet.endprocessing?view=powershellsdk-1.1.0)
 
-[System.Idisposable](/dotnet/api/System.IDisposable)
+[System.IDisposable](/dotnet/api/System.IDisposable)
 
 [Shell do Windows PowerShell SDK](../windows-powershell-reference.md)

@@ -2,12 +2,12 @@
 ms.date: 06/12/2017
 keywords: DSC, powershell, configuração, a configuração
 title: Utilizar um servidor de relatório de DSC
-ms.openlocfilehash: 8647f80c311ee49a5cc4d57360472386e01b044e
-ms.sourcegitcommit: b6871f21bd666f9cd71dd336bb3f844cf472b56c
+ms.openlocfilehash: 73208477a74ff3c615d7d515fcad555beabe8f32
+ms.sourcegitcommit: caac7d098a448232304c9d6728e7340ec7517a71
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 02/03/2019
-ms.locfileid: "55686580"
+ms.lasthandoff: 03/16/2019
+ms.locfileid: "58059274"
 ---
 # <a name="using-a-dsc-report-server"></a>Utilizar um servidor de relatório de DSC
 
@@ -16,7 +16,8 @@ Aplica-se a: Windows PowerShell 5.0
 > [!IMPORTANT]
 > O servidor de solicitação (recurso do Windows *DSC-serviço*) é um componente suportado do Windows Server no entanto, não existem planos para oferecer novas funcionalidades ou capacidades. É recomendado para começar a fazer a transição geridos os clientes [DSC de automatização do Azure](/azure/automation/automation-dsc-getting-started) (inclui funcionalidades além do servidor de solicitação de mensagens em fila no Windows Server) ou uma das soluções da Comunidade listados [aqui](pullserver.md#community-solutions-for-pull-service).
 >
-> **Tenha em atenção** o servidor de relatórios descrito neste tópico não está disponível no PowerShell 4.0.
+> [!NOTE]
+> O servidor de relatórios descrito neste tópico não está disponível no PowerShell 4.0.
 
 O Gestor de configuração Local (LCM) de um nó pode ser configurado para enviar relatórios sobre o estado de configuração para um servidor de solicitação, em seguida, pode ser consultado para obter esses dados. Sempre que o nó verifica e aplica-se de uma configuração, envia um relatório para o servidor de relatórios. Estes relatórios são armazenados numa base de dados no servidor e podem ser obtidos chamando o serviço web de relatórios. Cada relatório contém informações como que configurações foram aplicadas e se eles foi concluída com êxito, os recursos utilizados, quaisquer erros que foram lançados e iniciar e terminar vezes.
 
@@ -234,7 +235,7 @@ InDesiredState    : True
 
 Tenha em atenção que estes exemplos destinam-se para dar uma idéia do que pode fazer com dados de relatório. Para obter uma introdução sobre como trabalhar com JSON no PowerShell, consulte [Brincando com o JSON e o PowerShell](https://blogs.technet.microsoft.com/heyscriptingguy/2015/10/08/playing-with-json-and-powershell/).
 
-## <a name="see-also"></a>Consulte Também
+## <a name="see-also"></a>Veja Também
 
 [Configurar o Gestor de configuração Local](../managing-nodes/metaConfig.md)
 

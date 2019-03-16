@@ -3,12 +3,12 @@ ms.date: 06/05/2017
 keywords: PowerShell, o cmdlet
 title: Windows PowerShell Integrated Scripting Environment ISE
 ms.assetid: f156b92d-0203-46d2-89c7-b4989d32e3d2
-ms.openlocfilehash: a5fcc8c813349d0b85cc3af29047424fe787d168
-ms.sourcegitcommit: b6871f21bd666f9cd71dd336bb3f844cf472b56c
+ms.openlocfilehash: 3002c2cb7213b1c2d7201dddf5ff3c0651fad767
+ms.sourcegitcommit: caac7d098a448232304c9d6728e7340ec7517a71
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 02/03/2019
-ms.locfileid: "55683836"
+ms.lasthandoff: 03/16/2019
+ms.locfileid: "58054718"
 ---
 # <a name="windows-powershell-integrated-scripting-environment-ise"></a>Windows PowerShell Integrated Scripting Environment (ISE)
 
@@ -34,7 +34,7 @@ Essas ferramentas podem exibir controles num painel com guias ou invisivelmente 
 
 **A maioria dos lista utilizados recentemente** faz agora parte do arquivo abrir menu para tornar mais fácil para os ficheiros que utiliza mais frequentemente.
 
-**Painel de consola intercalado**. Nas versões anteriores do ISE, havia painéis de comando e de saída separados. Eles são agora combinados num único painel que mais diretamente imita o que vê na consola do Windows Powershell.
+**Painel de consola intercalado**. Nas versões anteriores do ISE, havia painéis de comando e de saída separados. Eles são agora combinados num único painel que mais diretamente imita o que vê na consola do Windows PowerShell.
 
 **Opções da linha de comandos**. Vários comutadores da linha de comandos nova dão-lhe mais controlo sobre a forma como funciona o ISE. -NoProfile inicia o ISE sem executar um script de perfil. -Help abre uma janela de ajuda com o ISE. -mta inicia o ISE no "modo de multi-threaded apartment". A predefinição é o único thread.
 

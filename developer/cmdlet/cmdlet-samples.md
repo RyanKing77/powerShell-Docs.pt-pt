@@ -8,12 +8,12 @@ ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: b99d53fc-0af9-426b-82ce-09955e031d4b
 caps.latest.revision: 13
-ms.openlocfilehash: d919d4ad8554e762230c1448d81b50e27c38ba99
-ms.sourcegitcommit: b6871f21bd666f9cd71dd336bb3f844cf472b56c
+ms.openlocfilehash: 0fa4a5f804586c51ae6a36121f9aab041b0989cc
+ms.sourcegitcommit: caac7d098a448232304c9d6728e7340ec7517a71
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 02/03/2019
-ms.locfileid: "56851969"
+ms.lasthandoff: 03/16/2019
+ms.locfileid: "58058050"
 ---
 # <a name="cmdlet-samples"></a>Cmdlet Samples (Exemplos de Cmdlets)
 
@@ -39,8 +39,8 @@ Esta secção descreve o código de exemplo que é fornecido no Windows PowerShe
 
 [Exemplo de StopProcessSample04](./stopprocesssample04-sample.md) este exemplo mostra como escrever um cmdlet que declara conjuntos de parâmetros, especifica o parâmetro predefinido definido e pode aceitar um objeto de entrada.
 
-[Exemplo de Events01](./events01-sample.md) este exemplo mostra como criar um cmdlet que permite ao utilizador para se registrar para eventos gerados pelo [System.IO.Filesystemwatcher](/dotnet/api/System.IO.FileSystemWatcher). Com este cmdlet os utilizadores podem, por exemplo, registar uma ação a executar quando é criado um ficheiro num diretório específico. Este exemplo deriva de [Microsoft.Powershell.Commands.Objecteventregistrationbase](/dotnet/api/Microsoft.PowerShell.Commands.ObjectEventRegistrationBase) classe base.
+[Exemplo de Events01](./events01-sample.md) este exemplo mostra como criar um cmdlet que permite ao utilizador para se registrar para eventos gerados pelo [System.IO.Filesystemwatcher](/dotnet/api/System.IO.FileSystemWatcher). Com este cmdlet os utilizadores podem, por exemplo, registar uma ação a executar quando é criado um ficheiro num diretório específico. Este exemplo deriva de [Microsoft.PowerShell.Commands.Objecteventregistrationbase](/dotnet/api/Microsoft.PowerShell.Commands.ObjectEventRegistrationBase) classe base.
 
-## <a name="see-also"></a>Consulte Também
+## <a name="see-also"></a>Veja Também
 
 [Escrever um Cmdlet do Windows PowerShell](./writing-a-windows-powershell-cmdlet.md)

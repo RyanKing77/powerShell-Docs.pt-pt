@@ -2,12 +2,12 @@
 ms.date: 03/04/2019
 keywords: DSC, powershell, configuração, a configuração
 title: Serviço de Solicitação de DSC
-ms.openlocfilehash: 27effe0cd3b9d90dcfaaf1bd4e38edf3c04c9cfb
-ms.sourcegitcommit: 5990f04b8042ef2d8e571bec6d5b051e64c9921c
+ms.openlocfilehash: 00e01e6c71226e6bde48b221e4e4fcf5f346feb4
+ms.sourcegitcommit: caac7d098a448232304c9d6728e7340ec7517a71
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 03/12/2019
-ms.locfileid: "57794727"
+ms.lasthandoff: 03/16/2019
+ms.locfileid: "58056775"
 ---
 # <a name="desired-state-configuration-pull-service"></a>Serviço de solicitação do Desired State Configuration
 
@@ -72,7 +72,8 @@ Um script de exemplo é fornecido abaixo.
 
 A partir da versão 17090 dos [Windows Server Insider Preview](https://www.microsoft.com/en-us/software-download/windowsinsiderpreviewserver), do SQL Server é uma opção suportada para o serviço de solicitação (funcionalidade do Windows *DSC-serviço*). Isso fornece uma nova opção de dimensionamento grandes ambientes de DSC que não foram migrados para [DSC de automatização do Azure](/azure/automation/automation-dsc-getting-started).
 
-> **Tenha em atenção**: Suporte do SQL Server não será possível adicionar as versões anteriores do WMF 5.1 (ou anterior) e só estará disponível em versões do Windows Server maiores que ou iguais a 17090.
+> [!NOTE]
+> Suporte do SQL Server não será possível adicionar as versões anteriores do WMF 5.1 (ou anterior) e só estará disponível em versões do Windows Server maiores que ou iguais a 17090.
 
 Para configurar o servidor de solicitação para utilizar o SQL Server, defina **SqlProvider** ao `$true` e **SqlConnectionString** para uma cadeia de ligação válida do SQL Server. Para obter mais informações, consulte [cadeias de ligação do SqlClient](/dotnet/framework/data/adonet/connection-string-syntax#sqlclient-connection-strings).
 Para obter um exemplo de configuração do SQL Server com **xDscWebService**, leia primeiro [usando o recurso de xDscWebService](#using-the-xdscwebservice-resource) e, em seguida, reveja [Sample_xDscWebServiceRegistration_ UseSQLProvider.ps1 no GitHub](https://github.com/PowerShell/xPSDesiredStateConfiguration/blob/master/Examples/Sample_xDscWebServiceRegistration_UseSQLProvider.ps1).

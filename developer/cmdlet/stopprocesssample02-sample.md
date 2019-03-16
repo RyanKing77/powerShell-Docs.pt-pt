@@ -8,12 +8,12 @@ ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 213ca1a4-e9fe-4969-b7d0-2fca070c6142
 caps.latest.revision: 10
-ms.openlocfilehash: 57751e74c9b8ab897dd35ca1fef4704d92a3f218
-ms.sourcegitcommit: b6871f21bd666f9cd71dd336bb3f844cf472b56c
+ms.openlocfilehash: 594c06367baedd1f9bfdbfff9f0e072d579b4099
+ms.sourcegitcommit: caac7d098a448232304c9d6728e7340ec7517a71
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 02/03/2019
-ms.locfileid: "56851766"
+ms.lasthandoff: 03/16/2019
+ms.locfileid: "58057235"
 ---
 # <a name="stopprocesssample02-sample"></a>StopProcessSample02 Sample (Exemplo StopProcessSample02)
 
@@ -61,11 +61,11 @@ Este exemplo demonstra o seguinte.
 
 - Declarando parâmetros de um cmdlet, utilizando o atributo de parâmetro.
 
-- Escrever as mensagens verbosas. Para obter mais informações sobre o método utilizado para escrever as mensagens verbosas, consulte [System.Management.Automation.Cmdlet.Writeverbose*](/dotnet/api/System.Management.Automation.Cmdlet.WriteVerbose).
+- Escrever as mensagens verbosas. Para obter mais informações sobre o método utilizado para escrever as mensagens verbosas, consulte [System.Management.Automation.Cmdlet.WriteVerbose](/dotnet/api/System.Management.Automation.Cmdlet.WriteVerbose).
 
-- Mensagens de erro de escrita. Para obter mais informações sobre o método utilizado para guardar as mensagens de erro, consulte [System.Management.Automation.Cmdlet.Writeerror*](/dotnet/api/System.Management.Automation.Cmdlet.WriteError).
+- Mensagens de erro de escrita. Para obter mais informações sobre o método utilizado para guardar as mensagens de erro, consulte [System.Management.Automation.Cmdlet.WriteError](/dotnet/api/System.Management.Automation.Cmdlet.WriteError).
 
-- Mensagens de aviso de escrita. Para obter mais informações sobre o método utilizado para guardar as mensagens de aviso, consulte [System.Management.Automation.Cmdlet.Writewarning*](/dotnet/api/System.Management.Automation.Cmdlet.WriteWarning).
+- Mensagens de aviso de escrita. Para obter mais informações sobre o método utilizado para guardar as mensagens de aviso, consulte [System.Management.Automation.Cmdlet.WriteWarning](/dotnet/api/System.Management.Automation.Cmdlet.WriteWarning).
 
 ## <a name="example"></a>Exemplo
 
@@ -224,9 +224,9 @@ namespace Microsoft.Samples.PowerShell.Commands
                                         processName);
 
                        // It is possible that the ProcessRecord method is called
-                       // multiple times when objects are recieved as inputs from
+                       // multiple times when objects are received as inputs from
                        // the pipeline. So to retain YesToAll and NoToAll input that
-                       // the user may enter across mutilple calls to this function,
+                       // the user may enter across multiple calls to this function,
                        // they are stored as private members of the cmdlet.
                        if (!ShouldContinue(message, "Warning!",
                                     ref yesToAll, ref noToAll))
@@ -310,6 +310,6 @@ namespace Microsoft.Samples.PowerShell.Commands
 }
 ```
 
-## <a name="see-also"></a>Consulte Também
+## <a name="see-also"></a>Veja Também
 
 [Escrever um Cmdlet do Windows PowerShell](./writing-a-windows-powershell-cmdlet.md)

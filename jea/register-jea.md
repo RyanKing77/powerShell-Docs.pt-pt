@@ -2,12 +2,12 @@
 ms.date: 06/12/2017
 keywords: jea, powershell, segurança
 title: Registar a JEA configurações
-ms.openlocfilehash: 160aa95283da57a10aad5fdd4043adb1354a5db5
-ms.sourcegitcommit: 98b7cfd8ad5718efa8e320526ca76c3cc4141d78
+ms.openlocfilehash: 6fa0ce434c8e70eb718545e99417bfe034cda6bf
+ms.sourcegitcommit: caac7d098a448232304c9d6728e7340ec7517a71
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50002911"
+ms.lasthandoff: 03/16/2019
+ms.locfileid: "58059444"
 ---
 # <a name="registering-jea-configurations"></a>Registar a JEA configurações
 
@@ -113,7 +113,7 @@ Configuration JEAMaintenance
 Esta configuração, em seguida, pode ser aplicada num sistema pelo [invocando diretamente o Gestor de configuração Local](https://msdn.microsoft.com/powershell/dsc/metaconfig) ou a atualizar a [configuração de servidor de solicitação](https://msdn.microsoft.com/powershell/dsc/pullserver).
 
 O recurso de DSC também permite que substitua o ponto de extremidade padrão da comunicação remota do Microsoft.
-Se fizer isso, o recurso registra automaticamente um ponto de extremidade unconstrainted cópia de segurança com o nome "Microsoft.PowerShell.Restricted" que tem a ACL de WinRM (permitindo que os utilizadores de gestão remota e os administradores locais membros do grupo para aceder ao mesmo) padrão.
+Se fizer isso, o recurso registra automaticamente um ponto de extremidade irrestrita cópia de segurança com o nome "Microsoft.PowerShell.Restricted" que tem a ACL de WinRM (permitindo que os utilizadores de gestão remota e os administradores locais membros do grupo para aceder ao mesmo) padrão.
 
 ## <a name="unregistering-jea-configurations"></a>A anular o registo configurações de JEA
 

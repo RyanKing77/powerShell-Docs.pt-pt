@@ -2,12 +2,12 @@
 ms.date: 06/12/2017
 keywords: jea, powershell, segurança
 title: Utilizar a JEA
-ms.openlocfilehash: 539d280aff0b2656a5e9c710acfa468057753027
-ms.sourcegitcommit: b6871f21bd666f9cd71dd336bb3f844cf472b56c
+ms.openlocfilehash: fa3d3a3c8bc0090ec9ad788585ec5df933134173
+ms.sourcegitcommit: caac7d098a448232304c9d6728e7340ec7517a71
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 02/03/2019
-ms.locfileid: "55686860"
+ms.lasthandoff: 03/16/2019
+ms.locfileid: "58054684"
 ---
 # <a name="using-jea"></a>Utilizar a JEA
 
@@ -108,7 +108,7 @@ Import-PSSession -Session $jeasession -Prefix 'JEA' -CommandName $filteredComman
 Também pode manter os cmdlets transmitidas por proxy de comunicação remota implícita usando [Export-PSSession](https://msdn.microsoft.com/powershell/reference/5.1/microsoft.powershell.utility/Export-PSSession).
 Para obter mais informações sobre a comunicação remota implícita, consulte a documentação de ajuda para [Import-PSSession](https://msdn.microsoft.com/powershell/reference/5.1/microsoft.powershell.utility/import-pssession) e [Import-Module](https://msdn.microsoft.com/powershell/reference/5.1/microsoft.powershell.core/import-module).
 
-## <a name="using-jea-programatically"></a>Utilizar a JEA programaticamente
+## <a name="using-jea-programmatically"></a>Utilizar a JEA por meio de programação
 
 JEA também pode ser utilizado em sistemas de automatização e nos aplicativos de usuário, como web sites e aplicações de suporte técnico interno.
 A abordagem é o mesmo que para criar aplicações que comunique com os pontos finais irrestrita do PowerShell, tendo em mente que o programa deve conhecer JEA esteja a limitar os comandos que podem ser executados na sessão remota.
@@ -126,10 +126,9 @@ $allowedCommands = Invoke-Command -ComputerName 'SERVER01' -ConfigurationName 'J
 $allowedCommands | Where-Object { $_.CommandType -in 'Function', 'Cmdlet' } | Format-Table Name, Parameters
 ```
 
-Se estiver a criar uma aplicação c#, pode criar um espaço de execução do PowerShell que se liga a uma sessão JEA, especificando o nome de configuração num [WSManConnectionInfo](https://msdn.microsoft.com/library/system.management.automation.runspaces.wsmanconnectioninfo(v=vs.85).aspx) objeto.
+Se estiver a criar um C# aplicação, pode criar um espaço de execução do PowerShell que se liga a uma sessão JEA, especificando o nome de configuração num [WSManConnectionInfo](https://msdn.microsoft.com/library/system.management.automation.runspaces.wsmanconnectioninfo(v=vs.85).aspx) objeto.
 
 ```csharp
-
 // using System.Management.Automation;
 var computerName = "SERVER01";
 var configName   = "JEAMaintenance";

@@ -2,12 +2,12 @@
 ms.date: 08/23/2017
 keywords: PowerShell, o cmdlet
 title: instalar e utilizar o acesso web windows powershell
-ms.openlocfilehash: 5517347560b25f032baa77ecc2d769fb1e74ba4f
-ms.sourcegitcommit: b6871f21bd666f9cd71dd336bb3f844cf472b56c
+ms.openlocfilehash: 53558f9be5065c7f630f06e535ddab4d7ad72d9e
+ms.sourcegitcommit: caac7d098a448232304c9d6728e7340ec7517a71
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 02/03/2019
-ms.locfileid: "55683829"
+ms.lasthandoff: 03/16/2019
+ms.locfileid: "58056724"
 ---
 # <a name="install-and-use-windows-powershell-web-access"></a>Instalar e Utilizar o Acesso Web Windows PowerShell
 
@@ -97,7 +97,7 @@ Pode instalar o gateway do Windows PowerShell Web Access num servidor que está 
    `Install-WindowsFeature -Name WindowsPowerShellWebAccess -ComputerName <computer_name> -IncludeManagementTools -Restart`
 
    > [!NOTE]
-   > Instalar o Windows PowerShell Web Access, utilizando cmdlets do Windows PowerShell não adicionar ferramentas de gestão de servidor Web (IIS) por predefinição. Se pretende instalar as ferramentas de gestão no mesmo servidor que o gateway do Windows PowerShell Web Access, adicione o `-IncludeManagementTools` parâmetro para o comando de instalação (conforme indicado neste passo). Se estiver a gerir o site do Windows PowerShell Web Access num computador remoto, instale o snap-in Gestor do IIS instalando [remoto servidor administração Toolsfor Windows 8.1](https://www.microsoft.com/en-us/download/details.aspx?id=39296) ou [administração remota do servidor Ferramentas para o Windows 8](https://www.microsoft.com/en-us/download/details.aspx?id=28972) no computador do qual pretende gerir o gateway.
+   > Instalar o Windows PowerShell Web Access, utilizando cmdlets do Windows PowerShell não adicionar ferramentas de gestão de servidor Web (IIS) por predefinição. Se pretende instalar as ferramentas de gestão no mesmo servidor que o gateway do Windows PowerShell Web Access, adicione o `-IncludeManagementTools` parâmetro para o comando de instalação (conforme indicado neste passo). Se estiver a gerir o site do Windows PowerShell Web Access num computador remoto, instale o snap-in Gestor do IIS instalando [remoto Server Administration Tools para Windows 8.1](https://www.microsoft.com/en-us/download/details.aspx?id=39296) ou [administração remota do servidor Ferramentas para o Windows 8](https://www.microsoft.com/en-us/download/details.aspx?id=28972) no computador do qual pretende gerir o gateway.
 
    Para instalar funções e funcionalidades num VHD offline, tem de adicionar o parâmetro `-ComputerName` e o parâmetro `-VHD`. O parâmetro `-ComputerName` contém o nome do servidor onde pretende montar o VHD, e o parâmetro `-VHD` contém o caminho para o ficheiro VHD no servidor especificado.
 
@@ -178,7 +178,7 @@ Por predefinição, o cmdlet instala a aplicação web, **pswa** (e um conjunto 
 7. Na **Adicionar enlace de Site** caixa de diálogo a **tipo** campo, selecione **https**.
 
 8. Na **certificado SSL** campo, selecione o certificado assinado no menu pendente.
-   Clique em **OK**. Ver [para configurar um certificado SSL no Gestor do IIS](#to-configure-an-ssl-certificate-in-iis-Manager) neste tópico para obter mais informações sobre como obter um certificado.
+   Clique em **OK**. Ver [para configurar um certificado SSL no Gestor do IIS](#to-configure-an-ssl-certificate-in-iis-manager) neste tópico para obter mais informações sobre como obter um certificado.
 
    A aplicação web do Windows PowerShell Web Access está agora configurada para utilizar o seu certificado SSL assinado.
 
@@ -232,7 +232,7 @@ Após a instalação do Windows PowerShell Web Access, pode personalizar a confi
 
 2. Sobre o **Manage** menu, clique em **para adicionar funções e funcionalidades**.
 
-3. Sobre o **selecionar tipo de instalação** , selecione **instalação baseada em funções ou baseada em recursos**.
+3. Na página **Selecionar tipo de instalação**, selecione **Instalação baseada em funções ou baseada em funcionalidades**.
    Clique em **Seguinte**.
 
 4. Sobre o **selecionar servidor de destino** página, selecione um servidor no agrupamento de servidores ou selecione um VHD offline. Para selecionar um VHD offline como servidor de destino, primeiro selecione o servidor em que pretende montar o VHD e, em seguida, selecione o ficheiro VHD. Para obter informações sobre como adicionar servidores ao agrupamento de servidores, consulte a ajuda do Gestor de servidores. Depois de selecionar o servidor de destino, clique em **seguinte**.
@@ -273,7 +273,7 @@ As instruções nesta secção destinam-se instalar a aplicação web do Windows
 
 8. Na **caminho físico** campo, navegue para a localização do aplicativo. Pode utilizar a localização predefinida, `$env:windir/Web/PowerShellWebAccess/wwwroot`. Clique em **OK**.
 
-9. Siga os passos no procedimento [para configurar um certificado SSL no Gestor de IIS](#to-configure-an-ssl-certificate-in-iis-Manager) neste tópico.
+9. Siga os passos no procedimento [para configurar um certificado SSL no Gestor do IIS](#to-configure-an-ssl-certificate-in-iis-manager) neste tópico.
 
 10. ![](images/SecurityNote.jpeg) Passo opcional de segurança:
 
@@ -329,7 +329,7 @@ As instruções nesta secção destinam-se instalar a aplicação web do Windows
 
 1. Opcionalmente, se for necessário para a sua organização, especifique um nome de anfitrião que faça sentido para sua organização e utilizadores, tal como **`www.contoso.com`**. Clique em **OK**.
 
-1. Para um ambiente de produção mais seguro, recomendamos vivamente que forneça um certificado válido assinado por uma AC. Tem de fornecer um certificado SSL, uma vez que os utilizadores só podem ligar para o Windows PowerShell Web Access por meio de um Web site HTTPS. Ver [para configurar um certificado SSL no Gestor de IIS](#to-configure-an-ssl-certificate-in-iis-Manager) neste tópico para obter mais informações sobre como obter um certificado.
+1. Para um ambiente de produção mais seguro, recomendamos vivamente que forneça um certificado válido assinado por uma AC. Tem de fornecer um certificado SSL, uma vez que os utilizadores só podem ligar para o Windows PowerShell Web Access por meio de um Web site HTTPS. Ver [para configurar um certificado SSL no Gestor do IIS](#to-configure-an-ssl-certificate-in-iis-manager) neste tópico para obter mais informações sobre como obter um certificado.
 
 1. Clique em **OK** para fechar a **adicionar Web site** caixa de diálogo.
 
@@ -420,7 +420,7 @@ Num ambiente de produção seguro, utilize sempre um certificado SSL válido ass
 
 Após instalação do Windows PowerShell Web Access e a configuração do gateway está concluída conforme descrito neste tópico, está pronta a utilizar a consola do Windows PowerShell baseada na web. Para obter mais informações sobre como obter a utilizar na consola baseada na web, consulte [utilizar a consola do PowerShell baseada na Web do Windows](use-the-web-based-windows-powershell-console.md).
 
-## <a name="see-also"></a>Consulte Também
+## <a name="see-also"></a>Veja Também
 
 [Serviços de informação Internet (IIS) 7.0 documentação](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc753433(v=ws.10))
 

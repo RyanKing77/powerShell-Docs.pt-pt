@@ -13,18 +13,18 @@ helpviewer_keywords:
 - errors [PowerShell SDK]
 ms.assetid: 0dce97c0-bd9a-4691-8ca3-e8d5dea902c5
 caps.latest.revision: 11
-ms.openlocfilehash: aac6b7b6ac8a0fad15194b6d3f92c434524fabdb
-ms.sourcegitcommit: b6871f21bd666f9cd71dd336bb3f844cf472b56c
+ms.openlocfilehash: 2f185e415e3effc2cf09a282ca1167e3bcfb7d6a
+ms.sourcegitcommit: caac7d098a448232304c9d6728e7340ec7517a71
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 02/03/2019
-ms.locfileid: "56846166"
+ms.lasthandoff: 03/16/2019
+ms.locfileid: "58054412"
 ---
 # <a name="error-reporting-concepts"></a>Error Reporting Concepts (Conceitos de Comunicação de Erros)
 
 Windows PowerShell fornece dois mecanismos para o relatório de erros: um mecanismo para *erros de terminação* e de outro mecanismo para *erros de não terminação*. É importante que seu cmdlet para relatar erros corretamente para que o aplicativo de host que está a executar os cmdlets pode reagir de forma apropriada.
 
-O cmdlet deve chamar o [System.Management.Automation.Cmdlet.Throwterminatingerror*](/dotnet/api/System.Management.Automation.Cmdlet.ThrowTerminatingError) método quando ocorre um erro que não existir ou não deve permitir que o cmdlet para continuar a processar os seus objetos de entrada. O cmdlet deve chamar o [System.Management.Automation.Cmdlet.Writeerror*](/dotnet/api/System.Management.Automation.Cmdlet.WriteError) método para reportar erros de não terminação, quando o cmdlet pode continuar a processar os objetos de entrada. Ambos os métodos fornecem um registo de erro que o aplicativo host pode usar para investigar a causa do erro.
+O cmdlet deve chamar o [System.Management.Automation.Cmdlet.Throwterminatingerror*](/dotnet/api/System.Management.Automation.Cmdlet.ThrowTerminatingError) método quando ocorre um erro que não existir ou não deve permitir que o cmdlet para continuar a processar os seus objetos de entrada. O cmdlet deve chamar o [System.Management.Automation.Cmdlet.WriteError](/dotnet/api/System.Management.Automation.Cmdlet.WriteError) método para reportar erros de não terminação, quando o cmdlet pode continuar a processar os objetos de entrada. Ambos os métodos fornecem um registo de erro que o aplicativo host pode usar para investigar a causa do erro.
 
 Utilize as seguintes diretrizes para determinar se o erro é a acabar ou erro de não terminação.
 
@@ -42,7 +42,7 @@ Utilize as seguintes diretrizes para determinar se o erro é a acabar ou erro de
 
 [System.Management.Automation.Cmdlet.Throwterminatingerror*](/dotnet/api/System.Management.Automation.Cmdlet.ThrowTerminatingError)
 
-[System.Management.Automation.Cmdlet.Writeerror*](/dotnet/api/System.Management.Automation.Cmdlet.WriteError)
+[System.Management.Automation.Cmdlet.WriteError](/dotnet/api/System.Management.Automation.Cmdlet.WriteError)
 
 [Registos de erro do PowerShell do Windows](./windows-powershell-error-records.md)
 

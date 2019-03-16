@@ -8,12 +8,12 @@ ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: d0c6d03f-1c1a-43d8-928e-e3290e90e0bc
 caps.latest.revision: 5
-ms.openlocfilehash: 947d0c0188df5bba3a9fb617fe5abf0b3b28eb51
-ms.sourcegitcommit: b6871f21bd666f9cd71dd336bb3f844cf472b56c
+ms.openlocfilehash: 2e9dbc9ff8f9507f2008cd6e114ba6fec36b10bf
+ms.sourcegitcommit: caac7d098a448232304c9d6728e7340ec7517a71
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 02/03/2019
-ms.locfileid: "56848210"
+ms.lasthandoff: 03/16/2019
+ms.locfileid: "58054616"
 ---
 # <a name="how-to-add-syntax-to-a-cmdlet-help-topic"></a>How to Add Syntax to a Cmdlet Help Topic (Como Adicionar Sintaxe ao Tópico de Ajuda de um Cmdlet)
 
@@ -112,7 +112,7 @@ Normalmente, os valores de parâmetros que são espaços reservados são necess�
 
    Abreviar tipos, desde que seu significado é claro, como "string" para System. String e "int" para System.Int32.
 
-   Listar todos os valores de enumerações, tais como o - parâmetro de tipo no exemplo anterior, o pode ser definido como "básico" ou "avançada".
+   Lista de todos os valores de enumerações, como o - parâmetro de tipo no exemplo anterior, que pode ser definido como "básico" ou "avançada".
 
    Comutador de parâmetros, como - lista no exemplo anterior, não têm valores.
 

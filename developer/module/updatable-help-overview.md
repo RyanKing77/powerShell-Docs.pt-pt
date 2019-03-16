@@ -10,12 +10,12 @@ applies_to:
 - Windows PowerShell 3.0
 ms.assetid: 3f7388a9-9fa8-42bc-b294-538c9a01e30a
 caps.latest.revision: 12
-ms.openlocfilehash: 4e962890fa1d5c282a02a89f0ae2e263844c635e
-ms.sourcegitcommit: b6871f21bd666f9cd71dd336bb3f844cf472b56c
+ms.openlocfilehash: f2dfb9642ba2dde38124142b659b425bbbb00f37
+ms.sourcegitcommit: caac7d098a448232304c9d6728e7340ec7517a71
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 02/03/2019
-ms.locfileid: "56847489"
+ms.lasthandoff: 03/16/2019
+ms.locfileid: "58057608"
 ---
 # <a name="updatable-help-overview"></a>Updatable Help Overview (Ajuda Atualizável: Descrição Geral)
 
@@ -31,7 +31,9 @@ Ajuda atualizável é totalmente suportada por todos os módulos do Windows Powe
 
 Ajuda atualizável inclui as seguintes funcionalidades.
 
-- O [Update-Help](/powershell/module/Microsoft.PowerShell.Core/Update-Help) cmdlet, que determina se os utilizadores têm a ajuda mais recente de ficheiros para um módulo e, se não estiver, transferir os ficheiros de ajuda mais recentes a partir da Internet, a Desempacote-los e instala-os nos subdiretórios módulo correto no computador do usuário. Os utilizadores podem utilizar o [Get-Help](/powershell/module/Microsoft.PowerShell.Core/Update-Help) cmdlet para ver os tópicos de ajuda recém-instalado imediatamente. Não é necessário reiniciar o Windows PowerShell.
+- O [Update-Help](/powershell/module/Microsoft.PowerShell.Core/Update-Help) cmdlet, que determina se os utilizadores têm a ajuda mais recente de ficheiros para um módulo e, se não estiver, transferir os ficheiros de ajuda mais recentes a partir da Internet, a Desempacote-los e instala-os nos subdiretórios módulo correto no computador do usuário.
+  Os utilizadores podem utilizar o [Get-Help](/powershell/module/Microsoft.PowerShell.Core/Get-Help) cmdlet para ver os tópicos de ajuda recém-instalado imediatamente.
+  Não é necessário reiniciar o PowerShell.
 
 - O [Save-Help](/powershell/module/Microsoft.PowerShell.Core/Save-Help) cmdlet, que transfere a ajuda mais recente ficheiros a partir da Internet e salva-os num diretório de sistema de ficheiros. Os utilizadores podem utilizar o `Update-Help` cmdlet para obter os ficheiros de ajuda do diretório do sistema de ficheiros e Descompacte e instalá-los nos subdiretórios de módulo no computador do usuário. O `Save-Help` cmdlet foi concebido para utilizadores que têm limitados ou sem acesso à Internet e para as empresas que preferem limitar o acesso à Internet.
 

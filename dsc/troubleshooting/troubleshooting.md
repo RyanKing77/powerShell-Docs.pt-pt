@@ -2,12 +2,12 @@
 ms.date: 10/30/2018
 keywords: DSC, powershell, configuração, a configuração
 title: Resolução de Problemas de DSC
-ms.openlocfilehash: e1f36bbc97569ac0d65f003ee08f52ec174a4520
-ms.sourcegitcommit: 00ff76d7d9414fe585c04740b739b9cf14d711e1
+ms.openlocfilehash: 5ee1b68f4f769426fea3c8e10738c3bb6ef94480
+ms.sourcegitcommit: caac7d098a448232304c9d6728e7340ec7517a71
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 12/14/2018
-ms.locfileid: "53405223"
+ms.lasthandoff: 03/16/2019
+ms.locfileid: "58059750"
 ---
 # <a name="troubleshooting-dsc"></a>Resolução de Problemas de DSC
 
@@ -74,7 +74,7 @@ InDesiredState        :    False
 InitialState          :
 InstanceName          :    ServiceDll
 RebootRequested       :    False
-ReosurceName          :    File
+ResourceName          :    File
 StartDate             :    11/24/2015  3:44:56
 PSComputerName        :
 ```
@@ -628,7 +628,7 @@ onlyProperty                            PSComputerName
 14                                      localhost
 ```
 
-## <a name="see-also"></a>Consulte Também
+## <a name="see-also"></a>Veja Também
 
 ### <a name="concepts"></a>Conceitos
 

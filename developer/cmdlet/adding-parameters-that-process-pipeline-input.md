@@ -8,15 +8,15 @@ ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - cmdlets [PowerShell Programmer's Guide], pipeline input
-- parameters [PowerShell Programer's Guide], pipeline input
+- parameters [PowerShell Programmer's Guide], pipeline input
 ms.assetid: 09bf70a9-7c76-4ffe-b3f0-a1d5f10a0931
 caps.latest.revision: 8
-ms.openlocfilehash: c790d20a792bcdb4a34485e53375560e129433a8
-ms.sourcegitcommit: b6871f21bd666f9cd71dd336bb3f844cf472b56c
+ms.openlocfilehash: bd52dc8aee7975d0899083a5c2f595b17690dc33
+ms.sourcegitcommit: caac7d098a448232304c9d6728e7340ec7517a71
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 02/03/2019
-ms.locfileid: "56845788"
+ms.lasthandoff: 03/16/2019
+ms.locfileid: "58054769"
 ---
 # <a name="adding-parameters-that-process-pipeline-input"></a>Adding Parameters that Process Pipeline Input (Adicionar Parâmetros que Processam Entradas de Pipeline)
 
@@ -93,7 +93,7 @@ Os conjuntos de declaração anterior a `ValueFromPipeline` palavra-chave para `
 
 Se for seu cmdlet para processar a entrada do pipeline, tem de substituir a entrada apropriada de métodos de processamento. Os métodos de processamento básico de entrada são introduzidos nas [criando seu primeiro Cmdlet](./creating-a-cmdlet-without-parameters.md).
 
-Este cmdlet de Get-Proc substitui o [System.Management.Automation.Cmdlet.Processrecord*](/dotnet/api/System.Management.Automation.Cmdlet.ProcessRecord) método para tratar a `Name` entrada de parâmetro fornecida pelo utilizador ou um script. Este método irá obter os processos para cada nome do processo de pedido ou todos os processos se não for fornecido nenhum nome. Repare que dentro [System.Management.Automation.Cmdlet.Processrecord*](/dotnet/api/System.Management.Automation.Cmdlet.ProcessRecord), a chamada para [System.Management.Automation.Cmdlet.Writeobject%28System.Object%2Csystem.Boolean%29](/dotnet/api/System.Management.Automation.Cmdlet.WriteObject%28System.Object%2CSystem.Boolean%29) é o mecanismo de saída para o envio de objetos de saída no pipeline. O segundo parâmetro desta chamada `enumerateCollection`, está definida como `true` para informar o tempo de execução do Windows PowerShell para enumerar a matriz de objetos de processo e escrever um processo de cada vez à linha de comandos.
+Este cmdlet de Get-Proc substitui o [System.Management.Automation.Cmdlet.ProcessRecord](/dotnet/api/System.Management.Automation.Cmdlet.ProcessRecord) método para tratar a `Name` entrada de parâmetro fornecida pelo utilizador ou um script. Este método irá obter os processos para cada nome do processo de pedido ou todos os processos se não for fornecido nenhum nome. Repare que dentro [System.Management.Automation.Cmdlet.ProcessRecord](/dotnet/api/System.Management.Automation.Cmdlet.ProcessRecord), a chamada para [System.Management.Automation.Cmdlet.WriteObject%28System.Object%2CSystem.Boolean%29](/dotnet/api/System.Management.Automation.Cmdlet.WriteObject%28System.Object%2CSystem.Boolean%29) é a saída objetos do mecanismo de envio de saída no pipeline. O segundo parâmetro desta chamada `enumerateCollection`, está definida como `true` para informar o tempo de execução do Windows PowerShell para enumerar a matriz de objetos de processo e escrever um processo de cada vez à linha de comandos.
 
 ```csharp
 protected override void ProcessRecord()
@@ -190,7 +190,7 @@ O resultado seguinte é apresentada.
         726      21  25872   16652    138   22.09  3860  iexplore
     ```
 
-## <a name="see-also"></a>Consulte Também
+## <a name="see-also"></a>Veja Também
 
 [Adicionar parâmetros que processam a entrada de linha de comandos](./adding-parameters-that-process-command-line-input.md)
 

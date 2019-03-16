@@ -11,12 +11,12 @@ helpviewer_keywords:
 - attributes [PowerShell SDK], described
 ms.assetid: d3f4f652-d929-4c27-9358-9baa390a094c
 caps.latest.revision: 14
-ms.openlocfilehash: b06faf7204213b383b25685837941ad63dcb225b
-ms.sourcegitcommit: b6871f21bd666f9cd71dd336bb3f844cf472b56c
+ms.openlocfilehash: 326cd408e86402974569fc76d5e473be5a56f0b6
+ms.sourcegitcommit: caac7d098a448232304c9d6728e7340ec7517a71
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 02/03/2019
-ms.locfileid: "56845354"
+ms.lasthandoff: 03/16/2019
+ms.locfileid: "58055177"
 ---
 # <a name="cmdlet-attributes"></a>Cmdlet Attributes (Atributos de Cmdlet)
 
@@ -32,7 +32,7 @@ Windows PowerShell define vários atributos que pode usar para adicionar funcion
 
 [Declaração de atributo do cmdlet](./cmdlet-attribute-declaration.md) descreve como definir uma classe do .NET Framework como um cmdlet.
 
-[Declaração de atributo de credenciais](./credential-attribute-declaration.md) descreve como adicionar suporte para a conversão de entrada de cadeia de caracteres num [System.Management.Automation.Pscredential](/dotnet/api/System.Management.Automation.PSCredential) objeto.
+[Declaração de atributo de credenciais](./credential-attribute-declaration.md) descreve como adicionar suporte para a conversão de entrada de cadeia de caracteres num [System.Management.Automation.PSCredential](/dotnet/api/System.Management.Automation.PSCredential) objeto.
 
 [Atributo OutputType declaração](./outputtype-attribute-declaration.md) descreve como especificar os tipos do .NET Framework devolvidos pelo cmdlet.
 

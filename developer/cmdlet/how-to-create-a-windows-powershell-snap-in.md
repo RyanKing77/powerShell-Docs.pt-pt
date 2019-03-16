@@ -10,12 +10,12 @@ helpviewer_keywords:
 - snap-ins [PowerShell SDK], examples
 ms.assetid: 71bd9b2c-5f2e-4aa8-b5fe-08c956540d37
 caps.latest.revision: 10
-ms.openlocfilehash: 73834cea1d90943cf954728d6295d8eb33e14f57
-ms.sourcegitcommit: b6871f21bd666f9cd71dd336bb3f844cf472b56c
+ms.openlocfilehash: 43199544dc02ccae4b61053c30d6ed36576adfcf
+ms.sourcegitcommit: caac7d098a448232304c9d6728e7340ec7517a71
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 02/03/2019
-ms.locfileid: "56849442"
+ms.lasthandoff: 03/16/2019
+ms.locfileid: "58055942"
 ---
 # <a name="how-to-create-a-windows-powershell-snap-in"></a>How to Create a Windows PowerShell Snap-in (Como Criar um Snap-in do Windows PowerShell)
 
@@ -25,7 +25,7 @@ Assemblies do snap-in devem ser instalados num diretório protegido, tal como se
 
 ## <a name="windows-powershell-snap-in-classes"></a>Classes de Snap-in do PowerShell de Windows
 
-Windows PowerShell todos os snap-in de classes derivar a [System.Management.Automation.Pssnapin](/dotnet/api/System.Management.Automation.PSSnapIn) ou [System.Management.Automation.Custompssnapin](/dotnet/api/System.Management.Automation.CustomPSSnapIn) classes.
+Windows PowerShell todos os snap-in de classes derivar a [System.Management.Automation.PSSnapIn](/dotnet/api/System.Management.Automation.PSSnapIn) ou [System.Management.Automation.Custompssnapin](/dotnet/api/System.Management.Automation.CustomPSSnapIn) classes.
 
 ## <a name="examples"></a>Exemplos
 
@@ -33,9 +33,9 @@ Windows PowerShell todos os snap-in de classes derivar a [System.Management.Auto
 
 [Escrever um Snap-in do PowerShell do Windows personalizados](./writing-a-custom-windows-powershell-snap-in.md): Este exemplo mostra como criar um personalizada snap-in que é utilizado para registar um conjunto específico de cmdlets e provedores que poderão ou poderão não existir num único assembly.
 
-## <a name="see-also"></a>Consulte Também
+## <a name="see-also"></a>Veja Também
 
-[System.Management.Automation.Pssnapin](/dotnet/api/System.Management.Automation.PSSnapIn)
+[System.Management.Automation.PSSnapIn](/dotnet/api/System.Management.Automation.PSSnapIn)
 
 [System.Management.Automation.Custompssnapin](/dotnet/api/System.Management.Automation.CustomPSSnapIn)
 

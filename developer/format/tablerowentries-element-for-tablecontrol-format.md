@@ -8,12 +8,12 @@ ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: d10b68ca-256c-4c58-b503-73f7777b39ae
 caps.latest.revision: 15
-ms.openlocfilehash: d93750f919c1075f173dc9ac70324cc003e36879
-ms.sourcegitcommit: b6871f21bd666f9cd71dd336bb3f844cf472b56c
+ms.openlocfilehash: 88de19be02de4933f892e02093403a82ccdd5788
+ms.sourcegitcommit: caac7d098a448232304c9d6728e7340ec7517a71
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 02/03/2019
-ms.locfileid: "56851143"
+ms.lasthandoff: 03/16/2019
+ms.locfileid: "58055738"
 ---
 # <a name="tablerowentries-element-for-tablecontrol-format"></a>TableRowEntries Element for TableControl (Format) (Elemento TableRowEntries para TableControl [Formatação])
 
@@ -41,7 +41,7 @@ Nenhum.
 
 |Elemento|Descrição|
 |-------------|-----------------|
-|[Elemento de TableRowEntry para TableRowEntries para TableControl (formato)](./tablerowentry-element-for-tablerowentroes-for-tablecontrol-format.md)|Elemento necessário.<br /><br /> Define os dados que são apresentados numa linha da tabela.|
+|[Elemento de TableRowEntry para TableRowEntries para TableControl (formato)](./tablerowentry-element-for-tablerowentries-for-tablecontrol-format.md)|Elemento necessário.<br /><br /> Define os dados que são apresentados numa linha da tabela.|
 
 ### <a name="parent-elements"></a>Elementos Principais
 
@@ -78,12 +78,12 @@ A exemplo a seguir mostra um `TableRowEntries` elemento que define uma linha que
 
 ```
 
-## <a name="see-also"></a>Consulte Também
+## <a name="see-also"></a>Veja Também
 
 [Criar uma vista de tabela](./creating-a-table-view.md)
 
 [Elemento de TableControl (formato)](./tablecontrol-element-format.md)
 
-[Elemento de TableRowEntry (formato)](./tablerowentry-element-for-tablerowentroes-for-tablecontrol-format.md)
+[Elemento de TableRowEntry (formato)](./tablerowentry-element-for-tablerowentries-for-tablecontrol-format.md)
 
 [Escrever um ficheiro de formatação de PowerShell](./writing-a-powershell-formatting-file.md)

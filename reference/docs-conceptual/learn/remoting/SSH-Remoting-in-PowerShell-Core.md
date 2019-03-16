@@ -2,12 +2,12 @@
 title: Comunicação Remota do PowerShell através de SSH
 description: Comunicação remota do PowerShell Core através de SSH
 ms.date: 08/14/2018
-ms.openlocfilehash: b5c6bd70841e270c2c128601612c07af9d9aa6e4
-ms.sourcegitcommit: 548547b2d5fc73e726bb9fec6175d452a351d975
+ms.openlocfilehash: 1d7bcb69c7e784bf745cb5c2633106ea53f6226a
+ms.sourcegitcommit: caac7d098a448232304c9d6728e7340ec7517a71
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 12/20/2018
-ms.locfileid: "53655298"
+ms.lasthandoff: 03/16/2019
+ms.locfileid: "58056537"
 ---
 # <a name="powershell-remoting-over-ssh"></a>Comunicação Remota do PowerShell através de SSH
 
@@ -47,7 +47,7 @@ SSH tem de ser instalado em todas as máquinas. Instalar o cliente de SSH (`ssh.
    ```
 
 2. Instale os OpenSSH de Win32 mais recente. Para obter instruções de instalação, consulte [instalação de OpenSSH](/windows-server/administration/openssh/openssh_install_firstuse).
-3. Editar a `sshd_config` arquivo localizado em `%ProgramData%\ssh`.
+3. Editar a `sshd_config` arquivo localizado em `$env:ProgramData\ssh`.
 
    - Certifique-se de autenticação de palavra-passe está ativada
 
@@ -62,7 +62,7 @@ SSH tem de ser instalado em todas as máquinas. Instalar o cliente de SSH (`ssh.
      > [!NOTE]
      > Há um bug no OpenSSH para Windows que impede que os espaços de trabalhar em caminhos de executável do subsistema. Para obter mais informações, consulte [este problema do GitHub](https://github.com/PowerShell/Win32-OpenSSH/issues/784).
 
-     Uma solução é criar um symlink para o diretório de instalação do Powershell que não tem espaços:
+     Uma solução é criar um symlink para o diretório de instalação do PowerShell que não tem espaços:
 
      ```powershell
      mklink /D c:\pwsh "C:\Program Files\PowerShell\6"
@@ -129,7 +129,7 @@ SSH tem de ser instalado em todas as máquinas. Instalar o cliente de SSH (`ssh.
 1. Instalar a versão mais recente [PowerShell Core para MacOS](../../install/installing-powershell-core-on-macos.md) criar
 
    - Certifique-se de que comunicação remota SSH está ativada, seguindo estes passos:
-     - Aberto `System Preferences`
+     - abrir `System Preferences`
      - Clique em `Sharing`
      - Verificar `Remote Login` -deverá indicar `Remote Login: On`
      - Permitir o acesso aos utilizadores adequados
@@ -306,7 +306,7 @@ GitCommitId                    v6.0.0-alpha.17
 
 O comando sudo não funciona na sessão remota para máquina Linux.
 
-## <a name="see-also"></a>Consulte Também
+## <a name="see-also"></a>Veja Também
 
 [O PowerShell Core para Windows](../../install/installing-powershell-core-on-windows.md#msi)
 

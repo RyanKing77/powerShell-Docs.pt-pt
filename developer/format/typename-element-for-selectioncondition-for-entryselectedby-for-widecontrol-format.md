@@ -8,12 +8,12 @@ ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 6d6d43fa-c900-4e2f-952d-deccd584236f
 caps.latest.revision: 11
-ms.openlocfilehash: 0d7bbfd8be3bf2bd1af75a45ca4db016dfb6bff6
-ms.sourcegitcommit: b6871f21bd666f9cd71dd336bb3f844cf472b56c
+ms.openlocfilehash: 6142350e3843a5feddcb5cee8901bbfa607d8d4c
+ms.sourcegitcommit: caac7d098a448232304c9d6728e7340ec7517a71
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 02/03/2019
-ms.locfileid: "56848182"
+ms.lasthandoff: 03/16/2019
+ms.locfileid: "58056012"
 ---
 # <a name="typename-element-for-selectioncondition-for-entryselectedby-for-widecontrol-format"></a>TypeName Element for SelectionCondition for EntrySelectedBy for WideControl (Format) (Elemento TypeName para SelectionCondition para EntrySelectedBy para WideControl [Formatação])
 
@@ -55,9 +55,9 @@ A condição de seleção, pode especificar um tipo .NET ou uma seleção defini
 
 Para obter mais informações sobre os outros componentes de uma vista alargada, consulte [criar uma vista alargada](./creating-a-wide-view.md).
 
-## <a name="see-also"></a>Consulte Também
+## <a name="see-also"></a>Veja Também
 
-[É criada uma vista alargada](./creating-a-wide-view.md)
+[Criar uma vista alargada](./creating-a-wide-view.md)
 
 [Definir condições para quando os dados são apresentados](./defining-conditions-for-displaying-data.md)
 

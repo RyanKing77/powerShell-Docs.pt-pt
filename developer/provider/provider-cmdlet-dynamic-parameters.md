@@ -8,12 +8,12 @@ ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 8f1069f7-8fa8-4622-9e2c-af29b0b961c2
 caps.latest.revision: 6
-ms.openlocfilehash: 803fe4ae24a4f8022639c5b6d6298100859177ce
-ms.sourcegitcommit: b6871f21bd666f9cd71dd336bb3f844cf472b56c
+ms.openlocfilehash: a50de014988336c473c565b506a73de1c864d7e0
+ms.sourcegitcommit: caac7d098a448232304c9d6728e7340ec7517a71
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 02/03/2019
-ms.locfileid: "56848462"
+ms.lasthandoff: 03/16/2019
+ms.locfileid: "58058237"
 ---
 # <a name="provider-cmdlet-dynamic-parameters"></a>Provider cmdlet dynamic parameters (Parâmetros dinâmicos de cmdlets de fornecedores)
 
@@ -73,7 +73,7 @@ Aqui está uma lista dos parâmetros estáticos que podem ser utilizados para ad
 
 `Copy-Item` cmdlet pode definir parâmetros dinâmicos que são acionados pelos `Path`, `Destination`, e `Recurse` parâmetros do `Copy-Item` cmdlet implementando o [ System.Management.Automation.Provider.Containercmdletprovider.Copyitemdynamicparameters*](/dotnet/api/System.Management.Automation.Provider.ContainerCmdletProvider.CopyItemDynamicParameters) método.
 
-Cmdlet Get-ChildItems pode definir parâmetros dinâmicos que são acionados pelos `Path` e `Recures` parâmetros do `Get-ChildItem` cmdlet implementando o [ System.Management.Automation.Provider.Containercmdletprovider.Getchilditemsdynamicparameters*](/dotnet/api/System.Management.Automation.Provider.ContainerCmdletProvider.GetChildItemsDynamicParameters) e [System.Management.Automation.Provider.Containercmdletprovider.Getchildnamesdynamicparameters*](/dotnet/api/System.Management.Automation.Provider.ContainerCmdletProvider.GetChildNamesDynamicParameters) métodos.
+Cmdlet Get-ChildItems pode definir parâmetros dinâmicos que são acionados pelos `Path` e `Recurse` parâmetros do `Get-ChildItem` cmdlet implementando o [ System.Management.Automation.Provider.Containercmdletprovider.Getchilditemsdynamicparameters*](/dotnet/api/System.Management.Automation.Provider.ContainerCmdletProvider.GetChildItemsDynamicParameters) e [System.Management.Automation.Provider.Containercmdletprovider.Getchildnamesdynamicparameters*](/dotnet/api/System.Management.Automation.Provider.ContainerCmdletProvider.GetChildNamesDynamicParameters) métodos.
 
 `Get-Content` cmdlet pode definir parâmetros dinâmicos que são acionados pela `Path` parâmetro do `Get-Content` cmdlet, implementando o [ System.Management.Automation.Provider.Icontentcmdletprovider.Getcontentreaderdynamicparameters*](/dotnet/api/System.Management.Automation.Provider.IContentCmdletProvider.GetContentReaderDynamicParameters) método.
 
@@ -89,7 +89,7 @@ Cmdlet Get-ChildItems pode definir parâmetros dinâmicos que são acionados pel
 
 `New-ItemProperty` cmdlet pode definir parâmetros dinâmicos que são acionados pelos `Path`, `Name`, `PropertyType`, e `Value` parâmetros do `New-ItemProperty` cmdlet implementando o [ System.Management.Automation.Provider.Idynamicpropertycmdletprovider.Newpropertydynamicparameters*](/dotnet/api/System.Management.Automation.Provider.IDynamicPropertyCmdletProvider.NewPropertyDynamicParameters) método.
 
-`New-PSDrive` cmdlet pode definir parâmetros dinâmicos que são acionados pelos [System.Management.Automation.Psdriveinfo](/dotnet/api/System.Management.Automation.PSDriveInfo) objeto devolvido pela `New-PSDrive` cmdlet implementando o [ System.Management.Automation.Provider.Drivecmdletprovider.Newdrivedynamicparameters*](/dotnet/api/System.Management.Automation.Provider.DriveCmdletProvider.NewDriveDynamicParameters) método.
+`New-PSDrive` cmdlet pode definir parâmetros dinâmicos que são acionados pelos [System.Management.Automation.PSDriveinfo](/dotnet/api/System.Management.Automation.PSDriveInfo) objeto devolvido pela `New-PSDrive` cmdlet implementando o [ System.Management.Automation.Provider.Drivecmdletprovider.Newdrivedynamicparameters*](/dotnet/api/System.Management.Automation.Provider.DriveCmdletProvider.NewDriveDynamicParameters) método.
 
 `Remove-Item` Pode definir parâmetros dinâmicos que são acionados pela `Path` e `Recurse` parâmetros do `Remove-Item` cmdlet implementando o [ System.Management.Automation.Provider.Containercmdletprovider.Removeitemdynamicparameters*](/dotnet/api/System.Management.Automation.Provider.ContainerCmdletProvider.RemoveItemDynamicParameters) método.
 
@@ -107,6 +107,6 @@ Cmdlet Get-ChildItems pode definir parâmetros dinâmicos que são acionados pel
 
 `Test-Path` cmdlet pode definir parâmetros dinâmicos que são acionados pela `Path` parâmetro do `Test-Path` cmdlet, implementando o [ System.Management.Automation.Provider.Itemcmdletprovider.Invokedefaultactiondynamicparameters*](/dotnet/api/System.Management.Automation.Provider.ItemCmdletProvider.InvokeDefaultActionDynamicParameters) método.
 
-## <a name="see-also"></a>Consulte Também
+## <a name="see-also"></a>Veja Também
 
 [Escrever um fornecedor do Windows PowerShell](./writing-a-windows-powershell-provider.md)

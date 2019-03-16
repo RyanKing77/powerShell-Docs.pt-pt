@@ -8,12 +8,12 @@ ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: a6a04f15-b5d8-475b-ac9c-e75c58ec8933
 caps.latest.revision: 8
-ms.openlocfilehash: 9e8123e9b1068e0fd6efec8508eacf594ff22301
-ms.sourcegitcommit: b6871f21bd666f9cd71dd336bb3f844cf472b56c
+ms.openlocfilehash: 3cb370cd1bfe9ce7198980cc1c26fafb126d00a3
+ms.sourcegitcommit: caac7d098a448232304c9d6728e7340ec7517a71
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 02/03/2019
-ms.locfileid: "56845935"
+ms.lasthandoff: 03/16/2019
+ms.locfileid: "58054905"
 ---
 # <a name="runspace04-sample"></a>Runspace04 Sample (Exemplo Runspace04)
 
@@ -35,7 +35,7 @@ Este exemplo demonstra o seguinte.
 
 - Invocar os comandos de forma síncrona.
 
-- Usando [System.Management.Automation.Psobject](/dotnet/api/System.Management.Automation.PSObject) objetos para extrair e apresentar as propriedades dos objetos devolvidos pelos comandos.
+- Usando [System.Management.Automation.PSObject](/dotnet/api/System.Management.Automation.PSObject) objetos para extrair e apresentar as propriedades dos objetos devolvidos pelos comandos.
 
 - A obter e apresentar os registos de erro que foram gerados durante a execução dos comandos.
 
@@ -123,6 +123,6 @@ namespace Microsoft.Samples.PowerShell.Runspaces
 }
 ```
 
-## <a name="see-also"></a>Consulte Também
+## <a name="see-also"></a>Veja Também
 
 [Escrever um aplicativo de Host de PowerShell do Windows](./writing-a-windows-powershell-host-application.md)

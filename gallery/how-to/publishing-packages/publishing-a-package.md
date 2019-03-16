@@ -3,12 +3,12 @@ ms.date: 06/12/2017
 contributor: JKeithB
 keywords: Galeria, o powershell, o cmdlet, o psgallery
 title: Criar e publicar um item
-ms.openlocfilehash: 70696535a3bf540ff75a2dc43bca80cb1adf8f45
-ms.sourcegitcommit: b6871f21bd666f9cd71dd336bb3f844cf472b56c
+ms.openlocfilehash: 0e0f871b5d43508735e396224fdfd1a29b1e91c0
+ms.sourcegitcommit: caac7d098a448232304c9d6728e7340ec7517a71
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 02/03/2019
-ms.locfileid: "55684361"
+ms.lasthandoff: 03/16/2019
+ms.locfileid: "58055483"
 ---
 # <a name="creating-and-publishing-an-item"></a>Criar e publicar um item
 
@@ -75,7 +75,7 @@ Existem algumas ferramentas que precisa para executar no seu código antes de pu
 Se as informações de manifesto no seu item não não possível ler a infraestrutura de galeria do PowerShell, não será capaz de publicar.
 [Teste ModuleManifest](/powershell/module/microsoft.powershell.core/test-modulemanifest) capturará problemas comuns que faria com que o módulo a só ser utilizado quando é instalado. Tem de ser executado para cada módulo antes de publicá-la na galeria do PowerShell.
 
-Da mesma forma, [teste ScriptFileInfo](/powershell/module/PowerShellGet/test-scriptfileinfo) valida os metadados num script e tem de ser executado em todos os scripts (publicado separado a partir de um módulo) antes de publicá-la na galeria do Powershell.
+Da mesma forma, [teste ScriptFileInfo](/powershell/module/PowerShellGet/test-scriptfileinfo) valida os metadados num script e tem de ser executado em todos os scripts (publicado separado a partir de um módulo) antes de publicá-la na galeria do PowerShell.
 
 
 ## <a name="publishing-items"></a>Itens de publicação
@@ -87,14 +87,14 @@ Tem de utilizar o [Publish-Script](/powershell/module/PowerShellGet/publish-scri
 
 A maioria das outras opções na linha de comandos deve ser nos dados de manifestos para o item que está a publicar, para que não deve especificá-los no comando.
 
-Para evitar erros, é altamente recomendável que experimente os comandos usando - Whatif-Verbose, antes da publicação. Esta ação irá guardar um tempo considerável, desde sempre que publicar na galeria do PowerShell, tem de atualizar o número de versão na secção de manifesto do item.
+Para evitar erros, é altamente recomendável que experimente os comandos usando - WhatIf-Verbose, antes da publicação. Esta ação irá guardar um tempo considerável, desde sempre que publicar na galeria do PowerShell, tem de atualizar o número de versão na secção de manifesto do item.
 
 Exemplos seriam:
 
-* `Publish-Module -Path ".\MyModule" -NugetAPIKey "GUID" -Whatif -Verbose`
-* `Publish-Script -Path ".\MyScriptFile.PS1" -NugetAPIKey "GUID" -Whatif -Verbose`
+* `Publish-Module -Path ".\MyModule" -NugetAPIKey "GUID" -WhatIf -Verbose`
+* `Publish-Script -Path ".\MyScriptFile.PS1" -NugetAPIKey "GUID" -WhatIf -Verbose`
 
-Reveja o resultado com cuidado e, se vir há erros nem avisos, repita o comando sem o parâmetro-Whatif.
+Reveja o resultado com cuidado e, se vir há erros nem avisos, repita o comando sem o parâmetro-WhatIf.
 
 Todos os itens que são publicados na galeria do PowerShell serão analisados relativamente a vírus e serão ser analisados com o analisador de Script do PowerShell. As questões que surjam nesse momento serão enviadas para o publicador para a resolução.
 

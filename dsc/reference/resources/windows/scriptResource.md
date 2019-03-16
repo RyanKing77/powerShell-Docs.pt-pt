@@ -2,12 +2,12 @@
 ms.date: 08/24/2018
 keywords: DSC, powershell, configuração, a configuração
 title: Recursos de Script de DSC
-ms.openlocfilehash: ef84239820a44aab2a028f7f0fe17653a851b72e
-ms.sourcegitcommit: e04292a9c10de9a8391d529b7f7aa3753b362dbe
+ms.openlocfilehash: 86dfb74bf52d8907686bb955fd722f4fb8b9131b
+ms.sourcegitcommit: caac7d098a448232304c9d6728e7340ec7517a71
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 01/04/2019
-ms.locfileid: "54048515"
+ms.lasthandoff: 03/16/2019
+ms.locfileid: "58054761"
 ---
 # <a name="dsc-script-resource"></a>Recursos de Script de DSC
 
@@ -57,7 +57,7 @@ O [Test-dscconfiguration para](/powershell/module/PSDesiredStateConfiguration/Te
 
 ### <a name="setscript"></a>SetScript
 
-O `SetScript` modifica o nó para enfore o estado pretendido. Ela é chamada pelo DSC se o `TestScript` devolve de bloco de script `$false`. O `SetScript` não deve ter nenhum valor de retorno.
+O `SetScript` modifica o nó para impor o estado pretendido. Ela é chamada pelo DSC se o `TestScript` devolve de bloco de script `$false`. O `SetScript` não deve ter nenhum valor de retorno.
 
 ## <a name="examples"></a>Exemplos
 

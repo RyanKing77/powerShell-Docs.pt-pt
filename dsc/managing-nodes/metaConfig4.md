@@ -2,12 +2,12 @@
 ms.date: 12/12/2018
 keywords: DSC, powershell, configuração, a configuração
 title: Configurar o Gestor de configuração de Local em versões anteriores do Windows PowerShell
-ms.openlocfilehash: 31ba2ecdaa5a2ff7fcfddb1791c4d00343f4b5d5
-ms.sourcegitcommit: 00ff76d7d9414fe585c04740b739b9cf14d711e1
+ms.openlocfilehash: cea32c9aa8144bc52f3d44f2ad852f577f6a5e6d
+ms.sourcegitcommit: caac7d098a448232304c9d6728e7340ec7517a71
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 12/14/2018
-ms.locfileid: "53404986"
+ms.lasthandoff: 03/16/2019
+ms.locfileid: "58055313"
 ---
 # <a name="configuring-the-local-configuration-manager-in-previous-versions-of-windows-powershell"></a>Configurar o Gestor de configuração de Local em versões anteriores do Windows PowerShell
 
@@ -34,9 +34,20 @@ A seguinte lista as propriedades do Gestor de configuração Local que pode defi
 - **Credencial**: Indica as credenciais (tal como acontece com Get-Credential) necessárias para aceder a recursos remotos, tais como contactar o serviço de configuração.
 - **DownloadManagerCustomData**: Representa uma matriz que contém dados personalizados específicos para o Gestor de transferências.
 - **DownloadManagerName**: Indica o nome da configuração e o Gestor de transferências do módulo.
-- **RebootNodeIfNeeded**: Determinadas alterações de configuração num nó de destino podem exigir que seja reiniciada para que as alterações sejam aplicadas. Com o valor **True**, esta propriedade irá reiniciar o nó assim que a configuração tiver sido completamente aplica-se, sem aviso ainda mais. Se **False** (o valor predefinido), a configuração será concluída, mas o nó tem de ser reiniciado manualmente para que as alterações entrem em vigor.
+- **RebootNodeIfNeeded**: Defina esta opção como `$true` para permitir que os recursos para reiniciar o nó utilizando o `$global:DSCMachineStatus` sinalizador. Caso contrário, terá de reiniciar manualmente o nó para qualquer configuração que requer ele. O valor predefinido é `$false`. Para utilizar esta definição quando uma condição de reinicialização é elaborada por algo que não seja o DSC (por exemplo, o programa de instalação do Windows), combinar esta definição com o [xPendingReboot](https://github.com/powershell/xpendingreboot) módulo.
 - **RefreshFrequencyMins**: Utilizado quando tiver definido um serviço pull. Representa a frequência (em minutos) em que o Gestor de configuração Local entra em contacto com um serviço pull para transferir a configuração atual. Este valor pode ser definido em conjunto com ConfigurationModeFrequencyMins. Quando RefreshMode está definida como PULL, o nó de destino contacta o serviço de solicitação num intervalo definido por RefreshFrequencyMins e transfere a configuração atual. No intervalo definido por ConfigurationModeFrequencyMins, o mecanismo de consistência, em seguida, aplica a configuração mais recente que foi transferida para o nó de destino. Se RefreshFrequencyMins não estiver definido como um número inteiro múltiplo de ConfigurationModeFrequencyMins, o sistema será Arredonda-lo. O valor predefinido é 30.
 - **RefreshMode**: Os valores possíveis são **Push** (predefinição) e **extrair**. A configuração de "push", tem de colocar um ficheiro de configuração em cada nó de destino, utilizando qualquer computador cliente. No modo de "pull", tem de configurar um serviço pull para o Gestor de configuração Local contactar e acessar os arquivos de configuração.
+
+> [!NOTE]
+> A LCM ser iniciada a **ConfigurationModeFrequencyMins** ciclo com base em:
+>
+> - Um novo metaconfig for aplicado através de `Set-DscLocalConfigurationManager`
+> - Um reinício do computador
+>
+> Para qualquer condição em que o processo de temporizador sofre uma falha, o que será detetada dentro de 30 segundos e o ciclo será reiniciado.
+> Uma operação simultânea pode atrasar o ciclo de a ser iniciada, se a duração desta operação excede a frequência de ciclo de configurado, o próximo temporizador não será iniciado.
+>
+> Exemplo, o metaconfig está configurado com uma frequência de solicitação de 15 minutos e uma solicitação ocorre no T1.  O nó não concluir o trabalho para 16 minutos.  O primeiro ciclo de 15 minutos é ignorado e pull seguinte irá ocorrer em T1 + 15 + 15.
 
 ### <a name="example-of-updating-local-configuration-manager-settings"></a>Exemplo de a atualizar as definições do Gestor de configuração Local
 
@@ -76,7 +87,8 @@ Para aplicar as definições, pode utilizar o **Set-dsclocalconfigurationmanager
 Set-DscLocalConfigurationManager -Path "c:\users\public\dsc"
 ```
 
-> **Tenha em atenção**: Para o **caminho** parâmetro, tem de especificar o mesmo caminho que especificou para o **OutputPath** parâmetro quando a configuração no exemplo anterior é invocado.
+> [!NOTE]
+> Para o **caminho** parâmetro, tem de especificar o mesmo caminho que especificou para o **OutputPath** parâmetro quando a configuração no exemplo anterior é invocado.
 
 Para ver as definições do Gestor de configuração Local atual, pode utilizar o **Get-dsclocalconfigurationmanager para** cmdlet.
 Se invocar este cmdlet sem parâmetros, por padrão ele irá obter as definições do Gestor de configuração Local para o nó no qual executá-lo.

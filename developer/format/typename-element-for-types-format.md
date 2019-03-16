@@ -8,12 +8,12 @@ ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 0595b99e-b438-4240-b47b-555cf0316f33
 caps.latest.revision: 15
-ms.openlocfilehash: 4f463ac6b70a00f628c5b93b112c5fa510ff3bfb
-ms.sourcegitcommit: b6871f21bd666f9cd71dd336bb3f844cf472b56c
+ms.openlocfilehash: bd5baa03c2050b2c3bbe1d7697c253d923175d39
+ms.sourcegitcommit: caac7d098a448232304c9d6728e7340ec7517a71
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 02/03/2019
-ms.locfileid: "56845116"
+ms.lasthandoff: 03/16/2019
+ms.locfileid: "58057931"
 ---
 # <a name="typename-element-for-types-format"></a>TypeName Element for Types (Format) (Elemento TypeName para Types [Formatação])
 
@@ -83,4 +83,4 @@ A exemplo a seguir mostra um `SelectionSet` elemento que define quatro tipos de 
 
 [Elemento de tipos (formato)](./types-element-for-selectionset-format.md)
 
-[Escrever um Windows PowDefining conjuntos de ObjecterShell formatação ficheiro](./writing-a-powershell-formatting-file.md)
+[Escrever do Windows PowerShell formatação ficheiro](./writing-a-powershell-formatting-file.md)

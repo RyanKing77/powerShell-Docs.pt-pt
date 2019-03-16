@@ -2,19 +2,21 @@
 ms.date: 06/05/2017
 keywords: PowerShell, o cmdlet
 title: O que há de novo no Windows PowerShell 5.0
-ms.openlocfilehash: 06088e4a974ed4fb2a245fb9acfa780710a8ccc4
-ms.sourcegitcommit: b6871f21bd666f9cd71dd336bb3f844cf472b56c
+ms.openlocfilehash: a21e6af9f23ac8bb3ddf84dbfa67a67f3ff93b24
+ms.sourcegitcommit: caac7d098a448232304c9d6728e7340ec7517a71
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 02/03/2019
-ms.locfileid: "55688638"
+ms.lasthandoff: 03/16/2019
+ms.locfileid: "58055109"
 ---
 # <a name="whats-new-in-windows-powershell-50"></a>O que há de novo no Windows PowerShell 5.0
+
 Windows PowerShell 5.0 inclui funcionalidades novas importantes que expandem a sua utilização, melhoram a usabilidade e permitem controlar e gerir ambientes baseados em Windows mais fácil e abrangente.
 
 Windows PowerShell 5.0 é compatível. Cmdlets, fornecedores, módulos, snap-ins, scripts, funções e perfis que foram projetados para o Windows PowerShell 4.0, o Windows PowerShell 3.0 e o Windows PowerShell 2.0 geralmente funcionam no Windows PowerShell 5.0 sem alterações.
 
 ## <a name="installing-windows-powershell"></a>Instalar o Windows PowerShell
+
 Windows PowerShell 5.0 é instalado por padrão no Windows Server 2016 Technical Preview e Windows 10.
 
 Para instalar o Windows PowerShell 5.0 no Windows Server 2012 R2, Windows 8.1 Enterprise ou Windows 8.1 Pro, transfira e instale [Windows Management Framework 5.0](https://aka.ms/wmf5download). Certifique-se de que leia os detalhes de download e todos os requisitos de sistema, de cumprir antes de instalar o Windows Management Framework 5.0.
@@ -27,6 +29,7 @@ Para instalar o Windows PowerShell 5.0 no Windows Server 2012 R2, Windows 8.1 En
 - [Novos recursos do Windows PowerShell 3.0](#new-features-in-windows-powershell-30)
 
 ## <a name="windows-powershell-40-updates-in-november-2014-update-rollup-kb-3000850"></a>Coletânea de atualizações do Windows PowerShell 4.0 em Novembro de 2014 (KB 3000850)
+
 Muitas atualizações e melhorias para Windows PowerShell Desired State Configuration (DSC) no Windows PowerShell 4.0 estão disponíveis no [rollup da atualização de Novembro de 2014 para Windows RT 8.1, Windows 8.1 e Windows Server 2012 R2](https://support.microsoft.com/kb/3000850/) (KB 3000850 ). Pode determinar se o KB 3000850 está instalado no seu sistema, executando `Get-Hotfix -Id KB3000850` no Windows PowerShell.
 
 - Atualizações para cmdlets existentes no [PSDesiredStateConfiguration](https://technet.microsoft.com/library/dn391651(v=wps.640).aspx) módulo
@@ -140,8 +143,8 @@ Muitas atualizações e melhorias para Windows PowerShell Desired State Configur
 - Foi adicionado o parâmetro FullyQualifiedName para cmdlets Import-Module e Remove-Module, para suportar a armazenar várias versões de um módulo único.
 - Save-Help, Update-Help, Import-PSSession, Export-PSSession e Get-Command tem um novo parâmetro, FullyQualifiedModule, do tipo ModuleSpecification. Adicione este parâmetro para especificar um módulo pelo nome totalmente qualificado.
 - O valor de **$PSVersionTable.PSVersion** foi atualizada para 5.0.
-- WMF 5.0 (PowerShell 5.0) inclui a **Pester** módulo.  Pester é uma unidade de estrutura de testes para o PowerShell. Ele fornece alguns simples de usar as palavras-chave que lhe permite criar testes para seus scripts. 
- 
+- WMF 5.0 (PowerShell 5.0) inclui a **Pester** módulo.  Pester é uma unidade de estrutura de testes para o PowerShell. Ele fornece alguns simples de usar as palavras-chave que lhe permite criar testes para seus scripts.
+
 ### <a name="new-features-in-windows-powershell-desired-state-configuration"></a>Novos recursos do Windows PowerShell Desired State Configuration
 
 - Aprimoramentos de linguagem do Windows PowerShell permitem-lhe definir os recursos do Windows PowerShell Desired State Configuration (DSC) através da utilização de classes. Import-DscResource agora é uma verdadeira palavra-chave dynamic; Windows PowerShell analisa o módulo de raiz do módulo especificado, pesquisa de classes que contêm o atributo DscResource. Agora, pode utilizar classes para definir os recursos de DSC, no qual não é necessária um ficheiro MOF nem uma subpasta DSCResource na pasta do módulo. Um arquivo de módulo do Windows PowerShell pode conter várias classes de recursos de DSC.
@@ -482,7 +485,9 @@ Novos cmdlets foram adicionados à instalação do Windows PowerShell Core, incl
 |New-CimSessionOption|Update-Help|
 |New-IseSnippet||
 
-### <a name="improvements-to-existing-core-cmdlets-and-providerswindows-powershell-30-includes-new-features-for-existing-cmdlets-including-the-simplified-syntax-and-new-parameters-for-the-following-cmdlets-computer-cmdlets-csv-cmdlets-get-childitem-get-command-get-content-get-history-measure-object-security-cmdlets-select-object-select-string-split-path-start-process-tee-object-test-connection-add-member-and-wmi-cmdlets"></a>Melhorias para Cmdlets de núcleo existentes e ProvidersWindows PowerShell 3.0 inclui novos recursos para cmdlets existentes, incluindo sintaxe simplificada e novos parâmetros para os seguintes cmdlets: Cmdlets de computador, os cmdlets CSV, Get-ChildItem, Get-Command, Get-Content, histórico de Get-objeto de medida, cmdlets de segurança, Select-Object, o Select-String, o caminho de divisão, o processo de início, Tee-Object, ligação de teste, Add-Member e cmdlets do WMI.
+### <a name="improvements-to-existing-core-cmdlets-and-providers"></a>Melhorias para existente principais Cmdlets e fornecedores
+
+Windows PowerShell 3.0 inclui novos recursos para cmdlets existentes, incluindo sintaxe simplificada e novos parâmetros para os seguintes cmdlets: Cmdlets de computador, os cmdlets CSV, Get-ChildItem, Get-Command, Get-Content, histórico de Get-objeto de medida, cmdlets de segurança, Select-Object, o Select-String, o caminho de divisão, o processo de início, Tee-Object, ligação de teste, Add-Member e cmdlets do WMI.
 
 Os fornecedores de Windows PowerShell foram também melhoraram significativamente, incluindo suporte de fornecedor de certificados para o gerenciamento de certificados de Secure Socket Layer (SSL) para hospedagem na web, suporte para credenciais, unidades de rede persistente e fluxos de dados alternativo em unidades de sistema de ficheiros.
 
@@ -562,7 +567,7 @@ O **SharedHost** funcionalidade permite que vários utilizadores em vários comp
 
 Para melhorar a capacidade do Windows PowerShell 3.0 para interpretar e processa corretamente caracteres especiais, o **LiteralPath** parâmetro, que lida com carateres especiais em caminhos, é válido em quase todos os cmdlets que tenham um  **Caminho** parâmetro, incluindo a nova [Update-Help](https://technet.microsoft.com/library/93e1d870-ace6-432b-8778-8920291d7545) e [Save-Help](https://technet.microsoft.com/library/aed94f90-b73f-4e25-a25d-7c18d9f161fa) cmdlets. O analisador também inclui uma lógica especial para aperfeiçoar o tratamento do caractere acento grave (\`) e colchetes em nomes de ficheiros e caminhos.
 
-## <a name="see-also"></a>Consulte Também
+## <a name="see-also"></a>Veja Também
 
 - [about_Windows_PowerShell_5.0](https://docs.microsoft.com/powershell/module/microsoft.powershell.core/about/about_windows_powershell_5.0?view=powershell-5.0)
 - [Windows PowerShell](https://go.microsoft.com/fwlink/?LinkID=107116)

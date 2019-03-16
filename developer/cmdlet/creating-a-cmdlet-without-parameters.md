@@ -11,12 +11,12 @@ helpviewer_keywords:
 - cmdlets [PowerShell Programmers Guide], basic cmdlet
 ms.assetid: 54236ef3-82db-45f8-9114-1ecb7ff65d3e
 caps.latest.revision: 8
-ms.openlocfilehash: 75a45e539b45b50714951f2b992d9ecf69de4664
-ms.sourcegitcommit: b6871f21bd666f9cd71dd336bb3f844cf472b56c
+ms.openlocfilehash: c380b28570c955de6f41152fd617f5c1b0f9e4bd
+ms.sourcegitcommit: caac7d098a448232304c9d6728e7340ec7517a71
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 02/03/2019
-ms.locfileid: "56850065"
+ms.lasthandoff: 03/16/2019
+ms.locfileid: "58054701"
 ---
 # <a name="creating-a-cmdlet-without-parameters"></a>Creating a Cmdlet without Parameters (Criar um Cmdlet sem Parâmetros)
 
@@ -70,7 +70,7 @@ Public Class GetProcCommand
     Inherits Cmdlet
 ```
 
-Tenha em atenção que anteriormente a definição de classe, o [System.Management.Automation.Cmdletattribute](/dotnet/api/System.Management.Automation.CmdletAttribute) atributo, com a sintaxe `[Cmdlet(verb, noun, ...)]`, é utilizado para identificar esta classe como um cmdlet. Este é o único atributo obrigatório para todos os cmdlets e permite que o tempo de execução do Windows PowerShell para chamá-los corretamente. Pode definir palavras-chave de atributo ainda mais declarar a classe, se necessário. Lembre-se de que a declaração de atributo para nossa classe de GetProcCommand exemplo declara apenas os nome próprio e o verbo nomes para o cmdlet Get-Proc.
+Tenha em atenção que anteriormente a definição de classe, o [System.Management.Automation.CmdletAttribute](/dotnet/api/System.Management.Automation.CmdletAttribute) atributo, com a sintaxe `[Cmdlet(verb, noun, ...)]`, é utilizado para identificar esta classe como um cmdlet. Este é o único atributo obrigatório para todos os cmdlets e permite que o tempo de execução do Windows PowerShell para chamá-los corretamente. Pode definir palavras-chave de atributo ainda mais declarar a classe, se necessário. Lembre-se de que a declaração de atributo para nossa classe de GetProcCommand exemplo declara apenas os nome próprio e o verbo nomes para o cmdlet Get-Proc.
 
 > [!NOTE]
 > Para todas as classes de atributo do Windows PowerShell, as palavras-chave que pode definir correspondem às propriedades da classe de atributo.
@@ -78,27 +78,27 @@ Tenha em atenção que anteriormente a definição de classe, o [System.Manageme
 Quando atribuir nomes a classe do cmdlet, é uma boa prática para refletir o nome do cmdlet do nome da classe. Para fazer isso, use o formulário "VerbNounCommand" e substitua "Verbo" e "Substantivo" com o verbo e substantivo usado no nome do cmdlet. Como é mostrado na definição de classe anterior, o cmdlet Get-procedimento de exemplo define uma classe chamada GetProcCommand, que deriva de [System.Management.Automation.Cmdlet](/dotnet/api/System.Management.Automation.Cmdlet) classe base.
 
 > [!IMPORTANT]
-> Se quiser definir um cmdlet que acede diretamente ao tempo de execução do Windows PowerShell, sua classe do .NET deve derivar a partir da [System.Management.Automation.Pscmdlet](/dotnet/api/System.Management.Automation.PSCmdlet) classe base. Para obter mais informações sobre essa classe, consulte [criar um Cmdlet que conjuntos de parâmetros define](./adding-parameter-sets-to-a-cmdlet.md).
+> Se quiser definir um cmdlet que acede diretamente ao tempo de execução do Windows PowerShell, sua classe do .NET deve derivar a partir da [System.Management.Automation.PSCmdlet](/dotnet/api/System.Management.Automation.PSCmdlet) classe base. Para obter mais informações sobre essa classe, consulte [criar um Cmdlet que conjuntos de parâmetros define](./adding-parameter-sets-to-a-cmdlet.md).
 
 > [!NOTE]
 > A classe para um cmdlet deve ser marcada explicitamente como pública. As classes que não estão marcadas como pública serão predefinido para interno e não serão encontradas pelo tempo de execução do Windows PowerShell.
 
-Windows PowerShell utiliza a [Microsoft.Powershell.Commands](/dotnet/api/Microsoft.PowerShell.Commands) espaço de nomes para suas classes de cmdlet. É recomendado colocar suas classes de cmdlet num espaço de nomes de comandos do seu espaço de nomes de API, por exemplo, xxx.PS.Commands.
+Windows PowerShell utiliza a [Microsoft.PowerShell.Commands](/dotnet/api/Microsoft.PowerShell.Commands) espaço de nomes para suas classes de cmdlet. É recomendado colocar suas classes de cmdlet num espaço de nomes de comandos do seu espaço de nomes de API, por exemplo, xxx.PS.Commands.
 
 ## <a name="overriding-an-input-processing-method"></a>Substituir uma método de processamento de entrada
 
 O [System.Management.Automation.Cmdlet](/dotnet/api/System.Management.Automation.Cmdlet) classe fornece três métodos de processamento de entrada principal, pelo menos um dos quais deve substituir seu cmdlet. Para obter mais informações sobre como o Windows PowerShell processa os registos, consulte [como o Windows PowerShell funciona](https://msdn.microsoft.com/en-us/ced30e23-10af-4700-8933-49873bd84d58).
 
-Para todos os tipos de entrada, o tempo de execução do Windows PowerShell chama [System.Management.Automation.Cmdlet.Beginprocessing*](/dotnet/api/System.Management.Automation.Cmdlet.BeginProcessing) para ativar o processamento. Se seu cmdlet tem de efetuar alguns pré-processamento ou a configuração, pode fazer isso substituindo esse método.
+Para todos os tipos de entrada, o tempo de execução do Windows PowerShell chama [System.Management.Automation.Cmdlet.BeginProcessing](/dotnet/api/System.Management.Automation.Cmdlet.BeginProcessing) para ativar o processamento. Se seu cmdlet tem de efetuar alguns pré-processamento ou a configuração, pode fazer isso substituindo esse método.
 
 > [!NOTE]
 > Windows PowerShell utiliza o termo "Registro" para descrever o conjunto de valores de parâmetro fornecido quando é chamado um cmdlet.
 
-Se seu cmdlet aceita entrada do pipeline, deve substituir a [System.Management.Automation.Cmdlet.Processrecord*](/dotnet/api/System.Management.Automation.Cmdlet.ProcessRecord) método e, opcionalmente, o [System.Management.Automation.Cmdlet.Endprocessing*](/dotnet/api/System.Management.Automation.Cmdlet.EndProcessing)método. Por exemplo, um cmdlet pode substituir os dois métodos se ele reúne todas as entradas usando [System.Management.Automation.Cmdlet.Processrecord*](/dotnet/api/System.Management.Automation.Cmdlet.ProcessRecord) e, em seguida, funciona sobre a entrada como um todo, em vez de um elemento por vez, como o `Sort-Object` cmdlet faz.
+Se seu cmdlet aceita entrada do pipeline, deve substituir a [System.Management.Automation.Cmdlet.ProcessRecord](/dotnet/api/System.Management.Automation.Cmdlet.ProcessRecord) método e, opcionalmente, o [System.Management.Automation.Cmdlet.EndProcessing](/dotnet/api/System.Management.Automation.Cmdlet.EndProcessing)método. Por exemplo, um cmdlet pode substituir os dois métodos se ele reúne todas as entradas usando [System.Management.Automation.Cmdlet.ProcessRecord](/dotnet/api/System.Management.Automation.Cmdlet.ProcessRecord) e, em seguida, funciona sobre a entrada como um todo, em vez de um elemento por vez, como o `Sort-Object` cmdlet faz.
 
-Se seu cmdlet não der entrada do pipeline, deve substituir a [System.Management.Automation.Cmdlet.Endprocessing*](/dotnet/api/System.Management.Automation.Cmdlet.EndProcessing) método. Lembre-se de que este método é frequentemente utilizado em vez de [System.Management.Automation.Cmdlet.Beginprocessing*](/dotnet/api/System.Management.Automation.Cmdlet.BeginProcessing) quando o cmdlet não é possível operar num elemento por vez, como no caso de um cmdlet de classificação.
+Se seu cmdlet não der entrada do pipeline, deve substituir a [System.Management.Automation.Cmdlet.EndProcessing](/dotnet/api/System.Management.Automation.Cmdlet.EndProcessing) método. Lembre-se de que este método é frequentemente utilizado em vez de [System.Management.Automation.Cmdlet.BeginProcessing](/dotnet/api/System.Management.Automation.Cmdlet.BeginProcessing) quando o cmdlet não é possível operar num elemento por vez, como no caso de um cmdlet de classificação.
 
-Uma vez que este cmdlet de Get-procedimento de exemplo tem de receber entrada do pipeline, substitui o [System.Management.Automation.Cmdlet.Processrecord*](/dotnet/api/System.Management.Automation.Cmdlet.ProcessRecord) método e utiliza as implementações predefinidas para [ System.Management.Automation.Cmdlet.Beginprocessing*](/dotnet/api/System.Management.Automation.Cmdlet.BeginProcessing) e [System.Management.Automation.Cmdlet.Endprocessing*](/dotnet/api/System.Management.Automation.Cmdlet.EndProcessing). O [System.Management.Automation.Cmdlet.Processrecord*](/dotnet/api/System.Management.Automation.Cmdlet.ProcessRecord) substituição obtém processos e escreve-as para a linha de comandos utilizando o [System.Management.Automation.Cmdlet.Writeobject*](/dotnet/api/System.Management.Automation.Cmdlet.WriteObject) método.
+Uma vez que este cmdlet de Get-procedimento de exemplo tem de receber entrada do pipeline, substitui o [System.Management.Automation.Cmdlet.ProcessRecord](/dotnet/api/System.Management.Automation.Cmdlet.ProcessRecord) método e utiliza as implementações predefinidas para [ System.Management.Automation.Cmdlet.BeginProcessing](/dotnet/api/System.Management.Automation.Cmdlet.BeginProcessing) e [System.Management.Automation.Cmdlet.EndProcessing](/dotnet/api/System.Management.Automation.Cmdlet.EndProcessing). O [System.Management.Automation.Cmdlet.ProcessRecord](/dotnet/api/System.Management.Automation.Cmdlet.ProcessRecord) substituição obtém processos e escreve-as para a linha de comandos utilizando o [System.Management.Automation.Cmdlet.WriteObject](/dotnet/api/System.Management.Automation.Cmdlet.WriteObject) método.
 
 ```csharp
 protected override void ProcessRecord()
@@ -136,14 +136,14 @@ End Sub 'ProcessRecord
 
 - Uma método de processamento de entrada também pode receber a entrada do objeto de saída de um cmdlet a montante no pipeline. Para obter mais informações, consulte [criação de um Cmdlet para entrada de Pipeline de processo](./adding-parameters-that-process-pipeline-input.md). Tenha em atenção que seu cmdlet pode recebam entrada de uma combinação de linha de comandos e um pipeline de origens.
 
-- O cmdlet downstream pode não devolver durante muito tempo ou nada. Por esse motivo, a entrada a processar o método no seu cmdlet não deve manter bloqueios em durante chamadas para [System.Management.Automation.Cmdlet.Writeobject*](/dotnet/api/System.Management.Automation.Cmdlet.WriteObject), especialmente os bloqueios para o qual o escopo ultrapassa a instância de cmdlet.
+- O cmdlet downstream pode não devolver durante muito tempo ou nada. Por esse motivo, a entrada a processar o método no seu cmdlet não deve manter bloqueios em durante chamadas para [System.Management.Automation.Cmdlet.WriteObject](/dotnet/api/System.Management.Automation.Cmdlet.WriteObject), especialmente os bloqueios para o qual o escopo ultrapassa a instância de cmdlet.
 
 > [!IMPORTANT]
 > Cmdlets nunca deve chamar [System.Console.Writeline*](/dotnet/api/System.Console.WriteLine) ou seu equivalente.
 
-- Seu cmdlet pode ter variáveis de objeto a ser limpo quando terminar de processamento (por exemplo, se abrir um identificador de arquivo no [System.Management.Automation.Cmdlet.Beginprocessing*](/dotnet/api/System.Management.Automation.Cmdlet.BeginProcessing) método e mantém o identificador aberto para utilização por [ System.Management.Automation.Cmdlet.Processrecord*](/dotnet/api/System.Management.Automation.Cmdlet.ProcessRecord)). É importante lembrar-se de que o tempo de execução do Windows PowerShell não sempre chamar o [System.Management.Automation.Cmdlet.Endprocessing*](/dotnet/api/System.Management.Automation.Cmdlet.EndProcessing) método, que deve efetuar a limpeza do objeto.
+- Seu cmdlet pode ter variáveis de objeto a ser limpo quando terminar de processamento (por exemplo, se abrir um identificador de arquivo no [System.Management.Automation.Cmdlet.BeginProcessing](/dotnet/api/System.Management.Automation.Cmdlet.BeginProcessing) método e mantém o identificador aberto para utilização por [ System.Management.Automation.Cmdlet.ProcessRecord](/dotnet/api/System.Management.Automation.Cmdlet.ProcessRecord)). É importante lembrar-se de que o tempo de execução do Windows PowerShell não sempre chamar o [System.Management.Automation.Cmdlet.EndProcessing](/dotnet/api/System.Management.Automation.Cmdlet.EndProcessing) método, que deve efetuar a limpeza do objeto.
 
-Por exemplo, [System.Management.Automation.Cmdlet.Endprocessing*](/dotnet/api/System.Management.Automation.Cmdlet.EndProcessing) não podem ser chamados se o cmdlet foi cancelado midway ou se acabar o erro ocorre em qualquer parte do cmdlet. Por conseguinte, um cmdlet que necessita de limpeza do objeto deve implementar o concluída [System.Idisposable](/dotnet/api/System.IDisposable) padrão, incluindo o finalizador, para que o tempo de execução possa chamar ambos [ System.Management.Automation.Cmdlet.Endprocessing*](/dotnet/api/System.Management.Automation.Cmdlet.EndProcessing) e [System.Idisposable.Dispose*](/dotnet/api/System.IDisposable.Dispose) no final do processamento.
+Por exemplo, [System.Management.Automation.Cmdlet.EndProcessing](/dotnet/api/System.Management.Automation.Cmdlet.EndProcessing) não podem ser chamados se o cmdlet foi cancelado midway ou se acabar o erro ocorre em qualquer parte do cmdlet. Por conseguinte, um cmdlet que necessita de limpeza do objeto deve implementar o concluída [System.IDisposable](/dotnet/api/System.IDisposable) padrão, incluindo o finalizador, para que o tempo de execução possa chamar ambos [ System.Management.Automation.Cmdlet.EndProcessing](/dotnet/api/System.Management.Automation.Cmdlet.EndProcessing) e [System.IDisposable.Dispose*](/dotnet/api/System.IDisposable.Dispose) no final do processamento.
 
 ## <a name="code-sample"></a>Exemplo de código
 
@@ -270,7 +270,7 @@ Quando seu cmdlet foi registado com o Windows PowerShell, pode testá-lo executa
     ...
     ```
 
-## <a name="see-also"></a>Consulte Também
+## <a name="see-also"></a>Veja Também
 
 [Criação de um Cmdlet para processar a entrada de linha de comandos](./adding-parameters-that-process-command-line-input.md)
 

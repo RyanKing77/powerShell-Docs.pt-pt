@@ -2,12 +2,12 @@
 ms.date: 04/11/2018
 keywords: DSC, powershell, configuração, a configuração
 title: Configurar um servidor de solicitação SMB de DSC
-ms.openlocfilehash: 722120369df9ff383a02c69111e0bacf2e2e76a5
-ms.sourcegitcommit: 00ff76d7d9414fe585c04740b739b9cf14d711e1
+ms.openlocfilehash: 9d087a08861b2f4683e81efd1e25f857b8b75e07
+ms.sourcegitcommit: caac7d098a448232304c9d6728e7340ec7517a71
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 12/14/2018
-ms.locfileid: "53404728"
+ms.lasthandoff: 03/16/2019
+ms.locfileid: "58057761"
 ---
 # <a name="setting-up-a-dsc-smb-pull-server"></a>Configurar um servidor de solicitação SMB de DSC
 
@@ -59,7 +59,7 @@ Configuration SmbShare
         {
             Name = 'DscSmbShare'
             Path = 'C:\DscSmbShare'
-            FullAccess = 'admininstrator'
+            FullAccess = 'administrator'
             ReadAccess = 'myDomain\Contoso-Server$'
             FolderEnumerationMode = 'AccessBased'
             Ensure = 'Present'

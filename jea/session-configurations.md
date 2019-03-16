@@ -2,12 +2,12 @@
 ms.date: 06/12/2017
 keywords: jea, powershell, segurança
 title: Configurações de sessão JEA
-ms.openlocfilehash: 1b598522d43b2c1a26a739a67cee5181b21a7c32
-ms.sourcegitcommit: 548547b2d5fc73e726bb9fec6175d452a351d975
+ms.openlocfilehash: b98726ea7ed3aabdfd05034c3b70118e327160cd
+ms.sourcegitcommit: caac7d098a448232304c9d6728e7340ec7517a71
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 12/20/2018
-ms.locfileid: "53655468"
+ms.lasthandoff: 03/16/2019
+ms.locfileid: "58056602"
 ---
 # <a name="jea-session-configurations"></a>Configurações de sessão JEA
 
@@ -40,12 +40,12 @@ O `-SessionType RestrictedRemoteServer` campo indica que a configuração de ses
 Sessões configurado dessa forma funcionarão [NoLanguage modo](https://technet.microsoft.com/library/dn433292.aspx) e só ter os seguintes comandos de predefinição de 8 (e aliases) disponível:
 
 - Clear-Host (cls, claro)
-- Exit-PSSession (exsn, saída)
+- Exit-PSSession (exsn, exit)
 - Get-Command (gcm)
 - Get-FormatData
 - Get-Help
 - Objeto de medida (medidas)
-- Out-predefinido
+- Out-Default
 - Select-Object (selecionar)
 
 Não existem fornecedores de PowerShell estão disponíveis, nem são que programas de qualquer externo (executáveis, scripts, etc.).
@@ -60,7 +60,7 @@ Decide que identidade JEA irá utilizar no ficheiro de configuração de sessão
 
 #### <a name="local-virtual-account"></a>Conta Virtual local
 
-Se as funções suportadas por este ponto final da JEA são utilizadas para gerir a máquina local e uma conta de administrador local é suficiente para executar o comandos foi com êxito, deve configurar JEA para utilizar uma conta virtual local.
+Se as funções suportadas por este ponto final da JEA são utilizadas para gerir a máquina local e uma conta de administrador local é suficiente para executar os comandos com êxito, deve configurar JEA para utilizar uma conta virtual local.
 Contas virtuais são contas temporárias que são exclusivas para um utilizador específico e apenas os últimos durante a sessão do PowerShell.
 Num servidor membro ou estação de trabalho, contas virtuais pertencem ao computador local **administradores** agrupar e ter acesso a maioria dos recursos do sistema.
 Num controlador de domínio do Active Directory, contas virtuais pertencem ao domínio **Admins do domínio** grupo.
@@ -80,6 +80,7 @@ Quando é especificado um ou mais grupos de segurança, a conta virtual já não
 RunAsVirtualAccount = $true
 RunAsVirtualAccountGroups = 'NetworkOperator', 'NetworkAuditor'
 ```
+
 > [!NOTE]
 > Contas virtuais recebem temporariamente o início de sessão como um direito de serviço na política de segurança de servidor local.  Se um dos VirtualAccountGroups especificado já foi concedido este direito na política, a conta virtual individual já não será adicionada e removida da política.  Isso pode ser útil em cenários como controladores de domínio em que a revisões para a política de segurança do controlador de domínio de perto são auditados.  Isso só está disponível no Windows Server 2016 com a Novembro de 2018 ou rollup posterior e Windows Server 2019 com o de 2019 de Janeiro ou rollup posterior.
 
@@ -104,7 +105,6 @@ contas de gMSA só devem ser utilizadas quando o acesso a recursos de rede são 
 
 > [!NOTE]
 > Contas de serviço geridas de grupo só estão disponíveis no Windows PowerShell 5.1 ou mais recente e em computadores associados a um domínio.
-
 
 #### <a name="more-information-about-run-as-users"></a>Obter mais informações sobre a execução como usuários
 
@@ -179,6 +179,7 @@ RoleDefinitions = @{
 ```
 
 ### <a name="role-capability-search-order"></a>Ordem de pesquisa de capacidade de função
+
 Conforme mostrado no exemplo acima, as funcionalidades de função são referenciadas pelo nome simples (nome de ficheiro sem a extensão) do arquivo de recurso de função.
 Se várias funcionalidades de função estão disponíveis no sistema com o mesmo nome simples, o PowerShell irá utilizar sua ordem de pesquisa implícito para selecionar o ficheiro de recurso de função em vigor.
 Ele será **não** conceder acesso a todos os ficheiros de recurso de função com o mesmo nome.
@@ -217,6 +218,7 @@ RequiredGroups = @{ And = 'elevated-jea', @{ Or = '2FA-logon', 'smartcard-logon'
 > Regras de acesso condicional só estão disponíveis no Windows PowerShell 5.1 ou mais recente.
 
 ### <a name="other-properties"></a>Outras propriedades
+
 Ficheiros de configuração de sessão também podem fazer tudo o que um arquivo de recurso de função pode fazer, basta sem a capacidade de conceder o acesso de utilizadores ao ligar a comandos diferentes.
 Se quiser permitir aos utilizadores acesso a cmdlets específicos, funções ou os fornecedores, pode fazê-lo diretamente no ficheiro de configuração de sessão.
 Para obter uma lista completa de propriedades suportadas no ficheiro de configuração de sessão, execute `Get-Help New-PSSessionConfigurationFile -Full`.

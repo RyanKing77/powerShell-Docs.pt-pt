@@ -10,12 +10,12 @@ helpviewer_keywords:
 - parameter sets [PowerShell Programmer's Guide]
 ms.assetid: a6131db4-fd6e-45f1-bd47-17e7174afd56
 caps.latest.revision: 8
-ms.openlocfilehash: b02a2e0d4b0a27c261b0bc05febda7826ad5276e
-ms.sourcegitcommit: b6871f21bd666f9cd71dd336bb3f844cf472b56c
+ms.openlocfilehash: f0bff11618c18bf53b9c2a185445795a17306fa3
+ms.sourcegitcommit: caac7d098a448232304c9d6728e7340ec7517a71
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 02/03/2019
-ms.locfileid: "56849099"
+ms.lasthandoff: 03/16/2019
+ms.locfileid: "58054990"
 ---
 # <a name="adding-parameter-sets-to-a-cmdlet"></a>Adding Parameter Sets to a Cmdlet (Adicionar Conjuntos de Parâmetros a um Cmdlet)
 
@@ -179,7 +179,7 @@ Embora tem de existir um parâmetro exclusivo para cada conjunto de parâmetros,
 
 ## <a name="overriding-an-input-processing-method"></a>Substituir uma método de processamento de entrada
 
-Cada cmdlet tem de substituir uma método de processamento de entrada, mais freqüentemente, isso será o [System.Management.Automation.Cmdlet.Processrecord*](/dotnet/api/System.Management.Automation.Cmdlet.ProcessRecord) método. Neste cmdlet, o [System.Management.Automation.Cmdlet.Processrecord*](/dotnet/api/System.Management.Automation.Cmdlet.ProcessRecord) método é substituído para que o cmdlet pode processar qualquer número de processos. Ela contém uma instrução Select que chama um método diferente com base no conjunto de parâmetros que o utilizador especificado.
+Cada cmdlet tem de substituir uma método de processamento de entrada, mais freqüentemente, isso será o [System.Management.Automation.Cmdlet.ProcessRecord](/dotnet/api/System.Management.Automation.Cmdlet.ProcessRecord) método. Neste cmdlet, o [System.Management.Automation.Cmdlet.ProcessRecord](/dotnet/api/System.Management.Automation.Cmdlet.ProcessRecord) método é substituído para que o cmdlet pode processar qualquer número de processos. Ela contém uma instrução Select que chama um método diferente com base no conjunto de parâmetros que o utilizador especificado.
 
 ```csharp
 protected override void ProcessRecord()

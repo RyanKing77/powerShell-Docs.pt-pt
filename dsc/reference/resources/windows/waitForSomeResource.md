@@ -2,18 +2,18 @@
 ms.date: 06/12/2017
 keywords: DSC, powershell, configuração, a configuração
 title: Recursos do DSC WaitForSome
-ms.openlocfilehash: 906375a8fcf9b87d4b7487e63e6fae3f05b86d0d
-ms.sourcegitcommit: e04292a9c10de9a8391d529b7f7aa3753b362dbe
+ms.openlocfilehash: 888da1810f0a9233579bad5eef8d5dd556947c61
+ms.sourcegitcommit: caac7d098a448232304c9d6728e7340ec7517a71
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 01/04/2019
-ms.locfileid: "54048380"
+ms.lasthandoff: 03/16/2019
+ms.locfileid: "58059461"
 ---
 # <a name="dsc-waitforsome-resource"></a>Recursos do DSC WaitForSome
 
 > Aplica-se a: Windows PowerShell 5.0 e posterior
 
-O **WaitForAny** recursos do Desired State Configuration (DSC) podem ser utilizado dentro de um bloco de nó num [configuração de DSC](../../../configurations/configurations.md) para especificar dependências em configurações nos outros nós.
+O **WaitForSome** recursos do Desired State Configuration (DSC) podem ser utilizado dentro de um bloco de nó num [configuração de DSC](../../../configurations/configurations.md) para especificar dependências em configurações nos outros nós.
 
 Este recurso é bem-sucedida se o recurso especificado pela **ResourceName** propriedade está no Estado desejado num número mínimo de nós (especificado pelo **NodeCount**) definidos pelo **NodeName**  propriedade.
 

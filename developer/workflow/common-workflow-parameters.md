@@ -8,12 +8,12 @@ ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: d5891467-8e13-484d-b7af-32e6bffab35d
 caps.latest.revision: 4
-ms.openlocfilehash: 2aca4483e500432ef9f52804e85678d2268aa4cd
-ms.sourcegitcommit: b6871f21bd666f9cd71dd336bb3f844cf472b56c
+ms.openlocfilehash: b2e8f272a82ee03de306fd8eac45e109142f6284
+ms.sourcegitcommit: caac7d098a448232304c9d6728e7340ec7517a71
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 02/03/2019
-ms.locfileid: "56846908"
+ms.lasthandoff: 03/16/2019
+ms.locfileid: "58054803"
 ---
 # <a name="common-workflow-parameters"></a>Common Workflow Parameters (Parâmetros de Fluxo de Trabalho Comuns)
 
@@ -26,7 +26,7 @@ Os parâmetros comuns de fluxo de trabalho são agrupados em várias categorias,
 |Nome|Tipo|Descrição|Pode ser especificado pelo utilizador final no tempo de execução?|Pode ser especificado pelo autor do fluxo de trabalho no momento da criação?|Pode ser especificado pelo autor do fluxo de trabalho na Instanciação?|
 |----------|----------|-----------------|-----------------------------------------------------|------------------------------------------------------------|-----------------------------------------------------------|
 |PSComputerName|String[]|Uma lista de nomes de computador para o qual pretende iniciar trabalhos.|Sim|Sim|Sim|
-|PSCredential|[System.Management.Automation.Pscredential](/dotnet/api/System.Management.Automation.PSCredential)|A credencial de autenticação a utilizar para início de sessão para os computadores especificados pelo parâmetro PSComputerName. Este parâmetro é válido apenas se PSComputerName for especificado.|Sim|Sim|Sim|
+|PSCredential|[System.Management.Automation.PSCredential](/dotnet/api/System.Management.Automation.PSCredential)|A credencial de autenticação a utilizar para início de sessão para os computadores especificados pelo parâmetro PSComputerName. Este parâmetro é válido apenas se PSComputerName for especificado.|Sim|Sim|Sim|
 |PSPort|UInt32|A porta a ser utilizada para executar o fluxo de trabalho.|Sim|Sim|Sim|
 |PSUseSSL|Booleano|Utilize o protocolo Secure Sockets Layer (SSL) para estabelecer uma ligação segura para o computador remoto a executar o fluxo de trabalho.|Sim|Sim|Sim|
 |PSConfigurationName|Cadeia (de carateres)|A configuração de sessão utilizada para executar o fluxo de trabalho.|Sim|Sim|Sim|

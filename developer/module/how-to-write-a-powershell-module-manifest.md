@@ -8,12 +8,12 @@ ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: e082c2e3-12ce-4032-9caf-bf6b2e0dcf81
 caps.latest.revision: 23
-ms.openlocfilehash: 67e041756974dcd84e15cdb4edaf91be45122e28
-ms.sourcegitcommit: b6871f21bd666f9cd71dd336bb3f844cf472b56c
+ms.openlocfilehash: eaa927ec90df6053843f5c942357fed4c7dee966
+ms.sourcegitcommit: caac7d098a448232304c9d6728e7340ec7517a71
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 02/03/2019
-ms.locfileid: "56849057"
+ms.lasthandoff: 03/16/2019
+ms.locfileid: "58059495"
 ---
 # <a name="how-to-write-a-powershell-module-manifest"></a>How to Write a PowerShell Module Manifest (Como Escrever um Manifesto de Módulo do PowerShell)
 
@@ -77,7 +77,7 @@ A tabela seguinte descreve os elementos que pode ter num manifesto de módulo
 |PowerShellVersion<br /><br /> Type: string|' '|Versão mínima do motor do PowerShell de Windows exigido por este módulo. Atuais valores válidos são 1.0, 2.0, 3.0, 4.0 e 5.0.<br /><br /> Exemplo: `PowerShellVersion = '5.0'`|
 |PowerShellHostName<br /><br /> Type: string|' '|Especifica o nome do anfitrião do Windows PowerShell que sejam necessários para o módulo. Este nome é fornecido pelo Windows PowerShell. Para localizar o nome de um programa de anfitrião, o programa, escreva: `$host.name` .<br /><br /> Exemplo: `PowerShellHostName = 'Windows PowerShell ISE Host'`|
 |PowerShellHostVersion<br /><br /> Type: string|' '|Versão mínima do anfitrião necessário para este módulo Windows PowerShell.<br /><br /> Exemplo: `PowerShellHostVersion = '2.0'`|
-|DotNetFrameworkVersion<br /><br /> Type: string|' '|Versão mínima do Microsoft .NET Framework necessária para este módulo.<br /><br /> Exemplo: `DotNetFrameorkVersion = '3.5'`|
+|DotNetFrameworkVersion<br /><br /> Type: string|' '|Versão mínima do Microsoft .NET Framework necessária para este módulo.<br /><br /> Exemplo: `DotNetFrameworkVersion = '3.5'`|
 |CLRVersion<br /><br /> Type: string|' '|Versão mínima do common language runtime (CLR) exigido por este módulo.<br /><br /> Exemplo: `CLRVersion = '3.5'`|
 |ProcessorArchitecture<br /><br /> Type: string|' '|Arquitetura do processador (nenhum, X86, Amd64) exigida por este módulo. Os valores válidos são x86, AMD64 IA64 e nenhum (desconhecido ou não especificado).<br /><br /> Exemplo: `ProcessorArchitecture = 'x86'`|
 |RequiredModules<br /><br /> Type: [string[]]|@()|Módulos que tem de ser importados para o ambiente global antes de importar este módulo. Isso será carregado qualquer módulos listados, a menos que elas já foram carregadas. (Por exemplo, alguns módulos podem já estar carregados por um módulo diferente.). Também é possível especificar uma versão específica para carregar usando `RequiredVersion` vez `ModuleVersion`. Quando utilizar `ModuleVersion` que irá carregar a versão mais recente disponível com um mínimo da versão especificada.<br /><br /> Exemplo: `RequiredModules = @(@{ModuleName="myDependentModule", ModuleVersion="2.0",Guid="cfc45206-1e49-459d-a8ad-5b571ef94857"})`<br /><br /> Exemplo: `RequiredModules = @(@{ModuleName="myDependentModule", RequiredVersion="1.5",Guid="cfc45206-1e49-459d-a8ad-5b571ef94857"})`|
@@ -199,6 +199,6 @@ AliasesToExport = '*'
 
 ```
 
-## <a name="see-also"></a>Consulte Também
+## <a name="see-also"></a>Veja Também
 
 [Escrever um módulo do Windows PowerShell](./writing-a-windows-powershell-module.md)

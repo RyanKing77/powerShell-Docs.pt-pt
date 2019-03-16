@@ -3,12 +3,12 @@ ms.date: 06/12/2017
 contributor: manikb
 keywords: cmdlet do powershell do galeria, psget
 title: Installing PowerShellGet (Instalar o PowerShellGet)
-ms.openlocfilehash: 5c51cb1c7ea2538cc5f8503ce6c5d80edda70e15
-ms.sourcegitcommit: b6871f21bd666f9cd71dd336bb3f844cf472b56c
+ms.openlocfilehash: 23a53a9117c9f6a7ad157b635cd7ff4b3b3444c5
+ms.sourcegitcommit: caac7d098a448232304c9d6728e7340ec7517a71
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 02/03/2019
-ms.locfileid: "55683878"
+ms.lasthandoff: 03/16/2019
+ms.locfileid: "58054836"
 ---
 # <a name="installing-powershellget"></a>Installing PowerShellGet (Instalar o PowerShellGet)
 
@@ -57,7 +57,7 @@ ms.locfileid: "55683878"
   Exit
   ```
 
-- Certifique-se de que os módulos do PowerShellGet e PackageManagment não são carregados em todos os outros processos.
+- Certifique-se de que os módulos do PowerShellGet e PackageManagement não são carregados em todos os outros processos.
 - Eliminar conteúdo da `$env:ProgramFiles\WindowsPowerShell\Modules\PowerShellGet\` e `$env:ProgramFiles\WindowsPowerShell\Modules\PackageManagement\` pastas.
 - Volte a abrir a consola de PS com permissões elevadas, em seguida, execute os seguintes comandos.
 

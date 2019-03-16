@@ -8,16 +8,16 @@ ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: f24f77d5-e224-4b62-b128-535e045d333e
 caps.latest.revision: 9
-ms.openlocfilehash: 8cfbcacf93733667ffba63a252c86518c0919b57
-ms.sourcegitcommit: b6871f21bd666f9cd71dd336bb3f844cf472b56c
+ms.openlocfilehash: 19e96b612a8778d82cdbafb528a7ffeb01f15f99
+ms.sourcegitcommit: caac7d098a448232304c9d6728e7340ec7517a71
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 02/03/2019
-ms.locfileid: "56851997"
+ms.lasthandoff: 03/16/2019
+ms.locfileid: "58058832"
 ---
 # <a name="how-to-request-confirmations"></a>How to Request Confirmations (Como Pedir Confirmações)
 
-Este exemplo mostra como chamar o [System.Management.Automation.Cmdlet.Shouldprocess*](/dotnet/api/System.Management.Automation.Cmdlet.ShouldProcess) e [System.Management.Automation.Cmdlet.Shouldcontinue*](/dotnet/api/System.Management.Automation.Cmdlet.ShouldContinue) métodos para pedir confirmações das utilizador antes de uma ação está a ser utilizada.
+Este exemplo mostra como chamar o [System.Management.Automation.Cmdlet.ShouldProcess](/dotnet/api/System.Management.Automation.Cmdlet.ShouldProcess) e [System.Management.Automation.Cmdlet.ShouldContinue](/dotnet/api/System.Management.Automation.Cmdlet.ShouldContinue) métodos para pedir confirmações das utilizador antes de uma ação está a ser utilizada.
 
 > [!IMPORTANT]
 > Para obter mais informações sobre como o Windows PowerShell manipula estes pedidos, consulte [pedir confirmação](./requesting-confirmation-from-cmdlets.md).
@@ -43,13 +43,13 @@ Este exemplo mostra como chamar o [System.Management.Automation.Cmdlet.Shouldpro
     private bool force;
     ```
 
-3. Adicionar uma `if` instrução que utiliza o valor de retorno a [System.Management.Automation.Cmdlet.Shouldprocess*](/dotnet/api/System.Management.Automation.Cmdlet.ShouldProcess) método para determinar se o [System.Management.Automation.Cmdlet.Shouldcontinue*](/dotnet/api/System.Management.Automation.Cmdlet.ShouldContinue) método é chamado.
+3. Adicionar uma `if` instrução que utiliza o valor de retorno a [System.Management.Automation.Cmdlet.ShouldProcess](/dotnet/api/System.Management.Automation.Cmdlet.ShouldProcess) método para determinar se o [System.Management.Automation.Cmdlet.ShouldContinue](/dotnet/api/System.Management.Automation.Cmdlet.ShouldContinue) método é chamado.
 
-4. Adicione um segundo `if` instrução que utiliza o valor de retorno a [System.Management.Automation.Cmdlet.Shouldcontinue*](/dotnet/api/System.Management.Automation.Cmdlet.ShouldContinue) método e o valor da `Force` parâmetro para determinar se a operação deve ser efetuar.
+4. Adicione um segundo `if` instrução que utiliza o valor de retorno a [System.Management.Automation.Cmdlet.ShouldContinue](/dotnet/api/System.Management.Automation.Cmdlet.ShouldContinue) método e o valor da `Force` parâmetro para determinar se a operação deve ser efetuar.
 
 ## <a name="example"></a>Exemplo
 
-No exemplo de código a seguir, o [System.Management.Automation.Cmdlet.Shouldprocess*](/dotnet/api/System.Management.Automation.Cmdlet.ShouldProcess) e [System.Management.Automation.Cmdlet.Shouldcontinue*](/dotnet/api/System.Management.Automation.Cmdlet.ShouldContinue) métodos são chamados de dentro do substituição do [System.Management.Automation.Cmdlet.Processrecord*](/dotnet/api/System.Management.Automation.Cmdlet.ProcessRecord) método. No entanto, também pode chamar esses métodos de entrada outra métodos de processamento.
+No exemplo de código a seguir, o [System.Management.Automation.Cmdlet.ShouldProcess](/dotnet/api/System.Management.Automation.Cmdlet.ShouldProcess) e [System.Management.Automation.Cmdlet.ShouldContinue](/dotnet/api/System.Management.Automation.Cmdlet.ShouldContinue) métodos são chamados a partir de substituição do [System.Management.Automation.Cmdlet.ProcessRecord](/dotnet/api/System.Management.Automation.Cmdlet.ProcessRecord) método. No entanto, também pode chamar esses métodos de entrada outra métodos de processamento.
 
 ```csharp
 protected override void ProcessRecord()

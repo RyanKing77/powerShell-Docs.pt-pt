@@ -8,12 +8,12 @@ ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 1f405afb-70b5-4fe0-9986-bc07401d93fd
 caps.latest.revision: 23
-ms.openlocfilehash: 832527ea4b042812c39934cd7e124201c6dc2ea4
-ms.sourcegitcommit: b6871f21bd666f9cd71dd336bb3f844cf472b56c
+ms.openlocfilehash: 862f942facafff6cea66c4f8f1040772c6a62ec3
+ms.sourcegitcommit: caac7d098a448232304c9d6728e7340ec7517a71
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 02/03/2019
-ms.locfileid: "56850660"
+ms.lasthandoff: 03/16/2019
+ms.locfileid: "58057370"
 ---
 # <a name="creating-a-table-view"></a>Creating a Table View (Criar uma Vista de Tabela)
 
@@ -95,7 +95,7 @@ Os seguintes elementos XML são utilizados para definir uma vista de lista:
 
 2. O [TableColumnHeader](./tablecolumnheader-element-format.md) elemento define o que é apresentado na parte superior de uma coluna da tabela. Especifique esses elementos na ordem em que pretende que os cabeçalhos apresentados.
 
-   Não há limite para o número destes elemento que pode utilizar, mas o número de [TableColumnHeader](./tablecolumnheader-element-format.md) elementos na vista de tabela devem ser igual ao número de [TableRowEntry](./tablerowentry-element-for-tablerowentroes-for-tablecontrol-format.md) elementos que utilizar.
+   Não há limite para o número destes elemento que pode utilizar, mas o número de [TableColumnHeader](./tablecolumnheader-element-format.md) elementos na vista de tabela devem ser igual ao número de [TableRowEntry](./tablerowentry-element-for-tablerowentries-for-tablecontrol-format.md) elementos que utilizar.
 
 3. O [etiqueta](./label-element-for-tablecolumnheader-for-tablecontrol-format.md) elemento Especifica o texto que é apresentado. Este elemento é opcional.
 
@@ -136,7 +136,7 @@ Os seguintes elementos XML podem ser utilizados para fornecer definições para 
 
 - O [EntrySelectedBy](./entryselectedby-element-for-tablerowentry-for-tablecontrol-format.md) elemento Especifica os objetos que são apresentados por uma definição específica. Este elemento é opcional e é necessário apenas quando define várias [TableRowEntry](./listentry-element-for-listcontrol-format.md) elementos que apresentam diferentes objetos.
 
-- O [encapsular](./wrap-element-for-tablerowentry-for-tablecontrl-format.md) elemento Especifica que o texto que excede a largura da coluna é apresentado na próxima linha. Por predefinição, o texto que excede a largura da coluna é truncado.
+- O [encapsular](./wrap-element-for-tablerowentry-for-tablecontrol-format.md) elemento Especifica que o texto que excede a largura da coluna é apresentado na próxima linha. Por predefinição, o texto que excede a largura da coluna é truncado.
 
 - O [TableColumnItems](./tablecolumnitems-element-for-tablerowentry-for-tablecontrol-format.md) elemento define as propriedades ou scripts cujos valores são apresentados na linha.
 
@@ -249,6 +249,6 @@ O seguinte elemento XML pode ser utilizados para chamar o `ToString` método:
 
 - O [ScriptBlock](./scriptblock-element-for-tablecolumnitem-for-tablecontrol-format.md) elemento Especifica o script cujo valor é apresentado na linha. Tem de especificar um script ou uma propriedade, mas não é possível especificar ambos.
 
-## <a name="see-also"></a>Consulte Também
+## <a name="see-also"></a>Veja Também
 
 [Escrever um ficheiro de formatação de PowerShell](./writing-a-powershell-formatting-file.md)

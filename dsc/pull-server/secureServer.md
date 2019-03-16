@@ -2,12 +2,12 @@
 ms.date: 06/12/2017
 keywords: DSC, powershell, configuração, a configuração
 title: Melhores práticas do servidor de solicitação
-ms.openlocfilehash: da67f8fd793878b097ffb260afad0fcf5c69bb04
-ms.sourcegitcommit: 00ff76d7d9414fe585c04740b739b9cf14d711e1
+ms.openlocfilehash: fe483a487f85f2e4edb0928fccfe98746ae11231
+ms.sourcegitcommit: caac7d098a448232304c9d6728e7340ec7517a71
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 12/14/2018
-ms.locfileid: "53405265"
+ms.lasthandoff: 03/16/2019
+ms.locfileid: "58057710"
 ---
 # <a name="pull-server-best-practices"></a>Melhores práticas do servidor de solicitação
 
@@ -260,7 +260,7 @@ O comando solicitará sua aprovação antes de transferir o módulo.
 
 O melhor método para implementar um servidor de solicitação de DSC é usar um script de configuração de DSC. Este documento vai apresentar scripts incluindo ambas as definições básicas que poderia configurar apenas o serviço da web de DSC e definições que poderia configurar um serviço de web de DSC incluindo do Windows Server-a-ponto avançadas.
 
-Nota:  Atualmente o `xPSDesiredStateConfiguation` módulo de DSC requer que o servidor para ser localidade EN-US.
+Nota:  Atualmente o `xPSDesiredStateConfiguration` módulo de DSC requer que o servidor para ser localidade EN-US.
 
 ### <a name="basic-configuration-for-windows-server-2012"></a>Configuração básica para o Windows Server 2012
 

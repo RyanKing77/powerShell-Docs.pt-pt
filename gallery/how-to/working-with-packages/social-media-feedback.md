@@ -3,16 +3,16 @@ ms.date: 06/12/2017
 contributor: JKeithB
 keywords: Galeria, o powershell, o cmdlet, o psgallery
 title: Fornecer Feedback através de redes sociais ou dos comentários
-ms.openlocfilehash: a7cdcc2ff2c18fb606d077adf0bdecf57c90703f
-ms.sourcegitcommit: b6871f21bd666f9cd71dd336bb3f844cf472b56c
+ms.openlocfilehash: a27a2fc7cf54835cb53b11382c20d1354345a5a3
+ms.sourcegitcommit: caac7d098a448232304c9d6728e7340ec7517a71
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 02/03/2019
-ms.locfileid: "55684354"
+ms.lasthandoff: 03/16/2019
+ms.locfileid: "58055007"
 ---
 # <a name="providing-feedback-via-social-media-or-comments"></a>Fornecer Feedback através de redes sociais ou dos comentários
 
-A galeria do Powershell oferece suporte a duas abordagens para que os utilizadores forneçam comentários público num pacote:
+A galeria do PowerShell oferece suporte a duas abordagens para que os utilizadores forneçam comentários público num pacote:
 
 - Utilize as ligações no limite esquerdo de um pacote em sites de redes sociais do Facebook, LinkedIn e Twitter; "compartilhar"
 - Utilize a funcionalidade de comentário para publicar comentários de um pacote e para permitir que os autores para deteção de comentários nos pacotes publicam.
@@ -26,8 +26,7 @@ Os utilizadores devem iniciar sessão para o site que escolheu para compartilhar
 
 Os utilizadores são encorajados a fazer isso, se eles encontrarem um pacote é algo que recomendaria para outras pessoas.
 A galeria do PowerShell irá verificar a cada site de redes sociais para "partilhas" do pacote e apresentar o número de vezes que o pacote tiver sido partilhado em cada um dos sites de redes sociais.
-Uma vez que isso apresenta apenas o número de vezes que algo foi partilhado, será intepreted outros utilizadores como "liking" o pacote.
-
+Uma vez que isso apresenta apenas o número de vezes que algo foi partilhado, será interpretado outros utilizadores como "liking" o pacote.
 
 ## <a name="comments"></a>Comentários
 

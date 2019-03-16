@@ -8,12 +8,12 @@ ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 2a48de31-7961-4b0e-b58b-93466e38370b
 caps.latest.revision: 6
-ms.openlocfilehash: 86a0e8b7e8967280daa57faf5c323efcd3b1368b
-ms.sourcegitcommit: 5990f04b8042ef2d8e571bec6d5b051e64c9921c
+ms.openlocfilehash: 5c5168ffd74c15066b914ad1b39d9ead947c5e7f
+ms.sourcegitcommit: caac7d098a448232304c9d6728e7340ec7517a71
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 03/12/2019
-ms.locfileid: "57794200"
+ms.lasthandoff: 03/16/2019
+ms.locfileid: "58054191"
 ---
 # <a name="loading-and-exporting-formatting-data"></a>Loading and Exporting Formatting Data (Carregar e Exportar Dados de Formatação)
 
@@ -27,7 +27,7 @@ Arquivos de formatação podem ser carregados para a sessão atual utilizando os
 
 - Pode criar um manifesto de módulo que referencia o ficheiro de formatação. Módulos permitem-lhe que ficheiros para a distribuição de formatação do pacote. Utilize o [New-ModuleManifest](/powershell/module/Microsoft.PowerShell.Core/New-ModuleManifest) cmdlet para criar o manifesto e o [Import-Module](/powershell/module/Microsoft.PowerShell.Core/Import-Module) cmdlet para carregar o módulo na sessão atual. Para obter mais informações sobre os módulos, consulte [escrever um módulo do Windows PowerShell](../module/writing-a-windows-powershell-module.md).
 
-- Pode criar um snap-in que referencia o ficheiro de formatação. Utilize o [System.Management.Automation.Pssnapin.Formats](/dotnet/api/System.Management.Automation.PSSnapIn.Formats) para referenciar os ficheiros de formatação. É vivamente recomendado que utilize módulos aos cmdlets de pacote e formatação associadas e ficheiros de tipos para distribuição. Para obter mais informações sobre os módulos, consulte [escrever um módulo do Windows PowerShell](../module/writing-a-windows-powershell-module.md).
+- Pode criar um snap-in que referencia o ficheiro de formatação. Utilize o [System.Management.Automation.PSSnapIn.Formats](/dotnet/api/System.Management.Automation.PSSnapIn.Formats) para referenciar os ficheiros de formatação. É vivamente recomendado que utilize módulos aos cmdlets de pacote e formatação associadas e ficheiros de tipos para distribuição. Para obter mais informações sobre os módulos, consulte [escrever um módulo do Windows PowerShell](../module/writing-a-windows-powershell-module.md).
 
 - Se está a invocar comandos por meio de programação, pode adicionar uma entrada de ficheiro de formatação para o estado de sessão inicial do espaço de execução em que os comandos são executados. Para obter mais informações sobre o tipo de .NET usado para adicionar o arquivo de formatação, consulte o [System.Management.Automation.Runspaces.Sessionstateformatentry? Displayproperty = Fullname](/dotnet/api/System.Management.Automation.Runspaces.SessionStateFormatEntry) classe.
 

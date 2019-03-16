@@ -2,12 +2,12 @@
 ms.date: 12/12/2018
 keywords: DSC, powershell, configuração, a configuração
 title: Dependências de recursos com a chave DependsOn
-ms.openlocfilehash: 0d060f7d99bd261b0766028b245d4d32a5e1c349
-ms.sourcegitcommit: b6871f21bd666f9cd71dd336bb3f844cf472b56c
+ms.openlocfilehash: 5ea08c76c203188f41513ad0cc1f4571579b4172
+ms.sourcegitcommit: caac7d098a448232304c9d6728e7340ec7517a71
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 02/03/2019
-ms.locfileid: "55688064"
+ms.lasthandoff: 03/16/2019
+ms.locfileid: "58055704"
 ---
 # <a name="resource-dependencies-using-dependson"></a>Dependências de recursos com a chave DependsOn
 
@@ -16,7 +16,7 @@ Quando escreve [configurações](configurations.md), adicione [blocos de recurso
 O `DependsOn` chave pode ser utilizada em qualquer bloco de recursos. Ele é definido com o mesmo mecanismo de chave/valor como outras chaves de recurso. O `DependsOn` chave espera uma matriz de cadeias de caracteres com a seguinte sintaxe.
 
 ```
-DependsOn = '[<Resource Type>]<Resoure Name>', '[<Resource Type>]<Resource Name'
+DependsOn = '[<Resource Type>]<Resource Name>', '[<Resource Type>]<Resource Name'
 ```
 
 O exemplo seguinte configura uma regra de firewall depois de ativar e configurar o perfil público.

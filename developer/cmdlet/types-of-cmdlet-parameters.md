@@ -8,12 +8,12 @@ ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 6602730d-3892-4656-80c7-7bca2d14337f
 caps.latest.revision: 14
-ms.openlocfilehash: 59921a92661482b8d518b82f490c9879643543bb
-ms.sourcegitcommit: b6871f21bd666f9cd71dd336bb3f844cf472b56c
+ms.openlocfilehash: f5781c0c03aca41d01a44598a9a8c00d6d21d2fd
+ms.sourcegitcommit: caac7d098a448232304c9d6728e7340ec7517a71
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 02/03/2019
-ms.locfileid: "56849519"
+ms.lasthandoff: 03/16/2019
+ms.locfileid: "58059580"
 ---
 # <a name="types-of-cmdlet-parameters"></a>Types of Cmdlet Parameters (Tipos de Parâmetros de Cmdlets)
 
@@ -91,13 +91,13 @@ private string userName;
 
 ## <a name="switch-parameters"></a>Parâmetros de comutador
 
-Windows PowerShell fornece uma [System.Management.Automation.Switchparameter](/dotnet/api/System.Management.Automation.SwitchParameter) tipo que permite-lhe definir um parâmetro cujo valor é automaticamente definido como `false` se o parâmetro não for especificado, quando o cmdlet é chamado. Sempre que possível, use parâmetros em vez dos parâmetros booleanos.
+Windows PowerShell fornece uma [System.Management.Automation.SwitchParameter](/dotnet/api/System.Management.Automation.SwitchParameter) tipo que permite-lhe definir um parâmetro cujo valor é automaticamente definido como `false` se o parâmetro não for especificado, quando o cmdlet é chamado. Sempre que possível, use parâmetros em vez dos parâmetros booleanos.
 
 Considere o exemplo a seguir. Por predefinição, vários cmdlets do Windows PowerShell não passar um objeto de saída pelo pipeline. No entanto, estes cmdlets têm um `PassThru` mudar o parâmetro que substitui o comportamento predefinido. Se o `PassThru` parâmetro for especificado, quando estes cmdlets são chamados, o cmdlet retorna um objeto de saída no pipeline.
 
-Se é necessário o parâmetro tenha um valor padrão de `true` quando o parâmetro não for especificado na chamada, considere revertendo o sentido do parâmetro. Para obter exemplo, em vez de definir o atributo de parâmetro para um valor booleano `true`, declare a propriedade como o [System.Management.Automation.Switchparameter](/dotnet/api/System.Management.Automation.SwitchParameter) escreva e, em seguida, defina o valor predefinido do parâmetro como `false`.
+Se é necessário o parâmetro tenha um valor padrão de `true` quando o parâmetro não for especificado na chamada, considere revertendo o sentido do parâmetro. Para obter exemplo, em vez de definir o atributo de parâmetro para um valor booleano `true`, declare a propriedade como o [System.Management.Automation.SwitchParameter](/dotnet/api/System.Management.Automation.SwitchParameter) escreva e, em seguida, defina o valor predefinido do parâmetro como `false`.
 
-Para definir um parâmetro de mudança, declarar a propriedade como o [System.Management.Automation.Switchparameter](/dotnet/api/System.Management.Automation.SwitchParameter) escreve, conforme mostrado no exemplo a seguir.
+Para definir um parâmetro de mudança, declarar a propriedade como o [System.Management.Automation.SwitchParameter](/dotnet/api/System.Management.Automation.SwitchParameter) escreve, conforme mostrado no exemplo a seguir.
 
 ```csharp
 [Parameter(Position = 1)]
@@ -122,6 +122,6 @@ protected override void ProcessRecord()
 } // End ProcessRecord
 ```
 
-## <a name="see-also"></a>Consulte Também
+## <a name="see-also"></a>Veja Também
 
 [Escrever um Cmdlet do Windows PowerShell](./writing-a-windows-powershell-cmdlet.md)

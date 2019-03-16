@@ -8,12 +8,12 @@ ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 41c56499-ee20-4821-830a-478fdcc33f83
 caps.latest.revision: 11
-ms.openlocfilehash: 59cc0514087cc52438e0d1271b8b77a7799eb32c
-ms.sourcegitcommit: b6871f21bd666f9cd71dd336bb3f844cf472b56c
+ms.openlocfilehash: bc95c62222eb2806f92499257a397c2e4ec5dbab
+ms.sourcegitcommit: caac7d098a448232304c9d6728e7340ec7517a71
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 02/03/2019
-ms.locfileid: "56846579"
+ms.lasthandoff: 03/16/2019
+ms.locfileid: "58059070"
 ---
 # <a name="defaultsettings-element-format"></a>DefaultSettings Element (Format) (Elemento DefaultSettings [Formatação])
 
@@ -45,7 +45,7 @@ Nenhum.
 
 |Elemento|Descrição|
 |-------------|-----------------|
-|[Elemento de DisplayError (Frmat)](./displayerror-element-format.md)|Elemento opcional.<br /><br /> Especifica que a cadeia de caracteres #ERR é apresentada quando ocorre um erro ao apresentar um conjunto de dados.|
+|[Elemento de DisplayError (formato)](./displayerror-element-format.md)|Elemento opcional.<br /><br /> Especifica que a cadeia de caracteres #ERR é apresentada quando ocorre um erro ao apresentar um conjunto de dados.|
 |[Elemento de EnumerableExpansions (formato)](./enumerableexpansions-element-format.md)|Elemento opcional.<br /><br /> Define as diferentes formas em que os objetos do .NET são expandidos quando são apresentados numa vista.|
 |[PropertyCountForTable (formato)](./propertycountfortable-element-format.md)|Elemento opcional.<br /><br /> Especifica o número mínimo de propriedades que têm de ter um objeto para exibir o objeto numa exibição de tabela.|
 |[Elemento de ShowError (formato)](./showerror-element-format.md)|Elemento opcional.<br /><br /> Especifica que o registo de erro completa é apresentado quando ocorre um erro ao apresentar um conjunto de dados.|
@@ -63,7 +63,7 @@ Nenhum.
 
 [Elemento de configuração](./configuration-element-format.md)
 
-[Elemento de DisplayError (Frmat)](./displayerror-element-format.md)
+[Elemento de DisplayError (formato)](./displayerror-element-format.md)
 
 [Elemento de EnumerableExpansions (formato)](./enumerableexpansions-element-format.md)
 

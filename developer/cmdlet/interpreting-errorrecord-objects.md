@@ -8,23 +8,23 @@ ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 2a65b964-5bc6-4ade-a66b-b6afa7351ce7
 caps.latest.revision: 9
-ms.openlocfilehash: d77e4daf25bfcd5e76c184f6dbdb619368627bfa
-ms.sourcegitcommit: b6871f21bd666f9cd71dd336bb3f844cf472b56c
+ms.openlocfilehash: 32ebf2531237bfd1042310ccc4155193a58401fd
+ms.sourcegitcommit: caac7d098a448232304c9d6728e7340ec7517a71
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 02/03/2019
-ms.locfileid: "56847671"
+ms.lasthandoff: 03/16/2019
+ms.locfileid: "58058781"
 ---
 # <a name="interpreting-errorrecord-objects"></a>Interpreting ErrorRecord Objects (Interpretar Objetos ErrorRecord)
 
-Na maioria dos casos, um [System.Management.Automation.Errorrecord](/dotnet/api/System.Management.Automation.ErrorRecord) objeto representa um erro de não terminação gerado por um comando ou script. Erros de terminação também pode especificar as informações adicionais de um ErrorRecord através da [System.Management.Automation.Icontainserrorrecord](/dotnet/api/System.Management.Automation.IContainsErrorRecord) interface.
+Na maioria dos casos, um [System.Management.Automation.ErrorRecord](/dotnet/api/System.Management.Automation.ErrorRecord) objeto representa um erro de não terminação gerado por um comando ou script. Erros de terminação também pode especificar as informações adicionais de um ErrorRecord através da [System.Management.Automation.Icontainserrorrecord](/dotnet/api/System.Management.Automation.IContainsErrorRecord) interface.
 
-Se quiser escrever um manipulador de erros em seu script ou um anfitrião para lidar com erros específicos que ocorrem durante a execução de comando ou script, deve interpretar os [System.Management.Automation.Errorrecord](/dotnet/api/System.Management.Automation.ErrorRecord) objecto para determinar se ele representa a classe de erro que deseja manipular.
+Se quiser escrever um manipulador de erros em seu script ou um anfitrião para lidar com erros específicos que ocorrem durante a execução de comando ou script, deve interpretar os [System.Management.Automation.ErrorRecord](/dotnet/api/System.Management.Automation.ErrorRecord) objecto para determinar se ele representa a classe de erro que deseja manipular.
 
 Quando um cmdlet encontra acabar ou erro de não terminação, é necessário criar um registo de erro que descreve a condição de erro. O aplicativo host deve investigar estes registos de erro e efetuar a ação que irá reduzir o erro. O aplicativo host também deve investigar registos de erro para erros de não terminação que processou um registo, mas foram continuar e deve investigar registos de erro para erros de finalização que causou o pipeline parar.
 
 > [!NOTE]
-> Para erros de terminação, chama o cmdlet do [System.Management.Automation.Cmdlet.Throwterminatingerror*](/dotnet/api/System.Management.Automation.Cmdlet.ThrowTerminatingError) método. Para erros de não terminação, o cmdlet chama o [System.Management.Automation.Cmdlet.Writeerror*](/dotnet/api/System.Management.Automation.Cmdlet.WriteError) método.
+> Para erros de terminação, chama o cmdlet do [System.Management.Automation.Cmdlet.Throwterminatingerror*](/dotnet/api/System.Management.Automation.Cmdlet.ThrowTerminatingError) método. Para erros de não terminação, o cmdlet chama o [System.Management.Automation.Cmdlet.WriteError](/dotnet/api/System.Management.Automation.Cmdlet.WriteError) método.
 
 ## <a name="error-record-design"></a>Design de registo de erro
 
@@ -44,13 +44,13 @@ Poderá rever as várias partes do registo de erros para identificar o erro. Ess
 
 ### <a name="the-error-category"></a>A categoria de erro
 
-A categoria de erro do registo de erro é um das constantes predefinidas fornecidas pelos [System.Management.Automation.Errorcategory](/dotnet/api/System.Management.Automation.ErrorCategory) enumeração. Essas informações estão disponíveis através do [System.Management.Automation.Errorrecord.Categoryinfo*](/dotnet/api/System.Management.Automation.ErrorRecord.CategoryInfo) propriedade da [System.Management.Automation.Errorrecord](/dotnet/api/System.Management.Automation.ErrorRecord) objeto.
+A categoria de erro do registo de erro é um das constantes predefinidas fornecidas pelos [System.Management.Automation.Errorcategory](/dotnet/api/System.Management.Automation.ErrorCategory) enumeração. Essas informações estão disponíveis através do [System.Management.Automation.ErrorRecord.CategoryInfo](/dotnet/api/System.Management.Automation.ErrorRecord.CategoryInfo) propriedade da [System.Management.Automation.ErrorRecord](/dotnet/api/System.Management.Automation.ErrorRecord) objeto.
 
 O cmdlet pode especificar as categorias de CloseError, OpenError, InvalidType, ReadError e WriteError e outras categorias de erro. O aplicativo host pode utilizar a categoria de erro para capturar os grupos de erros.
 
 ### <a name="the-exception"></a>A exceção
 
-A exceção incluída no registo de erro é fornecida pelo cmdlet e podem ser acessada através da [System.Management.Automation.Errorrecord.Exception*](/dotnet/api/System.Management.Automation.ErrorRecord.Exception) propriedade do [ System.Management.Automation.Errorrecord](/dotnet/api/System.Management.Automation.ErrorRecord) objeto.
+A exceção incluída no registo de erro é fornecida pelo cmdlet e podem ser acessada através da [System.Management.Automation.ErrorRecord.Exception*](/dotnet/api/System.Management.Automation.ErrorRecord.Exception) propriedade do [ System.Management.Automation.ErrorRecord](/dotnet/api/System.Management.Automation.ErrorRecord) objeto.
 
 Anfitrião de aplicações pode utilizar o `is` palavra-chave para identificar que a exceção é de uma classe específica ou de uma classe derivada. É melhor para o ramo no tipo de exceção, conforme mostrado no exemplo a seguir.
 
@@ -70,23 +70,23 @@ No exemplo anterior, o token primeiro é o identificador de erro, o que é segui
 
 ### <a name="other-information"></a>Outras informações
 
-O [System.Management.Automation.Errorrecord](/dotnet/api/System.Management.Automation.ErrorRecord) objeto também pode fornecer informações que descrevem o ambiente em que ocorreu o erro. Estas informações incluem itens como detalhes do erro, informações de invocação e o objeto de destino que estava a ser processado quando ocorreu o erro. Embora estas informações poderão ser úteis para o aplicativo host, ele não é normalmente utilizado para identificar o erro. Essas informações estão disponíveis através das seguintes propriedades:
+O [System.Management.Automation.ErrorRecord](/dotnet/api/System.Management.Automation.ErrorRecord) objeto também pode fornecer informações que descrevem o ambiente em que ocorreu o erro. Estas informações incluem itens como detalhes do erro, informações de invocação e o objeto de destino que estava a ser processado quando ocorreu o erro. Embora estas informações poderão ser úteis para o aplicativo host, ele não é normalmente utilizado para identificar o erro. Essas informações estão disponíveis através das seguintes propriedades:
 
-[System.Management.Automation.Errorrecord.Errordetails*](/dotnet/api/System.Management.Automation.ErrorRecord.ErrorDetails)
+[System.Management.Automation.ErrorRecord.ErrorDetails](/dotnet/api/System.Management.Automation.ErrorRecord.ErrorDetails)
 
-[System.Management.Automation.Errorrecord.Invocationinfo*](/dotnet/api/System.Management.Automation.ErrorRecord.InvocationInfo)
+[System.Management.Automation.ErrorRecord.InvocationInfo](/dotnet/api/System.Management.Automation.ErrorRecord.InvocationInfo)
 
-[System.Management.Automation.Errorrecord.Targetobject*](/dotnet/api/System.Management.Automation.ErrorRecord.TargetObject)
+[System.Management.Automation.ErrorRecord.TargetObject](/dotnet/api/System.Management.Automation.ErrorRecord.TargetObject)
 
-## <a name="see-also"></a>Consulte Também
+## <a name="see-also"></a>Veja Também
 
-[System.Management.Automation.Errorrecord](/dotnet/api/System.Management.Automation.ErrorRecord)
+[System.Management.Automation.ErrorRecord](/dotnet/api/System.Management.Automation.ErrorRecord)
 
 [System.Management.Automation.Errorcategory](/dotnet/api/System.Management.Automation.ErrorCategory)
 
 [System.Management.Automation.Errorcategoryinfo](/dotnet/api/System.Management.Automation.ErrorCategoryInfo)
 
-[System.Management.Automation.Cmdlet.Writeerror*](/dotnet/api/System.Management.Automation.Cmdlet.WriteError)
+[System.Management.Automation.Cmdlet.WriteError](/dotnet/api/System.Management.Automation.Cmdlet.WriteError)
 
 [System.Management.Automation.Cmdlet.Throwterminatingerror*](/dotnet/api/System.Management.Automation.Cmdlet.ThrowTerminatingError)
 

@@ -8,12 +8,12 @@ ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 30abae8f-c7f7-479d-ad85-19e07ddef204
 caps.latest.revision: 10
-ms.openlocfilehash: e930e4422afd203feda6a389655ff8a355e3bec0
-ms.sourcegitcommit: b6871f21bd666f9cd71dd336bb3f844cf472b56c
+ms.openlocfilehash: 81eca4f66f0057074612f2d60482b45adc36357b
+ms.sourcegitcommit: caac7d098a448232304c9d6728e7340ec7517a71
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 02/03/2019
-ms.locfileid: "56848679"
+ms.lasthandoff: 03/16/2019
+ms.locfileid: "58059223"
 ---
 # <a name="entryselectedby-element-for-customentry-for-controls-for-configuration-format"></a>EntrySelectedBy Element for CustomEntry for Controls for Configuration (Format) (Elemento EntrySelectedBy para CustomEntry para Controls para Configuration [Formatação])
 
@@ -57,7 +57,7 @@ Nenhum.
 
 No mínimo, cada definição tem de ter pelo menos um .NET tipo, o conjunto de seleção ou condição de seleção especificada. Não existe nenhum limite máximo para o número de tipos, conjuntos de seleção ou condições de seleção que pode ser especificado.
 
-## <a name="see-also"></a>Consulte Também
+## <a name="see-also"></a>Veja Também
 
 [Elemento de SelectionCondition para EntrySelectedBy para controles de configuração (formato)](./selectioncondition-element-for-entryselectedby-for-controls-for-configuration-format.md)
 
@@ -65,6 +65,6 @@ No mínimo, cada definição tem de ter pelo menos um .NET tipo, o conjunto de s
 
 [Elemento de CustomEntry para CustomControl para controles de configuração (formato)](./customentry-element-for-customcontrol-for-controls-for-configuration-format.md)
 
-[Elemento de TypeName para EntrySelectdBy para controles de configuração (formato)](./typename-element-for-selectioncondition-for-controls-for-configuration-format.md)
+[Elemento de TypeName para EntrySelectedBy para controles de configuração (formato)](./typename-element-for-selectioncondition-for-controls-for-configuration-format.md)
 
 [Escrever um ficheiro de formatação de PowerShell](./writing-a-powershell-formatting-file.md)

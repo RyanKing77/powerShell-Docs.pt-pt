@@ -3,12 +3,12 @@ ms.date: 06/09/2017
 schema: 2.0.0
 keywords: PowerShell
 title: Valores de manifestos do pacote que têm impacto sobre a interface do Usuário de galeria do PowerShell
-ms.openlocfilehash: dcba56d9f7edf0c08a3b9e3f2326b39a6b3be3fa
-ms.sourcegitcommit: b6871f21bd666f9cd71dd336bb3f844cf472b56c
+ms.openlocfilehash: cedf81df8de29c54ef559a800d654305029491ec
+ms.sourcegitcommit: caac7d098a448232304c9d6728e7340ec7517a71
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 02/03/2019
-ms.locfileid: "55687252"
+ms.lasthandoff: 03/16/2019
+ms.locfileid: "58058220"
 ---
 # <a name="package-manifest-values-that-impact-the-powershell-gallery-ui"></a>Valores de manifestos do pacote que têm impacto sobre a interface do Usuário de galeria do PowerShell
 
@@ -32,7 +32,7 @@ A tabela abaixo mostra os elementos da página de pacote de galeria do PowerShel
 | **Autor** | Isso está incluído no manifesto do módulo como autor e, num manifesto de script como. AUTOR. O campo de autor, muitas vezes, é utilizado para especificar uma empresa ou organização associada um pacote. | Sim | Sim |
 | **Copyright** | Este é o campo de direitos de autor no manifesto do módulo, e. COPYRIGHT num manifesto de script. | Sim | Sim |
 | **FileList** | A lista de ficheiros é desenhada do pacote quando é publicado na galeria do PowerShell. Não é controlável pelas informações de manifesto. Nota: existe um ficheiro de .nuspec adicionais listado com cada pacote na galeria do PowerShell que não está presente depois de instalar o pacote num sistema. Isso é o manifesto de pacote Nuget para o pacote e pode ser ignorado. | Não | Não |
-| **Tags** | Para módulos, as etiquetas estão incluídas no PSData\PrivateData. Para scripts, a seção é assinaladas como. AS ETIQUETAS. Tenha em atenção que as etiquetas não pode conter espaços, mesmo quando estão aspas. Etiquetas têm requisitos adicionais e os significados, que são descritos posteriormente neste tópico na seção Detalhes da etiqueta. | Sim | Sim |
+| **Etiquetas** | Para módulos, as etiquetas estão incluídas no PSData\PrivateData. Para scripts, a seção é assinaladas como. AS ETIQUETAS. Tenha em atenção que as etiquetas não pode conter espaços, mesmo quando estão aspas. Etiquetas têm requisitos adicionais e os significados, que são descritos posteriormente neste tópico na seção Detalhes da etiqueta. | Sim | Sim |
 | **Cmdlets** | Isto é fornecido no manifesto do módulo CmdletsToExport a utilizar. Tenha em atenção que a melhor prática é explicitamente os itens de lista, em vez de utilizar o caráter universal "*", uma vez que irá melhorar o desempenho de carga-module para os utilizadores. | Sim | Não |
 | **Funções** | Isto é fornecido no manifesto do módulo FunctionsToExport a utilizar. Tenha em atenção que a melhor prática é explicitamente os itens de lista, em vez de utilizar o caráter universal "*", uma vez que irá melhorar o desempenho de carga-module para os utilizadores. | Sim | Não |
 | **Recursos de DSC** | Para os módulos que serão utilizados no PowerShell versão 5.0 e posteriores, isto é fornecido no manifesto usando DscResourcesToExport. Se o módulo está a ser utilizado no PowerShell 4, o DSCResourcesToExport não deve ser utilizada porque não é uma chave de manifesto suportada. (O DSC não estava disponível antes de PowerShell 4). | Sim | Não |
@@ -40,7 +40,7 @@ A tabela abaixo mostra os elementos da página de pacote de galeria do PowerShel
 | **Funcionalidades de função** | Isto irá ser apresentado quando o módulo publicado na galeria do PowerShell contém um ou mais arquivos de recurso (.psrc) de função, que são utilizados pelo JEA. Veja a documentação de JEA para obter mais detalhes sobre [funcionalidades de função](/powershell/jea/role-capabilities). | Sim | Não |
 | **Edições do PowerShell** | Isto é especificado num manifesto de módulo ou script. Para os módulos devem ser utilizadas com o PowerShell 5.0 e abaixo, isso são controlados utilizando etiquetas. Para o Desktop, usar a marca PSEdition_Desktop e para o núcleo, usar a marca PSEdition_Core. Para os módulos que serão utilizados apenas no PowerShell 5.1 e versões posteriores, existe uma chave de CompatiblePSEditions no manifesto do principal. Para obter detalhes adicionais, reveja a funcionalidade de edição de PS no [a documentação do PowerShell Get](module-psedition-support.md). | Sim | Sim |
 | **Dependências** | As dependências são os módulos na galeria do PowerShell que são declarados no módulo como RequiredModules ou no manifesto do script como #Requires – módulo (nome). | Sim | Sim |
-| **Versão mínima do Powershell** | Isto pode ser especificado num manifesto de módulo como PowerShellVersion | Sim | Não |
+| **Versão mínima do PowerShell** | Isto pode ser especificado num manifesto de módulo como PowerShellVersion | Sim | Não |
 | **Histórico de versões** | O histórico de versões reflete as atualizações feitas a um módulo na galeria do PowerShell. Se uma versão de um pacote está oculta a utilizar a funcionalidade de eliminação, ele não será apresentado no histórico de versões, exceto para os proprietários de pacote. | Não | Não |
 | **Site do projeto** | O site do projeto é fornecido para módulos na seção Privatedata\PSData do manifesto do módulo especificando um ProjectURI. No manifesto do script, ele é controlado através da especificação. PROJECTURI. | Sim | Sim |
 | **License** | É fornecida uma ligação de licença para os módulos na seção Privatedata\PSData do manifesto do módulo especificando um LicenseURI. No manifesto do script, ele é controlado através da especificação. LICENSEURI. É importante observar que, se uma licença não é fornecida através do LicenseURI ou dentro de um módulo, em seguida, os termos de utilização para a galeria do PowerShell especifique os termos de utilização para o pacote. Consulte os termos de utilização para obter detalhes. | Sim | Sim |
@@ -95,7 +95,7 @@ Para referência, eis algumas marcas mais comumente usadas a partir de 12/14/201
 | Windows |  |
 | Compilação |  |
 | Implementação | Implementar é utilizado um pouco menos frequência |
-| Na cloud |  |
+| Nuvem |  |
 | GIT |  |
 | Teste | O teste é menos desejável |
 | VersionControl | Versão é menos preciso, embora usado com mais frequência  |

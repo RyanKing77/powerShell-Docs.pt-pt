@@ -2,12 +2,12 @@
 ms.date: 06/12/2017
 keywords: DSC, powershell, configuração, a configuração
 title: Escrever um recurso personalizado do DSC com o MOF
-ms.openlocfilehash: 5917e20769e750042a9855649ff5bec36ad14eb4
-ms.sourcegitcommit: b6871f21bd666f9cd71dd336bb3f844cf472b56c
+ms.openlocfilehash: f243c3e3297711e6f6346a0f813a9c017fe227c3
+ms.sourcegitcommit: caac7d098a448232304c9d6728e7340ec7517a71
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 02/03/2019
-ms.locfileid: "55687567"
+ms.lasthandoff: 03/16/2019
+ms.locfileid: "58059733"
 ---
 # <a name="writing-a-custom-dsc-resource-with-mof"></a>Escrever um recurso personalizado do DSC com o MOF
 
@@ -69,7 +69,8 @@ Tenha em atenção o seguinte sobre o código anterior:
 
 O script de recurso implementa a lógica do recurso. Neste módulo, tem de incluir três funções chamadas **Get-TargetResource**, **conjunto TargetResource**, e **teste TargetResource**. Todas as três funções tem de executar um conjunto de parâmetros é idêntico ao conjunto de propriedades definidas no esquema do MOF que criou para o seu recurso. Neste documento, este conjunto de propriedades é referido como "Propriedades de recurso." Store essas três funções num arquivo chamadas <ResourceName>. psm1. No exemplo seguinte, as funções são armazenadas num arquivo chamado Demo_IISWebsite.psm1.
 
-> **Tenha em atenção**: Ao executar o mesmo script de configuração no recurso mais de uma vez, deverá receber sem erros e o recurso deve permanecer no mesmo Estado de execução do script de uma vez. Para tal, certifique-se de que sua **Get-TargetResource** e **teste TargetResource** deixe de funções, o recurso inalterado e esse invocando o **conjunto-TargetResource**funcionar mais do que uma vez numa sequência com o mesmo parâmetro de valores equivale sempre ao invocá-lo uma vez.
+> [!NOTE]
+> Ao executar o mesmo script de configuração no recurso mais de uma vez, deverá receber sem erros e o recurso deve permanecer no mesmo Estado de execução do script de uma vez. Para tal, certifique-se de que sua **Get-TargetResource** e **teste TargetResource** deixe de funções, o recurso inalterado e esse invocando o **conjunto-TargetResource**funcionar mais do que uma vez numa sequência com o mesmo parâmetro de valores equivale sempre ao invocá-lo uma vez.
 
 Na **Get-TargetResource** implementação de função, utilize os valores de propriedade de recursos principais que são fornecidos como parâmetros para verificar o estado da instância do recurso especificado. Esta função tem de devolver uma tabela de hash que lista todas as propriedades de recurso como chaves e valores reais dessas propriedades como os valores correspondentes. O código a seguir fornece um exemplo.
 

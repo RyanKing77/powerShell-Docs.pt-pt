@@ -8,12 +8,12 @@ ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 81aeafad-dbc3-4712-8bb9-e6a417be260f
 caps.latest.revision: 15
-ms.openlocfilehash: 2039e181becd1b39fc3d6cf0cdbcf0c20e9fc206
-ms.sourcegitcommit: b6871f21bd666f9cd71dd336bb3f844cf472b56c
+ms.openlocfilehash: 2df5a59833fcdd58c6b2afbb4882111592fb3d76
+ms.sourcegitcommit: caac7d098a448232304c9d6728e7340ec7517a71
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 02/03/2019
-ms.locfileid: "56851836"
+ms.lasthandoff: 03/16/2019
+ms.locfileid: "58056435"
 ---
 # <a name="writing-a-windows-powershell-host-application"></a>Writing a Windows PowerShell Host Application (Escrever uma Aplicação Anfitriã do Windows PowerShell)
 
@@ -29,12 +29,12 @@ Os tópicos seguintes explicam como criar uma aplicação que aloja
 
 [Adicionar e invocar comandos](./adding-and-invoking-commands.md) explica como criar e executar um pipeline de comando na sua aplicação anfitriã....
 
-[Criação de espaços de execução remotos](./creating-remote-runspaces.md) Expains como ligar um espaço de execução para um computador remoto.
+[Criação de espaços de execução remotos](./creating-remote-runspaces.md) explica como se ligar um espaço de execução para um computador remoto.
 
 [Criando uma interface do usuário personalizada](./creating-a-custom-user-interface.md) Introduces personalizadas do utilizador interfaces e fornece ligações para exemplos.
 
 [Exemplos de aplicações de anfitrião](./host-application-samples.md) esta secção inclui exemplos de aplicativos host completo.
 
-## <a name="see-also"></a>Consulte Também
+## <a name="see-also"></a>Veja Também
 
 [Windows PowerShell](http://msdn.microsoft.com/en-us/b41a2af3-aec1-402d-8e18-c2c26be461ff)
