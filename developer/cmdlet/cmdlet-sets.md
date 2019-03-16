@@ -8,32 +8,32 @@ ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: bcf0739e-920e-4dd8-afca-2c6d6927bc2a
 caps.latest.revision: 10
-ms.openlocfilehash: e9c59474b7e2bbc07166df8a8b4fa8099edd360f
-ms.sourcegitcommit: b6871f21bd666f9cd71dd336bb3f844cf472b56c
+ms.openlocfilehash: ef3b5bab5dcafc578397bcb4f071776bbdeaced1
+ms.sourcegitcommit: caac7d098a448232304c9d6728e7340ec7517a71
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 02/03/2019
-ms.locfileid: "56849050"
+ms.lasthandoff: 03/16/2019
+ms.locfileid: "58058271"
 ---
-# <a name="cmdlet-sets"></a><span data-ttu-id="322ee-102">Cmdlet Sets (Conjuntos de Cmdlets)</span><span class="sxs-lookup"><span data-stu-id="322ee-102">Cmdlet Sets</span></span>
+# <a name="cmdlet-sets"></a><span data-ttu-id="d400d-102">Cmdlet Sets (Conjuntos de Cmdlets)</span><span class="sxs-lookup"><span data-stu-id="d400d-102">Cmdlet Sets</span></span>
 
-<span data-ttu-id="322ee-103">Quando projeta sua cmdlets, que poderá encontrar casos em que precisa executar várias ações sobre os mesmos dados.</span><span class="sxs-lookup"><span data-stu-id="322ee-103">When you design your cmdlets, you might encounter cases in which you need to perform several actions on the same piece of data.</span></span> <span data-ttu-id="322ee-104">Por exemplo, poderá ter de obter e definir os dados ou iniciar e parar um processo.</span><span class="sxs-lookup"><span data-stu-id="322ee-104">For example, you might need to get and set data or start and stop a process.</span></span> <span data-ttu-id="322ee-105">Embora precisará criar cmdlets separado para executar cada ação, o design do cmdlet deve incluir uma classe base a partir da qual derivam as classes para os cmdlets individuais.</span><span class="sxs-lookup"><span data-stu-id="322ee-105">Although you will need to create separate cmdlets to perform each action, your cmdlet design should include a base class from which the classes for the individual cmdlets are derived.</span></span>
+<span data-ttu-id="d400d-103">Quando projeta sua cmdlets, que poderá encontrar casos em que precisa executar várias ações sobre os mesmos dados.</span><span class="sxs-lookup"><span data-stu-id="d400d-103">When you design your cmdlets, you might encounter cases in which you need to perform several actions on the same piece of data.</span></span> <span data-ttu-id="d400d-104">Por exemplo, poderá ter de obter e definir os dados ou iniciar e parar um processo.</span><span class="sxs-lookup"><span data-stu-id="d400d-104">For example, you might need to get and set data or start and stop a process.</span></span> <span data-ttu-id="d400d-105">Embora precisará criar cmdlets separado para executar cada ação, o design do cmdlet deve incluir uma classe base a partir da qual derivam as classes para os cmdlets individuais.</span><span class="sxs-lookup"><span data-stu-id="d400d-105">Although you will need to create separate cmdlets to perform each action, your cmdlet design should include a base class from which the classes for the individual cmdlets are derived.</span></span>
 
-<span data-ttu-id="322ee-106">Manter Lembre-se os seguintes pontos ao implementar uma classe base.</span><span class="sxs-lookup"><span data-stu-id="322ee-106">Keep the following things in mind when implementing a base class.</span></span>
+<span data-ttu-id="d400d-106">Manter Lembre-se os seguintes pontos ao implementar uma classe base.</span><span class="sxs-lookup"><span data-stu-id="d400d-106">Keep the following things in mind when implementing a base class.</span></span>
 
-- <span data-ttu-id="322ee-107">Declare todos os parâmetros comuns utilizados por todos os cmdlets derivados da classe base.</span><span class="sxs-lookup"><span data-stu-id="322ee-107">Declare any common parameters used by all the derived cmdlets in the base class.</span></span>
+- <span data-ttu-id="d400d-107">Declare todos os parâmetros comuns utilizados por todos os cmdlets derivados da classe base.</span><span class="sxs-lookup"><span data-stu-id="d400d-107">Declare any common parameters used by all the derived cmdlets in the base class.</span></span>
 
-- <span data-ttu-id="322ee-108">Adicione parâmetros de específico do cmdlet para a classe cmdlet apropriado.</span><span class="sxs-lookup"><span data-stu-id="322ee-108">Add cmdlet-specific parameters to the appropriate cmdlet class.</span></span>
+- <span data-ttu-id="d400d-108">Adicione parâmetros de específico do cmdlet para a classe cmdlet apropriado.</span><span class="sxs-lookup"><span data-stu-id="d400d-108">Add cmdlet-specific parameters to the appropriate cmdlet class.</span></span>
 
-- <span data-ttu-id="322ee-109">Substitua a entrada apropriada processamento método na classe base.</span><span class="sxs-lookup"><span data-stu-id="322ee-109">Override the appropriate input processing method in the base class.</span></span>
+- <span data-ttu-id="d400d-109">Substitua a entrada apropriada processamento método na classe base.</span><span class="sxs-lookup"><span data-stu-id="d400d-109">Override the appropriate input processing method in the base class.</span></span>
 
-- <span data-ttu-id="322ee-110">Declarar o [System.Management.Automation.Cmdletattribute](/dotnet/api/System.Management.Automation.CmdletAttribute) de atributo em todas as classes de cmdlet, mas não o declara na classe base.</span><span class="sxs-lookup"><span data-stu-id="322ee-110">Declare the [System.Management.Automation.Cmdletattribute](/dotnet/api/System.Management.Automation.CmdletAttribute) attribute on all cmdlet classes, but do not declare it on the base class.</span></span>
+- <span data-ttu-id="d400d-110">Declarar o [System.Management.Automation.CmdletAttribute](/dotnet/api/System.Management.Automation.CmdletAttribute) de atributo em todas as classes de cmdlet, mas não o declara na classe base.</span><span class="sxs-lookup"><span data-stu-id="d400d-110">Declare the [System.Management.Automation.CmdletAttribute](/dotnet/api/System.Management.Automation.CmdletAttribute) attribute on all cmdlet classes, but do not declare it on the base class.</span></span>
 
-- <span data-ttu-id="322ee-111">Implementar um [System.Management.Automation.Pssnapin](/dotnet/api/System.Management.Automation.PSSnapIn) ou [System.Management.Automation.Custompssnapin](/dotnet/api/System.Management.Automation.CustomPSSnapIn) classe cujo nome e descrição reflete o conjunto de cmdlets.</span><span class="sxs-lookup"><span data-stu-id="322ee-111">Implement a [System.Management.Automation.Pssnapin](/dotnet/api/System.Management.Automation.PSSnapIn) or [System.Management.Automation.Custompssnapin](/dotnet/api/System.Management.Automation.CustomPSSnapIn) class whose name and description reflects the set of cmdlets.</span></span>
+- <span data-ttu-id="d400d-111">Implementar um [System.Management.Automation.PSSnapIn](/dotnet/api/System.Management.Automation.PSSnapIn) ou [System.Management.Automation.Custompssnapin](/dotnet/api/System.Management.Automation.CustomPSSnapIn) classe cujo nome e descrição reflete o conjunto de cmdlets.</span><span class="sxs-lookup"><span data-stu-id="d400d-111">Implement a [System.Management.Automation.PSSnapIn](/dotnet/api/System.Management.Automation.PSSnapIn) or [System.Management.Automation.Custompssnapin](/dotnet/api/System.Management.Automation.CustomPSSnapIn) class whose name and description reflects the set of cmdlets.</span></span>
 
-## <a name="example"></a><span data-ttu-id="322ee-112">Exemplo</span><span class="sxs-lookup"><span data-stu-id="322ee-112">Example</span></span>
+## <a name="example"></a><span data-ttu-id="d400d-112">Exemplo</span><span class="sxs-lookup"><span data-stu-id="d400d-112">Example</span></span>
 
-<span data-ttu-id="322ee-113">O exemplo seguinte mostra a implementação de uma classe base que é utilizada pelo Get-Proc e o cmdlet Stop-Proc que derivam da mesma classe base.</span><span class="sxs-lookup"><span data-stu-id="322ee-113">The following example shows the implementation of a base class that is used by Get-Proc and Stop-Proc cmdlet that derive from the same base class.</span></span>
+<span data-ttu-id="d400d-113">O exemplo seguinte mostra a implementação de uma classe base que é utilizada pelo Get-Proc e o cmdlet Stop-Proc que derivam da mesma classe base.</span><span class="sxs-lookup"><span data-stu-id="d400d-113">The following example shows the implementation of a base class that is used by Get-Proc and Stop-Proc cmdlet that derive from the same base class.</span></span>
 
 ```csharp
 using System;
@@ -43,7 +43,7 @@ using System.Management.Automation;             //Windows PowerShell namespace.
 namespace Microsoft.Samples.PowerShell.Commands
 {
 
-  #region ProccessCommands
+  #region ProcessCommands
 
   /// <summary>
   /// This class implements a Stop-Proc cmdlet. The parameters
@@ -123,7 +123,7 @@ namespace Microsoft.Samples.PowerShell.Commands
     // </summary>
     protected override void ProcessRecord()
     {
-      // Set up the wildcard chracters used in resolving
+      // Set up the wildcard characters used in resolving
       // the process names.
       WildcardOptions options = WildcardOptions.IgnoreCase |
                                 WildcardOptions.Compiled;
@@ -170,6 +170,6 @@ namespace Microsoft.Samples.PowerShell.Commands
 }
 ```
 
-## <a name="see-also"></a><span data-ttu-id="322ee-114">Veja Também</span><span class="sxs-lookup"><span data-stu-id="322ee-114">See Also</span></span>
+## <a name="see-also"></a><span data-ttu-id="d400d-114">Veja Também</span><span class="sxs-lookup"><span data-stu-id="d400d-114">See Also</span></span>
 
-[<span data-ttu-id="322ee-115">Escrever um Cmdlet do Windows PowerShell</span><span class="sxs-lookup"><span data-stu-id="322ee-115">Writing a Windows PowerShell Cmdlet</span></span>](./writing-a-windows-powershell-cmdlet.md)
+[<span data-ttu-id="d400d-115">Escrever um Cmdlet do Windows PowerShell</span><span class="sxs-lookup"><span data-stu-id="d400d-115">Writing a Windows PowerShell Cmdlet</span></span>](./writing-a-windows-powershell-cmdlet.md)

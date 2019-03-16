@@ -8,44 +8,44 @@ ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 9c90d268-730b-4e73-9dfd-5f288c27aed0
 caps.latest.revision: 8
-ms.openlocfilehash: 09ec385827f8f6b4d1289a8caa4c1edf64f6ba43
-ms.sourcegitcommit: b6871f21bd666f9cd71dd336bb3f844cf472b56c
+ms.openlocfilehash: 74d7c9e9cb0d7ce829635e6aff994473e09e7479
+ms.sourcegitcommit: caac7d098a448232304c9d6728e7340ec7517a71
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 02/03/2019
-ms.locfileid: "56844759"
+ms.lasthandoff: 03/16/2019
+ms.locfileid: "58057224"
 ---
-# <a name="runspace11-sample"></a><span data-ttu-id="0f50a-102">Runspace11 Sample (Exemplo Runspace11)</span><span class="sxs-lookup"><span data-stu-id="0f50a-102">Runspace11 Sample</span></span>
+# <a name="runspace11-sample"></a><span data-ttu-id="2d1c1-102">Runspace11 Sample (Exemplo Runspace11)</span><span class="sxs-lookup"><span data-stu-id="2d1c1-102">Runspace11 Sample</span></span>
 
-<span data-ttu-id="0f50a-103">Este exemplo mostra como utilizar o [System.Management.Automation.Proxycommand](/dotnet/api/System.Management.Automation.ProxyCommand) classe para criar um comando de proxy que chama um cmdlet existente, mas restringe o conjunto de parâmetros.</span><span class="sxs-lookup"><span data-stu-id="0f50a-103">This sample shows how to use the [System.Management.Automation.Proxycommand](/dotnet/api/System.Management.Automation.ProxyCommand) class to create a proxy command that calls an existing cmdlet, but restricts the set of available parameters.</span></span> <span data-ttu-id="0f50a-104">O comando de proxy, em seguida, é adicionado a um Estado de sessão inicial que é utilizado para criar um espaço de execução restrito.</span><span class="sxs-lookup"><span data-stu-id="0f50a-104">The proxy command is then added to an initial session state that is used to create a constrained runspace.</span></span> <span data-ttu-id="0f50a-105">Isso significa que o usuário pode acessar a funcionalidade do cmdlet apenas através do comando de proxy.</span><span class="sxs-lookup"><span data-stu-id="0f50a-105">This means that the user can access the functionality of the cmdlet only through the proxy command.</span></span>
+<span data-ttu-id="2d1c1-103">Este exemplo mostra como utilizar o [System.Management.Automation.Proxycommand](/dotnet/api/System.Management.Automation.ProxyCommand) classe para criar um comando de proxy que chama um cmdlet existente, mas restringe o conjunto de parâmetros.</span><span class="sxs-lookup"><span data-stu-id="2d1c1-103">This sample shows how to use the [System.Management.Automation.Proxycommand](/dotnet/api/System.Management.Automation.ProxyCommand) class to create a proxy command that calls an existing cmdlet, but restricts the set of available parameters.</span></span> <span data-ttu-id="2d1c1-104">O comando de proxy, em seguida, é adicionado a um Estado de sessão inicial que é utilizado para criar um espaço de execução restrito.</span><span class="sxs-lookup"><span data-stu-id="2d1c1-104">The proxy command is then added to an initial session state that is used to create a constrained runspace.</span></span> <span data-ttu-id="2d1c1-105">Isso significa que o usuário pode acessar a funcionalidade do cmdlet apenas através do comando de proxy.</span><span class="sxs-lookup"><span data-stu-id="2d1c1-105">This means that the user can access the functionality of the cmdlet only through the proxy command.</span></span>
 
-## <a name="requirements"></a><span data-ttu-id="0f50a-106">Requisitos</span><span class="sxs-lookup"><span data-stu-id="0f50a-106">Requirements</span></span>
+## <a name="requirements"></a><span data-ttu-id="2d1c1-106">Requisitos</span><span class="sxs-lookup"><span data-stu-id="2d1c1-106">Requirements</span></span>
 
-<span data-ttu-id="0f50a-107">Este exemplo requer o Windows PowerShell 2.0.</span><span class="sxs-lookup"><span data-stu-id="0f50a-107">This sample requires Windows PowerShell 2.0.</span></span>
+<span data-ttu-id="2d1c1-107">Este exemplo requer o Windows PowerShell 2.0.</span><span class="sxs-lookup"><span data-stu-id="2d1c1-107">This sample requires Windows PowerShell 2.0.</span></span>
 
-## <a name="demonstrates"></a><span data-ttu-id="0f50a-108">Demonstra</span><span class="sxs-lookup"><span data-stu-id="0f50a-108">Demonstrates</span></span>
+## <a name="demonstrates"></a><span data-ttu-id="2d1c1-108">Demonstra</span><span class="sxs-lookup"><span data-stu-id="2d1c1-108">Demonstrates</span></span>
 
-<span data-ttu-id="0f50a-109">Este exemplo demonstra o seguinte.</span><span class="sxs-lookup"><span data-stu-id="0f50a-109">This sample demonstrates the following.</span></span>
+<span data-ttu-id="2d1c1-109">Este exemplo demonstra o seguinte.</span><span class="sxs-lookup"><span data-stu-id="2d1c1-109">This sample demonstrates the following.</span></span>
 
-- <span data-ttu-id="0f50a-110">Criar uma [System.Management.Automation.Commandmetadata](/dotnet/api/System.Management.Automation.CommandMetadata) objeto que descreve os metadados de um cmdlet existente.</span><span class="sxs-lookup"><span data-stu-id="0f50a-110">Creating a [System.Management.Automation.Commandmetadata](/dotnet/api/System.Management.Automation.CommandMetadata) object that describes the metadata of an existing cmdlet.</span></span>
+- <span data-ttu-id="2d1c1-110">Criar uma [System.Management.Automation.Commandmetadata](/dotnet/api/System.Management.Automation.CommandMetadata) objeto que descreve os metadados de um cmdlet existente.</span><span class="sxs-lookup"><span data-stu-id="2d1c1-110">Creating a [System.Management.Automation.Commandmetadata](/dotnet/api/System.Management.Automation.CommandMetadata) object that describes the metadata of an existing cmdlet.</span></span>
 
-- <span data-ttu-id="0f50a-111">Criar uma [System.Management.Automation.Runspaces.Initialsessionstate](/dotnet/api/System.Management.Automation.Runspaces.InitialSessionState) objeto.</span><span class="sxs-lookup"><span data-stu-id="0f50a-111">Creating an [System.Management.Automation.Runspaces.Initialsessionstate](/dotnet/api/System.Management.Automation.Runspaces.InitialSessionState) object.</span></span>
+- <span data-ttu-id="2d1c1-111">Criar uma [System.Management.Automation.Runspaces.Initialsessionstate](/dotnet/api/System.Management.Automation.Runspaces.InitialSessionState) objeto.</span><span class="sxs-lookup"><span data-stu-id="2d1c1-111">Creating an [System.Management.Automation.Runspaces.Initialsessionstate](/dotnet/api/System.Management.Automation.Runspaces.InitialSessionState) object.</span></span>
 
-- <span data-ttu-id="0f50a-112">Modifica os metadados de cmdlet para remover um parâmetro do cmdlet.</span><span class="sxs-lookup"><span data-stu-id="0f50a-112">Modifying the cmdlet metadata to remove a parameter of the cmdlet.</span></span>
+- <span data-ttu-id="2d1c1-112">Modifica os metadados de cmdlet para remover um parâmetro do cmdlet.</span><span class="sxs-lookup"><span data-stu-id="2d1c1-112">Modifying the cmdlet metadata to remove a parameter of the cmdlet.</span></span>
 
-- <span data-ttu-id="0f50a-113">Adicionar o cmdlet para o [System.Management.Automation.Runspaces.Initialsessionstate](/dotnet/api/System.Management.Automation.Runspaces.InitialSessionState) objeto e fazer com que o cmdlet privada.</span><span class="sxs-lookup"><span data-stu-id="0f50a-113">Adding the cmdlet to the [System.Management.Automation.Runspaces.Initialsessionstate](/dotnet/api/System.Management.Automation.Runspaces.InitialSessionState) object and making the cmdlet private.</span></span>
+- <span data-ttu-id="2d1c1-113">Adicionar o cmdlet para o [System.Management.Automation.Runspaces.Initialsessionstate](/dotnet/api/System.Management.Automation.Runspaces.InitialSessionState) objeto e fazer com que o cmdlet privada.</span><span class="sxs-lookup"><span data-stu-id="2d1c1-113">Adding the cmdlet to the [System.Management.Automation.Runspaces.Initialsessionstate](/dotnet/api/System.Management.Automation.Runspaces.InitialSessionState) object and making the cmdlet private.</span></span>
 
-- <span data-ttu-id="0f50a-114">Criar uma função de proxy que chama o cmdlet existente, mas expõe um conjunto restrito de parâmetros.</span><span class="sxs-lookup"><span data-stu-id="0f50a-114">Creating a proxy function that calls the existing cmdlet, but exposes only a restricted set of parameters.</span></span>
+- <span data-ttu-id="2d1c1-114">Criar uma função de proxy que chama o cmdlet existente, mas expõe um conjunto restrito de parâmetros.</span><span class="sxs-lookup"><span data-stu-id="2d1c1-114">Creating a proxy function that calls the existing cmdlet, but exposes only a restricted set of parameters.</span></span>
 
-- <span data-ttu-id="0f50a-115">A adicionar a função de proxy para o estado de sessão inicial.</span><span class="sxs-lookup"><span data-stu-id="0f50a-115">Adding the proxy function to the initial session state.</span></span>
+- <span data-ttu-id="2d1c1-115">A adicionar a função de proxy para o estado de sessão inicial.</span><span class="sxs-lookup"><span data-stu-id="2d1c1-115">Adding the proxy function to the initial session state.</span></span>
 
-- <span data-ttu-id="0f50a-116">Criar uma [System.Management.Automation.Powershell](/dotnet/api/system.management.automation.powershell) objeto que usa o [System.Management.Automation.Runspaces.Runspace](/dotnet/api/System.Management.Automation.Runspaces.Runspace) objeto.</span><span class="sxs-lookup"><span data-stu-id="0f50a-116">Creating a [System.Management.Automation.Powershell](/dotnet/api/system.management.automation.powershell) object that uses the [System.Management.Automation.Runspaces.Runspace](/dotnet/api/System.Management.Automation.Runspaces.Runspace) object.</span></span>
+- <span data-ttu-id="2d1c1-116">Criar uma [System.Management.Automation.Powershell](/dotnet/api/system.management.automation.powershell) objeto que usa o [System.Management.Automation.Runspaces.Runspace](/dotnet/api/System.Management.Automation.Runspaces.Runspace) objeto.</span><span class="sxs-lookup"><span data-stu-id="2d1c1-116">Creating a [System.Management.Automation.Powershell](/dotnet/api/system.management.automation.powershell) object that uses the [System.Management.Automation.Runspaces.Runspace](/dotnet/api/System.Management.Automation.Runspaces.Runspace) object.</span></span>
 
-- <span data-ttu-id="0f50a-117">Chamar o cmdlet privado e a função de proxy usando um [System.Management.Automation.Powershell](/dotnet/api/system.management.automation.powershell) objeto para demonstrar o espaço de execução restrito.</span><span class="sxs-lookup"><span data-stu-id="0f50a-117">Calling the private cmdlet and the proxy function using a [System.Management.Automation.Powershell](/dotnet/api/system.management.automation.powershell) object to demonstrate the constrained runspace.</span></span>
+- <span data-ttu-id="2d1c1-117">Chamar o cmdlet privado e a função de proxy usando um [System.Management.Automation.Powershell](/dotnet/api/system.management.automation.powershell) objeto para demonstrar o espaço de execução restrito.</span><span class="sxs-lookup"><span data-stu-id="2d1c1-117">Calling the private cmdlet and the proxy function using a [System.Management.Automation.Powershell](/dotnet/api/system.management.automation.powershell) object to demonstrate the constrained runspace.</span></span>
 
-## <a name="example"></a><span data-ttu-id="0f50a-118">Exemplo</span><span class="sxs-lookup"><span data-stu-id="0f50a-118">Example</span></span>
+## <a name="example"></a><span data-ttu-id="2d1c1-118">Exemplo</span><span class="sxs-lookup"><span data-stu-id="2d1c1-118">Example</span></span>
 
-<span data-ttu-id="0f50a-119">Esta ação cria um comando de proxy para um cmdlet privado demonstrar um espaço de execução restrito.</span><span class="sxs-lookup"><span data-stu-id="0f50a-119">This creates a proxy command for a private cmdlet to demonstrate a constrained runspace.</span></span>
+<span data-ttu-id="2d1c1-119">Esta ação cria um comando de proxy para um cmdlet privado demonstrar um espaço de execução restrito.</span><span class="sxs-lookup"><span data-stu-id="2d1c1-119">This creates a proxy command for a private cmdlet to demonstrate a constrained runspace.</span></span>
 
 ```csharp
 namespace Microsoft.Samples.PowerShell.Runspaces
@@ -146,7 +146,7 @@ namespace Microsoft.Samples.PowerShell.Runspaces
     /// </remarks>
     private static void Main()
     {
-      // Create a default initial session state. The default inital session state
+      // Create a default initial session state. The default initial session state
       // includes all the elements that are provided by Windows PowerShell.
       InitialSessionState iss = InitialSessionState.CreateDefault();
 
@@ -157,7 +157,7 @@ namespace Microsoft.Samples.PowerShell.Runspaces
       // Make the cmdlet private so that it is not accessible.
       cmdletEntry.Visibility = SessionStateEntryVisibility.Private;
 
-      // Set the language mode of the initial session state to NoLanguge to
+      // Set the language mode of the initial session state to NoLanguage to
       //prevent users from using language features. Only the invocation of
       // public commands is allowed.
       iss.LanguageMode = PSLanguageMode.NoLanguage;
@@ -244,6 +244,6 @@ namespace Microsoft.Samples.PowerShell.Runspaces
 }
 ```
 
-## <a name="see-also"></a><span data-ttu-id="0f50a-120">Veja Também</span><span class="sxs-lookup"><span data-stu-id="0f50a-120">See Also</span></span>
+## <a name="see-also"></a><span data-ttu-id="2d1c1-120">Veja Também</span><span class="sxs-lookup"><span data-stu-id="2d1c1-120">See Also</span></span>
 
-[<span data-ttu-id="0f50a-121">Escrever um aplicativo de Host de PowerShell do Windows</span><span class="sxs-lookup"><span data-stu-id="0f50a-121">Writing a Windows PowerShell Host Application</span></span>](./writing-a-windows-powershell-host-application.md)
+[<span data-ttu-id="2d1c1-121">Escrever um aplicativo de Host de PowerShell do Windows</span><span class="sxs-lookup"><span data-stu-id="2d1c1-121">Writing a Windows PowerShell Host Application</span></span>](./writing-a-windows-powershell-host-application.md)

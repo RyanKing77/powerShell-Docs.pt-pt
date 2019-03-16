@@ -8,20 +8,20 @@ ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 49ff3062-6396-4aa8-919b-3fd3ac60899a
 caps.latest.revision: 19
-ms.openlocfilehash: 15f47c97ac5d55cb76e153af86672b3ffaf176c9
-ms.sourcegitcommit: b6871f21bd666f9cd71dd336bb3f844cf472b56c
+ms.openlocfilehash: d3ad7fa563def17d43ce4dc64d155b65b650521f
+ms.sourcegitcommit: caac7d098a448232304c9d6728e7340ec7517a71
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 02/03/2019
-ms.locfileid: "56848630"
+ms.lasthandoff: 03/16/2019
+ms.locfileid: "58057880"
 ---
-# <a name="tablecolumnheader-element-format"></a><span data-ttu-id="3b43a-102">TableColumnHeader Element (Format) (Elemento TableColumnHeader [Formatação])</span><span class="sxs-lookup"><span data-stu-id="3b43a-102">TableColumnHeader Element (Format)</span></span>
+# <a name="tablecolumnheader-element-format"></a><span data-ttu-id="a7821-102">TableColumnHeader Element (Format) (Elemento TableColumnHeader [Formatação])</span><span class="sxs-lookup"><span data-stu-id="a7821-102">TableColumnHeader Element (Format)</span></span>
 
-<span data-ttu-id="3b43a-103">Define a etiqueta, a largura da coluna e o alinhamento da etiqueta para uma coluna da tabela.</span><span class="sxs-lookup"><span data-stu-id="3b43a-103">Defines the label, the width of the column, and the alignment of the label for a column of the table.</span></span>
+<span data-ttu-id="a7821-103">Define a etiqueta, a largura da coluna e o alinhamento da etiqueta para uma coluna da tabela.</span><span class="sxs-lookup"><span data-stu-id="a7821-103">Defines the label, the width of the column, and the alignment of the label for a column of the table.</span></span>
 
-<span data-ttu-id="3b43a-104">O elemento (formato) ViewDefinitions elemento (formato) vista elemento (formato) TableControl elemento (formato) TableHeaders elemento de configuração para o elemento de TableColumnHeader TableControl (formato) para TableHeaders para TableControl (formato)</span><span class="sxs-lookup"><span data-stu-id="3b43a-104">Configuration Element (Format) ViewDefinitions Element (Format) View Element (Format) TableControl Element (Format) TableHeaders Element for TableControl (Format) TableColumnHeader Element for TableHeaders for TableControl (Format)</span></span>
+<span data-ttu-id="a7821-104">O elemento (formato) ViewDefinitions elemento (formato) vista elemento (formato) TableControl elemento (formato) TableHeaders elemento de configuração para o elemento de TableColumnHeader TableControl (formato) para TableHeaders para TableControl (formato)</span><span class="sxs-lookup"><span data-stu-id="a7821-104">Configuration Element (Format) ViewDefinitions Element (Format) View Element (Format) TableControl Element (Format) TableHeaders Element for TableControl (Format) TableColumnHeader Element for TableHeaders for TableControl (Format)</span></span>
 
-## <a name="syntax"></a><span data-ttu-id="3b43a-105">Sintaxe</span><span class="sxs-lookup"><span data-stu-id="3b43a-105">Syntax</span></span>
+## <a name="syntax"></a><span data-ttu-id="a7821-105">Sintaxe</span><span class="sxs-lookup"><span data-stu-id="a7821-105">Syntax</span></span>
 
 ```xml
 <TableColumnHeader>
@@ -31,39 +31,39 @@ ms.locfileid: "56848630"
 </TableColumnHeader>
 ```
 
-## <a name="attributes-and-elements"></a><span data-ttu-id="3b43a-106">Atributos e Elementos</span><span class="sxs-lookup"><span data-stu-id="3b43a-106">Attributes and Elements</span></span>
+## <a name="attributes-and-elements"></a><span data-ttu-id="a7821-106">Atributos e Elementos</span><span class="sxs-lookup"><span data-stu-id="a7821-106">Attributes and Elements</span></span>
 
-<span data-ttu-id="3b43a-107">As secções seguintes descrevem os atributos e elementos filho e o elemento principal do `TableColumnHeader` elemento.</span><span class="sxs-lookup"><span data-stu-id="3b43a-107">The following sections describe attributes, child elements, and the parent element of the `TableColumnHeader` element.</span></span>
+<span data-ttu-id="a7821-107">As secções seguintes descrevem os atributos e elementos filho e o elemento principal do `TableColumnHeader` elemento.</span><span class="sxs-lookup"><span data-stu-id="a7821-107">The following sections describe attributes, child elements, and the parent element of the `TableColumnHeader` element.</span></span>
 
-### <a name="attributes"></a><span data-ttu-id="3b43a-108">Atributos</span><span class="sxs-lookup"><span data-stu-id="3b43a-108">Attributes</span></span>
+### <a name="attributes"></a><span data-ttu-id="a7821-108">Atributos</span><span class="sxs-lookup"><span data-stu-id="a7821-108">Attributes</span></span>
 
-<span data-ttu-id="3b43a-109">Nenhum.</span><span class="sxs-lookup"><span data-stu-id="3b43a-109">None.</span></span>
+<span data-ttu-id="a7821-109">Nenhum.</span><span class="sxs-lookup"><span data-stu-id="a7821-109">None.</span></span>
 
-### <a name="child-elements"></a><span data-ttu-id="3b43a-110">Elementos Subordinados</span><span class="sxs-lookup"><span data-stu-id="3b43a-110">Child Elements</span></span>
+### <a name="child-elements"></a><span data-ttu-id="a7821-110">Elementos Subordinados</span><span class="sxs-lookup"><span data-stu-id="a7821-110">Child Elements</span></span>
 
-|<span data-ttu-id="3b43a-111">Elemento</span><span class="sxs-lookup"><span data-stu-id="3b43a-111">Element</span></span>|<span data-ttu-id="3b43a-112">Descrição</span><span class="sxs-lookup"><span data-stu-id="3b43a-112">Description</span></span>|
+|<span data-ttu-id="a7821-111">Elemento</span><span class="sxs-lookup"><span data-stu-id="a7821-111">Element</span></span>|<span data-ttu-id="a7821-112">Descrição</span><span class="sxs-lookup"><span data-stu-id="a7821-112">Description</span></span>|
 |-------------|-----------------|
-|[<span data-ttu-id="3b43a-113">Elemento da etiqueta para TableColumnHeader para TableControl (formato)</span><span class="sxs-lookup"><span data-stu-id="3b43a-113">Label Element For TableColumnHeader for TableControl (Format)</span></span>](./label-element-for-tablecolumnheader-for-tablecontrol-format.md)|<span data-ttu-id="3b43a-114">Elemento opcional.</span><span class="sxs-lookup"><span data-stu-id="3b43a-114">Optional element.</span></span><br /><br /> <span data-ttu-id="3b43a-115">Define a etiqueta que é apresentada na parte superior da coluna.</span><span class="sxs-lookup"><span data-stu-id="3b43a-115">Defines the label that is displayed at the top of the column.</span></span> <span data-ttu-id="3b43a-116">Se nenhuma etiqueta for especificada, é utilizado o nome da propriedade cujo valor é apresentado nas linhas.</span><span class="sxs-lookup"><span data-stu-id="3b43a-116">If no label is specified, the name of the property whose value is displayed in the rows is used.</span></span>|
-|[<span data-ttu-id="3b43a-117">Elemento de largura para TableColumnHeader para TableControl (formato)</span><span class="sxs-lookup"><span data-stu-id="3b43a-117">Width Element for TableColumnHeader for TableControl (Format)</span></span>](./width-element-for-tablecolumnheader-for-tablecontrol-format.md)|<span data-ttu-id="3b43a-118">Elemento necessário.</span><span class="sxs-lookup"><span data-stu-id="3b43a-118">Required element.</span></span><br /><br /> <span data-ttu-id="3b43a-119">Especifica a largura (em carateres) da coluna.</span><span class="sxs-lookup"><span data-stu-id="3b43a-119">Specifies the width (in characters) of the column.</span></span>|
-|[<span data-ttu-id="3b43a-120">Elemento de alinhamento para TableColumbnHeader para TableControl (formato)</span><span class="sxs-lookup"><span data-stu-id="3b43a-120">Alignment Element for TableColumbnHeader for TableControl (Format)</span></span>](./alignment-element-for-tablecolumnheader-for-tablecontrol-format.md)|<span data-ttu-id="3b43a-121">Elemento opcional.</span><span class="sxs-lookup"><span data-stu-id="3b43a-121">Optional element.</span></span><br /><br /> <span data-ttu-id="3b43a-122">Especifica como a etiqueta da coluna é exibida.</span><span class="sxs-lookup"><span data-stu-id="3b43a-122">Specifies how the label of the column is displayed.</span></span> <span data-ttu-id="3b43a-123">Se não for especificado nenhum alinhamento, a etiqueta é alinhada à esquerda.</span><span class="sxs-lookup"><span data-stu-id="3b43a-123">If no alignment is specified, the label is aligned on the left.</span></span>|
+|[<span data-ttu-id="a7821-113">Elemento da etiqueta para TableColumnHeader para TableControl (formato)</span><span class="sxs-lookup"><span data-stu-id="a7821-113">Label Element For TableColumnHeader for TableControl (Format)</span></span>](./label-element-for-tablecolumnheader-for-tablecontrol-format.md)|<span data-ttu-id="a7821-114">Elemento opcional.</span><span class="sxs-lookup"><span data-stu-id="a7821-114">Optional element.</span></span><br /><br /> <span data-ttu-id="a7821-115">Define a etiqueta que é apresentada na parte superior da coluna.</span><span class="sxs-lookup"><span data-stu-id="a7821-115">Defines the label that is displayed at the top of the column.</span></span> <span data-ttu-id="a7821-116">Se nenhuma etiqueta for especificada, é utilizado o nome da propriedade cujo valor é apresentado nas linhas.</span><span class="sxs-lookup"><span data-stu-id="a7821-116">If no label is specified, the name of the property whose value is displayed in the rows is used.</span></span>|
+|[<span data-ttu-id="a7821-117">Elemento de largura para TableColumnHeader para TableControl (formato)</span><span class="sxs-lookup"><span data-stu-id="a7821-117">Width Element for TableColumnHeader for TableControl (Format)</span></span>](./width-element-for-tablecolumnheader-for-tablecontrol-format.md)|<span data-ttu-id="a7821-118">Elemento necessário.</span><span class="sxs-lookup"><span data-stu-id="a7821-118">Required element.</span></span><br /><br /> <span data-ttu-id="a7821-119">Especifica a largura (em carateres) da coluna.</span><span class="sxs-lookup"><span data-stu-id="a7821-119">Specifies the width (in characters) of the column.</span></span>|
+|[<span data-ttu-id="a7821-120">Elemento de alinhamento para TableColumnHeader para TableControl (formato)</span><span class="sxs-lookup"><span data-stu-id="a7821-120">Alignment Element for TableColumnHeader for TableControl (Format)</span></span>](./alignment-element-for-tablecolumnheader-for-tablecontrol-format.md)|<span data-ttu-id="a7821-121">Elemento opcional.</span><span class="sxs-lookup"><span data-stu-id="a7821-121">Optional element.</span></span><br /><br /> <span data-ttu-id="a7821-122">Especifica como a etiqueta da coluna é exibida.</span><span class="sxs-lookup"><span data-stu-id="a7821-122">Specifies how the label of the column is displayed.</span></span> <span data-ttu-id="a7821-123">Se não for especificado nenhum alinhamento, a etiqueta é alinhada à esquerda.</span><span class="sxs-lookup"><span data-stu-id="a7821-123">If no alignment is specified, the label is aligned on the left.</span></span>|
 
-### <a name="parent-elements"></a><span data-ttu-id="3b43a-124">Elementos Principais</span><span class="sxs-lookup"><span data-stu-id="3b43a-124">Parent Elements</span></span>
+### <a name="parent-elements"></a><span data-ttu-id="a7821-124">Elementos Principais</span><span class="sxs-lookup"><span data-stu-id="a7821-124">Parent Elements</span></span>
 
-|<span data-ttu-id="3b43a-125">Elemento</span><span class="sxs-lookup"><span data-stu-id="3b43a-125">Element</span></span>|<span data-ttu-id="3b43a-126">Descrição</span><span class="sxs-lookup"><span data-stu-id="3b43a-126">Description</span></span>|
+|<span data-ttu-id="a7821-125">Elemento</span><span class="sxs-lookup"><span data-stu-id="a7821-125">Element</span></span>|<span data-ttu-id="a7821-126">Descrição</span><span class="sxs-lookup"><span data-stu-id="a7821-126">Description</span></span>|
 |-------------|-----------------|
-|[<span data-ttu-id="3b43a-127">Elemento de TableHeaders (formato)</span><span class="sxs-lookup"><span data-stu-id="3b43a-127">TableHeaders Element (Format)</span></span>](./tableheaders-element-format.md)|<span data-ttu-id="3b43a-128">Define as colunas de uma vista de tabela.</span><span class="sxs-lookup"><span data-stu-id="3b43a-128">Defines the columns of a table view.</span></span>|
+|[<span data-ttu-id="a7821-127">Elemento de TableHeaders (formato)</span><span class="sxs-lookup"><span data-stu-id="a7821-127">TableHeaders Element (Format)</span></span>](./tableheaders-element-format.md)|<span data-ttu-id="a7821-128">Define as colunas de uma vista de tabela.</span><span class="sxs-lookup"><span data-stu-id="a7821-128">Defines the columns of a table view.</span></span>|
 
-## <a name="remarks"></a><span data-ttu-id="3b43a-129">Observações</span><span class="sxs-lookup"><span data-stu-id="3b43a-129">Remarks</span></span>
+## <a name="remarks"></a><span data-ttu-id="a7821-129">Observações</span><span class="sxs-lookup"><span data-stu-id="a7821-129">Remarks</span></span>
 
-<span data-ttu-id="3b43a-130">Especifique um cabeçalho de cada coluna da tabela.</span><span class="sxs-lookup"><span data-stu-id="3b43a-130">Specify a header for each column of the table.</span></span> <span data-ttu-id="3b43a-131">As colunas são apresentadas na ordem em que o `TableColumnHeader` elementos são definidos.</span><span class="sxs-lookup"><span data-stu-id="3b43a-131">The columns are displayed in the order in which the `TableColumnHeader` elements are defined.</span></span>
+<span data-ttu-id="a7821-130">Especifique um cabeçalho de cada coluna da tabela.</span><span class="sxs-lookup"><span data-stu-id="a7821-130">Specify a header for each column of the table.</span></span> <span data-ttu-id="a7821-131">As colunas são apresentadas na ordem em que o `TableColumnHeader` elementos são definidos.</span><span class="sxs-lookup"><span data-stu-id="a7821-131">The columns are displayed in the order in which the `TableColumnHeader` elements are defined.</span></span>
 
-<span data-ttu-id="3b43a-132">Uma tabela tem de ter o mesmo número de `TableColumnHeader` elementos como `TableRowEntry` elementos.</span><span class="sxs-lookup"><span data-stu-id="3b43a-132">A table must have the same number of `TableColumnHeader` elements as `TableRowEntry` elements.</span></span> <span data-ttu-id="3b43a-133">No cabeçalho da coluna define como o texto na parte superior da tabela é exibido.</span><span class="sxs-lookup"><span data-stu-id="3b43a-133">The column header defines how the text at the top of the table is displayed.</span></span> <span data-ttu-id="3b43a-134">As entradas de linha definem que dados são apresentados nas linhas da tabela.</span><span class="sxs-lookup"><span data-stu-id="3b43a-134">The row entries define what data is displayed in the rows of the table.</span></span>
+<span data-ttu-id="a7821-132">Uma tabela tem de ter o mesmo número de `TableColumnHeader` elementos como `TableRowEntry` elementos.</span><span class="sxs-lookup"><span data-stu-id="a7821-132">A table must have the same number of `TableColumnHeader` elements as `TableRowEntry` elements.</span></span> <span data-ttu-id="a7821-133">No cabeçalho da coluna define como o texto na parte superior da tabela é exibido.</span><span class="sxs-lookup"><span data-stu-id="a7821-133">The column header defines how the text at the top of the table is displayed.</span></span> <span data-ttu-id="a7821-134">As entradas de linha definem que dados são apresentados nas linhas da tabela.</span><span class="sxs-lookup"><span data-stu-id="a7821-134">The row entries define what data is displayed in the rows of the table.</span></span>
 
-<span data-ttu-id="3b43a-135">Para obter mais informações sobre os componentes de uma vista de tabela, consulte [vista de tabela](./creating-a-table-view.md).</span><span class="sxs-lookup"><span data-stu-id="3b43a-135">For more information about the components of a table view, see [Table View](./creating-a-table-view.md).</span></span>
+<span data-ttu-id="a7821-135">Para obter mais informações sobre os componentes de uma vista de tabela, consulte [vista de tabela](./creating-a-table-view.md).</span><span class="sxs-lookup"><span data-stu-id="a7821-135">For more information about the components of a table view, see [Table View](./creating-a-table-view.md).</span></span>
 
-## <a name="example"></a><span data-ttu-id="3b43a-136">Exemplo</span><span class="sxs-lookup"><span data-stu-id="3b43a-136">Example</span></span>
+## <a name="example"></a><span data-ttu-id="a7821-136">Exemplo</span><span class="sxs-lookup"><span data-stu-id="a7821-136">Example</span></span>
 
-<span data-ttu-id="3b43a-137">O exemplo seguinte mostra dois `TableColumnHeader` elementos.</span><span class="sxs-lookup"><span data-stu-id="3b43a-137">The following example shows two `TableColumnHeader` elements.</span></span> <span data-ttu-id="3b43a-138">O primeiro elemento define uma coluna cuja etiqueta é "Coluna 1", tem uma largura de 16 carateres e cuja etiqueta está alinhada à esquerda.</span><span class="sxs-lookup"><span data-stu-id="3b43a-138">The first element defines a column whose label is "Column 1", has a width of 16 characters, and whose label is aligned on the left.</span></span> <span data-ttu-id="3b43a-139">O segundo elemento define uma coluna cuja etiqueta é "Coluna 2", tem uma largura de 10 caracteres, e cuja etiqueta centra-se na coluna.</span><span class="sxs-lookup"><span data-stu-id="3b43a-139">The second element defines a column whose label is "Column 2", has a width of 10 characters, and whose label is centered in the column.</span></span>
+<span data-ttu-id="a7821-137">O exemplo seguinte mostra dois `TableColumnHeader` elementos.</span><span class="sxs-lookup"><span data-stu-id="a7821-137">The following example shows two `TableColumnHeader` elements.</span></span> <span data-ttu-id="a7821-138">O primeiro elemento define uma coluna cuja etiqueta é "Coluna 1", tem uma largura de 16 carateres e cuja etiqueta está alinhada à esquerda.</span><span class="sxs-lookup"><span data-stu-id="a7821-138">The first element defines a column whose label is "Column 1", has a width of 16 characters, and whose label is aligned on the left.</span></span> <span data-ttu-id="a7821-139">O segundo elemento define uma coluna cuja etiqueta é "Coluna 2", tem uma largura de 10 caracteres, e cuja etiqueta centra-se na coluna.</span><span class="sxs-lookup"><span data-stu-id="a7821-139">The second element defines a column whose label is "Column 2", has a width of 10 characters, and whose label is centered in the column.</span></span>
 
 ```xml
 <TableHeaders>
@@ -80,16 +80,16 @@ ms.locfileid: "56848630"
 </TableHeaders>
 ```
 
-## <a name="see-also"></a><span data-ttu-id="3b43a-140">Consulte Também</span><span class="sxs-lookup"><span data-stu-id="3b43a-140">See Also</span></span>
+## <a name="see-also"></a><span data-ttu-id="a7821-140">Veja Também</span><span class="sxs-lookup"><span data-stu-id="a7821-140">See Also</span></span>
 
-[<span data-ttu-id="3b43a-141">Elemento de alinhamento para TableColumnHeader para TableContrl (formato)</span><span class="sxs-lookup"><span data-stu-id="3b43a-141">Alignment Element for TableColumnHeader for TableContrl (Format)</span></span>](./alignment-element-for-tablecolumnheader-for-tablecontrol-format.md)
+[<span data-ttu-id="a7821-141">Elemento de alinhamento para TableColumnHeader para TableControl (formato)</span><span class="sxs-lookup"><span data-stu-id="a7821-141">Alignment Element for TableColumnHeader for TableControl (Format)</span></span>](./alignment-element-for-tablecolumnheader-for-tablecontrol-format.md)
 
-[<span data-ttu-id="3b43a-142">Criar uma vista de tabela</span><span class="sxs-lookup"><span data-stu-id="3b43a-142">Creating a Table View</span></span>](./creating-a-table-view.md)
+[<span data-ttu-id="a7821-142">Criar uma vista de tabela</span><span class="sxs-lookup"><span data-stu-id="a7821-142">Creating a Table View</span></span>](./creating-a-table-view.md)
 
-[<span data-ttu-id="3b43a-143">Elemento da etiqueta para TableColumnHeader para TableControl (formato)</span><span class="sxs-lookup"><span data-stu-id="3b43a-143">Label Element for TableColumnHeader for TableControl (Format)</span></span>](./label-element-for-tablecolumnheader-for-tablecontrol-format.md)
+[<span data-ttu-id="a7821-143">Elemento da etiqueta para TableColumnHeader para TableControl (formato)</span><span class="sxs-lookup"><span data-stu-id="a7821-143">Label Element for TableColumnHeader for TableControl (Format)</span></span>](./label-element-for-tablecolumnheader-for-tablecontrol-format.md)
 
-[<span data-ttu-id="3b43a-144">Elemento de TableHeaders para TableControl (formato)</span><span class="sxs-lookup"><span data-stu-id="3b43a-144">TableHeaders Element for TableControl (Format)</span></span>](./tableheaders-element-format.md)
+[<span data-ttu-id="a7821-144">Elemento de TableHeaders para TableControl (formato)</span><span class="sxs-lookup"><span data-stu-id="a7821-144">TableHeaders Element for TableControl (Format)</span></span>](./tableheaders-element-format.md)
 
-[<span data-ttu-id="3b43a-145">Largura para TableColumnHeader TableControl elemento (formato)</span><span class="sxs-lookup"><span data-stu-id="3b43a-145">Width for TableColumnHeader for TableControl Element (Format)</span></span>](./width-element-for-tablecolumnheader-for-tablecontrol-format.md)
+[<span data-ttu-id="a7821-145">Largura para TableColumnHeader TableControl elemento (formato)</span><span class="sxs-lookup"><span data-stu-id="a7821-145">Width for TableColumnHeader for TableControl Element (Format)</span></span>](./width-element-for-tablecolumnheader-for-tablecontrol-format.md)
 
-[<span data-ttu-id="3b43a-146">Escrever um ficheiro de formatação de PowerShell</span><span class="sxs-lookup"><span data-stu-id="3b43a-146">Writing a PowerShell Formatting File</span></span>](./writing-a-powershell-formatting-file.md)
+[<span data-ttu-id="a7821-146">Escrever um ficheiro de formatação de PowerShell</span><span class="sxs-lookup"><span data-stu-id="a7821-146">Writing a PowerShell Formatting File</span></span>](./writing-a-powershell-formatting-file.md)
