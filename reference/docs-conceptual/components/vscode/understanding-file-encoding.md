@@ -2,12 +2,12 @@
 title: Compreender a codificação de ficheiros no VSCode e no PowerShell
 description: Configurar a codificação do ficheiro no VSCode e no PowerShell
 ms.date: 02/28/2019
-ms.openlocfilehash: 73e766832d56a08bd5ef16df11899a0aab0badae
-ms.sourcegitcommit: 5990f04b8042ef2d8e571bec6d5b051e64c9921c
+ms.openlocfilehash: ec06d8f5d446a92e6cd9d2d70b11260d1d0afda8
+ms.sourcegitcommit: 396509cd0d415acc306b68758b6f833406e26bf5
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 03/12/2019
-ms.locfileid: "57795127"
+ms.lasthandoff: 03/21/2019
+ms.locfileid: "58320409"
 ---
 # <a name="understanding-file-encoding-in-vscode-and-powershell"></a>Compreender a codificação de ficheiros no VSCode e no PowerShell
 
@@ -138,7 +138,7 @@ Se não pretender que estas definições afetam todos os tipos de ficheiros, VSC
 Do PowerShell codificação padrão varia dependendo da versão:
 
 - No PowerShell 6 +, a codificação predefinida é UTF-8, sem BOM em todas as plataformas.
-- No Windows PowerShell, a codificação predefinida é normalmente Windows-1252, uma extensão da [latin 1][], também conhecido como ISO 8859-1.
+- No Windows PowerShell, a codificação predefinida é normalmente Windows-1252, uma extensão da [latin-1][], também conhecido como ISO 8859-1.
 
 No PowerShell 5 + pode encontrar a codificação padrão com isto:
 
@@ -215,7 +215,7 @@ Tenha em atenção que isto não sejam persistentes entre as start-UPS.
 ### <a name="source-control-software"></a>Software de controlo de origem
 
 Algumas ferramentas de controle de origem, como o git, ignorar codificações; o Git monitoriza apenas os bytes.
-Outros, como o TFS ou Mercurial, podem não ter. Até mesmo algumas ferramentas baseada no git contam com a descodificação de texto.
+Outros, como o Azure DevOps ou Mercurial, podem não ter. Até mesmo algumas ferramentas baseada no git contam com a descodificação de texto.
 
 Quando for este o caso, certifique-se de que:
 
@@ -269,7 +269,7 @@ Existem algumas outras boas postagens sobre codificação e configurar a codific
 [@mklement0]: https://github.com/mklement0
 [@rkeithhill]: https://github.com/rkeithhill
 [Windows-1252]: https://wikipedia.org/wiki/Windows-1252
-[latin 1]: https://wikipedia.org/wiki/ISO/IEC_8859-1
+[latin-1]: https://wikipedia.org/wiki/ISO/IEC_8859-1
 [UTF-8]: https://wikipedia.org/wiki/UTF-8
 [marca de ordem de byte]: https://wikipedia.org/wiki/Byte_order_mark
 [UTF-16]: https://wikipedia.org/wiki/UTF-16
