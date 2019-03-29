@@ -3,12 +3,12 @@ ms.date: 08/24/2018
 keywords: PowerShell, o cmdlet
 title: Nomes de comandos do PowerShell de aprendizagem
 ms.assetid: b4d0fd22-8298-4ee6-82ae-9b6f2907c986
-ms.openlocfilehash: 3f8ef2648709c4bb5d2eacf30fe9d8fb4f032c13
-ms.sourcegitcommit: 9df29dfc637191b62ca591893c251c1e02d4eb4c
+ms.openlocfilehash: 8d50ca03f98ed4ca8f9c09c83ae57afbf0d7888d
+ms.sourcegitcommit: f268dce5b5e72be669be0c6634b8db11369bbae2
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 01/04/2019
-ms.locfileid: "54012471"
+ms.lasthandoff: 03/29/2019
+ms.locfileid: "58623726"
 ---
 # <a name="learning-powershell-command-names"></a>Nomes de comandos do PowerShell de aprendizagem
 
@@ -25,7 +25,7 @@ Além disso, estes comandos têm especificações de parâmetro irregular. Não 
 A lista de tarefas em execução no DC01, utilize o **/S** parâmetro e o nome de computador sem as barras invertidas. Por exemplo, `tasklist /S DC01`.
 
 > [!NOTE]
-> Antes de PowerShell v6, `sc` era um alias para o `Set-Content` cmdlet. Para executar o **sc.exe** de comando, tem de incluir a extensão de ficheiro.
+> Antes de PowerShell v6, `sc` era um alias para o `Set-Content` cmdlet. Por conseguinte, para executar o **sc.exe** comando numa versão do PowerShell antes v6, tem de incluir o nome de ficheiro completo **sc.exe** incluindo a extensão de ficheiro **exe**.
 
 Serviços e processos são exemplos de elementos gerenciáveis num computador que tenham ciclos de vida bem definidos. Pode iniciar ou parar serviços e processos ou obter uma lista de todos os atualmente em execução os serviços ou processos. Embora existam diferenças técnicas importantes entre eles, as ações que efetuar em serviços e processos conceitualmente são os mesmos. Além disso, as opções que podemos fazer para personalizar uma ação, especificando os parâmetros podem ser um conceito semelhantes também.
 

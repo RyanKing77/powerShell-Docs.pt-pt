@@ -2,12 +2,12 @@
 ms.date: 03/04/2019
 keywords: DSC, powershell, configuração, a configuração
 title: Serviço de Solicitação de DSC
-ms.openlocfilehash: 00e01e6c71226e6bde48b221e4e4fcf5f346feb4
-ms.sourcegitcommit: caac7d098a448232304c9d6728e7340ec7517a71
+ms.openlocfilehash: 3cb2ca09111100f39589072a0d8e7010f9188efb
+ms.sourcegitcommit: f268dce5b5e72be669be0c6634b8db11369bbae2
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 03/16/2019
-ms.locfileid: "58056775"
+ms.lasthandoff: 03/29/2019
+ms.locfileid: "58623947"
 ---
 # <a name="desired-state-configuration-pull-service"></a>Serviço de solicitação do Desired State Configuration
 
@@ -47,7 +47,7 @@ As funcionalidades do serviço online que não estão atualmente disponíveis no
 
 ## <a name="dsc-pull-service-in-windows-server"></a>Serviço de solicitação de DSC no Windows Server
 
-É possível configurar um serviço de pull para ser executado no Windows Server.
+É possível configurar um serviço pull para ser executado no Windows Server.
 Ser avisado que a solução de serviço pull incluída no Windows Server inclui capacidades únicas de armazenar configurações/modules para download e a captura de dados de relatório no banco de dados.
 Não inclui muitas das funcionalidades oferecidas pelo serviço no Azure e, portanto, não é uma boa ferramenta para avaliar como o serviço deve ser utilizado.
 

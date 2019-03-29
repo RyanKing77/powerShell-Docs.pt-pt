@@ -3,12 +3,12 @@ ms.date: 08/23/2018
 keywords: PowerShell, o cmdlet
 title: Compreender os pipelines do PowerShell
 ms.assetid: 6be50926-7943-4ef7-9499-4490d72a63fb
-ms.openlocfilehash: fc7c7f57bdce458185a0f5bdb8bc1fbbd81d0d61
-ms.sourcegitcommit: 00ff76d7d9414fe585c04740b739b9cf14d711e1
+ms.openlocfilehash: 05ab98b7261f4d41ade1788a924193eccda6318c
+ms.sourcegitcommit: f268dce5b5e72be669be0c6634b8db11369bbae2
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 12/14/2018
-ms.locfileid: "53404737"
+ms.lasthandoff: 03/29/2019
+ms.locfileid: "58623964"
 ---
 # <a name="understanding-pipelines"></a>Noções básicas sobre pipelines
 
@@ -63,6 +63,18 @@ Paginação também reduz a utilização de CPU porque o processamento é transf
 
 Pode ver a diferença de Gestor de tarefas do Windows para monitorizar a CPU e memória usada pelo PowerShell. Execute o seguinte comando: `Get-ChildItem C:\Windows -Recurse`. Comparar a utilização de CPU e memória para este comando: `Get-ChildItem C:\Windows -Recurse | Out-Host -Paging`.
 
+> [!NOTE]
+> O **paginação** parâmetro não é suportado por todos os anfitriões do PowerShell. Por exemplo, quando tenta utilizar o **paginação** parâmetro no ISE do PowerShell, verá o seguinte erro:
+>
+> ```Output
+> out-lineoutput : The method or operation is not implemented.
+> At line:1 char:1
+> + Get-ChildItem C:\Windows -Recurse | Out-Host -Paging
+> + ~~~~~~~~~~~~~~~~~~~~~~~~~~~
+>     + CategoryInfo          : NotSpecified: (:) [out-lineoutput], NotImplementedException
+>     + FullyQualifiedErrorId : System.NotImplementedException,Microsoft.PowerShell.Commands.OutLineOutputCommand
+> ```
+
 ## <a name="objects-in-the-pipeline"></a>Objetos no pipeline
 
 Quando executa um cmdlet no PowerShell, verá a saída de texto porque é necessário representar objetos como texto numa janela de consola. A saída de texto não pode exibir todas as propriedades do objeto a ser o resultado.
@@ -82,7 +94,7 @@ A saída de texto é um resumo das informações, não uma representação compl
 Quando canalizar a saída para o `Get-Member` cmdlet obtém informações sobre o objeto devolvido pelo `Get-Location`.
 
 ```powershell
-PS> Get-Location | Get-Member
+Get-Location | Get-Member
 ```
 
 ```Output

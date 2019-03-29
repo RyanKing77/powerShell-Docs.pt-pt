@@ -1,47 +1,30 @@
 ---
-ms.date: 06/12/2017
+ms.date: 03/28/2019
 contributor: manikb
 keywords: cmdlet do powershell do galeria, psget
 title: Módulos com edições do PowerShell compatíveis
-ms.openlocfilehash: bda924393d37ea1596fbf0d813c10cbdea33c218
-ms.sourcegitcommit: 548547b2d5fc73e726bb9fec6175d452a351d975
+ms.openlocfilehash: 425588c168a4f864fdc0c52aa53cfd748b80dc98
+ms.sourcegitcommit: f268dce5b5e72be669be0c6634b8db11369bbae2
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 12/20/2018
-ms.locfileid: "53655332"
+ms.lasthandoff: 03/29/2019
+ms.locfileid: "58623845"
 ---
 # <a name="modules-with-compatible-powershell-editions"></a>Módulos com edições do PowerShell compatíveis
 
 Começando na versão 5.1, o PowerShell está disponível nas diferentes edições que denotam conjuntos de funcionalidade e compatibilidade de plataforma variados.
 
-- **Edição Desktop:** Criado no .NET Framework e fornece compatibilidade com scripts e módulos de filtragem de versões do PowerShell a executar edições de requisitos de espaço total do Windows como núcleo de servidor e Desktop do Windows.
-- **Edição Core:** Incorporada no .NET Core e fornece compatibilidade com scripts e módulos de filtragem de versões do PowerShell a executar edições de requisitos de espaço reduzido do Windows, como o servidor Nano e o Windows IoT.
+- **Edição Desktop:** Criado no .NET Framework, aplica-se para o Windows PowerShell v4.0 e abaixo, bem como o Windows PowerShell 5.1 no ambiente de trabalho do Windows, Windows Server, Windows Server Core e a maioria das outras edições do Windows.
+- **Edição Core:** Incorporada no .NET Core, aplica-se para o PowerShell Core 6.0 e superior, bem como o Windows PowerShell 5.1 nos requisitos de espaço reduzido das edições do Windows, tais como Windows IoT e Windows Nanoserver.
 
-A edição em execução do PowerShell é mostrada na propriedade PSEdition da `$PSVersionTable`.
-
-```powershell
-$PSVersionTable
-```
-
-```output
-Name                           Value
-----                           -----
-PSVersion                      5.1.14300.1000
-PSEdition                      Desktop
-PSCompatibleVersions           {1.0, 2.0, 3.0, 4.0...}
-CLRVersion                     4.0.30319.42000
-BuildVersion                   10.0.14300.1000
-WSManStackVersion              3.0
-PSRemotingProtocolVersion      2.3
-SerializationVersion           1.1.0.1
-```
+Para obter mais informações sobre edições do PowerShell, consulte [about_PowerShell_Editions][].
 
 ## <a name="declaring-compatible-editions"></a>Declarando edições compatíveis
 
 Os autores de módulo podem declarar os módulos para torná-los compatíveis com uma ou mais edições do PowerShell com a chave de manifesto de módulo CompatiblePSEditions. Esta chave apenas é suportada no PowerShell 5.1 ou posterior.
 
 > [!NOTE]
-> Depois de um manifesto de módulo é especificado com a chave de CompatiblePSEditions, não pode ser importado em versões mais baixas do PowerShell.
+> Depois de um manifesto de módulo é especificado com a chave de CompatiblePSEditions, ele não pode ser importado no PowerShell versões 4 e abaixo.
 
 ```powershell
 New-ModuleManifest -Path .\TestModuleWithEdition.psd1 -CompatiblePSEditions Desktop,Core -PowerShellVersion 5.1
@@ -49,7 +32,7 @@ $ModuleInfo = Test-ModuleManifest -Path .\TestModuleWithEdition.psd1
 $ModuleInfo.CompatiblePSEditions
 ```
 
-```output
+```Output
 Desktop
 Core
 ```
@@ -58,7 +41,7 @@ Core
 $ModuleInfo | Get-Member CompatiblePSEditions
 ```
 
-```output
+```Output
    TypeName: System.Management.Automation.PSModuleInfo
 
 Name                 MemberType Definition
@@ -72,7 +55,7 @@ Ao obter uma lista de módulos disponíveis, pode filtrar a lista por edição d
 Get-Module -ListAvailable -PSEdition Desktop
 ```
 
-```output
+```Output
     Directory: C:\Program Files\WindowsPowerShell\Modules
 
 
@@ -85,7 +68,7 @@ Manifest   1.0        ModuleWithPSEditions
 Get-Module -ListAvailable -PSEdition Core | % CompatiblePSEditions
 ```
 
-```output
+```Output
 Desktop
 Core
 ```
@@ -218,7 +201,7 @@ Ficheiro de manifesto de módulo de exemplo com a chave de CompatiblePSEditions
 dir -Recurse
 ```
 
-```output
+```Output
     Directory: C:\Users\manikb\Documents\WindowsPowerShell\Modules\ModuleWithEditions
 
 Mode           LastWriteTime   Length Name
@@ -263,3 +246,7 @@ Find-Module -Tag PSEdition_Core
 [Suporte de edições do PowerShell no PowerShellGallery](../how-to/finding-packages/searching-by-compatibility.md)
 
 [Atualizar o manifesto do módulo](/powershell/module/powershellget/update-modulemanifest)
+
+[about_PowerShell_Editions][]
+
+[about_PowerShell_Editions]: /powershell/module/Microsoft.PowerShell.Core/About/about_PowerShell_Editions

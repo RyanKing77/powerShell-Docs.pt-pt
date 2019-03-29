@@ -3,12 +3,12 @@ ms.date: 06/12/2017
 contributor: JKeithB
 keywords: Galeria, o powershell, o cmdlet, o psgallery
 title: Fornecer Feedback através de redes sociais ou dos comentários
-ms.openlocfilehash: a27a2fc7cf54835cb53b11382c20d1354345a5a3
-ms.sourcegitcommit: caac7d098a448232304c9d6728e7340ec7517a71
+ms.openlocfilehash: 95e5db22b94151c3974189c30f1d4e580b47eeb5
+ms.sourcegitcommit: f268dce5b5e72be669be0c6634b8db11369bbae2
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 03/16/2019
-ms.locfileid: "58055007"
+ms.lasthandoff: 03/29/2019
+ms.locfileid: "58623896"
 ---
 # <a name="providing-feedback-via-social-media-or-comments"></a>Fornecer Feedback através de redes sociais ou dos comentários
 
@@ -29,6 +29,10 @@ A galeria do PowerShell irá verificar a cada site de redes sociais para "partil
 Uma vez que isso apresenta apenas o número de vezes que algo foi partilhado, será interpretado outros utilizadores como "liking" o pacote.
 
 ## <a name="comments"></a>Comentários
+
+> [!IMPORTANT]
+> Comentários do Livefyre é fornecido por um fornecedor de terceiros e já não é suportada.
+> Comentários do Livefyre já não estará disponível sobre como iniciar a galeria do PowerShell 05/01/2019. 
 
 A galeria do PowerShell utiliza o serviço de LiveFyre para permitir que os utilizadores comentar pacotes.
 Os utilizadores que tem as recomendações ou comentários podem utilizar esta funcionalidade para fornecer comentários que sejam visíveis para qualquer pessoa que visitar a página de pacote.

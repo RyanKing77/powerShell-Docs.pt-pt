@@ -12,12 +12,12 @@ helpviewer_keywords:
 - Windows PowerShell Programmer's Guide, providers
 ms.assetid: 863e48e9-7206-4c6a-a59a-2ab2d30396bc
 caps.latest.revision: 5
-ms.openlocfilehash: 286df63e75d6372cb41c974e60e79b02bd13686e
-ms.sourcegitcommit: 69abc5ad16e5dd29ddfb1853e266a4bfd1d59d59
+ms.openlocfilehash: 06910f32752668f13400f9be0767a2179133df04
+ms.sourcegitcommit: f268dce5b5e72be669be0c6634b8db11369bbae2
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57429674"
+ms.lasthandoff: 03/29/2019
+ms.locfileid: "58623828"
 ---
 # <a name="how-to-create-a-windows-powershell-provider"></a>How to Create a Windows PowerShell Provider (Como Criar um Fornecedor do Windows PowerShell)
 
@@ -29,7 +29,7 @@ Para o desenvolvedor, o fornecedor de Windows PowerShell é a interface entre o 
 
 Windows PowerShell fornece vários fornecedores (por exemplo, o fornecedor do sistema de ficheiros, o fornecedor de registo e o fornecedor de Alias) que são utilizados para aceder aos arquivos de dados conhecidos. Para obter mais informações sobre os fornecedores fornecidos pelo Windows PowerShell, utilize o seguinte comando para aceder à ajuda online:
 
-**PS>get-help about_provider**
+**PS > get-help about_providers**
 
 ## <a name="accessing-the-stored-data-using-windows-powershell-paths"></a>Acessar os dados armazenados através de caminhos do Windows PowerShell
 
