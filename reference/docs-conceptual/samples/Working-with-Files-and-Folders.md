@@ -3,18 +3,18 @@ ms.date: 06/05/2017
 keywords: PowerShell, o cmdlet
 title: Trabalhar com Ficheiros e Pastas
 ms.assetid: c0ceb96b-e708-45f3-803b-d1f61a48f4c1
-ms.openlocfilehash: a8d57a1c269d95e692db6c3f1ae10df49e305e4e
-ms.sourcegitcommit: 00ff76d7d9414fe585c04740b739b9cf14d711e1
+ms.openlocfilehash: 393e886a4945222198d9b81019250c5d5b905ad3
+ms.sourcegitcommit: 806cf87488b80800b9f50a8af286e8379519a034
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 12/14/2018
-ms.locfileid: "53404797"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59293225"
 ---
 # <a name="working-with-files-and-folders"></a>Trabalhar com Ficheiros e Pastas
 
 Navegar através de unidades do Windows PowerShell e manipular os itens nos mesmos são semelhante à manipulação de ficheiros e pastas em unidades de disco físicas do Windows. Esta secção descreve como lidar com determinadas tarefas de manipulação de ficheiros e pastas com o PowerShell.
 
-### <a name="listing-all-the-files-and-folders-within-a-folder"></a>A listagem de todos os arquivos e pastas numa pasta
+## <a name="listing-all-the-files-and-folders-within-a-folder"></a>A listagem de todos os arquivos e pastas numa pasta
 
 Pode obter todos os itens diretamente dentro de uma pasta usando **Get-ChildItem**. Adicionar o opcional **força** parâmetro para apresentar ocultada ou itens de sistema. Por exemplo, este comando apresenta o conteúdo direto do Windows PowerShell unidade C (que é o mesmo que a unidade física de Windows C):
 
@@ -36,7 +36,7 @@ O seguinte comando localiza todos os executáveis dentro da pasta de arquivos de
 Get-ChildItem -Path $env:ProgramFiles -Recurse -Include *.exe | Where-Object -FilterScript {($_.LastWriteTime -gt '2005-10-01') -and ($_.Length -ge 1mb) -and ($_.Length -le 10mb)}
 ```
 
-### <a name="copying-files-and-folders"></a>Copiar ficheiros e pastas
+## <a name="copying-files-and-folders"></a>Copiar ficheiros e pastas
 
 A copiar é feita com **Copy-Item**. O seguinte comando faz o backup c:\\Boot. ini para c:\\boot.bak:
 
@@ -70,7 +70,7 @@ Ainda pode usar outras ferramentas para efetuar cópias de sistema de ficheiros.
 (New-Object -ComObject Scripting.FileSystemObject).CopyFile('C:\boot.ini', 'C:\boot.bak')
 ```
 
-### <a name="creating-files-and-folders"></a>Criar ficheiros e pastas
+## <a name="creating-files-and-folders"></a>Criar ficheiros e pastas
 
 Criação de novos itens funciona da mesma em todos os fornecedores de Windows PowerShell. Se um fornecedor de Windows PowerShell tem mais de um tipo de item — por exemplo, o fornecedor do sistema de ficheiros Windows PowerShell distingue entre diretórios e arquivos — tem de especificar o tipo de item.
 
@@ -86,7 +86,7 @@ Este comando cria um novo ficheiro vazio c:\\temp\\nova pasta\\file.txt
 New-Item -Path 'C:\temp\New Folder\file.txt' -ItemType File
 ```
 
-### <a name="removing-all-files-and-folders-within-a-folder"></a>Remover todos os ficheiros e pastas numa pasta
+## <a name="removing-all-files-and-folders-within-a-folder"></a>Remover todos os ficheiros e pastas numa pasta
 
 Pode remover itens contidos usando **Remove-Item**, mas será solicitado a confirmar a remoção, se o item contiver qualquer outra coisa. Por exemplo, se tentar eliminar a pasta c:\\temp\\DeleteMe que contém outros itens, Windows PowerShell pede-lhe confirmação antes de eliminar a pasta:
 
@@ -107,7 +107,7 @@ Se não pretender que seja pedido para cada item contido, especifique a **Recurs
 Remove-Item -Path C:\temp\DeleteMe -Recurse
 ```
 
-### <a name="mapping-a-local-folder-as-a-windows-accessible-drive"></a>Mapeamento de uma pasta Local como uma unidade de acessíveis do Windows
+## <a name="mapping-a-local-folder-as-a-windows-accessible-drive"></a>Mapeamento de uma pasta Local como uma unidade de acessíveis do Windows
 
 Também pode mapear uma pasta local, utilizando o **subst** comando. O comando seguinte cria uma unidade local que p: enraizada no diretório arquivos de programas local:
 
@@ -117,7 +117,7 @@ subst p: $env:programfiles
 
 Assim como com unidades de rede, as unidades mapeadas dentro do Windows PowerShell usando **subst** são imediatamente visíveis ao shell do Windows PowerShell.
 
-### <a name="reading-a-text-file-into-an-array"></a>Leitura de um arquivo de texto numa matriz
+## <a name="reading-a-text-file-into-an-array"></a>Leitura de um arquivo de texto numa matriz
 
 Um dos formatos de armazenamento mais comuns para dados de texto é num arquivo com linhas separadas, tratadas como elementos de dados distintos. O **Get-Content** cmdlet pode ser utilizado para ler um ficheiro completo num único passo, conforme mostrado aqui:
 

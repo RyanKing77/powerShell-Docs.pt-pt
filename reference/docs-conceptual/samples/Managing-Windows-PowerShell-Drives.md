@@ -3,12 +3,12 @@ ms.date: 06/05/2017
 keywords: PowerShell, o cmdlet
 title: Gerir Unidades do Windows PowerShell
 ms.assetid: bd809e38-8de9-437a-a250-f30a667d11b4
-ms.openlocfilehash: cfc5418e9d2efb1a786817e1b941d75e22291742
-ms.sourcegitcommit: b6871f21bd666f9cd71dd336bb3f844cf472b56c
+ms.openlocfilehash: 9ac5136fb28b450ea6397cab2f36082c50f22e1f
+ms.sourcegitcommit: 806cf87488b80800b9f50a8af286e8379519a034
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 02/03/2019
-ms.locfileid: "55685187"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59293253"
 ---
 # <a name="managing-windows-powershell-drives"></a>Gerir Unidades do Windows PowerShell
 
@@ -82,7 +82,7 @@ Path
 HKLM:\SOFTWARE\Microsoft
 ```
 
-### <a name="adding-new-windows-powershell-drives-new-psdrive"></a>Adicionar nova do Windows PowerShell unidades (novo PSDrive)
+## <a name="adding-new-windows-powershell-drives-new-psdrive"></a>Adicionar nova do Windows PowerShell unidades (novo PSDrive)
 
 Pode adicionar suas próprias unidades do Windows PowerShell utilizando o **New-PSDrive** comando. Para obter a sintaxe para o **New-PSDrive** comando, introduza o **Get-Command** comando com o **sintaxe** parâmetro:
 
@@ -146,7 +146,7 @@ cvkey:\
 
 O novo cmdlet PsDrive adiciona o novo disco apenas à sessão atual do Windows PowerShell. Se fechar a janela do Windows PowerShell, a nova unidade é perdida. Para guardar uma unidade do Windows PowerShell, utilize o cmdlet Export-Console para exportar a sessão atual do Windows PowerShell e, em seguida, utilize o PowerShell.exe **PSConsoleFile** parâmetro importá-lo. Em alternativa, adicione a nova unidade ao seu perfil do Windows PowerShell.
 
-### <a name="deleting-windows-powershell-drives-remove-psdrive"></a>A eliminar o Windows PowerShell unidades (remover-PSDrive)
+## <a name="deleting-windows-powershell-drives-remove-psdrive"></a>A eliminar o Windows PowerShell unidades (remover-PSDrive)
 
 Pode eliminar unidades do Windows PowerShell utilizando o **Remove-PSDrive** cmdlet. O **Remove-PSDrive** cmdlet é fácil de usar; para eliminar uma unidade específica do Windows PowerShell, apenas que fornecer o nome de unidade do Windows PowerShell.
 
@@ -172,6 +172,6 @@ At line:1 char:15
 + remove-psdrive  <<<< -name office
 ```
 
-### <a name="adding-and-removing-drives-outside-windows-powershell"></a>Adicionar e remover unidades fora do Windows PowerShell
+## <a name="adding-and-removing-drives-outside-windows-powershell"></a>Adicionar e remover unidades fora do Windows PowerShell
 
 Windows PowerShell Deteta as unidades de sistema de ficheiros que são adicionadas ou removidas do Windows, incluindo unidades de rede mapeadas, unidades USB que estão ligadas e unidades de que são eliminadas utilizando o **net use** comando ou o  **WScript.NetworkMapNetworkDrive** e **RemoveNetworkDrive** métodos de um script do Windows Script Host (WSH).

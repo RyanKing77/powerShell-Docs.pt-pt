@@ -3,12 +3,12 @@ ms.date: 06/05/2017
 keywords: PowerShell, o cmdlet
 title: Trabalhar com Instalações de Software
 ms.assetid: 51a12fe9-95f6-4ffc-81a5-4fa72a5bada9
-ms.openlocfilehash: bb97ad37c4295351c0fc2e3c6e1209c8dd673f06
-ms.sourcegitcommit: 00ff76d7d9414fe585c04740b739b9cf14d711e1
+ms.openlocfilehash: 9369e3c5ac670895cd4fbd3ebc895c50efd02051
+ms.sourcegitcommit: 806cf87488b80800b9f50a8af286e8379519a034
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 12/14/2018
-ms.locfileid: "53405575"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59293236"
 ---
 # <a name="working-with-software-installations"></a>Trabalhar com Instalações de Software
 
@@ -17,7 +17,7 @@ Aplicativos que são projetados para usar o Windows Installer podem ser acedidos
 > [!NOTE]
 > Aplicativos que são instalados por copiar os ficheiros de aplicação para o computador normalmente não podem ser geridos utilizando técnicas discutidas aqui. Pode gerir estas aplicações, como ficheiros e pastas utilizando as técnicas discutidas na seção "A trabalhar com ficheiros e pastas".
 
-### <a name="listing-windows-installer-applications"></a>A listagem de aplicações do Windows Installer
+## <a name="listing-windows-installer-applications"></a>A listagem de aplicações do Windows Installer
 
 Para listar os aplicativos instalados com o instalador do Windows num sistema local ou remoto, utilize a seguinte consulta WMI simple:
 
@@ -85,11 +85,11 @@ Get-WmiObject -Class Win32_Product -ComputerName .  | Format-Wide -Column 1
 
 Apesar de agora, temos várias formas de considerar aplicações a utilizar o instalador do Windows para instalação, não levamos em outros aplicativos. Uma vez que aplicativos mais padrão registrar seus desinstalador com Windows, podemos trabalhar com esses localmente localizando-los no registo do Windows.
 
-### <a name="listing-all-uninstallable-applications"></a>A listagem de todos os aplicativos desinstalados
+## <a name="listing-all-uninstallable-applications"></a>A listagem de todos os aplicativos desinstalados
 
 Embora não existe nenhuma forma garantida para localizar todos os aplicativos num sistema, é possível localizar todos os programas com listagens apresentadas na caixa de diálogo Adicionar ou remover programas. Adicionar ou remover programas encontra esses aplicativos na seguinte chave do Registro:
 
-**HKEY_LOCAL_MACHINE\\Software\\Microsoft\\Windows\\CurrentVersion\\desinstalar**.
+**HKEY_LOCAL_MACHINE\\Software\\Microsoft\\Windows\\CurrentVersion\\Uninstall**.
 
 Também podemos examinar esta chave para encontrar aplicações. Para facilitar ver a chave de desinstalação, podemos mapear uma unidade do Windows PowerShell para esta localização de registo:
 
@@ -142,7 +142,7 @@ SKC  VC Name                           Property
   0  24 {E38C00D0-A68B-4318-A8A6-F7... {AuthorizedCDFPrefix, Comments, Conta...
 ```
 
-### <a name="installing-applications"></a>Instalação de aplicativos
+## <a name="installing-applications"></a>Instalação de aplicativos
 
 Pode utilizar o **Win32_Product** classe para instalar pacotes de instalador do Windows, localmente ou remotamente.
 
@@ -157,7 +157,7 @@ Ao instalar remotamente, utilize um caminho de rede de convenção de Nomenclatu
 
 Aplicativos que não utilizam a tecnologia Windows Installer podem ter métodos específicos de aplicações disponíveis para implementação automatizada. Para determinar se existe um método para a automatização de implementação, consulte a documentação para o aplicativo ou consulte o sistema de suporte do fornecedor do aplicativo. Em alguns casos, mesmo que o fornecedor do aplicativo não ter um design do aplicativo para a automatização da instalação, o fabricante de software do instalador pode ter algumas técnicas de automação.
 
-### <a name="removing-applications"></a>Remoção de aplicativos
+## <a name="removing-applications"></a>Remoção de aplicativos
 
 Remover um pacote do Windows Installer com o Windows PowerShell funciona em aproximadamente da mesma forma que a instalação de um pacote. Eis um exemplo que seleciona o pacote para desinstalar com base no respetivo nome; em alguns casos poderá ser mais fácil de filtrar com o **IdentifyingNumber**:
 
@@ -179,7 +179,7 @@ Get-ChildItem -Path Uninstall: | Where-Object -FilterScript { $_.GetValue('Displ
 
 No entanto, essas cadeias de caracteres não podem ser diretamente utilizáveis no prompt do Windows PowerShell sem algumas modificações.
 
-### <a name="upgrading-windows-installer-applications"></a>Atualizando aplicativos do Windows Installer
+## <a name="upgrading-windows-installer-applications"></a>Atualizando aplicativos do Windows Installer
 
 Para atualizar uma aplicação, terá de saber o nome da aplicação e o caminho para o pacote de atualização de aplicação. Com essas informações, pode atualizar uma aplicação com um único comando do Windows PowerShell:
 

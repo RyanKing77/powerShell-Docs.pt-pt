@@ -3,18 +3,18 @@ ms.date: 06/05/2017
 keywords: PowerShell, o cmdlet
 title: Trabalhar com Pastas de Ficheiros e Chaves do Registo
 ms.assetid: e6cf87aa-b5f8-48d5-a75a-7cb7ecb482dc
-ms.openlocfilehash: a09b127d4ba37d33cb4c0f0ce0819e645fd4b137
-ms.sourcegitcommit: b6871f21bd666f9cd71dd336bb3f844cf472b56c
+ms.openlocfilehash: cd20cc50b573435ba80b52b51e164e60625dc1b6
+ms.sourcegitcommit: 806cf87488b80800b9f50a8af286e8379519a034
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 02/03/2019
-ms.locfileid: "55685733"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59293100"
 ---
 # <a name="working-with-files-folders-and-registry-keys"></a>Trabalhar com arquivos, pastas e chaves de registo
 
 Windows PowerShell utiliza o substantivo **Item** para fazer referência a itens encontrados numa unidade do Windows PowerShell. Ao lidar com o fornecedor do sistema de ficheiros do Windows PowerShell, uma **Item** pode ser um arquivo, uma pasta ou unidade do Windows PowerShell. Listagem e trabalhar com estes itens são uma tarefa de básica crítica na maioria das definições administrativas, para que o que queremos abordar essas tarefas em detalhes.
 
-### <a name="enumerating-files-folders-and-registry-keys-get-childitem"></a>A enumerar os arquivos, pastas e chaves do Registro (Get-ChildItem)
+## <a name="enumerating-files-folders-and-registry-keys-get-childitem"></a>A enumerar os arquivos, pastas e chaves do Registro (Get-ChildItem)
 
 Como obter uma coleção de itens a partir de uma localização específica é uma tarefa comum, o **Get-ChildItem** cmdlet foi desenvolvido especificamente para retornar todos os itens encontrados dentro de um contêiner como uma pasta.
 
@@ -42,7 +42,7 @@ Get-Command -Name Get-ChildItem -Syntax
 
 Esses parâmetros podem ser misturados e correspondentes para obter uma saída altamente personalizável.
 
-#### <a name="listing-all-contained-items--recurse"></a>Listar todos os itens contidos (-Recurse)
+### <a name="listing-all-contained-items--recurse"></a>Listar todos os itens contidos (-Recurse)
 
 Para ver os itens dentro de uma pasta do Windows e todos os itens que estão contidos dentro as subpastas, utilize o **Recurse** parâmetro do **Get-ChildItem**. A listagem apresenta tudo dentro da pasta do Windows e os itens em suas subpastas. Por exemplo:
 
@@ -57,7 +57,7 @@ Mode                LastWriteTime     Length Name
 ...
 ```
 
-#### <a name="filtering-items-by-name--name"></a>Filtrar itens por nome (-nome)
+### <a name="filtering-items-by-name--name"></a>Filtrar itens por nome (-nome)
 
 Para apresentar apenas os nomes de itens, utilize o **Name** parâmetro do **Get-Childitem**:
 
@@ -69,7 +69,7 @@ assembly
 ...
 ```
 
-#### <a name="forcibly-listing-hidden-items--force"></a>A forçar a listagem itens ocultos (-Force)
+### <a name="forcibly-listing-hidden-items--force"></a>A forçar a listagem itens ocultos (-Force)
 
 Itens que são normalmente invisíveis no Explorador de ficheiros ou Cmd.exe não são apresentados no resultado de uma **Get-ChildItem** comando. Para exibir itens ocultos, use o **força** parâmetro do **Get-ChildItem**. Por exemplo:
 
@@ -79,7 +79,7 @@ Get-ChildItem -Path C:\Windows -Force
 
 Este parâmetro com o nome força porque a forçar pode substituir o comportamento normal da **Get-ChildItem** comando. Force é um parâmetro amplamente usado que força uma ação que um cmdlet não seria normalmente executam, apesar de não executará nenhuma ação que compromete a segurança do sistema.
 
-#### <a name="matching-item-names-with-wildcards"></a>Correspondência de nomes de Item com carateres universais
+### <a name="matching-item-names-with-wildcards"></a>Correspondência de nomes de Item com carateres universais
 
 **O Get-ChildItem** comando aceita carateres universais no caminho dos itens de lista.
 
@@ -122,7 +122,7 @@ Para localizar todos os arquivos cujos nomes comecem com **x** ou **z**, tipo:
 Get-ChildItem -Path C:\Windows\[xz]*
 ```
 
-#### <a name="excluding-items--exclude"></a>Excluir itens (-excluir)
+### <a name="excluding-items--exclude"></a>Excluir itens (-excluir)
 
 Pode excluir itens específicos, utilizando o **excluir** parâmetro de Get-ChildItem. Isto permite-lhe efetuar complexos de filtragem numa única instrução.
 
@@ -147,7 +147,7 @@ Mode                LastWriteTime     Length Name
 -a---        2004-08-04   8:00 AM      18432 wtsapi32.dll
 ```
 
-#### <a name="mixing-get-childitem-parameters"></a>Misturar os parâmetros de Get-ChildItem
+### <a name="mixing-get-childitem-parameters"></a>Misturar os parâmetros de Get-ChildItem
 
 Pode utilizar vários dos parâmetros do **Get-ChildItem** cmdlet no mesmo comando. Antes de misturar parâmetros, certifique-se de que compreende a correspondência de carateres universais. Por exemplo, o comando seguinte devolve não existem resultados:
 

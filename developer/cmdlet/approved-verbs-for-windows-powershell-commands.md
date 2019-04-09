@@ -12,12 +12,12 @@ helpviewer_keywords:
 - cmdlets [PowerShell SDK], verb names
 ms.assetid: 2d4e58a9-05bc-437c-86b9-d8d55cba7d48
 caps.latest.revision: 36
-ms.openlocfilehash: d8a0561d6fbb4447a691c434e0518e3e16ce41e7
-ms.sourcegitcommit: 6ae5b50a4b3ffcd649de1525c3ce6f15d3669082
+ms.openlocfilehash: 4475b3f5e15826efbe8bab867011985cd7e2e1ae
+ms.sourcegitcommit: 806cf87488b80800b9f50a8af286e8379519a034
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 02/14/2019
-ms.locfileid: "56852179"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59293355"
 ---
 # <a name="approved-verbs-for-powershell-commands"></a>Verbos aprovados para comandos do PowerShell
 
@@ -94,7 +94,7 @@ A tabela seguinte lista a maioria dos verbos definidos.
 |[Saída](/dotnet/api/System.Management.Automation.VerbsCommon.Exit) (ex)|Define o ambiente atual ou o contexto para o contexto mais recentemente utilizado. Por exemplo, o `Exit-PSSession` cmdlet coloca o utilizador na sessão que foi utilizada para iniciar a sessão interativa. Esse verbo é emparelhado com `Enter`.|Para esta ação, não utilize verbos como Pop ou para fora.|
 |[Encontrar](/dotnet/api/System.Management.Automation.VerbsCommon.Find) (fd)|Procura um objeto num contentor que é desconhecido, implícita, opcional ou especificado.||
 |[Formato](/dotnet/api/System.Management.Automation.VerbsCommon.Format) (f)|Organiza os objetos num formulário especificado ou o layout.||
-|[Obter](/dotnet/api/System.Management.Automation.VerbsCommon.Get) (g)|Especifica uma ação que obtém um recurso. Esse verbo é emparelhado com `Set`.|Para esta ação, não utilize verbos como leitura, aberto, Cat, tipo, Dir, obter, despejo, aquisição, Examine, localizar ou pesquisa para esta ação.|
+|[Obter](/dotnet/api/System.Management.Automation.VerbsCommon.Get) (g)|Especifica uma ação que obtém um recurso. Esse verbo é emparelhado com `Set`.|Para esta ação, não utilize verbos como leitura, aberto, Cat, tipo, Dir, obter, despejo, aquisição, Examine, localizar ou pesquisa.|
 |[Ocultar](/dotnet/api/System.Management.Automation.VerbsCommon.Hide) (h)|Faz com que um recurso, indetetáveis. Por exemplo, um cmdlet cujo nome inclui o verbo de ocultar pode ocultar um serviço de um utilizador. Esse verbo é emparelhado com `Show`.|Para esta ação, não utilize um verbo, como o bloco.|
 |[Junte-se a](/dotnet/api/System.Management.Automation.VerbsCommon.Join) (j)|Combina recursos num recurso. Por exemplo, o `Join-Path` cmdlet combina um caminho com um dos seus caminhos de subordinados para criar um caminho único. Esse verbo é emparelhado com `Split`.|Para esta ação, não utilize verbos como combinação, Unite, ligar ou associar.|
 |[Bloqueio](/dotnet/api/System.Management.Automation.VerbsCommon.Lock) (lk)|Protege um recurso. Esse verbo é emparelhado com `Unlock`.|Para esta ação, não utilize verbos como restringir ou seguro.|
@@ -149,7 +149,7 @@ A tabela seguinte lista a maioria dos verbos definidos.
 |[ConvertFrom](/dotnet/api/System.Management.Automation.VerbsData.ConvertFrom) (cf)|Converte um tipo de principal de entrada (o substantivo do cmdlet indica a entrada) para um ou mais tipos de saída suportados.|Para esta ação, não utilize verbos como exportar, saída ou Out.|
 |[ConvertTo](/dotnet/api/System.Management.Automation.VerbsData.ConvertTo) (ct)|Converte de um ou mais tipos de entrada para um tipo de saída primária (o substantivo do cmdlet indica o tipo de saída).|Para esta ação, não utilize verbos como importar, de entrada, ou no.|
 |[Desmontar](/dotnet/api/System.Management.Automation.VerbsData.Dismount) (dm)|Desliga uma entidade nomeada de uma localização. Esse verbo é emparelhado com `Mount`.|Para esta ação, não utilize verbos como desmontar ou desassociar.|
-|[Editar](/dotnet/api/System.Management.Automation.VerbsData.Edit) (ed)|Modifica os dados existentes ao adicionar ou remover conteúdo.|Para esta ação, não utilize verbos como alteração, atualização ou modificar para esta ação.|
+|[Editar](/dotnet/api/System.Management.Automation.VerbsData.Edit) (ed)|Modifica os dados existentes ao adicionar ou remover conteúdo.|Para esta ação, não utilize verbos como alteração, atualização ou modificar.|
 |[Expanda](/dotnet/api/System.Management.Automation.VerbsData.Expand) (pt)|Restaura os dados de um recurso que compactado ao estado original. Esse verbo é emparelhado com `Compress`.|Para esta ação, não utilize verbos como Explode ou Uncompress.|
 |[Exportar](/dotnet/api/System.Management.Automation.VerbsData.Export) (ep)|Encapsula a entrada principal para um armazenamento de dados persistente, como um arquivo, ou para um formato de intercâmbio. Esse verbo é emparelhado com `Import`.|Para esta ação, não utilize verbos como cópia de segurança ou de extração.|
 |[Grupo](/dotnet/api/System.Management.Automation.VerbsData.Group) (gp)|Organiza ou associa um ou mais recursos.|Para esta ação, não utilize verbos como agregação, dispor, associar ou correlacionar.|
@@ -251,6 +251,6 @@ PowerShell utiliza a [System.Management.Automation.VerbsOther](/dotnet/api/Syste
 
 [Declaração de cmdlet](./cmdlet-class-declaration.md)
 
-[Guia do programador do Windows PowerShell](../prog-guide/windows-powershell-programmer-s-guide.md)
+[Windows PowerShell Programmer's Guide (Guia do Programador do Windows PowerShell)](../prog-guide/windows-powershell-programmer-s-guide.md)
 
 [Shell do Windows PowerShell SDK](../windows-powershell-reference.md)

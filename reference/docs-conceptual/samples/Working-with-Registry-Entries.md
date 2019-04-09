@@ -3,18 +3,18 @@ ms.date: 06/05/2017
 keywords: PowerShell, o cmdlet
 title: Trabalhar com Entradas do Registo
 ms.assetid: fd254570-27ac-4cc9-81d4-011afd29b7dc
-ms.openlocfilehash: 8483b6f98739697b24a13055dfffbc7b5bacc2cc
-ms.sourcegitcommit: b6871f21bd666f9cd71dd336bb3f844cf472b56c
+ms.openlocfilehash: 667d17d0d62745a27ffef5f1912336b72f74c2a9
+ms.sourcegitcommit: 806cf87488b80800b9f50a8af286e8379519a034
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 02/03/2019
-ms.locfileid: "55686811"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59293083"
 ---
 # <a name="working-with-registry-entries"></a>Trabalhar com Entradas do Registo
 
 Uma vez que as entradas do Registro são propriedades de chaves e, assim, a não é possível diretamente ser pesquisadas, é necessário usar uma abordagem ligeiramente diferente ao trabalhar com eles.
 
-### <a name="listing-registry-entries"></a>Entradas de registro de listagem
+## <a name="listing-registry-entries"></a>Entradas de registro de listagem
 
 Existem várias formas diferentes de examinar as entradas do Registro. A forma mais simples é obter os nomes de propriedade associados com uma chave. Por exemplo, para ver os nomes das entradas na chave do registo `HKEY_LOCAL_MACHINE\Software\Microsoft\Windows\CurrentVersion`, utilize `Get-Item`. Chaves de registo de ter uma propriedade com o nome genérico de "Property", que é uma lista de entradas de registo na chave.
 O seguinte comando seleciona a propriedade de propriedade e expande os itens para que eles são exibidos numa lista:
@@ -88,7 +88,7 @@ ProgramFilesDir     : C:\Program Files
 
 Expansão de caminho funciona da mesma forma que funciona dentro do sistema de arquivos, para que a partir desta localização pode obter o **ItemProperty** para a listagem `HKLM:\SOFTWARE\Microsoft\Windows\Help` utilizando `Get-ItemProperty -Path ..\Help`.
 
-### <a name="getting-a-single-registry-entry"></a>Obter uma entrada de registo único
+## <a name="getting-a-single-registry-entry"></a>Obter uma entrada de registo único
 
 Se quiser obter uma entrada específica numa chave de registo, pode utilizar uma das várias abordagens possíveis. Neste exemplo encontra o valor de **DevicePath** no `HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion`.
 
@@ -137,7 +137,7 @@ Também pode utilizar o **WshShell** objeto de COM também encontrar algumas ent
 %SystemRoot%\inf
 ```
 
-### <a name="setting-a-single-registry-entry"></a>Definir uma entrada de registo único
+## <a name="setting-a-single-registry-entry"></a>Definir uma entrada de registo único
 
 Se quiser alterar uma entrada específica numa chave de registo, pode utilizar uma das várias abordagens possíveis. Neste exemplo modifica os **caminho** entrada sob `HKEY_CURRENT_USER\Environment`. O **caminho** entrada especifica onde encontrar arquivos executáveis.
 
@@ -170,7 +170,7 @@ reg add HKCU\Environment /v Path /d $newpath /f
 The operation completed successfully.
 ```
 
-### <a name="creating-new-registry-entries"></a>Criar novas entradas de registo
+## <a name="creating-new-registry-entries"></a>Criar novas entradas de registo
 
 Para adicionar uma nova entrada com o nome "PowerShellPath" para o **CurrentVersion** utilização de chaves, `New-ItemProperty` com o caminho para a chave, o nome de entrada e o valor da entrada. Neste exemplo, vamos o valor da variável do Windows PowerShell `$PSHome`, que armazena o caminho para o diretório de instalação para o Windows PowerShell.
 
@@ -197,7 +197,7 @@ O **PropertyType** tem de ser o nome de um **Microsoft.Win32.RegistryValueKind**
 |DWord|Um número que é um UInt32 válido|
 |ExpandString|Uma cadeia de caracteres que pode conter variáveis de ambiente que são expandidas dinamicamente|
 |MultiString|Uma cadeia de caracteres com várias linhas|
-|Cadeia (de carateres)|Qualquer valor de cadeia|
+|Cadeia (de carateres)|qualquer valor de cadeia|
 |QWord|8 bytes de dados binários|
 
 > [!NOTE]
@@ -210,7 +210,7 @@ New-ItemProperty -Name PowerShellPath -PropertyType String -Value $PSHome `
 
 Também pode substituir um valor de entrada de registo já existentes ao adicionar o **força** parâmetro para qualquer `New-ItemProperty` comando.
 
-### <a name="renaming-registry-entries"></a>Mudar o nome de entradas de registro
+## <a name="renaming-registry-entries"></a>Mudar o nome de entradas de registro
 
 Para mudar o nome da **PowerShellPath** entrada de "PSHome", utilize `Rename-ItemProperty`:
 
@@ -224,7 +224,7 @@ Para apresentar o valor de nome mudado, adicione a **PassThru** parâmetro para 
 Rename-ItemProperty -Path HKLM:\SOFTWARE\Microsoft\Windows\CurrentVersion -Name PowerShellPath -NewName PSHome -passthru
 ```
 
-### <a name="deleting-registry-entries"></a>A eliminar entradas de registro
+## <a name="deleting-registry-entries"></a>A eliminar entradas de registro
 
 Para eliminar o PSHome e PowerShellPath entradas de registo, utilize `Remove-ItemProperty`:
 

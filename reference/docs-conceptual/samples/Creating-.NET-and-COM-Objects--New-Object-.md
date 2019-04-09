@@ -3,18 +3,18 @@ ms.date: 06/05/2017
 keywords: PowerShell, o cmdlet
 title: Criar objetos .NET e COM novo objeto
 ms.assetid: 2057b113-efeb-465e-8b44-da2f20dbf603
-ms.openlocfilehash: 1ffd8d4afa419ec0c24321e44aa4a2f41a9bee44
-ms.sourcegitcommit: b6871f21bd666f9cd71dd336bb3f844cf472b56c
+ms.openlocfilehash: ef8215303aacd90536d3c2ae57bc3629e202f318
+ms.sourcegitcommit: 806cf87488b80800b9f50a8af286e8379519a034
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 02/03/2019
-ms.locfileid: "55684130"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59293372"
 ---
 # <a name="creating-net-and-com-objects-new-object"></a>Criar objetos .NET e COM (New-Object)
 
 Existem componentes de software com o .NET Framework e COM interfaces que permitem-lhe realizar muitas tarefas de administração do sistema. Windows PowerShell permite-lhe utilizar estes componentes, para que não está limitado às tarefas que podem ser executadas utilizando os cmdlets. Muitos dos cmdlets na versão inicial do Windows PowerShell não funcionam em computadores remotos. Nós demonstraremos como contornar esta limitação ao gerir os registos de eventos utilizando o .NET Framework **Eventlog** classe diretamente a partir do Windows PowerShell.
 
-### <a name="using-new-object-for-event-log-access"></a>Utilizando o novo objeto para acesso de registo de eventos
+## <a name="using-new-object-for-event-log-access"></a>Utilizando o novo objeto para acesso de registo de eventos
 
 A biblioteca de classes do .NET Framework inclui uma classe chamada **Eventlog** que pode ser utilizado para gerir registos de eventos. Pode criar uma nova instância de uma classe do .NET Framework com o **New-Object** cmdlet com o **TypeName** parâmetro. Por exemplo, o comando seguinte cria uma referência de registo de eventos:
 
@@ -27,7 +27,7 @@ PS> New-Object -TypeName System.Diagnostics.EventLog
 
 Embora o comando criou uma instância da classe de registo de eventos, a instância não inclui quaisquer dados. Isso ocorre porque, não especificamos um determinado registo de eventos. Como obtém um registo de eventos real?
 
-#### <a name="using-constructors-with-new-object"></a>Usando construtores com New-Object
+### <a name="using-constructors-with-new-object"></a>Usando construtores com New-Object
 
 Para fazer referência a um registo de eventos específico, tem de especificar o nome do registo. **New-Object** tem uma **ArgumentList** parâmetro. Os argumentos que passar como valores para este parâmetro são utilizados por um método de inicialização especial do objeto. O método é chamado um *construtor* porque é utilizada para construir o objeto. Por exemplo, para obter uma referência para o registo de aplicação, especifique a cadeia 'Application' como um argumento:
 
@@ -42,7 +42,7 @@ Max(K) Retain OverflowAction        Entries Name
 > [!NOTE]
 > Uma vez que a maioria das classes de núcleo do .NET Framework está contida no System namespace, o Windows PowerShell tentará automaticamente localizar classes que especificar no System namespace se não for possível encontrar uma correspondência para o typename que especificar. Isso significa que pode especificar Diagnostics.EventLog em vez de EventLog.
 
-#### <a name="storing-objects-in-variables"></a>Armazenamento de objetos em variáveis
+### <a name="storing-objects-in-variables"></a>Armazenamento de objetos em variáveis
 
 Convém armazenar uma referência a um objeto, para que possa utilizá-lo no shell atual. Embora o Windows PowerShell permite que faça muito trabalho com os pipelines, diminuindo a necessidade de variáveis, por vezes, armazenando referências a objetos em variáveis faz com que seja mais conveniente para manipular esses objetos.
 
@@ -62,7 +62,7 @@ PS> $AppLog
   16,384      7 OverwriteOlder          2,160 Application
 ```
 
-#### <a name="accessing-a-remote-event-log-with-new-object"></a>Aceder a um registo de eventos remoto com o novo objeto
+### <a name="accessing-a-remote-event-log-with-new-object"></a>Aceder a um registo de eventos remoto com o novo objeto
 
 Os comandos utilizados na secção anterior de destino no computador local; o **Get-EventLog** cmdlet pode fazer isso. Para aceder ao registo de aplicações num computador remoto, tem de indicar tanto o nome do registo e um nome de computador (ou endereço IP) como argumentos.
 
@@ -77,7 +77,7 @@ PS> $RemoteAppLog
 
 Agora que temos uma referência a um registo de eventos armazenada na variável $RemoteAppLog, quais as tarefas podem realizar no mesmo?
 
-#### <a name="clearing-an-event-log-with-object-methods"></a>Limpar um registo de eventos com os métodos do objeto
+### <a name="clearing-an-event-log-with-object-methods"></a>Limpar um registo de eventos com os métodos do objeto
 
 Os objetos têm, muitas vezes, os métodos que podem ser chamados para executar tarefas. Pode usar **Get-Member** para apresentar os métodos associados um objeto. O seguinte comando e a saída selecionada mostram alguns métodos da classe de registo de eventos:
 
@@ -118,7 +118,7 @@ PS> $RemoteAppLog
      512      7 OverwriteOlder              0 Application
 ```
 
-### <a name="creating-com-objects-with-new-object"></a>Criação de objetos COM o novo objeto
+## <a name="creating-com-objects-with-new-object"></a>Criação de objetos COM o novo objeto
 Pode usar **New-Object** para trabalhar com componentes do modelo COM (Component Object). Intervalo de componentes das várias bibliotecas incluídos com o Windows Script Host (WSH) para aplicativos de ActiveX como o Internet Explorer que são instalados na maioria dos sistemas.
 
 **Novo objeto** utiliza Wrappers que pode ser chamado tempo de execução do .NET Framework para criar objetos COM, pelo que tem as mesmas limitações que o .NET Framework faz ao chamar objetos COM. Para criar um objeto COM, tem de especificar o **ComObject** parâmetro com o identificador de programação ou *ProgId* da classe COM que pretende utilizar. Uma discussão completa sobre as limitações de utilização de COM e determinar quais ProgIds estão disponíveis num sistema está além do escopo guia deste utilizador, mas objetos conhecidos dos ambientes, tais como o WSH podem ser utilizados dentro do Windows PowerShell.
@@ -134,7 +134,7 @@ New-Object -ComObject Scripting.FileSystemObject
 
 Embora a maior parte da funcionalidade dessas classes é disponibilizada de outras formas no Windows PowerShell, algumas tarefas, tais como a criação do atalho são ainda mais fácil fazer usando as classes do WSH.
 
-### <a name="creating-a-desktop-shortcut-with-wscriptshell"></a>Criar um atalho de Desktop com Wscript. Shell
+## <a name="creating-a-desktop-shortcut-with-wscriptshell"></a>Criar um atalho de Desktop com Wscript. Shell
 
 Uma tarefa que pode ser realizada rapidamente com um objeto COM é a criação de um atalho. Suponha que desejar criar um atalho no ambiente de trabalho que liga na pasta raiz para o Windows PowerShell. Tem primeiro de criar uma referência a **Wscript. Shell**, que armazenamos numa variável chamada **$WshShell**:
 
@@ -203,7 +203,7 @@ $lnk.TargetPath = $PSHome
 $lnk.Save()
 ```
 
-### <a name="using-internet-explorer-from-windows-powershell"></a>Usando o Internet Explorer do Windows PowerShell
+## <a name="using-internet-explorer-from-windows-powershell"></a>Usando o Internet Explorer do Windows PowerShell
 
 Muitos aplicativos (incluindo a família do Microsoft Office de aplicativos e o Internet Explorer) podem ser automatizados usando COM. Internet Explorer ilustra alguns dos problemas envolvidos ao trabalhar com aplicativos baseados em e técnicas comuns.
 
@@ -262,7 +262,7 @@ Remove-Variable ie
 > [!NOTE]
 > Não existe nenhuma padrão comum para se executáveis de ActiveX saiam ou continuam a executar quando remove uma referência a um. Dependendo das circunstâncias, como se a aplicação tem visível, se um documento editado está em execução no mesmo e até mesmo se Windows PowerShell ainda está em execução, a aplicação pode ou não pode sair. Por esse motivo, deve testar o comportamento de terminação para cada ActiveX executável que pretende utilizar no Windows PowerShell.
 
-### <a name="getting-warnings-about-net-framework-wrapped-com-objects"></a>Avisos sobre os objetos do .NET Framework-encapsuladas COM a obter
+## <a name="getting-warnings-about-net-framework-wrapped-com-objects"></a>Avisos sobre os objetos do .NET Framework-encapsuladas COM a obter
 
 Em alguns casos, um objeto COM pode ter um associados do .NET Framework *Runtime Callable Wrapper* ou RCW e esta vai ser utilizado por **New-Object**. Uma vez que o comportamento do RCW pode ser diferente do comportamento do objeto COM normal **New-Object** tem uma **Strict** parâmetro para o avisar sobre o acesso RCW. Se especificar a **Strict** parâmetro e, em seguida, criar um objeto COM que utiliza um RCW, receberá uma mensagem de aviso:
 

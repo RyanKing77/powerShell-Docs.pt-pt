@@ -3,12 +3,12 @@ ms.date: 06/05/2017
 keywords: PowerShell, o cmdlet
 title: Remover objetos do Pipeline Where-Object
 ms.assetid: 01df8b22-2d22-4e2c-a18d-c004cd3cc284
-ms.openlocfilehash: c060b93a3823be26ad6c7757acc633bb4fc2fcfa
-ms.sourcegitcommit: b6871f21bd666f9cd71dd336bb3f844cf472b56c
+ms.openlocfilehash: 1f7d064c7bf2dd551ea96b29762fbccad8174084
+ms.sourcegitcommit: 806cf87488b80800b9f50a8af286e8379519a034
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 02/03/2019
-ms.locfileid: "55685726"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59293151"
 ---
 # <a name="removing-objects-from-the-pipeline-where-object"></a>Remover objetos do Pipeline (Where-Object)
 
@@ -16,7 +16,7 @@ No Windows PowerShell, muitas vezes, gerar e passar mais objetos para um pipelin
 
 Windows PowerShell inclui um `Where-Object` cmdlet permite-lhe testar cada objeto no pipeline e apenas passá-lo ao longo do pipeline se ele cumpre uma condição de teste específico. Objetos que não passar no teste são removidos do pipeline. Fornecer a condição de teste como o valor do `Where-Object` **FilterScript** parâmetro.
 
-### <a name="performing-simple-tests-with-where-object"></a>Executar testes simples com Where-Object
+## <a name="performing-simple-tests-with-where-object"></a>Executar testes simples com Where-Object
 
 O valor de **FilterScript** é um *bloco de script* -uma ou mais comandos do Windows PowerShell rodeados por chavetas {} -que é avaliada como verdadeira ou falsa. Esses blocos de script podem ser muito simples, mas criá-las, precisa conhecer sobre outro conceito do Windows PowerShell, operadores de comparação. Um operador de comparação compara os itens que aparecem em cada lado dele. Operadores de comparação de começar com um "-" caráter e são seguidas por um nome. Operadores de comparação básicos funcionam em praticamente qualquer tipo de objeto. Os operadores de comparação mais avançados poderão funciona somente em texto ou matrizes.
 
@@ -29,14 +29,14 @@ Devido a considerações de análise, símbolos, como <>, e = não são usados c
 |-----------------------|-----------|--------------------------|
 |-eq|é igual a|1 -eq 1|
 |-ne|Não é igual a|1 - ne 2|
-|-lt|é inferior a|1 -lt 2|
-|-le|É menor ou igual a|1 - le 2|
-|-gt|é maior do que|2 -gt 1|
-|-ge|É maior que ou igual a|2 -ge 1|
+|-lt|É inferior a|1 -lt 2|
+|-le|é menor ou igual a|1 - le 2|
+|-gt|É maior do que|2 -gt 1|
+|-ge|é maior que ou igual a|2 -ge 1|
 |-como|É como (comparação de caráter universal para texto)|"file.doc" -like "f\*.do?"|
 |-notlike|Não é como (comparação de caráter universal para texto)|"file.doc" -notlike "p\*.doc"|
-|-contains|contém|1,2,3 -contains 1|
-|-notcontains|não contém|1,2,3 - notcontains 4|
+|-contains|Contém|1,2,3 -contains 1|
+|-notcontains|Não contém|1,2,3 - notcontains 4|
 
 Blocos de script WHERE-Object utilizam a variável especial `$_` para fazer referência ao objeto atual no pipeline. Eis um exemplo de como ele funciona. Se tiver uma lista de números e só quiser retornar os que são menos de 3, pode utilizar Where-Object para filtrar os números ao escrever:
 
@@ -46,7 +46,7 @@ PS> 1,2,3,4 | Where-Object -FilterScript {$_ -lt 3}
 2
 ```
 
-### <a name="filtering-based-on-object-properties"></a>Filtragem com base nas propriedades do objeto
+## <a name="filtering-based-on-object-properties"></a>Filtragem com base nas propriedades do objeto
 
 Uma vez que `$_` refere-se para o objeto de pipeline atual, pode aceder às respetivas propriedades para o nossos testes.
 

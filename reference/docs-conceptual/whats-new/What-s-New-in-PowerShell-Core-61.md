@@ -2,12 +2,12 @@
 title: Quais são as novidades no PowerShell Core 6.1
 description: Novos recursos e alterações lançadas no PowerShell Core 6.1
 ms.date: 09/13/2018
-ms.openlocfilehash: 4e39780a0ff446993005bba6284741f3b4b02549
-ms.sourcegitcommit: 6749f67c32e05999e10deb9d45f90f45ac21a599
+ms.openlocfilehash: fe1e892d4a13a7758f5405867fdd7488c059f5cc
+ms.sourcegitcommit: 806cf87488b80800b9f50a8af286e8379519a034
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 10/08/2018
-ms.locfileid: "48851312"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59293321"
 ---
 # <a name="whats-new-in-powershell-core-61"></a>Quais são as novidades no PowerShell Core 6.1
 
@@ -37,7 +37,7 @@ O pacote de compatibilidade do Windows permite que o PowerShell Core usar **mais
 
 ## <a name="support-for-application-whitelisting"></a>Suporte para permissões de aplicação
 
-6.1 do PowerShell Core tem paridade com suporte do Windows PowerShell 5.1 [AppLocker](https://docs.microsoft.com/en-us/windows/security/threat-protection/windows-defender-application-control/applocker/applocker-overview) e [Device Guard](https://docs.microsoft.com/en-us/windows/security/threat-protection/device-guard/introduction-to-device-guard-virtualization-based-security-and-windows-defender-application-control) permissões de aplicação.
+6.1 do PowerShell Core tem paridade com suporte do Windows PowerShell 5.1 [AppLocker](https://docs.microsoft.com/windows/security/threat-protection/windows-defender-application-control/applocker/applocker-overview) e [Device Guard](https://docs.microsoft.com/windows/security/threat-protection/device-guard/introduction-to-device-guard-virtualization-based-security-and-windows-defender-application-control) permissões de aplicação.
 Permissões de aplicação permite que um controle granular do que binários têm permissão para ser executado utilizado com o PowerShell [modo de idioma restrita](https://blogs.msdn.microsoft.com/powershell/2017/11/02/powershell-constrained-language-mode/).
 
 ## <a name="performance-improvements"></a>Melhoramentos de desempenho
@@ -54,7 +54,7 @@ Measure-Command { 1..100000 | % {Get-Random -Minimum 1 -Maximum 10000} | Group-O
 |              | Windows PowerShell 5.1 | O PowerShell Core 6.0 | O PowerShell Core 6.1 |
 |--------------|------------------------|---------------------|---------------------|
 | Tempo (seg)   | 25.178                 | 19.653              | 6.641               |
-| Aceleração (%) | N/A                    | % de 21.9               | % de 66.2               |
+| Aceleração (%) | N/A                    | 21.9%               | 66.2%               |
 
 Da mesma forma, os cenários de classificação como esta melhoraram por mais de 15%:
 
@@ -65,7 +65,7 @@ Measure-Command { 1..100000 | % {Get-Random -Minimum 1 -Maximum 10000} | Sort-Ob
 |              | Windows PowerShell 5.1 | O PowerShell Core 6.0 | O PowerShell Core 6.1 |
 |--------------|------------------------|---------------------|---------------------|
 | Tempo (seg)   | 12.170                 | 8.493               | 7.08                |
-| Aceleração (%) | N/A                    | % de 30.2               | % de 16.6               |
+| Aceleração (%) | N/A                    | 30.2%               | 16.6%               |
 
 `Import-Csv` tem também foi acelera significativamente após uma regressão do Windows PowerShell.
 O exemplo seguinte utiliza um teste de CSV com 26,616 linhas e colunas de seis:
@@ -209,7 +209,7 @@ Se `pwsh.exe` não estiver disponível, PowerShell Direct retrocede para utiliza
 
 `Enable-PSRemoting` Agora, cria duas configurações de sessão de comunicação remota:
 
-- Uma para a versão principal do PowerShell. Por exemplo,`PowerShell.6`. Este ponto de extremidade que pode ser utilizado em atualizações de versão secundária como a configuração de sessão do PowerShell 6 "todo o sistema"
+- Uma para a versão principal do PowerShell. Por exemplo, `PowerShell.6`. Este ponto de extremidade que pode ser utilizado em atualizações de versão secundária como a configuração de sessão do PowerShell 6 "todo o sistema"
 - Uma configuração de sessão específicas da versão, por exemplo: `PowerShell.6.1.0`
 
 Este comportamento é útil se pretender ter várias versões do PowerShell 6 instaladas e acessíveis na mesma máquina.
@@ -422,7 +422,7 @@ $certThumbPrint = (Get-PfxCertificate -FilePath $certFile -Password $certPass ).
 No passado, PowerShell foi lançado uma função no Windows chamado `more` que encapsulada `more.com`.
 Essa função agora foi removida.
 
-Também o `help` função alterado para utilizar `more.com` no Windows ou pager de padrão do sistema especificado pelo `$env:PAGER` em plataformas não Windows.
+Além disso, o `help` função alterado para utilizar `more.com` no Windows ou pager de padrão do sistema especificado pelo `$env:PAGER` em plataformas não Windows.
 
 ### <a name="cd-drivename-now-returns-users-to-the-current-working-directory-in-that-drive"></a>`cd DriveName:` Devolve agora os utilizadores para o diretório de trabalho atual nessa unidade
 
@@ -483,7 +483,7 @@ Win32_OperatingSystem               {Reboot, Shutdown... {BootDevice, BuildNumbe
 
 Graças à [ @kvprasoon ](https://github.com/kvprasoon), agora temos um alias de parâmetro `-lp` todos os incorporada cmdlets do PowerShell que tenham um `-LiteralPath` parâmetro.
 
-## <a name="breaking-changes"></a>Alterações recentes
+## <a name="breaking-changes"></a>Alterações Interruptivas
 
 ### <a name="msi-based-installation-paths-on-windows"></a>Caminhos de instalação baseada em MSI no Windows
 
@@ -516,3 +516,10 @@ Visual Basic foi raramente utilizado com `Add-Type`. Removemos esta funcionalida
 ### <a name="cleaned-up-uses-of-commandtypesworkflow-and-workflowinfocleaned"></a>Limpos usos de `CommandTypes.Workflow` e `WorkflowInfoCleaned`
 
 Para obter mais informações sobre estas alterações, confira [PR #6708](https://github.com/PowerShell/PowerShell/pull/6708).
+
+### <a name="group-object-now-sorts-the-groups"></a>Os grupos ordena agora de objeto de grupo
+
+Como parte da melhoria no desempenho, `Group-Object` agora retorna uma lista classificada dos grupos.
+Embora não deve confiar na ordem, poderia ser quebrada por esta alteração se quisesse que o primeiro grupo. Decidimos que essa melhoria de desempenho era que vale a pena a alteração, uma vez que o impacto de ser dependentes do comportamento anterior é baixo.
+
+Para obter mais informações sobre esta alteração, consulte [problema #7409](https://github.com/PowerShell/PowerShell/issues/7409).

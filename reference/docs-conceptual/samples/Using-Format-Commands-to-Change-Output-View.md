@@ -3,12 +3,12 @@ ms.date: 06/05/2017
 keywords: PowerShell, o cmdlet
 title: Utilizar Comandos de Formato para Alterar a Vista de Saída
 ms.assetid: 63515a06-a6f7-4175-a45e-a0537f4f6d05
-ms.openlocfilehash: 35ccd2525d40ffd5e3f25a1abfa38904a109bde5
-ms.sourcegitcommit: 396509cd0d415acc306b68758b6f833406e26bf5
+ms.openlocfilehash: fba37b1d0479bf605d8f2171da27cd1bceb9976e
+ms.sourcegitcommit: 806cf87488b80800b9f50a8af286e8379519a034
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 03/21/2019
-ms.locfileid: "58320426"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59293049"
 ---
 # <a name="using-format-commands-to-change-output-view"></a>Utilizar Comandos de Formato para Alterar a Vista de Saída
 
@@ -29,25 +29,34 @@ Handles  NPM(K)    PM(K)      WS(K) VM(M)   CPU(s)     Id ProcessName
 
 No restante desta seção, Exploraremos como utilizar **formato** cmdlets para alterar a forma como é apresentado o resultado deste comando.
 
-### <a name="using-format-wide-for-single-item-output"></a>Usando em todo o formato de saída de Item único
+## <a name="using-format-wide-for-single-item-output"></a>Usando em todo o formato de saída de Item único
 
-O **Format-Wide** cmdlet, por padrão, exibe a propriedade de padrão de um objeto. As informações associadas com cada objeto são apresentadas numa única coluna:
+O `Format-Wide` cmdlet, por padrão, exibe a propriedade de padrão de um objeto.
+As informações associadas com cada objeto são apresentadas numa única coluna:
 
+```powershell
+Get-Command -Verb Format | Format-Wide
 ```
-PS> Get-Process -Name powershell | Format-Wide
 
-powershell                              powershell
+```output
+Format-Custom                          Format-Hex
+Format-List                            Format-Table
+Format-Wide
 ```
 
 Também pode especificar uma propriedade não predefinido:
 
-```
-PS> Get-Process -Name powershell | Format-Wide -Property Id
-
-2760                                    3448
+```powershell
+Get-Command -Verb Format | Format-Wide -Property Noun
 ```
 
-#### <a name="controlling-format-wide-display-with-column"></a>Controlar a exibição de todo o formato com coluna
+```output
+Custom                                 Hex
+List                                   Table
+Wide
+```
+
+### <a name="controlling-format-wide-display-with-column"></a>Controlar a exibição de todo o formato com coluna
 
 Com o `Format-Wide` cmdlet, pode apresentar apenas uma única propriedade ao mesmo tempo.
 Assim, é útil para exibir listas simples que mostram apenas um elemento por linha.
@@ -65,7 +74,7 @@ Table
 Wide
 ```
 
-### <a name="using-format-list-for-a-list-view"></a>Usando o formato de lista para obter uma exibição de lista
+## <a name="using-format-list-for-a-list-view"></a>Usando o formato de lista para obter uma exibição de lista
 
 O **Format-List** cmdlet apresenta um objeto na forma de obter uma lista, com cada propriedade com o nome e exibidos numa linha separada:
 
@@ -100,7 +109,7 @@ StartTime   : 2006-05-24 13:54:28
 Id          : 3448
 ```
 
-#### <a name="getting-detailed-information-by-using-format-list-with-wildcards"></a>Ao obter as informações detalhadas com o formato de lista com carateres universais
+### <a name="getting-detailed-information-by-using-format-list-with-wildcards"></a>Ao obter as informações detalhadas com o formato de lista com carateres universais
 
 O **Format-List** cmdlet permite-lhe utilizar um caráter universal como o valor do respetivo **propriedade** parâmetro. Isto permite-lhe apresentar informações detalhadas. Muitas vezes, os objetos incluem mais informações que precisa, razão pela qual o Windows PowerShell não mostra todos os valores de propriedade por predefinição. Para mostrar todas as propriedades de um objeto, utilize o **Format-List-propriedade \&#42;** comando. O comando seguinte gera mais de 60 linhas da saída para um único processo:
 
@@ -110,7 +119,7 @@ Get-Process -Name powershell | Format-List -Property *
 
 Embora o **Format-List** comando é útil para mostrar os detalhes, se desejar uma visão geral de saída que inclui o número de itens, uma exibição tabular mais simples, muitas vezes, é mais útil.
 
-### <a name="using-format-table-for-tabular-output"></a>Usando o formato de tabela para saída Tabular
+## <a name="using-format-table-for-tabular-output"></a>Usando o formato de tabela para saída Tabular
 
 Se utilizar o **Format-Table** cmdlet com não nomes de propriedade especificado para formatar a saída da **Get-Process** de comando, obtém exatamente a mesma saída como acontece sem executar qualquer formatação. O motivo é que os processos são normalmente apresentados num formato tabular, assim como a maioria dos objetos do Windows PowerShell.
 
@@ -123,7 +132,7 @@ Handles  NPM(K)    PM(K)      WS(K) VM(M)   CPU(s)     Id ProcessName
     332       9    23140        632   141     1.06   3448 powershell
 ```
 
-#### <a name="improving-format-table-output-autosize"></a>Melhorando a saída do Format-Table (AutoSize)
+### <a name="improving-format-table-output-autosize"></a>Melhorando a saída do Format-Table (AutoSize)
 
 Embora uma exibição tabular é útil para a exibição muita informação comparável, poderá ser difícil de interpretar se a exibição é demasiado pequena para os dados. Por exemplo, se tentar exibir o caminho do processo, o ID, nome e empresa, receberá saída truncada para o caminho de processo e a coluna de empresa:
 
@@ -173,7 +182,7 @@ Microsoft Corporation C:\Program Files\Windows PowerShell\v1.0\powershell.exe 6
 
 No resultado acima, a coluna ID é truncada para torná-lo a se adaptam a listagem e os cabeçalhos de coluna são empilhados a cópia de segurança. Redimensionar automaticamente as colunas não sempre faz o que deseja.
 
-#### <a name="wrapping-format-table-output-in-columns-wrap"></a>Saída do Format-Table de encapsulamento de aplicações nas colunas (moldagem)
+### <a name="wrapping-format-table-output-in-columns-wrap"></a>Saída do Format-Table de encapsulamento de aplicações nas colunas (moldagem)
 
 Pode forçar longas **Format-Table** dados para encapsular dentro de sua coluna de apresentação com o **encapsular** parâmetro. Utilizar o **encapsular** parâmetro sozinho não necessariamente fará o que esperar, uma vez que utiliza as predefinições se não especificar também **AutoSize**:
 
@@ -216,7 +225,7 @@ C:\Program Files\Windows PowerShell\v1.0\powershell.exe 2836 Microsoft Corporat
                                                              ion
 ```
 
-#### <a name="organizing-table-output--groupby"></a>Organizar a saída da tabela (-GroupBy)
+### <a name="organizing-table-output--groupby"></a>Organizar a saída da tabela (-GroupBy)
 
 É o outro parâmetro útil para controle de saída tabular **GroupBy**. Em particular já listagens de tabela podem ser difíceis de comparar. O **GroupBy** resultado com base num valor de propriedade de grupos de parâmetro. Por exemplo, podemos pode agrupar processos pela empresa para a inspeção mais fácil, omitindo o valor da empresa a partir da lista de propriedade:
 

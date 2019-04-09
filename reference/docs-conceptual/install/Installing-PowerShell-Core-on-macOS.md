@@ -2,17 +2,17 @@
 title: Instalar o PowerShell Core no macOS
 description: Informações sobre como instalar o PowerShell Core no macOS
 ms.date: 12/12/2018
-ms.openlocfilehash: 91e64cace7d4ed988da56109dde9bf2a80528eb4
-ms.sourcegitcommit: 00ff76d7d9414fe585c04740b739b9cf14d711e1
+ms.openlocfilehash: 7db8ca0cb6d13db8ce7f11b4a4b03b7d3f9b6feb
+ms.sourcegitcommit: 806cf87488b80800b9f50a8af286e8379519a034
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 12/14/2018
-ms.locfileid: "53404953"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59293406"
 ---
 # <a name="installing-powershell-core-on-macos"></a>Instalar o PowerShell Core no macOS
 
 O PowerShell Core suporta o macOS 10.12 e superior.
-Todos os pacotes estão disponíveis no nosso GitHub [releases][] página.
+Todos os pacotes estão disponíveis no nosso GitHub [versões][] página.
 Depois do pacote está instalado, executar `pwsh` partir de um terminal.
 
 ## <a name="about-brew"></a>Sobre Brew
@@ -84,13 +84,14 @@ brew cask upgrade powershell-preview
 
 ## <a name="installation-via-direct-download"></a>Instalação através de transferência direta
 
-Transferir o pacote PKG `powershell-6.1.0-osx-x64.pkg`
-partir do [releases][] página no seu computador macOS.
+Transferir o pacote PKG
+`powershell-6.2.0-osx-x64.pkg`
+partir do [versões][] página no seu computador macOS.
 
 Pode clicar duas vezes o arquivo e siga as instruções ou instalá-lo a partir do terminal:
 
 ```sh
-sudo installer -pkg powershell-6.1.0-osx-x64.pkg -target /
+sudo installer -pkg powershell-6.2.0-osx-x64.pkg -target /
 ```
 
 Instale [OpenSSL](#install-openssl). OpenSSL é necessário para comunicação remota do PowerShell e as operações de CIM.
@@ -103,19 +104,19 @@ Binário de PowerShell `tar.gz` arquivos são fornecidos para a plataforma macOS
 
 ```sh
 # Download the powershell '.tar.gz' archive
-curl -L -o /tmp/powershell.tar.gz https://github.com/PowerShell/PowerShell/releases/download/v6.1.0/powershell-6.1.0-osx-x64.tar.gz
+curl -L -o /tmp/powershell.tar.gz https://github.com/PowerShell/PowerShell/releases/download/v6.2.0/powershell-6.2.0-osx-x64.tar.gz
 
 # Create the target folder where powershell will be placed
-sudo mkdir -p /usr/local/microsoft/powershell/6.1.0
+sudo mkdir -p /usr/local/microsoft/powershell/6.2.0
 
 # Expand powershell to the target folder
-sudo tar zxf /tmp/powershell.tar.gz -C /usr/local/microsoft/powershell/6.1.0
+sudo tar zxf /tmp/powershell.tar.gz -C /usr/local/microsoft/powershell/6.2.0
 
 # Set execute permissions
-sudo chmod +x /usr/local/microsoft/powershell/6.1.0/pwsh
+sudo chmod +x /usr/local/microsoft/powershell/6.2.0/pwsh
 
 # Create the symbolic link that points to pwsh
-sudo ln -s /usr/local/microsoft/powershell/6.1.0/pwsh /usr/local/bin/pwsh
+sudo ln -s /usr/local/microsoft/powershell/6.2.0/pwsh /usr/local/bin/pwsh
 ```
 
 Instale [OpenSSL](#install-openssl). OpenSSL é necessário para comunicação remota do PowerShell e as operações de CIM.
@@ -174,7 +175,7 @@ Para remover os caminhos de PowerShell adicionais, consulte a [caminhos](#paths)
 
 ## <a name="paths"></a>Caminhos
 
-* `$PSHOME` é `/usr/local/microsoft/powershell/6.1.0/`
+* `$PSHOME` is `/usr/local/microsoft/powershell/6.2.0/`
 * Perfis de utilizador serão lido a partir `~/.config/powershell/profile.ps1`
 * Perfis predefinidos serão lido a partir `$PSHOME/profile.ps1`
 * Módulos de utilizador serão lido a partir `~/.local/share/powershell/Modules`
@@ -188,7 +189,7 @@ Para que o perfil de anfitrião específico predefinido existe em `Microsoft.Pow
 PowerShell respeita os [XDG Base diretório especificação] [ xdg-bds] em macOS.
 
 Uma vez que macOS é uma derivação do BSD, o prefixo `/usr/local` é utilizado em vez de `/opt`.
-Por isso, `$PSHOME` é `/usr/local/microsoft/powershell/6.1.0/`, e a ligação simbólica é colocada em `/usr/local/bin/pwsh`.
+Por isso, `$PSHOME` é `/usr/local/microsoft/powershell/6.2.0/`, e a ligação simbólica é colocada em `/usr/local/bin/pwsh`.
 
 ## <a name="additional-resources"></a>Recursos Adicionais
 
@@ -200,5 +201,5 @@ Por isso, `$PSHOME` é `/usr/local/microsoft/powershell/6.1.0/`, e a ligação s
 [Cask]: https://github.com/Homebrew/homebrew-cask
 [cask-versions]: https://github.com/Homebrew/homebrew-cask-versions
 [GitHub]: https://github.com/Homebrew
-[releases]: https://github.com/PowerShell/PowerShell/releases/latest
+[Versões]: https://github.com/PowerShell/PowerShell/releases/latest
 [xdg-bds]: https://specifications.freedesktop.org/basedir-spec/basedir-spec-latest.html
