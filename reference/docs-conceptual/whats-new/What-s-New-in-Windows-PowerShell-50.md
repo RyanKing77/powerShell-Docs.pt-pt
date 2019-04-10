@@ -2,12 +2,12 @@
 ms.date: 06/05/2017
 keywords: PowerShell, o cmdlet
 title: O que há de novo no Windows PowerShell 5.0
-ms.openlocfilehash: a21e6af9f23ac8bb3ddf84dbfa67a67f3ff93b24
-ms.sourcegitcommit: caac7d098a448232304c9d6728e7340ec7517a71
+ms.openlocfilehash: b2cb729948d4b53c5ea9a536dbeda04c7cb50997
+ms.sourcegitcommit: 9194e603ac242ae733839eb773e4af7360fdd044
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 03/16/2019
-ms.locfileid: "58055109"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59363535"
 ---
 # <a name="whats-new-in-windows-powershell-50"></a>O que há de novo no Windows PowerShell 5.0
 
@@ -210,7 +210,7 @@ Windows PowerShell 4.0 está instalado por padrão no Windows 8.1 e Windows Serv
 
 Windows PowerShell 4.0 inclui as seguintes novas funcionalidades.
 
-### <a name="new-features-in-windows-powershell"></a>Novos recursos do Windows PowerShell
+### <a name="a-namenew-features-in-windows-powershell-1-new-features-in-windows-powershell"></a><a name="new-features-in-windows-powershell-1" />Novos recursos do Windows PowerShell
 
 - **Windows PowerShell Desired State Configuration** (DSC) é um novo sistema de gerenciamento no Windows PowerShell 4.0, que permite a implementação e gestão de dados de configuração de serviços de software e o ambiente em que estes serviços são executados. Para obter mais informações sobre o DSC, veja [introdução ao Windows PowerShell Desired State Configuration](https://technet.microsoft.com/library/c134aa32-b085-4656-9a89-955d8ff768d0).
 - **Save-Help** agora, vamos guardar ajuda para módulos que são instaladas em computadores remotos. Pode utilizar Save-Help para transferir o módulo ajuda a partir de um cliente ligado à Internet (em que nem todos os módulos para o qual pretende obter ajuda são necessariamente instalados) e, em seguida, copie a ajuda guardada para uma pasta remota partilhada ou um computador remoto que não tem a Internet acesso.
