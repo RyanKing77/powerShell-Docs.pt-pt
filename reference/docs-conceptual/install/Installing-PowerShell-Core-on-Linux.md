@@ -3,10 +3,10 @@ title: Instalar o PowerShell Core no Linux
 description: Informações sobre como instalar o PowerShell Core em várias distribuições do Linux
 ms.date: 08/06/2018
 ms.openlocfilehash: 06194550f4e73f9dd38f8cdc25f6c7f698cafce2
-ms.sourcegitcommit: 806cf87488b80800b9f50a8af286e8379519a034
+ms.sourcegitcommit: 17ce42f97e13e8b3286779dc3f583474b0357023
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59293338"
 ---
 # <a name="installing-powershell-core-on-linux"></a>Instalar o PowerShell Core no Linux
@@ -75,8 +75,7 @@ De ora em diante, apenas tem de utilizar `sudo apt-get upgrade powershell` para 
 
 ### <a name="installation-via-direct-download---ubuntu-1404"></a>Instalação através de transferência direta - Ubuntu 14.04
 
-Transferir o pacote Debian
-`powershell_6.2.0-1.ubuntu.14.04_amd64.deb`
+Transferir o pacote Debian `powershell_6.2.0-1.ubuntu.14.04_amd64.deb`
 do [versões][] página para o computador do Ubuntu.
 
 Em seguida, execute o seguinte no terminal:
@@ -124,8 +123,7 @@ Depois de registar o repositório da Microsoft uma vez como Superutilizador, de 
 
 ### <a name="installation-via-direct-download---ubuntu-1604"></a>Instalação através de transferência direta - Ubuntu 16.04
 
-Transferir o pacote Debian
-`powershell_6.2.0-1.ubuntu.16.04_amd64.deb`
+Transferir o pacote Debian `powershell_6.2.0-1.ubuntu.16.04_amd64.deb`
 do [versões][] página para o computador do Ubuntu.
 
 Em seguida, execute o seguinte no terminal:
@@ -176,8 +174,7 @@ Depois de registar o repositório da Microsoft uma vez como Superutilizador, de 
 
 ### <a name="installation-via-direct-download---ubuntu-1804"></a>Instalação através de transferência direta - Ubuntu 18.04
 
-Transferir o pacote Debian
-`powershell_6.2.0-1.ubuntu.18.04_amd64.deb`
+Transferir o pacote Debian `powershell_6.2.0-1.ubuntu.18.04_amd64.deb`
 do [versões][] página para o computador do Ubuntu.
 
 Em seguida, execute o seguinte no terminal:
@@ -266,8 +263,7 @@ Depois de registar o repositório da Microsoft uma vez como Superutilizador, de 
 
 ### <a name="installation-via-direct-download---debian-9"></a>Instalação através de transferência direta - Debian 9
 
-Transferir o pacote Debian
-`powershell_6.2.0-1.debian.9_amd64.deb`
+Transferir o pacote Debian `powershell_6.2.0-1.debian.9_amd64.deb`
 partir do [versões][] página para o computador Debian.
 
 Em seguida, execute o seguinte no terminal:
@@ -307,8 +303,7 @@ Depois de registar o repositório da Microsoft uma vez como Superutilizador, ape
 
 ### <a name="installation-via-direct-download---centos-7"></a>Instalação através de transferência direta - CentOS 7
 
-Usando [CentOS 7][], transfira o pacote RPM
-`powershell-6.2.0-1.rhel.7.x86_64.rpm`
+Usando [CentOS 7][], transfira o pacote RPM `powershell-6.2.0-1.rhel.7.x86_64.rpm`
 do [versões][] página para o computador de CentOS.
 
 Em seguida, execute o seguinte no terminal:
@@ -352,8 +347,7 @@ Depois de registar o repositório da Microsoft uma vez como Superutilizador, ape
 
 ### <a name="installation-via-direct-download---red-hat-enterprise-linux-rhel-7"></a>Instalação através de transferência direta - Red Hat Enterprise Linux (RHEL) 7
 
-Transferir o pacote RPM
-`powershell-6.2.0-1.rhel.7.x86_64.rpm`
+Transferir o pacote RPM `powershell-6.2.0-1.rhel.7.x86_64.rpm`
 partir do [versões][] página para o computador Red Hat Enterprise Linux.
 
 Em seguida, execute o seguinte no terminal:
@@ -463,8 +457,7 @@ pwsh
 
 ### <a name="installation-via-direct-download---fedora-27-fedora-28"></a>Instalação através de transferência direta - Fedora 27, Fedora 28
 
-Transferir o pacote RPM
-`powershell-6.2.0-1.rhel.7.x86_64.rpm`
+Transferir o pacote RPM `powershell-6.2.0-1.rhel.7.x86_64.rpm`
 do [versões][] página na máquina Fedora.
 
 Em seguida, execute o seguinte no terminal:
@@ -687,7 +680,7 @@ sudo rm -rf /usr/bin/pwsh /opt/microsoft/powershell
 
 ## <a name="paths"></a>Caminhos
 
-* `$PSHOME` is `/opt/microsoft/powershell/6.2.0/`
+* `$PSHOME` é `/opt/microsoft/powershell/6.2.0/`
 * Perfis de utilizador serão lido a partir `~/.config/powershell/profile.ps1`
 * Perfis predefinidos serão lido a partir `$PSHOME/profile.ps1`
 * Módulos de utilizador serão lido a partir `~/.local/share/powershell/Modules`
@@ -699,5 +692,5 @@ Os perfis de respeitam a configuração de por anfitrião do PowerShell, para qu
 
 PowerShell respeita os [XDG Base diretório especificação] [ xdg-bds] no Linux.
 
-[Versões]: https://github.com/PowerShell/PowerShell/releases/latest
+[versões]: https://github.com/PowerShell/PowerShell/releases/latest
 [xdg-bds]: https://specifications.freedesktop.org/basedir-spec/basedir-spec-latest.html

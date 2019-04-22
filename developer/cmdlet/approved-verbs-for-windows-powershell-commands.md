@@ -13,10 +13,10 @@ helpviewer_keywords:
 ms.assetid: 2d4e58a9-05bc-437c-86b9-d8d55cba7d48
 caps.latest.revision: 36
 ms.openlocfilehash: 4475b3f5e15826efbe8bab867011985cd7e2e1ae
-ms.sourcegitcommit: 806cf87488b80800b9f50a8af286e8379519a034
+ms.sourcegitcommit: 17ce42f97e13e8b3286779dc3f583474b0357023
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59293355"
 ---
 # <a name="approved-verbs-for-powershell-commands"></a>Verbos aprovados para comandos do PowerShell
@@ -251,6 +251,6 @@ PowerShell utiliza a [System.Management.Automation.VerbsOther](/dotnet/api/Syste
 
 [Declaração de cmdlet](./cmdlet-class-declaration.md)
 
-[Windows PowerShell Programmer's Guide (Guia do Programador do Windows PowerShell)](../prog-guide/windows-powershell-programmer-s-guide.md)
+[Guia do programador do Windows PowerShell](../prog-guide/windows-powershell-programmer-s-guide.md)
 
 [Shell do Windows PowerShell SDK](../windows-powershell-reference.md)

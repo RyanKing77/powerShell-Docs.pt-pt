@@ -4,10 +4,10 @@ keywords: PowerShell, o cmdlet
 title: Criar um Seletor de Datas Gráfico
 ms.assetid: c1cb722c-41e9-4baa-be83-59b4653222e9
 ms.openlocfilehash: d3b24af935e781a8a36fc346a6108baaed37b6db
-ms.sourcegitcommit: 3f6002e7109373eda31cc65fc84d2600447cb7e9
+ms.sourcegitcommit: 17ce42f97e13e8b3286779dc3f583474b0357023
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 04/11/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59506806"
 ---
 # <a name="creating-a-graphical-date-picker"></a>Criar um Seletor de Datas Gráfico
@@ -148,4 +148,4 @@ if ($result -eq [Windows.Forms.DialogResult]::OK) {
 
 - [EI equipe de scripts:  Por que não funcionam nestes exemplos de GUI do PowerShell?](https://go.microsoft.com/fwlink/?LinkId=506644)
 - [GitHub: WinFormsExampleUpdates de Dave Wyatt](https://github.com/dlwyatt/WinFormsExampleUpdates)
-- [Sugestão de Windows PowerShell da semana:  Criar um Seletor de Datas Gráfico](https://technet.microsoft.com/library/ff730942.aspx)
+- [Sugestão de Windows PowerShell da semana:  Criar um Seletor de datas gráfico](https://technet.microsoft.com/library/ff730942.aspx)

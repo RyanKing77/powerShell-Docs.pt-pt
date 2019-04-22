@@ -3,10 +3,10 @@ ms.date: 06/12/2017
 keywords: DSC, powershell, configuração, a configuração
 title: Começar com o Desired State Configuration (DSC) para Linux
 ms.openlocfilehash: a18b226d4b2d8b8e1ba8b4168ec6ad8f73c73c42
-ms.sourcegitcommit: 3f6002e7109373eda31cc65fc84d2600447cb7e9
+ms.sourcegitcommit: 17ce42f97e13e8b3286779dc3f583474b0357023
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 04/11/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59506840"
 ---
 # <a name="get-started-with-desired-state-configuration-dsc-for-linux"></a>Começar com o Desired State Configuration (DSC) para Linux
@@ -30,7 +30,7 @@ A tabela seguinte descreve as dependências de pacote necessária para DSC para 
 |---|---|---|
 | glibc| Biblioteca do GNU| 2…4 – 31.30|
 | python| Python| 2.4 – 3.4|
-| omiserver| Abrir Infraestrutura de Gestão| 1.0.8.1|
+| omiserver| Abrir infraestrutura de gestão| 1.0.8.1|
 | openssl| Bibliotecas de OpenSSL| 0.9.8 ou 1.0|
 | ctypes| Biblioteca de Python CTypes| Tem de corresponder à versão do Python|
 | libcurl| biblioteca de clientes de http de cURL| 7.15.1|

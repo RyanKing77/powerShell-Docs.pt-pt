@@ -11,10 +11,10 @@ helpviewer_keywords:
 ms.assetid: f3aaf667-af84-4ea8-a5ad-d454d0d700b8
 caps.latest.revision: 9
 ms.openlocfilehash: 75425fbd38141fc82dd834835912c357ecfa6d2b
-ms.sourcegitcommit: 0ca836d1044e46d3a7dcbc69fa93d84f74848559
+ms.sourcegitcommit: 17ce42f97e13e8b3286779dc3f583474b0357023
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 04/04/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58920395"
 ---
 # <a name="windows-powershell-programmer39s-guide"></a>Programador do Windows PowerShell&#39;guia de s
@@ -99,12 +99,12 @@ Para obter mais informações sobre como começar a utilizar a shell do Windows 
 
 |Tópico|Definição|
 |-----------|----------------|
-|[How to Create a Windows PowerShell Provider (Como Criar um Fornecedor do Windows PowerShell)](./how-to-create-a-windows-powershell-provider.md)|Esta secção descreve como criar um fornecedor de Windows PowerShell para o Windows PowerShell.|
+|[Como criar um fornecedor do Windows PowerShell](./how-to-create-a-windows-powershell-provider.md)|Esta secção descreve como criar um fornecedor de Windows PowerShell para o Windows PowerShell.|
 |[Como criar um aplicativo de Host de PowerShell do Windows](http://msdn.microsoft.com/en-us/d31355c9-a270-4b09-8f0c-35a7392a7d07)|Esta secção descreve como escrever um aplicativo de host que manipula um espaço de execução e como escrever um aplicativo de host que implementa o seu próprio host personalizado.|
-|[How to Create a Windows PowerShell Snap-in (Como Criar um Snap-in do Windows PowerShell)](../cmdlet/how-to-create-a-windows-powershell-snap-in.md)|Esta secção descreve como criar um snap-in que é utilizado para registar todos os cmdlets e provedores num assembly e como criar um snap-in personalizado.|
-|[How to Create a Console Shell (Como Criar uma Shell da Consola)](./how-to-create-a-console-shell.md)|Esta secção descreve como criar um shell de consola que não é extensível.|
-|[Windows PowerShell Concepts (Conceitos do Windows PowerShell)](./windows-powershell-concepts.md)|Esta secção contém informações conceituais que irão ajudar a compreender o Windows PowerShell do ponto de vista de um desenvolvedor.|
+|[Como criar um Snap-in do PowerShell do Windows](../cmdlet/how-to-create-a-windows-powershell-snap-in.md)|Esta secção descreve como criar um snap-in que é utilizado para registar todos os cmdlets e provedores num assembly e como criar um snap-in personalizado.|
+|[Como criar um Shell do Console](./how-to-create-a-console-shell.md)|Esta secção descreve como criar um shell de consola que não é extensível.|
+|[Conceitos do Windows PowerShell](./windows-powershell-concepts.md)|Esta secção contém informações conceituais que irão ajudar a compreender o Windows PowerShell do ponto de vista de um desenvolvedor.|
 
 ## <a name="see-also"></a>Veja Também
 
-[Windows PowerShell SDK (SDK do Windows PowerShell)](../windows-powershell-reference.md)
+[SDK do Windows PowerShell](../windows-powershell-reference.md)

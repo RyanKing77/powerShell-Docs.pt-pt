@@ -3,10 +3,10 @@ ms.date: 06/05/2017
 keywords: PowerShell, o cmdlet
 title: O que há de novo no Windows PowerShell 5.0
 ms.openlocfilehash: b2cb729948d4b53c5ea9a536dbeda04c7cb50997
-ms.sourcegitcommit: 9194e603ac242ae733839eb773e4af7360fdd044
+ms.sourcegitcommit: 17ce42f97e13e8b3286779dc3f583474b0357023
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59363535"
 ---
 # <a name="whats-new-in-windows-powershell-50"></a>O que há de novo no Windows PowerShell 5.0
