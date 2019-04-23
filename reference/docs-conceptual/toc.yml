@@ -1,259 +1,254 @@
-items:
 - name: Descrição geral
   href: overview.md
 - name: Instalar
   items:
-  - name: Instalar várias versões do PowerShell
-    href: install/installing-powershell.md
-  - name: PowerShell Core
-    items:
-    - name: Instalar o PowerShell Core no Windows
-      href: install/installing-powershell-core-on-windows.md
-    - name: Instalar o PowerShell Core no Linux
-      href: install/installing-powershell-core-on-linux.md
-    - name: Instalar o PowerShell Core no macOS
-      href: install/installing-powershell-core-on-macos.md
-    - name: Instalar o PowerShell Core no ARM
-      href: install/powershell-core-on-arm.md
-  - name: Windows PowerShell
-    items:
-    - name: Instalar o Windows PowerShell
-      href: install/installing-windows-powershell.md
-    - name: Instalar o Motor do Windows PowerShell 2.0
-      href: install/installing-the-windows-powershell-2.0-engine.md
-    - name: Requisitos de Sistema do Windows PowerShell
-      href: install/windows-powershell-system-requirements.md
+    - name: Instalar várias versões do PowerShell
+      href: install/installing-powershell.md
+    - name: PowerShell Core
+      items:
+        - name: Instalar o PowerShell Core no Windows
+          href: install/installing-powershell-core-on-windows.md
+        - name: Instalar o PowerShell Core no Linux
+          href: install/installing-powershell-core-on-linux.md
+        - name: Instalar o PowerShell Core no macOS
+          href: install/installing-powershell-core-on-macos.md
+        - name: Instalar o PowerShell Core no ARM
+          href: install/powershell-core-on-arm.md
+    - name: Windows PowerShell
+      items:
+        - name: Instalar o Windows PowerShell
+          href: install/installing-windows-powershell.md
+        - name: "Instalar o Motor do Windows PowerShell\_2.0"
+          href: install/installing-the-windows-powershell-2.0-engine.md
+        - name: Requisitos de Sistema do Windows PowerShell
+          href: install/windows-powershell-system-requirements.md
 - name: Introdução
   items:
-  - name: Introdução ao PowerShell
-    href: getting-started/getting-started-with-windows-powershell.md
-  - name: Iniciar o Windows PowerShell
-    href: getting-started/starting-windows-powershell.md
-  - name: Iniciar o Motor do Windows PowerShell 2.0
-    href: getting-started/starting-the-windows-powershell-2.0-engine.md
+    - name: Introdução ao PowerShell
+      href: getting-started/getting-started-with-windows-powershell.md
+    - name: Iniciar o Windows PowerShell
+      href: getting-started/starting-windows-powershell.md
+    - name: "Iniciar o Motor do Windows PowerShell\_2.0"
+      href: getting-started/starting-the-windows-powershell-2.0-engine.md
 - name: Aprendizagem do PowerShell
   items:
-  - name: Noções sobre conceitos importantes do PowerShell
-    href: learn/understanding-important-powershell-concepts.md
-  - name: Aprender os nomes do PowerShell
-    href: learn/learning-powershell-names.md
-  - name: Utilizar nomes de comandos familiares
-    href: learn/using-familiar-command-names.md
-  - name: Obter informações de ajuda detalhadas
-    href: learn/getting-detailed-help-information.md
-  - name: Obter informações sobre os comandos
-    href: learn/getting-information-about-commands.md
-  - name: Utilizar variáveis para armazenar objetos
-    href: learn/using-variables-to-store-objects.md
-  - name: Noções sobre o pipeline do PowerShell
-    href: learn/understanding-the-powershell-pipeline.md
-  - name: Mais formação sobre o PowerShell
-    href: learn/more-powershell-learning.md
-  - name: Escrever módulos portáteis
-    href: learn/writing-portable-modules.md
-  - name: Comunicação remota do PowerShell
-    items:
-    - name: Executar comandos remotos
-      href: learn/remoting/running-remote-commands.md
-    - name: Comunicação remota do PowerShell através de SSH
-      href: learn/remoting/ssh-remoting-in-powershell-core.md
-    - name: Comunicação remota do Ws-Management (WSMan) no PowerShell Core
-      href: learn/remoting/wsman-remoting-in-powershell-core.md
-    - name: Segurança do WinRM
-      href: learn/remoting/winrmsecurity.md
-    - name: Efetuar o segundo salto na Comunicação Remota do PowerShell
-      href: learn/remoting/ps-remoting-second-hop.md
-  - name: Glossário
-    href: learn/windows-powershell-glossary.md
+    - name: Noções sobre conceitos importantes do PowerShell
+      href: learn/understanding-important-powershell-concepts.md
+    - name: Aprender os nomes do PowerShell
+      href: learn/learning-powershell-names.md
+    - name: Utilizar nomes de comandos familiares
+      href: learn/using-familiar-command-names.md
+    - name: Obter informações de ajuda detalhadas
+      href: learn/getting-detailed-help-information.md
+    - name: Obter informações sobre os comandos
+      href: learn/getting-information-about-commands.md
+    - name: Utilizar variáveis para armazenar objetos
+      href: learn/using-variables-to-store-objects.md
+    - name: Noções sobre o pipeline do PowerShell
+      href: learn/understanding-the-powershell-pipeline.md
+    - name: Mais formação sobre o PowerShell
+      href: learn/more-powershell-learning.md
+    - name: Escrever módulos portáteis
+      href: learn/writing-portable-modules.md
+    - name: Comunicação remota do PowerShell
+      items:
+        - name: Executar comandos remotos
+          href: learn/remoting/running-remote-commands.md
+        - name: Comunicação remota do PowerShell através de SSH
+          href: learn/remoting/ssh-remoting-in-powershell-core.md
+        - name: Comunicação remota do Ws-Management (WSMan) no PowerShell Core
+          href: learn/remoting/wsman-remoting-in-powershell-core.md
+        - name: Segurança do WinRM
+          href: learn/remoting/winrmsecurity.md
+        - name: Efetuar o segundo salto na Comunicação Remota do PowerShell
+          href: learn/remoting/ps-remoting-second-hop.md
+    - name: Glossário
+      href: learn/windows-powershell-glossary.md
 - name: Componentes
   items:
-  - name: Consola
-    items:
-    - name: Ajuda da linha de comandos PowerShell.exe
-      href: components/console/powershell.exe-command-line-help.md
-    - name: Utilizar a expansão por tabulação
-      href: components/console/using-tab-expansion.md
-  - name: ISE
-    items:
-    - name: Introdução ao ISE do Windows PowerShell
-      href: components/ise/introducing-the-windows-powershell-ise.md
-    - name: Windows PowerShell Integrated Scripting Environment (ISE)
-      href: components/ise/windows-powershell-integrated-scripting-environment--ise-.md
-    - name: Utilizar o ISE do Windows PowerShell
+    - name: Consola
       items:
-      - name: Explorar o ISE do Windows PowerShell
-        href: components/ise/exploring-the-windows-powershell-ise.md
-      - name: Como Criar um Separador do PowerShell no ISE do Windows PowerShell
-        href: components/ise/how-to-create-a-powershell-tab-in-windows-powershell-ise.md
-      - name: Como depurar scripts no ISE do Windows PowerShell
-        href: components/ise/how-to-debug-scripts-in-windows-powershell-ise.md
-      - name: Como utilizar perfis no ISE do Windows PowerShell
-        href: components/ise/how-to-use-profiles-in-windows-powershell-ise.md
-      - name: Como utilizar o preenchimento com a tecla de tabulação nos painéis de scripts e no painel de consola
-        href: components/ise/how-to-use-tab-completion-in-the-script-pane-and-console-pane.md
-      - name: Como utilizar o painel de consola no ISE do Windows PowerShell
-        href: components/ise/how-to-use-the-console-pane-in-the-windows-powershell-ise.md
-      - name: Como escrever e executar scripts no ISE do Windows PowerShell
-        href: components/ise/how-to-write-and-run-scripts-in-the-windows-powershell-ise.md
-      - name: Atalhos de teclado do ISE do Windows PowerShell
-        href: components/ise/keyboard-shortcuts-for-the-windows-powershell-ise.md
-      - name: Acessibilidade no ISE do Windows PowerShell
-        href: components/ise/accessibility-in-windows-powershell-ise.md
-    - name: Modelo de objeto de scripts do ISE
+        - name: Ajuda da linha de comandos PowerShell.exe
+          href: components/console/powershell.exe-command-line-help.md
+        - name: Utilizar a expansão por tabulação
+          href: components/console/using-tab-expansion.md
+    - name: ISE
       items:
-      - name: Objetivo do Modelo de Objeto de Processamento de Scripts do ISE do Windows PowerShell
-        href: components/ise/object-model/purpose-of-the-windows-powershell-ise-scripting-object-model.md
-      - name: Hierarquia do modelo de objeto ISE
-        href: components/ise/object-model/the-ise-object-model-hierarchy.md
-      - name: Objeto ObjectModelRoot
-        href: components/ise/object-model/the-objectmodelroot-object.md
-      - name: Objeto ISEAddOnToolCollection
-        href: components/ise/object-model/the-iseaddontoolcollection-object.md
-      - name: Objeto ISEAddOnTool
-        href: components/ise/object-model/the-iseaddontool-object.md
-      - name: Objeto ISEEditor
-        href: components/ise/object-model/the-iseeditor-object.md
-      - name: Objeto ISEFileCollection
-        href: components/ise/object-model/the-isefilecollection-object.md
-      - name: Objeto ISEFile
-        href: components/ise/object-model/the-isefile-object.md
-      - name: Objeto ISEMenuItemCollection
-        href: components/ise/object-model/the-isemenuitemcollection-object.md
-      - name: Objeto ISEMenuItem
-        href: components/ise/object-model/the-isemenuitem-object.md
-      - name: Objeto ISEOptions
-        href: components/ise/object-model/the-iseoptions-object.md
-      - name: Objeto ISESnippetCollection
-        href: components/ise/object-model/the-isesnippetcollection-object.md
-      - name: ISESnippetObject
-        href: components/ise/object-model/the-isesnippetobject.md
-      - name: Objeto PowerShellTabCollection
-        href: components/ise/object-model/the-powershelltabcollection-object.md
-      - name: Objeto PowerShellTab
-        href: components/ise/object-model/the-powershelltab-object.md
-  - name: Visual Studio Code
-    items:
-    - name: Utilizar o Visual Studio Code
-      href: components/vscode/using-vscode.md
-    - name: Como replicar a experiência do ISE no Visual Studio Code
-      href: components/vscode/How-To-Replicate-the-ISE-Experience-In-VSCode.md
-    - name: Utilizar o Visual Studio Code para a edição e depuração remotas
-      href: components/vscode/Using-VSCode-for-Remote-Editing-and-Debugging.md
-    - name: Compreender a codificação de ficheiros no VSCode e no PowerShell
-      href: components/vscode/understanding-file-encoding.md
-  - name: Acesso Web
-    items:
-    - name: Regras de autorização e funcionalidades de segurança
-      href: components/web-access/authorization-rules-and-security-features-of-windows-powershell-web-access.md
-    - name: Instalação
-      href: components/web-access/install-and-use-windows-powershell-web-access.md
-    - name: Resolução de problemas de acesso
-      href: components/web-access/troubleshooting-access-problems-in-windows-powershell-web-access.md
-    - name: Desinstalar o Acesso Web do Windows PowerShell
-      href: components/web-access/uninstall-windows-powershell-web-access.md
-    - name: Utilizar a consola do PowerShell baseada na web
-      href: components/web-access/use-the-web-based-windows-powershell-console.md
-  - name: Guia dos Fluxos de Trabalho
-    href: components/workflows-guide.md
+        - name: Introdução ao ISE do Windows PowerShell
+          href: components/ise/introducing-the-windows-powershell-ise.md
+        - name: Windows PowerShell Integrated Scripting Environment (ISE)
+          href: components/ise/windows-powershell-integrated-scripting-environment--ise-.md
+        - name: Utilizar o ISE do Windows PowerShell
+          items:
+            - name: Explorar o ISE do Windows PowerShell
+              href: components/ise/exploring-the-windows-powershell-ise.md
+            - name: Como Criar um Separador do PowerShell no ISE do Windows PowerShell
+              href: components/ise/how-to-create-a-powershell-tab-in-windows-powershell-ise.md
+            - name: Como depurar scripts no ISE do Windows PowerShell
+              href: components/ise/how-to-debug-scripts-in-windows-powershell-ise.md
+            - name: Como utilizar perfis no ISE do Windows PowerShell
+              href: components/ise/how-to-use-profiles-in-windows-powershell-ise.md
+            - name: Como utilizar o preenchimento com a tecla de tabulação nos painéis de scripts e no painel de consola
+              href: components/ise/how-to-use-tab-completion-in-the-script-pane-and-console-pane.md
+            - name: Como utilizar o painel de consola no ISE do Windows PowerShell
+              href: components/ise/how-to-use-the-console-pane-in-the-windows-powershell-ise.md
+            - name: Como escrever e executar scripts no ISE do Windows PowerShell
+              href: components/ise/how-to-write-and-run-scripts-in-the-windows-powershell-ise.md
+            - name: Atalhos de teclado do ISE do Windows PowerShell
+              href: components/ise/keyboard-shortcuts-for-the-windows-powershell-ise.md
+            - name: Acessibilidade no ISE do Windows PowerShell
+              href: components/ise/accessibility-in-windows-powershell-ise.md
+        - name: Modelo de objeto de scripts do ISE
+          items:
+            - name: Objetivo do Modelo de Objeto de Processamento de Scripts do ISE do Windows PowerShell
+              href: components/ise/object-model/purpose-of-the-windows-powershell-ise-scripting-object-model.md
+            - name: Hierarquia do modelo de objeto ISE
+              href: components/ise/object-model/the-ise-object-model-hierarchy.md
+            - name: Objeto ObjectModelRoot
+              href: components/ise/object-model/the-objectmodelroot-object.md
+            - name: Objeto ISEAddOnToolCollection
+              href: components/ise/object-model/the-iseaddontoolcollection-object.md
+            - name: Objeto ISEAddOnTool
+              href: components/ise/object-model/the-iseaddontool-object.md
+            - name: Objeto ISEEditor
+              href: components/ise/object-model/the-iseeditor-object.md
+            - name: Objeto ISEFileCollection
+              href: components/ise/object-model/the-isefilecollection-object.md
+            - name: Objeto ISEFile
+              href: components/ise/object-model/the-isefile-object.md
+            - name: Objeto ISEMenuItemCollection
+              href: components/ise/object-model/the-isemenuitemcollection-object.md
+            - name: Objeto ISEMenuItem
+              href: components/ise/object-model/the-isemenuitem-object.md
+            - name: Objeto ISEOptions
+              href: components/ise/object-model/the-iseoptions-object.md
+            - name: Objeto ISESnippetCollection
+              href: components/ise/object-model/the-isesnippetcollection-object.md
+            - name: ISESnippetObject
+              href: components/ise/object-model/the-isesnippetobject.md
+            - name: Objeto PowerShellTabCollection
+              href: components/ise/object-model/the-powershelltabcollection-object.md
+            - name: Objeto PowerShellTab
+              href: components/ise/object-model/the-powershelltab-object.md
+    - name: Visual Studio Code
+      items:
+        - name: Utilizar o Visual Studio Code
+          href: components/vscode/using-vscode.md
+        - name: Como replicar a experiência do ISE no Visual Studio Code
+          href: components/vscode/How-To-Replicate-the-ISE-Experience-In-VSCode.md
+        - name: Utilizar o Visual Studio Code para a edição e depuração remotas
+          href: components/vscode/Using-VSCode-for-Remote-Editing-and-Debugging.md
+        - name: Compreender a codificação de ficheiros no VSCode e no PowerShell
+          href: components/vscode/understanding-file-encoding.md
+    - name: Acesso Web
+      items:
+        - name: Regras de autorização e funcionalidades de segurança
+          href: components/web-access/authorization-rules-and-security-features-of-windows-powershell-web-access.md
+        - name: Instalação
+          href: components/web-access/install-and-use-windows-powershell-web-access.md
+        - name: Resolução de problemas de acesso
+          href: components/web-access/troubleshooting-access-problems-in-windows-powershell-web-access.md
+        - name: Desinstalar o Acesso Web do Windows PowerShell
+          href: components/web-access/uninstall-windows-powershell-web-access.md
+        - name: Utilizar a consola do PowerShell baseada na web
+          href: components/web-access/use-the-web-based-windows-powershell-console.md
+    - name: Guia dos Fluxos de Trabalho
+      href: components/workflows-guide.md
 - name: Novidades
   items:
-  - name: Novidades no PowerShell Core 6.x
-    items:
-    - name: Novidades no PowerShell Core 6.1
-      href: whats-new/what-s-new-in-powershell-core-61.md
-    - name: Novidades no PowerShell Core 6.0
-      href: whats-new/what-s-new-in-powershell-core-60.md
-    - name: Breaking changes in PowerShell Core 6.0 (Alterações com implicações no PowerShell Core 6.0)
-      href: whats-new/breaking-changes-ps6.md
-    - name: Problemas conhecidos no PowerShell Core 6.0
-      href: whats-new/known-issues-ps6.md
-  - name: Novidades no PowerShell 5.x
-    items:
-    - name: Novidades no PowerShell 5.0
-      href: whats-new/what-s-new-with-powershell.md
-    - name: Novidades no Windows PowerShell 5.0
-      href: whats-new/what-s-new-in-windows-powershell-50.md
-    - name: Novidades no ISE do PowerShell 5.0
-      href: whats-new/what-s-new-in-the-powershell-50-ise.md
+    - name: Novidades no PowerShell Core 6.x
+      items:
+        - name: "Novidades no PowerShell Core\_6.2"
+          href: whats-new/what-s-new-in-powershell-core-62.md
+        - name: "Novidades no PowerShell Core\_6.1"
+          href: whats-new/what-s-new-in-powershell-core-61.md
+        - name: "Novidades no PowerShell Core\_6.0"
+          href: whats-new/what-s-new-in-powershell-core-60.md
+        - name: Breaking changes in PowerShell Core 6.0 (Alterações com implicações no PowerShell Core 6.0)
+          href: whats-new/breaking-changes-ps6.md
+        - name: Problemas conhecidos no PowerShell Core 6.0
+          href: whats-new/known-issues-ps6.md
+    - name: Novidades no PowerShell 5.x
+      items:
+        - name: Novidades no PowerShell 5.0
+          href: whats-new/what-s-new-with-powershell.md
+        - name: "Novidades no Windows PowerShell\_5.0"
+          href: whats-new/what-s-new-in-windows-powershell-50.md
+        - name: "Novidades no ISE do PowerShell\_5.0"
+          href: whats-new/what-s-new-in-the-powershell-50-ise.md
 - name: Ciclo de vida do suporte do PowerShell Core
   href: powershell-support-lifecycle.md
 - name: Scripts de exemplo
   items:
-  - name: Scripts de exemplo para administração
-    href: samples/sample-scripts-for-administration.md
-  - name: Alterar o estado do computador
-    href: samples/changing-computer-state.md
-  - name: Recolher informações sobre os computadores
-    href: samples/collecting-information-about-computers.md
-  - name: Criar consultas do Get-WinEvent com o FilterHashtable
-    href: samples/creating-get-winEvent-queries-with-filterhashtable.md
-  - name: Criar elementos de IU
-    items:
-    - name: Criar uma caixa de entrada personalizada
-      href: samples/creating-a-custom-input-box.md
-    - name: Criar um seletor de datas gráfico
-      href: samples/creating-a-graphical-date-picker.md
-    - name: Caixas de listagem de seleção múltipla
-      href: samples/multiple-selection-list-boxes.md
-    - name: Selecionar itens numa caixa de listagem
-      href: samples/selecting-items-from-a-list-box.md
-  - name: Decode a PowerShell command from a running process (Descodificar um comando do PowerShell a partir de um processo em execução)
-    href: samples/decode-powershell-command-from-a-running-process.md
-  - name: Gerir a localização atual
-    href: samples/managing-current-location.md
-  - name: Gerir processos com cmdlets de processo
-    href: samples/managing-processes-with-process-cmdlets.md
-  - name: Gerir serviços
-    href: samples/managing-services.md
-  - name: Gerir unidades do Windows PowerShell
-    href: samples/managing-windows-powershell-drives.md
-  - name: Manipular itens diretamente
-    href: samples/manipulating-items-directly.md
-  - name: Executar tarefas de rede
-    href: samples/performing-networking-tasks.md
-  - name: Redirecionar dados com cmdlets Out-*
-    href: samples/redirecting-data-with-out---cmdlets.md
-  - name: Utilizar comandos de formato para alterar a vista de saída
-    href: samples/using-format-commands-to-change-output-view.md
-  - name: Trabalhar com ficheiros e pastas
-    href: samples/working-with-files-and-folders.md
-  - name: Trabalhar com pastas de ficheiros e chaves do registo
-    href: samples/working-with-files-folders-and-registry-keys.md
-  - name: Trabalhar com objetos
-    items:
-    - name: Obter objetos WMI (Get-WmiObject)
-      href: samples/getting-wmi-objects--get-wmiobject-.md
-    - name: Criar objetos .NET e COM (New-Object)
-      href: samples/creating-.net-and-com-objects--new-object-.md
-    - name: Remover objetos do pipeline (Where-Object)
-      href: samples/removing-objects-from-the-pipeline--where-object-.md
-    - name: Selecionar partes de objeto (Select-Object)
-      href: samples/selecting-parts-of-objects--select-object-.md
-    - name: Ordenar objetos
-      href: samples/sorting-objects.md
-    - name: Repetir uma tarefa para múltiplos objetos (ForEach-Object)
-      href: samples/repeating-a-task-for-multiple-objects--foreach-object-.md
-    - name: Utilizar classes e métodos estáticos
-      href: samples/using-static-classes-and-methods.md
-    - name: Ver a estrutura de objetos (Get-Member)
-      href: samples/viewing-object-structure--get-member-.md
-  - name: Trabalhar com impressoras
-    href: samples/working-with-printers.md
-  - name: Trabalhar com entradas do registo
-    href: samples/working-with-registry-entries.md
-  - name: Trabalhar com chaves do registo
-    href: samples/working-with-registry-keys.md
-  - name: Trabalhar com instalações de software
-    href: samples/working-with-software-installations.md
-  - name: Outros objetos de scripting úteis
-    href: samples/other-useful-scripting-objects.md
-  - name: Apêndice 1 – Aliases de compatibilidade
-    href: samples/appendix-1---compatibility-aliases.md
-  - name: Apêndice 2 – Criar um atalho personalizado para o PowerShell
-    href: samples/appendix-2---creating-a-custom-powershell-shortcut.md
-ms.openlocfilehash: 3894ca88d01d4f84742321445b0b1e962631c10d
-ms.sourcegitcommit: 0ca836d1044e46d3a7dcbc69fa93d84f74848559
-ms.translationtype: HT
-ms.contentlocale: pt-PT
-ms.lasthandoff: 04/04/2019
-ms.locfileid: "58920463"
+    - name: Scripts de exemplo para administração
+      href: samples/sample-scripts-for-administration.md
+    - name: Alterar o estado do computador
+      href: samples/changing-computer-state.md
+    - name: Recolher informações sobre os computadores
+      href: samples/collecting-information-about-computers.md
+    - name: Criar consultas do Get-WinEvent com o FilterHashtable
+      href: samples/creating-get-winEvent-queries-with-filterhashtable.md
+    - name: Criar elementos de IU
+      items:
+        - name: Criar uma caixa de entrada personalizada
+          href: samples/creating-a-custom-input-box.md
+        - name: Criar um seletor de datas gráfico
+          href: samples/creating-a-graphical-date-picker.md
+        - name: Caixas de listagem de seleção múltipla
+          href: samples/multiple-selection-list-boxes.md
+        - name: Selecionar itens numa caixa de listagem
+          href: samples/selecting-items-from-a-list-box.md
+    - name: Decode a PowerShell command from a running process (Descodificar um comando do PowerShell a partir de um processo em execução)
+      href: samples/decode-powershell-command-from-a-running-process.md
+    - name: Gerir a localização atual
+      href: samples/managing-current-location.md
+    - name: Gerir processos com cmdlets de processo
+      href: samples/managing-processes-with-process-cmdlets.md
+    - name: Gerir serviços
+      href: samples/managing-services.md
+    - name: Gerir unidades do Windows PowerShell
+      href: samples/managing-windows-powershell-drives.md
+    - name: Manipular itens diretamente
+      href: samples/manipulating-items-directly.md
+    - name: Executar tarefas de rede
+      href: samples/performing-networking-tasks.md
+    - name: Redirecionar dados com cmdlets Out-*
+      href: samples/redirecting-data-with-out---cmdlets.md
+    - name: Utilizar comandos de formato para alterar a vista de saída
+      href: samples/using-format-commands-to-change-output-view.md
+    - name: Trabalhar com ficheiros e pastas
+      href: samples/working-with-files-and-folders.md
+    - name: Trabalhar com pastas de ficheiros e chaves do registo
+      href: samples/working-with-files-folders-and-registry-keys.md
+    - name: Trabalhar com objetos
+      items:
+        - name: Obter objetos WMI (Get-WmiObject)
+          href: samples/getting-wmi-objects--get-wmiobject-.md
+        - name: Criar objetos .NET e COM (New-Object)
+          href: samples/creating-.net-and-com-objects--new-object-.md
+        - name: Remover objetos do pipeline (Where-Object)
+          href: samples/removing-objects-from-the-pipeline--where-object-.md
+        - name: Selecionar partes de objeto (Select-Object)
+          href: samples/selecting-parts-of-objects--select-object-.md
+        - name: Ordenar objetos
+          href: samples/sorting-objects.md
+        - name: Repetir uma tarefa para múltiplos objetos (ForEach-Object)
+          href: samples/repeating-a-task-for-multiple-objects--foreach-object-.md
+        - name: Utilizar classes e métodos estáticos
+          href: samples/using-static-classes-and-methods.md
+        - name: Ver a estrutura de objetos (Get-Member)
+          href: samples/viewing-object-structure--get-member-.md
+    - name: Trabalhar com impressoras
+      href: samples/working-with-printers.md
+    - name: Trabalhar com entradas do registo
+      href: samples/working-with-registry-entries.md
+    - name: Trabalhar com chaves do registo
+      href: samples/working-with-registry-keys.md
+    - name: Trabalhar com instalações de software
+      href: samples/working-with-software-installations.md
+    - name: Outros objetos de scripting úteis
+      href: samples/other-useful-scripting-objects.md
+    - name: Apêndice 1 – Aliases de compatibilidade
+      href: samples/appendix-1---compatibility-aliases.md
+    - name: Apêndice 2 – Criar um atalho personalizado para o PowerShell
+      href: samples/appendix-2---creating-a-custom-powershell-shortcut.md

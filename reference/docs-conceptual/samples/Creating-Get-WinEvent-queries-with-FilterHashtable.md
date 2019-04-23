@@ -2,11 +2,11 @@
 ms.date: 3/18/2019
 title: Criar consultas do Get-WinEvent com o FilterHashtable
 ms.openlocfilehash: 28ba3c99a297944003a28eaba7de34b77d9df536
-ms.sourcegitcommit: 806cf87488b80800b9f50a8af286e8379519a034
-ms.translationtype: MT
+ms.sourcegitcommit: f4bd4e116e22c8b5bfcb61680a7c42e58b4da93e
+ms.translationtype: HT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 04/09/2019
-ms.locfileid: "59293287"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59984226"
 ---
 # <a name="creating-get-winevent-queries-with-filterhashtable"></a>Criar consultas do Get-WinEvent com o FilterHashtable
 
@@ -53,7 +53,7 @@ A tabela seguinte apresenta os nomes de chaves, os tipos de dados, e se os carat
 | LogName      | `<String[]>`       | Sim |
 | ProviderName | `<String[]>`       | Sim |
 | Caminho         | `<String[]>`       | Não  |
-| Palavras-chave     | `<Long[]>`         | Não  |
+| palavras-chave     | `<Long[]>`         | Não  |
 | ID           | `<Int32[]>`        | Não  |
 | Nível        | `<Int32[]>`        | Não  |
 | StartTime    | `<DateTime>`       | Não  |
@@ -217,7 +217,7 @@ O **nível** da chave de nomes e valores enumerados são os seguintes:
 
 | Nome           | Valor |
 | -------------- | ----- |
-| Verbose        |   5   |
+| Verboso        |   5   |
 | Informativo  |   4   |
 | Aviso        |   3   |
 | Erro          |   2   |

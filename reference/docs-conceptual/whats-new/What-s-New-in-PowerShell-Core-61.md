@@ -2,12 +2,12 @@
 title: Quais são as novidades no PowerShell Core 6.1
 description: Novos recursos e alterações lançadas no PowerShell Core 6.1
 ms.date: 09/13/2018
-ms.openlocfilehash: fe1e892d4a13a7758f5405867fdd7488c059f5cc
-ms.sourcegitcommit: 17ce42f97e13e8b3286779dc3f583474b0357023
-ms.translationtype: MT
+ms.openlocfilehash: 3d836a24b494df9c7f6ebe994386e2a0297521fa
+ms.sourcegitcommit: f4bd4e116e22c8b5bfcb61680a7c42e58b4da93e
+ms.translationtype: HT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59293321"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59984515"
 ---
 # <a name="whats-new-in-powershell-core-61"></a>Quais são as novidades no PowerShell Core 6.1
 
@@ -179,8 +179,9 @@ Para obter mais informações sobre o funcionamento destes cmdlets, confira [est
 
 ## <a name="experimental-feature-flags"></a>Sinalizadores de funcionalidade experimental
 
-Sinalizadores de funcionalidade experimental permitem aos utilizadores ativar as funcionalidades que ainda não foram determinadas.
-Estas funcionalidades experimentais não são suportadas e podem ter bugs.
+Ativámos o suporte para [funcionalidades experimentais][]. Isso permite aos desenvolvedores PowerShell ofereça novas funcionalidades e receba comentários antes da conclusão do design. Desta forma podemos evitar fazer alterações de última hora, como o design se desenvolve.
+
+Utilize `Get-ExperimentalFeature` para obter uma lista das funcionalidades experimentais disponíveis. Pode ativar ou desativar estas funcionalidades com `Enable-ExperimentalFeature` e `Disable-ExperimentalFeature`.
 
 Pode saber mais sobre esta funcionalidade no [PowerShell RFC0029](https://github.com/PowerShell/PowerShell-RFC/blob/master/5-Final/RFC0029-Support-Experimental-Features.md).
 
@@ -523,3 +524,6 @@ Como parte da melhoria no desempenho, `Group-Object` agora retorna uma lista cla
 Embora não deve confiar na ordem, poderia ser quebrada por esta alteração se quisesse que o primeiro grupo. Decidimos que essa melhoria de desempenho era que vale a pena a alteração, uma vez que o impacto de ser dependentes do comportamento anterior é baixo.
 
 Para obter mais informações sobre esta alteração, consulte [problema #7409](https://github.com/PowerShell/PowerShell/issues/7409).
+
+<!-- URL references -->
+[Funcionalidades experimentais]: /powershell/module/Microsoft.PowerShell.Core/About/about_Experimental_Features

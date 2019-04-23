@@ -1,12 +1,12 @@
 ---
 ms.date: 06/12/2017
 keywords: wmf,powershell,setup
-ms.openlocfilehash: 1c4a7ad30b04d138ba8a840968a6bf1763448ac6
-ms.sourcegitcommit: b6871f21bd666f9cd71dd336bb3f844cf472b56c
-ms.translationtype: MT
+ms.openlocfilehash: 3cfc2f042234f682599bb67eac592ea3f77b31b6
+ms.sourcegitcommit: f4bd4e116e22c8b5bfcb61680a7c42e58b4da93e
+ms.translationtype: HT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 02/03/2019
-ms.locfileid: "55688267"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59984107"
 ---
 # <a name="interact-with-symbolic-links-using-improved-item-cmdlets"></a>Interagir com ligações simbólicas através dos cmdlets de Item melhorados
 
@@ -14,9 +14,9 @@ Para oferecer suporte a links simbólicos,  **\*-Item** e alguns cmdlets relacio
 
 O código a seguir mostra que alguns casos, os novos recursos de utilização:
 
-## <a name="new-item"></a>NOVO ITEM
+## <a name="new-item"></a>Novo Item
 
-### <a name="symbolic-link-files"></a>ARQUIVOS DE LINK SIMBÓLICO
+### <a name="symbolic-link-files"></a>Arquivos de link simbólico
 
 ```powershell
 # Create a new symbolic link file named MySymLinkFile.txt in C:\Temp which links to $pshome\profile.ps1
@@ -30,7 +30,7 @@ New-Item -ItemType SymbolicLink -Path C:\Temp\MySymLinkFile.txt -Value $pshome\p
 New-Item -ItemType SymbolicLink -Name C:\Temp\MySymLinkFile.txt -Value $pshome\profile.ps1
 ```
 
-### <a name="symbolic-link-directories"></a>DIRETÓRIOS DE LINK SIMBÓLICO
+### <a name="symbolic-link-directories"></a>Diretórios de link simbólico
 
 ```powershell
 # Create a new symbolic link directory named MySymLinkDir in C:\Temp which links to the $pshome folder
@@ -45,21 +45,21 @@ New-Item -ItemType SymbolicLink -Path C:\Temp\MySymLinkDir -Value $pshome
 New-Item -ItemType SymbolicLink -Name C:\Temp\MySymLinkDir -Value $pshome
 ```
 
-### <a name="hard-links"></a>LIGAÇÕES FIXAS
+### <a name="hard-links"></a>Ligações fixas
 
 ```powershell
 New-Item -ItemType HardLink -Path C:\Temp -Name MyHardLinkFile.txt -Value $pshome\profile.ps1
 # Same combinations of Path and Name allowed as described above
 ```
 
-### <a name="directory-junctions"></a>JUNÇÕES DE DIRETÓRIO
+### <a name="directory-junctions"></a>Junções de diretório
 
 ```powershell
 New-Item -ItemType Junction -Path C:\Temp\MyJunctionDir -Value $pshome
 # Same combinations of Path and Name allowed as described above
 ```
 
-## <a name="get-childitem"></a>GET-CHILDITEM
+## <a name="get-childitem"></a>Get-ChildItem
 
 ```powershell
 # Append link type column to Mode property and display with Get-ChildItem
@@ -110,7 +110,7 @@ SpecialBuild: False
 Language:
 ```
 
-## <a name="remove-item"></a>REMOVE-ITEM
+## <a name="remove-item"></a>Remove-Item
 
 ```powershell
 # Works like any other item type
