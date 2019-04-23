@@ -1,293 +1,286 @@
-items:
 - name: Descrição geral
   items:
-  - name: Descrição Geral do Desired State Configuration para Programadores
-    href: overview/overview.md
-  - name: Descrição Geral do Desired State Configuration para Decisores
-    href: overview/decisionMaker.md
-  - name: Descrição Geral do Desired State Configuration para Engenheiros
-    href: overview/DscForEngineers.md
-  - name: Noções sobre a função do DSC num Pipeline CI/CD
-    href: overview/authoringAdvanced.md
+    - name: Descrição Geral do Desired State Configuration para Programadores
+      href: overview/overview.md
+    - name: Descrição Geral do Desired State Configuration para Decisores
+      href: overview/decisionMaker.md
+    - name: Descrição Geral do Desired State Configuration para Engenheiros
+      href: overview/DscForEngineers.md
+    - name: Noções sobre a função do DSC num Pipeline CI/CD
+      href: overview/authoringAdvanced.md
 - name: Introdução
   items:
-  - name: Introdução ao DSC para Linux
-    href: getting-started/lnxGettingStarted.md
-  - name: Introdução ao DSC para Servidor Nano
-    href: getting-started/nanoDSC.md
-  - name: Introdução ao DSC na Automatização do Azure
-    href: getting-started/azureDSC.md
-  - name: Introdução ao DSC em Máquinas Virtuais do Azure
-    href: getting-started/azureDSCexthistory.md
+    - name: Introdução ao DSC para Linux
+      href: getting-started/lnxGettingStarted.md
+    - name: Introdução ao DSC para Servidor Nano
+      href: getting-started/nanoDSC.md
+    - name: Introdução ao DSC na Automatização do Azure
+      href: getting-started/azureDSC.md
+    - name: Introdução ao DSC em Máquinas Virtuais do Azure
+      href: getting-started/azureDSCexthistory.md
 - name: Guias de Início Rápido
   items:
-  - name: Criar um site com o DSC
-    href: quickstarts/website-quickStart.md
+    - name: Criar um site com o DSC
+      href: quickstarts/website-quickStart.md
 - name: Configurações
   items:
-  - name: Conceitos
-    items:
-    - name: O que é uma Configuração?
-      href: configurations/configurations.md
-  - name: Guias de procedimentos
-    items:
-    - name: Escrever, Compilar e Aplicar uma Configuração
-      href: configurations/write-compile-apply-configuration.md
-    - name: Trabalhar com Recursos em Configurações
+    - name: Conceitos
       items:
-      - name: Utilizar a palavra-chave Import-DSCResource
-        href: configurations/import-dscresource.md
-      - name: Instalar Recursos do DSC adicionais
-        href: configurations/install-additional-dsc-resources.md
-      - name: Importar uma versão específica de um recurso instalado
-        href: configurations/sxsResource.md
-      - name: Utilizar Credenciais com Recursos do DSC
-        href: configurations/runAsUser.md
-    - name: Escrever Configurações Dinâmicas
+        - name: O que é uma Configuração?
+          href: configurations/configurations.md
+    - name: Guias de procedimentos
       items:
-      - name: Adicionar Parâmetros a uma Configuração
-        href: configurations/add-parameters-to-a-configuration.md
-      - name: Instruções condicionais e ciclos em Configurações
-        href: configurations/flow-control-in-configurations.md
-      - name: Escrever ajuda para configurações do DSC
-        href: configurations/configHelp.md
-      - name: Configurações de Aninhamento
-        href: configurations/compositeconfigs.md
-    - name: Dados de Configuração
-      items:
-      - name: Separar dados de Configuração das Configurações
-        href: configurations/configData.md
-      - name: Separar dados de configuração e de ambiente (psd1)
-        href: configurations/separatingEnvData.md
-      - name: Opções de credenciais nos dados de configuração
-        href: configurations/configDataCredentials.md
-    - name: Dependências em Configurações
-      items:
-      - name: Dependências de recursos com a chave DependsOn
-        href: configurations/resource-depends-on.md
-      - name: Dependências Entre Nós
-        href: configurations/crossNodeDependencies.md
-      - name: Reboot a Node (Reiniciar um Nó)
-        href: configurations/reboot-a-node.md
+        - name: 'Escrever, Compilar e Aplicar uma Configuração'
+          href: configurations/write-compile-apply-configuration.md
+        - name: Trabalhar com Recursos em Configurações
+          items:
+            - name: Utilizar a palavra-chave Import-DSCResource
+              href: configurations/import-dscresource.md
+            - name: Instalar Recursos do DSC adicionais
+              href: configurations/install-additional-dsc-resources.md
+            - name: Importar uma versão específica de um recurso instalado
+              href: configurations/sxsResource.md
+            - name: Utilizar Credenciais com Recursos do DSC
+              href: configurations/runAsUser.md
+        - name: Escrever Configurações Dinâmicas
+          items:
+            - name: Adicionar Parâmetros a uma Configuração
+              href: configurations/add-parameters-to-a-configuration.md
+            - name: Instruções condicionais e ciclos em Configurações
+              href: configurations/flow-control-in-configurations.md
+            - name: Escrever ajuda para configurações do DSC
+              href: configurations/configHelp.md
+            - name: Configurações de Aninhamento
+              href: configurations/compositeconfigs.md
+        - name: Dados de Configuração
+          items:
+            - name: Separar dados de Configuração das Configurações
+              href: configurations/configData.md
+            - name: Separar dados de configuração e de ambiente (psd1)
+              href: configurations/separatingEnvData.md
+            - name: Opções de credenciais nos dados de configuração
+              href: configurations/configDataCredentials.md
+        - name: Dependências em Configurações
+          items:
+            - name: Dependências de recursos com a chave DependsOn
+              href: configurations/resource-depends-on.md
+            - name: Dependências Entre Nós
+              href: configurations/crossNodeDependencies.md
+            - name: Reboot a Node (Reiniciar um Nó)
+              href: configurations/reboot-a-node.md
 - name: Recursos
   items:
-  - name: Conceitos
-    items:
-    - name: O que são Recursos?
-      href: resources/resources.md
-    - name: Métodos Get, Test e Set
-      href: resources/get-test-set.md
-    - name: Recursos Personalizados
-      href: resources/authoringresource.md
-    - name: Escrever um recurso do DSC de instância única (melhor prática)
-      href: resources/singleInstance.md
-    - name: Lista de verificação de criação de recursos
-      href: resources/resourceAuthoringChecklist.md
-  - name: Guias de procedimentos
-    items:
-    - name: Escrever recursos baseados em MOF no PowerShell
-      href: resources/authoringResourceMOF.md
-    - name: Escrever recursos baseados em Classes no PowerShell
-      href: resources/authoringResourceClass.md
-    - name: Escrever recursos Compostos no PowerShell
-      href: resources/authoringResourceComposite.md
-    - name: Escrever recursos baseados em MOF em C#
-      href: resources/authoringResourceMofCS.md
-    - name: Utilizar a Resource Designer Tool
-      href: resources/authoringResourceMofDesigner.md
+    - name: Conceitos
+      items:
+        - name: O que são Recursos?
+          href: resources/resources.md
+        - name: 'Métodos Get, Test e Set'
+          href: resources/get-test-set.md
+        - name: Recursos Personalizados
+          href: resources/authoringresource.md
+        - name: Escrever um recurso do DSC de instância única (melhor prática)
+          href: resources/singleInstance.md
+        - name: Lista de verificação de criação de recursos
+          href: resources/resourceAuthoringChecklist.md
+    - name: Guias de procedimentos
+      items:
+        - name: Escrever recursos baseados em MOF no PowerShell
+          href: resources/authoringResourceMOF.md
+        - name: Escrever recursos baseados em Classes no PowerShell
+          href: resources/authoringResourceClass.md
+        - name: Escrever recursos Compostos no PowerShell
+          href: resources/authoringResourceComposite.md
+        - name: 'Escrever recursos baseados em MOF em C#'
+          href: resources/authoringResourceMofCS.md
+        - name: Utilizar a Resource Designer Tool
+          href: resources/authoringResourceMofDesigner.md
 - name: Gerir Nós
   items:
-  - name: Guias de procedimentos
-    items:
-    - name: Aplicar, Obter e Testar Configurações num Nó
-      href: managing-nodes/apply-get-test.md
-    - name: Configurar o Local Configuration Manager (v5)
-      href: managing-nodes/metaConfig.md
-    - name: Configurar o Local Configuration Manager (v4)
-      href: managing-nodes/metaConfig4.md
-    - name: Invocar os métodos de recursos do DSC diretamente
-      href: managing-nodes/directCallResource.md
+    - name: Guias de procedimentos
+      items:
+        - name: 'Aplicar, Obter e Testar Configurações num Nó'
+          href: managing-nodes/apply-get-test.md
+        - name: Configurar o Local Configuration Manager (v5)
+          href: managing-nodes/metaConfig.md
+        - name: Configurar o Local Configuration Manager (v4)
+          href: managing-nodes/metaConfig4.md
+        - name: Invocar os métodos de recursos do DSC diretamente
+          href: managing-nodes/directCallResource.md
 - name: Servidor de Pull
   items:
-  - name: Conceitos
-    items:
-    - name: Modelo de Push/Pull
-      href: pull-server/enactingConfigurations.md
-  - name: Guias de procedimentos
-    items:
-    - name: Configurar um Servidor de Pull
+    - name: Conceitos
       items:
-      - name: Configurar um servidor de Pull SMB do DSC
-        href: pull-server/pullServerSMB.md
-      - name: Configurar um servidor de Pull HTTP do DSC
-        href: pull-server/pullServer.md
-    - name: Registar um Nó com um Servidor de Pull
+        - name: Modelo de Push/Pull
+          href: pull-server/enactingConfigurations.md
+    - name: Guias de procedimentos
       items:
-      - name: Configurar um cliente de pull DSC
-        href: pull-server/pullClient.md
-      - name: Configurar um Cliente de Pull através de Nomes de Configuração (v5)
-        href: pull-server/pullClientConfigNames.md
-      - name: Configurar um Cliente de Pull através de IDs de Configuração (v5)
-        href: pull-server/pullClientConfigID.md
-      - name: Configurar um Cliente de Pull através de IDs de Configuração (v4)
-        href: pull-server/pullClientConfigID4.md
-      - name: Configurações Parciais
-        href: pull-server/partialconfigs.md
-    - name: Implementar Configurações com um Servidor de Pull
-      items:
-      - name: Publicar Configurações num Servidor de Pull (v4/v5)
-        href: pull-server/publishConfigs.md
-      - name: Empacotar e Carregar Recursos para um Servidor de Pull (v4)
-        href: pull-server/package-upload-resources.md
-      - name: Atualizar Nós a partir de um Servidor de Pull
-        href: pull-server/update-nodes-manually.md
-      - name: Utilizar um servidor de relatório do DSC
-        href: pull-server/reportServer.md
-    - name: Proteger o Servidor de Pull
-      items:
-      - name: Segurança do Servidor de Pull
-        href: pull-server/secureServer.md
-      - name: Proteger os ficheiros MOF com Certificados
-        href: pull-server/secureMOF.md
+        - name: Configurar um Servidor de Pull
+          items:
+            - name: Configurar um servidor de Pull SMB do DSC
+              href: pull-server/pullServerSMB.md
+            - name: Configurar um servidor de Pull HTTP do DSC
+              href: pull-server/pullServer.md
+        - name: Registar um Nó com um Servidor de Pull
+          items:
+            - name: Configurar um cliente de pull DSC
+              href: pull-server/pullClient.md
+            - name: Configurar um Cliente de Pull através de Nomes de Configuração (v5)
+              href: pull-server/pullClientConfigNames.md
+            - name: Configurar um Cliente de Pull através de IDs de Configuração (v5)
+              href: pull-server/pullClientConfigID.md
+            - name: Configurar um Cliente de Pull através de IDs de Configuração (v4)
+              href: pull-server/pullClientConfigID4.md
+            - name: Configurações Parciais
+              href: pull-server/partialconfigs.md
+        - name: Implementar Configurações com um Servidor de Pull
+          items:
+            - name: Publicar Configurações num Servidor de Pull (v4/v5)
+              href: pull-server/publishConfigs.md
+            - name: Empacotar e Carregar Recursos para um Servidor de Pull (v4)
+              href: pull-server/package-upload-resources.md
+            - name: Atualizar Nós a partir de um Servidor de Pull
+              href: pull-server/update-nodes-manually.md
+            - name: Utilizar um servidor de relatório do DSC
+              href: pull-server/reportServer.md
+        - name: Proteger o Servidor de Pull
+          items:
+            - name: Segurança do Servidor de Pull
+              href: pull-server/secureServer.md
+            - name: Proteger os ficheiros MOF com Certificados
+              href: pull-server/secureMOF.md
 - name: Tutoriais
   items:
-  - name: Criar um pipeline CI/CD com o DSC, Pester e Visual Studio Team Services
-    href: tutorials/dscCiCd.md
-  - name: Configurar uma máquina virtual no arranque inicial através do DSC
-    href: tutorials/bootstrapDsc.md
-  - name: Configurar a chave de registo DSCAutomationHostEnabled
-    href: tutorials/DSCAutomationHostEnabled.md
+    - name: 'Criar um pipeline CI/CD com o DSC, Pester e Visual Studio Team Services'
+      href: tutorials/dscCiCd.md
+    - name: Configurar uma máquina virtual no arranque inicial através do DSC
+      href: tutorials/bootstrapDsc.md
+    - name: Configurar a chave de registo DSCAutomationHostEnabled
+      href: tutorials/DSCAutomationHostEnabled.md
 - name: Resolução de Problemas
   items:
-  - name: Problemas Conhecidos
-    href: troubleshooting/troubleshooting.md
-  - name: Depurar recursos do DSC
-    href: troubleshooting/debugResource.md
+    - name: Problemas Conhecidos
+      href: troubleshooting/troubleshooting.md
+    - name: Depurar recursos do DSC
+      href: troubleshooting/debugResource.md
 - name: Referência
   items:
-  - name: Recursos incorporados do Windows
-    items:
-    - name: Recurso Archive
-      href: reference/resources/windows/archiveResource.md
-    - name: Recurso Environment
-      href: reference/resources/windows/environmentResource.md
-    - name: Recurso File
-      href: reference/resources/windows/fileResource.md
-    - name: Recurso Group
-      href: reference/resources/windows/groupResource.md
-    - name: Recurso GroupSet
-      href: reference/resources/windows/groupSetResource.md
-    - name: Recurso Log
-      href: reference/resources/windows/logResource.md
-    - name: Recurso Package
-      href: reference/resources/windows/packageResource.md
-    - name: Recurso ProcessSet
-      href: reference/resources/windows/processSetResource.md
-    - name: Recurso Registry
-      href: reference/resources/windows/registryResource.md
-    - name: Recurso Script
-      href: reference/resources/windows/scriptResource.md
-    - name: Recurso Service
-      href: reference/resources/windows/serviceResource.md
-    - name: Recurso ServiceSet
-      href: reference/resources/windows/serviceSetResource.md
-    - name: Recurso User
-      href: reference/resources/windows/userResource.md
-    - name: WaitForAllResource
-      href: reference/resources/windows/waitForAllResource.md
-    - name: WaitForAnyResource
-      href: reference/resources/windows/waitForAnyResource.md
-    - name: WaitForSomeResource
-      href: reference/resources/windows/waitForSomeResource.md
-    - name: Recurso WindowsFeature
-      href: reference/resources/windows/windowsfeatureResource.md
-    - name: Recurso WindowsFeatureSet
-      href: reference/resources/windows/windowsFeatureSetResource.md
-    - name: Recurso WindowsOptionalFeature
-      href: reference/resources/windows/windowsOptionalFeatureResource.md
-    - name: Recurso WindowsOptionalFeatureSet
-      href: reference/resources/windows/windowsOptionalFeatureSetResource.md
-    - name: Recurso WindowsPackageCab
-      href: reference/resources/windows/windowsPackageCabResource.md
-    - name: Recurso WindowsProcess
-      href: reference/resources/windows/windowsProcessResource.md
-  - name: Recursos incorporados do Linux
-    items:
-    - name: Recurso nxArchive
-      href: reference/resources/linux/lnxArchiveResource.md
-    - name: Recurso nxEnvironment
-      href: reference/resources/linux/lnxEnvironmentResource.md
-    - name: Recurso nxFile
-      href: reference/resources/linux/lnxFileResource.md
-    - name: Recurso nxFileLine
-      href: reference/resources/linux/lnxFileLineResource.md
-    - name: Recurso nxGroup
-      href: reference/resources/linux/lnxGroupResource.md
-    - name: Recurso nxPackage
-      href: reference/resources/linux/lnxPackageResource.md
-    - name: Recurso nxScript
-      href: reference/resources/linux/lnxScriptResource.md
-    - name: Recurso nxService
-      href: reference/resources/linux/lnxServiceResource.md
-    - name: Recurso nxSshAuthorizedKeys
-      href: reference/resources/linux/lnxSshAuthorizedKeysResource.md
-    - name: Recurso nxUser
-      href: reference/resources/linux/lnxUserResource.md
-  - name: Recursos incorporados do PackageManagement
-    items:
-    - name: Recurso do PackageManagementDsc
-      href: reference/resources/packagemanagement/PackageManagementDscResource.md
-    - name: Recurso do PackageManagementSourceDsc
-      href: reference/resources/packagemanagement/PackageManagementSourceDscResource.md
-  - name: Classe MSFT_DSCLocalConfigurationManager
-    items:
-    - name: Descrição geral
-      href: reference/mof-classes/msft-dsclocalconfigurationmanager.md
-    - name: Método ApplyConfiguration da classe MSFT_DSCLocalConfigurationManager
-      href: reference/mof-classes/msft-dsclocalconfigurationmanager-applyconfiguration.md
-    - name: Método DisableDebugConfiguration da classe MSFT_DSCLocalConfigurationManager
-      href: reference/mof-classes/msft-dsclocalconfigurationmanager-disabledebugconfiguration.md
-    - name: Método EnableDebugConfiguration da classe MSFT_DSCLocalConfigurationManager
-      href: reference/mof-classes/msft-dsclocalconfigurationmanager-enabledebugconfiguration.md
-    - name: Método GetConfiguration da classe MSFT_DSCLocalConfigurationManager
-      href: reference/mof-classes/msft-dsclocalconfigurationmanager-getconfiguration.md
-    - name: Método GetConfigurationResultOutput da classe MSFT_DSCLocalConfigurationManager
-      href: reference/mof-classes/msft-dsclocalconfigurationmanager-getconfigurationresultoutput.md
-    - name: Método GetConfigurationStatus da classe MSFT_DSCLocalConfigurationManager
-      href: reference/mof-classes/msft-dsclocalconfigurationmanager-getconfigurationstatus.md
-    - name: Método GetConfigurationStatus da classe MSFT_DSCLocalConfigurationManager
-      href: reference/mof-classes/msft-dsclocalconfigurationmanager-getmetaconfiguration.md
-    - name: Método PerformRequiredConfigurationChecks da classe MSFT_DSCLocalConfigurationManager
-      href: reference/mof-classes/msft-dsclocalconfigurationmanager-performrequiredconfigurationchecks.md
-    - name: Método RemoveConfiguration da classe MSFT_DSCLocalConfigurationManager
-      href: reference/mof-classes/msft-dsclocalconfigurationmanager-removeconfiguration.md
-    - name: Método ResourceGet da classe MSFT_DSCLocalConfigurationManager
-      href: reference/mof-classes/msft-dsclocalconfigurationmanager-resourceget.md
-    - name: Método ResourceSet da classe MSFT_DSCLocalConfigurationManager
-      href: reference/mof-classes/msft-dsclocalconfigurationmanager-resourceset.md
-    - name: Método ResourceTest da classe MSFT_DSCLocalConfigurationManager
-      href: reference/mof-classes/msft-dsclocalconfigurationmanager-resourcetest.md
-    - name: Método RollBack da classe MSFT_DSCLocalConfigurationManager
-      href: reference/mof-classes/msft-dsclocalconfigurationmanager-rollback.md
-    - name: Método SendConfiguration da classe MSFT_DSCLocalConfigurationManager
-      href: reference/mof-classes/msft-dsclocalconfigurationmanager-sendconfiguration.md
-    - name: Método SendConfigurationApply da classe MSFT_DSCLocalConfigurationManager
-      href: reference/mof-classes/msft-dsclocalconfigurationmanager-sendconfigurationapply.md
-    - name: Método SendConfigurationApplyAsync da classe MSFT_DSCLocalConfigurationManager
-      href: reference/mof-classes/msft-dsclocalconfigurationmanager-sendconfigurationapplyasync.md
-    - name: Método SendMetaConfigurationApply da classe MSFT_DSCLocalConfigurationManager
-      href: reference/mof-classes/msft-dsclocalconfigurationmanager-sendmetaconfigurationapply.md
-    - name: Método StopConfiguration da classe MSFT_DSCLocalConfigurationManager
-      href: reference/mof-classes/msft-dsclocalconfigurationmanager-stopconfiguration.md
-    - name: Método TestConfiguration da classe MSFT_DSCLocalConfigurationManager
-      href: reference/mof-classes/msft-dsclocalconfigurationmanager-testconfiguration.md
+    - name: Recursos incorporados do Windows
+      items:
+        - name: Recurso Archive
+          href: reference/resources/windows/archiveResource.md
+        - name: Recurso Environment
+          href: reference/resources/windows/environmentResource.md
+        - name: Recurso File
+          href: reference/resources/windows/fileResource.md
+        - name: Recurso Group
+          href: reference/resources/windows/groupResource.md
+        - name: Recurso GroupSet
+          href: reference/resources/windows/groupSetResource.md
+        - name: Recurso Log
+          href: reference/resources/windows/logResource.md
+        - name: Recurso Package
+          href: reference/resources/windows/packageResource.md
+        - name: Recurso ProcessSet
+          href: reference/resources/windows/processSetResource.md
+        - name: Recurso Registry
+          href: reference/resources/windows/registryResource.md
+        - name: Recurso Script
+          href: reference/resources/windows/scriptResource.md
+        - name: Recurso Service
+          href: reference/resources/windows/serviceResource.md
+        - name: Recurso ServiceSet
+          href: reference/resources/windows/serviceSetResource.md
+        - name: Recurso User
+          href: reference/resources/windows/userResource.md
+        - name: WaitForAllResource
+          href: reference/resources/windows/waitForAllResource.md
+        - name: WaitForAnyResource
+          href: reference/resources/windows/waitForAnyResource.md
+        - name: WaitForSomeResource
+          href: reference/resources/windows/waitForSomeResource.md
+        - name: Recurso WindowsFeature
+          href: reference/resources/windows/windowsfeatureResource.md
+        - name: Recurso WindowsFeatureSet
+          href: reference/resources/windows/windowsFeatureSetResource.md
+        - name: Recurso WindowsOptionalFeature
+          href: reference/resources/windows/windowsOptionalFeatureResource.md
+        - name: Recurso WindowsOptionalFeatureSet
+          href: reference/resources/windows/windowsOptionalFeatureSetResource.md
+        - name: Recurso WindowsPackageCab
+          href: reference/resources/windows/windowsPackageCabResource.md
+        - name: Recurso WindowsProcess
+          href: reference/resources/windows/windowsProcessResource.md
+    - name: Recursos incorporados do Linux
+      items:
+        - name: Recurso nxArchive
+          href: reference/resources/linux/lnxArchiveResource.md
+        - name: Recurso nxEnvironment
+          href: reference/resources/linux/lnxEnvironmentResource.md
+        - name: Recurso nxFile
+          href: reference/resources/linux/lnxFileResource.md
+        - name: Recurso nxFileLine
+          href: reference/resources/linux/lnxFileLineResource.md
+        - name: Recurso nxGroup
+          href: reference/resources/linux/lnxGroupResource.md
+        - name: Recurso nxPackage
+          href: reference/resources/linux/lnxPackageResource.md
+        - name: Recurso nxScript
+          href: reference/resources/linux/lnxScriptResource.md
+        - name: Recurso nxService
+          href: reference/resources/linux/lnxServiceResource.md
+        - name: Recurso nxSshAuthorizedKeys
+          href: reference/resources/linux/lnxSshAuthorizedKeysResource.md
+        - name: Recurso nxUser
+          href: reference/resources/linux/lnxUserResource.md
+    - name: Recursos incorporados do PackageManagement
+      items:
+        - name: Recurso do PackageManagementDsc
+          href: reference/resources/packagemanagement/PackageManagementDscResource.md
+        - name: Recurso do PackageManagementSourceDsc
+          href: reference/resources/packagemanagement/PackageManagementSourceDscResource.md
+    - name: Classe MSFT_DSCLocalConfigurationManager
+      items:
+        - name: Descrição geral
+          href: reference/mof-classes/msft-dsclocalconfigurationmanager.md
+        - name: Método ApplyConfiguration da classe MSFT_DSCLocalConfigurationManager
+          href: reference/mof-classes/msft-dsclocalconfigurationmanager-applyconfiguration.md
+        - name: Método DisableDebugConfiguration da classe MSFT_DSCLocalConfigurationManager
+          href: reference/mof-classes/msft-dsclocalconfigurationmanager-disabledebugconfiguration.md
+        - name: Método EnableDebugConfiguration da classe MSFT_DSCLocalConfigurationManager
+          href: reference/mof-classes/msft-dsclocalconfigurationmanager-enabledebugconfiguration.md
+        - name: Método GetConfiguration da classe MSFT_DSCLocalConfigurationManager
+          href: reference/mof-classes/msft-dsclocalconfigurationmanager-getconfiguration.md
+        - name: Método GetConfigurationResultOutput da classe MSFT_DSCLocalConfigurationManager
+          href: reference/mof-classes/msft-dsclocalconfigurationmanager-getconfigurationresultoutput.md
+        - name: Método GetConfigurationStatus da classe MSFT_DSCLocalConfigurationManager
+          href: reference/mof-classes/msft-dsclocalconfigurationmanager-getconfigurationstatus.md
+        - name: Método GetConfigurationStatus da classe MSFT_DSCLocalConfigurationManager
+          href: reference/mof-classes/msft-dsclocalconfigurationmanager-getmetaconfiguration.md
+        - name: Método PerformRequiredConfigurationChecks da classe MSFT_DSCLocalConfigurationManager
+          href: reference/mof-classes/msft-dsclocalconfigurationmanager-performrequiredconfigurationchecks.md
+        - name: Método RemoveConfiguration da classe MSFT_DSCLocalConfigurationManager
+          href: reference/mof-classes/msft-dsclocalconfigurationmanager-removeconfiguration.md
+        - name: Método ResourceGet da classe MSFT_DSCLocalConfigurationManager
+          href: reference/mof-classes/msft-dsclocalconfigurationmanager-resourceget.md
+        - name: Método ResourceSet da classe MSFT_DSCLocalConfigurationManager
+          href: reference/mof-classes/msft-dsclocalconfigurationmanager-resourceset.md
+        - name: Método ResourceTest da classe MSFT_DSCLocalConfigurationManager
+          href: reference/mof-classes/msft-dsclocalconfigurationmanager-resourcetest.md
+        - name: Método RollBack da classe MSFT_DSCLocalConfigurationManager
+          href: reference/mof-classes/msft-dsclocalconfigurationmanager-rollback.md
+        - name: Método SendConfiguration da classe MSFT_DSCLocalConfigurationManager
+          href: reference/mof-classes/msft-dsclocalconfigurationmanager-sendconfiguration.md
+        - name: Método SendConfigurationApply da classe MSFT_DSCLocalConfigurationManager
+          href: reference/mof-classes/msft-dsclocalconfigurationmanager-sendconfigurationapply.md
+        - name: Método SendConfigurationApplyAsync da classe MSFT_DSCLocalConfigurationManager
+          href: reference/mof-classes/msft-dsclocalconfigurationmanager-sendconfigurationapplyasync.md
+        - name: Método SendMetaConfigurationApply da classe MSFT_DSCLocalConfigurationManager
+          href: reference/mof-classes/msft-dsclocalconfigurationmanager-sendmetaconfigurationapply.md
+        - name: Método StopConfiguration da classe MSFT_DSCLocalConfigurationManager
+          href: reference/mof-classes/msft-dsclocalconfigurationmanager-stopconfiguration.md
+        - name: Método TestConfiguration da classe MSFT_DSCLocalConfigurationManager
+          href: reference/mof-classes/msft-dsclocalconfigurationmanager-testconfiguration.md
 - name: Mais recursos
   items:
-  - name: Documentos Técnicos
-    href: further-reading/whitepapers.md
-ms.openlocfilehash: 68096f26178d4c33fd78e6051a3cc071bd749210
-ms.sourcegitcommit: 0ca836d1044e46d3a7dcbc69fa93d84f74848559
-ms.translationtype: HT
-ms.contentlocale: pt-PT
-ms.lasthandoff: 04/04/2019
-ms.locfileid: "58920344"
+    - name: Documentos Técnicos
+      href: further-reading/whitepapers.md
