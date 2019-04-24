@@ -2,12 +2,12 @@
 title: Compreender a codificação de ficheiros no VSCode e no PowerShell
 description: Configurar a codificação do ficheiro no VSCode e no PowerShell
 ms.date: 02/28/2019
-ms.openlocfilehash: ec06d8f5d446a92e6cd9d2d70b11260d1d0afda8
-ms.sourcegitcommit: 396509cd0d415acc306b68758b6f833406e26bf5
-ms.translationtype: MT
+ms.openlocfilehash: 6a00e45b3700f72f78e2fbcdf6e317f3a17b53c0
+ms.sourcegitcommit: f4bd4e116e22c8b5bfcb61680a7c42e58b4da93e
+ms.translationtype: HT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 03/21/2019
-ms.locfileid: "58320409"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59984124"
 ---
 # <a name="understanding-file-encoding-in-vscode-and-powershell"></a>Compreender a codificação de ficheiros no VSCode e no PowerShell
 
@@ -102,7 +102,7 @@ BOMs são opcionais e adoção não é tão popular do mundo do Linux como uma c
 
 Do VSCode codificação padrão é UTF-8, sem BOM.
 
-Para definir [Codificação do VSCode][], aceda às definições VSCode (<kbd>Ctrl<kbd>+</kbd>,</kbd>) e defina o `"files.encoding"` definição:
+Para definir [Codificação do VSCode][], aceda às definições VSCode (<kbd>Ctrl</kbd>+<kbd>,</kbd>) e defina o `"files.encoding"` definição:
 
 ```json
 "files.encoding": "utf8bom"
@@ -138,7 +138,7 @@ Se não pretender que estas definições afetam todos os tipos de ficheiros, VSC
 Do PowerShell codificação padrão varia dependendo da versão:
 
 - No PowerShell 6 +, a codificação predefinida é UTF-8, sem BOM em todas as plataformas.
-- No Windows PowerShell, a codificação predefinida é normalmente Windows-1252, uma extensão da [latin-1][], também conhecido como ISO 8859-1.
+- No Windows PowerShell, a codificação predefinida é normalmente Windows-1252, uma extensão da [latin 1][], também conhecido como ISO 8859-1.
 
 No PowerShell 5 + pode encontrar a codificação padrão com isto:
 
@@ -269,7 +269,7 @@ Existem algumas outras boas postagens sobre codificação e configurar a codific
 [@mklement0]: https://github.com/mklement0
 [@rkeithhill]: https://github.com/rkeithhill
 [Windows-1252]: https://wikipedia.org/wiki/Windows-1252
-[latin-1]: https://wikipedia.org/wiki/ISO/IEC_8859-1
+[latin 1]: https://wikipedia.org/wiki/ISO/IEC_8859-1
 [UTF-8]: https://wikipedia.org/wiki/UTF-8
 [marca de ordem de byte]: https://wikipedia.org/wiki/Byte_order_mark
 [UTF-16]: https://wikipedia.org/wiki/UTF-16

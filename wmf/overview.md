@@ -1,13 +1,13 @@
 ---
-ms.date: 06/12/2018
+ms.date: 04/19/2019
 keywords: wmf,powershell,setup
 title: Windows Management Framework (WMF)
-ms.openlocfilehash: f279f975527dc198dd9b47ca1dc4258f54fafef5
-ms.sourcegitcommit: b6871f21bd666f9cd71dd336bb3f844cf472b56c
-ms.translationtype: MT
+ms.openlocfilehash: 6d25b4025bbc86f6be0e5c74db9f1fbe6705d816
+ms.sourcegitcommit: f4bd4e116e22c8b5bfcb61680a7c42e58b4da93e
+ms.translationtype: HT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 02/03/2019
-ms.locfileid: "55684438"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59984321"
 ---
 # <a name="windows-management-framework"></a>Windows Management Framework
 
@@ -16,9 +16,9 @@ Windows Management Framework (WMF) fornece uma interface de gestão consistente 
 Instalação de WMF adiciona e/ou atualiza as seguintes funcionalidades:
 
 - Windows PowerShell
-- Configuração de Estado Pretendido (DSC) do Windows PowerShell
+- Windows PowerShell Desired State Configuration (DSC)
 - Ambiente de Script integrado do Windows PowerShell (ISE)
-- Gestão Remota do Windows (WinRM)
+- Gestão remota do Windows (WinRM)
 - Windows Management Instrumentation (WMI)
 - Windows PowerShell Web Services (extensão de gestão de IIS de OData)
 - Registo de Inventário de Software (SIL)
@@ -35,26 +35,30 @@ Para saber mais sobre várias melhorias no PowerShell e outros componentes de um
 
 ## <a name="wmf-availability-across-windows-operating-systems"></a>Disponibilidade WMF em sistemas de operativos do Windows
 
-|Versão do sistema operativo  |[WMF 5.1][] |[WMF 5.0][] |[WMF 4.0][] |[WMF 3.0][]  |[WMF 2.0][] |
-|--------------------------|------------|------------|------------|-------------|------------|
-|Windows Server 2019       |É fornecido na caixa|            |            |             |            |
-|Windows Server 2016       |É fornecido na caixa|            |            |             |            |
-|Windows 10                |É fornecido na caixa|É fornecido na caixa|            |             |            |
-|Windows Server 2012 R2    |Sim         |Sim         |É fornecido na caixa|             |            |
-|Windows 8.1               |Sim         |Sim         |É fornecido na caixa|             |            |
-|Windows Server 2012       |Sim         |Sim         |Sim         |É fornecido na caixa |            |
-|Windows 8                 |            |            |            |É fornecido na caixa |            |
-|Windows Server 2008 R2 SP1|Sim         |Sim         |Sim         |Sim          |É fornecido na caixa|
-|Windows 7 SP1             |Sim         |Sim         |Sim         |Sim          |É fornecido na caixa|
-|Windows Server 2008 SP2   |            |            |            |Sim          |Sim         |
-|Windows Vista             |            |            |            |             |Sim         |
-|Windows Server 2003       |            |            |            |             |Sim         |
-|Windows XP                |            |            |            |Sim          |            |
+|        Versão do Sistema Operativo         | [WMF 5.1][]  | WMF 5.0<br>*Sem suporte* | [WMF 4.0][]  | [WMF 3.0][]  | [WMF 2.0][]  |
+| --------------------------------------- | ------------ | --------------------------- | ------------ | ------------ | ------------ |
+| Windows Server de 2019                     | É fornecido na caixa |                             |              |              |              |
+| Windows Server 2016                     | É fornecido na caixa |                             |              |              |              |
+| Windows 10                              | É fornecido na caixa | É fornecido na caixa                |              |              |              |
+| Windows Server 2012 R2                  | Sim          | Sim                         | É fornecido na caixa |              |              |
+| Windows 8.1                             | Sim          | Sim                         | É fornecido na caixa |              |              |
+| Windows Server 2012                     | Sim          | Sim                         | Sim          | É fornecido na caixa |              |
+| Windows 8<br>*Sem suporte*           |              |                             |              | É fornecido na caixa |              |
+| Windows Server 2008 R2 SP1              | Sim          | Sim                         | Sim          | Sim          | É fornecido na caixa |
+| Windows 7 SP1                           | Sim          | Sim                         | Sim          | Sim          | É fornecido na caixa |
+| Windows Server 2008 SP2                 |              |                             |              | Sim          | Sim          |
+| Windows Vista<br>*Sem suporte*       |              |                             |              |              | Sim          |
+| Windows Server 2003<br>*Sem suporte* |              |                             |              |              | Sim          |
+| Windows XP<br>*Sem suporte*          |              |                             |              | Sim          | Sim          |
 
-**É fornecido na caixa**: As funcionalidades da versão especificada do WMF foram entregues na versão indicada do cliente do Windows ou Windows Server.
+- **É fornecido na caixa**: As funcionalidades da versão especificada do WMF foram entregues na versão indicada do cliente do Windows ou Windows Server.
+- **Sem suporte**: Esses produtos já não são suportados pela Microsoft. Tem de atualizar para uma nova versão é suportada. Para obter mais informações, consulte a [Política de ciclo de vida da Microsoft][] página.
 
+> [!NOTE]
+> O instalador do WMF 5.0 já não está disponível ou suportado. Foi substituída pelo WMF 5.1.
+
+[Política de ciclo de vida da Microsoft]: https://support.microsoft.com/lifecycle
 [WMF 5.1]: https://aka.ms/wmf51download
-[WMF 5.0]: https://aka.ms/wmf5download
 [WMF 4.0]: https://aka.ms/wmf4download
 [WMF 3.0]: https://aka.ms/wmf3download
 [WMF 2.0]: https://aka.ms/wmf2download
