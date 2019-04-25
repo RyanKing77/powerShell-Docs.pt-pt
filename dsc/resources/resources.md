@@ -3,11 +3,11 @@ ms.date: 12/12/2018
 keywords: DSC, powershell, configuração, a configuração
 title: Recursos de DSC
 ms.openlocfilehash: 1f77b5e6630a2e3de6e1d1a05638f94d2df039ae
-ms.sourcegitcommit: e04292a9c10de9a8391d529b7f7aa3753b362dbe
+ms.sourcegitcommit: e7445ba8203da304286c591ff513900ad1c244a4
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 01/04/2019
-ms.locfileid: "54046696"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62076633"
 ---
 # <a name="dsc-resources"></a>Recursos de DSC
 
@@ -152,5 +152,5 @@ Recursos do Linux
 * [Recurso de pacote do Linux](../reference/resources/linux/lnxPackageResource.md)
 * [Recursos de Script do Linux](../reference/resources/linux/lnxScriptResource.md)
 * [Recurso de serviço do Linux](../reference/resources/linux/lnxServiceResource.md)
-* [Recursos de SshAuthorizedKeys do Linux](../reference/resources/linux/lnxSshAuthorizedKeysResource.md)
+* [Linux SshAuthorizedKeys Resource](../reference/resources/linux/lnxSshAuthorizedKeysResource.md)
 * [Recurso de utilizador do Linux](../reference/resources/linux/lnxUserResource.md)
