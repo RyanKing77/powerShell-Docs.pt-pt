@@ -1,15 +1,15 @@
 ---
 ms.date: 06/12/2017
 keywords: wmf,powershell,setup
-ms.openlocfilehash: 63c3b8237a9883b147380dfe9cb173107cea9aa9
-ms.sourcegitcommit: 54534635eedacf531d8d6344019dc16a50b8b441
+ms.openlocfilehash: 5280ef5ff95679dc8721be8f5f81031a4ffe796f
+ms.sourcegitcommit: e7445ba8203da304286c591ff513900ad1c244a4
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 05/17/2018
-ms.locfileid: "34225645"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62085253"
 ---
-# <a name="updates-to-fileinfo-object"></a><span data-ttu-id="97b29-102">Atualizações do objeto FileInfo</span><span class="sxs-lookup"><span data-stu-id="97b29-102">Updates to FileInfo object</span></span>
-<span data-ttu-id="97b29-103">Informação de versão pode enganadoras, especialmente nos casos em que o ficheiro foi corrigido.</span><span class="sxs-lookup"><span data-stu-id="97b29-103">File version information can be misleading, particularly in cases where the file was patched.</span></span> <span data-ttu-id="97b29-104">Esta versão do WMF 5.0 adiciona novos **FileVersionRaw** e **ProductVersionRaw** propriedades FileInfo objetos de script.</span><span class="sxs-lookup"><span data-stu-id="97b29-104">This release of WMF 5.0 adds new **FileVersionRaw** and **ProductVersionRaw** script properties to FileInfo objects.</span></span> <span data-ttu-id="97b29-105">Seguem-se as propriedades, tal como apresentado para o powershell.exe (partindo do princípio de $pid é o ID do processo do PowerShell):</span><span class="sxs-lookup"><span data-stu-id="97b29-105">Here are the properties as displayed for powershell.exe (assuming $pid is the ID of the PowerShell process):</span></span>
+# <a name="updates-to-fileinfo-object"></a><span data-ttu-id="d38f2-102">Atualizações do objeto FileInfo</span><span class="sxs-lookup"><span data-stu-id="d38f2-102">Updates to FileInfo object</span></span>
+<span data-ttu-id="d38f2-103">Informações de versão do ficheiro podem ser equivocado, particularmente em casos em que o ficheiro foi corrigido.</span><span class="sxs-lookup"><span data-stu-id="d38f2-103">File version information can be misleading, particularly in cases where the file was patched.</span></span> <span data-ttu-id="d38f2-104">Esta versão do WMF 5.0 adiciona novos **FileVersionRaw** e **ProductVersionRaw** propriedades para objetos FileInfo do script.</span><span class="sxs-lookup"><span data-stu-id="d38f2-104">This release of WMF 5.0 adds new **FileVersionRaw** and **ProductVersionRaw** script properties to FileInfo objects.</span></span> <span data-ttu-id="d38f2-105">Aqui estão as propriedades, tal como apresentado para powershell.exe (partindo do princípio de $pid é o ID do processo do PowerShell):</span><span class="sxs-lookup"><span data-stu-id="d38f2-105">Here are the properties as displayed for powershell.exe (assuming $pid is the ID of the PowerShell process):</span></span>
 
 ```powershell
 PS C:\> Get-Process -Id $pid -FileVersionInfo | fl *version* -Force

@@ -2,18 +2,18 @@
 ms.date: 06/12/2017
 keywords: wmf,powershell,setup
 ms.openlocfilehash: 0d3a87f3a9c3409656ea7f7263723436e1f9d48f
-ms.sourcegitcommit: 8b076ebde7ef971d7465bab834a3c2a32471ef6f
+ms.sourcegitcommit: e7445ba8203da304286c591ff513900ad1c244a4
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 07/06/2018
-ms.locfileid: "37892805"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62057373"
 ---
-# <a name="installation-of-module-dependencies"></a><span data-ttu-id="bcfcf-102">Instalação de Dependências do Módulo</span><span class="sxs-lookup"><span data-stu-id="bcfcf-102">Installation of Module Dependencies</span></span>
+# <a name="installation-of-module-dependencies"></a><span data-ttu-id="a63a1-102">Instalação de Dependências do Módulo</span><span class="sxs-lookup"><span data-stu-id="a63a1-102">Installation of Module Dependencies</span></span>
 
-<span data-ttu-id="bcfcf-103">Agora há suporte a versão lado a lado (SxS) módulo no Install-Module, Update-Module e cmdlets Publish-Module que são executados no Windows PowerShell 5.0 ou mais recente.</span><span class="sxs-lookup"><span data-stu-id="bcfcf-103">There is now side-by-side (SxS) module version support in Install-Module, Update-Module, and Publish-Module cmdlets that run in Windows PowerShell 5.0 or newer.</span></span>
-<span data-ttu-id="bcfcf-104">Além disso, adicionámos um parâmetro - RequiredVersion para o cmdlet Publish-Module para especificar a versão a ser publicado.</span><span class="sxs-lookup"><span data-stu-id="bcfcf-104">Also, we have added a -RequiredVersion parameter to the Publish-Module cmdlet to specify the version to be published.</span></span> <span data-ttu-id="bcfcf-105">O parâmetro de caminho agora suporta o caminho de base do módulo com a pasta de versão.</span><span class="sxs-lookup"><span data-stu-id="bcfcf-105">The Path parameter now supports the module base path with the version folder.</span></span>
+<span data-ttu-id="a63a1-103">Agora há suporte a versão lado a lado (SxS) módulo no Install-Module, Update-Module e cmdlets Publish-Module que são executados no Windows PowerShell 5.0 ou mais recente.</span><span class="sxs-lookup"><span data-stu-id="a63a1-103">There is now side-by-side (SxS) module version support in Install-Module, Update-Module, and Publish-Module cmdlets that run in Windows PowerShell 5.0 or newer.</span></span>
+<span data-ttu-id="a63a1-104">Além disso, adicionámos um parâmetro - RequiredVersion para o cmdlet Publish-Module para especificar a versão a ser publicado.</span><span class="sxs-lookup"><span data-stu-id="a63a1-104">Also, we have added a -RequiredVersion parameter to the Publish-Module cmdlet to specify the version to be published.</span></span> <span data-ttu-id="a63a1-105">O parâmetro de caminho agora suporta o caminho de base do módulo com a pasta de versão.</span><span class="sxs-lookup"><span data-stu-id="a63a1-105">The Path parameter now supports the module base path with the version folder.</span></span>
 
-<span data-ttu-id="bcfcf-106">**Exemplos de Install-Module:**</span><span class="sxs-lookup"><span data-stu-id="bcfcf-106">**Install-Module examples:**</span></span>
+<span data-ttu-id="a63a1-106">**Exemplos de Install-Module:**</span><span class="sxs-lookup"><span data-stu-id="a63a1-106">**Install-Module examples:**</span></span>
 ```powershell
 PS C:\windows\system32> Install-Module -Name ContosoServer -RequiredVersion 1.0 -Repository MSPSGallery
 
@@ -37,7 +37,7 @@ Version Name          Repository  Description
 2.0     ContosoServer MSPSGallery ContosoServer
 ```
 
-<span data-ttu-id="bcfcf-107">**Instale um módulo com dependências:**</span><span class="sxs-lookup"><span data-stu-id="bcfcf-107">**Install a module with dependencies:**</span></span>
+<span data-ttu-id="a63a1-107">**Instale um módulo com dependências:**</span><span class="sxs-lookup"><span data-stu-id="a63a1-107">**Install a module with dependencies:**</span></span>
 ```powershell
 PS C:\windows\system32> Get-InstalledModule
 PS C:\windows\system32> Find-Module -Repository GalleryINT -Name ModuleWithDependencies2 -IncludeDependencies
@@ -79,7 +79,7 @@ ModuleType Version Name                    ExportedCommands
 Manifest   2.0     ModuleWithDependencies2 {Get-NestedRequiredModule1, Get-NestedRequiredModule2, Get-NestedRequiredModule3, Get-NestedRequiredModule4...}
 ```
 
-<span data-ttu-id="bcfcf-108">**Ficheiro de manifesto de conteúdo do módulo de ModuleWithDependencies2:**</span><span class="sxs-lookup"><span data-stu-id="bcfcf-108">**Contents of ModuleWithDependencies2 module manifest file:**</span></span>
+<span data-ttu-id="a63a1-108">**Ficheiro de manifesto de conteúdo do módulo de ModuleWithDependencies2:**</span><span class="sxs-lookup"><span data-stu-id="a63a1-108">**Contents of ModuleWithDependencies2 module manifest file:**</span></span>
 ```powershell
 @{
 # Version number of this module.
@@ -149,7 +149,7 @@ PrivateData = @{
 }
 ```
 
-<span data-ttu-id="bcfcf-109">**Exemplos de módulo de atualização:**</span><span class="sxs-lookup"><span data-stu-id="bcfcf-109">**Update-Module examples:**</span></span>
+<span data-ttu-id="a63a1-109">**Exemplos de módulo de atualização:**</span><span class="sxs-lookup"><span data-stu-id="a63a1-109">**Update-Module examples:**</span></span>
 ```powershell
 PS C:\windows\system32> Update-Module -Name ContosoServer -RequiredVersion 1.5
 PS C:\windows\system32> Get-Module -ListAvailable -Name ContosoServer | Format-List Name,Version,ModuleBase
@@ -191,7 +191,7 @@ Version Name          Repository  Description
 2.8.1   ContosoServer MSPSGallery ContosoServer
 ```
 
-<span data-ttu-id="bcfcf-110">**Exemplos de publicar-Module:**</span><span class="sxs-lookup"><span data-stu-id="bcfcf-110">**Publish-Module examples:**</span></span>
+<span data-ttu-id="a63a1-110">**Exemplos de publicar-Module:**</span><span class="sxs-lookup"><span data-stu-id="a63a1-110">**Publish-Module examples:**</span></span>
 ```powershell
 ContosoServer module with different versions to be published.
 PS C:\windows\system32> Get-Module -Name ContosoServer -ListAvailable
