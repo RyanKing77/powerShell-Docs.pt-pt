@@ -3,11 +3,11 @@ ms.date: 12/12/2018
 keywords: DSC, powershell, configuração, a configuração
 title: Configurar um cliente de solicitação com IDs de configuração no PowerShell 4.0
 ms.openlocfilehash: 9adc767e91ff19d373c122a0d493e7b8703d5476
-ms.sourcegitcommit: b6871f21bd666f9cd71dd336bb3f844cf472b56c
+ms.sourcegitcommit: e7445ba8203da304286c591ff513900ad1c244a4
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 02/03/2019
-ms.locfileid: "55685481"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62079477"
 ---
 # <a name="set-up-a-pull-client-using-configuration-ids-in-powershell-40"></a>Configurar um cliente de solicitação com IDs de configuração no PowerShell 4.0
 
@@ -98,7 +98,7 @@ Depois de configurar o cliente de solicitação, pode utilizar os seguintes guia
 - [Publicar as configurações para um servidor de solicitação (v4/v5)](publishConfigs.md)
 - [Pacote e o carregamento de recursos para um servidor de solicitação (v4)](package-upload-resources.md)
 
-## <a name="see-also"></a>Consulte Também
+## <a name="see-also"></a>Veja Também
 
 - [Configurar um servidor de solicitação da web de DSC](pullServer.md)
 - [Configurar um servidor de solicitação SMB de DSC](pullServerSMB.md)

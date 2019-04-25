@@ -4,11 +4,11 @@ keywords: PowerShell, o cmdlet
 title: Objeto ISEOptions
 ms.assetid: 75e2a76f-f3d1-490b-ad5d-e3829946aabb
 ms.openlocfilehash: e756da21aaa5465f7fa6a90563b4180f0c89e87b
-ms.sourcegitcommit: 00ff76d7d9414fe585c04740b739b9cf14d711e1
+ms.sourcegitcommit: e7445ba8203da304286c591ff513900ad1c244a4
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 12/14/2018
-ms.locfileid: "53405421"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62057779"
 ---
 # <a name="the-iseoptions-object"></a>Objeto ISEOptions
 
@@ -559,7 +559,7 @@ Especifica o tamanho relativo de texto nos painéis da consola e o Script. O val
 $psISE.Options.Zoom = 200
 ```
 
-## <a name="see-also"></a>Consulte Também
+## <a name="see-also"></a>Veja Também
 
 - [Objetivo do ISE do Windows PowerShell Scripting o modelo de objeto](Purpose-of-the-Windows-PowerShell-ISE-Scripting-Object-Model.md)
 - [Hierarquia do Modelo de Objeto ISE](The-ISE-Object-Model-Hierarchy.md)

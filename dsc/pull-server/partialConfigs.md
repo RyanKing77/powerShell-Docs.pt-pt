@@ -3,11 +3,11 @@ ms.date: 06/12/2017
 keywords: DSC, powershell, configuração, a configuração
 title: Configurações parciais de PowerShell Desired State Configuration
 ms.openlocfilehash: b2b17e35597707eb97ecdcea9dda4466deeab0cb
-ms.sourcegitcommit: 00ff76d7d9414fe585c04740b739b9cf14d711e1
+ms.sourcegitcommit: e7445ba8203da304286c591ff513900ad1c244a4
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 12/14/2018
-ms.locfileid: "53405076"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62079528"
 ---
 # <a name="powershell-desired-state-configuration-partial-configurations"></a>Configurações parciais de PowerShell Desired State Configuration
 
@@ -373,7 +373,7 @@ Configuration SharePointConfig
 SharePointConfig
 ```
 
-## <a name="see-also"></a>Consulte Também
+## <a name="see-also"></a>Veja Também
 
 [Windows PowerShell Desired State Configuration Pull servidores](pullServer.md)
 

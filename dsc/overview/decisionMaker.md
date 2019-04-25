@@ -3,11 +3,11 @@ ms.date: 06/12/2017
 keywords: DSC, powershell, configuração, a configuração
 title: Descrição Geral do Desired State Configuration para Decisores
 ms.openlocfilehash: ce554d4bb994d4b1816d9d9c24599e4ef0e1c593
-ms.sourcegitcommit: b6871f21bd666f9cd71dd336bb3f844cf472b56c
+ms.sourcegitcommit: e7445ba8203da304286c591ff513900ad1c244a4
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 02/03/2019
-ms.locfileid: "55688589"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62079596"
 ---
 # <a name="desired-state-configuration-overview-for-decision-makers"></a>Descrição Geral do Desired State Configuration para Decisores
 

@@ -9,11 +9,11 @@ ms.topic: article
 ms.assetid: 9c8ef289-0659-42d1-9976-044b144201eb
 caps.latest.revision: 6
 ms.openlocfilehash: 2a8372d937fc3c959f7d829bb52495048423d506
-ms.sourcegitcommit: b6871f21bd666f9cd71dd336bb3f844cf472b56c
+ms.sourcegitcommit: e7445ba8203da304286c591ff513900ad1c244a4
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 02/03/2019
-ms.locfileid: "56852109"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62080480"
 ---
 # <a name="adding-windows-powershell-activities-to-the-visual-studio-toolbox"></a>Adding Windows PowerShell Activities to the Visual Studio Toolbox (Adicionar Atividades do Windows PowerShell à Caixa de Ferramentas do Visual Studio)
 
@@ -39,7 +39,7 @@ Antes de criar um fluxo de trabalho do PowerShell usando o Designer de fluxo de 
 
 8. Clique em **OK**. As atividades definidas pelo Microsoft.PowerShell.Core.Activities assembly estão agora disponíveis na caixa de ferramentas.
 
-## <a name="see-also"></a>Consulte Também
+## <a name="see-also"></a>Veja Também
 
 [Escrever um fluxo de trabalho do Windows PowerShell](./writing-a-windows-powershell-workflow.md)
 

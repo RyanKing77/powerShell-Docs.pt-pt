@@ -9,11 +9,11 @@ ms.topic: article
 ms.assetid: 1d0e1eb1-a962-4406-9625-175cfa3364ad
 caps.latest.revision: 10
 ms.openlocfilehash: f142548be473da15e702f4fa01835609d75b9d51
-ms.sourcegitcommit: b6871f21bd666f9cd71dd336bb3f844cf472b56c
+ms.sourcegitcommit: e7445ba8203da304286c591ff513900ad1c244a4
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 02/03/2019
-ms.locfileid: "56850891"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62083342"
 ---
 # <a name="how-to-add-the-cmdlet-name-and-synopsis-to-a-cmdlet-help-topic"></a>How to Add the Cmdlet Name and Synopsis to a Cmdlet Help Topic (Como Adicionar o Nome e Sinopse do Cmdlet a um Tópico de Ajuda de Cmdlet)
 

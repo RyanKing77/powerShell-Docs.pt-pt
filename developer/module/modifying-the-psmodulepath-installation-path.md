@@ -9,11 +9,11 @@ ms.topic: article
 ms.assetid: dc5ce5a2-50e9-4c88-abf1-ac148a8a6b7b
 caps.latest.revision: 15
 ms.openlocfilehash: 639d3a28dd2af09fcc498caedc5fe74c1493445d
-ms.sourcegitcommit: b6871f21bd666f9cd71dd336bb3f844cf472b56c
+ms.sourcegitcommit: e7445ba8203da304286c591ff513900ad1c244a4
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 02/03/2019
-ms.locfileid: "56846509"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62082214"
 ---
 # <a name="modifying-the-psmodulepath-installation-path"></a>Modifying the PSModulePath Installation Path (Modificar o Caminho de Instalação PSModulePath)
 
@@ -55,6 +55,6 @@ Para adicionar caminhos para esta variável, utilize um dos seguintes métodos:
 
 Pode remover caminhos da variável usando métodos semelhantes: por exemplo, `$env:PSModulePath = $env:PSModulePath -replace ";c:\\ModulePath"` removerá o **c:\ModulePath** caminho da sessão atual.
 
-## <a name="see-also"></a>Consulte Também
+## <a name="see-also"></a>Veja Também
 
 [Escrever um módulo do Windows PowerShell](./writing-a-windows-powershell-module.md)

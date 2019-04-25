@@ -3,15 +3,15 @@ ms.date: 06/20/2018
 keywords: DSC, powershell, configuração, a configuração
 title: Recursos do DSC PackageManagementSource
 ms.openlocfilehash: e51b5318288bef458567dd4b58d17caaea3ed69b
-ms.sourcegitcommit: e04292a9c10de9a8391d529b7f7aa3753b362dbe
+ms.sourcegitcommit: e7445ba8203da304286c591ff513900ad1c244a4
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 01/04/2019
-ms.locfileid: "54048372"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62077590"
 ---
 # <a name="dsc-packagemanagementsource-resource"></a>Recursos do DSC PackageManagementSource
 
-> Aplica-se a: Windows PowerShell 4.0, Windows PowerShell 5.0, 5.1 do Windows PowerShell
+> Aplica-se a: Windows PowerShell 4.0, Windows PowerShell 5.0, Windows PowerShell 5.1
 
 O **PackageManagementSource** recursos no Windows PowerShell Desired State Configuration (DSC) fornece um mecanismo para registar ou anular o registo de origens do pacote de gestão num nó de destino. **Origens de gestão do pacote registadas dessa forma são registadas no contexto de sistema, utilizável pela conta do sistema ou pelo motor de DSC.** Este recurso requer o **PackageManagement** módulo, disponível no http://PowerShellGallery.com.
 

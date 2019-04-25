@@ -4,11 +4,11 @@ keywords: PowerShell, o cmdlet
 title: Objeto ISEAddOnToolCollection
 ms.assetid: 634eab89-0845-4016-974b-361b09bb8f7b
 ms.openlocfilehash: ff4f19d1a85a592f2f4f09c62caa0971751bdff7
-ms.sourcegitcommit: 00ff76d7d9414fe585c04740b739b9cf14d711e1
+ms.sourcegitcommit: e7445ba8203da304286c591ff513900ad1c244a4
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 12/14/2018
-ms.locfileid: "53405385"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62057401"
 ---
 # <a name="the-iseaddontoolcollection-object"></a>Objeto ISEAddOnToolCollection
 
@@ -16,7 +16,7 @@ O **ISEAddOnToolCollection** objeto é uma coleção de **ISEAddOnTool** objetos
 
 ## <a name="methods"></a>Métodos
 
-### <a name="add-name-controltype-isvisible-"></a>Adicione\( nome, ControlType, \[IsVisible\] \)
+### <a name="add-name-controltype-isvisible-"></a>Add\( Name, ControlType, \[IsVisible\] \)
 
 Suportado no Windows PowerShell ISE 3.0 e posteriores e não está presente em versões anteriores.
 
@@ -62,7 +62,7 @@ $newTab = $psISE.PowerShellTabs.Add()
 $newTab.DisplayName = 'Brand New Tab'
 ```
 
-### <a name="remove-pstab-"></a>Remover\( psTab \)
+### <a name="remove-pstab-"></a>Remove\( psTab \)
 
 Suportado no Windows PowerShell ISE 3.0 e posteriores e não está presente em versões anteriores.
 
@@ -78,7 +78,7 @@ sleep 5
 $psISE.PowerShellTabs.Remove($newTab)
 ```
 
-## <a name="see-also"></a>Consulte Também
+## <a name="see-also"></a>Veja Também
 
 - [Objeto PowerShellTab](The-PowerShellTab-Object.md)
 - [Objetivo do ISE do Windows PowerShell Scripting o modelo de objeto](Purpose-of-the-Windows-PowerShell-ISE-Scripting-Object-Model.md)

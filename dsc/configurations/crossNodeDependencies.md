@@ -3,11 +3,11 @@ ms.date: 12/12/2018
 keywords: DSC, powershell, configuração, a configuração
 title: Especificar dependências entre nós
 ms.openlocfilehash: 1bdfbd9f8a94809d6bf410eff525e1c877fb6aad
-ms.sourcegitcommit: 00ff76d7d9414fe585c04740b739b9cf14d711e1
+ms.sourcegitcommit: e7445ba8203da304286c591ff513900ad1c244a4
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 12/14/2018
-ms.locfileid: "53404683"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62080208"
 ---
 # <a name="specifying-cross-node-dependencies"></a>Especificar dependências entre nós
 
@@ -113,7 +113,7 @@ Quando compilar a configuração, são gerados dois arquivos ". MOF". Aplicam-se
 
 >**Nota:** Por predefinição o WaitForXXX recursos tente uma vez e, em seguida, falharem. Embora não seja necessário, normalmente, deverá especificar um **RetryCount** e **RetryIntervalSec**.
 
-## <a name="see-also"></a>Consulte Também
+## <a name="see-also"></a>Veja Também
 
 - [Configurações de DSC](configurations.md)
 - [Utilizar as dependências de recursos](resource-depends-on.md)

@@ -2,11 +2,11 @@
 ms.date: 06/12/2017
 keywords: wmf,powershell,setup
 ms.openlocfilehash: fcf2adf67f36edb534df3e2a849459fb20e1c2de
-ms.sourcegitcommit: 8b076ebde7ef971d7465bab834a3c2a32471ef6f
+ms.sourcegitcommit: e7445ba8203da304286c591ff513900ad1c244a4
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 07/06/2018
-ms.locfileid: "37892368"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62085359"
 ---
 # <a name="extract-and-parse-structured-objects-out-of-string"></a>Extrair e Analisar Objetos Estruturados Fora de Cadeia
 
@@ -31,8 +31,8 @@ Análise delimitados, por predefinição, divide a entrada em espaço em branco 
 ```
 
 ```output
-P1     P2
---     --
+P1     P2
+--     --
 Hello  World
 ```
 
@@ -41,49 +41,49 @@ O cmdlet também suporta gerado automaticamente controladas por exemplo análise
 Para começar a utilizar, considere um livro de endereços com base em texto:
 
 ```
-    Ana Trujillo
+    Ana Trujillo
 
-    Redmond, WA
+    Redmond, WA
 
-    Antonio Moreno
+    Antonio Moreno
 
-    Renton, WA
+    Renton, WA
 
-    Thomas Hardy
+    Thomas Hardy
 
-    Seattle, WA
+    Seattle, WA
 
-    Christina Berglund
+    Christina Berglund
 
-    Redmond, WA
+    Redmond, WA
 
-    Hanna Moos
+    Hanna Moos
 
-    Puyallup, WA
+    Puyallup, WA
 ```
 
 Copie alguns exemplos num arquivo, que irá utilizar como o modelo:
 
 ```
-    Ana Trujillo
+    Ana Trujillo
 
-    Redmond, WA
+    Redmond, WA
 
-    Antonio Moreno
+    Antonio Moreno
 
-    Renton, WA
+    Renton, WA
 ```
 
 Coloque entre chaves em todos os dados que pretende extrair, dando a ele um nome como fazer isso. Uma vez que o **nome** propriedade (e a respetiva associadas a outras propriedades) pode sejam exibidas várias vezes, utilizar um asterisco (\*) para indicar que isso resulta em vários registos (em vez de extrair um monte de propriedades em uma registo):
 
 ```
-    {Name\*:Ana Trujillo}
+    {Name\*:Ana Trujillo}
 
-    {City:Redmond}, {State:WA}
+    {City:Redmond}, {State:WA}
 
-    {Name\*:Antonio Moreno}
+    {Name\*:Antonio Moreno}
 
-    {City:Renton}, {State:WA}
+    {City:Renton}, {State:WA}
 ```
 
 Este conjunto de exemplos, `ConvertFrom-String` pode agora extrair automaticamente com base no objeto de saída de ficheiros de entrada com uma estrutura semelhante.
@@ -93,13 +93,13 @@ Get-Content .\addresses.output.txt | ConvertFrom-String -TemplateFile .\addresse
 ```
 
 ```output
-ExtentText                     Name               City     State
-----------                     ----               ----     -----
-Ana Trujillo...                Ana Trujillo       Redmond  WA
-Antonio Moreno...              Antonio Moreno     Renton   WA
-Thomas Hardy...                Thomas Hardy       Seattle  WA
-Christina Berglund...          Christina Berglund Redmond  WA
-Hanna Moos...                  Hanna Moos         Puyallup WA
+ExtentText                     Name               City     State
+----------                     ----               ----     -----
+Ana Trujillo...                Ana Trujillo       Redmond  WA
+Antonio Moreno...              Antonio Moreno     Renton   WA
+Thomas Hardy...                Thomas Hardy       Seattle  WA
+Christina Berglund...          Christina Berglund Redmond  WA
+Hanna Moos...                  Hanna Moos         Puyallup WA
 ```
 
 Para fazer a manipulação de dados adicionais no texto extraído, o **ExtentText** propriedade captura o partir do qual foi extraído o registo de texto não processado. Para fornecer comentários sobre esta funcionalidade, ou para partilhar conteúdo para o qual tiver dificuldade para escrever exemplos, envie um e-mail <psdmfb@microsoft.com>.

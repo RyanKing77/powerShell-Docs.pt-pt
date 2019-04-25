@@ -3,11 +3,11 @@ ms.date: 12/12/2018
 keywords: DSC, powershell, configuração, a configuração
 title: Escrever a ajuda das configurações do DSC
 ms.openlocfilehash: 498ec0f594ed3229e097903c4ea2ae34d3da03a2
-ms.sourcegitcommit: 00ff76d7d9414fe585c04740b739b9cf14d711e1
+ms.sourcegitcommit: e7445ba8203da304286c591ff513900ad1c244a4
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 12/14/2018
-ms.locfileid: "53405202"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62080191"
 ---
 # <a name="writing-help-for-dsc-configurations"></a>Escrever a ajuda das configurações do DSC
 
@@ -159,7 +159,7 @@ REMARKS
 > [!NOTE]
 > Campos de sintaxe e os atributos de parâmetro são gerados automaticamente para pelo PowerShell.
 
-## <a name="see-also"></a>Consulte Também
+## <a name="see-also"></a>Veja Também
 
 - [Configurações de DSC](configurations.md)
 - [Escreva, Compile e aplicar uma configuração](write-compile-apply-configuration.md)

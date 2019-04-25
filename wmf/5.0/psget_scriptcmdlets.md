@@ -1,17 +1,17 @@
 ---
 ms.date: 06/12/2017
 keywords: wmf,powershell,setup
-ms.openlocfilehash: a2938c168f476e5f9c38ba55ceb45fa2b95571e2
-ms.sourcegitcommit: bad40d59598ae5597051fa381986316a2d9bf6c8
+ms.openlocfilehash: ac845a461eef4f567b74f813621f6bfa38419afb
+ms.sourcegitcommit: e7445ba8203da304286c591ff513900ad1c244a4
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 06/20/2018
-ms.locfileid: "36271182"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62057358"
 ---
 # <a name="powershellget-cmdlets-for-script-management"></a>Cmdlets do PowerShellGet para a Gestão de Scripts
 
-## <a name="find-script-cmdlet"></a>Script de encontrar o cmdlet
-Script de encontrar o cmdlet permite-lhe detetar os ficheiros de script com os critérios de pesquisa diferentes, como o nome, etiqueta, filtro, nome do comando, intervalo de versão, versão exata, todas as versões, incluindo as respetivas dependências e repositórios de todos os registado ou específicos.
+## <a name="find-script-cmdlet"></a>Cmdlet de Find-Script
+Find-Script cmdlet permite-lhe para detetar os arquivos de script com os critérios de procura diferente, como o nome, etiqueta, filtrar, nome do comando, o intervalo de versão, versão exata, todas as versões, incluindo as respetivas dependências e de repositórios específicos ou tudo registados.
 
 Exemplo de utilização:
 ```powershell
@@ -149,8 +149,8 @@ Workflow {Test-WorkflowFromScript\_Fabrikam-ClientScript}
 Command {Test-FunctionFromScript\_Fabrikam-ClientScript, Test-WorkflowFromScript\_Fabrikam-ClientScript}
 ```
 
-## <a name="save-script-cmdlet"></a>Cmdlet de Script de guardar
-Script de guardar cmdlet permite-lhe para rever o ficheiro de script ao guardá-lo numa localização especificada.
+## <a name="save-script-cmdlet"></a>Cmdlet Save-Script
+Cmdlet Save-Script permite-lhe para rever o ficheiro de script ao guardá-lo para uma localização especificada.
 ```powershell
 \# Save a script file to the specified location for the script analysis
 \# Piping the Find-Script output to Save-Script cmdlet
@@ -163,9 +163,9 @@ Version Name Author Description
 ```
 
 ## <a name="install-script-and-get-installedscript-cmdlets"></a>Cmdlets de Script de instalação e Get-InstalledScript
-Cmdlet de Script de instalação permite-lhe instalar um ficheiro de script específico, juntamente com as respetivas dependências para o âmbito especificado. Por predefinição, os scripts estão instalados para o âmbito de AllUsers. Cmdlet Get-InstalledScript permite-lhe obter a lista de ficheiros de script que foram instalados utilizando o cmdlet de Script de instalação.
+Script de instalação cmdlet permite-lhe para instalar um ficheiro de script específico, juntamente com as respetivas dependências para o âmbito especificado. Por predefinição, os scripts estão instalados para o âmbito de AllUsers. Cmdlet Get-InstalledScript permite-lhe para obter a lista de ficheiros de script que foram instalados utilizando o cmdlet Install-Script.
 
-Nota de utilização: para permitir a gestão e localizar de scripts, depois de serem instalados, script de instalação irá crie uma pasta predefinida para armazenar os scripts em $home\Documents\WindowsPowerShell\Scripts e adicionar nessa pasta ao seu ambiente de caminho. Se modificar o caminho for uma preocupação, utilize o Script de guardar em vez de Script de instalação. Get-InstalledScripts e o Script de desinstalação só podem ser utilizado com scripts colocados no sistema através do Script de instalação.
+Nota de utilização: Para permitir a gestão e a localização dos scripts quando eles estiverem instalados, script de instalação irá criar uma pasta predefinida para armazenar os scripts em $home\Documents\WindowsPowerShell\Scripts e adicionar essa pasta ao seu ambiente do caminho. Se modificar o caminho é uma preocupação, utilize Save-Script em vez de Script de instalação. Get-InstalledScripts e Script de desinstalação, só podem trabalhar com scripts ao utilizar o Script de instalação de sistema.
 ```powershell
 \# Install locations for scripts:
 \# Default scope is AllUsers.
@@ -221,7 +221,7 @@ InstalledLocation : C:\\Users\\manikb\\Documents\\WindowsPowerShell\\Scripts
 Installed script file is immediately available for usage.
 ```
 
-Também pode utilizar o comando Get-nome &lt;InstalledScriptFileName&gt; obtê-lo. Instalar duas localizações são adicionadas à variável de ambiente PATH na primeira utilização de um âmbito especificado.
+Também pode utilizar Get-Command-Name &lt;InstalledScriptFileName&gt; para obtê-la. Instalação de dois locais são adicionados à variável de ambiente PATH na primeira utilização de um âmbito especificado.
 ```powershell
 $env:Path -split ';'| Where-Object {$\_} | Select-Object -Last 2
 C:\\Program Files\\WindowsPowerShell\\Scripts
@@ -344,7 +344,7 @@ Workflow Test-WorkflowFromScript\_Script-WithDependencies2 { Get-Date }
 ```
 
 ## <a name="update-script-cmdlet"></a>Cmdlet de Script de atualização
-Script de atualização cmdlet permite-lhe no local a atualização dos ficheiros de script que foram instalados utilizando o cmdlet de Script de instalação.
+Script de atualização de cmdlet permite-lhe realizar no local a atualização dos arquivos de script que foram instalados utilizando o cmdlet Install-Script.
 ```powershell
 Install-Script -Name Fabrikam-Script -RequiredVersion 1.0 -Repository GalleryINT -Scope
 Get-InstalledScript -Name Fabrikam-Script
@@ -423,7 +423,7 @@ At C:\\Program Files\\WindowsPowerShell\\Modules\\PowerShellGet\\1.0.0.1\\PSModu
 ```
 
 ## <a name="new-scriptfileinfo-and-test-scriptfileinfo-cmdlets"></a>Cmdlets novos ScriptFileInfo e ScriptFileInfo de teste
-Novo ScriptFileInfo cmdlet permite-lhe criar um novo ficheiro de script com metadados como versão, Guid, autor e a descrição, etc. Cmdlet de teste ScriptFileInfo permite-lhe para validar e obter os metadados do ficheiro de script.
+Novo ScriptFileInfo cmdlet permite-lhe para criar um novo ficheiro de script com metadados como versão, Guid, autor e descrição, etc. Cmdlet de teste ScriptFileInfo permite-lhe para validar e obter os metadados do ficheiro de script.
 ```powershell
 \# Create a new script file with minimum required metadata values
 New-ScriptFileInfo -Path C:\\ScriptSharingDemo\\Demo-Script.ps1 -Description "Script file description goes here"
@@ -575,7 +575,7 @@ DefinedWorkflows : Demo-ScriptWorkflow
 ```
 
 ## <a name="update-scriptfileinfo-cmdlet"></a>Cmdlet Update-ScriptFileInfo
-Cmdlet Update-ScriptFileInfo permite-lhe para atualizar os metadados do ficheiro de script existente.
+Cmdlet Update-ScriptFileInfo permite-lhe para atualizar os metadados do ficheiro de script existentes.
 ```powershell
 \# Use Update-ScriptFileInfo cmdlet to update the script metadata
 Update-ScriptFileInfo -Path C:\\ScriptSharingDemo\\Demo-ScriptWithCompletePSScriptInfo.ps1 -Version 2.0
@@ -585,8 +585,8 @@ Version Name Author Description
 2.0 Demo-ScriptWithComplet... manikb my new script file
 ```
 
-## <a name="register-psrepository-and-set-psrepository-cmdlets-with-script-sharing-support"></a>Cmdlets de registo PSRepository e Set-PSRepository com script de suporte de partilha
-Utilizar cmdlets de registo-PSRepository/Set-PSRepository para adicionar o **ScriptSourceLocation** e **ScriptPublishLocation** para o PSRepository.
+## <a name="register-psrepository-and-set-psrepository-cmdlets-with-script-sharing-support"></a>Cmdlets de register-PSRepository e Set-PSRepository com script de suporte de partilha
+Utilizar os cmdlets de Register-PSRepository/Set-PSRepository para adicionar o **ScriptSourceLocation** e **ScriptPublishLocation** para o PSRepository.
 ```powershell
 \# Register an GalleryINT repository with Scripts and Modules support
 Register-PSRepository -Name GalleryINT \`
@@ -643,8 +643,8 @@ ScriptPublishLocation : https://MyGallery.com/api/v2/package/
 ProviderOptions : {}
 ```
 
-## <a name="publish-script-cmdlet"></a>Cmdlet de Script publicar
-Script publicar cmdlet permite-lhe para publicar o ficheiro de script com metadados válido como versão, Guid, autor e a descrição, etc.
+## <a name="publish-script-cmdlet"></a>Cmdlet de publicar-Script
+Publicar-Script cmdlet permite-lhe para publicar o ficheiro de script com metadados válido como versão, Guid, autor e descrição, etc.
 ```powershell
 \# Publish the really basic script file with required metadata
 Publish-Script -Path C:\\ScriptSharingDemo\\Demo-Script.ps1 -Repository GalleryINT -NuGetApiKey cad91af7-a49c-4026-9570-a4c16564e785 -Verbose

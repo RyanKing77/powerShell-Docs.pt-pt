@@ -2,12 +2,12 @@
 ms.date: 10/16/2017
 keywords: DSC, powershell, configuração, a configuração
 title: Aplicar configurações
-ms.openlocfilehash: 4a6e7e511446ab27307683ad3d5676391e7c791c
-ms.sourcegitcommit: 00ff76d7d9414fe585c04740b739b9cf14d711e1
+ms.openlocfilehash: 2a40f2055dda78cc0cb6cb05a5e14dce48be9d00
+ms.sourcegitcommit: e7445ba8203da304286c591ff513900ad1c244a4
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 12/14/2018
-ms.locfileid: "53405424"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62079953"
 ---
 # <a name="enacting-configurations"></a>Aplicar configurações
 
@@ -48,6 +48,6 @@ No entanto, a compreender que essa implementação tiver recursos limitados e ex
 
 Os tópicos seguintes explicam o serviço de solicitação e clientes:
 
-- [Descrição geral de DSC de automatização do Azure](https://docs.microsoft.com/en-us/azure/automation/automation-dsc-overview)
+- [Descrição geral de DSC de automatização do Azure](https://docs.microsoft.com/azure/automation/automation-dsc-overview)
 - [Como configurar um servidor de solicitação SMB](pullServerSMB.md)
 - [Configurar um cliente de solicitação](pullClientConfigID.md)

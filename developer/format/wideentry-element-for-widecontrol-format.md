@@ -9,11 +9,11 @@ ms.topic: article
 ms.assetid: 014763cb-7716-4931-899c-8375b5d7a3dd
 caps.latest.revision: 15
 ms.openlocfilehash: d1d13b5c3436871053353814293d9163ea13c7fb
-ms.sourcegitcommit: b6871f21bd666f9cd71dd336bb3f844cf472b56c
+ms.sourcegitcommit: e7445ba8203da304286c591ff513900ad1c244a4
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 02/03/2019
-ms.locfileid: "56847181"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62083676"
 ---
 # <a name="wideentry-element-for-widecontrol-format"></a>WideEntry Element for WideControl (Format) (Elemento WideEntry para WideControl [Formatação])
 
@@ -30,7 +30,7 @@ O elemento (formato) ViewDefinitions elemento (formato) vista elemento (formato)
 </WideEntry>
 ```
 
-## <a name="attributes-and-elements"></a>Atributos e Elementos
+## <a name="attributes-and-elements"></a>Atributos e elementos
 
 As secções seguintes descrevem os atributos e elementos filho e o elemento principal do `WideEntry` elemento. Tem de especificar um único `WideItem` elemento subordinado.
 
@@ -38,14 +38,14 @@ As secções seguintes descrevem os atributos e elementos filho e o elemento pri
 
 Nenhum.
 
-### <a name="child-elements"></a>Elementos Subordinados
+### <a name="child-elements"></a>Elementos subordinados
 
 |Elemento|Descrição|
 |-------------|-----------------|
 |[Elemento de EntrySelectedBy para WideEntry (formato)](./entryselectedby-element-for-wideentry-format.md)|Elemento opcional.<br /><br /> Define os tipos do .NET que usam essa definição ampla de entrada ou a condição que tem de existir para esta definição a utilizar.|
 |[Elemento de WideItem (formato)](./wideitem-element-for-widecontrol-format.md)|Elemento necessário.<br /><br /> Define a propriedade ou um script cujo valor é apresentado.|
 
-### <a name="parent-elements"></a>Elementos Principais
+### <a name="parent-elements"></a>Elementos principais
 
 |Elemento|Descrição|
 |-------------|-----------------|
@@ -72,7 +72,7 @@ A exemplo a seguir mostra um `WideEntry` elemento que define uma única `WideIte
 
 Para obter um exemplo completo de uma vista alargada, consulte [vista alargada (básico)](./wide-view-basic.md).
 
-## <a name="see-also"></a>Consulte Também
+## <a name="see-also"></a>Veja Também
 
 [Criar uma vista alargada](./creating-a-wide-view.md)
 

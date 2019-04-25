@@ -2,11 +2,11 @@
 ms.date: 06/12/2017
 keywords: wmf,powershell,setup
 ms.openlocfilehash: a96a4a58dafa01fb43f5bdffb52ef833816148e7
-ms.sourcegitcommit: 01ac77cd0b00e4e5e964504563a9212e8002e5e0
+ms.sourcegitcommit: e7445ba8203da304286c591ff513900ad1c244a4
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 08/07/2018
-ms.locfileid: "39587300"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62058374"
 ---
 # <a name="new-language-features-in-powershell-50"></a>Novos recursos de linguagem no PowerShell 5.0
 
@@ -170,7 +170,7 @@ Os membros ocultos são públicos, mas não aparecem na saída do Get-Member, a 
 
 Oculto a membros não estão incluídos quando separador a conclusão ou usando o Intellisense, a menos que a conclusão ocorre na classe definindo o membro oculto.
 
-Um novo atributo **System.Management.Automation.HiddenAttribute** foi adicionado para que o código c# pode ter a mesma semântica dentro do Windows PowerShell.
+Um novo atributo **System.Management.Automation.HiddenAttribute** foi adicionada para que C# código pode ter a mesma semântica dentro do Windows PowerShell.
 
 ## <a name="return-types"></a>Tipos de retorno
 

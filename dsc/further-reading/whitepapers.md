@@ -3,11 +3,11 @@ ms.date: 06/12/2017
 keywords: DSC, powershell, configuração, a configuração
 title: Documentos Técnicos
 ms.openlocfilehash: 645378802e1ab592857e442db5bc86ac33817e5e
-ms.sourcegitcommit: 00ff76d7d9414fe585c04740b739b9cf14d711e1
+ms.sourcegitcommit: e7445ba8203da304286c591ff513900ad1c244a4
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 12/14/2018
-ms.locfileid: "53404746"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62079766"
 ---
 # <a name="whitepapers"></a>Documentos Técnicos
 

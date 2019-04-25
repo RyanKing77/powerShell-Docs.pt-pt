@@ -3,11 +3,11 @@ ms.date: 06/12/2017
 keywords: DSC, powershell, configuração, a configuração
 title: Configurações de aninhamento
 ms.openlocfilehash: 54162cd72d2d1e7773e3be636bfa681329854498
-ms.sourcegitcommit: 00ff76d7d9414fe585c04740b739b9cf14d711e1
+ms.sourcegitcommit: e7445ba8203da304286c591ff513900ad1c244a4
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 12/14/2018
-ms.locfileid: "53404743"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62080242"
 ---
 # <a name="nesting-dsc-configurations"></a>Configurações de DSC de aninhamento
 
@@ -55,6 +55,6 @@ Neste exemplo, `FileConfig` usa dois parâmetros obrigatórios, **CopyFrom** e *
 O `NestedConfig` chamadas de configuração `FileConfig` como se fosse um recurso.
 As propriedades a `NestedConfig` bloco de recursos (**CopyFrom** e **CopyTo**) são os parâmetros do `FileConfig` configuração.
 
-## <a name="see-also"></a>Consulte Também
+## <a name="see-also"></a>Veja Também
 
 - [Recursos compostos – usando uma configuração de DSC como um recurso](../resources/authoringResourceComposite.md)

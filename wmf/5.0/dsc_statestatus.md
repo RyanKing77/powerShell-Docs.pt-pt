@@ -2,11 +2,11 @@
 ms.date: 06/12/2017
 keywords: wmf,powershell,setup
 ms.openlocfilehash: ff2c2bd7369893d72db001ecabf63991ded0bfd5
-ms.sourcegitcommit: ac20e0faaa37142e9c6e4507a21df2f4a3fdbece
+ms.sourcegitcommit: e7445ba8203da304286c591ff513900ad1c244a4
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44339876"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62058986"
 ---
 # <a name="unified-and-consistent-state-and-status-representation"></a>Estado Unificado e Consistente e Representação de Estado
 
@@ -25,20 +25,20 @@ A tabela abaixo ilustra o resultante Estado relacionadas com as propriedades em 
 
 | Cenário                        | LCMState             | Estado     | Pedido de reinício | ResourcesInDesiredState   | ResourcesNotInDesiredState |
 |---------------------------------|----------------------|------------|---------------|------------------------------|--------------------------------|
-| S<sub>eu</sub>                   | Inativo                 | Sucesso    | $false        | S                            | $null                          |
-| F<sub>eu</sub>                   | PendingConfiguration | Falha    | $false        | $null                        | F                              |
-| S, F                             | PendingConfiguration | Falha    | $false        | S                            | F                              |
-| F, S                             | PendingConfiguration | Falha    | $false        | S                            | F                              |
+| S<sub>i</sub>                   | Inativo                 | Sucesso    | $false        | S                            | $null                          |
+| F<sub>i</sub>                   | PendingConfiguration | Falha    | $false        | $null                        | F                              |
+| S,F                             | PendingConfiguration | Falha    | $false        | S                            | F                              |
+| F,S                             | PendingConfiguration | Falha    | $false        | S                            | F                              |
 | S<sub>1</sub>, F, S<sub>2</sub> | PendingConfiguration | Falha    | $false        | S<sub>1</sub>, S<sub>2</sub> | F                              |
 | F<sub>1</sub>, S, F<sub>2</sub> | PendingConfiguration | Falha    | $false        | S                            | F<sub>1</sub>, F<sub>2</sub>   |
-| S, o r                            | PendingReboot        | Sucesso    | $true         | S                            | r                              |
+| S, r                            | PendingReboot        | Sucesso    | $true         | S                            | r                              |
 | F, r                            | PendingReboot        | Falha    | $true         | $null                        | F, r                           |
 | r, S                            | PendingReboot        | Sucesso    | $true         | $null                        | r                              |
 | r, F                            | PendingReboot        | Sucesso    | $true         | $null                        | r                              |
 
-- S<sub>eu</sub>: uma série de recursos que são aplicadas com êxito
-- F<sub>eu</sub>: uma série de recursos que são aplicadas sem êxito
-- r: um recurso que exige reinicialização
+- S<sub>i</sub>: Uma série de recursos que são aplicadas com êxito
+- F<sub>i</sub>: Uma série de recursos que são aplicadas sem êxito
+- r: Um recurso que exige reinicialização
 
 ```powershell
 $LCMState = (Get-DscLocalConfigurationManager).LCMState

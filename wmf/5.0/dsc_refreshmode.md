@@ -1,13 +1,13 @@
 ---
 ms.date: 06/12/2017
 keywords: wmf,powershell,setup
-ms.openlocfilehash: fb9dda75abc2726f6e48cdf3cad4d8990df1cefa
-ms.sourcegitcommit: 54534635eedacf531d8d6344019dc16a50b8b441
+ms.openlocfilehash: c6eef03b6cac5a0bf37016b8aaec18f296c2625e
+ms.sourcegitcommit: e7445ba8203da304286c591ff513900ad1c244a4
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 05/17/2018
-ms.locfileid: "34225662"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62058765"
 ---
 # <a name="additional-value-for-refreshmode-property"></a>Valor adicional para a propriedade RefreshMode
 
-Esta versão introduz um novo `RefreshMode` valor, **desativado**. Quando está definido neste modo, o MMC não gestão de documentos. Para obter mais informações, consulte [configurar o Gestor de configuração Local](https://msdn.microsoft.com/powershell/dsc/metaconfig).
+Essa versão apresenta um novo `RefreshMode` valor, **desativado**. Quando esse modo está definido, LCM não faz a gestão de documentos. Para obter mais informações, consulte [configurar o Gestor de configuração Local](https://msdn.microsoft.com/powershell/dsc/metaconfig).

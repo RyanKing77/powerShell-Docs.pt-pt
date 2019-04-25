@@ -3,11 +3,11 @@ ms.date: 12/12/2018
 keywords: DSC, powershell, configuração, a configuração
 title: Dependências de recursos com a chave DependsOn
 ms.openlocfilehash: 5ea08c76c203188f41513ad0cc1f4571579b4172
-ms.sourcegitcommit: caac7d098a448232304c9d6728e7340ec7517a71
+ms.sourcegitcommit: e7445ba8203da304286c591ff513900ad1c244a4
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 03/16/2019
-ms.locfileid: "58055704"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62080078"
 ---
 # <a name="resource-dependencies-using-dependson"></a>Dependências de recursos com a chave DependsOn
 

@@ -1,16 +1,16 @@
 ---
 ms.date: 06/12/2017
 keywords: wmf,powershell,setup
-ms.openlocfilehash: 14208e3b5d5c2fef80fa42a87cc00aeee81bd042
-ms.sourcegitcommit: 54534635eedacf531d8d6344019dc16a50b8b441
+ms.openlocfilehash: b8940ded189d822a5a2cd40773ef5146353611cc
+ms.sourcegitcommit: e7445ba8203da304286c591ff513900ad1c244a4
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 05/16/2018
-ms.locfileid: "34189912"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62059003"
 ---
 # <a name="cryptographic-message-syntax-cms-cmdlets"></a>Cmdlets de sintaxe de mensagem (CMS) criptográfico
 
-Os cmdlets de sintaxe de mensagens criptográficas suportam encriptação e desencriptação de conteúdo utilizando o formato de padrão da IEFT para proteger criptograficamente mensagens conforme documentado [RFC5652](https://tools.ietf.org/html/rfc5652).
+Os cmdlets de sintaxe de mensagem criptográfica suportam a encriptação e desencriptação de conteúdo utilizando o formato de padrão IETF para proteger criptograficamente mensagens conforme documentado [RFC5652](https://tools.ietf.org/html/rfc5652).
 
 ```powershell
 Get-CmsMessage [-Content] <string>
@@ -25,13 +25,13 @@ Unprotect-CmsMessage [-Path] <string> [[-To] <CmsMessageRecipient[]>] [-IncludeC
 Unprotect-CmsMessage [-LiteralPath] <string> [[-To] <CmsMessageRecipient[]>] [-IncludeContext]
 ```
 
-A encriptação de CMS padrão implementa criptografia de chave pública, onde as chaves utilizadas para encriptar o conteúdo (o *chave pública*) e as chaves utilizadas para desencriptar o conteúdo (o *chave privada*) estão separadas.
+A encriptação de CMS padrão implementa a criptografia de chave pública, onde as chaves utilizadas para encriptar o conteúdo (a *chave pública*) e as chaves utilizadas para desencriptar o conteúdo (a *chave privada*) estão separados.
 
-A chave pública pode ser partilhada em grande escala, não sendo dados confidenciais. Se qualquer conteúdo é encriptado com esta chave pública, apenas a chave privada pode desencriptá-lo. Para obter mais informações, consulte [criptografia de chave pública](https://en.wikipedia.org/wiki/Public-key_cryptography).
+A chave pública pode ser partilhada amplamente e não dados confidenciais. Se qualquer conteúdo é encriptado com esta chave pública, apenas a chave privada pode descriptografá-la. Para obter mais informações, consulte [criptografia de chave pública](https://en.wikipedia.org/wiki/Public-key_cryptography).
 
-Para ser reconhecido no PowerShell, os certificados de encriptação requerem um identificador exclusivo de utilização de chave (EKU) para identificá-las como certificados de encriptação de dados (por exemplo, os identificadores para 'Assinatura de código', 'Mail encriptados').
+A ser reconhecida no PowerShell, os certificados de encriptação exigem um identificador exclusivo de utilização de chave (EKU) para identificá-los como certificados de encriptação de dados (como os identificadores para "assinatura de código', 'Mail encriptados').
 
-Eis um exemplo de como criar um certificado que é boa para a encriptação de documentos:
+Eis um exemplo de criação de um certificado que é bom para a encriptação de documentos:
 
 ```powershell
 (Change the text in **Subject** to your name, email, or other identifier), and put in a file (i.e.: DocumentEncryption.inf):
@@ -60,7 +60,7 @@ Em seguida, execute:
 certreq -new DocumentEncryption.inf DocumentEncryption.cer
 ```
 
-E, agora pode encriptar e desencriptar o conteúdo:
+E agora pode encriptar e desencriptar o conteúdo:
 
 ```powershell
 $protected = "Hello World" | Protect-CmsMessage -To "\*me@somewhere.com\*[](mailto:*leeholm@microsoft.com*)"
@@ -80,12 +80,12 @@ $protected | Unprotect-CmsMessage
 Hello World
 ```
 
-Cada parâmetro do tipo **CMSMessageRecipient** suporta identificadores nos seguintes formatos:
-- Um certificado real (como obtidas do fornecedor de certificado)
+Qualquer parâmetro do tipo **CMSMessageRecipient** suporta identificadores nos seguintes formatos:
+- Um certificado real (como obtidos a partir do fornecedor de certificado)
 - Caminho para a um ficheiro que contém o certificado
 - Caminho para um diretório que contém o certificado
-- Thumbprint do certificado (utilizado para procurar no arquivo de certificados)
-- Nome do requerente do certificado (utilizado para procurar no arquivo de certificados)
+- Thumbprint do certificado (usado para examinar o arquivo de certificados)
+- Nome do requerente do certificado (usado para examinar o arquivo de certificados)
 
 Para ver os certificados de encriptação de documentos no fornecedor de certificado, pode utilizar o **- DocumentEncryptionCert** parâmetro dinâmico:
 

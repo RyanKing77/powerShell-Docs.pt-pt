@@ -5,11 +5,11 @@ keywords: wmf,powershell,setup
 contributor: ryanpu
 title: Melhorias à administração Just Enough (JEA)
 ms.openlocfilehash: 66cbacb78f8a365e9c8556c7c56b3c3525de7395
-ms.sourcegitcommit: c3f1a83b59484651119630f3089aa51b6e7d4c3c
+ms.sourcegitcommit: e7445ba8203da304286c591ff513900ad1c244a4
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 07/26/2018
-ms.locfileid: "39267870"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62055637"
 ---
 # <a name="improvements-to-just-enough-administration-jea"></a>Melhorias à administração Just Enough (JEA)
 
@@ -81,6 +81,6 @@ RequiredGroups = @{ Or = '2FA-logon', 'smartcard-logon' }
 RequiredGroups = @{ And = 'elevated-jea', @{ Or = '2FA-logon', 'smartcard-logon' }}
 ```
 
-## <a name="fixed-virtual-accounts-are-now-supported-on-windows-server-2008-r2"></a>Foi corrigido: Contas virtuais agora são suportadas no Windows Server 2008 R2
+## <a name="fixed-virtual-accounts-are-now-supported-on-windows-server-2008-r2"></a>Corrigido: Contas virtuais são agora suportadas no Windows Server 2008 R2
 
 No WMF 5.1, agora é possível utilizar contas virtuais no Windows Server 2008 R2, permitindo configurações consistentes e paridade de funcionalidades entre o Windows Server 2008 R2 - 2016. Contas virtuais permanecem não suportadas ao utilizar a JEA no Windows 7.

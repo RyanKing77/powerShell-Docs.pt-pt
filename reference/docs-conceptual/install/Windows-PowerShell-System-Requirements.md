@@ -3,12 +3,12 @@ ms.date: 06/05/2017
 keywords: PowerShell, o cmdlet
 title: Requisitos de Sistema do Windows PowerShell
 ms.assetid: 6d1d3c75-3be4-4fc9-8805-ca9b2c454d42
-ms.openlocfilehash: 164ccefa050373064977108aaa13a3ecbeb28713
-ms.sourcegitcommit: 00ff76d7d9414fe585c04740b739b9cf14d711e1
+ms.openlocfilehash: a9a7dc434d26876d6747526ad3ef6fa598376ac1
+ms.sourcegitcommit: e7445ba8203da304286c591ff513900ad1c244a4
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 12/14/2018
-ms.locfileid: "53404935"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62058308"
 ---
 # <a name="windows-powershell-system-requirements"></a>Requisitos de Sistema do Windows PowerShell
 Este tópico lista os requisitos de sistema para o Windows PowerShell 3.0, o Windows PowerShell 4.0 e o Windows PowerShell 5.0 e o Windows PowerShell 5.1 e para recursos especiais, como o Windows PowerShell Integrated Scripting Environment (ISE), comandos CIM, e fluxos de trabalho.
@@ -36,7 +36,7 @@ Windows PowerShell 5.1 é executado nas seguintes versões do Windows.
 
 - Instalar o Windows 7 com Service Pack 1, [Windows Management Framework 5.1](https://aka.ms/wmf5download) para executar o Windows PowerShell 5.1
 
-Windows PowerShell 5.0 (Superceeded pelo Windows PowerShell 5.1) é executado nas seguintes versões do Windows.
+Windows PowerShell 5.0 (substituídas pelo Windows PowerShell 5.1) é executado nas seguintes versões do Windows.
 
 - Windows Server 2019, uma versão superior instalada por predefinição
 
@@ -97,7 +97,7 @@ Windows PowerShell 5.0 requer ser pré-instalado no Windows Server 2008 R2 SP1 e
 ## <a name="ws-management-30"></a>WS-Management 3.0
 Windows PowerShell 3.0 e o Windows PowerShell 4.0 requerem 3.0 de WS-Management, que suporta o serviço WinRM e o protocolo de WSMan. Este programa está incluído no Windows 8.1, Windows Server 2012 R2, Windows 8, Windows Server 2012, Windows Management Framework 4.0 e Windows Management Framework 3.0.
 
-## <a name="windows-management-instrumentation-30"></a>Instrumentação de gerenciamento do Windows 3.0
+## <a name="windows-management-instrumentation-30"></a>Windows Management Instrumentation 3.0
 Windows PowerShell 3.0 e o Windows PowerShell 4.0 exigem 3.0 de Windows Management Instrumentation (WMI). Este programa está incluído no Windows 8.1, Windows Server 2012 R2, Windows 8, Windows Server 2012, Windows Management Framework 4.0 e Windows Management Framework 3.0. Se este programa não estiver instalado no computador, as funcionalidades que requerem o WMI, por exemplo, comandos CIM, não são executados.
 
 ## <a name="common-language-runtime-40"></a>Common Language Runtime 4.0
@@ -114,11 +114,11 @@ No entanto, alguns itens, como este, requer uma interface gráfica do usuário. 
 
     1.  [Out-GridView](https://docs.microsoft.com/powershell/module/microsoft.powershell.utility/out-gridview)
 
-    2.  [Comando show](https://docs.microsoft.com/powershell/module/Microsoft.PowerShell.Utility/Show-Command)
+    2.  [Show-Command](https://docs.microsoft.com/powershell/module/Microsoft.PowerShell.Utility/Show-Command)
 
-    3.  [Show ControlPanelItem](https://docs.microsoft.com/powershell/module/Microsoft.PowerShell.Management/Show-ControlPanelItem)
+    3.  [Show-ControlPanelItem](https://docs.microsoft.com/powershell/module/Microsoft.PowerShell.Management/Show-ControlPanelItem)
 
-    4.  [Registo de eventos show](https://docs.microsoft.com/powershell/module/Microsoft.PowerShell.Management/Show-EventLog)
+    4.  [Show-EventLog](https://docs.microsoft.com/powershell/module/Microsoft.PowerShell.Management/Show-EventLog)
 
 - Parâmetros
 
@@ -135,7 +135,7 @@ O mecanismo do Windows PowerShell 2.0 requer o Microsoft .NET Framework 2.0.5072
 
 Para obter informações sobre a adição ou instalar o motor do Windows PowerShell 2.0 e adicionar ou instalar as versões necessárias do Microsoft .NET Framework, consulte [instalar o motor do Windows PowerShell 2.0](Installing-the-Windows-PowerShell-2.0-Engine.md). Para obter informações sobre como iniciar o motor do Windows PowerShell 2.0, consulte [iniciar o motor do Windows PowerShell 2.0](../getting-started/Starting-the-Windows-PowerShell-2.0-Engine.md).
 
-## <a name="windows-preinstallation-environment"></a>Ambiente de Pré-instalação do Windows
+## <a name="windows-preinstallation-environment"></a>Ambiente de pré-instalação do Windows
 Windows PowerShell 2.0, o Windows PowerShell 3.0 e o Windows PowerShell 4.0 executam no ambiente de pré-instalação do Windows (Windows PE). No entanto, os seguintes cmdlets não são suportados.
 
 - [Cmdlets de (BITS serviço) de transferência inteligente em segundo plano](https://go.microsoft.com/fwlink/?LinkId=257514)
@@ -150,7 +150,7 @@ Windows PowerShell 2.0, o Windows PowerShell 3.0 e o Windows PowerShell 4.0 exec
 
 Além disso, o **WinRM** serviço não está presente no Windows PE.
 
-## <a name="see-also"></a>Consulte Também
+## <a name="see-also"></a>Veja Também
 - [Introdução ao Windows PowerShell](../getting-started/Getting-Started-with-Windows-PowerShell.md)
 - [Instalar o Windows PowerShell](Installing-Windows-PowerShell.md)
 - [Iniciar o Windows PowerShell](../getting-started/Starting-Windows-PowerShell.md)

@@ -4,11 +4,11 @@ ms.topic: conceptual
 keywords: wmf,powershell,setup
 title: Melhorias do mecanismo do PowerShell no WMF 5.1
 ms.openlocfilehash: 738f72b910de7d44f48309013237d523d0dd40a4
-ms.sourcegitcommit: 8b076ebde7ef971d7465bab834a3c2a32471ef6f
+ms.sourcegitcommit: e7445ba8203da304286c591ff513900ad1c244a4
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 07/06/2018
-ms.locfileid: "37892897"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62055569"
 ---
 # <a name="powershell-engine-improvements"></a>Melhorias do mecanismo do PowerShell
 
@@ -32,7 +32,7 @@ Alguns aperfeiçoamentos de exemplo (os resultados podem variar consoante o hard
 
 > [!Note]
 > Uma alteração relacionada à inicialização pode afetar alguns cenários não suportados.
-> PowerShell já não lê os arquivos `$pshome\*.ps1xml` - - esses arquivos foram convertidos em c# para evitar alguns ficheiros e sobrecarga de CPU de processamento XML ficheiros.
+> PowerShell já não lê os arquivos `$pshome\*.ps1xml` – estes ficheiros foram convertidos para C# para evitar alguns ficheiros e a sobrecarga da CPU de processar os arquivos XML.
 > Os arquivos ainda existem para suporte V2 lado a lado, para que se alterar o conteúdo do arquivo, ele não terá qualquer efeito para V5, apenas V2.
 > Tenha em atenção que a alteração do conteúdo desses arquivos nunca foi um cenário suportado.
 

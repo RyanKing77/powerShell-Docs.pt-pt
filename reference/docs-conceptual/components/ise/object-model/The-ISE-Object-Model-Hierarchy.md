@@ -3,11 +3,11 @@ ms.date: 06/05/2017
 keywords: PowerShell, o cmdlet
 title: Hierarquia do Modelo de Objeto ISE
 ms.openlocfilehash: 0159707b1050c412a74da3d3ca02a46cea982556
-ms.sourcegitcommit: b6871f21bd666f9cd71dd336bb3f844cf472b56c
+ms.sourcegitcommit: e7445ba8203da304286c591ff513900ad1c244a4
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 02/03/2019
-ms.locfileid: "55683773"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62057728"
 ---
 # <a name="the-ise-object-model-hierarchy"></a>Hierarquia do Modelo de Objeto ISE
 
@@ -50,7 +50,7 @@ O **$psISE.PowerShellTabs** objeto é uma instância da [PowerShellTabCollection
 É uma coleção de todos os atualmente abertas PowerShell guias que representam a ambientes de execução no computador local ou em computadores remotos ligados do Windows PowerShell disponíveis.
 Cada membro da coleção é uma instância do [PowerShellTab](The-PowerShellTab-Object.md) classe.
 
-## <a name="see-also"></a>Consulte Também
+## <a name="see-also"></a>Veja Também
 
 - [Objetivo do ISE do Windows PowerShell Scripting o modelo de objeto](Purpose-of-the-Windows-PowerShell-ISE-Scripting-Object-Model.md)
 - [Hierarquia do Modelo de Objeto ISE](The-ISE-Object-Model-Hierarchy.md)

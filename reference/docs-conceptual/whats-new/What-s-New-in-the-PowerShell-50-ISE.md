@@ -3,12 +3,12 @@ ms.date: 06/05/2017
 keywords: PowerShell, o cmdlet
 title: Novidades no PowerShell 50 ISE
 ms.assetid: 38648d47-7c27-4b37-a40e-ad29948519c2
-ms.openlocfilehash: f05e3f3f95c8ceec6e843b8a1c79e6f092e1b87b
-ms.sourcegitcommit: 221b7daab7f597f8b2e4864cf9b5d9dda9b9879b
+ms.openlocfilehash: 2d953bc4553de7720c590304d29750b84a1ef3b2
+ms.sourcegitcommit: e7445ba8203da304286c591ff513900ad1c244a4
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52320589"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62058187"
 ---
 # <a name="what39s-new-in-the-windows-powershell-ise"></a>O que&#39;novidade do ISE do Windows PowerShell
 Este tópico explica os recursos novos e atualizados que foram introduzidos em versões do Windows PowerShell Integrated Scripting Environment (ISE).
@@ -21,7 +21,7 @@ Para uma descrição geral do ISE do Windows PowerShell, consulte [descrição g
 ## <a name="new-and-changed-functionality-in-windows-powershell-ise"></a>Funcionalidades novas e alteradas no ISE do Windows PowerShell
 A tabela seguinte lista as funcionalidades novas e alteradas para esta versão do Windows PowerShell ISE do Windows PowerShell.
 
-|Funcionalidade|ISE do Windows PowerShell 4.0|ISE do Windows PowerShell 3.0|ISE do Windows PowerShell 2.0|
+|Funcionalidade|Windows PowerShell ISE 4.0|Windows PowerShell ISE 3.0|Windows PowerShell ISE 2.0|
 |--------------------------|-----------------------------------------------|-----------------------------------------------|-----------------------------------------------|
 |**[IntelliSense](#intellisense)**|X|X||
 |**[Trechos de código](#snippets)**|X|X||
@@ -147,11 +147,11 @@ Windows PowerShell ISE 2.0 tem separado de comando e painéis de saída.
 
 Se iniciar o ISE do Windows PowerShell a partir da linha de comandos (digitando **powershell_ise.exe**), pode adicionar os seguintes parâmetros de linha de comando novo.
 
-- *-NoProfile*: inicia o Windows PowerShell ISE sem executar **$profile**
+- *-NoProfile*: Inicia o ISE do Windows PowerShell sem execução **$profile**
 
-- *-Ajudar*: exibe uma janela de ajuda
+- *-Help*: Exibe uma janela de ajuda
 
-- *-mta*: inicia o ISE do PowerShell do Windows no modo multithreaded apartment. O modo de operação do padrão do Windows PowerShell ISE é o modo de apartamento de thread único, ou *- sta*.
+- *-mta*: Inicia o ISE do Windows PowerShell no modo multithreaded apartment. O modo de operação do padrão do Windows PowerShell ISE é o modo de apartamento de thread único, ou *- sta*.
 
 **Que valor acrescenta esta alteração?**
 
@@ -176,7 +176,7 @@ Outras funcionalidades de edição do Windows PowerShell ISE incluem:
 
 - **Analisar a exibição de erro** erros de análise são indicados com sublinhados vermelhos. Quando coloque o cursor sobre um erro indicado, o texto de descrição apresenta o problema que foi encontrado no código.
 
-- **Zoom** a percentagem de zoom da consola "™ conteúdo s pode ser definido utilizando o controlo de deslize de zoom (no canto inferior direito da janela do Windows PowerShell ISE), ou introduza o comando **$psise.options.Zoom** no painel da consola.
+- **Zoom** pode ser definida a percentagem de zoom do conteúdo da consola, utilizando o controlo de deslize de zoom (no canto inferior direito da janela do Windows PowerShell ISE), ou introduza o comando **$psise.options.Zoom** no painel da consola.
 
 - **Rich text copiar e colar** copiar para a área de transferência no ISE do Windows PowerShell preserva o tipo de letra, tamanho e as informações de cor da seleção original.
 

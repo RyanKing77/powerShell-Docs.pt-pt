@@ -4,11 +4,11 @@ keywords: PowerShell, o cmdlet
 title: Como Utilizar o Painel de Consola no ISE do Windows PowerShell
 ms.assetid: 44d67705-87c7-4a69-a53e-6471fdebb757
 ms.openlocfilehash: 5bbbdd3b1f0324ff1a4f2298459f58640c4dc9a6
-ms.sourcegitcommit: b6871f21bd666f9cd71dd336bb3f844cf472b56c
+ms.sourcegitcommit: e7445ba8203da304286c591ff513900ad1c244a4
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 02/03/2019
-ms.locfileid: "55688722"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62057406"
 ---
 # <a name="how-to-use-the-console-pane-in-the-windows-powershell-ise"></a>Como Utilizar o Painel de Consola no ISE do Windows PowerShell
 
@@ -26,6 +26,6 @@ O painel de resultados a partir da v3 do Windows PowerShell, foi combinado com o
 
 - Limpe todo o texto no painel da consola. Para limpar o painel de consola, pode clicar a **limpar o painel de consola** ícone na barra de ferramentas ou execute o comando **Clear-Host** ou o respetivo alias **cls**.
 
-## <a name="see-also"></a>Consulte Também
+## <a name="see-also"></a>Veja Também
 
 - [Introdução ao ISE do Windows PowerShell](Introducing-the-Windows-PowerShell-ISE.md)

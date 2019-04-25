@@ -3,11 +3,11 @@ ms.date: 06/12/2017
 keywords: DSC, powershell, configuração, a configuração
 title: Windows PowerShell Desired State Configuration descrição-geral
 ms.openlocfilehash: 3e4f0afa17ab60bfa98f1b86b9830462a7c8e1cf
-ms.sourcegitcommit: 00ff76d7d9414fe585c04740b739b9cf14d711e1
+ms.sourcegitcommit: e7445ba8203da304286c591ff513900ad1c244a4
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 12/14/2018
-ms.locfileid: "53405268"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62079976"
 ---
 # <a name="windows-powershell-desired-state-configuration-overview"></a>Windows PowerShell Desired State Configuration descrição-geral
 
@@ -32,7 +32,7 @@ DSC é uma plataforma declarativa usada para configuração, implantação e ger
     O LCM consulta regularmente o sistema usando o fluxo de controlo implementado pelos recursos para garantir que o estado definido por uma configuração é mantido.
     Se o sistema está sem estado, o LCM faz chamadas para o código em recursos para "tornam isso", de acordo com a configuração.
 
-## <a name="see-also"></a>Consulte Também
+## <a name="see-also"></a>Veja Também
 
 - [Configurações de DSC](../configurations/configurations.md)
 - [Recursos de DSC](../resources/resources.md)

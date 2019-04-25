@@ -5,11 +5,11 @@ ms.topic: conceptual
 contributor: vaibch
 title: Falha de cmdlets do Gestor de comutador de rede
 ms.openlocfilehash: a0f84c35974b6674faba4b0f19a28bd6e2490a96
-ms.sourcegitcommit: b6871f21bd666f9cd71dd336bb3f844cf472b56c
+ms.sourcegitcommit: e7445ba8203da304286c591ff513900ad1c244a4
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 02/03/2019
-ms.locfileid: "55685250"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62084985"
 ---
 # <a name="network-switch-manager-cmdlets-failure"></a>Falha de Cmdlets do Gestor de comutador de rede
 

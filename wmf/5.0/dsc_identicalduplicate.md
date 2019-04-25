@@ -1,16 +1,16 @@
 ---
 ms.date: 06/12/2017
 keywords: wmf,powershell,setup
-ms.openlocfilehash: 3f73b7cf0cdf033cbd561b3412734692bb7decd7
-ms.sourcegitcommit: 54534635eedacf531d8d6344019dc16a50b8b441
+ms.openlocfilehash: 28f4f8ae2bbddc8fb5ef9d95d3061a91fcc8ffe2
+ms.sourcegitcommit: e7445ba8203da304286c591ff513900ad1c244a4
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 05/16/2018
-ms.locfileid: "34187546"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62058731"
 ---
-# <a name="allowing-for-identical-duplicate-resources-in-a-configuration"></a>Permite a recursos duplicados idênticos numa configuração
+# <a name="allowing-for-identical-duplicate-resources-in-a-configuration"></a>Permitindo para recursos duplicados idênticos numa configuração
 
-O DSC não permitir ou lidar com definições em conflito de recursos dentro de uma configuração. Em vez de tentar resolver o conflito, basta falhará. Como a reutilização de configuração torna-se mais utilizada através dos recursos compostos, serão mais frequentemente ocorrer conflitos de etc. Quando as definições de recursos em conflito são idênticas, DSC deve ser inteligente e permitir esta. Com esta versão, suportamos a ter várias instâncias de recursos que têm definições idênticas:
+DSC não permitir nem lidar com definições em conflito de recursos dentro de uma configuração. Em vez de tentar resolver o conflito, simplesmente falhará. Como a reutilização de configuração se torna mais utilizada por meio de recursos compostos, conflitos etc. ocorrerá com mais frequência. Quando as definições de recursos em conflito são idênticas, DSC deve ser inteligente e permitir isso. Com esta versão, oferecemos suporte a ter várias instâncias de recursos que têm definições idênticas:
 
 ```powershell
 Configuration IIS_FrontEnd
@@ -51,9 +51,9 @@ Configuration WebApplication
 }
 ```
 
-Em versões anteriores, o resultado seria uma compilação falhou devido a um conflito entre a WindowsFeature FE_IIS e instâncias de WindowsFeature Worker_IIS tentar Certifique-se a função 'servidor Web está instalada. Repare que *todos os* das propriedades que estão a ser configuradas são idênticos nestas duas configurações. Uma vez que *todos os* as propriedades destes dois recursos são idênticos, tal resultará em agora uma compilação efetuada com êxito.
+Em versões anteriores, o resultado seria uma compilação com falhas devido a um conflito entre o WindowsFeature FE_IIS e instâncias de WindowsFeature Worker_IIS tentando Certifique-se a função de "servidor Web está instalada. Tenha em atenção que *todos os* das propriedades que estão a ser configuradas são idênticos nessas duas configurações. Uma vez que *todos os* as propriedades desses dois recursos são idênticos, tal resultará numa compilação bem-sucedida agora.
 
-Se alguma das propriedades for diferente entre os dois recursos, estes não serão considerados idênticas e falhará a compilação:
+Se qualquer uma das propriedades são diferentes entre os dois recursos, eles não serão considerados idênticos e compilação irá falhar:
 
 ```powershell
 Configuration IIS_FrontEnd
@@ -94,4 +94,4 @@ Configuration WebApplication
 }
 ```
 
-Esta configuração muito semelhante irá falhar porque o FE_IIS WindowsFeature e os recursos de WindowsFeature Worker_IIS já não são idênticos e, por conseguinte, estão em conflito.
+Esta configuração muito semelhante irá falhar porque o FE_IIS WindowsFeature e os recursos de WindowsFeature Worker_IIS já não são idênticos e, portanto, entram em conflito.

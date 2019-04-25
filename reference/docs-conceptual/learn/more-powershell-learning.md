@@ -3,11 +3,11 @@ ms.date: 06/05/2017
 keywords: PowerShell, o cmdlet
 title: Mais formação sobre o PowerShell
 ms.openlocfilehash: 5e81801df99a55a358d1d1405bdc79f882aae92f
-ms.sourcegitcommit: 9df29dfc637191b62ca591893c251c1e02d4eb4c
+ms.sourcegitcommit: e7445ba8203da304286c591ff513900ad1c244a4
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 01/04/2019
-ms.locfileid: "54012556"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62058391"
 ---
 # <a name="more-powershell-learning"></a>Mais formação sobre o PowerShell
 
@@ -24,7 +24,7 @@ Além de ajudar a disponível na linha de comandos, os seguintes recursos fornec
 
 ## <a name="video-training"></a>Vídeo de formação
 
-### <a name="microsoft-virtual-academy"></a>A Microsoft Virtual Academy
+### <a name="microsoft-virtual-academy"></a>Microsoft Virtual Academy
 
 - [Introdução ao PowerShell 3.0 Introdução rápida ao](https://mva.microsoft.com/en-US/training-courses/getting-started-with-powershell-30-jump-start-8276)
 - [Ferramentas avançadas de & criação de scripts com o PowerShell 3.0 início](https://mva.microsoft.com/en-US/training-courses/advanced-tools-scripting-with-powershell-30-jump-start-8277)

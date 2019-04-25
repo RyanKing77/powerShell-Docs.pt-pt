@@ -4,11 +4,11 @@ keywords: PowerShell, o cmdlet
 title: Instalar o Motor do Windows PowerShell 2.0
 ms.assetid: 82928f2b-f96a-4ae6-a0d0-6e7b181da308
 ms.openlocfilehash: b625b61b4e191402074f57ea2e942f800dbbcd53
-ms.sourcegitcommit: b6871f21bd666f9cd71dd336bb3f844cf472b56c
+ms.sourcegitcommit: e7445ba8203da304286c591ff513900ad1c244a4
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 02/03/2019
-ms.locfileid: "55684074"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62058323"
 ---
 # <a name="installing-the-windows-powershell-20-engine"></a>Instalar o Motor do Windows PowerShell 2.0
 Este tópico explica como instalar o motor do Windows PowerShell 2.0.
@@ -74,7 +74,7 @@ O [Windows Management Framework 4.0](https://go.microsoft.com/fwlink/?LinkID=293
 
 O pacote do Windows Management Framework 3.0 que instala o Windows PowerShell 3.0 no Windows 7, Windows Server 2008 R2 e Windows Server 2008, inclui o mecanismo do Windows PowerShell 2.0. O motor do Windows PowerShell 2.0 está ativado e pronto a utilizar, se necessário, sem instalação adicionais, instalação ou configuração.
 
-## <a name="see-also"></a>Consulte Também
+## <a name="see-also"></a>Veja Também
 - [Requisitos de sistema do PowerShell do Windows](Windows-PowerShell-System-Requirements.md)
 - [Instalar o Windows PowerShell](Installing-Windows-PowerShell.md)
 - [Iniciar o Windows PowerShell](https://technet.microsoft.com/en-us/library/8ec8c2d7-8e7c-4722-a3d2-498fe5739a8e)

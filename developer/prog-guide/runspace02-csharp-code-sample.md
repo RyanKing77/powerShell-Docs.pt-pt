@@ -9,11 +9,11 @@ ms.topic: article
 ms.assetid: 59a7b8b9-f72e-43fd-9a10-77404441a3f2
 caps.latest.revision: 6
 ms.openlocfilehash: 0a8fc05db74529e2bfb88820b9cfd988245e0aeb
-ms.sourcegitcommit: b6871f21bd666f9cd71dd336bb3f844cf472b56c
+ms.sourcegitcommit: e7445ba8203da304286c591ff513900ad1c244a4
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 02/03/2019
-ms.locfileid: "56845844"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62081415"
 ---
 # <a name="runspace02-c-code-sample"></a>Runspace02 (C#) Code Sample (Código de Exemplo Runspace02 [C#])
 
@@ -23,6 +23,6 @@ Aqui está o C# código para o exemplo de Runspace02-fonte. Este exemplo utiliza
 
 [!code-csharp[Runspace02.cs](../../powershell-sdk-samples/SDK-2.0/csharp/Runspace02/Runspace02.cs#L11-L82 "Runspace02.cs")]
 
-## <a name="see-also"></a>Consulte Também
+## <a name="see-also"></a>Veja Também
 
 [SDK do Windows PowerShell](../windows-powershell-reference.md)

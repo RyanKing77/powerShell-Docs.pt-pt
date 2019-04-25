@@ -4,11 +4,11 @@ keywords: PowerShell, o cmdlet
 title: Executar Comandos Remotos
 ms.assetid: d6938b56-7dc8-44ba-b4d4-cd7b169fd74d
 ms.openlocfilehash: 2001b5509acde6ec4259bb1442944958a67aa66f
-ms.sourcegitcommit: b6871f21bd666f9cd71dd336bb3f844cf472b56c
+ms.sourcegitcommit: e7445ba8203da304286c591ff513900ad1c244a4
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 02/03/2019
-ms.locfileid: "55688596"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62058918"
 ---
 # <a name="running-remote-commands"></a>Executar Comandos Remotos
 
@@ -141,7 +141,7 @@ Para mais informações, consulte:
 
 Para obter ajuda com erros de comunicação remota, consulte [about_Remote_Troubleshooting](https://technet.microsoft.com/library/dd347642.aspx).
 
-## <a name="see-also"></a>Consulte Também
+## <a name="see-also"></a>Veja Também
 
 - [about_Remote](https://technet.microsoft.com/library/9b4a5c87-9162-4adf-bdfe-fbc80b9b8970)
 - [about_Remote_FAQ](https://technet.microsoft.com/library/e23702fd-9415-4a98-9975-390a4d3adc42)

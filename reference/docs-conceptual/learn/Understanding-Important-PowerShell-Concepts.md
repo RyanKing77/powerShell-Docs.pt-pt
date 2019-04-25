@@ -4,11 +4,11 @@ keywords: PowerShell, o cmdlet
 title: Noções sobre conceitos importantes do PowerShell
 ms.assetid: 3e601e38-4520-4578-a48d-b6779f1d35ee
 ms.openlocfilehash: fad64563d1a7a6abd4f0e430331f81f91f43d312
-ms.sourcegitcommit: 00ff76d7d9414fe585c04740b739b9cf14d711e1
+ms.sourcegitcommit: e7445ba8203da304286c591ff513900ad1c244a4
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 12/14/2018
-ms.locfileid: "53404665"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62058595"
 ---
 # <a name="understanding-important-powershell-concepts"></a>Noções sobre conceitos importantes do PowerShell
 
@@ -38,6 +38,6 @@ Uma vez que o PowerShell automaticamente analisa e processa a linha de comandos,
 > Se executar uma aplicação de gráfica no PowerShell, é aberta a janela para a aplicação.
 > PowerShell intervém apenas quando a linha de comandos de processamento de entrada fornecimento ou a saída do aplicativo retornado para a janela da consola. Não afeta como ele funciona internamente.
 
-## <a name="powershell-uses-some-c-syntax"></a>Alguma sintaxe c# utiliza o PowerShell
+## <a name="powershell-uses-some-c-syntax"></a>PowerShell usa alguns C# sintaxe
 
-PowerShell baseia-se no .NET Framework. Ele compartilha alguns recursos de sintaxe e as palavras-chave com a linguagem de programação c#. Aprendizagem do PowerShell pode tornar muito mais fácil de aprender o c#. Se já estiver familiarizado com c#, essas semelhanças podem tornar a aprendizagem do PowerShell mais fácil.
+PowerShell baseia-se no .NET Framework. Ele compartilha alguns recursos de sintaxe e palavras-chave com o C# linguagem de programação. Aprendizagem do PowerShell torna mais fácil aprender C#. Se já estiver familiarizado com o C#, essas semelhanças podem tornar a aprendizagem do PowerShell mais fácil.

@@ -4,11 +4,11 @@ keywords: PowerShell, o cmdlet
 title: Objeto PowerShellTab
 ms.assetid: a9b58556-951b-4f48-b3ae-b351b7564360
 ms.openlocfilehash: 577e2aaaddf3071801816d9ae91dbf0006dd5072
-ms.sourcegitcommit: 00ff76d7d9414fe585c04740b739b9cf14d711e1
+ms.sourcegitcommit: e7445ba8203da304286c591ff513900ad1c244a4
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 12/14/2018
-ms.locfileid: "53404866"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62057677"
 ---
 # <a name="the-powershelltab-object"></a>Objeto PowerShellTab
 
@@ -16,7 +16,7 @@ O **PowerShellTab** objeto representa um ambiente de tempo de execução do Wind
 
 ## <a name="methods"></a>Métodos
 
-### <a name="invoke-script-"></a>Invocar\( Script \)
+### <a name="invoke-script-"></a>Invoke\( Script \)
 
 Suportado no Windows PowerShell ISE 2.0 e versões posteriores.
 
@@ -119,7 +119,7 @@ A propriedade só de leitura que obtém o painel de consola [editor](The-ISEEdit
 $psISE.CurrentPowerShellTab.ConsolePane
 ```
 
-### <a name="displayname"></a>NomeaApresentar
+### <a name="displayname"></a>DisplayName
 
 Suportado no Windows PowerShell ISE 2.0 e versões posteriores.
 
@@ -225,7 +225,7 @@ $psISE.CurrentPowerShellTab.ShowCommands = $true
 $psISE.CurrentPowerShellTab.HorizontalAddOnToolsPaneOpened
 ```
 
-## <a name="see-also"></a>Consulte Também
+## <a name="see-also"></a>Veja Também
 
 - [Objeto PowerShellTabCollection](The-PowerShellTabCollection-Object.md)
 - [Objetivo do ISE do Windows PowerShell Scripting o modelo de objeto](Purpose-of-the-Windows-PowerShell-ISE-Scripting-Object-Model.md)

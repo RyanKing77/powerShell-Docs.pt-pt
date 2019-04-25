@@ -4,11 +4,11 @@ keywords: PowerShell, o cmdlet
 title: Glossário do Windows PowerShell
 ms.assetid: b0f88cbe-cb83-4912-a301-184534cb35c7
 ms.openlocfilehash: fd15667939fd9b3ea705806686b626645519588a
-ms.sourcegitcommit: 00ff76d7d9414fe585c04740b739b9cf14d711e1
+ms.sourcegitcommit: e7445ba8203da304286c591ff513900ad1c244a4
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 12/14/2018
-ms.locfileid: "53405466"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62057365"
 ---
 # <a name="windows-powershell-glossary"></a>Glossário do Windows PowerShell
 
@@ -22,7 +22,7 @@ ms.locfileid: "53405466"
 |parâmetro dinâmico|Um parâmetro que é adicionado um cmdlet do Windows PowerShell, função ou script sob determinadas condições. Cmdlets, funções, fornecedores e scripts, podem adicionar parâmetros dinâmicos.|
 |formatação de ficheiro|Um ficheiro XML do Windows PowerShell com o. format.ps1xml extensão e de que define como o Windows PowerShell apresenta um objeto com base em seu tipo de .NET Framework.|
 |Estado da sessão global|O estado de sessão que contém os dados que esteja acessíveis para o utilizador de uma sessão do Windows PowerShell.|
-|Anfitrião|A interface que o motor do Windows PowerShell utiliza para comunicar com o utilizador. Por exemplo, o anfitrião Especifica como os pedidos são processados entre o Windows PowerShell e o utilizador.|
+|anfitrião|A interface que o motor do Windows PowerShell utiliza para comunicar com o utilizador. Por exemplo, o anfitrião Especifica como os pedidos são processados entre o Windows PowerShell e o utilizador.|
 |aplicativo de Host|Um programa que carrega o motor do Windows PowerShell no seu processo e utiliza-o para executar operações de mensagens em fila.|
 |método de processamento de entrada|Um método que um cmdlet pode utilizar para processar os registos que recebe como entrada. Os métodos de processamento de entrada incluem o método BeginProcessing, o método ProcessRecord, o método EndProcessing e o método StopProcessing.|
 |manifesto de módulo|Um módulo do Windows PowerShell com um manifesto de cuja chave RootModule está vazio.|
@@ -30,7 +30,7 @@ ms.locfileid: "53405466"
 |Estado da sessão de módulo|O estado de sessão que contém os dados públicos e privados de um módulo do Windows PowerShell. Os dados privados neste estado de sessão não estão disponíveis para o utilizador de uma sessão do Windows PowerShell.|
 |Erro de não terminação|Um erro que não para o Windows PowerShell de continuar a processar o comando.|
 |nome próprio|A palavra que se segue o hífen um nome de cmdlet do Windows PowerShell. O substantivo descreve os recursos no qual o cmdlet atua.|
-|conjunto de parâmetros|Um grupo de parâmetros que podem ser usados no mesmo comando a executar uma ação específica.|
+|Conjunto de parâmetros|Um grupo de parâmetros que podem ser usados no mesmo comando a executar uma ação específica.|
 |pipe|No Windows PowerShell, para enviar os resultados do comando anterior como entrada para o comando seguinte no pipeline.|
 |Pipeline|Uma série de comandos, ligado por operadores de pipeline (&#124;) (ASCII 124). Cada operador de pipeline envia os resultados do comando anterior como entrada para o próximo comando.|
 |PSSession|Um tipo de sessão do Windows PowerShell que é criado, gerido e fechado pelo usuário.|
@@ -42,7 +42,7 @@ ms.locfileid: "53405466"
 |Shell|O interpretador de comandos que é utilizado para transmitir os comandos para o sistema operativo.|
 |parâmetro de mudança|Um parâmetro que não assume um argumento.|
 |Erro de terminação|Um erro que pára o Windows PowerShell de processamento do comando.|
-|transação|Uma unidade atômica de trabalho. O trabalho numa transação têm de ser concluído como um todo; Se qualquer parte da transação falhar, toda a transação falha.|
+|Transação|Uma unidade atômica de trabalho. O trabalho numa transação têm de ser concluído como um todo; Se qualquer parte da transação falhar, toda a transação falha.|
 |ficheiro de tipos|Um ficheiro XML do Windows PowerShell com a extensão de .ps1xml de que expande as propriedades dos tipos de Microsoft .NET Framework no Windows PowerShell.|
 |Verbo|A palavra que precede o hífen um nome de cmdlet do Windows PowerShell. O verbo descreve a ação que executa o cmdlet.|
 |Windows PowerShell|Um shell da linha de comandos e tecnologia scripts baseados em tarefas que fornece controlo abrangente de administradores de TI e a automação do sistema de tarefas de administração.|
@@ -51,7 +51,7 @@ ms.locfileid: "53405466"
 |Unidade do Windows PowerShell|Uma unidade virtual que fornece acesso direto a um arquivo de dados. Pode ser definido por um fornecedor de Windows PowerShell ou criado na linha de comandos. Unidades criadas na linha de comandos são unidades de específico da sessão e são perdidas quando a sessão é fechada.|
 |Windows PowerShell Integrated Scripting Environment (ISE)|Um aplicativo de host do Windows PowerShell que permite-lhe para executar comandos e escrever, testar e depurar scripts num ambiente amigável, a sintaxe de cores, compatível com Unicode.|
 |Módulo do Windows PowerShell|Uma unidade autônoma reutilizável que lhe permite partição, organizar e abstrair o código do Windows PowerShell. Um módulo pode conter cmdlets, provedores, funções, variáveis e outros tipos de recursos que podem ser importados como uma única unidade.|
-|Fornecedor do Windows PowerShell|Um com base no .NET Framework programa da Microsoft que disponibiliza os dados num armazenamento de dados especializados no Windows PowerShell para que possa ver e geri-lo.|
+|Fornecedor de Windows PowerShell|Um com base no .NET Framework programa da Microsoft que disponibiliza os dados num armazenamento de dados especializados no Windows PowerShell para que possa ver e geri-lo.|
 |Script do Windows PowerShell|Um script que é escrito no idioma do Windows PowerShell.|
 |Ficheiro de script do Windows PowerShell|Um ficheiro que tenha a extensão. ps1 e que contém um script que é escrito no idioma do Windows PowerShell.|
 |Snap-in Windows PowerShell|Um recurso que define um conjunto de cmdlets, fornecedores e tipos de Microsoft .NET Framework que podem ser adicionados ao ambiente do Windows PowerShell.|

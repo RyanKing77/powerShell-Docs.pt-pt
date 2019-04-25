@@ -9,11 +9,11 @@ ms.topic: article
 ms.assetid: bfbccc5b-2b2b-432a-a971-9f8ab503cdc3
 caps.latest.revision: 17
 ms.openlocfilehash: 3c6d8e410427d6cfaa1c15db421b3fe935f7d322
-ms.sourcegitcommit: b6871f21bd666f9cd71dd336bb3f844cf472b56c
+ms.sourcegitcommit: e7445ba8203da304286c591ff513900ad1c244a4
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 02/03/2019
-ms.locfileid: "56848168"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62082061"
 ---
 # <a name="writing-a-windows-powershell-module"></a>Writing a Windows PowerShell Module (Escrever um Módulo do Windows PowerShell)
 
@@ -35,7 +35,7 @@ Módulos podem ser utilizados para personalizar o seu ambiente através da adiç
 
 Os desenvolvedores do cmdlet e o fornecedor podem utilizar os módulos para testar e distribuir seus códigos compilados sem a necessidade de criar o snap-ins. Importar o assembly que contém o código compilado como um módulo (um módulo de binário) sem a necessidade de criar e registar o snap-ins.
 
-## <a name="see-also"></a>Consulte Também
+## <a name="see-also"></a>Veja Também
 
 [Noções básicas sobre um módulo do Windows PowerShell](./understanding-a-windows-powershell-module.md)
 
