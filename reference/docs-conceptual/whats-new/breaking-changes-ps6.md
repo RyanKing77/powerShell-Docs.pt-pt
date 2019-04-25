@@ -3,11 +3,11 @@ ms.date: 05/17/2018
 keywords: PowerShell, core
 title: Alterações recentes ao PowerShell 6.0
 ms.openlocfilehash: d25cf07baa11040af57f330feede44635c00c551
-ms.sourcegitcommit: f268dce5b5e72be669be0c6634b8db11369bbae2
+ms.sourcegitcommit: e7445ba8203da304286c591ff513900ad1c244a4
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 03/29/2019
-ms.locfileid: "58623930"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62085937"
 ---
 # <a name="breaking-changes-for-powershell-60"></a>Alterações recentes ao PowerShell 6.0
 
@@ -62,20 +62,20 @@ Em vez disso, recomendamos que o utilize os cmdlets do CIM (também conhecido co
 
 Devido à utilização de APIs sem suporte, `Microsoft.PowerShell.LocalAccounts` foi removido do PowerShell Core até encontra uma solução melhor.
 
-### <a name="-computer-cmdlets"></a>Cmdlets `*-Computer`
+### <a name="-computer-cmdlets"></a>`*-Computer` Cmdlets
 
 Devido à utilização de APIs sem suporte, os seguintes cmdlets foram removidos do PowerShell Core até encontra uma solução melhor.
 
-- Add-Computer
+- Adicionar-computador
 - Checkpoint-Computer
 - Remove-Computer
 - Computador de restauro
 
-### <a name="-counter-cmdlets"></a>Cmdlets `*-Counter`
+### <a name="-counter-cmdlets"></a>`*-Counter` Cmdlets
 
 Devido à utilização de APIs sem suporte, o `*-Counter` foi removido do PowerShell Core até encontra uma solução melhor.
 
-### <a name="-eventlog-cmdlets"></a>Cmdlets `*-EventLog`
+### <a name="-eventlog-cmdlets"></a>`*-EventLog` Cmdlets
 
 Devido à utilização de APIs sem suporte, o `*-EventLog` foi removido do PowerShell Core. até que seja encontrada uma solução melhor. `Get-WinEvent` e `Create-WinEvent` estão disponíveis para obter e criar eventos no Windows.
 

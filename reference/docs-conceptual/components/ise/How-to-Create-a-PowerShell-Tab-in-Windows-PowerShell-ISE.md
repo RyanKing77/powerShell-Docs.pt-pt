@@ -4,11 +4,11 @@ keywords: PowerShell, o cmdlet
 title: Como Criar um Separador do PowerShell no ISE do Windows PowerShell
 ms.assetid: c10c18c7-9ece-4fd0-83dc-a19c53d4fd83
 ms.openlocfilehash: 080fe89bf1443f51460589b445431913fa20b4b8
-ms.sourcegitcommit: 00ff76d7d9414fe585c04740b739b9cf14d711e1
+ms.sourcegitcommit: e7445ba8203da304286c591ff513900ad1c244a4
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 12/14/2018
-ms.locfileid: "53404761"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62057745"
 ---
 # <a name="how-to-create-a-powershell-tab-in-windows-powershell-ise"></a>Como Criar um Separador do PowerShell no ISE do Windows PowerShell
 
@@ -52,7 +52,7 @@ Para fechar uma guia, pode usar qualquer uma das seguintes técnicas:
 Se tem não foram guardadas ficheiros abrir no separador do PowerShell que está a fechar, que lhe for pedido para guardar ou rejeitá-los.
 Para obter mais informações sobre como guardar um script, consulte [como guardar um Script](How-to-Write-and-Run-Scripts-in-the-Windows-PowerShell-ISE.md#how-to-save-a-script).
 
-## <a name="see-also"></a>Consulte Também
+## <a name="see-also"></a>Veja Também
 
 - [Introdução ao ISE do Windows PowerShell](Introducing-the-Windows-PowerShell-ISE.md)
 - [Como utilizar o painel de consola no ISE do Windows PowerShell](How-to-Use-the-Console-Pane-in-the-Windows-PowerShell-ISE.md)

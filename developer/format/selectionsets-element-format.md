@@ -9,11 +9,11 @@ ms.topic: article
 ms.assetid: ebbac73a-1c99-4388-9f47-703cd024dc6d
 caps.latest.revision: 18
 ms.openlocfilehash: a9356635d60d5f8c5d4dec4ec8b7d0aea2b037dd
-ms.sourcegitcommit: b6871f21bd666f9cd71dd336bb3f844cf472b56c
+ms.sourcegitcommit: e7445ba8203da304286c591ff513900ad1c244a4
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 02/03/2019
-ms.locfileid: "56845109"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62063782"
 ---
 # <a name="selectionsets-element-format"></a>SelectionSets Element (Format) (Elemento SelectionSets [Formatação])
 
@@ -29,7 +29,7 @@ Formato de SelectionSets elemento do elemento de configuração
 </SelectionSets>
 ```
 
-## <a name="attributes-and-elements"></a>Atributos e Elementos
+## <a name="attributes-and-elements"></a>Atributos e elementos
 
 As secções seguintes descrevem os atributos, a elementos filho e o elemento principal do `SelectionSets` elemento. Cada elemento subordinado define um conjunto de objetos que pode ser referenciado pelo nome do conjunto. A ordem dos elementos subordinados não é significativa.
 
@@ -37,13 +37,13 @@ As secções seguintes descrevem os atributos, a elementos filho e o elemento pr
 
 Nenhum.
 
-### <a name="child-elements"></a>Elementos Subordinados
+### <a name="child-elements"></a>Elementos subordinados
 
 |Elemento|Descrição|
 |-------------|-----------------|
 |[Elemento de SelectionSet (formato)](./selectionset-element-format.md)|Elemento necessário.<br /><br /> Define um único conjunto de objetos do .NET que pode ser referenciado pelo nome do conjunto.|
 
-### <a name="parent-elements"></a>Elementos Principais
+### <a name="parent-elements"></a>Elementos principais
 
 |Elemento|Descrição|
 |-------------|-----------------|

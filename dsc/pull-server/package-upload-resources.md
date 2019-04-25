@@ -3,11 +3,11 @@ ms.date: 12/12/2018
 keywords: DSC, powershell, configuração, a configuração
 title: Pacote e o carregamento de recursos para um servidor de solicitação
 ms.openlocfilehash: 29a62f96393a53c9e7da57a5e51732dcb0937194
-ms.sourcegitcommit: 00ff76d7d9414fe585c04740b739b9cf14d711e1
+ms.sourcegitcommit: e7445ba8203da304286c591ff513900ad1c244a4
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 12/14/2018
-ms.locfileid: "53404758"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62079574"
 ---
 # <a name="package-and-upload-resources-to-a-pull-server"></a>Pacote e o carregamento de recursos para um servidor de solicitação
 

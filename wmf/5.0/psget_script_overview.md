@@ -1,17 +1,17 @@
 ---
 ms.date: 06/12/2017
 keywords: wmf,powershell,setup
-ms.openlocfilehash: 7667aebb6545ae8dde5d94baee4a663f1d26c167
-ms.sourcegitcommit: 54534635eedacf531d8d6344019dc16a50b8b441
+ms.openlocfilehash: 3c1fcf94174b99490b19963662ef1ccdf6cebfec
+ms.sourcegitcommit: e7445ba8203da304286c591ff513900ad1c244a4
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 05/17/2018
-ms.locfileid: "34219587"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62085073"
 ---
-# <a name="powershell-script-discovery-install-and-management-with-powershellget"></a>Deteção de Script do PowerShell, instalação e gestão com PowerShellGet
+# <a name="powershell-script-discovery-install-and-management-with-powershellget"></a>Deteção de Script do PowerShell, instalação e gestão com o PowerShellGet
 
-Partilha a funcionalidade de Script do PowerShell foi adicionado ao PowerShellGet a versão RTM do WMF 5.0.
-Os seguintes novos cmdlets são adicionados ao módulo PowerShellGet para suportar os Scripts do PowerShell.
+Recurso de compartilhamento de Script do PowerShell foi adicionado ao PowerShellGet na versão do WMF 5.0 RTM.
+Os seguintes cmdlets novos são adicionados ao módulo PowerShellGet para dar suporte a Scripts do PowerShell.
 ```powershell
 PS C:\\windows\\system32&gt; Get-Command \*script\* -Module PowerShellGet | Sort-Object -Property Noun, Verb
 CommandType Name Version Source

@@ -9,11 +9,11 @@ ms.topic: article
 ms.assetid: eee505c3-ff2c-4bfb-b48a-037ec34bce72
 caps.latest.revision: 8
 ms.openlocfilehash: a0c8548dd916a5b32a56462058858f887a9d5803
-ms.sourcegitcommit: b6871f21bd666f9cd71dd336bb3f844cf472b56c
+ms.sourcegitcommit: e7445ba8203da304286c591ff513900ad1c244a4
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 02/03/2019
-ms.locfileid: "56844829"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62066707"
 ---
 # <a name="customcontrol-element-for-control-for-controls-for-view-format"></a>CustomControl Element for Control for Controls for View (Format) (Elemento CustomControl para Control para Controls para View [Formatação])
 
@@ -29,7 +29,7 @@ Elemento de configuração do modo de exibição elemento (formato) ViewDefiniti
 </CustomControl>
 ```
 
-## <a name="attributes-and-elements"></a>Atributos e Elementos
+## <a name="attributes-and-elements"></a>Atributos e elementos
 
 As secções seguintes descrevem os atributos e elementos filho e o elemento principal do `CustomControl` elemento. Tem de especificar apenas um elemento subordinado.
 
@@ -37,13 +37,13 @@ As secções seguintes descrevem os atributos e elementos filho e o elemento pri
 
 Nenhum.
 
-### <a name="child-elements"></a>Elementos Subordinados
+### <a name="child-elements"></a>Elementos subordinados
 
 |Elemento|Descrição|
 |-------------|-----------------|
 |[Elemento de CustomEntries para CustomControl para controles para exibição (formato)](./customentries-element-for-customcontrol-for-controls-for-view-format.md)|Elemento necessário.<br /><br /> Fornece as definições para o controle.|
 
-### <a name="parent-elements"></a>Elementos Principais
+### <a name="parent-elements"></a>Elementos principais
 
 |Elemento|Descrição|
 |-------------|-----------------|

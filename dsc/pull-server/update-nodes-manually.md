@@ -1,15 +1,15 @@
 ---
 ms.date: 06/12/2017
 keywords: DSC, powershell, configuração, a configuração
-title: Atualizar os nós de um servidor de solicitação
+title: Atualizar Nós a partir de um Servidor de Pull
 ms.openlocfilehash: 4333a5bf82ef45f22a062942ebe93409433623f5
-ms.sourcegitcommit: 00ff76d7d9414fe585c04740b739b9cf14d711e1
+ms.sourcegitcommit: e7445ba8203da304286c591ff513900ad1c244a4
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 12/14/2018
-ms.locfileid: "53404647"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62079103"
 ---
-# <a name="update-nodes-from-a-pull-server"></a>Atualizar os nós de um servidor de solicitação
+# <a name="update-nodes-from-a-pull-server"></a>Atualizar Nós a partir de um Servidor de Pull
 
 As secções abaixo partem do princípio de que já configurou um servidor de solicitação. Se não tiver configurado o servidor de solicitação, pode utilizar os seguintes guias:
 
@@ -36,6 +36,6 @@ Invoke-CimMethod -CimSession $cimSession -Namespace 'root/microsoft/windows/desi
 $cimSession | Remove-CimSession
 ```
 
-## <a name="see-also"></a>Consulte Também
+## <a name="see-also"></a>Veja Também
 
 [PerformRequiredConfigurationChecks](/powershell/dsc/msft-dsclocalconfigurationmanager-performrequiredconfigurationchecks)

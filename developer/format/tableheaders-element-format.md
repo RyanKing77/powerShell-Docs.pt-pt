@@ -9,11 +9,11 @@ ms.topic: article
 ms.assetid: f9fa2b6f-b99a-42de-9779-44e9cb583f71
 caps.latest.revision: 15
 ms.openlocfilehash: bd44fcf4878c858afe81fb071ce72f627ac465dc
-ms.sourcegitcommit: b6871f21bd666f9cd71dd336bb3f844cf472b56c
+ms.sourcegitcommit: e7445ba8203da304286c591ff513900ad1c244a4
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 02/03/2019
-ms.locfileid: "56847426"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62075414"
 ---
 # <a name="tableheaders-element-format"></a>TableHeaders Element (Format) (Elemento TableHeaders [Formatação])
 
@@ -30,7 +30,7 @@ O elemento de ViewDefinitions (formato) vista elemento (formato) TableControl el
 
 ```
 
-## <a name="attributes-and-elements"></a>Atributos e Elementos
+## <a name="attributes-and-elements"></a>Atributos e elementos
 
 As secções seguintes descrevem os atributos, elementos filho e elementos pai do `TableHeaders` elemento. Tem de existir um elemento filho para cada propriedade do objeto que está a ser exibido. As informações de cabeçalho de coluna são apresentadas na ordem em que os elementos filho são especificados.
 
@@ -38,13 +38,13 @@ As secções seguintes descrevem os atributos, elementos filho e elementos pai d
 
 Nenhum.
 
-### <a name="child-elements"></a>Elementos Subordinados
+### <a name="child-elements"></a>Elementos subordinados
 
 |Elemento|Descrição|
 |-------------|-----------------|
 |[Elemento de TableColumnHeader (formato)](./tablecolumnheader-element-format.md)|Elemento opcional.<br /><br /> Define o alinhamento dos dados para uma coluna de uma vista de tabela, a largura e a etiqueta.|
 
-### <a name="parent-elements"></a>Elementos Principais
+### <a name="parent-elements"></a>Elementos principais
 
 |Elemento|Descrição|
 |-------------|-----------------|
@@ -73,7 +73,7 @@ Este exemplo mostra um `TableHeaders` elemento que define dois cabeçalhos de co
 </TableHeaders>
 ```
 
-## <a name="see-also"></a>Consulte Também
+## <a name="see-also"></a>Veja Também
 
 [Criar uma vista de tabela](./creating-a-table-view.md)
 

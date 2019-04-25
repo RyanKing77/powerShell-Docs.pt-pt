@@ -1,15 +1,15 @@
 ---
 ms.date: 06/12/2017
 keywords: DSC, powershell, configuração, a configuração
-title: Como configurar um cliente de solicitação de DSC
+title: Configurar um cliente de pull DSC
 ms.openlocfilehash: 54c68ac26e5388260e252ce01418170e26ddecde
-ms.sourcegitcommit: caac7d098a448232304c9d6728e7340ec7517a71
+ms.sourcegitcommit: e7445ba8203da304286c591ff513900ad1c244a4
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 03/16/2019
-ms.locfileid: "58054259"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62079647"
 ---
-# <a name="setting-up-a-dsc-pull-client"></a>Como configurar um cliente de solicitação de DSC
+# <a name="setting-up-a-dsc-pull-client"></a>Configurar um cliente de pull DSC
 
 > Aplica-se a: Windows PowerShell 4.0, Windows PowerShell 5.0
 

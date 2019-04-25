@@ -1,19 +1,19 @@
 ---
 ms.date: 12/12/2018
 keywords: DSC, powershell, configuração, a configuração
-title: Get-teste-Set
-ms.openlocfilehash: e46710954679bf20f4536c6efbcbd4dafd9e629e
-ms.sourcegitcommit: 00ff76d7d9414fe585c04740b739b9cf14d711e1
+title: Get-Test-Set
+ms.openlocfilehash: 6d059518a49926bc5fb56e37e7d3d4d2c66bddec
+ms.sourcegitcommit: e7445ba8203da304286c591ff513900ad1c244a4
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 12/14/2018
-ms.locfileid: "53404965"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62076604"
 ---
-# <a name="get-test-set"></a>Get-teste-Set
+# <a name="get-test-set"></a>Get-Test-Set
 
 >Aplica-se a: Windows PowerShell 4.0, Windows PowerShell 5.0
 
-![Obter, teste e definir](/media/get-test-set.png)
+![Métodos Get, Test e Set](/media/get-test-set.png)
 
 PowerShell Desired State Configuration é construído em torno de um **Obtenha**, **teste**, e **definir** processo. DSC [recursos](resources.md) cada contém métodos para concluir cada uma destas operações. Num [Configuration](../configurations/configurations.md), define blocos de recurso para preencher as chaves que tornam-se de parâmetros para um recurso **obter**, **teste**, e **definir** métodos.
 
@@ -237,6 +237,6 @@ VERBOSE: Time taken for configuration job to complete is 1.379 seconds
 
 ## <a name="see-also"></a>Consulte também
 
-- [Descrição geral de DSC de automatização do Azure](https://docs.microsoft.com/en-us/azure/automation/automation-dsc-overview)
+- [Descrição geral de DSC de automatização do Azure](https://docs.microsoft.com/azure/automation/automation-dsc-overview)
 - [Como configurar um servidor de solicitação SMB](../pull-server/pullServerSMB.md)
 - [Configurar um cliente de solicitação](../pull-server/pullClientConfigID.md)

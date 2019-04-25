@@ -2,11 +2,11 @@
 ms.date: 06/12/2017
 keywords: wmf,powershell,setup
 ms.openlocfilehash: 07ebcfd37cc3e1f38a9434ffa8d86f479b89ee0f
-ms.sourcegitcommit: b6871f21bd666f9cd71dd336bb3f844cf472b56c
+ms.sourcegitcommit: e7445ba8203da304286c591ff513900ad1c244a4
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 02/03/2019
-ms.locfileid: "55685537"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62085223"
 ---
 # <a name="windows-management-framework-wmf-50-rtm-release-notes-overview"></a>Windows Management Framework (WMF) 5.0 RTM Release Notes descrição geral
 
@@ -16,10 +16,10 @@ Windows Management Framework (WMF) 5.0 RTM oferece funcionalidade que foi atuali
 
 - Windows PowerShell
 - Administração JEA (Just Enough Administration)
-- Configuração de Estado Pretendido (DSC) do Windows PowerShell
+- Windows PowerShell Desired State Configuration (DSC)
 - Windows PowerShell Integrated Scripting Environment (ISE)
 - Windows PowerShell Web Services (extensão de gestão de IIS de OData)
-- Gestão Remota do Windows (WinRM)
+- Gestão remota do Windows (WinRM)
 - Windows Management Instrumentation (WMI)
 
 Substitui o WMF 5.0 RTM da [pré-visualização de produção do WMF 5.0](http://blogs.msdn.com/b/powershell/archive/2015/08/31/windows-management-framework-5-0-production-preview-is-now-available.aspx). Pode instalar o WMF 5.0 RTM sem desinstalar pré-visualização de produção do WMF 5.0, mas tem de desinstalar todas as outras versões mais antigas do WMF 5.0 pré-visualizações antes de instalar o WMF 5.0 RTM.

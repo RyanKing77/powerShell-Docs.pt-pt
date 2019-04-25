@@ -4,11 +4,11 @@ keywords: PowerShell, o cmdlet
 title: Objeto ISEMenuItem
 ms.assetid: a16660bd-0aee-46fd-ac17-3f022165d089
 ms.openlocfilehash: 556f88117c07100b1734c8ffd8956dce6efe6fb1
-ms.sourcegitcommit: 00ff76d7d9414fe585c04740b739b9cf14d711e1
+ms.sourcegitcommit: e7445ba8203da304286c591ff513900ad1c244a4
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 12/14/2018
-ms.locfileid: "53405530"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62059054"
 ---
 # <a name="the-isemenuitem-object"></a>Objeto ISEMenuItem
 
@@ -16,7 +16,7 @@ Uma **ISEMenuItem** objeto é uma instância da classe Microsoft.PowerShell.Host
 
 ## <a name="properties"></a>Propriedades
 
-### <a name="displayname"></a>NomeaApresentar
+### <a name="displayname"></a>DisplayName
 
 Suportado no Windows PowerShell ISE 2.0 e versões posteriores.
 
@@ -88,7 +88,7 @@ $parentAdded = $psISE.CurrentPowerShellTab.AddOnsMenu.Submenus.Add('Parent', $nu
 $parentAdded.SubMenus.Add('_Dir', {dir}, 'Alt+D')
 ```
 
-## <a name="see-also"></a>Consulte Também
+## <a name="see-also"></a>Veja Também
 
 - [Objeto ISEMenuItemCollection](The-ISEMenuItemCollection-Object.md)
 - [Objetivo do ISE do Windows PowerShell Scripting o modelo de objeto](Purpose-of-the-Windows-PowerShell-ISE-Scripting-Object-Model.md)

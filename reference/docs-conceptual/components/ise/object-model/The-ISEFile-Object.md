@@ -4,11 +4,11 @@ keywords: PowerShell, o cmdlet
 title: Objeto ISEFile
 ms.assetid: 1c6d91f3-c556-42a2-a017-79b6b7b4b7db
 ms.openlocfilehash: 24549720b8bc35435882533b0eb138de432ede65
-ms.sourcegitcommit: b6871f21bd666f9cd71dd336bb3f844cf472b56c
+ms.sourcegitcommit: e7445ba8203da304286c591ff513900ad1c244a4
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 02/03/2019
-ms.locfileid: "55685138"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62057558"
 ---
 # <a name="the-isefile-object"></a>Objeto ISEFile
 
@@ -66,7 +66,7 @@ $psISE.CurrentFile.SaveAs($fullPath, [System.Text.Encoding]::UTF8)
 
 ## <a name="properties"></a>Propriedades
 
-### <a name="displayname"></a>NomeaApresentar
+### <a name="displayname"></a>DisplayName
 
 Suportado no Windows PowerShell ISE 2.0 e versões posteriores.
 

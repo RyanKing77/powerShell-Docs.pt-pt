@@ -9,11 +9,11 @@ ms.topic: article
 ms.assetid: d837d5d4-ed2e-4d84-a306-0b5d2ad2d0bf
 caps.latest.revision: 24
 ms.openlocfilehash: 2361c1117757569bef0815018c75764430a9e7a8
-ms.sourcegitcommit: b6871f21bd666f9cd71dd336bb3f844cf472b56c
+ms.sourcegitcommit: e7445ba8203da304286c591ff513900ad1c244a4
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 02/03/2019
-ms.locfileid: "56846915"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62083727"
 ---
 # <a name="view-element-format"></a>View Element (Format) (Elemento View [Formatação])
 
@@ -36,7 +36,7 @@ Elemento de configuração do modo de exibição elemento (formato) ViewDefiniti
 </View>
 ```
 
-## <a name="attributes-and-elements"></a>Atributos e Elementos
+## <a name="attributes-and-elements"></a>Atributos e elementos
 
 As secções seguintes descrevem os atributos e elementos filho e o elemento principal do `View` elemento. Tem de especificar um e apenas um dos elementos subordinados controle e tem de especificar o nome de exibição e os objetos que utilizam a vista. Definir controlos personalizados, como agrupar objetos e especificar se a vista está fora de banda são opcionais.
 
@@ -44,7 +44,7 @@ As secções seguintes descrevem os atributos e elementos filho e o elemento pri
 
 Nenhum.
 
-### <a name="child-elements"></a>Elementos Subordinados
+### <a name="child-elements"></a>Elementos subordinados
 
 |Elemento|Descrição|
 |-------------|-----------------|
@@ -57,7 +57,7 @@ Nenhum.
 |[Elemento de ViewSelectedBy para exibição (formato)](./viewselectedby-element-format.md)|Elemento necessário.<br /><br /> Define os objetos do .NET que esta vista apresenta.|
 |[Elemento de WideControl (formato)](./widecontrol-element-format.md)|Elemento opcional.<br /><br /> Define uma vasta (valor único) formato de lista para a vista.|
 
-### <a name="parent-elements"></a>Elementos Principais
+### <a name="parent-elements"></a>Elementos principais
 
 |Elemento|Descrição|
 |-------------|-----------------|

@@ -9,11 +9,11 @@ ms.topic: article
 ms.assetid: c0e1c40b-d2fd-41c3-a5f9-7584ea6bf50b
 caps.latest.revision: 4
 ms.openlocfilehash: fec90170571ae66cf75241c48a45b560d4ead2de
-ms.sourcegitcommit: b6871f21bd666f9cd71dd336bb3f844cf472b56c
+ms.sourcegitcommit: e7445ba8203da304286c591ff513900ad1c244a4
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 02/03/2019
-ms.locfileid: "56846383"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62083293"
 ---
 # <a name="how-to-add-the-provider-name"></a>How to Add the Provider Name (Como Adicionar o Nome do Fornecedor)
 
@@ -37,8 +37,8 @@ ms.locfileid: "56846383"
 
  Comentários opcionais.
 
-## <a name="compiling-the-code"></a>Compilar o Código
+## <a name="compiling-the-code"></a>Compilação do código
 
-## <a name="robust-programming"></a>Programação Robusta
+## <a name="robust-programming"></a>Programação robusta
 
-## <a name="net-framework-security"></a>Segurança do .NET Framework
+## <a name="net-framework-security"></a>Segurança do .NET framework
