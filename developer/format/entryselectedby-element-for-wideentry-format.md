@@ -9,11 +9,11 @@ ms.topic: article
 ms.assetid: e0c98933-b7a5-4205-b811-06c0b0bf8988
 caps.latest.revision: 9
 ms.openlocfilehash: 54c7c261a23075721cd7bce75e530150dc0e0212
-ms.sourcegitcommit: b6871f21bd666f9cd71dd336bb3f844cf472b56c
+ms.sourcegitcommit: e7445ba8203da304286c591ff513900ad1c244a4
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 02/03/2019
-ms.locfileid: "56846096"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62066180"
 ---
 # <a name="entryselectedby-element-for-wideentry-format"></a>EntrySelectedBy Element for WideEntry (Format) (Elemento EntrySelectedBy para WideEntry [Formatação])
 
@@ -31,7 +31,7 @@ O elemento (formato) ViewDefinitions elemento (formato) vista elemento (formato)
 </EntrySelectedBy>
 ```
 
-## <a name="attributes-and-elements"></a>Atributos e Elementos
+## <a name="attributes-and-elements"></a>Atributos e elementos
 
 As secções seguintes descrevem os atributos e elementos filho e o elemento principal do `EntrySelectedBy` elemento.
 
@@ -39,7 +39,7 @@ As secções seguintes descrevem os atributos e elementos filho e o elemento pri
 
 Nenhum.
 
-### <a name="child-elements"></a>Elementos Subordinados
+### <a name="child-elements"></a>Elementos subordinados
 
 |Elemento|Descrição|
 |-------------|-----------------|
@@ -47,7 +47,7 @@ Nenhum.
 |[Elemento de SelectionSetName para EntrySelectedBy para WideEntry (formato)](./selectionsetname-element-for-entryselectedby-for-widecontrol-format.md)|Elemento opcional.<br /><br /> Especifica um conjunto de tipos do .NET que utilizam esta definição de vista alargada.|
 |[Elemento de TypeName para EntrySelectedBy para WideEntry (formato)](./typename-element-for-entryselectedby-for-wideentry-format.md)|Elemento opcional.<br /><br /> Especifica um tipo .NET que utiliza esta definição de vista alargada.|
 
-### <a name="parent-elements"></a>Elementos Principais
+### <a name="parent-elements"></a>Elementos principais
 
 |Elemento|Descrição|
 |-------------|-----------------|

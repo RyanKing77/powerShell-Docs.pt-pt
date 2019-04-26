@@ -3,11 +3,11 @@ ms.date: 06/12/2017
 keywords: DSC, powershell, configuração, a configuração
 title: Lista de verificação de criação de recursos
 ms.openlocfilehash: 7b1a096bba1b729c096b6689178ee022e12e4634
-ms.sourcegitcommit: 00ff76d7d9414fe585c04740b739b9cf14d711e1
+ms.sourcegitcommit: e7445ba8203da304286c591ff513900ad1c244a4
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 12/14/2018
-ms.locfileid: "53405082"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62076587"
 ---
 # <a name="resource-authoring-checklist"></a>Lista de verificação de criação de recursos
 
