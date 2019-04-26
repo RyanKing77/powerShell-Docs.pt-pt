@@ -4,11 +4,11 @@ keywords: PowerShell, o cmdlet
 title: Como Escrever e Executar Scripts no ISE do Windows PowerShell
 ms.assetid: 62f916d9-b3a1-484a-bdfb-41f57112c22b
 ms.openlocfilehash: 61db5e18f05e8e334cd9ba6dab2cf15dee7390cc
-ms.sourcegitcommit: 00ff76d7d9414fe585c04740b739b9cf14d711e1
+ms.sourcegitcommit: e7445ba8203da304286c591ff513900ad1c244a4
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 12/14/2018
-ms.locfileid: "53404983"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62086855"
 ---
 # <a name="how-to-write-and-run-scripts-in-the-windows-powershell-ise"></a>Como Escrever e Executar Scripts no ISE do Windows PowerShell
 
@@ -120,7 +120,7 @@ Prima **CTRL + S** ou, na barra de ferramentas, clique nas **guardar** ícone, o
 1. Sobre o **arquivo** menu, clique em **guardar como**. O **guardar como** será apresentada a caixa de diálogo.
 2. Na **nome de ficheiro** , introduza um nome para o ficheiro.
 3. Na **guardar como tipo** caixa, selecione um tipo de ficheiro. Por exemplo, no **guardar como tipo** caixa, selecione "Scripts do PowerShell (\*. ps1)".
-4. Clique em **Guardar**.
+4. Clique em **Save** (Guardar).
 
 ### <a name="to-save-a-script-in-ascii-encoding"></a>Para guardar um script na codificação ASCII
 
@@ -148,6 +148,6 @@ ISE do Windows PowerShell suporta as seguintes opções de codificação: ASCII,
 
 ISE do Windows PowerShell não altera a codificação de ficheiros de script, quando utiliza o guardar ou guardar como comandos.
 
-## <a name="see-also"></a>Consulte Também
+## <a name="see-also"></a>Veja Também
 
 - [Explorar o ISE do Windows PowerShell](../../getting-started/fundamental/exploring-the-windows-powershell-ise.md)

@@ -3,11 +3,11 @@ ms.date: 06/12/2017
 keywords: DSC, powershell, configuração, a configuração
 title: Método DisableDebugConfiguration da classe MSFT_DSCLocalConfigurationManager
 ms.openlocfilehash: ec5a401de4cb93f302f8572c0408e3f32d8876ad
-ms.sourcegitcommit: e04292a9c10de9a8391d529b7f7aa3753b362dbe
+ms.sourcegitcommit: e7445ba8203da304286c591ff513900ad1c244a4
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 01/04/2019
-ms.locfileid: "54048490"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62078899"
 ---
 # <a name="disabledebugconfiguration-method-of-the-msftdsclocalconfigurationmanager-class"></a>Método DisableDebugConfiguration da classe MSFT_DSCLocalConfigurationManager
 
@@ -35,7 +35,7 @@ Este é um método estático.
 
 **MOF:** DscCore.mof
 
-**Espaço de nomes**: Root\Microsoft\Windows\DesiredStateConfiguration
+**Namespace**: Root\Microsoft\Windows\DesiredStateConfiguration
 
 ## <a name="see-also"></a>Consulte também
 

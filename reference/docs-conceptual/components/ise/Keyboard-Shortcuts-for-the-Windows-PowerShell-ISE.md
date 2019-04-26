@@ -4,11 +4,11 @@ keywords: PowerShell, o cmdlet
 title: Atalhos de Teclado do ISE do Windows PowerShell
 ms.assetid: 8328b946-0f02-4ef4-ac28-2743a1b4043b
 ms.openlocfilehash: 1abae849ce599b586357fd2a8db46c608932bd4e
-ms.sourcegitcommit: 00ff76d7d9414fe585c04740b739b9cf14d711e1
+ms.sourcegitcommit: e7445ba8203da304286c591ff513900ad1c244a4
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 12/14/2018
-ms.locfileid: "53404731"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62086838"
 ---
 # <a name="keyboard-shortcuts-for-the-windows-powershell-ise"></a>Atalhos de Teclado do ISE do Windows PowerShell
 
@@ -21,8 +21,8 @@ Pode utilizar os seguintes atalhos de teclado, ao editar o texto.
 |Ação|Atalhos de teclado|Utilize|
 |----------|----------------------|----------|
 |**Obter ajuda**|F1|Painel de script **importantes:** Pode especificar que a ajuda F1 vem da biblioteca do TechNet na web ou transferido ajuda (consulte a ajuda de atualização). Para selecionar, clique em **ferramentas**, **opções**, em seguida, no **definições gerais**separador, definir ou limpar **utilizar conteúdo da ajuda local em vez de conteúdo online.**|
-|**Cópia**|CTRL + C|Painel, o painel de comando, o painel de resultados do script|
-|**Operações de corte**|CTRL + X|Painel de script, o painel de comando|
+|**cópia**|CTRL + C|Painel, o painel de comando, o painel de resultados do script|
+|**Cut**|CTRL + X|Painel de script, o painel de comando|
 |**Expandir ou fechar que descreva**|CTRL+M|Painel de script|
 |**Encontrar no Script**|CTRL + L|Painel de script|
 |**Localizar seguinte no Script**|F3|Painel de script|
@@ -31,10 +31,10 @@ Pode utilizar os seguintes atalhos de teclado, ao editar o texto.
 |**Paste**|CTRL + V|Painel de script, o painel de comando|
 |**Refazer**|CTRL + Y|Painel de script, o painel de comando|
 |**Substituir no Script**|CTRL + H|Painel de script|
-|**Guardar**|CTRL+S|Painel de script|
+|**Guardar**|CTRL + S|Painel de script|
 |**Selecionar tudo**|CTRL + T|Painel, o painel de comando, o painel de resultados do script|
-|**Mostrar trechos de código**|CTRL+J|Painel de script, o painel de comando|
-|**Anular**|CTRL + Z|Painel de script, o painel de comando|
+|**Mostrar trechos de código**|CTRL + J|Painel de script, o painel de comando|
+|**Undo**|CTRL + Z|Painel de script, o painel de comando|
 
 ## <a name="keyboard-shortcuts-for-running-scripts"></a>Atalhos de teclado para executar scripts
 
@@ -42,8 +42,8 @@ Pode utilizar os seguintes atalhos de teclado ao executar scripts no painel de S
 
 |Ação|Atalho de teclado|
 |----------|---------------------|
-|**Novo**|CTRL + N|
-|**Aberto**|CTRL + O|
+|**Novidade**|CTRL + N|
+|**abrir**|CTRL + O|
 |**Executar**|F5|
 |**Executar seleção**|F8|
 |**Parar a execução**|CTRL + BREAK. CTRL + C pode ser utilizado quando o contexto é inequívoca (quando não houver nenhum texto selecionado).|
@@ -92,7 +92,7 @@ Pode utilizar os seguintes atalhos de teclado ao depurar scripts.
 |**Avance para**|S|Painel de consola, quando um script de depuração|
 |**Step Over**|V|Painel de consola, quando um script de depuração|
 |**Krokovat s Vystoupením**|O|Painel de consola, quando um script de depuração|
-|**Repetir último comando** (para o passo em ou Step Over)|ENTER|Painel de consola, quando um script de depuração|
+|**Repetir último comando** (para o passo em ou Step Over)|INTRODUZA|Painel de consola, quando um script de depuração|
 |**Pilha de chamadas de apresentação**|K|Painel de consola, quando um script de depuração|
 |**Parar a depuração**|PERGUNTAS E|Painel de consola, quando um script de depuração|
 |**Lista o Script**|L|Painel de consola, quando um script de depuração|
@@ -118,6 +118,6 @@ Pode utilizar os seguintes atalhos de teclado para iniciar a consola do Windows 
 |**Exit**|ALT+F4|
 |**Iniciar PowerShell.exe** (consola do Windows PowerShell)|CTRL + SHIFT + P|
 
-## <a name="see-also"></a>Consulte Também
+## <a name="see-also"></a>Veja Também
 
 - [PowerShell Magazine: A lista completa de atalhos de teclado do ISE do PowerShell de Windows](https://www.powershellmagazine.com/2013/01/29/the-complete-list-of-powershell-ise-3-0-keyboard-shortcuts/)

@@ -3,11 +3,11 @@ ms.date: 06/12/2017
 keywords: DSC, powershell, configuração, a configuração
 title: Recurso Archive de DSC
 ms.openlocfilehash: d5ccd242d000a0907c6768f30923764be6bf20a3
-ms.sourcegitcommit: e04292a9c10de9a8391d529b7f7aa3753b362dbe
+ms.sourcegitcommit: e7445ba8203da304286c591ff513900ad1c244a4
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 01/04/2019
-ms.locfileid: "54048431"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62077556"
 ---
 # <a name="dsc-archive-resource"></a>Recurso Archive de DSC
 
@@ -35,7 +35,7 @@ Archive [string] #ResourceName
 |---|---|
 | Destino| Especifica a localização onde pretende Certifique-se de que o conteúdo do arquivo é extraído.|
 | Caminho| Especifica o caminho de origem do ficheiro de arquivo.|
-| __Soma de verificação__| Define o tipo a utilizar ao determinar se dois arquivos são os mesmos. Se __soma de verificação__ não for especificada, apenas o nome de ficheiro ou diretório é utilizado para comparação. Valores válidos incluem: SHA-1, SHA-256, SHA-512, colunas createdDate e modifiedDate, nenhum (predefinição). Se especificar __soma de verificação__ sem __Validate__, a configuração irá falhar.|
+| __Checksum__| Define o tipo a utilizar ao determinar se dois arquivos são os mesmos. Se __soma de verificação__ não for especificada, apenas o nome de ficheiro ou diretório é utilizado para comparação. Valores válidos incluem: SHA-1, SHA-256, SHA-512, colunas createdDate e modifiedDate, nenhum (predefinição). Se especificar __soma de verificação__ sem __Validate__, a configuração irá falhar.|
 | Certifique-se| Determina se deve verificar se o conteúdo do arquivo existe no __destino__. Defina esta propriedade como __presente__ para garantir que existe o conteúdo. Defina-o como __ausente__ para garantir que não existam. O valor predefinido é __presente__.|
 | DependsOn | Indica que a configuração de outro recurso deve ser executado antes deste recurso está configurado. Por exemplo, se o ID de bloco de script de configuração de recursos que pretende executar primeiro for ResourceName e seu tipo é __ResourceType__, a sintaxe para utilizar esta propriedade é `DependsOn = "[ResourceType]ResourceName"`.|
 | Validar| Usa a propriedade de soma de verificação para determinar se o arquivo corresponde à assinatura. Se especificar a soma de verificação sem validar, a configuração irá falhar. Se especificar validar sem a soma de verificação, uma soma de verificação de SHA-256 é utilizada por predefinição.|

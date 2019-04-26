@@ -3,11 +3,11 @@ ms.date: 06/12/2017
 keywords: DSC, powershell, configuração, a configuração
 title: Recursos compostos – usando uma configuração de DSC como um recurso
 ms.openlocfilehash: 2823d05e0c8feb2933ca691f9ab5149ace2f7ee3
-ms.sourcegitcommit: b6871f21bd666f9cd71dd336bb3f844cf472b56c
+ms.sourcegitcommit: e7445ba8203da304286c591ff513900ad1c244a4
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 02/03/2019
-ms.locfileid: "55684046"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62076689"
 ---
 # <a name="composite-resources-using-a-dsc-configuration-as-a-resource"></a>Recursos compostos: Utilizar uma configuração de DSC como um recurso
 

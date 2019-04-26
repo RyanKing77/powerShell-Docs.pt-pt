@@ -3,11 +3,11 @@ ms.date: 06/12/2017
 keywords: DSC, powershell, configuração, a configuração
 title: DSC para Linux nxPackage recursos
 ms.openlocfilehash: 64bb89a95bd6cbaea4e74b8a9979de52428fef3f
-ms.sourcegitcommit: e04292a9c10de9a8391d529b7f7aa3753b362dbe
+ms.sourcegitcommit: e7445ba8203da304286c591ff513900ad1c244a4
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 01/04/2019
-ms.locfileid: "54048407"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62077879"
 ---
 # <a name="dsc-for-linux-nxpackage-resource"></a>DSC para Linux nxPackage recursos
 
@@ -37,7 +37,7 @@ nxPackage <string> #ResourceName
 | Nome| O nome do pacote para o qual pretende garantir um estado específico.|
 | Certifique-se| Determina se deve verificar se o pacote existe. Defina esta propriedade para "Presente" para garantir que o pacote existe. Defini-lo como "Ausente", certifique-se de que o pacote não existe. O valor predefinido é "Presente".|
 | PackageManager| Os valores suportados são "yum", "apt" e "zypper". Especifica o Gestor de pacotes a utilizar ao instalar pacotes. Se **FilePath** for especificado, o caminho fornecido vai ser utilizado para instalar o pacote. Caso contrário, um Gestor de pacotes será utilizado para instalar o pacote a partir de um repositório previamente configurado. Se nenhum desses **PackageManager** nem **FilePath** são fornecidas, o Gestor de pacotes padrão para o sistema será usado.|
-| Caminho do ficheiro| O caminho do ficheiro onde reside o pacote|
+| FilePath| O caminho do ficheiro onde reside o pacote|
 | PackageGroup| Se **$true**, o **nome** deve ser o nome de um grupo de pacote para utilização com um **PackageManager**. **PacakgeGroup** não é válido quando fornecer um **FilePath**.|
 | Argumentos| Uma cadeia de argumentos que será passada para o pacote exatamente como fornecida.|
 | ReturnCode| O código de retorno esperado. Se o código de retorno real não corresponde ao que valor esperado fornecido aqui, que a configuração irá devolver um erro.|

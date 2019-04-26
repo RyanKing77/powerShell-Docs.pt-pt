@@ -3,11 +3,11 @@ ms.date: 06/12/2017
 keywords: DSC, powershell, configuração, a configuração
 title: Utilizar dados de configuração
 ms.openlocfilehash: f2d25b9ced805fb4c91378ebfe840104eb6ce52a
-ms.sourcegitcommit: b6871f21bd666f9cd71dd336bb3f844cf472b56c
+ms.sourcegitcommit: e7445ba8203da304286c591ff513900ad1c244a4
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 02/03/2019
-ms.locfileid: "55684424"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62080225"
 ---
 # <a name="using-configuration-data-in-dsc"></a>Utilizar os dados de configuração no DSC
 
@@ -201,7 +201,7 @@ No entanto, pode definir qualquer número de chaves adicionais e nomeá-los que 
 
 Para obter um exemplo da utilização de dados não-nó, veja [separação de dados de configuração e ambiente](separatingEnvData.md).
 
-## <a name="see-also"></a>Consulte Também
+## <a name="see-also"></a>Veja Também
 
 - [Opções de credenciais nos dados de configuração](configDataCredentials.md)
 - [Configurações de DSC](configurations.md)

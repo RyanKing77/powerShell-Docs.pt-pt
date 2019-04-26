@@ -9,11 +9,11 @@ ms.topic: article
 ms.assetid: 85a53ff2-92f0-4d9b-8e13-d06d82299435
 caps.latest.revision: 6
 ms.openlocfilehash: 06ed340e3db237d4090961fef98333bd67a2a755
-ms.sourcegitcommit: b6871f21bd666f9cd71dd336bb3f844cf472b56c
+ms.sourcegitcommit: e7445ba8203da304286c591ff513900ad1c244a4
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 02/03/2019
-ms.locfileid: "56848735"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62065364"
 ---
 # <a name="leftindent-element-for-frame-for-controls-for-view-format"></a>LeftIndent Element for Frame for Controls for View (Format) (Elemento LeftIndent para Frame para Controls para View [Formatação])
 
@@ -27,7 +27,7 @@ Configuração elemento (formato) ViewDefinitions elemento (formato) vista eleme
 <LeftIndent>CharactersToShift</LeftIndent>
 ```
 
-## <a name="attributes-and-elements"></a>Atributos e Elementos
+## <a name="attributes-and-elements"></a>Atributos e elementos
 
 As secções seguintes descrevem os atributos e elemento pai de elementos filho do `LeftIndent` elemento.
 
@@ -35,17 +35,17 @@ As secções seguintes descrevem os atributos e elemento pai de elementos filho 
 
 Nenhum.
 
-### <a name="child-elements"></a>Elementos Subordinados
+### <a name="child-elements"></a>Elementos subordinados
 
 Nenhum.
 
-### <a name="parent-elements"></a>Elementos Principais
+### <a name="parent-elements"></a>Elementos principais
 
 |Elemento|Descrição|
 |-------------|-----------------|
 |[Elemento de quadro para CustomItem para controles para exibição (formato)](./frame-element-for-customitem-for-controls-for-view-format.md)|Define a forma como os dados são apresentados, tais como mudar os dados para a esquerda ou direita.|
 
-## <a name="text-value"></a>Valor do Texto
+## <a name="text-value"></a>Valor de texto
 
 Especifique o número de carateres que pretende mudar os dados para a esquerda.
 

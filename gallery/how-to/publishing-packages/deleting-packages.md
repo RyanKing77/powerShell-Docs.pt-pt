@@ -4,13 +4,13 @@ contributor: JKeithB
 keywords: Galeria, o powershell, o cmdlet, o psgallery
 title: A eliminação de pacotes
 ms.openlocfilehash: ca5e68fcad52e4c7561d2c2b3858228652f22e0b
-ms.sourcegitcommit: 98b7cfd8ad5718efa8e320526ca76c3cc4141d78
+ms.sourcegitcommit: e7445ba8203da304286c591ff513900ad1c244a4
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50004209"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62084169"
 ---
-# <a name="deleting-packages"></a>A eliminação de pacotes
+# <a name="deleting-packages"></a>Deleting Packages (Eliminar Pacotes)
 
 A galeria do PowerShell não suporta a eliminação permanente de pacotes, porque isso quebraria qualquer pessoa que está dependendo de ele restantes disponíveis.
 

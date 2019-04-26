@@ -4,11 +4,11 @@ keywords: PowerShell, o cmdlet
 title: Objeto ISESnippetCollection
 ms.assetid: ae974955-4282-4cbc-8c42-0fff1904ef32
 ms.openlocfilehash: bd5ed4a1f15e0a398b7c6a17f0071cad889be4a7
-ms.sourcegitcommit: 00ff76d7d9414fe585c04740b739b9cf14d711e1
+ms.sourcegitcommit: e7445ba8203da304286c591ff513900ad1c244a4
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 12/14/2018
-ms.locfileid: "53405561"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62086680"
 ---
 # <a name="the-isesnippetcollection-object"></a>Objeto ISESnippetCollection
 
@@ -16,7 +16,7 @@ O **ISESnippetCollection** objeto é uma coleção de **ISESnippet** objetos. A 
 
 ## <a name="methods"></a>Métodos
 
-### <a name="load-filepathname-"></a>Carga\( FilePathName \)
+### <a name="load-filepathname-"></a>Load\( FilePathName \)
 
 Suportado no Windows PowerShell ISE 3.0 e posteriores e não está presente em versões anteriores.
 
@@ -29,7 +29,7 @@ Carrega um. snippets.ps1xml ficheiro que contém trechos de código definido pel
 $SnipFile = Join-Path ( Split-Path $profile) 'Snippets\MySnips.snippets.ps1xml' $psISE.CurrentPowerShellTab.Snippets.Add($SnipPath)
 ```
 
-## <a name="see-also"></a>Consulte Também
+## <a name="see-also"></a>Veja Também
 
 - [ISESnippetObject](The-ISESnippetObject.md)
 - [Objetivo do ISE do Windows PowerShell Scripting o modelo de objeto](Purpose-of-the-Windows-PowerShell-ISE-Scripting-Object-Model.md)

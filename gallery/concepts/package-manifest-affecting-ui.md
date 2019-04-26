@@ -4,11 +4,11 @@ schema: 2.0.0
 keywords: PowerShell
 title: Valores de manifestos do pacote que têm impacto sobre a interface do Usuário de galeria do PowerShell
 ms.openlocfilehash: cedf81df8de29c54ef559a800d654305029491ec
-ms.sourcegitcommit: caac7d098a448232304c9d6728e7340ec7517a71
+ms.sourcegitcommit: e7445ba8203da304286c591ff513900ad1c244a4
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 03/16/2019
-ms.locfileid: "58058220"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62084713"
 ---
 # <a name="package-manifest-values-that-impact-the-powershell-gallery-ui"></a>Valores de manifestos do pacote que têm impacto sobre a interface do Usuário de galeria do PowerShell
 
@@ -100,7 +100,7 @@ Para referência, eis algumas marcas mais comumente usadas a partir de 12/14/201
 | Teste | O teste é menos desejável |
 | VersionControl | Versão é menos preciso, embora usado com mais frequência  |
 | Registo | Uso preferencial de Registro em log como uma ação |
-| Registo | Uso preferencial de Log como uma coisa |
+| registo | Uso preferencial de Log como uma coisa |
 | Cópia de segurança |  |
 | IaaS |  |
 | Linux |  |

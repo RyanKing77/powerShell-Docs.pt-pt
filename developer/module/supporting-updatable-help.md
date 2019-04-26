@@ -11,13 +11,13 @@ applies_to:
 ms.assetid: 832ea622-25a9-4760-904d-e15d6105bb27
 caps.latest.revision: 7
 ms.openlocfilehash: 363c40c3eacf406bb29662c89a6b30eeb715d513
-ms.sourcegitcommit: b6871f21bd666f9cd71dd336bb3f844cf472b56c
+ms.sourcegitcommit: e7445ba8203da304286c591ff513900ad1c244a4
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 02/03/2019
-ms.locfileid: "56849365"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62082163"
 ---
-# <a name="supporting-updatable-help"></a>Apoio Ajuda Atualizável
+# <a name="supporting-updatable-help"></a>Apoio ajuda Atualizável
 
 O *Windows PowerShell Atualizável sistema de ajuda*, introduzida no Windows® 8 e Windows Server® 2012, foi concebida para garantir que os utilizadores tenham sempre os tópicos de ajuda mais recentes no prompt de comando no respetivo computador local. Juntamente com a ajuda online do Windows PowerShell, ajuda Atualizável fornece uma solução de ajuda completa para os utilizadores. Esta secção descreve o sistema de ajuda Atualizável e explica como os autores de módulo podem suportar ajuda Atualizável para os seus módulos.
 
@@ -37,7 +37,7 @@ Esta secção inclui os tópicos seguintes:
 
 - [Como testar ajuda Atualizável](./how-to-test-updatable-help.md)
 
-## <a name="see-also"></a>Consulte Também
+## <a name="see-also"></a>Veja Também
 
 [Apoio Ajuda Online](./supporting-online-help.md)
 

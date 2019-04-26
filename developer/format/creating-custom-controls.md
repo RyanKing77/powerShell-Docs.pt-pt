@@ -9,11 +9,11 @@ ms.topic: article
 ms.assetid: c3baa406-cd33-4420-be5a-07ef09d93480
 caps.latest.revision: 8
 ms.openlocfilehash: 3504ab1d974c55e9279172d0e851961474ccb926
-ms.sourcegitcommit: b6871f21bd666f9cd71dd336bb3f844cf472b56c
+ms.sourcegitcommit: e7445ba8203da304286c591ff513900ad1c244a4
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 02/03/2019
-ms.locfileid: "56844850"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62066690"
 ---
 # <a name="creating-custom-controls"></a>Creating Custom Controls (Criar Controlos Personalizados)
 
@@ -51,6 +51,6 @@ O exemplo seguinte mostra um controle personalizado que é definido no ficheiro 
 
 ```
 
-## <a name="see-also"></a>Consulte Também
+## <a name="see-also"></a>Veja Também
 
 [Escrever um ficheiro de formatação de PowerShell](./writing-a-powershell-formatting-file.md)

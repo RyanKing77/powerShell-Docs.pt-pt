@@ -3,11 +3,11 @@ ms.date: 12/12/2018
 keywords: DSC, powershell, configuração, a configuração
 title: Aplicar, Obter e Testar Configurações num Nó
 ms.openlocfilehash: 41f8d2d75d3dd9621de615e7999c2690cb8ce44a
-ms.sourcegitcommit: b6871f21bd666f9cd71dd336bb3f844cf472b56c
+ms.sourcegitcommit: e7445ba8203da304286c591ff513900ad1c244a4
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 02/03/2019
-ms.locfileid: "55684340"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62079715"
 ---
 # <a name="apply-get-and-test-configurations-on-a-node"></a>Aplicar, Obter e Testar Configurações num Nó
 

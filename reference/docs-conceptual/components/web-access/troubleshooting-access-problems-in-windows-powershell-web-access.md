@@ -3,11 +3,11 @@ ms.date: 08/23/2017
 keywords: PowerShell, o cmdlet
 title: resolução de problemas de acesso no acesso web windows powershell
 ms.openlocfilehash: 314e4a8098988111739705d55b68ff5ed2f5eff3
-ms.sourcegitcommit: b6871f21bd666f9cd71dd336bb3f844cf472b56c
+ms.sourcegitcommit: e7445ba8203da304286c591ff513900ad1c244a4
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 02/03/2019
-ms.locfileid: "55688120"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62086600"
 ---
 # <a name="troubleshooting-access-problems-in-windows-powershell-web-access"></a>Resolução de Problemas de Acesso no Windows PowerShell Web Access
 
@@ -135,7 +135,7 @@ Domínio e os endereços IPv6 numéricos (com dois pontos) são suportados como 
 
 Para obter mais informações sobre os endereços IPv6, consulte [como IPv6 funciona](https://technet.microsoft.com/library/cc781672(v=ws.10).aspx).
 
-## <a name="see-also"></a>Consulte Também
+## <a name="see-also"></a>Veja Também
 
 - [Regras de autorização e funcionalidades de segurança do Windows PowerShell Web Access](https://technet.microsoft.com/en-us/library/dn282394(v=ws.11).aspx)
 - [Utilizar a consola do PowerShell de Windows baseado na Web](https://technet.microsoft.com/en-us/library/hh831417(v=ws.11).aspx)

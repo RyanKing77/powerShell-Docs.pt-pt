@@ -9,11 +9,11 @@ ms.topic: article
 ms.assetid: 55aee25b-bbcb-4d41-a4c0-fb8e30c4cdc1
 caps.latest.revision: 11
 ms.openlocfilehash: 1e58b74cf1c37c70ebfb0f4970cfbf8a8263ec5c
-ms.sourcegitcommit: 5990f04b8042ef2d8e571bec6d5b051e64c9921c
+ms.sourcegitcommit: e7445ba8203da304286c591ff513900ad1c244a4
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 03/12/2019
-ms.locfileid: "57794149"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62082928"
 ---
 # <a name="custom-host-samples"></a>Custom Host Samples (Exemplos de Anfitriões Personalizados)
 

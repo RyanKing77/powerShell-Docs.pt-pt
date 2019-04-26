@@ -9,11 +9,11 @@ ms.topic: article
 ms.assetid: fb55971a-4ea4-4c51-aeff-4e0bb05a51b2
 caps.latest.revision: 6
 ms.openlocfilehash: 98cac43698b3f537ee318cd2570b2174631665a7
-ms.sourcegitcommit: caac7d098a448232304c9d6728e7340ec7517a71
+ms.sourcegitcommit: e7445ba8203da304286c591ff513900ad1c244a4
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 03/16/2019
-ms.locfileid: "58055432"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62080441"
 ---
 # <a name="creating-a-workflow-with-windows-powershell-activities"></a>Creating a Workflow with Windows PowerShell Activities (Criar um Fluxo de Trabalho com Atividades do Windows PowerShell)
 
@@ -69,8 +69,8 @@ Os procedimentos seguintes descrevem como criar um fluxo de trabalho que verific
     |**ComputerName**|{comp}|
     |**Credencial**|MachineCred|
     |**para**|Microsoft.PowerShell.Commands.WaitForServiceTypes.PowerShell|
-    |**Force**|True|
-    |Aguarde|True|
+    |**Force**|Verdadeiro|
+    |Aguarde|Verdadeiro|
     |PSComputerName|{""}|
 
 13. Adicionar uma **GetWmiObject** atividade para o **JoinDomain** sequência após o **RestartComputer** atividade. Editar as respetivas propriedades para ser o mesmo que a anterior **GetWmiObject** atividade.

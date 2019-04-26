@@ -9,11 +9,11 @@ ms.topic: article
 ms.assetid: 50e6f9b1-2678-4f53-9250-7c48843a9549
 caps.latest.revision: 5
 ms.openlocfilehash: 1113c0d1cd68bb97d2f96b529f755b62137d1f40
-ms.sourcegitcommit: b6871f21bd666f9cd71dd336bb3f844cf472b56c
+ms.sourcegitcommit: e7445ba8203da304286c591ff513900ad1c244a4
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 02/03/2019
-ms.locfileid: "56845823"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62080344"
 ---
 # <a name="importing-and-invoking-a-windows-powershell-workflow"></a>Importing and Invoking a Windows PowerShell Workflow (Importar e Invocar um Fluxo de Trabalho do Windows PowerShell)
 

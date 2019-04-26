@@ -9,11 +9,11 @@ ms.topic: article
 ms.assetid: f9374c4a-e499-4516-9eb6-107c59df98d9
 caps.latest.revision: 7
 ms.openlocfilehash: 43f01b9cd6af3ab6c26f88ee0c1e9269499b2bc3
-ms.sourcegitcommit: b6871f21bd666f9cd71dd336bb3f844cf472b56c
+ms.sourcegitcommit: e7445ba8203da304286c591ff513900ad1c244a4
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 02/03/2019
-ms.locfileid: "56845137"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62081959"
 ---
 # <a name="accessdbprovidersample04-code-sample"></a>AccessDbProviderSample04 Code Sample (Código de Exemplo AccessDbProviderSample04)
 
@@ -23,6 +23,6 @@ O código a seguir mostra a implementação do fornecedor de Windows PowerShell 
 
 [!code-csharp[AccessDBProviderSample04.cs](../../powershell-sdk-samples/SDK-2.0/csharp/AccessDBProviderSample04/AccessDBProviderSample04.cs#L11-L1635 "AccessDBProviderSample04.cs")]
 
-## <a name="see-also"></a>Consulte Também
+## <a name="see-also"></a>Veja Também
 
 [SDK do Windows PowerShell](../windows-powershell-reference.md)

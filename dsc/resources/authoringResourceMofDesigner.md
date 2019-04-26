@@ -3,11 +3,11 @@ ms.date: 06/12/2017
 keywords: DSC, powershell, configuração, a configuração
 title: Usando a ferramenta de Designer de recursos
 ms.openlocfilehash: 3fd2f06cf46602ee30dd34f8e7bd77d3c92b808f
-ms.sourcegitcommit: b6871f21bd666f9cd71dd336bb3f844cf472b56c
+ms.sourcegitcommit: e7445ba8203da304286c591ff513900ad1c244a4
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 02/03/2019
-ms.locfileid: "55686657"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62076672"
 ---
 # <a name="using-the-resource-designer-tool"></a>Usando a ferramenta de Designer de recursos
 
@@ -26,7 +26,7 @@ Nome do parâmetro de descrição
 * **UserName**: Propriedade de chave que identifica exclusivamente um utilizador.
 * **Certifique-se de**: Especifica se a conta de utilizador deve estar presente ou ausência. Este parâmetro tem apenas dois valores possíveis.
 * **DomainCredential**: A palavra-passe do domínio para o utilizador.
-* **Palavra-passe**: A palavra-passe pretendida para o utilizador permitir que uma configuração alterar a palavra-passe do utilizador, se necessário.
+* **palavra-passe**: A palavra-passe pretendida para o utilizador permitir que uma configuração alterar a palavra-passe do utilizador, se necessário.
 
 Para criar as propriedades, usamos o **New-xDscResourceProperty** cmdlet. Os comandos PowerShell seguintes criam as propriedades descritas acima.
 
@@ -175,7 +175,7 @@ Update-xDscResource –Name ‘Demo_ADUser’ –Property $UserName, $Ensure, $D
 
 A ferramenta de Designer de recursos expõe um cmdlet mais que pode ser utilizado para testar a validade de um esquema MOF que escreveu manualmente. Chamar o **teste xDscSchema** cmdlet, passando o caminho de um esquema de recursos do MOF como um parâmetro. O cmdlet irá saída quaisquer erros no esquema.
 
-### <a name="see-also"></a>Consulte Também
+### <a name="see-also"></a>Veja Também
 
 #### <a name="concepts"></a>Conceitos
 [Criar recursos do Windows personalizados do PowerShell Desired State Configuration](authoringResource.md)

@@ -1,20 +1,20 @@
 ---
 ms.date: 06/12/2017
 keywords: wmf,powershell,setup
-ms.openlocfilehash: 1595a3e817fd711c35128f06927fd57df7a63fb8
-ms.sourcegitcommit: 54534635eedacf531d8d6344019dc16a50b8b441
+ms.openlocfilehash: ec4ae8e4b2ef0ec226cb75607f7aaf34b48f6b76
+ms.sourcegitcommit: e7445ba8203da304286c591ff513900ad1c244a4
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 05/17/2018
-ms.locfileid: "34218251"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62085648"
 ---
 # <a name="authoring-improvements-using-powershell-ise"></a>Melhorias na Criação com o ISE do PowerShell
 
-Criação de configurações de DSC no ISE do Windows PowerShell é muito mais fácil, obrigado para os seguintes melhoramentos:
+Criação de configurações de DSC no ISE do Windows PowerShell é muito mais fácil, graças aos seguintes melhoramentos:
 
-- Listar todos os recursos de DSC dentro de um **configuração** bloco ou **nó** bloco introduzindo **Ctrl + espaço** numa linha em branco dentro da mesma.
-- A conclusão automática no recurso as propriedades do **enumeração** tipo.
-- A conclusão automática no **DependsOn** propriedade dos recursos de DSC, com base nas outras instâncias de recurso na configuração.
-- Conclusão de separador melhor dos valores de propriedade de recurso.
+- Listar todos os recursos de DSC numa **configuration** bloco ou **nó** bloco introduzindo **Ctrl + espaço** numa linha em branco dentro do mesmo.
+- Conclusão automática nas propriedades dos recursos que são do **enumeração** tipo.
+- Conclusão automática no **DependsOn** propriedade de recursos de DSC, com base em outras instâncias de recurso na configuração.
+- Conclusão de tabulação melhor dos valores de propriedade de recurso.
 
-**Nota:** tem de ter uma cadeia vazia para valores de propriedade de recurso antes de poder utilizar Ctrl + espaço para listar as opções. Premir **separador** percorre opções.
+**Nota:** Tem de ter uma cadeia vazia para valores de propriedade do recurso antes de poder utilizar Ctrl + espaço para listar as opções. Premir **separador** ciclos por meio de opções.

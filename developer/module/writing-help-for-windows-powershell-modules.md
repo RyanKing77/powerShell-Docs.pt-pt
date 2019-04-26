@@ -9,11 +9,11 @@ ms.topic: article
 ms.assetid: f2b58fa5-01bc-426c-a043-5c700d6578e9
 caps.latest.revision: 16
 ms.openlocfilehash: 443bf5f693d2ab161668de25a1097347826cb5c2
-ms.sourcegitcommit: b6871f21bd666f9cd71dd336bb3f844cf472b56c
+ms.sourcegitcommit: e7445ba8203da304286c591ff513900ad1c244a4
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 02/03/2019
-ms.locfileid: "56845459"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62082041"
 ---
 # <a name="writing-help-for-windows-powershell-modules"></a>Writing Help for Windows PowerShell Modules (Escrever Ajuda para Módulos do Windows PowerShell)
 
@@ -89,7 +89,7 @@ A partir do Windows PowerShell 3.0, executar um `Get-Help` comando para um cmdle
 
 Se o módulo não contém tópicos de ajuda e não há nenhum tópicos de ajuda para os comandos no módulo no computador do usuário, `Get-Help` apresenta ajuda gerado automaticamente. A ajuda de gerado automaticamente inclui a sintaxe de comando, parâmetros e tipos de entrada e saídos, mas não inclui quaisquer descrições. A ajuda de gerado automaticamente inclui o texto que direciona o utilizador tentar utilizar o `Update-Help` cmdlet para transferir a ajuda para o comando a partir da Internet ou uma partilha de ficheiros. Ele também recomenda utilizar o **Online** parâmetro do `Get-Help` cmdlet para obter a versão online do tópico de ajuda.
 
-## <a name="supporting-updatable-help"></a>Apoio Ajuda Atualizável
+## <a name="supporting-updatable-help"></a>Apoio ajuda Atualizável
 
 Os utilizadores do Windows PowerShell 3.0 e versões posteriores do Windows PowerShell, podem transferir e instalar ficheiros de ajuda atualizada para um módulo da Internet ou a partir de uma partilha de ficheiros local. O `Update-Help` e `Save-Help` cmdlets ocultar os detalhes de gerenciamento do usuário. Os usuários executem o `Update-Help` cmdlet e, em seguida, utilizar o `Get-Help` cmdlet para ler os ficheiros de ajuda mais recentes para o módulo de linha de comandos do Windows PowerShell. Os utilizadores não é necessário reiniciar o Windows ou Windows PowerShell.
 

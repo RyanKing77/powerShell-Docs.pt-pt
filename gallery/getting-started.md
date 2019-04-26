@@ -4,11 +4,11 @@ contributor: JKeithB
 keywords: Galeria, o powershell, o cmdlet, o psgallery
 title: Comece com a galeria do PowerShell
 ms.openlocfilehash: c8beba3009e462ce52cdecd34fc0313d9234f289
-ms.sourcegitcommit: 1082b13115c5c5be4b76574ba55307b3e567983f
+ms.sourcegitcommit: e7445ba8203da304286c591ff513900ad1c244a4
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52576894"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62084764"
 ---
 # <a name="getting-started-with-the-powershell-gallery"></a>Guia de introdução da galeria do PowerShell
 

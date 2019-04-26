@@ -3,11 +3,11 @@ ms.date: 05/17/2018
 keywords: PowerShell, core
 title: Problemas conhecidos para o PowerShell 6.0
 ms.openlocfilehash: ce40a1925e564fbd2c661e70ec36d3842d915dfe
-ms.sourcegitcommit: b6871f21bd666f9cd71dd336bb3f844cf472b56c
+ms.sourcegitcommit: e7445ba8203da304286c591ff513900ad1c244a4
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 02/03/2019
-ms.locfileid: "55686762"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62085971"
 ---
 # <a name="known-issues-for-powershell-60"></a>Problemas conhecidos para o PowerShell 6.0
 
@@ -21,7 +21,7 @@ Nota: Devido às semelhanças dos vários subsistemas subjacentes, o PowerShell 
 
 Historicamente, o PowerShell tem sido uniformemente maiúsculas de minúsculas, com algumas exceções. Em sistemas de operativos da família UNIX, o sistema de ficheiros é predominantemente maiúsculas e minúsculas e PowerShell segue o padrão de sistema de arquivos; Isso é exposto por meio de diversas formas, óbvias e não óbvias.
 
-#### <a name="directly"></a>Diretamente
+#### <a name="directly"></a>diretamente
 
 - Ao especificar um ficheiro no PowerShell, tem de utilizar as maiúsculas e minúsculas corretas.
 

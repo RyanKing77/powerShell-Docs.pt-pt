@@ -3,11 +3,11 @@ ms.date: 06/12/2017
 keywords: DSC, powershell, configuração, a configuração
 title: Escrever um recurso personalizado do DSC com classes do PowerShell
 ms.openlocfilehash: 34356f65bcb83153e7395a16d2a4a5cf2e507332
-ms.sourcegitcommit: b6871f21bd666f9cd71dd336bb3f844cf472b56c
+ms.sourcegitcommit: e7445ba8203da304286c591ff513900ad1c244a4
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 02/03/2019
-ms.locfileid: "55688316"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62076723"
 ---
 # <a name="writing-a-custom-dsc-resource-with-powershell-classes"></a>Escrever um recurso personalizado do DSC com classes do PowerShell
 
@@ -538,6 +538,6 @@ if (PsDscContext.RunAsUser) {
 }
 ```
 
-## <a name="see-also"></a>Consulte Também
+## <a name="see-also"></a>Veja Também
 
 [Criar recursos do Windows personalizados do PowerShell Desired State Configuration](authoringResource.md)

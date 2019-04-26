@@ -1,15 +1,15 @@
 ---
-title: Usando o Visual Studio Code para edição e a depuração remota
-description: Usando o Visual Studio Code para edição e a depuração remota
+title: Utilizar o Visual Studio Code para a edição e depuração remotas
+description: Utilizar o Visual Studio Code para a edição e depuração remotas
 ms.date: 08/06/2018
-ms.openlocfilehash: bab1a629a7e9dafd5957cf93025abb18b8a4f326
-ms.sourcegitcommit: 548547b2d5fc73e726bb9fec6175d452a351d975
+ms.openlocfilehash: fbc1ee3556e822b4afb2b37111d0688dc89fdab3
+ms.sourcegitcommit: e7445ba8203da304286c591ff513900ad1c244a4
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 12/20/2018
-ms.locfileid: "53655542"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62086681"
 ---
-# <a name="using-visual-studio-code-for-remote-editing-and-debugging"></a>Usando o Visual Studio Code para edição e a depuração remota
+# <a name="using-visual-studio-code-for-remote-editing-and-debugging"></a>Utilizar o Visual Studio Code para a edição e depuração remotas
 
 Para aqueles que estão familiarizados com o ISE, deve se lembrar que pode executar `psedit file.ps1` a partir da consola integrada para abrir ficheiros - locais ou remotos - botão direito do rato no ISE.
 
@@ -61,7 +61,7 @@ A explicação menos potente para baixo do cmdlet é:
 - `Enter-PSSession -ContainerId foo` e `Enter-PSSession -VmId foo` iniciar uma sessão através do PowerShell Direct
 - `Enter-PSSession -HostName foo` inicia uma sessão através de SSH
 
-Para obter mais informações sobre `Enter-PSSession`, verifique os docs [aqui](https://docs.microsoft.com/en-us/powershell/module/microsoft.powershell.core/enter-pssession?view=powershell-6).
+Para obter mais informações sobre `Enter-PSSession`, verifique os docs [aqui](https://docs.microsoft.com/powershell/module/microsoft.powershell.core/enter-pssession?view=powershell-6).
 
 Posso utilizar SSH para a gestão remota, uma vez que vou partir de macOS para uma VM do Ubuntu no Azure.
 

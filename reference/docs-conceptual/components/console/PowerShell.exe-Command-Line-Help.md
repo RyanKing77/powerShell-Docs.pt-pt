@@ -4,11 +4,11 @@ keywords: PowerShell, o cmdlet
 title: Ajuda da Linha de Comandos PowerShell.exe
 ms.assetid: 1ab7b93b-6785-42c6-a1c9-35ff686a958f
 ms.openlocfilehash: 0a11ebb11d29adf5853c232b3aa10bc72f92bf0c
-ms.sourcegitcommit: 00ff76d7d9414fe585c04740b739b9cf14d711e1
+ms.sourcegitcommit: e7445ba8203da304286c591ff513900ad1c244a4
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 12/14/2018
-ms.locfileid: "53404878"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62058518"
 ---
 # <a name="powershellexe-command-line-help"></a>Ajuda da linha de comandos do PowerShell.exe
 
@@ -47,7 +47,7 @@ Aceita uma versão de cadeia com codificação base-64 de um comando. Utilize es
 
 Define a política de execução padrão para a sessão atual e guarda-o no $env: PSExecutionPolicyPreference variável de ambiente. Este parâmetro não altera a diretiva de execução do PowerShell que é definida no registo. Para obter informações sobre as políticas de execução do PowerShell, incluindo uma lista de valores válidos, consulte [about_Execution_Policies](/powershell/module/microsoft.powershell.core/about/about_execution_policies).
 
-### <a name="-file-filepath-parameters"></a>-Arquivo <FilePath> \[ <Parameters>]
+### <a name="-file-filepath-parameters"></a>-File <FilePath> \[<Parameters>]
 
 Executa o script especificado no âmbito do local ("dot Source"), para que as funções e variáveis que cria o script estão disponíveis na sessão atual. Introduza o caminho do ficheiro de script e quaisquer parâmetros. **Ficheiro** tem de ser o último parâmetro no comando. Todos os valores que escreveu depois do **-ficheiro** parâmetro são interpretados como o script de caminho do ficheiro e os parâmetros passados para esse script.
 
@@ -80,7 +80,7 @@ Não apresentar uma linha de comandos interativa ao usuário.
 
 Não carrega o perfil do PowerShell.
 
-### <a name="-outputformat-text--xml"></a>-OutputFormat {texto | XML}
+### <a name="-outputformat-text--xml"></a>-OutputFormat {Text | XML}
 
 Determina a forma como o resultado do PowerShell é formatado. Valores válidos são "Text" (cadeias de texto) ou "XML" (formato CLIXML serializado).
 
@@ -100,11 +100,11 @@ Se o PowerShell 3.0 não estiver instalado, o único valor válido é "2.0". Out
 
 Para obter mais informações, consulte [instalar o Windows PowerShell](../../setup/installing-windows-powershell.md).
 
-### <a name="-windowstyle-window-style"></a>-NONE <Window style>
+### <a name="-windowstyle-window-style"></a>-WindowStyle <Window style>
 
 Define o estilo da janela para a sessão. Valores válidos são Normal, minimizado, maximizado e Hidden.
 
-### <a name="-command"></a>-Comando
+### <a name="-command"></a>-Command
 
 Executa os comandos especificados (com quaisquer parâmetros) como se eles foram digitados na linha de comando do PowerShell.
 Após a execução, PowerShell é encerrado, a menos que o **NoExit** parâmetro for especificado.
@@ -132,12 +132,12 @@ Para executar um bloco de script inline definido dentro de uma cadeia de caracte
 "& {<command>}"
 ```
 
-### <a name="-help---"></a>-Help,-?, /?
+### <a name="-help---"></a>-Help, -?, /?
 
 Mostra a sintaxe de powershell.exe. Se estiver escrevendo um comando de PowerShell.exe no PowerShell, preceda os parâmetros de comando com um hífen (-), não uma barra (/). Pode utilizar um hífen ou de uma barra no Cmd.exe.
 
 > [!NOTE]
-> Nota de Resolução de Problemas: No PowerShell 2.0, a iniciar alguns programas no Windows PowerShell consola não com um LastExitCode de 0xc0000142.
+> Nota de resolução de problemas: No PowerShell 2.0, a iniciar alguns programas no Windows PowerShell consola não com um LastExitCode de 0xc0000142.
 
 ## <a name="examples"></a>EXEMPLOS
 

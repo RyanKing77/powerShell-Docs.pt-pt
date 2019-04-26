@@ -2,12 +2,12 @@
 ms.date: 06/12/2017
 keywords: jea, powershell, segurança
 title: Considerações de segurança JEA
-ms.openlocfilehash: ede727f0f30412d520712d6ba855ba2008375d9a
-ms.sourcegitcommit: b6871f21bd666f9cd71dd336bb3f844cf472b56c
+ms.openlocfilehash: 9526e141517601ae3b6d6932cd3536fdf49aa9a6
+ms.sourcegitcommit: e7445ba8203da304286c591ff513900ad1c244a4
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 02/03/2019
-ms.locfileid: "55687245"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62084781"
 ---
 # <a name="jea-security-considerations"></a>Considerações de segurança JEA
 
@@ -127,7 +127,7 @@ Por exemplo, considere a seguinte entrada de recurso de função:
 ```
 
 Esta capacidade de função permite aos utilizadores executar qualquer cmdlet do PowerShell com o substantivo "Processo" do módulo Management.
-Os usuários podem precisar acessar os cmdlets, como `Get-Process` para compreender quais aplicativos estão sendo executados no sistema e `Stop-Process` interromper qualquer suspenso aplicativos.
+Os usuários podem precisar acessar os cmdlets, como `Get-Process` para compreender quais aplicativos estão sendo executados no sistema e `Stop-Process` para eliminar todas as aplicações que não estão a responder.
 No entanto, esta entrada também permite `Start-Process`, que pode ser utilizado para iniciar um programa arbitrário com permissões de administrador completo.
 O programa não precisa ser instalado localmente no sistema, para que um adversário simplesmente foi possível iniciar um programa numa partilha de ficheiros que dá os ligação privilégios de administrador local do utilizador, o malware de execuções e muito mais. "
 

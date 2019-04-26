@@ -3,11 +3,11 @@ ms.date: 06/12/2017
 keywords: DSC, powershell, configuração, a configuração
 title: Recurso de registro de DSC
 ms.openlocfilehash: e0ae1a4a27edc08c4e6ccd47786426917eb1ccb4
-ms.sourcegitcommit: e04292a9c10de9a8391d529b7f7aa3753b362dbe
+ms.sourcegitcommit: e7445ba8203da304286c591ff513900ad1c244a4
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 01/04/2019
-ms.locfileid: "54048491"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62076961"
 ---
 # <a name="dsc-registry-resource"></a>Recurso de registro de DSC
 
@@ -36,7 +36,7 @@ Registry [string] #ResourceName
 | Propriedade | Descrição |
 | --- | --- |
 | Tecla| Indica o caminho da chave do registo para o qual pretende garantir um estado específico. Este caminho tem de incluir o hive.|
-| valueName| Indica o nome do valor do Registro. Para adicionar ou remover uma chave de registo, especifique esta propriedade como uma cadeia vazia sem especificar ValueType ou ValueData. Para modificar ou remover o valor predefinido de uma chave de registo, especifique esta propriedade como uma cadeia vazia ao especificar também o ValueType ou ValueData.|
+| ValueName| Indica o nome do valor do Registro. Para adicionar ou remover uma chave de registo, especifique esta propriedade como uma cadeia vazia sem especificar ValueType ou ValueData. Para modificar ou remover o valor predefinido de uma chave de registo, especifique esta propriedade como uma cadeia vazia ao especificar também o ValueType ou ValueData.|
 | Certifique-se| Indica se a chave e valor existirem. Para garantir que eles fazem, defina esta propriedade para "Presente". Para garantir que não existam, defina a propriedade como "Ausente". O valor predefinido é "Presente".|
 | Force| Se a chave de registo especificado estiver presente, **força** é substituído pelo novo valor. Se eliminar uma chave de registo com subchaves, esse processo precisa ser **$true** |
 | Hexadecimal| Indica se os dados irão ser expressos em formato hexadecimal. Se for especificado, os dados do valor DWORD/QWORD são apresentados em formato hexadecimal. Não é válido para outros tipos. O valor predefinido é **$false**.|

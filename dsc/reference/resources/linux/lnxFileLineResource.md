@@ -3,11 +3,11 @@ ms.date: 06/12/2017
 keywords: DSC, powershell, configuração, a configuração
 title: DSC para Linux nxFileLine recursos
 ms.openlocfilehash: 6a91db25638b09659adfabcec78f91bcb2e69dd9
-ms.sourcegitcommit: e04292a9c10de9a8391d529b7f7aa3753b362dbe
+ms.sourcegitcommit: e7445ba8203da304286c591ff513900ad1c244a4
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 01/04/2019
-ms.locfileid: "54048368"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62077965"
 ---
 # <a name="dsc-for-linux-nxfileline-resource"></a>DSC para Linux nxFileLine recursos
 
@@ -30,7 +30,7 @@ nxFileLine <string> #ResourceName
 
 |  Propriedade |  Descrição |
 |---|---|
-| Caminho do ficheiro| O caminho completo para o ficheiro para gerir as linhas no nó de destino.|
+| FilePath| O caminho completo para o ficheiro para gerir as linhas no nó de destino.|
 | ContainsLine| Uma linha para garantir que existe no ficheiro. Essa linha será anexada ao ficheiro se não existir no ficheiro. **ContainsLine** é obrigatório, mas pode ser definido como uma cadeia vazia (`ContainsLine = ""`) se não for necessário.|
 | DoesNotContainPattern| Um padrão de expressão regular para linhas que não deve existir no ficheiro. Para as linhas existentes no arquivo que correspondem essa expressão regular, a linha será removida do ficheiro.|
 | DependsOn | Indica que a configuração de outro recurso deve ser executado antes deste recurso está configurado. Por exemplo, se o **ID** do recurso de bloco de script de configuração que pretende executar primeiro é **ResourceName** e seu tipo é **ResourceType**, a sintaxe para usar isso a propriedade é `DependsOn = "[ResourceType]ResourceName"`.|

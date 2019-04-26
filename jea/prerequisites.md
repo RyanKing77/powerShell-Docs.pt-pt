@@ -3,11 +3,11 @@ ms.date: 06/12/2017
 keywords: jea, powershell, segurança
 title: Pré-requisitos JEA
 ms.openlocfilehash: acc16c0c7eec357b621c0706a66b8752ae5578cd
-ms.sourcegitcommit: b6871f21bd666f9cd71dd336bb3f844cf472b56c
+ms.sourcegitcommit: e7445ba8203da304286c591ff513900ad1c244a4
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 02/03/2019
-ms.locfileid: "55688358"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62084849"
 ---
 # <a name="prerequisites"></a>Pré-requisitos
 
@@ -25,7 +25,7 @@ Sistema operativo do servidor   | Disponibilidade JEA
 --------------------------|--------------------------------
 Windows Server 2016       | Pré-instalados
 Windows Server 2012 R2    | Todas as funcionalidades com o WMF 5.1
-Windows Server 2012       | Todas as funcionalidades com o WMF 5.1
+Windows Server 2012       | Todas as funcionalidades com o WMF 5.1
 Windows Server 2008 R2    | Funcionalidades reduzidas<sup>1</sup> com o WMF 5.1
 
 Também pode utilizar a JEA no seu computador doméstica ou de trabalho:

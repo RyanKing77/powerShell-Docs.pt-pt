@@ -9,11 +9,11 @@ ms.topic: article
 ms.assetid: c4933dad-fec9-4337-a1a9-9dc16ee87cc3
 caps.latest.revision: 9
 ms.openlocfilehash: 1e7aeb5bcb6bd5a2845648c3327e2245e6c428ba
-ms.sourcegitcommit: b6871f21bd666f9cd71dd336bb3f844cf472b56c
+ms.sourcegitcommit: e7445ba8203da304286c591ff513900ad1c244a4
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 02/03/2019
-ms.locfileid: "56844801"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62080939"
 ---
 # <a name="provider-samples"></a>Provider Samples (Exemplos de Fornecedores)
 
@@ -21,7 +21,7 @@ Esta secção inclui exemplos de fornecedores que acessar um banco de dados do M
 
 ## <a name="in-this-section"></a>Nesta Secção
 
-Esta secção inclui os tópicos seguintes:
+Esta seção inclui os seguintes tópicos:
 
 [Exemplo de AccessDBProviderSample01](./accessdbprovidersample01.md) este exemplo mostra como declarar a classe de provedor que deriva diretamente a partir de [System.Management.Automation.Provider.Cmdletprovider](/dotnet/api/System.Management.Automation.Provider.CmdletProvider) classe. Ele é incluído aqui apenas para fornecer uma visão completa.
 

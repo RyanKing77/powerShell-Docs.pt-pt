@@ -9,11 +9,11 @@ ms.topic: article
 ms.assetid: 473d9b56-521b-479a-8010-67fe9f040063
 caps.latest.revision: 8
 ms.openlocfilehash: 3a386eff95044eae573c255a451c5c8b8f16714d
-ms.sourcegitcommit: b6871f21bd666f9cd71dd336bb3f844cf472b56c
+ms.sourcegitcommit: e7445ba8203da304286c591ff513900ad1c244a4
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 02/03/2019
-ms.locfileid: "56849827"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62066550"
 ---
 # <a name="customcontrolname-element-for-groupby-format"></a>CustomControlName Element for GroupBy (Format) (Elemento CustomControlName para GroupBy [Formatação])
 
@@ -27,7 +27,7 @@ O elemento (formato) ViewDefinitions elemento (formato) vista elemento (formato)
 <CustomControlName>ControlName</CustomControlName>
 ```
 
-## <a name="attributes-and-elements"></a>Atributos e Elementos
+## <a name="attributes-and-elements"></a>Atributos e elementos
 
 As secções seguintes descrevem os atributos, elementos filho e elementos pai do `CustomControlName` elemento.
 
@@ -35,17 +35,17 @@ As secções seguintes descrevem os atributos, elementos filho e elementos pai d
 
 Nenhum.
 
-### <a name="child-elements"></a>Elementos Subordinados
+### <a name="child-elements"></a>Elementos subordinados
 
 Nenhum.
 
-### <a name="parent-elements"></a>Elementos Principais
+### <a name="parent-elements"></a>Elementos principais
 
 |Elemento|Descrição|
 |-------------|-----------------|
 |[GroupBy elemento para a exibição (formato)](./groupby-element-for-view-format.md)|Define como o Windows PowerShell apresenta um novo grupo de objetos.|
 
-## <a name="text-value"></a>Valor do Texto
+## <a name="text-value"></a>Valor de texto
 
 Especifique o nome do controle personalizado que é utilizado para apresentar um novo grupo.
 

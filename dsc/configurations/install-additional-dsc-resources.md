@@ -3,11 +3,11 @@ ms.date: 12/12/2018
 keywords: DSC, powershell, recurso, galeria, a configuração
 title: Instalar os recursos de DSC adicionais
 ms.openlocfilehash: ecaf176230ccd934b57b1c27d72ff83e6ba906e9
-ms.sourcegitcommit: 00ff76d7d9414fe585c04740b739b9cf14d711e1
+ms.sourcegitcommit: e7445ba8203da304286c591ff513900ad1c244a4
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 12/14/2018
-ms.locfileid: "53405214"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62080087"
 ---
 # <a name="install-additional-dsc-resources"></a>Instalar os recursos de DSC adicionais
 
@@ -22,11 +22,11 @@ Esta é uma lista dos recursos OOB incluídos no PowerShell 4.0 e uma descriçã
 |---------|---------|
 |**Ficheiro**|Controla o estado de arquivos e diretórios. Copia os ficheiros a partir de um **origem** para um **destino** e atualiza-las quando o **origem** alterações comparando as datas, as somas de verificação e hashes.|
 |**Arquivo**|Descompacta arquivos mortos e uma localização especificada. Valida os arquivos com uma determinada **soma de verificação**.|
-|**Ambiente**|Gere as variáveis de ambiente.|
+|**Environment**|Gere as variáveis de ambiente.|
 |**Grupo**|Gere os grupos locais e controla a associação de grupo.|
-|**Registo**|Escreve mensagens para o `Microsoft-Windows-Desired State Configuration/Analytic` registo de eventos.|
+|**registo**|Escreve mensagens para o `Microsoft-Windows-Desired State Configuration/Analytic` registo de eventos.|
 |**Pacote**|Instala ou desinstala os pacotes usando **argumentos**, **LogPath**, **ReturnCode**, outras definições.|
-|**registo**|Gere chaves de registo e valores.|
+|**Registo**|Gere chaves de registo e valores.|
 |**Script**|Permite-lhe criar sua própria [get-teste-set](../resources/get-test-set.md) blocos de script.|
 |**Serviço**|Configura os serviços do Windows.|
 |**Utilizador** |Gere utilizadores locais e atributos.|

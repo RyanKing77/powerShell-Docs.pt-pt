@@ -4,11 +4,11 @@ contributor: JKeithB
 keywords: Galeria, o powershell, o cmdlet, o psgallery
 title: Remover pacotes
 ms.openlocfilehash: fb66fd23dae1d4640056a764c31426f61f56d910
-ms.sourcegitcommit: b6871f21bd666f9cd71dd336bb3f844cf472b56c
+ms.sourcegitcommit: e7445ba8203da304286c591ff513900ad1c244a4
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 02/03/2019
-ms.locfileid: "55684396"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62084118"
 ---
 # <a name="unlisting-packages"></a>Unlisting Packages (Remover Pacotes de Listas)
 

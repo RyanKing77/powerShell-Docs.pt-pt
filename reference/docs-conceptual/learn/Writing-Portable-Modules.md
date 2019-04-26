@@ -3,11 +3,11 @@ ms.date: 12/14/2018
 keywords: PowerShell, o cmdlet
 title: Escrever módulos portátil
 ms.openlocfilehash: 38a93b5b030d58784b91292e2cd060b3a2c19a00
-ms.sourcegitcommit: d396d0e4cfe3d279f399c17e7337380a31d373ac
+ms.sourcegitcommit: e7445ba8203da304286c591ff513900ad1c244a4
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 12/21/2018
-ms.locfileid: "53747726"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62086413"
 ---
 # <a name="portable-modules"></a>Módulos portátil
 
@@ -254,13 +254,13 @@ Exemplo:
 ```
 
 <!-- reference links -->
-[.NET framework]: /dotnet/framework/
-[.NET core]: /dotnet/core/
+[.NET Framework]: /dotnet/framework/
+[.NET Core]: /dotnet/core/
 [PSSnapIn]: /dotnet/api/system.management.automation.pssnapin
 [New-ModuleManifest]: /powershell/module/microsoft.powershell.core/new-modulemanifest
 [verificações de tempo de execução]: /dotnet/api/system.runtime.interopservices.runtimeinformation.frameworkdescription#System_Runtime_InteropServices_RuntimeInformation_FrameworkDescription
 [.NET CLI]: /dotnet/core/tools/?tabs=netcore2x
-[.NET standard]: /dotnet/standard/net-standard
+[.NET Standard]: /dotnet/standard/net-standard
 [Padrão de PowerShell]: https://github.com/PowerShell/PowerShellStandard
 [PowerShell Standard 5.1]: https://www.nuget.org/packages/PowerShellStandard.Library/5.1.0
 [Galeria do PowerShell]: https://www.powershellgallery.com

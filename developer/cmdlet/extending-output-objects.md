@@ -9,11 +9,11 @@ ms.topic: article
 ms.assetid: a252e0ec-d456-42d7-bd49-d6b8bc57f388
 caps.latest.revision: 11
 ms.openlocfilehash: 9c9d50c880f843e21621e5735c800e3afb48b2ad
-ms.sourcegitcommit: b6871f21bd666f9cd71dd336bb3f844cf472b56c
+ms.sourcegitcommit: e7445ba8203da304286c591ff513900ad1c244a4
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 02/03/2019
-ms.locfileid: "56850961"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62068169"
 ---
 # <a name="extending-output-objects"></a>Extending Output Objects (Expandir Objetos de Resultado)
 
@@ -94,7 +94,7 @@ Depois de definir seus próprios tipos expandidos, utilize um dos seguintes mét
 
 Ficheiros de tipos devem ser assinados digitalmente para impedir a adulteração, porque o XML pode incluir os blocos de script. Para obter mais informações sobre a adição de assinaturas digitais, consulte [about_Signing](/powershell/module/microsoft.powershell.core/about/about_signing)
 
-## <a name="see-also"></a>Consulte Também
+## <a name="see-also"></a>Veja Também
 
 [Definir propriedades predefinidas para objetos](./extending-properties-for-objects.md)
 

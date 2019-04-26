@@ -9,11 +9,11 @@ ms.topic: article
 ms.assetid: 477c8711-fffc-4f92-af45-6d4f80990474
 caps.latest.revision: 7
 ms.openlocfilehash: 60f02f3240c5574e1b1f9027b060bd9af89a11d2
-ms.sourcegitcommit: b6871f21bd666f9cd71dd336bb3f844cf472b56c
+ms.sourcegitcommit: e7445ba8203da304286c591ff513900ad1c244a4
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 02/03/2019
-ms.locfileid: "56845130"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62083948"
 ---
 # <a name="typename-element-for-selectioncondition-for-controls-for-configuration-format"></a>TypeName Element for SelectionCondition for Controls for Configuration (Format) (Elemento TypeName para SelectionCondition para Controls para Configuration [Formatação])
 
@@ -28,7 +28,7 @@ Elemento de controles de elemento (formato) de configuração do elemento de con
 
 ```
 
-## <a name="attributes-and-elements"></a>Atributos e Elementos
+## <a name="attributes-and-elements"></a>Atributos e elementos
 
 As secções seguintes descrevem os atributos e elementos filho e o elemento principal do `TypeName` elemento.
 
@@ -36,17 +36,17 @@ As secções seguintes descrevem os atributos e elementos filho e o elemento pri
 
 Nenhum.
 
-### <a name="child-elements"></a>Elementos Subordinados
+### <a name="child-elements"></a>Elementos subordinados
 
 Nenhum.
 
-### <a name="parent-elements"></a>Elementos Principais
+### <a name="parent-elements"></a>Elementos principais
 
 |Elemento|Descrição|
 |-------------|-----------------|
 |[Elemento de SelectionCondition para EntrySelectedBy para CustomEntry para a configuração (formato)](./selectioncondition-element-for-entryselectedby-for-controls-for-configuration-format.md)|Define uma condição que tem de existir durante a definição de controlo a ser utilizado.|
 
-## <a name="text-value"></a>Valor do Texto
+## <a name="text-value"></a>Valor de texto
 
 Especifique o nome completamente qualificado do tipo .NET, tal como `System.IO.DirectoryInfo`.
 

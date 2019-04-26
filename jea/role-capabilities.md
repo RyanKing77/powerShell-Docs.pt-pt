@@ -3,11 +3,11 @@ ms.date: 06/12/2017
 keywords: jea, powershell, segurança
 title: Funcionalidades de função JEA
 ms.openlocfilehash: b93d206680de485d6cb7a8cb26d63afda5bf8421
-ms.sourcegitcommit: caac7d098a448232304c9d6728e7340ec7517a71
+ms.sourcegitcommit: e7445ba8203da304286c591ff513900ad1c244a4
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 03/16/2019
-ms.locfileid: "58055058"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62084798"
 ---
 # <a name="jea-role-capabilities"></a>Funcionalidades de função JEA
 

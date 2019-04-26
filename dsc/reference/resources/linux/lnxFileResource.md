@@ -3,11 +3,11 @@ ms.date: 06/12/2017
 keywords: DSC, powershell, configuração, a configuração
 title: DSC para Linux nxFile recursos
 ms.openlocfilehash: 80969ba2ea6247fcd616a301d951403a840c851d
-ms.sourcegitcommit: b6871f21bd666f9cd71dd336bb3f844cf472b56c
+ms.sourcegitcommit: e7445ba8203da304286c591ff513900ad1c244a4
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 02/03/2019
-ms.locfileid: "55688652"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62078032"
 ---
 # <a name="dsc-for-linux-nxfile-resource"></a>DSC para Linux nxFile recursos
 
@@ -44,7 +44,7 @@ nxFile <string> #ResourceName
 | Certifique-se| Determina se deve verificar se o ficheiro existe. Defina esta propriedade para "Presente" para garantir que o ficheiro existe. Defini-lo como "Ausente", certifique-se de que o ficheiro não existe. O valor predefinido é "Presente".|
 | Tipo| Especifica se o recurso a ser configurado é um diretório ou um ficheiro. Defina esta propriedade para o "diretório" para indicar que o recurso é um diretório. Defina-o para "file" para indicar que o recurso é um ficheiro. O valor predefinido é "file"|
 | Conteúdos| Especifica o conteúdo de um arquivo, como uma determinada cadeia de caracteres.|
-| Soma de verificação| Define o tipo a utilizar ao determinar se dois arquivos são os mesmos. Se **soma de verificação** não for especificada, apenas o nome de ficheiro ou diretório é utilizado para comparação. Os valores são: "ctime", "mtime", ou "md5".|
+| Checksum| Define o tipo a utilizar ao determinar se dois arquivos são os mesmos. Se **soma de verificação** não for especificada, apenas o nome de ficheiro ou diretório é utilizado para comparação. Os valores são: "ctime", "mtime", ou "md5".|
 | Recurse| Indica se são incluídos os subdiretórios. Defina esta propriedade como **$true** para indicar que pretende que o subdiretórios a serem incluídos. A predefinição é **$false**. **Nota:** Esta propriedade só é válido quando o **tipo** propriedade está definida como o diretório.|
 | Force| Determinadas operações de arquivo (como substituir um ficheiro ou eliminar um diretório que não está vazio) irão resultar num erro. Utilizar o **força** propriedade substitui esses erros. O valor predefinido é **$false**.|
 | Links| Especifica o comportamento desejado para links simbólicos. Defina esta propriedade de "seguir" seguir links simbólicos e tomar decisões sobre o destino de ligações (por exemplo. Copie o ficheiro em vez da ligação). Defina esta propriedade para "Gerir" para tomar decisões sobre a ligação (por exemplo. Copie a ligação em si). Defina esta propriedade para "Ignorar" Ignorar links simbólicos.|

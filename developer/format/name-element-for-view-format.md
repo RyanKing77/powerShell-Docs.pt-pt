@@ -9,11 +9,11 @@ ms.topic: article
 ms.assetid: 3a31010d-1db9-44ae-a7f3-6ed32cb641cb
 caps.latest.revision: 16
 ms.openlocfilehash: 097d20cb6a04635124d1f96823248df6095ca1af
-ms.sourcegitcommit: b6871f21bd666f9cd71dd336bb3f844cf472b56c
+ms.sourcegitcommit: e7445ba8203da304286c591ff513900ad1c244a4
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 02/03/2019
-ms.locfileid: "56849267"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62065075"
 ---
 # <a name="name-element-for-view-format"></a>Name Element for View (Format) (Elemento Name para View [Formatação])
 
@@ -27,7 +27,7 @@ O elemento (formato) ViewDefinitions elemento (formato) vista elemento (formato)
 <Name>ViewName</Name>
 ```
 
-## <a name="attributes-and-elements"></a>Atributos e Elementos
+## <a name="attributes-and-elements"></a>Atributos e elementos
 
 As secções seguintes descrevem os atributos e elementos filho e o elemento principal do `Name` elemento. Apenas um `Name` elemento é permitido para cada exibição.
 
@@ -35,17 +35,17 @@ As secções seguintes descrevem os atributos e elementos filho e o elemento pri
 
 Nenhum.
 
-### <a name="child-elements"></a>Elementos Subordinados
+### <a name="child-elements"></a>Elementos subordinados
 
 Nenhum.
 
-### <a name="parent-elements"></a>Elementos Principais
+### <a name="parent-elements"></a>Elementos principais
 
 |Elemento|Descrição|
 |-------------|-----------------|
 |[Elemento de exibição (formato)](./view-element-format.md)|Define uma vista que é utilizada para apresentar os membros de um ou mais objetos do .NET.|
 
-## <a name="text-value"></a>Valor do Texto
+## <a name="text-value"></a>Valor de texto
 
 Especifique um nome amigável exclusivo para a vista. Este nome pode incluir uma referência para o tipo da exibição (como uma vista de tabela ou vista de lista), qual objeto ou conjunto de objetos, utilize a vista, o comando devolve os objetos ou uma combinação das mesmas.
 

@@ -9,11 +9,11 @@ ms.topic: article
 ms.assetid: a4544c0b-2347-4f3f-9bdb-ed2714bee048
 caps.latest.revision: 6
 ms.openlocfilehash: 8541aeae9f2dd19d65ab3950929474572b4629e0
-ms.sourcegitcommit: b6871f21bd666f9cd71dd336bb3f844cf472b56c
+ms.sourcegitcommit: e7445ba8203da304286c591ff513900ad1c244a4
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 02/03/2019
-ms.locfileid: "56845627"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62066044"
 ---
 # <a name="enumeratecollection-element-for-expressionbinding-for-groupby-format"></a>EnumerateCollection Element for ExpressionBinding for GroupBy (Format) (Elemento EnumerateCollection para ExpressionBinding para GroupBy [Formatação])
 
@@ -27,7 +27,7 @@ O elemento (formato) ViewDefinitions elemento (formato) vista elemento (formato)
 <EnumerateCollection/>
 ```
 
-## <a name="attributes-and-elements"></a>Atributos e Elementos
+## <a name="attributes-and-elements"></a>Atributos e elementos
 
 As secções seguintes descrevem os atributos e elementos filho e o elemento principal do `EnumerateCollection` elemento.
 
@@ -35,11 +35,11 @@ As secções seguintes descrevem os atributos e elementos filho e o elemento pri
 
 Nenhum.
 
-### <a name="child-elements"></a>Elementos Subordinados
+### <a name="child-elements"></a>Elementos subordinados
 
 Nenhum.
 
-### <a name="parent-elements"></a>Elementos Principais
+### <a name="parent-elements"></a>Elementos principais
 
 |Elemento|Descrição|
 |-------------|-----------------|
@@ -47,7 +47,7 @@ Nenhum.
 
 ## <a name="remarks"></a>Observações
 
-## <a name="see-also"></a>Consulte Também
+## <a name="see-also"></a>Veja Também
 
 [Elemento de ExpressionBinding para CustomItem para GroupBy (formato)](./expressionbinding-element-for-customitem-for-groupby-format.md)
 

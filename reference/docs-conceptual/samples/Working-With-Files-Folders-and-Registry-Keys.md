@@ -4,11 +4,11 @@ keywords: PowerShell, o cmdlet
 title: Trabalhar com Pastas de Ficheiros e Chaves do Registo
 ms.assetid: e6cf87aa-b5f8-48d5-a75a-7cb7ecb482dc
 ms.openlocfilehash: cd20cc50b573435ba80b52b51e164e60625dc1b6
-ms.sourcegitcommit: f4bd4e116e22c8b5bfcb61680a7c42e58b4da93e
-ms.translationtype: HT
+ms.sourcegitcommit: e7445ba8203da304286c591ff513900ad1c244a4
+ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59984192"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62086011"
 ---
 # <a name="working-with-files-folders-and-registry-keys"></a>Trabalhar com arquivos, pastas e chaves de registo
 

@@ -9,11 +9,11 @@ ms.topic: article
 ms.assetid: 05b088de-fac3-4a01-9eea-3d96ab755c4b
 caps.latest.revision: 6
 ms.openlocfilehash: b08569a91caa903fa9267d0121f8fd41b33c1e31
-ms.sourcegitcommit: b6871f21bd666f9cd71dd336bb3f844cf472b56c
+ms.sourcegitcommit: e7445ba8203da304286c591ff513900ad1c244a4
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 02/03/2019
-ms.locfileid: "56849274"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62081721"
 ---
 # <a name="runspace01-code-samples"></a>Runspace01 Code Samples (Códigos de Exemplo Runspace01)
 
@@ -26,7 +26,7 @@ Para o código de exemplo completo, consulte os seguintes tópicos.
 |C#|[Runspace01 (C#) exemplo de código](./runspace01-csharp-code-sample.md)|
 |VB.NET|[Runspace01 exemplo de código (VB.NET)](./runspace01-vb-net-code-sample.md)|
 
-## <a name="see-also"></a>Consulte Também
+## <a name="see-also"></a>Veja Também
 
 [Guia do programador do Windows PowerShell](./windows-powershell-programmer-s-guide.md)
 

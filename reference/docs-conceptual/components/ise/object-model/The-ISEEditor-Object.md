@@ -3,11 +3,11 @@ ms.date: 06/05/2017
 keywords: PowerShell, o cmdlet
 title: Objeto ISEEditor
 ms.openlocfilehash: 2d4c3d941035384c591ca57e809c0e3a9b852f5c
-ms.sourcegitcommit: 00ff76d7d9414fe585c04740b739b9cf14d711e1
+ms.sourcegitcommit: e7445ba8203da304286c591ff513900ad1c244a4
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 12/14/2018
-ms.locfileid: "53405490"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62086770"
 ---
 # <a name="the-iseeditor-object"></a>Objeto ISEEditor
 
@@ -76,7 +76,7 @@ Move o sinal de interpolação para o caráter correspondente, se o **CanGoToMat
 $psISE.CurrentPowerShellTab.ConsolePane.GoToMatch()
 ```
 
-### <a name="inserttext-text-"></a>InsertText\( texto \)
+### <a name="inserttext-text-"></a>InsertText\( text \)
 
 Suportado no Windows PowerShell ISE 2.0 e versões posteriores.
 
@@ -86,7 +86,7 @@ Substitui a seleção com texto ou insere texto na posição atual do sinal de i
 
 Consulte a [exemplo de script](#scripting-example) mais adiante neste tópico.
 
-### <a name="select-startline-startcolumn-endline-endcolumn-"></a>Selecione\( startLine, startColumn, endLine, endColumn \)
+### <a name="select-startline-startcolumn-endline-endcolumn-"></a>Select\( startLine, startColumn, endLine, endColumn \)
 
 Suportado no Windows PowerShell ISE 2.0 e versões posteriores.
 
@@ -243,7 +243,7 @@ $myEditor.Clear()
 $myEditor.InsertText($selection.ToLower())
 ```
 
-## <a name="see-also"></a>Consulte Também
+## <a name="see-also"></a>Veja Também
 
 - [Objeto ISEFile](The-ISEFile-Object.md)
 - [Objeto PowerShellTab](The-PowerShellTab-Object.md)

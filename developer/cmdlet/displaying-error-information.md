@@ -9,11 +9,11 @@ ms.topic: article
 ms.assetid: 76fcc0c1-9795-45d3-a564-40f822b657b5
 caps.latest.revision: 8
 ms.openlocfilehash: 4bc8666ee9053eb368402c8644558f4fe2dcc9ee
-ms.sourcegitcommit: b6871f21bd666f9cd71dd336bb3f844cf472b56c
+ms.sourcegitcommit: e7445ba8203da304286c591ff513900ad1c244a4
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 02/03/2019
-ms.locfileid: "56848406"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62068288"
 ---
 # <a name="displaying-error-information"></a>Displaying Error Information (Apresentar Informações de Erros)
 
@@ -36,7 +36,7 @@ CloseError: (System.ServiceProcess.ServiceController:ServiceController) [stop-se
 
 Para obter mais informações sobre as categorias de erro, consulte [registos de erros do Windows PowerShell](./windows-powershell-error-records.md).
 
-## <a name="see-also"></a>Consulte Também
+## <a name="see-also"></a>Veja Também
 
 [Registos de erro do PowerShell do Windows](./windows-powershell-error-records.md)
 

@@ -3,11 +3,11 @@ ms.date: 06/12/2017
 keywords: DSC, powershell, configuração, a configuração
 title: Melhores práticas do servidor de solicitação
 ms.openlocfilehash: fe483a487f85f2e4edb0928fccfe98746ae11231
-ms.sourcegitcommit: caac7d098a448232304c9d6728e7340ec7517a71
+ms.sourcegitcommit: e7445ba8203da304286c591ff513900ad1c244a4
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 03/16/2019
-ms.locfileid: "58057710"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62079205"
 ---
 # <a name="pull-server-best-practices"></a>Melhores práticas do servidor de solicitação
 
@@ -134,7 +134,7 @@ Se utilizar o balanceamento de carga, o certificado utilizado para proteger o tr
 
 Cenário |Melhor prática
 :---|:---
-Ambiente de testes |Reproduza o ambiente de produção planeada, se possível. Um nome de anfitrião do servidor é adequada para configurações simples. Se o DNS não estiver disponível, um endereço IP pode ser utilizado em lugar de um nome de anfitrião.|
+Ambiente de teste |Reproduza o ambiente de produção planeada, se possível. Um nome de anfitrião do servidor é adequada para configurações simples. Se o DNS não estiver disponível, um endereço IP pode ser utilizado em lugar de um nome de anfitrião.|
 Implementação de nó único |Crie um registo CNAME no DNS que aponta para o nome de anfitrião do servidor.|
 
 Para obter mais informações, consulte [configurar o DNS Round Robin no Windows Server](/previous-versions/windows/it-pro/windows-server-2003/cc787484(v=ws.10)).

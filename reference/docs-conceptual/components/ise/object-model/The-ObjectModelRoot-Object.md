@@ -3,11 +3,11 @@ ms.date: 08/25/2017
 keywords: PowerShell, o cmdlet
 title: Objeto ObjectModelRoot
 ms.openlocfilehash: 2670321ebac1eac4ecc8457afb796f9f260da471
-ms.sourcegitcommit: b6871f21bd666f9cd71dd336bb3f844cf472b56c
+ms.sourcegitcommit: e7445ba8203da304286c591ff513900ad1c244a4
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 02/03/2019
-ms.locfileid: "55684375"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62086787"
 ---
 # <a name="the-objectmodelroot-object"></a>Objeto ObjectModelRoot
 
@@ -52,7 +52,7 @@ A propriedade só de leitura que obtém as várias opções que pode alterar as 
 
 A propriedade só de leitura que obtém a coleção de guias do PowerShell, que estão abertas no ISE do Windows PowerShell. Por predefinição, este objeto contém um separador do PowerShell. No entanto, pode adicionar mais guias do PowerShell para este objeto utilizando scripts ou utilizando os menus no ISE do Windows PowerShell.
 
-## <a name="see-also"></a>Consulte Também
+## <a name="see-also"></a>Veja Também
 
 - [Objetivo do ISE do Windows PowerShell Scripting o modelo de objeto](Purpose-of-the-Windows-PowerShell-ISE-Scripting-Object-Model.md)
 - [Hierarquia do Modelo de Objeto ISE](The-ISE-Object-Model-Hierarchy.md)

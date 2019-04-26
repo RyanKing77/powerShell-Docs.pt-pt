@@ -4,11 +4,11 @@ keywords: PowerShell, o cmdlet
 title: Explorar o ISE do Windows PowerShell
 ms.assetid: e0d2c6e8-5126-40e7-a1e1-d1cff29fe94a
 ms.openlocfilehash: 059651f159fb2636a93167709134788e90d062b8
-ms.sourcegitcommit: b6871f21bd666f9cd71dd336bb3f844cf472b56c
+ms.sourcegitcommit: e7445ba8203da304286c591ff513900ad1c244a4
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 02/03/2019
-ms.locfileid: "55684480"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62086906"
 ---
 # <a name="exploring-the-windows-powershell-ise"></a>Explorar o ISE do Windows PowerShell
 
@@ -34,11 +34,11 @@ Os botões seguintes estão localizados na barra de ferramentas.
 
 |Botão|Função|
 |----------|------------|
-|**Novo**|É aberto um novo script.|
-|**Aberto**|Abre-se de um script existente ou um ficheiro.|
+|**Novidade**|É aberto um novo script.|
+|**abrir**|Abre-se de um script existente ou um ficheiro.|
 |**Guardar**|Guarda um script ou arquivo.|
 |**Cut**|Reduz o texto selecionado e copia-o para a área de transferência.|
-|**Cópia**|Copia o texto selecionado para a área de transferência.|
+|**cópia**|Copia o texto selecionado para a área de transferência.|
 |**Paste**|Cola o conteúdo da área de transferência ao local do cursor.|
 |**Limpar o painel de resultados**|Limpa a todo o conteúdo no painel de saída.|
 |**Undo**|Reverte a ação que acabou de executar.|
@@ -82,6 +82,6 @@ Aumenta ou diminui o tamanho do texto na tela.
 
 Ajuda para o Windows PowerShell ISE está disponível na Web na Biblioteca TechNet. Pode abrir a ajuda ao clicar **ajuda do Windows PowerShell ISE** no **ajudar** menu ou ao premir a tecla F1 em qualquer lugar, exceto quando o cursor está no nome de um cmdlet no painel de Script ou no painel da consola. Do **ajudar** menu também pode executar o cmdlet Update-Help e exibir a janela de comando que ajuda a construir comandos, que mostra todos os parâmetros para um cmdlet e permitindo que preencher os parâmetros num formulário de fácil de usar.
 
-## <a name="see-also"></a>Consulte Também
+## <a name="see-also"></a>Veja Também
 
 - [Introdução ao ISE do Windows PowerShell](../../core-powershell/ise/Introducing-the-Windows-PowerShell-ISE.md)

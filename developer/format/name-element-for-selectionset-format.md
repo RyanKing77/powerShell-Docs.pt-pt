@@ -9,11 +9,11 @@ ms.topic: article
 ms.assetid: 914917f7-0efc-4d1f-88bd-de714bedd98f
 caps.latest.revision: 15
 ms.openlocfilehash: 29dbdbd335511e4ca2706a625541554825838f23
-ms.sourcegitcommit: b6871f21bd666f9cd71dd336bb3f844cf472b56c
+ms.sourcegitcommit: e7445ba8203da304286c591ff513900ad1c244a4
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 02/03/2019
-ms.locfileid: "56848329"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62065160"
 ---
 # <a name="name-element-for-selectionset-format"></a>Name Element for SelectionSet (Format) (Elemento Name para SelectionSet [Formatação])
 
@@ -27,7 +27,7 @@ Elemento de nome do elemento de SelectionSet (formato) do Configuration elemento
 <Name>Name of selection set</Name>
 ```
 
-## <a name="attributes-and-elements"></a>Atributos e Elementos
+## <a name="attributes-and-elements"></a>Atributos e elementos
 
 As secções seguintes descrevem os atributos, a elementos filho e o elemento principal do `Name` elemento.
 
@@ -35,17 +35,17 @@ As secções seguintes descrevem os atributos, a elementos filho e o elemento pr
 
 Nenhum.
 
-### <a name="child-elements"></a>Elementos Subordinados
+### <a name="child-elements"></a>Elementos subordinados
 
 Nenhum.
 
-### <a name="parent-elements"></a>Elementos Principais
+### <a name="parent-elements"></a>Elementos principais
 
 |Elemento|Descrição|
 |-------------|-----------------|
 |[Elemento de SelectionSet (formato)](./selectionset-element-format.md)|Define um único conjunto de objetos do .NET que pode ser referenciado pelo nome do conjunto.|
 
-## <a name="text-value"></a>Valor do Texto
+## <a name="text-value"></a>Valor de texto
 
 Especifique o nome para referenciar o conjunto de seleção. Existem não existem restrições quanto às quais caracteres podem ser utilizadas.
 
