@@ -9,11 +9,11 @@ ms.topic: article
 ms.assetid: 7649d5d0-2b56-49b5-a670-dde46caca343
 caps.latest.revision: 11
 ms.openlocfilehash: 633204f3b181316761746ea2679910216fb74657
-ms.sourcegitcommit: caac7d098a448232304c9d6728e7340ec7517a71
+ms.sourcegitcommit: e7445ba8203da304286c591ff513900ad1c244a4
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 03/16/2019
-ms.locfileid: "58058969"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62064106"
 ---
 # <a name="selectioncondition-element-for-entryselectedby-for-listcontrol-format"></a>SelectionCondition Element for EntrySelectedBy for ListControl (Format) (Elemento SelectionCondition para EntrySelectedBy para ListControl [Formatação])
 
@@ -32,7 +32,7 @@ O elemento (formato) ViewDefinitions elemento (formato) vista elemento (formato)
 </SelectionCondition>
 ```
 
-## <a name="attributes-and-elements"></a>Atributos e Elementos
+## <a name="attributes-and-elements"></a>Atributos e elementos
 
 As secções seguintes descrevem os atributos e elementos filho e o elemento principal do `SelectionCondition` elemento.
 
@@ -40,7 +40,7 @@ As secções seguintes descrevem os atributos e elementos filho e o elemento pri
 
 Nenhum.
 
-### <a name="child-elements"></a>Elementos Subordinados
+### <a name="child-elements"></a>Elementos subordinados
 
 |Elemento|Descrição|
 |-------------|-----------------|
@@ -49,7 +49,7 @@ Nenhum.
 |[Elemento de SelectionSetName para SelectionCondition para EntrySelectedBy para ListEntry (formato)](./selectionsetname-element-for-selectioncondition-for-entryselectedby-for-listentry-format.md)|Elemento opcional.<br /><br /> Especifica o conjunto de tipos do .NET que acionam a condição.|
 |[Elemento de TypeName para SelectionCondition para EntrySelectedBy para ListEntry (formato)](./typename-element-for-selectioncondition-for-entryselectedby-for-listcontrol-format.md)|Elemento opcional.<br /><br /> Especifica um tipo .NET que aciona a condição.|
 
-### <a name="parent-elements"></a>Elementos Principais
+### <a name="parent-elements"></a>Elementos principais
 
 |Elemento|Descrição|
 |-------------|-----------------|

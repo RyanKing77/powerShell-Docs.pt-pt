@@ -9,11 +9,11 @@ ms.topic: article
 ms.assetid: 7031fa8b-3e2b-4ea8-89cb-95171f467b5a
 caps.latest.revision: 6
 ms.openlocfilehash: e55d1c5aa533005b258ecbbbf3ed9d55f852eab6
-ms.sourcegitcommit: b6871f21bd666f9cd71dd336bb3f844cf472b56c
+ms.sourcegitcommit: e7445ba8203da304286c591ff513900ad1c244a4
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 02/03/2019
-ms.locfileid: "56847804"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62064565"
 ---
 # <a name="scriptblock-element-for-selectioncondition-for-customcontrol-for-view-format"></a>ScriptBlock Element for SelectionCondition for CustomControl for View (Format) (Elemento ScriptBlock para SelectionCondition para CustomControl para View [Formatação])
 
@@ -27,7 +27,7 @@ O elemento (formato) ViewDefinitions elemento (formato) vista elemento (formato)
 <ScriptBlock>ScriptToEvaluate</ScriptBlock>
 ```
 
-## <a name="attributes-and-elements"></a>Atributos e Elementos
+## <a name="attributes-and-elements"></a>Atributos e elementos
 
 As secções seguintes descrevem os atributos e elementos filho e o elemento principal do `ScriptBlock` elemento.
 
@@ -35,17 +35,17 @@ As secções seguintes descrevem os atributos e elementos filho e o elemento pri
 
 Nenhum.
 
-### <a name="child-elements"></a>Elementos Subordinados
+### <a name="child-elements"></a>Elementos subordinados
 
 Nenhum.
 
-### <a name="parent-elements"></a>Elementos Principais
+### <a name="parent-elements"></a>Elementos principais
 
 |Elemento|Descrição|
 |-------------|-----------------|
 |[Elemento de SelectionCondition para EntrySelectedBy para CustomControl para exibição (formato)](./selectioncondition-element-for-entryselectedby-for-customcontrol-format.md)|Define uma condição que tem de existir durante a definição de controlo a ser utilizado.|
 
-## <a name="text-value"></a>Valor do Texto
+## <a name="text-value"></a>Valor de texto
 
 Especifique o script que é avaliado.
 
@@ -53,7 +53,7 @@ Especifique o script que é avaliado.
 
 A condição de seleção tem de especificar um, pelo menos, um script ou a propriedade nome para avaliar, mas não é possível especificar ambos. Para obter mais informações sobre como as condições de seleção podem ser utilizadas, consulte [definir condições para exibir dados](./defining-conditions-for-displaying-data.md).
 
-## <a name="see-also"></a>Consulte Também
+## <a name="see-also"></a>Veja Também
 
 [Elemento de SelectionCondition para EntrySelectedBy para CustomControl para exibição (formato)](./selectioncondition-element-for-entryselectedby-for-customcontrol-format.md)
 

@@ -9,11 +9,11 @@ ms.topic: article
 ms.assetid: 5aadb730-4eb7-4936-b8df-3b0c0ca04fd5
 caps.latest.revision: 5
 ms.openlocfilehash: aa46cbc5bfcfdfec9fcf9d2581ff641baa532860
-ms.sourcegitcommit: b6871f21bd666f9cd71dd336bb3f844cf472b56c
+ms.sourcegitcommit: e7445ba8203da304286c591ff513900ad1c244a4
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 02/03/2019
-ms.locfileid: "56846390"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62083353"
 ---
 # <a name="how-to-add-related-links-to-a-cmdlet-help-topic"></a>How to Add Related Links to a Cmdlet Help Topic (Como Adicionar Ligações Relacionadas ao Tópico de Ajuda de um Cmdlet)
 

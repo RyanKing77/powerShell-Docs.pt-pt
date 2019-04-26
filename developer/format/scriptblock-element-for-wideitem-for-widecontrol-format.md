@@ -9,11 +9,11 @@ ms.topic: article
 ms.assetid: e00e8f36-76f2-49a0-9b02-3a2a7fceb2dd
 caps.latest.revision: 8
 ms.openlocfilehash: 6534e9dbfbe0dedf60dadd6467cff9ad9b447ba4
-ms.sourcegitcommit: b6871f21bd666f9cd71dd336bb3f844cf472b56c
+ms.sourcegitcommit: e7445ba8203da304286c591ff513900ad1c244a4
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 02/03/2019
-ms.locfileid: "56848231"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62064208"
 ---
 # <a name="scriptblock-element-for-wideitem-for-widecontrol-format"></a>ScriptBlock Element for WideItem for WideControl (Format) (Elemento ScriptBlock para WideItem para WideControl [Formatação])
 
@@ -27,7 +27,7 @@ O elemento (formato) ViewDefinitions elemento (formato) vista elemento (formato)
 <ScriptBlock>ScriptToExecute</ScriptBlock>
 ```
 
-## <a name="attributes-and-elements"></a>Atributos e Elementos
+## <a name="attributes-and-elements"></a>Atributos e elementos
 
 As secções seguintes descrevem os atributos, a elementos filho e o elemento principal do `ScriptBlock` elemento.
 
@@ -35,17 +35,17 @@ As secções seguintes descrevem os atributos, a elementos filho e o elemento pr
 
 Nenhum.
 
-### <a name="child-elements"></a>Elementos Subordinados
+### <a name="child-elements"></a>Elementos subordinados
 
 Nenhum.
 
-### <a name="parent-elements"></a>Elementos Principais
+### <a name="parent-elements"></a>Elementos principais
 
 |Elemento|Descrição|
 |-------------|-----------------|
 |[Elemento de WideItem (formato)](./wideitem-element-for-widecontrol-format.md)|Define o bloco de script ou propriedade cujo valor é apresentado na vista alargada.|
 
-## <a name="text-value"></a>Valor do Texto
+## <a name="text-value"></a>Valor de texto
 
 Especifique o script cujo valor é apresentado.
 
@@ -63,7 +63,7 @@ Este exemplo mostra um `WideItem` elemento que define um script cujo valor é ap
 </WideItem>
 ```
 
-## <a name="see-also"></a>Consulte Também
+## <a name="see-also"></a>Veja Também
 
 [Elemento de WideItem (formato)](./wideitem-element-for-widecontrol-format.md)
 

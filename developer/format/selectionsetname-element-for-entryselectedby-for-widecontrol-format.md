@@ -9,11 +9,11 @@ ms.topic: article
 ms.assetid: c9c6e18f-6cca-465c-bd20-3969e7897a96
 caps.latest.revision: 10
 ms.openlocfilehash: 6b6a4a4647412d11d947f1dc4ea12d1e05ff536e
-ms.sourcegitcommit: b6871f21bd666f9cd71dd336bb3f844cf472b56c
+ms.sourcegitcommit: e7445ba8203da304286c591ff513900ad1c244a4
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 02/03/2019
-ms.locfileid: "56847370"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62064035"
 ---
 # <a name="selectionsetname-element-for-entryselectedby-for-widecontrol-format"></a>SelectionSetName Element for EntrySelectedBy for WideControl (Format) (Elemento SelectionSetName para EntrySelectedBy para WideControl [Formatação])
 
@@ -28,7 +28,7 @@ O elemento (formato) ViewDefinitions elemento (formato) vista elemento (formato)
 
 ```
 
-## <a name="attributes-and-elements"></a>Atributos e Elementos
+## <a name="attributes-and-elements"></a>Atributos e elementos
 
 As secções seguintes descrevem os atributos e elementos filho e o elemento principal do `SelectionSetName` elemento.
 
@@ -36,17 +36,17 @@ As secções seguintes descrevem os atributos e elementos filho e o elemento pri
 
 Nenhum.
 
-### <a name="child-elements"></a>Elementos Subordinados
+### <a name="child-elements"></a>Elementos subordinados
 
 Nenhum.
 
-### <a name="parent-elements"></a>Elementos Principais
+### <a name="parent-elements"></a>Elementos principais
 
 |Elemento|Descrição|
 |-------------|-----------------|
 |[Elemento de EntrySelectedBy para WideEntry (formato)](./entryselectedby-element-for-wideentry-format.md)|Define os tipos do .NET que utilizam esta entrada ampla ou a condição que tem de existir para esta entrada a ser utilizado.|
 
-## <a name="text-value"></a>Valor do Texto
+## <a name="text-value"></a>Valor de texto
 
 Especifique o nome do conjunto de seleção.
 

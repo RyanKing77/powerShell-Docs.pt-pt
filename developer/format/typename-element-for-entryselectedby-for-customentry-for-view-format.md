@@ -9,11 +9,11 @@ ms.topic: article
 ms.assetid: 76548af7-05bd-4d12-bf71-6fb69c434ef2
 caps.latest.revision: 10
 ms.openlocfilehash: c3dd761cd9b6c468d4833ea35b897ba5d425f598
-ms.sourcegitcommit: b6871f21bd666f9cd71dd336bb3f844cf472b56c
+ms.sourcegitcommit: e7445ba8203da304286c591ff513900ad1c244a4
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 02/03/2019
-ms.locfileid: "56848798"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62083982"
 ---
 # <a name="typename-element-for-entryselectedby-for-customentry-for-view-format"></a>TypeName Element for EntrySelectedBy for CustomEntry for View (Format) (Elemento TypeName para EntrySelectedBy para CustomEntry para View [Formatação])
 
@@ -27,7 +27,7 @@ O elemento (formato) ViewDefinitions elemento (formato) vista elemento (formato)
 <TypeName>Nameof.NetType</TypeName>
 ```
 
-## <a name="attributes-and-elements"></a>Atributos e Elementos
+## <a name="attributes-and-elements"></a>Atributos e elementos
 
 As secções seguintes descrevem os atributos e elementos filho e o elemento principal do `TypeName` elemento.
 
@@ -35,17 +35,17 @@ As secções seguintes descrevem os atributos e elementos filho e o elemento pri
 
 Nenhum.
 
-### <a name="child-elements"></a>Elementos Subordinados
+### <a name="child-elements"></a>Elementos subordinados
 
 Nenhum.
 
-### <a name="parent-elements"></a>Elementos Principais
+### <a name="parent-elements"></a>Elementos principais
 
 |Elemento|Descrição|
 |-------------|-----------------|
 |[Elemento de EntrySelectedBy para CustomEntry para exibição (formato)](./entryselectedby-element-for-customentry-for-customcontrol-for-view-format.md)|Define os tipos do .NET que utilizam esta definição de vista do controle personalizado ou a condição que tem de existir para esta definição a utilizar.|
 
-## <a name="text-value"></a>Valor do Texto
+## <a name="text-value"></a>Valor de texto
 
 Especifique o nome completamente qualificado do tipo .NET, tal como `System.IO.DirectoryInfo`.
 

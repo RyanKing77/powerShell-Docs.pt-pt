@@ -9,11 +9,11 @@ ms.topic: article
 ms.assetid: 6af3be7d-921e-4cf7-bd5a-d87aa0b4efbd
 caps.latest.revision: 7
 ms.openlocfilehash: b2b0a0d1996392614807e08b820a72978e38a0cb
-ms.sourcegitcommit: b6871f21bd666f9cd71dd336bb3f844cf472b56c
+ms.sourcegitcommit: e7445ba8203da304286c591ff513900ad1c244a4
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 02/03/2019
-ms.locfileid: "56844808"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62065466"
 ---
 # <a name="itemselectioncondition-element-for-expressionbinding-for-groupby-format"></a>ItemSelectionCondition Element for ExpressionBinding for GroupBy (Format) (Elemento ItemSelectionCondition para ExpressionBinding para GroupBy [Formatação])
 
@@ -30,7 +30,7 @@ O elemento (formato) ViewDefinitions elemento (formato) vista elemento (formato)
 </ItemSelectionCondition>
 ```
 
-## <a name="attributes-and-elements"></a>Atributos e Elementos
+## <a name="attributes-and-elements"></a>Atributos e elementos
 
 As secções seguintes descrevem os atributos e elementos filho e o elemento principal do `ItemSelectionCondition` elemento.
 
@@ -38,14 +38,14 @@ As secções seguintes descrevem os atributos e elementos filho e o elemento pri
 
 Nenhum.
 
-### <a name="child-elements"></a>Elementos Subordinados
+### <a name="child-elements"></a>Elementos subordinados
 
 |Elemento|Descrição|
 |-------------|-----------------|
 |[Elemento de PropertyName para ItemSelectionCondition para GroupBy (formato)](./propertyname-element-for-itemselectioncondition-for-groupby-format.md)|Elemento opcional.<br /><br /> Especifica a propriedade do .NET que aciona a condição.|
 |[Elemento de ScriptBlock para ItemSelectionCondition para GroupBy (formato)](./scriptblock-element-for-itemselectioncondition-for-groupby-format.md)|Elemento opcional.<br /><br /> Especifica o script que aciona a condição.|
 
-### <a name="parent-elements"></a>Elementos Principais
+### <a name="parent-elements"></a>Elementos principais
 
 |Elemento|Descrição|
 |-------------|-----------------|

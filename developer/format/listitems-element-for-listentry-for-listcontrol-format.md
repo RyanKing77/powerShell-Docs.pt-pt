@@ -9,11 +9,11 @@ ms.topic: article
 ms.assetid: d2c1da6d-acc7-4fe8-9e7d-6dcddc2787cd
 caps.latest.revision: 9
 ms.openlocfilehash: c25f18489d9c7abd8889758499dbbacd6ee29304
-ms.sourcegitcommit: b6871f21bd666f9cd71dd336bb3f844cf472b56c
+ms.sourcegitcommit: e7445ba8203da304286c591ff513900ad1c244a4
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 02/03/2019
-ms.locfileid: "56848623"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62065245"
 ---
 # <a name="listitems-element-for-listentry-for-listcontrol-format"></a>ListItems Element for ListEntry for ListControl (Format) (Elemento ListItems para ListEntry para ListControl [Formatação])
 
@@ -29,7 +29,7 @@ O elemento (formato) ViewDefinitions elemento (formato) vista elemento (formato)
 </ListItems>
 ```
 
-## <a name="attributes-and-elements"></a>Atributos e Elementos
+## <a name="attributes-and-elements"></a>Atributos e elementos
 
 As secções seguintes descrevem os atributos, a elementos filho e o elemento principal do `ListItems` elemento. Não existe nenhum limite para o número de elementos filho que podem ser especificados. A ordem dos elementos subordinados define a ordem em que os valores são apresentados na vista de lista.
 
@@ -37,13 +37,13 @@ As secções seguintes descrevem os atributos, a elementos filho e o elemento pr
 
 Nenhum.
 
-### <a name="child-elements"></a>Elementos Subordinados
+### <a name="child-elements"></a>Elementos subordinados
 
 |Elemento|Descrição|
 |-------------|-----------------|
 |[Elemento de ListItem para ListControl (formato)](./listitem-element-for-listitems-for-listcontrol-format.md)|Elemento necessário.<br /><br /> Define a propriedade ou um script cujo valor é apresentado pelo vista de lista.|
 
-### <a name="parent-elements"></a>Elementos Principais
+### <a name="parent-elements"></a>Elementos principais
 
 |Elemento|Descrição|
 |-------------|-----------------|

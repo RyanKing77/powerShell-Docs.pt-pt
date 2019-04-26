@@ -3,11 +3,11 @@ ms.date: 08/24/2018
 keywords: DSC, powershell, configuração, a configuração
 title: Recursos de Script de DSC
 ms.openlocfilehash: 4eee5625add4d96ade7ababf7f534f597a26712d
-ms.sourcegitcommit: f4bd4e116e22c8b5bfcb61680a7c42e58b4da93e
-ms.translationtype: HT
+ms.sourcegitcommit: e7445ba8203da304286c591ff513900ad1c244a4
+ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59984294"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62076995"
 ---
 # <a name="dsc-script-resource"></a>Recursos de Script de DSC
 

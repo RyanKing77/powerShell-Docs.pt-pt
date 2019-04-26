@@ -9,11 +9,11 @@ ms.topic: article
 ms.assetid: d2668aea-37e9-4753-a4e9-7980ae5ec2eb
 caps.latest.revision: 10
 ms.openlocfilehash: 6bc0ccbcc5bd62429f63ed220da66dc66f44f7ca
-ms.sourcegitcommit: b6871f21bd666f9cd71dd336bb3f844cf472b56c
+ms.sourcegitcommit: e7445ba8203da304286c591ff513900ad1c244a4
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 02/03/2019
-ms.locfileid: "56850919"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62065449"
 ---
 # <a name="itemselectioncondition-element-for-listitem-for-listcontrol-format"></a>ItemSelectionCondition Element for ListItem for ListControl (Format) (Elemento ItemSelectionCondition para ListItem para ListControl [Formatação])
 
@@ -30,7 +30,7 @@ O elemento (formato) ViewDefinitions elemento (formato) vista elemento (formato)
 </ItemSelectionCondition>
 ```
 
-## <a name="attributes-and-elements"></a>Atributos e Elementos
+## <a name="attributes-and-elements"></a>Atributos e elementos
 
 As secções seguintes descrevem os atributos e elementos filho e o elemento principal do `ItemSelectionCondition` elemento.
 
@@ -38,14 +38,14 @@ As secções seguintes descrevem os atributos e elementos filho e o elemento pri
 
 Nenhum.
 
-### <a name="child-elements"></a>Elementos Subordinados
+### <a name="child-elements"></a>Elementos subordinados
 
 |Elemento|Descrição|
 |-------------|-----------------|
 |[Elemento de PropertyName para ItemSelectionCondition para ListControl (formato)](./propertyname-element-for-itemselectioncondition-for-listcontrol-format.md)|Elemento opcional.<br /><br /> Especifica a propriedade do .NET que aciona a condição.|
 |[Elemento de ScriptBlock para ItemSelectionCondition para ListControl (formato)](./scriptblock-element-for-itemselectioncondition-for-listcontrol-format.md)|Elemento opcional.<br /><br /> Especifica o script que aciona a condição.|
 
-### <a name="parent-elements"></a>Elementos Principais
+### <a name="parent-elements"></a>Elementos principais
 
 |Elemento|Descrição|
 |-------------|-----------------|

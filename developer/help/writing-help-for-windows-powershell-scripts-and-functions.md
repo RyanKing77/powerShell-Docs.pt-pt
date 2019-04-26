@@ -9,11 +9,11 @@ ms.topic: article
 ms.assetid: 859a6e22-75b1-43d4-ba62-62c107803b37
 caps.latest.revision: 7
 ms.openlocfilehash: 98a3f61ff4fa2367f69357173d4e8e14288ff429
-ms.sourcegitcommit: b6871f21bd666f9cd71dd336bb3f844cf472b56c
+ms.sourcegitcommit: e7445ba8203da304286c591ff513900ad1c244a4
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 02/03/2019
-ms.locfileid: "56847846"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62083115"
 ---
 # <a name="writing-help-for-powershell-scripts-and-functions"></a>Escrever ajuda para funções e Scripts do PowerShell
 
@@ -68,7 +68,7 @@ No entanto, pode postar tópicos conceptuais na lista de Internet os tópicos e 
 
 - `Get-Help` Apresenta o tópico de ajuda para um script ou função apenas quando o ficheiro de script e os ficheiros de tópico de ajuda são salvos nos locais corretos. Por conseguinte, não é útil incluir instruções para instalar o PowerShell, ou salvar ou instalar a função ou script num tópico de ajuda do script ou função. Em vez disso, incluem quaisquer instruções de instalação no documento que utilizar para distribuir o script ou função.
 
-## <a name="see-also"></a>Consulte Também
+## <a name="see-also"></a>Veja Também
 
  [Escrever tópicos de ajuda baseados em XML para Scripts e funções](./writing-xml-based-help-topics-for-scripts-and-functions.md)
 

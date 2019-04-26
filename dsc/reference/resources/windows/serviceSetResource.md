@@ -3,11 +3,11 @@ ms.date: 06/12/2017
 keywords: DSC, powershell, configuração, a configuração
 title: Recurso ServiceSet de DSC
 ms.openlocfilehash: 5694c2abc5c0caf0098670b629af464b35125583
-ms.sourcegitcommit: e04292a9c10de9a8391d529b7f7aa3753b362dbe
+ms.sourcegitcommit: e7445ba8203da304286c591ff513900ad1c244a4
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 01/04/2019
-ms.locfileid: "54048387"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62076841"
 ---
 # <a name="dsc-serviceset-resource"></a>Recurso ServiceSet de DSC
 
@@ -38,7 +38,7 @@ Service [string] #ResourceName
 |  Propriedade  |  Descrição   |
 |---|---|
 | Nome| Indica os nomes de serviço. Tenha em atenção que, às vezes, isso é diferente dos nomes a apresentar. Pode obter uma lista de serviços e o respetivo estado atual com o [Get-Service](https://technet.microsoft.com/library/hh849804.aspx) cmdlet.|
-| Startuptype do| Indica o tipo de arranque para o serviço. Os valores permitidos para esta propriedade são: **Automática**, **desativada**, e **Manual**|
+| StartupType| Indica o tipo de arranque para o serviço. Os valores permitidos para esta propriedade são: **Automática**, **desativada**, e **Manual**|
 | BuiltInAccount| Indica a conta de início de sessão para utilizar para os serviços. Os valores permitidos para esta propriedade são: **LocalService**, **LocalSystem**, e **NetworkService**.|
 | Estado| Indica o estado a que se pretender certificar-se para os serviços: **Parado** ou **em execução**.|
 | Certifique-se| Indica se os serviços existem no sistema. Defina esta propriedade como **ausente** para garantir que os serviços não existem. Defini-la como **presente** (o valor predefinido) garante que os serviços de destino existem.|

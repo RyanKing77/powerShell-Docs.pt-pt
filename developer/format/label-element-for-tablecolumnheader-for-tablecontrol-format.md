@@ -9,11 +9,11 @@ ms.topic: article
 ms.assetid: 7196f039-2f6a-41fd-b252-5b1623ebb9f9
 caps.latest.revision: 11
 ms.openlocfilehash: 09183a538c179f19347c3f1ed45b4ad38c2ca451
-ms.sourcegitcommit: caac7d098a448232304c9d6728e7340ec7517a71
+ms.sourcegitcommit: e7445ba8203da304286c591ff513900ad1c244a4
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 03/16/2019
-ms.locfileid: "58054514"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62065755"
 ---
 # <a name="label-element-for-tablecolumnheader-for-tablecontrol-format"></a>Label Element for TableColumnHeader for TableControl (Format) (Elemento Label para TableColumnHeader para TableControl [Formatação])
 
@@ -28,7 +28,7 @@ O elemento (formato) ViewDefinitions elemento (formato) vista elemento (formato)
 
 ```
 
-## <a name="attributes-and-elements"></a>Atributos e Elementos
+## <a name="attributes-and-elements"></a>Atributos e elementos
 
 As secções seguintes descrevem os atributos e elementos filho e o elemento principal do `Label` elemento. Apenas uma etiqueta é permitida para cada coluna.
 
@@ -36,17 +36,17 @@ As secções seguintes descrevem os atributos e elementos filho e o elemento pri
 
 Nenhum.
 
-### <a name="child-elements"></a>Elementos Subordinados
+### <a name="child-elements"></a>Elementos subordinados
 
 Nenhum.
 
-### <a name="parent-elements"></a>Elementos Principais
+### <a name="parent-elements"></a>Elementos principais
 
 |Elemento|Descrição|
 |-------------|-----------------|
 |[Elemento de TableColumnHeader para TableHeaders para TableControl (formato)](./tablecolumnheader-element-format.md)|Define uma etiqueta, a largura e o alinhamento dos dados para uma coluna da tabela.|
 
-## <a name="text-value"></a>Valor do Texto
+## <a name="text-value"></a>Valor de texto
 
 Especifique o texto que é apresentado na parte superior da coluna da tabela. Não há nenhum caráter restrito para a etiqueta de coluna.
 

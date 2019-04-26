@@ -1,19 +1,19 @@
 ---
 ms.date: 06/12/2017
 keywords: wmf,powershell,setup
-ms.openlocfilehash: d4168640f67cb1dd44e91d1867e87fd7a6b7f549
-ms.sourcegitcommit: 54534635eedacf531d8d6344019dc16a50b8b441
+ms.openlocfilehash: 0a481fb9d4f2aab89bc448c71b01f1d541cf24bc
+ms.sourcegitcommit: e7445ba8203da304286c591ff513900ad1c244a4
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 05/17/2018
-ms.locfileid: "34218356"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62085087"
 ---
 # <a name="side-by-side-version-support-on-powershell-50-or-newer"></a>Suporte da versão lado a lado no PowerShell 5.0 ou mais recente
 
-Está agora lado a lado (SxS) módulo suporte para a versão no módulo de instalação, atualização-Module e cmdlets do módulo de publicação que são executados no Windows PowerShell 5.0 ou mais recente.
-Além disso, ter adicionámos um parâmetro - RequiredVersion para o cmdlet do módulo de publicar para especificar a versão a serem publicadas. O parâmetro de caminho suporta agora o caminho de base do módulo com a pasta de versão.
+Agora há suporte a versão lado a lado (SxS) módulo no Install-Module, Update-Module e cmdlets Publish-Module que são executados no Windows PowerShell 5.0 ou mais recente.
+Além disso, adicionámos um parâmetro - RequiredVersion para o cmdlet Publish-Module para especificar a versão a ser publicado. O parâmetro de caminho agora suporta o caminho de base do módulo com a pasta de versão.
 
-**Exemplos de módulo de instalação:**
+**Exemplos de Install-Module:**
 ```powershell
 Install-Module -Name PSScriptAnalyzer -RequiredVersion 1.1.0 -Repository PSGallery
 Get-Module -ListAvailable -Name PSScriptAnalyzer | Format-List Name,Version,ModuleBase

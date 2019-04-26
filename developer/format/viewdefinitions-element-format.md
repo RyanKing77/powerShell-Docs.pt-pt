@@ -9,11 +9,11 @@ ms.topic: article
 ms.assetid: 29840c10-2b30-4bb1-a8a0-ddf84d19c2d0
 caps.latest.revision: 18
 ms.openlocfilehash: c5ec80350c7707ccd41112ab5e1952e5dc198cca
-ms.sourcegitcommit: b6871f21bd666f9cd71dd336bb3f844cf472b56c
+ms.sourcegitcommit: e7445ba8203da304286c591ff513900ad1c244a4
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 02/03/2019
-ms.locfileid: "56851073"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62083710"
 ---
 # <a name="viewdefinitions-element-format"></a>ViewDefinitions Element (Format) (Elemento ViewDefinitions [Formatação])
 
@@ -30,7 +30,7 @@ Elemento de configuração do elemento (formato) ViewDefinitions (formato XML)
 </ViewDefinitions>
 ```
 
-## <a name="attributes-and-elements"></a>Atributos e Elementos
+## <a name="attributes-and-elements"></a>Atributos e elementos
 
 As secções seguintes descrevem os atributos, a elementos filho e o elemento principal do `ViewDefinitions` elemento. Não há limite para o número de visualizações que podem ser definidos num arquivo de formatação e podem ser adicionados por qualquer ordem.
 
@@ -38,13 +38,13 @@ As secções seguintes descrevem os atributos, a elementos filho e o elemento pr
 
 Nenhum.
 
-### <a name="child-elements"></a>Elementos Subordinados
+### <a name="child-elements"></a>Elementos subordinados
 
 |Elemento|Descrição|
 |-------------|-----------------|
 |[Elemento de exibição (formato)](./view-element-format.md)|Define uma vista que é utilizada para apresentar um ou mais objetos do .NET.|
 
-### <a name="parent-elements"></a>Elementos Principais
+### <a name="parent-elements"></a>Elementos principais
 
 |Elemento|Descrição|
 |-------------|-----------------|

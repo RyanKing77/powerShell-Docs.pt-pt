@@ -9,11 +9,11 @@ ms.topic: article
 ms.assetid: 30bb1382-8c6b-4371-82e6-baf427fa0781
 caps.latest.revision: 6
 ms.openlocfilehash: cec8c5d76bded321ec1d6a1cd0409d7c88863c03
-ms.sourcegitcommit: b6871f21bd666f9cd71dd336bb3f844cf472b56c
+ms.sourcegitcommit: e7445ba8203da304286c591ff513900ad1c244a4
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 02/03/2019
-ms.locfileid: "56849820"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62075890"
 ---
 # <a name="typename-element-for-entryselectedby-for-controls-for-configuration-format"></a>TypeName Element for EntrySelectedBy for Controls for Configuration (Format) (Elemento TypeName para EntrySelectedBy para Controls para Configuration [Formatação])
 
@@ -28,7 +28,7 @@ Elemento de controles de elemento (formato) de configuração do elemento de con
 
 ```
 
-## <a name="attributes-and-elements"></a>Atributos e Elementos
+## <a name="attributes-and-elements"></a>Atributos e elementos
 
 As secções seguintes descrevem os atributos e elementos filho e o elemento principal do `TypeName` elemento.
 
@@ -36,17 +36,17 @@ As secções seguintes descrevem os atributos e elementos filho e o elemento pri
 
 Nenhum.
 
-### <a name="child-elements"></a>Elementos Subordinados
+### <a name="child-elements"></a>Elementos subordinados
 
 Nenhum.
 
-### <a name="parent-elements"></a>Elementos Principais
+### <a name="parent-elements"></a>Elementos principais
 
 |Elemento|Descrição|
 |-------------|-----------------|
 |[Elemento de EntrySelectedBy para CustomEntry para controles de configuração (formato)](./entryselectedby-element-for-customentry-for-controls-for-configuration-format.md)|Define os tipos do .NET que utilizam esta definição de controlo ou a condição que tem de existir para esta definição a utilizar.|
 
-## <a name="text-value"></a>Valor do Texto
+## <a name="text-value"></a>Valor de texto
 
 Especifique o nome completamente qualificado do tipo .NET, tal como `System.IO.DirectoryInfo`.
 

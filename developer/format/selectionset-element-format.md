@@ -9,11 +9,11 @@ ms.topic: article
 ms.assetid: 848e7acd-d578-4fd1-a575-c0c3b9b5e68a
 caps.latest.revision: 17
 ms.openlocfilehash: c809aa6c3a40d16cfd2fd99065a846d265ec0f61
-ms.sourcegitcommit: b6871f21bd666f9cd71dd336bb3f844cf472b56c
+ms.sourcegitcommit: e7445ba8203da304286c591ff513900ad1c244a4
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 02/03/2019
-ms.locfileid: "56850422"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62076315"
 ---
 # <a name="selectionset-element-format"></a>SelectionSet Element (Format) (Elemento SelectionSet [Formatação])
 
@@ -30,7 +30,7 @@ Elemento de configuração do SelectionSet elemento (formato) SelectionSets elem
 </SelectionSet>
 ```
 
-## <a name="attributes-and-elements"></a>Atributos e Elementos
+## <a name="attributes-and-elements"></a>Atributos e elementos
 
 As secções seguintes descrevem os atributos e elementos filho e o elemento principal do `SelectionSet` elemento. Cada conjunto de seleção tem de ter um nome e tem de especificar os objetos de .NET do conjunto.
 
@@ -38,14 +38,14 @@ As secções seguintes descrevem os atributos e elementos filho e o elemento pri
 
 Nenhum.
 
-### <a name="child-elements"></a>Elementos Subordinados
+### <a name="child-elements"></a>Elementos subordinados
 
 |Elemento|Descrição|
 |-------------|-----------------|
 |[Elemento de nome para SelectionSet (formato)](./name-element-for-selectionset-format.md)|Elemento necessário.<br /><br /> Especifica o nome utilizado para referenciar o conjunto de seleção.|
 |[Elemento de tipos (formato)](./types-element-for-selectionset-format.md)|Elemento necessário.<br /><br /> Define os objetos .NET na seleção definidas.|
 
-### <a name="parent-elements"></a>Elementos Principais
+### <a name="parent-elements"></a>Elementos principais
 
 |Elemento|Descrição|
 |-------------|-----------------|

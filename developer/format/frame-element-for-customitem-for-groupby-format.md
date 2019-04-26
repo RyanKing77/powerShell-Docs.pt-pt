@@ -9,11 +9,11 @@ ms.topic: article
 ms.assetid: ab2a5379-299d-4c97-86a2-b639ea890fae
 caps.latest.revision: 6
 ms.openlocfilehash: 7f9066c0fe0954fadff9dc8f0c35a62c6710f516
-ms.sourcegitcommit: b6871f21bd666f9cd71dd336bb3f844cf472b56c
+ms.sourcegitcommit: e7445ba8203da304286c591ff513900ad1c244a4
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 02/03/2019
-ms.locfileid: "56846005"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62065602"
 ---
 # <a name="frame-element-for-customitem-for-groupby-format"></a>Frame Element for CustomItem for GroupBy (Format) (Elemento Frame para CustomItem para GroupBy [Formatação])
 
@@ -33,7 +33,7 @@ O elemento (formato) ViewDefinitions elemento (formato) vista elemento (formato)
 </Frame>
 ```
 
-## <a name="attributes-and-elements"></a>Atributos e Elementos
+## <a name="attributes-and-elements"></a>Atributos e elementos
 
 As secções seguintes descrevem os atributos e elementos filho e o elemento principal do `Frame` elemento.
 
@@ -41,7 +41,7 @@ As secções seguintes descrevem os atributos e elementos filho e o elemento pri
 
 Nenhum.
 
-### <a name="child-elements"></a>Elementos Subordinados
+### <a name="child-elements"></a>Elementos subordinados
 
 |Elemento|Descrição|
 |-------------|-----------------|
@@ -51,7 +51,7 @@ Nenhum.
 |[Elemento de LeftIndent para quadro para GroupBy (formato)](./leftindent-element-for-frame-for-groupby-format.md)|Elemento opcional.<br /><br /> Especifica o número de carateres de dados são desviados da margem esquerda.|
 |[Elemento de RightIndent para quadro para GroupBy (formato)](./rightindent-element-for-frame-for-groupby-format.md)RightIndent elemento|Elemento opcional.<br /><br /> Especifica o número de carateres de dados são desviados da margem direita.|
 
-### <a name="parent-elements"></a>Elementos Principais
+### <a name="parent-elements"></a>Elementos principais
 
 |Elemento|Descrição|
 |-------------|-----------------|

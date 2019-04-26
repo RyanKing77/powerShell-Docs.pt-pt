@@ -9,11 +9,11 @@ ms.topic: article
 ms.assetid: daea8c6f-873a-4639-9eee-599642822958
 caps.latest.revision: 6
 ms.openlocfilehash: 697f2ea284393ebddd77a862c408f27f3d332900
-ms.sourcegitcommit: b6871f21bd666f9cd71dd336bb3f844cf472b56c
+ms.sourcegitcommit: e7445ba8203da304286c591ff513900ad1c244a4
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 02/03/2019
-ms.locfileid: "56846194"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62063892"
 ---
 # <a name="selectionsetname-element-for-selectioncondition-for-controls-for-view-format"></a>SelectionSetName Element for SelectionCondition for Controls for View (Format) (Elemento SelectionSetName para SelectionCondition para Controls para View [Formatação])
 
@@ -27,7 +27,7 @@ Configuração elemento (formato) ViewDefinitions elemento (formato) vista eleme
 <SelectionSetName>NameofSelectionSet</SelectionSetName>
 ```
 
-## <a name="attributes-and-elements"></a>Atributos e Elementos
+## <a name="attributes-and-elements"></a>Atributos e elementos
 
 As secções seguintes descrevem os atributos e elementos filho e o elemento principal do `SelectionSetName` elemento.
 
@@ -35,17 +35,17 @@ As secções seguintes descrevem os atributos e elementos filho e o elemento pri
 
 Nenhum.
 
-### <a name="child-elements"></a>Elementos Subordinados
+### <a name="child-elements"></a>Elementos subordinados
 
 Nenhum.
 
-### <a name="parent-elements"></a>Elementos Principais
+### <a name="parent-elements"></a>Elementos principais
 
 |Elemento|Descrição|
 |-------------|-----------------|
 |[Elemento de SelectionCondition para EntrySelectedBy para controles para exibição (formato)](./selectioncondition-element-for-entryselectedby-for-controls-for-view-format.md)|Define uma condição que tem de existir durante a definição de controlo a ser utilizado.|
 
-## <a name="text-value"></a>Valor do Texto
+## <a name="text-value"></a>Valor de texto
 
 Especifique o nome do conjunto de seleção.
 

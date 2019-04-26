@@ -1,21 +1,21 @@
 ---
 ms.date: 06/12/2017
 keywords: wmf,powershell,setup
-ms.openlocfilehash: dfc171f9a3471f8fe7801283dd4a9b06860781a2
-ms.sourcegitcommit: 54534635eedacf531d8d6344019dc16a50b8b441
+ms.openlocfilehash: 5919a68c87ae8827a1b97befc653bb74713f33fe
+ms.sourcegitcommit: e7445ba8203da304286c591ff513900ad1c244a4
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 05/17/2018
-ms.locfileid: "34225730"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62085784"
 ---
 # <a name="creating-custom-types-using-powershell-classes"></a>Criar Tipos Personalizados com as Classes do PowerShell
 
-Iremos tiver melhorado o idioma do PowerShell para definir as classes e outros tipos de utilizador definidos utilizando sintaxe formal e semântica que é semelhante às outras linguagens de programação orientado para objetos. O objetivo é permitir que os programadores e profissionais de TI para adotar a PowerShell para uma vasta gama de casos de utilização, simplificar o desenvolvimento dos artefactos do PowerShell (como recursos de DSC) e acelerar a cobertura de analisa de gestão.
+Melhorámos a linguagem do PowerShell para definir as classes e outros tipos definidos pelo utilizador através da utilização de sintaxe formal e a semântica que é semelhante a outras linguagens de programação orientada a objeto. O objetivo é permitir que desenvolvedores e profissionais de TI a adotar o PowerShell para um maior número de casos de utilização, simplificar o desenvolvimento de artefatos de PowerShell (como recursos de DSC) e acelerar a cobertura de superfícies de gestão.
 
 ## <a name="supported-scenarios-in-this-release"></a>Cenários suportados nesta versão
 
--   Definir os recursos de DSC e os respetivos tipos associados utilizando a linguagem de PowerShell
--   Defina os tipos de personalizado no PowerShell, utilizando familiares e orientado para objetos programação construções, tais como classes, propriedades, métodos, etc.
--   Suporte de herança com a classe do PowerShell e classe de recursos de DSC base
--   Tipos de depuração utilizando a linguagem de PowerShell
--   Gerar e lidar com exceções, utilizando mecanismos de formais e ao nível da direita
+-   Definir os recursos de DSC e seus tipos associado através da linguagem do PowerShell
+-   Defina tipos personalizados no PowerShell com o familiares e orientada a objeto construções de programação, como classes, propriedades, métodos, etc.
+-   Suporte de herança com a classe no PowerShell e a classe base recursos de DSC
+-   Tipos de depuração através da linguagem do PowerShell
+-   Gerar e manipular exceções, utilizando os mecanismos formais e no nível certo

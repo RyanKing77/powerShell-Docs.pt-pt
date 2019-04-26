@@ -9,11 +9,11 @@ ms.topic: article
 ms.assetid: a41d9e5f-de6f-47b7-9601-c108609320d0
 caps.latest.revision: 8
 ms.openlocfilehash: c007bb11324e10ffd100797dccd9e6ab0d09a73e
-ms.sourcegitcommit: b6871f21bd666f9cd71dd336bb3f844cf472b56c
+ms.sourcegitcommit: e7445ba8203da304286c591ff513900ad1c244a4
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 02/03/2019
-ms.locfileid: "56849015"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62067982"
 ---
 # <a name="how-to-import-cmdlets-using-modules"></a>How to Import Cmdlets Using Modules (Como Importar Cmdlets Através de Módulos)
 
@@ -38,7 +38,7 @@ Este tópico descreve como importar os cmdlets para uma sessão do Windows Power
 
    Este procedimento pode ser utilizado para testar seus cmdlets. Ele adiciona todos os cmdlets no assembly para a sessão. Para obter mais informações sobre os módulos, os diferentes tipos de módulos, as diferentes formas de carregar módulos e como restringir os elementos de um módulo que são exportados, consulte [escrever um módulo do Windows PowerShell](../module/writing-a-windows-powershell-module.md).
 
-## <a name="see-also"></a>Consulte Também
+## <a name="see-also"></a>Veja Também
 
 [Escrever um Cmdlet do Windows PowerShell](./writing-a-windows-powershell-cmdlet.md)
 

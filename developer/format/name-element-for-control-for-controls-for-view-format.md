@@ -9,11 +9,11 @@ ms.topic: article
 ms.assetid: 26437467-d578-4e8d-8cdd-17dfe644957a
 caps.latest.revision: 7
 ms.openlocfilehash: 7e24aa60f7abae5768707d2527826c452b709002
-ms.sourcegitcommit: b6871f21bd666f9cd71dd336bb3f844cf472b56c
+ms.sourcegitcommit: e7445ba8203da304286c591ff513900ad1c244a4
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 02/03/2019
-ms.locfileid: "56851283"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62065109"
 ---
 # <a name="name-element-for-control-for-controls-for-view-format"></a>Name Element for Control for Controls for View (Format) (Elemento Name para Control para Controls para View [Formatação])
 
@@ -27,7 +27,7 @@ Elemento de configuração do modo de exibição elemento (formato) ViewDefiniti
 <Name>ControlName</Name>
 ```
 
-## <a name="attributes-and-elements"></a>Atributos e Elementos
+## <a name="attributes-and-elements"></a>Atributos e elementos
 
 As secções seguintes descrevem os atributos e elementos filho e o elemento principal do `Name` elemento.
 
@@ -35,17 +35,17 @@ As secções seguintes descrevem os atributos e elementos filho e o elemento pri
 
 Nenhum.
 
-### <a name="child-elements"></a>Elementos Subordinados
+### <a name="child-elements"></a>Elementos subordinados
 
 Nenhum.
 
-### <a name="parent-elements"></a>Elementos Principais
+### <a name="parent-elements"></a>Elementos principais
 
 |Elemento|Descrição|
 |-------------|-----------------|
 |[Elemento de controle para controles para exibição (formato)](./control-element-for-controls-for-view-format.md)|Define um controle que pode ser utilizado pela exibição e o nome que é utilizado para referenciar o controle.|
 
-## <a name="text-value"></a>Valor do Texto
+## <a name="text-value"></a>Valor de texto
 
 Especifique o nome que é utilizado para referenciar o controle.
 
@@ -57,7 +57,7 @@ O nome especificado aqui pode servir os seguintes elementos para fazer referênc
 
 - Quando criar outro controle que pode ser utilizado por uma vista, esse controle pode ser especificado pelo elemento do seguinte: [Elemento de ExpressionBinding para CustomItem para controles para exibição (formato)](./expressionbinding-element-for-customitem-for-controls-for-view-format.md)
 
-## <a name="see-also"></a>Consulte Também
+## <a name="see-also"></a>Veja Também
 
 [GroupBy elemento para a exibição (formato)](./groupby-element-for-view-format.md)
 

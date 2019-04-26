@@ -9,11 +9,11 @@ ms.topic: article
 ms.assetid: fd3ddc33-b21c-4464-b3f2-a78dbe0062a8
 caps.latest.revision: 8
 ms.openlocfilehash: 4865d716ebe0460b662253a3019e93e82428b882
-ms.sourcegitcommit: b6871f21bd666f9cd71dd336bb3f844cf472b56c
+ms.sourcegitcommit: e7445ba8203da304286c591ff513900ad1c244a4
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 02/03/2019
-ms.locfileid: "56850793"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62065517"
 ---
 # <a name="itemselectioncondition-element-for-expressionbinding-for-controls-for-configuration-format"></a>ItemSelectionCondition Element for ExpressionBinding for Controls for Configuration (Format) (Elemento ItemSelectionCondition para ExpressionBinding para Controls para Configuration [Formatação])
 
@@ -30,7 +30,7 @@ Elemento de controles de elemento (formato) de configuração do elemento de con
 </ItemSelectionCondition>
 ```
 
-## <a name="attributes-and-elements"></a>Atributos e Elementos
+## <a name="attributes-and-elements"></a>Atributos e elementos
 
 As secções seguintes descrevem os atributos e elementos filho e o elemento principal do `ItemSelectionCondition` elemento.
 
@@ -38,14 +38,14 @@ As secções seguintes descrevem os atributos e elementos filho e o elemento pri
 
 Nenhum.
 
-### <a name="child-elements"></a>Elementos Subordinados
+### <a name="child-elements"></a>Elementos subordinados
 
 |Elemento|Descrição|
 |-------------|-----------------|
 |[Elemento de PropertyName para ItemSelectionCondition para controles de configuração (formato)](./propertyname-element-for-itemseclectioncondition-for-controls-for-configuration-format.md)|Elemento opcional.<br /><br /> Especifica a propriedade do .NET que aciona a condição.|
 |[Elemento de ScriptBlock para ItemSelectionCondition para controles de configuração (formato)](./scriptblock-element-for-itemseclectioncondition-for-controls-for-configuration-format.md)|Elemento opcional.<br /><br /> Especifica o script que aciona a condição.|
 
-### <a name="parent-elements"></a>Elementos Principais
+### <a name="parent-elements"></a>Elementos principais
 
 |Elemento|Descrição|
 |-------------|-----------------|

@@ -9,11 +9,11 @@ ms.topic: article
 ms.assetid: 2623407e-fa10-4d27-a804-204f6d50ef22
 caps.latest.revision: 6
 ms.openlocfilehash: ea15e647a9dd7a7064718a0c536c4a3178d62d95
-ms.sourcegitcommit: b6871f21bd666f9cd71dd336bb3f844cf472b56c
+ms.sourcegitcommit: e7445ba8203da304286c591ff513900ad1c244a4
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 02/03/2019
-ms.locfileid: "56848224"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62064240"
 ---
 # <a name="selectioncondition-element-for-entryselectedby-for-controls-for-view-format"></a>SelectionCondition Element for EntrySelectedBy for Controls for View (Format) (Elemento SelectionCondition para EntrySelectedBy para Controls para View [Formatação])
 
@@ -32,7 +32,7 @@ Configuração elemento (formato) ViewDefinitions elemento (formato) vista eleme
 </SelectionCondition>
 ```
 
-## <a name="attributes-and-elements"></a>Atributos e Elementos
+## <a name="attributes-and-elements"></a>Atributos e elementos
 
 As secções seguintes descrevem os atributos e elementos filho e o elemento principal do `SelectionCondition` elemento.
 
@@ -40,7 +40,7 @@ As secções seguintes descrevem os atributos e elementos filho e o elemento pri
 
 Nenhum.
 
-### <a name="child-elements"></a>Elementos Subordinados
+### <a name="child-elements"></a>Elementos subordinados
 
 |Elemento|Descrição|
 |-------------|-----------------|
@@ -49,7 +49,7 @@ Nenhum.
 |[Elemento de SelectionSetName para SelectionCondition para controles para exibição (formato)](./selectionsetname-element-for-selectioncondition-for-controls-for-view-format.md)|Elemento opcional.<br /><br /> Especifica o conjunto de tipos do .NET que aciona a condição.|
 |[Elemento de TypeName para SelectionCondition para controles para exibição (formato)](./typename-element-for-selectioncondition-for-controls-for-view-format.md)|Elemento opcional.<br /><br /> Especifica um tipo .NET que aciona a condição.|
 
-### <a name="parent-elements"></a>Elementos Principais
+### <a name="parent-elements"></a>Elementos principais
 
 |Elemento|Descrição|
 |-------------|-----------------|

@@ -9,11 +9,11 @@ ms.topic: article
 ms.assetid: 67a2b061-2a4a-4ad1-84f9-cdbefb64aaab
 caps.latest.revision: 8
 ms.openlocfilehash: abb8b91626128b3deaa2db24a9fd8b34a6563410
-ms.sourcegitcommit: b6871f21bd666f9cd71dd336bb3f844cf472b56c
+ms.sourcegitcommit: e7445ba8203da304286c591ff513900ad1c244a4
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 02/03/2019
-ms.locfileid: "56849281"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62065548"
 ---
 # <a name="groupby-element-for-view-format"></a>GroupBy Element for View (Format) (Elemento GroupBy para View [Formatação])
 
@@ -33,7 +33,7 @@ O elemento (formato) ViewDefinitions elemento (formato) vista elemento (formato)
 </GroupBy>
 ```
 
-## <a name="attributes-and-elements"></a>Atributos e Elementos
+## <a name="attributes-and-elements"></a>Atributos e elementos
 
 As secções seguintes descrevem os atributos e elementos principais elementos filho.
 
@@ -41,7 +41,7 @@ As secções seguintes descrevem os atributos e elementos principais elementos f
 
 Nenhum.
 
-### <a name="child-elements"></a>Elementos Subordinados
+### <a name="child-elements"></a>Elementos subordinados
 
 |Elemento|Descrição|
 |-------------|-----------------|
@@ -51,7 +51,7 @@ Nenhum.
 |[Elemento de PropertyName para GroupBy (formato)](./propertyname-element-for-groupby-format.md)|Elemento opcional.<br /><br /> Especifica a propriedade .NET iniciada a um novo grupo sempre que seu valor é alterado.|
 |[Elemento de ScriptBlock para GroupBy (formato)](./scriptblock-element-for-groupby-format.md)|Elemento opcional.<br /><br /> Especifica o script que inicia um novo grupo sempre que seu valor é alterado.|
 
-### <a name="parent-elements"></a>Elementos Principais
+### <a name="parent-elements"></a>Elementos principais
 
 |Elemento|Descrição|
 |-------------|-----------------|
@@ -61,7 +61,7 @@ Nenhum.
 
 Ao definir como é apresentado um novo grupo de objetos, tem de especificar a propriedade ou um script que iniciará o novo grupo; No entanto, não é possível especificar ambos.
 
-## <a name="see-also"></a>Consulte Também
+## <a name="see-also"></a>Veja Também
 
 [Elemento de CustomControlName para GroupBy (formato)](./customcontrolname-element-for-groupby-format.md)
 

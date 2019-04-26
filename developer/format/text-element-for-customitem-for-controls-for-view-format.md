@@ -9,11 +9,11 @@ ms.topic: article
 ms.assetid: 5d3ecec9-cc95-482e-9ee0-4e4e353b6357
 caps.latest.revision: 6
 ms.openlocfilehash: 7ce29ef8f58f52ecca68b10a4818ffe7c1bfbf27
-ms.sourcegitcommit: b6871f21bd666f9cd71dd336bb3f844cf472b56c
+ms.sourcegitcommit: e7445ba8203da304286c591ff513900ad1c244a4
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 02/03/2019
-ms.locfileid: "56849953"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62063712"
 ---
 # <a name="text-element-for-customitem-for-controls-for-view-format"></a>Text Element for CustomItem for Controls for View (Format) (Elemento Text para CustomItem para Controls para View [Formatação])
 
@@ -27,7 +27,7 @@ Configuração elemento (formato) ViewDefinitions elemento (formato) vista eleme
 <Text>TextToDisplay</Text>
 ```
 
-## <a name="attributes-and-elements"></a>Atributos e Elementos
+## <a name="attributes-and-elements"></a>Atributos e elementos
 
 As secções seguintes descrevem os atributos e elementos filho e o elemento principal do `Text` elemento.
 
@@ -35,17 +35,17 @@ As secções seguintes descrevem os atributos e elementos filho e o elemento pri
 
 Nenhum.
 
-### <a name="child-elements"></a>Elementos Subordinados
+### <a name="child-elements"></a>Elementos subordinados
 
 Nenhum.
 
-### <a name="parent-elements"></a>Elementos Principais
+### <a name="parent-elements"></a>Elementos principais
 
 |Elemento|Descrição|
 |-------------|-----------------|
 |[Elemento de CustomItem para CustomEntry para controles para exibição (formato)](./customitem-element-for-customentry-for-controls-for-view-format.md)|Define os dados que são apresentados pelo controle e como ele é exibido.|
 
-## <a name="text-value"></a>Valor do Texto
+## <a name="text-value"></a>Valor de texto
 
 Especifique o texto de um controle para os dados que pretende apresentar.
 

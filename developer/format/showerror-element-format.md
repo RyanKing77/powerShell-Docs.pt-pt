@@ -9,11 +9,11 @@ ms.topic: article
 ms.assetid: a456e5df-fbf9-42b6-a6d8-4b2adafb86b1
 caps.latest.revision: 9
 ms.openlocfilehash: ff320619b7f768718ace7d482332a60a73c625b7
-ms.sourcegitcommit: b6871f21bd666f9cd71dd336bb3f844cf472b56c
+ms.sourcegitcommit: e7445ba8203da304286c591ff513900ad1c244a4
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 02/03/2019
-ms.locfileid: "56849708"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62063848"
 ---
 # <a name="showerror-element-format"></a>ShowError Element (Format) (Elemento ShowError [Formatação])
 
@@ -27,7 +27,7 @@ Elemento de configuração do ShowError elemento (formato) DefaultSettings eleme
 <ShowError/>
 ```
 
-## <a name="attributes-and-elements"></a>Atributos e Elementos
+## <a name="attributes-and-elements"></a>Atributos e elementos
 
 As secções seguintes descrevem os atributos e elementos filho e o elemento principal do `ShowError` elemento. O valor predefinido para este elemento é `false`.
 
@@ -35,11 +35,11 @@ As secções seguintes descrevem os atributos e elementos filho e o elemento pri
 
 Nenhum.
 
-### <a name="child-elements"></a>Elementos Subordinados
+### <a name="child-elements"></a>Elementos subordinados
 
 Nenhum.
 
-### <a name="parent-elements"></a>Elementos Principais
+### <a name="parent-elements"></a>Elementos principais
 
 |Elemento|Descrição|
 |-------------|-----------------|

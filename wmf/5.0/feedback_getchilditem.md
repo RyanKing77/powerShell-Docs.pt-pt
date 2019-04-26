@@ -1,25 +1,25 @@
 ---
 ms.date: 06/12/2017
 keywords: wmf,powershell,setup
-ms.openlocfilehash: d9f1ca10c948b06b234e17f688b8f899ed41c5d6
-ms.sourcegitcommit: 54534635eedacf531d8d6344019dc16a50b8b441
+ms.openlocfilehash: cc5d2d799c1292f68de5fb2360fcba220c2c010b
+ms.sourcegitcommit: e7445ba8203da304286c591ff513900ad1c244a4
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 05/17/2018
-ms.locfileid: "34221906"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62085300"
 ---
 # <a name="get-childitem-has--depth-parameter"></a>Tem de GET-ChildItem - parâmetro de profundidade
-**Get-ChildItem** tem agora um **– profundidade** parâmetro a utilizar com **-Recurse** para limitar a recursão:
+**Get-ChildItem** tem agora um **– profundidade** parâmetro, que utiliza com o **– Recurse** para limitar a recursão:
 
-PS c:\\utilizadores\\slee\\transfere\\exemplo&gt; Get-ChildItem-Recurse - profundidade 0
+PS c:\\usuários\\slee\\Downloads\\exemplo&gt; Get-ChildItem-Recurse - profundidade de 0
 
-Diretório: C\\utilizadores\\slee\\transfere\\exemplo
+Diretório: C:\\usuários\\slee\\Downloads\\exemplo
 
-Nome de comprimento de LastWriteTime modo
+Nome de comprimento de LastWriteTime de modo
 
 ---- ------------- ------ ----
 
----d 4/14/2015 as 17:36:00 Depth0
+---1!d 4/14/2015 5 36 PM Depth0
 
 -a---4/14/2015 1:19 PM 0 File1.txt
 
@@ -27,15 +27,15 @@ Nome de comprimento de LastWriteTime modo
 
 -a---4/14/2015 1:19 PM 0 File3.txt
 
-PS c:\\utilizadores\\slee\\transfere\\exemplo&gt; Get-ChildItem-Recurse - profundidade 1
+PS c:\\usuários\\slee\\Downloads\\exemplo&gt; Get-ChildItem-Recurse - 1 de profundidade
 
-Diretório: C\\utilizadores\\slee\\transfere\\exemplo
+Diretório: C:\\usuários\\slee\\Downloads\\exemplo
 
-Nome de comprimento de LastWriteTime modo
+Nome de comprimento de LastWriteTime de modo
 
 ---- ------------- ------ ----
 
----d 4/14/2015 as 17:36:00 Depth0
+---1!d 4/14/2015 5 36 PM Depth0
 
 -a---4/14/2015 1:19 PM 0 File1.txt
 
@@ -43,10 +43,10 @@ Nome de comprimento de LastWriteTime modo
 
 -a---4/14/2015 1:19 PM 0 File3.txt
 
-Diretório: C\\utilizadores\\slee\\transfere\\exemplo\\Depth0
+Diretório: C:\\usuários\\slee\\Downloads\\exemplo\\Depth0
 
-Nome de comprimento de LastWriteTime modo
+Nome de comprimento de LastWriteTime de modo
 
 ---- ------------- ------ ----
 
----d 4/14/2015 5:33 PM Depth1
+---1!d 4/14/2015 5 33 PM Depth1

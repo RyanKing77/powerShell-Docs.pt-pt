@@ -3,11 +3,11 @@ ms.date: 06/12/2017
 keywords: jea, powershell, segurança
 title: Utilizar a JEA
 ms.openlocfilehash: fa3d3a3c8bc0090ec9ad788585ec5df933134173
-ms.sourcegitcommit: caac7d098a448232304c9d6728e7340ec7517a71
+ms.sourcegitcommit: e7445ba8203da304286c591ff513900ad1c244a4
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 03/16/2019
-ms.locfileid: "58054684"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62084050"
 ---
 # <a name="using-jea"></a>Utilizar a JEA
 

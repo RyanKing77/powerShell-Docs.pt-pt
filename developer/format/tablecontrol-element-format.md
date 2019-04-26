@@ -9,11 +9,11 @@ ms.topic: article
 ms.assetid: 1550b068-dfbc-4ae0-9aa1-72c9a680ec59
 caps.latest.revision: 15
 ms.openlocfilehash: 3942c008e026b0b99db3c77af4a0152b50fffc4e
-ms.sourcegitcommit: caac7d098a448232304c9d6728e7340ec7517a71
+ms.sourcegitcommit: e7445ba8203da304286c591ff513900ad1c244a4
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 03/16/2019
-ms.locfileid: "58054582"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62063833"
 ---
 # <a name="tablecontrol-element-format"></a>TableControl Element (Format) (Elemento TableControl [Formatação])
 
@@ -33,7 +33,7 @@ O elemento de ViewDefinitions (formato) vista elemento (formato) TableControl el
 
 ```
 
-## <a name="attributes-and-elements"></a>Atributos e Elementos
+## <a name="attributes-and-elements"></a>Atributos e elementos
 
 As secções seguintes descrevem os atributos e elemento pai de elementos filho do `TableControl` elemento. Tem de especificar as linhas da tabela. Todos os outros elementos filho são opcionais.
 
@@ -41,7 +41,7 @@ As secções seguintes descrevem os atributos e elemento pai de elementos filho 
 
 Nenhum.
 
-### <a name="child-elements"></a>Elementos Subordinados
+### <a name="child-elements"></a>Elementos subordinados
 
 |Elemento|Descrição|
 |-------------|-----------------|
@@ -50,7 +50,7 @@ Nenhum.
 |[Elemento de TableHeaders para TableControl (formato)](./tableheaders-element-format.md)|Elemento necessário.<br /><br /> Define as etiquetas, as larguras e o alinhamento dos dados para as colunas de vista de tabela.|
 |[Elemento de TableRowEntries para TableControl (formato)](./tablerowentries-element-for-tablecontrol-format.md)|Elemento opcional.<br /><br /> Fornece definições de vista de tabela.|
 
-### <a name="parent-elements"></a>Elementos Principais
+### <a name="parent-elements"></a>Elementos principais
 
 |Elemento|Descrição|
 |-------------|-----------------|
