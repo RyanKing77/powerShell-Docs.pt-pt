@@ -4,67 +4,67 @@ keywords: PowerShell, o cmdlet
 title: Alterar o Estado do Computador
 ms.assetid: 8093268b-27f8-4a49-8871-142c5cc33f01
 ms.openlocfilehash: f8a2ed6a1a0390021eb633c9af64a725146ad136
-ms.sourcegitcommit: f4bd4e116e22c8b5bfcb61680a7c42e58b4da93e
-ms.translationtype: HT
+ms.sourcegitcommit: e7445ba8203da304286c591ff513900ad1c244a4
+ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59984209"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62086328"
 ---
-# <a name="changing-computer-state"></a><span data-ttu-id="371ff-103">Alterar o Estado do Computador</span><span class="sxs-lookup"><span data-stu-id="371ff-103">Changing Computer State</span></span>
+# <a name="changing-computer-state"></a><span data-ttu-id="c3747-103">Alterar o Estado do Computador</span><span class="sxs-lookup"><span data-stu-id="c3747-103">Changing Computer State</span></span>
 
-<span data-ttu-id="371ff-104">Para repor um computador no Windows PowerShell, utilize uma ferramenta de linha de comando padrão ou uma classe WMI.</span><span class="sxs-lookup"><span data-stu-id="371ff-104">To reset a computer in Windows PowerShell, use either a standard command-line tool or a WMI class.</span></span> <span data-ttu-id="371ff-105">Embora o estiver a utilizar o Windows PowerShell apenas para executar a ferramenta, aprendendo a alterar o estado de energia de um computador no Windows PowerShell ilustra alguns dos detalhes importantes sobre como trabalhar com as ferramentas externas no Windows PowerShell.</span><span class="sxs-lookup"><span data-stu-id="371ff-105">Although you are using Windows PowerShell only to run the tool, learning how to change a computer's power state in Windows PowerShell illustrates some of the important details about working with external tools in Windows PowerShell.</span></span>
+<span data-ttu-id="c3747-104">Para repor um computador no Windows PowerShell, utilize uma ferramenta de linha de comando padrão ou uma classe WMI.</span><span class="sxs-lookup"><span data-stu-id="c3747-104">To reset a computer in Windows PowerShell, use either a standard command-line tool or a WMI class.</span></span> <span data-ttu-id="c3747-105">Embora o estiver a utilizar o Windows PowerShell apenas para executar a ferramenta, aprendendo a alterar o estado de energia de um computador no Windows PowerShell ilustra alguns dos detalhes importantes sobre como trabalhar com as ferramentas externas no Windows PowerShell.</span><span class="sxs-lookup"><span data-stu-id="c3747-105">Although you are using Windows PowerShell only to run the tool, learning how to change a computer's power state in Windows PowerShell illustrates some of the important details about working with external tools in Windows PowerShell.</span></span>
 
-## <a name="locking-a-computer"></a><span data-ttu-id="371ff-106">Bloqueio de um computador</span><span class="sxs-lookup"><span data-stu-id="371ff-106">Locking a Computer</span></span>
+## <a name="locking-a-computer"></a><span data-ttu-id="c3747-106">Bloqueio de um computador</span><span class="sxs-lookup"><span data-stu-id="c3747-106">Locking a Computer</span></span>
 
-<span data-ttu-id="371ff-107">A única forma de bloquear um computador diretamente com as ferramentas disponíveis padrão é chamar o **LockWorkstation()** funcionar **user32.dll**:</span><span class="sxs-lookup"><span data-stu-id="371ff-107">The only way to lock a computer directly with the standard available tools is to call the **LockWorkstation()** function in **user32.dll**:</span></span>
+<span data-ttu-id="c3747-107">A única forma de bloquear um computador diretamente com as ferramentas disponíveis padrão é chamar o **LockWorkstation()** funcionar **user32.dll**:</span><span class="sxs-lookup"><span data-stu-id="c3747-107">The only way to lock a computer directly with the standard available tools is to call the **LockWorkstation()** function in **user32.dll**:</span></span>
 
 ```
 rundll32.exe user32.dll,LockWorkStation
 ```
 
-<span data-ttu-id="371ff-108">Este comando bloqueia imediatamente a estação de trabalho.</span><span class="sxs-lookup"><span data-stu-id="371ff-108">This command immediately locks the workstation.</span></span> <span data-ttu-id="371ff-109">Ele usa *rundll32.exe*, que executa o Windows DLLs (e salva suas bibliotecas para uso repetido) para executar user32.dll, uma biblioteca de funções de gerenciamento do Windows.</span><span class="sxs-lookup"><span data-stu-id="371ff-109">It uses *rundll32.exe*, which runs Windows DLLs (and saves their libraries for repeated use) to run user32.dll, a library of Windows management functions.</span></span>
+<span data-ttu-id="c3747-108">Este comando bloqueia imediatamente a estação de trabalho.</span><span class="sxs-lookup"><span data-stu-id="c3747-108">This command immediately locks the workstation.</span></span> <span data-ttu-id="c3747-109">Ele usa *rundll32.exe*, que executa o Windows DLLs (e salva suas bibliotecas para uso repetido) para executar user32.dll, uma biblioteca de funções de gerenciamento do Windows.</span><span class="sxs-lookup"><span data-stu-id="c3747-109">It uses *rundll32.exe*, which runs Windows DLLs (and saves their libraries for repeated use) to run user32.dll, a library of Windows management functions.</span></span>
 
-<span data-ttu-id="371ff-110">Quando bloquear uma estação de trabalho enquanto estiver ativada a troca rápida de usuário, como no Windows XP, o computador apresenta o ecrã de início de sessão do utilizador, em vez de iniciar a proteção de tela do utilizador atual.</span><span class="sxs-lookup"><span data-stu-id="371ff-110">When you lock a workstation while Fast User Switching is enabled, such as on Windows XP, the computer displays the user logon screen rather than starting the current user's screensaver.</span></span>
+<span data-ttu-id="c3747-110">Quando bloquear uma estação de trabalho enquanto estiver ativada a troca rápida de usuário, como no Windows XP, o computador apresenta o ecrã de início de sessão do utilizador, em vez de iniciar a proteção de tela do utilizador atual.</span><span class="sxs-lookup"><span data-stu-id="c3747-110">When you lock a workstation while Fast User Switching is enabled, such as on Windows XP, the computer displays the user logon screen rather than starting the current user's screensaver.</span></span>
 
-<span data-ttu-id="371ff-111">Para desligar sessões particulares num Terminal Server, utilize o **tsshutdn.exe** ferramenta da linha de comandos.</span><span class="sxs-lookup"><span data-stu-id="371ff-111">To shut down particular sessions on a Terminal Server, use the **tsshutdn.exe** command-line tool.</span></span>
+<span data-ttu-id="c3747-111">Para desligar sessões particulares num Terminal Server, utilize o **tsshutdn.exe** ferramenta da linha de comandos.</span><span class="sxs-lookup"><span data-stu-id="c3747-111">To shut down particular sessions on a Terminal Server, use the **tsshutdn.exe** command-line tool.</span></span>
 
-## <a name="logging-off-the-current-session"></a><span data-ttu-id="371ff-112">Terminar a sessão atual</span><span class="sxs-lookup"><span data-stu-id="371ff-112">Logging Off the Current Session</span></span>
+## <a name="logging-off-the-current-session"></a><span data-ttu-id="c3747-112">Terminar a sessão atual</span><span class="sxs-lookup"><span data-stu-id="c3747-112">Logging Off the Current Session</span></span>
 
-<span data-ttu-id="371ff-113">Pode usar várias técnicas diferentes para terminar sessão numa sessão no sistema local.</span><span class="sxs-lookup"><span data-stu-id="371ff-113">You can use several different techniques to log off of a session on the local system.</span></span> <span data-ttu-id="371ff-114">A forma mais simples é usar a ferramenta de linha de comandos de serviços de Terminal/ambiente de trabalho remoto, **logoff.exe** (para obter detalhes, na linha de comandos da Windows PowerShell, escreva **logoff /?**).</span><span class="sxs-lookup"><span data-stu-id="371ff-114">The simplest way is to use the Remote Desktop/Terminal Services command-line tool, **logoff.exe** (For details, at the Windows PowerShell prompt, type **logoff /?**).</span></span> <span data-ttu-id="371ff-115">Para terminar a sessão atual do Active Directory, escreva **logoff** sem argumentos.</span><span class="sxs-lookup"><span data-stu-id="371ff-115">To log off the current active session, type **logoff** with no arguments.</span></span>
+<span data-ttu-id="c3747-113">Pode usar várias técnicas diferentes para terminar sessão numa sessão no sistema local.</span><span class="sxs-lookup"><span data-stu-id="c3747-113">You can use several different techniques to log off of a session on the local system.</span></span> <span data-ttu-id="c3747-114">A forma mais simples é usar a ferramenta de linha de comandos de serviços de Terminal/ambiente de trabalho remoto, **logoff.exe** (para obter detalhes, na linha de comandos da Windows PowerShell, escreva **logoff /?**).</span><span class="sxs-lookup"><span data-stu-id="c3747-114">The simplest way is to use the Remote Desktop/Terminal Services command-line tool, **logoff.exe** (For details, at the Windows PowerShell prompt, type **logoff /?**).</span></span> <span data-ttu-id="c3747-115">Para terminar a sessão atual do Active Directory, escreva **logoff** sem argumentos.</span><span class="sxs-lookup"><span data-stu-id="c3747-115">To log off the current active session, type **logoff** with no arguments.</span></span>
 
-<span data-ttu-id="371ff-116">Também pode utilizar o **shutdown.exe** ferramenta com a opção de terminar sessão:</span><span class="sxs-lookup"><span data-stu-id="371ff-116">You can also use the **shutdown.exe** tool with its logoff option:</span></span>
+<span data-ttu-id="c3747-116">Também pode utilizar o **shutdown.exe** ferramenta com a opção de terminar sessão:</span><span class="sxs-lookup"><span data-stu-id="c3747-116">You can also use the **shutdown.exe** tool with its logoff option:</span></span>
 
 ```
 shutdown.exe -l
 ```
 
-<span data-ttu-id="371ff-117">Uma terceira opção é usar o WMI.</span><span class="sxs-lookup"><span data-stu-id="371ff-117">A third option is to use WMI.</span></span> <span data-ttu-id="371ff-118">A classe Win32_OperatingSystem tem um método de Win32Shutdown.</span><span class="sxs-lookup"><span data-stu-id="371ff-118">The Win32_OperatingSystem class has a Win32Shutdown method.</span></span> <span data-ttu-id="371ff-119">Invocando o método com o sinalizador 0 inicia a fim de sessão:</span><span class="sxs-lookup"><span data-stu-id="371ff-119">Invoking the method with the 0 flag initiates logoff:</span></span>
+<span data-ttu-id="c3747-117">Uma terceira opção é usar o WMI.</span><span class="sxs-lookup"><span data-stu-id="c3747-117">A third option is to use WMI.</span></span> <span data-ttu-id="c3747-118">A classe Win32_OperatingSystem tem um método de Win32Shutdown.</span><span class="sxs-lookup"><span data-stu-id="c3747-118">The Win32_OperatingSystem class has a Win32Shutdown method.</span></span> <span data-ttu-id="c3747-119">Invocando o método com o sinalizador 0 inicia a fim de sessão:</span><span class="sxs-lookup"><span data-stu-id="c3747-119">Invoking the method with the 0 flag initiates logoff:</span></span>
 
 ```powershell
 (Get-WmiObject -Class Win32_OperatingSystem -ComputerName .).Win32Shutdown(0)
 ```
 
-<span data-ttu-id="371ff-120">Para obter mais informações e para localizar outros recursos do método Win32Shutdown, consulte "Win32Shutdown método da classe Win32_OperatingSystem" no MSDN.</span><span class="sxs-lookup"><span data-stu-id="371ff-120">For more information, and to find other features of the Win32Shutdown method, see "Win32Shutdown Method of the Win32_OperatingSystem Class" in MSDN.</span></span>
+<span data-ttu-id="c3747-120">Para obter mais informações e para localizar outros recursos do método Win32Shutdown, consulte "Win32Shutdown método da classe Win32_OperatingSystem" no MSDN.</span><span class="sxs-lookup"><span data-stu-id="c3747-120">For more information, and to find other features of the Win32Shutdown method, see "Win32Shutdown Method of the Win32_OperatingSystem Class" in MSDN.</span></span>
 
-## <a name="shutting-down-or-restarting-a-computer"></a><span data-ttu-id="371ff-121">Encerrar ou reiniciar um computador</span><span class="sxs-lookup"><span data-stu-id="371ff-121">Shutting Down or Restarting a Computer</span></span>
+## <a name="shutting-down-or-restarting-a-computer"></a><span data-ttu-id="c3747-121">Encerrar ou reiniciar um computador</span><span class="sxs-lookup"><span data-stu-id="c3747-121">Shutting Down or Restarting a Computer</span></span>
 
-<span data-ttu-id="371ff-122">Encerrar e reiniciar os computadores em geral são os mesmos tipos de tarefas.</span><span class="sxs-lookup"><span data-stu-id="371ff-122">Shutting down and restarting computers are generally the same types of task.</span></span> <span data-ttu-id="371ff-123">Ferramentas que encerrar um computador em geral serão reiniciá-lo também — e vice-versa.</span><span class="sxs-lookup"><span data-stu-id="371ff-123">Tools that shut down a computer will generally restart it as well—and vice versa.</span></span> <span data-ttu-id="371ff-124">Existem duas opções simples para reiniciar um computador a partir do Windows PowerShell.</span><span class="sxs-lookup"><span data-stu-id="371ff-124">There are two straightforward options for restarting a computer from Windows PowerShell.</span></span> <span data-ttu-id="371ff-125">Utilize Tsshutdn.exe ou Shutdown.exe com argumentos adequados.</span><span class="sxs-lookup"><span data-stu-id="371ff-125">Use either Tsshutdn.exe or Shutdown.exe with appropriate arguments.</span></span> <span data-ttu-id="371ff-126">Pode obter informações de utilização detalhadas de **tsshutdn.exe /?**</span><span class="sxs-lookup"><span data-stu-id="371ff-126">You can get detailed usage information from **tsshutdn.exe /?**</span></span> <span data-ttu-id="371ff-127">ou **shutdown.exe /?**.</span><span class="sxs-lookup"><span data-stu-id="371ff-127">or **shutdown.exe /?**.</span></span>
+<span data-ttu-id="c3747-122">Encerrar e reiniciar os computadores em geral são os mesmos tipos de tarefas.</span><span class="sxs-lookup"><span data-stu-id="c3747-122">Shutting down and restarting computers are generally the same types of task.</span></span> <span data-ttu-id="c3747-123">Ferramentas que encerrar um computador em geral serão reiniciá-lo também — e vice-versa.</span><span class="sxs-lookup"><span data-stu-id="c3747-123">Tools that shut down a computer will generally restart it as well—and vice versa.</span></span> <span data-ttu-id="c3747-124">Existem duas opções simples para reiniciar um computador a partir do Windows PowerShell.</span><span class="sxs-lookup"><span data-stu-id="c3747-124">There are two straightforward options for restarting a computer from Windows PowerShell.</span></span> <span data-ttu-id="c3747-125">Utilize Tsshutdn.exe ou Shutdown.exe com argumentos adequados.</span><span class="sxs-lookup"><span data-stu-id="c3747-125">Use either Tsshutdn.exe or Shutdown.exe with appropriate arguments.</span></span> <span data-ttu-id="c3747-126">Pode obter informações de utilização detalhadas de **tsshutdn.exe /?**</span><span class="sxs-lookup"><span data-stu-id="c3747-126">You can get detailed usage information from **tsshutdn.exe /?**</span></span> <span data-ttu-id="c3747-127">ou **shutdown.exe /?**.</span><span class="sxs-lookup"><span data-stu-id="c3747-127">or **shutdown.exe /?**.</span></span>
 
-<span data-ttu-id="371ff-128">Também pode efetuar encerrar e reiniciar operações diretamente a partir do Windows PowerShell também.</span><span class="sxs-lookup"><span data-stu-id="371ff-128">You can also perform shutdown and restart operations directly from Windows PowerShell as well.</span></span>
+<span data-ttu-id="c3747-128">Também pode efetuar encerrar e reiniciar operações diretamente a partir do Windows PowerShell também.</span><span class="sxs-lookup"><span data-stu-id="c3747-128">You can also perform shutdown and restart operations directly from Windows PowerShell as well.</span></span>
 
-<span data-ttu-id="371ff-129">Para encerrar o computador, utilize o comando Stop-Computer</span><span class="sxs-lookup"><span data-stu-id="371ff-129">To shut down the computer, use the Stop-Computer command</span></span>
+<span data-ttu-id="c3747-129">Para encerrar o computador, utilize o comando Stop-Computer</span><span class="sxs-lookup"><span data-stu-id="c3747-129">To shut down the computer, use the Stop-Computer command</span></span>
 
 ```powershell
 Stop-Computer
 ```
 
-<span data-ttu-id="371ff-130">Para reiniciar o sistema operativo, utilize o comando de reiniciar o computador</span><span class="sxs-lookup"><span data-stu-id="371ff-130">To restart the operating system, use the Restart-Computer command</span></span>
+<span data-ttu-id="c3747-130">Para reiniciar o sistema operativo, utilize o comando de reiniciar o computador</span><span class="sxs-lookup"><span data-stu-id="c3747-130">To restart the operating system, use the Restart-Computer command</span></span>
 
 ```powershell
 Restart-Computer
 ```
 
-<span data-ttu-id="371ff-131">Para forçar um reinício imediato do computador, utilize o parâmetro - Force.</span><span class="sxs-lookup"><span data-stu-id="371ff-131">To force an immediate restart of the computer, use the -Force parameter.</span></span>
+<span data-ttu-id="c3747-131">Para forçar um reinício imediato do computador, utilize o parâmetro - Force.</span><span class="sxs-lookup"><span data-stu-id="c3747-131">To force an immediate restart of the computer, use the -Force parameter.</span></span>
 
 ```powershell
 Restart-Computer -Force

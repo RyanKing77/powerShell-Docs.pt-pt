@@ -9,35 +9,35 @@ ms.topic: article
 ms.assetid: dffedd31-c10d-4e11-a9ee-4fdfe9a869e8
 caps.latest.revision: 8
 ms.openlocfilehash: 894c995474d4bf5b7fe11c1289c4500371c9dd43
-ms.sourcegitcommit: caac7d098a448232304c9d6728e7340ec7517a71
+ms.sourcegitcommit: e7445ba8203da304286c591ff513900ad1c244a4
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 03/16/2019
-ms.locfileid: "58058305"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62082758"
 ---
-# <a name="remoterunspacepool01-sample"></a><span data-ttu-id="2d09c-102">RemoteRunspacePool01 Sample (Exemplo RemoteRunspacePool01)</span><span class="sxs-lookup"><span data-stu-id="2d09c-102">RemoteRunspacePool01 Sample</span></span>
+# <a name="remoterunspacepool01-sample"></a><span data-ttu-id="c5339-102">RemoteRunspacePool01 Sample (Exemplo RemoteRunspacePool01)</span><span class="sxs-lookup"><span data-stu-id="c5339-102">RemoteRunspacePool01 Sample</span></span>
 
-<span data-ttu-id="2d09c-103">Este exemplo mostra como construir um conjunto de espaço de execução remoto e como executar vários comandos em simultâneo ao utilizar este conjunto.</span><span class="sxs-lookup"><span data-stu-id="2d09c-103">This sample shows how to construct a remote runspace pool and how to run multiple commands concurrently by using this pool.</span></span>
+<span data-ttu-id="c5339-103">Este exemplo mostra como construir um conjunto de espaço de execução remoto e como executar vários comandos em simultâneo ao utilizar este conjunto.</span><span class="sxs-lookup"><span data-stu-id="c5339-103">This sample shows how to construct a remote runspace pool and how to run multiple commands concurrently by using this pool.</span></span>
 
-## <a name="requirements"></a><span data-ttu-id="2d09c-104">Requisitos</span><span class="sxs-lookup"><span data-stu-id="2d09c-104">Requirements</span></span>
+## <a name="requirements"></a><span data-ttu-id="c5339-104">Requisitos</span><span class="sxs-lookup"><span data-stu-id="c5339-104">Requirements</span></span>
 
- <span data-ttu-id="2d09c-105">Este exemplo requer o Windows PowerShell 2.0.</span><span class="sxs-lookup"><span data-stu-id="2d09c-105">This sample requires Windows PowerShell 2.0.</span></span>
+ <span data-ttu-id="c5339-105">Este exemplo requer o Windows PowerShell 2.0.</span><span class="sxs-lookup"><span data-stu-id="c5339-105">This sample requires Windows PowerShell 2.0.</span></span>
 
-## <a name="demonstrates"></a><span data-ttu-id="2d09c-106">Demonstra</span><span class="sxs-lookup"><span data-stu-id="2d09c-106">Demonstrates</span></span>
+## <a name="demonstrates"></a><span data-ttu-id="c5339-106">Demonstra</span><span class="sxs-lookup"><span data-stu-id="c5339-106">Demonstrates</span></span>
 
-- <span data-ttu-id="2d09c-107">Criar uma [System.Management.Automation.Runspaces.Wsmanconnectioninfo](/dotnet/api/System.Management.Automation.Runspaces.WSManConnectionInfo) objeto.</span><span class="sxs-lookup"><span data-stu-id="2d09c-107">Creating a [System.Management.Automation.Runspaces.Wsmanconnectioninfo](/dotnet/api/System.Management.Automation.Runspaces.WSManConnectionInfo) object.</span></span>
+- <span data-ttu-id="c5339-107">Criar uma [System.Management.Automation.Runspaces.Wsmanconnectioninfo](/dotnet/api/System.Management.Automation.Runspaces.WSManConnectionInfo) objeto.</span><span class="sxs-lookup"><span data-stu-id="c5339-107">Creating a [System.Management.Automation.Runspaces.Wsmanconnectioninfo](/dotnet/api/System.Management.Automation.Runspaces.WSManConnectionInfo) object.</span></span>
 
-- <span data-ttu-id="2d09c-108">Definindo a [System.Management.Automation.Runspaces.Runspaceconnectioninfo.Operationtimeout\*](/dotnet/api/System.Management.Automation.Runspaces.RunspaceConnectionInfo.OperationTimeout) e [System.Management.Automation.Runspaces.Runspaceconnectioninfo.Opentimeout\*](/dotnet/api/System.Management.Automation.Runspaces.RunspaceConnectionInfo.OpenTimeout) Propriedades do [System.Management.Automation.Runspaces.Wsmanconnectioninfo](/dotnet/api/System.Management.Automation.Runspaces.WSManConnectionInfo) objeto.</span><span class="sxs-lookup"><span data-stu-id="2d09c-108">Setting the [System.Management.Automation.Runspaces.Runspaceconnectioninfo.Operationtimeout\*](/dotnet/api/System.Management.Automation.Runspaces.RunspaceConnectionInfo.OperationTimeout) and [System.Management.Automation.Runspaces.Runspaceconnectioninfo.Opentimeout\*](/dotnet/api/System.Management.Automation.Runspaces.RunspaceConnectionInfo.OpenTimeout) properties of the [System.Management.Automation.Runspaces.Wsmanconnectioninfo](/dotnet/api/System.Management.Automation.Runspaces.WSManConnectionInfo) object.</span></span>
+- <span data-ttu-id="c5339-108">Definindo a [System.Management.Automation.Runspaces.Runspaceconnectioninfo.Operationtimeout\*](/dotnet/api/System.Management.Automation.Runspaces.RunspaceConnectionInfo.OperationTimeout) e [System.Management.Automation.Runspaces.Runspaceconnectioninfo.Opentimeout\*](/dotnet/api/System.Management.Automation.Runspaces.RunspaceConnectionInfo.OpenTimeout) Propriedades do [System.Management.Automation.Runspaces.Wsmanconnectioninfo](/dotnet/api/System.Management.Automation.Runspaces.WSManConnectionInfo) objeto.</span><span class="sxs-lookup"><span data-stu-id="c5339-108">Setting the [System.Management.Automation.Runspaces.Runspaceconnectioninfo.Operationtimeout\*](/dotnet/api/System.Management.Automation.Runspaces.RunspaceConnectionInfo.OperationTimeout) and [System.Management.Automation.Runspaces.Runspaceconnectioninfo.Opentimeout\*](/dotnet/api/System.Management.Automation.Runspaces.RunspaceConnectionInfo.OpenTimeout) properties of the [System.Management.Automation.Runspaces.Wsmanconnectioninfo](/dotnet/api/System.Management.Automation.Runspaces.WSManConnectionInfo) object.</span></span>
 
-- <span data-ttu-id="2d09c-109">Criar um espaço de execução remoto que utilize o [System.Management.Automation.Runspaces.Wsmanconnectioninfo](/dotnet/api/System.Management.Automation.Runspaces.WSManConnectionInfo) objeto para estabelecer a ligação remota.</span><span class="sxs-lookup"><span data-stu-id="2d09c-109">Creating a remote runspace that uses the [System.Management.Automation.Runspaces.Wsmanconnectioninfo](/dotnet/api/System.Management.Automation.Runspaces.WSManConnectionInfo) object to establish the remote connection.</span></span>
+- <span data-ttu-id="c5339-109">Criar um espaço de execução remoto que utilize o [System.Management.Automation.Runspaces.Wsmanconnectioninfo](/dotnet/api/System.Management.Automation.Runspaces.WSManConnectionInfo) objeto para estabelecer a ligação remota.</span><span class="sxs-lookup"><span data-stu-id="c5339-109">Creating a remote runspace that uses the [System.Management.Automation.Runspaces.Wsmanconnectioninfo](/dotnet/api/System.Management.Automation.Runspaces.WSManConnectionInfo) object to establish the remote connection.</span></span>
 
-- <span data-ttu-id="2d09c-110">A executar o [Get-Process](/powershell/module/Microsoft.PowerShell.Management/Get-Process) e [Get-Service](/powershell/module/microsoft.powershell.management/get-service) cmdlets simultaneamente usando o pool de espaço de execução remoto.</span><span class="sxs-lookup"><span data-stu-id="2d09c-110">Running the [Get-Process](/powershell/module/Microsoft.PowerShell.Management/Get-Process) and [Get-Service](/powershell/module/microsoft.powershell.management/get-service) cmdlets concurrently by using the remote runspace pool.</span></span>
+- <span data-ttu-id="c5339-110">A executar o [Get-Process](/powershell/module/Microsoft.PowerShell.Management/Get-Process) e [Get-Service](/powershell/module/microsoft.powershell.management/get-service) cmdlets simultaneamente usando o pool de espaço de execução remoto.</span><span class="sxs-lookup"><span data-stu-id="c5339-110">Running the [Get-Process](/powershell/module/Microsoft.PowerShell.Management/Get-Process) and [Get-Service](/powershell/module/microsoft.powershell.management/get-service) cmdlets concurrently by using the remote runspace pool.</span></span>
 
-- <span data-ttu-id="2d09c-111">A fechar o conjunto de espaço de execução remoto para libera a conexão remota.</span><span class="sxs-lookup"><span data-stu-id="2d09c-111">Closing the remote runspace pool to release the remote connection.</span></span>
+- <span data-ttu-id="c5339-111">A fechar o conjunto de espaço de execução remoto para libera a conexão remota.</span><span class="sxs-lookup"><span data-stu-id="c5339-111">Closing the remote runspace pool to release the remote connection.</span></span>
 
-## <a name="example"></a><span data-ttu-id="2d09c-112">Exemplo</span><span class="sxs-lookup"><span data-stu-id="2d09c-112">Example</span></span>
+## <a name="example"></a><span data-ttu-id="c5339-112">Exemplo</span><span class="sxs-lookup"><span data-stu-id="c5339-112">Example</span></span>
 
- <span data-ttu-id="2d09c-113">Este exemplo mostra como construir um conjunto de espaço de execução remoto e como executar vários comandos em simultâneo ao utilizar este conjunto.</span><span class="sxs-lookup"><span data-stu-id="2d09c-113">This sample shows how to construct a remote runspace pool and how to run multiple commands concurrently by using this pool.</span></span>
+ <span data-ttu-id="c5339-113">Este exemplo mostra como construir um conjunto de espaço de execução remoto e como executar vários comandos em simultâneo ao utilizar este conjunto.</span><span class="sxs-lookup"><span data-stu-id="c5339-113">This sample shows how to construct a remote runspace pool and how to run multiple commands concurrently by using this pool.</span></span>
 
 ```csharp
 namespace Samples
@@ -132,4 +132,4 @@ namespace Samples
 }
 ```
 
-## <a name="see-also"></a><span data-ttu-id="2d09c-114">Veja Também</span><span class="sxs-lookup"><span data-stu-id="2d09c-114">See Also</span></span>
+## <a name="see-also"></a><span data-ttu-id="c5339-114">Veja Também</span><span class="sxs-lookup"><span data-stu-id="c5339-114">See Also</span></span>

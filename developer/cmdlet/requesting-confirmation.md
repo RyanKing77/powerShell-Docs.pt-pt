@@ -9,24 +9,24 @@ ms.topic: article
 ms.assetid: 4468066f-6759-402f-84db-0d8303cfd5cb
 caps.latest.revision: 7
 ms.openlocfilehash: c5deaa9bb0dd9621b6f03aeb188cf76ed35dff6c
-ms.sourcegitcommit: caac7d098a448232304c9d6728e7340ec7517a71
+ms.sourcegitcommit: e7445ba8203da304286c591ff513900ad1c244a4
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 03/16/2019
-ms.locfileid: "58054956"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62067506"
 ---
-# <a name="requesting-confirmation"></a><span data-ttu-id="201c2-102">Requesting Confirmation (Pedir Confirmação)</span><span class="sxs-lookup"><span data-stu-id="201c2-102">Requesting Confirmation</span></span>
+# <a name="requesting-confirmation"></a><span data-ttu-id="78d91-102">Requesting Confirmation (Pedir Confirmação)</span><span class="sxs-lookup"><span data-stu-id="78d91-102">Requesting Confirmation</span></span>
 
-<span data-ttu-id="201c2-103">Esta secção descreve as mensagens de confirmação que podem ser apresentadas antes de um cmdlet, função, ou fornecedor realiza uma ação.</span><span class="sxs-lookup"><span data-stu-id="201c2-103">This section discusses confirmation messages that can be displayed before a cmdlet, function, or provider performs an action.</span></span>
+<span data-ttu-id="78d91-103">Esta secção descreve as mensagens de confirmação que podem ser apresentadas antes de um cmdlet, função, ou fornecedor realiza uma ação.</span><span class="sxs-lookup"><span data-stu-id="78d91-103">This section discusses confirmation messages that can be displayed before a cmdlet, function, or provider performs an action.</span></span>
 
-## <a name="in-this-section"></a><span data-ttu-id="201c2-104">Nesta Secção</span><span class="sxs-lookup"><span data-stu-id="201c2-104">In This Section</span></span>
+## <a name="in-this-section"></a><span data-ttu-id="78d91-104">Nesta Secção</span><span class="sxs-lookup"><span data-stu-id="78d91-104">In This Section</span></span>
 
-<span data-ttu-id="201c2-105">[Pedir confirmação de processo para comandos](./requesting-confirmation-from-cmdlets.md) explica o processo que cmdlets e provedores de funções tem de seguir para solicitar uma confirmação antes de eles fazer uma alteração no sistema.</span><span class="sxs-lookup"><span data-stu-id="201c2-105">[Requesting Confirmation Process for Commands](./requesting-confirmation-from-cmdlets.md) Discusses the process that cmdlets, functions, and providers must follow to request a confirmation before they make a change to the system.</span></span>
+<span data-ttu-id="78d91-105">[Pedir confirmação de processo para comandos](./requesting-confirmation-from-cmdlets.md) explica o processo que cmdlets e provedores de funções tem de seguir para solicitar uma confirmação antes de eles fazer uma alteração no sistema.</span><span class="sxs-lookup"><span data-stu-id="78d91-105">[Requesting Confirmation Process for Commands](./requesting-confirmation-from-cmdlets.md) Discusses the process that cmdlets, functions, and providers must follow to request a confirmation before they make a change to the system.</span></span>
 
-<span data-ttu-id="201c2-106">[A confirmação de solicitar aos utilizadores](./users-requesting-confirmation.md) discute como os utilizadores podem executar um cmdlet, função ou o fornecedor de confirmação de pedido quando o [System.Management.Automation.Cmdlet.ShouldProcess](/dotnet/api/System.Management.Automation.Cmdlet.ShouldProcess) método é chamado.</span><span class="sxs-lookup"><span data-stu-id="201c2-106">[Users Requesting Confirmation](./users-requesting-confirmation.md) Discusses how users can make a cmdlet, function, or provider request confirmation when the [System.Management.Automation.Cmdlet.ShouldProcess](/dotnet/api/System.Management.Automation.Cmdlet.ShouldProcess) method is called.</span></span>
+<span data-ttu-id="78d91-106">[A confirmação de solicitar aos utilizadores](./users-requesting-confirmation.md) discute como os utilizadores podem executar um cmdlet, função ou o fornecedor de confirmação de pedido quando o [System.Management.Automation.Cmdlet.ShouldProcess](/dotnet/api/System.Management.Automation.Cmdlet.ShouldProcess) método é chamado.</span><span class="sxs-lookup"><span data-stu-id="78d91-106">[Users Requesting Confirmation](./users-requesting-confirmation.md) Discusses how users can make a cmdlet, function, or provider request confirmation when the [System.Management.Automation.Cmdlet.ShouldProcess](/dotnet/api/System.Management.Automation.Cmdlet.ShouldProcess) method is called.</span></span>
 
-<span data-ttu-id="201c2-107">[Mensagens de confirmação](./confirmation-messages.md) fornece exemplos das mensagens de confirmação diferentes que podem ser apresentados.</span><span class="sxs-lookup"><span data-stu-id="201c2-107">[Confirmation Messages](./confirmation-messages.md) Provides samples of the different confirmation messages that can be displayed.</span></span>
+<span data-ttu-id="78d91-107">[Mensagens de confirmação](./confirmation-messages.md) fornece exemplos das mensagens de confirmação diferentes que podem ser apresentados.</span><span class="sxs-lookup"><span data-stu-id="78d91-107">[Confirmation Messages](./confirmation-messages.md) Provides samples of the different confirmation messages that can be displayed.</span></span>
 
-## <a name="see-also"></a><span data-ttu-id="201c2-108">Veja Também</span><span class="sxs-lookup"><span data-stu-id="201c2-108">See Also</span></span>
+## <a name="see-also"></a><span data-ttu-id="78d91-108">Veja Também</span><span class="sxs-lookup"><span data-stu-id="78d91-108">See Also</span></span>
 
-[<span data-ttu-id="201c2-109">Escrever um Cmdlet do Windows PowerShell</span><span class="sxs-lookup"><span data-stu-id="201c2-109">Writing a Windows PowerShell Cmdlet</span></span>](./writing-a-windows-powershell-cmdlet.md)
+[<span data-ttu-id="78d91-109">Escrever um Cmdlet do Windows PowerShell</span><span class="sxs-lookup"><span data-stu-id="78d91-109">Writing a Windows PowerShell Cmdlet</span></span>](./writing-a-windows-powershell-cmdlet.md)
