@@ -9,11 +9,11 @@ ms.topic: article
 ms.assetid: 0f96f4f5-8bd5-43ed-95e7-a7358115999a
 caps.latest.revision: 11
 ms.openlocfilehash: 1e0a1b2d20853650328b8cfd1513a08f7e167cd6
-ms.sourcegitcommit: b6871f21bd666f9cd71dd336bb3f844cf472b56c
+ms.sourcegitcommit: e7445ba8203da304286c591ff513900ad1c244a4
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 02/03/2019
-ms.locfileid: "56846222"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62065772"
 ---
 # <a name="listitem-element-for-listitems-for-listcontrol-format"></a>ListItem Element for ListItems for ListControl (Format) (Elemento ListItem para ListItems para ListControl [Formatação])
 
@@ -33,7 +33,7 @@ O elemento (formato) ViewDefinitions elemento (formato) vista elemento (formato)
 </ListItem>
 ```
 
-## <a name="attributes-and-elements"></a>Atributos e Elementos
+## <a name="attributes-and-elements"></a>Atributos e elementos
 
 As secções seguintes descrevem os atributos, a elementos filho e o elemento principal do `ListItem` elemento. Pode ser especificado apenas uma propriedade ou script.
 
@@ -41,7 +41,7 @@ As secções seguintes descrevem os atributos, a elementos filho e o elemento pr
 
 Nenhum
 
-### <a name="child-elements"></a>Elementos Subordinados
+### <a name="child-elements"></a>Elementos subordinados
 
 |Elemento|Descrição|
 |-------------|-----------------|
@@ -51,7 +51,7 @@ Nenhum
 |[Elemento de PropertyName para ListItem para ListControl (formato)](./propertyname-element-for-listitem-for-listcontrol-format.md)|Elemento opcional.<br /><br /> Especifica a propriedade de .NET cujo valor é apresentado na linha.|
 |[Elemento de ScriptBlock para ListItem para ListControl (formato)](./scriptblock-element-for-listitem-for-listcontrol-format.md)|Elemento opcional.<br /><br /> Especifica o script cujo valor é apresentado na linha.|
 
-### <a name="parent-elements"></a>Elementos Principais
+### <a name="parent-elements"></a>Elementos principais
 
 |Elemento|Descrição|
 |-------------|-----------------|

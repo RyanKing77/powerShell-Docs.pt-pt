@@ -9,11 +9,11 @@ ms.topic: article
 ms.assetid: 2edac16c-0b30-4985-ac84-0821aa9a9f6d
 caps.latest.revision: 12
 ms.openlocfilehash: bd0f7ca4de8dede97d1553cd62884ea45876e0c7
-ms.sourcegitcommit: b6871f21bd666f9cd71dd336bb3f844cf472b56c
+ms.sourcegitcommit: e7445ba8203da304286c591ff513900ad1c244a4
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 02/03/2019
-ms.locfileid: "56850492"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62066673"
 ---
 # <a name="customcontrol-element-for-view-format"></a>CustomControl Element for View (Format) (Elemento CustomControl para View [Formatação])
 
@@ -29,7 +29,7 @@ O elemento (formato) ViewDefinitions elemento (formato) vista elemento (formato)
 </CustomControl>
 ```
 
-## <a name="attributes-and-elements"></a>Atributos e Elementos
+## <a name="attributes-and-elements"></a>Atributos e elementos
 
 As secções seguintes descrevem os atributos e elementos filho e o elemento principal do `CustomControl` elemento. Tem de especificar um elemento subordinado.
 
@@ -37,13 +37,13 @@ As secções seguintes descrevem os atributos e elementos filho e o elemento pri
 
 Nenhum.
 
-### <a name="child-elements"></a>Elementos Subordinados
+### <a name="child-elements"></a>Elementos subordinados
 
 |Elemento|Descrição|
 |-------------|-----------------|
 |[Elemento de CustomEntries para CustomControl para exibição (formato)](./customentries-element-for-customcontrol-for-view-format.md)|Elemento necessário.<br /><br /> Fornece definições de vista do controle personalizado.|
 
-### <a name="parent-elements"></a>Elementos Principais
+### <a name="parent-elements"></a>Elementos principais
 
 |Elemento|Descrição|
 |-------------|-----------------|
@@ -53,7 +53,7 @@ Nenhum.
 
 Na maioria dos casos, apenas uma definição é necessária para cada modo de exibição control, mas é possível fornecer várias definições, se pretender utilizar a mesma vista para apresentar diferentes objetos do .NET. Nesses casos, pode fornecer uma definição de separado para cada objeto ou conjunto de objetos.
 
-## <a name="see-also"></a>Consulte Também
+## <a name="see-also"></a>Veja Também
 
 [Elemento de CustomEntries para CustomControl para exibição (formato)](./customentries-element-for-customcontrol-for-view-format.md)
 

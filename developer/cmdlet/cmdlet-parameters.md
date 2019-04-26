@@ -17,11 +17,11 @@ helpviewer_keywords:
 ms.assetid: 3f1cca5f-5b95-4bce-94a6-a22db1aefd47
 caps.latest.revision: 23
 ms.openlocfilehash: 914a10907bcf980eed8d7e2f819c382fe6b341ad
-ms.sourcegitcommit: b6871f21bd666f9cd71dd336bb3f844cf472b56c
+ms.sourcegitcommit: e7445ba8203da304286c591ff513900ad1c244a4
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 02/03/2019
-ms.locfileid: "56845305"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62068407"
 ---
 # <a name="cmdlet-parameters"></a>Cmdlet Parameters (Parâmetros de Cmdlets)
 
@@ -49,11 +49,11 @@ Os parâmetros de cmdlet fornecem o mecanismo que permite que um cmdlet aceitar 
 
 [Parâmetros de filtro de entrada](./input-filter-parameters.md) Discusses a `Filter`, `Include`, e `Exclude` parâmetros filtrar o conjunto de objetos de entrada que afeta o cmdlet.
 
-## <a name="related-sections"></a>Secções Relacionadas
+## <a name="related-sections"></a>Secções relacionadas
 
 [Como validar a entrada de parâmetro](./how-to-validate-parameter-input.md)
 
-## <a name="see-also"></a>Consulte Também
+## <a name="see-also"></a>Veja Também
 
 [Declaração de atributo de parâmetro](./parameter-attribute-declaration.md)
 

@@ -9,11 +9,11 @@ ms.topic: article
 ms.assetid: 9e5d4cab-6d93-4d59-80cf-9ca0c0633309
 caps.latest.revision: 6
 ms.openlocfilehash: deb77960ac2962f1cf7c51274e4b18bbc91f5fad
-ms.sourcegitcommit: b6871f21bd666f9cd71dd336bb3f844cf472b56c
+ms.sourcegitcommit: e7445ba8203da304286c591ff513900ad1c244a4
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 02/03/2019
-ms.locfileid: "56846089"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62066078"
 ---
 # <a name="enumeratecollection-element-for-expressionbinding-for-controls-for-view-format"></a>EnumerateCollection Element for ExpressionBinding for Controls for View (Format) (Elemento EnumerateCollection para ExpressionBinding para Controls para View [Formatação])
 
@@ -27,7 +27,7 @@ Configuração elemento (formato) ViewDefinitions elemento (formato) vista eleme
 <EnumerateCollection/>
 ```
 
-## <a name="attributes-and-elements"></a>Atributos e Elementos
+## <a name="attributes-and-elements"></a>Atributos e elementos
 
 As secções seguintes descrevem os atributos e elementos filho e o elemento principal do `EnumerateCollection` elemento.
 
@@ -35,11 +35,11 @@ As secções seguintes descrevem os atributos e elementos filho e o elemento pri
 
 Nenhum.
 
-### <a name="child-elements"></a>Elementos Subordinados
+### <a name="child-elements"></a>Elementos subordinados
 
 Nenhum.
 
-### <a name="parent-elements"></a>Elementos Principais
+### <a name="parent-elements"></a>Elementos principais
 
 |Elemento|Descrição|
 |-------------|-----------------|

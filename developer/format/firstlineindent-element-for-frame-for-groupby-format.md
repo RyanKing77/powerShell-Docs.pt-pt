@@ -9,11 +9,11 @@ ms.topic: article
 ms.assetid: 33be3b9e-53c8-433f-8c11-c65b0d46744c
 caps.latest.revision: 6
 ms.openlocfilehash: 9ba6fc1b9924a4b0d5b56ee15290a2293217403c
-ms.sourcegitcommit: b6871f21bd666f9cd71dd336bb3f844cf472b56c
+ms.sourcegitcommit: e7445ba8203da304286c591ff513900ad1c244a4
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 02/03/2019
-ms.locfileid: "56848602"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62065857"
 ---
 # <a name="firstlineindent-element-for-frame-for-groupby-format"></a>FirstLineIndent Element for Frame for GroupBy (Format) (Elemento FirstLineIndent para Frame para GroupBy [Formatação])
 
@@ -27,7 +27,7 @@ O elemento (formato) ViewDefinitions elemento (formato) vista elemento (formato)
 <FirstLineIndent>NumberOfCharactersToShift</FirstLineIndent>
 ```
 
-## <a name="attributes-and-elements"></a>Atributos e Elementos
+## <a name="attributes-and-elements"></a>Atributos e elementos
 
 As secções seguintes descrevem os atributos e elemento pai de elementos filho do `FirstLineIndent` elemento.
 
@@ -35,17 +35,17 @@ As secções seguintes descrevem os atributos e elemento pai de elementos filho 
 
 Nenhum.
 
-### <a name="child-elements"></a>Elementos Subordinados
+### <a name="child-elements"></a>Elementos subordinados
 
 Nenhum.
 
-### <a name="parent-elements"></a>Elementos Principais
+### <a name="parent-elements"></a>Elementos principais
 
 |Elemento|Descrição|
 |-------------|-----------------|
 |[Elemento de quadro para CustomItem para GroupBy (formato)](./frame-element-for-customitem-for-groupby-format.md)|Define a forma como os dados são apresentados, tais como mudar os dados para a esquerda ou direita.|
 
-## <a name="text-value"></a>Valor do Texto
+## <a name="text-value"></a>Valor de texto
 
 Especifique o número de carateres que pretende mudar a primeira linha dos dados.
 

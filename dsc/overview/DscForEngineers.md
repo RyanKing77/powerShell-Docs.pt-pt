@@ -3,11 +3,11 @@ ms.date: 10/13/2017
 keywords: DSC, powershell, configuração, a configuração
 title: Descrição Geral do Desired State Configuration para Engenheiros
 ms.openlocfilehash: 0e599c2218cd2df29dbd0529006be5e1ef17ce5f
-ms.sourcegitcommit: 00ff76d7d9414fe585c04740b739b9cf14d711e1
+ms.sourcegitcommit: e7445ba8203da304286c591ff513900ad1c244a4
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 12/14/2018
-ms.locfileid: "53405367"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62079987"
 ---
 # <a name="desired-state-configuration-overview-for-engineers"></a>Descrição Geral do Desired State Configuration para Engenheiros
 
@@ -130,7 +130,7 @@ Independentemente do que nós recebem as diferentes partes desta configuração,
 Pode utilizar dados de configuração para apontar a todos os três elementos em direção à mesma máquina para um ambiente de desenvolvimento, separado horizontalmente os três elementos para três máquinas diferentes para um ambiente de teste e, finalmente, para todos os servidores de produção para o ambiente de produção.
 Para implementar em diferentes ambientes, pode invocar **Start-dscconfiguration para** com os dados de configuração correto para o ambiente de destino.
 
-## <a name="see-also"></a>Consulte Também
+## <a name="see-also"></a>Veja Também
 
 [Configurações](../configurations/configurations.md)
 

@@ -1,15 +1,15 @@
 ---
-title: Como replicar a experiência ISE no Visual Studio Code
-description: Como replicar a experiência ISE no Visual Studio Code
+title: Como replicar a experiência do ISE no Visual Studio Code
+description: Como replicar a experiência do ISE no Visual Studio Code
 ms.date: 08/06/2018
 ms.openlocfilehash: 983da850c13d72bcdc7b2d33970c6e9e06b3d869
-ms.sourcegitcommit: 9df29dfc637191b62ca591893c251c1e02d4eb4c
+ms.sourcegitcommit: e7445ba8203da304286c591ff513900ad1c244a4
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 01/04/2019
-ms.locfileid: "54012488"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62058527"
 ---
-# <a name="how-to-replicate-the-ise-experience-in-visual-studio-code"></a>Como replicar a experiência ISE no Visual Studio Code
+# <a name="how-to-replicate-the-ise-experience-in-visual-studio-code"></a>Como replicar a experiência do ISE no Visual Studio Code
 
 Enquanto a extensão de PowerShell para VSCode não procura paridade de funcionalidades completo com o ISE do PowerShell, existem recursos no local para fazer com que a experiência de VSCode mais natural para os usuários de ISE.
 
@@ -19,9 +19,9 @@ Este documento tenta definições de lista que pode configurar no VSCode para to
 
 | Função                              | Enlace de ISE                  | Enlace de VSCode                              |
 | ----------------                      | -----------                  | --------------                              |
-| Depurador de interrupção e break          | <kbd>CTRL</kbd>+<kbd>B</kbd> | <kbd>F6</kbd>                               |
+| Depurador de interrupção e break          | <kbd>Ctrl</kbd>+<kbd>B</kbd> | <kbd>F6</kbd>                               |
 | Executar o texto realçado/linha atual | <kbd>F8</kbd>                | <kbd>F8</kbd>                               |
-| Lista de fragmentos disponíveis               | <kbd>CTRL</kbd>+<kbd>J</kbd> | <kbd>CTRL</kbd>+<kbd>Alt</kbd>+<kbd>J</kbd> |
+| Lista de fragmentos disponíveis               | <kbd>Ctrl</kbd>+<kbd>J</kbd> | <kbd>Ctrl</kbd>+<kbd>Alt</kbd>+<kbd>J</kbd> |
 
 ### <a name="custom-key-bindings"></a>Enlaces de tecla personalizados
 

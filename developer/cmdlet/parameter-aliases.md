@@ -9,11 +9,11 @@ ms.topic: article
 ms.assetid: 7c9096a1-46fa-48ea-9b8a-a583484b9d68
 caps.latest.revision: 13
 ms.openlocfilehash: 6545e71ea18d10621ee9c203e70f64dece460ef5
-ms.sourcegitcommit: b6871f21bd666f9cd71dd336bb3f844cf472b56c
+ms.sourcegitcommit: e7445ba8203da304286c591ff513900ad1c244a4
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 02/03/2019
-ms.locfileid: "56844934"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62067591"
 ---
 # <a name="parameter-aliases"></a>Parameter Aliases (Aliases de Parâmetros)
 
@@ -48,7 +48,7 @@ public string UserName
 private string userName;
 ```
 
-## <a name="see-also"></a>Consulte Também
+## <a name="see-also"></a>Veja Também
 
 [Nomes de parâmetros comuns](./common-parameter-names.md)
 

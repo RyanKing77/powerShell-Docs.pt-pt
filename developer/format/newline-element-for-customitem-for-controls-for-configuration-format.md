@@ -9,11 +9,11 @@ ms.topic: article
 ms.assetid: 57fcd7ba-44bb-403f-9747-5b429ccb70d0
 caps.latest.revision: 6
 ms.openlocfilehash: 58b6b6be0191ae3feec3d40b85a0de3699870902
-ms.sourcegitcommit: b6871f21bd666f9cd71dd336bb3f844cf472b56c
+ms.sourcegitcommit: e7445ba8203da304286c591ff513900ad1c244a4
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 02/03/2019
-ms.locfileid: "56847076"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62065098"
 ---
 # <a name="newline-element-for-customitem-for-controls-for-configuration-format"></a>NewLine Element for CustomItem for Controls for Configuration (Format) (Elemento NewLine para CustomItem para Controls para Configuration [Formatação])
 
@@ -27,7 +27,7 @@ Elemento de controles de elemento (formato) de configuração do elemento de con
 <NewLine/>
 ```
 
-## <a name="attributes-and-elements"></a>Atributos e Elementos
+## <a name="attributes-and-elements"></a>Atributos e elementos
 
 As secções seguintes descrevem os atributos e elementos filho e o elemento principal do `NewLine` elemento.
 
@@ -35,11 +35,11 @@ As secções seguintes descrevem os atributos e elementos filho e o elemento pri
 
 Nenhum.
 
-### <a name="child-elements"></a>Elementos Subordinados
+### <a name="child-elements"></a>Elementos subordinados
 
 Nenhum.
 
-### <a name="parent-elements"></a>Elementos Principais
+### <a name="parent-elements"></a>Elementos principais
 
 |Elemento|Descrição|
 |-------------|-----------------|

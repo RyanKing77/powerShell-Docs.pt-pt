@@ -9,11 +9,11 @@ ms.topic: article
 ms.assetid: 2d4303c5-b451-4ccb-9831-b17a17ceac20
 caps.latest.revision: 16
 ms.openlocfilehash: 651de5d3bc2619f20438f3951ac5a8c4b0bf46d4
-ms.sourcegitcommit: b6871f21bd666f9cd71dd336bb3f844cf472b56c
+ms.sourcegitcommit: e7445ba8203da304286c591ff513900ad1c244a4
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 02/03/2019
-ms.locfileid: "56848560"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62066724"
 ---
 # <a name="creating-a-wide-view"></a>Creating a Wide View (Criar uma Vista Ampla)
 
@@ -256,7 +256,7 @@ O seguinte elemento XML pode ser utilizados para chamar o `ToString` método:
 
 - O [ScriptBlock](./scriptblock-element-for-wideitem-for-widecontrol-format.md) elemento (não mostrado) Especifica o script cujo valor é apresentado pela vista. Tem de especificar um script ou uma propriedade, mas não é possível especificar ambos.
 
-## <a name="see-also"></a>Consulte Também
+## <a name="see-also"></a>Veja Também
 
 [Vista alargada (básico)](./wide-view-basic.md)
 

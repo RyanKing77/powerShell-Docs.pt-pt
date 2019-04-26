@@ -9,11 +9,11 @@ ms.topic: article
 ms.assetid: 6215a651-100c-49bb-863f-edc6984dd634
 caps.latest.revision: 7
 ms.openlocfilehash: 61807d6a2ce076f1bca1d1329e44af8e943b97ca
-ms.sourcegitcommit: b6871f21bd666f9cd71dd336bb3f844cf472b56c
+ms.sourcegitcommit: e7445ba8203da304286c591ff513900ad1c244a4
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 02/03/2019
-ms.locfileid: "56846152"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62067523"
 ---
 # <a name="registering-cmdlets"></a>Registering Cmdlets (Registar Cmdlets)
 
@@ -27,6 +27,6 @@ Os tópicos nesta secção descrevem como utilizar módulos e snap-ins para disp
 
 [Como criar um Snap-in do PowerShell Windows](./how-to-create-a-windows-powershell-snap-in.md) descreve como registar os cmdlets com o snap-ins.
 
-## <a name="see-also"></a>Consulte Também
+## <a name="see-also"></a>Veja Também
 
 [Escrever um Cmdlet do Windows PowerShell](./writing-a-windows-powershell-cmdlet.md)

@@ -9,11 +9,11 @@ ms.topic: article
 ms.assetid: 61b7773a-c346-4835-a928-7212dc4c85bc
 caps.latest.revision: 7
 ms.openlocfilehash: 259de341fd2fcce2b0c4629f806b4348cba1ff2c
-ms.sourcegitcommit: b6871f21bd666f9cd71dd336bb3f844cf472b56c
+ms.sourcegitcommit: e7445ba8203da304286c591ff513900ad1c244a4
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 02/03/2019
-ms.locfileid: "56846922"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62067098"
 ---
 # <a name="windows-powershell-error-reporting"></a>Windows PowerShell Error Reporting (Comunicação de Erros do Windows PowerShell)
 
@@ -33,6 +33,6 @@ Os tópicos nesta secção descrevem como cmdlets relatar erros.
 
 [Interpretar os objetos de ErrorRecord](./interpreting-errorrecord-objects.md) discute como os objetos de ErrorRecord são interpretados.
 
-## <a name="see-also"></a>Consulte Também
+## <a name="see-also"></a>Veja Também
 
 [Escrever um Cmdlet do Windows PowerShell](./writing-a-windows-powershell-cmdlet.md)

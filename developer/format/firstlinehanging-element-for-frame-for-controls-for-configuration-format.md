@@ -9,11 +9,11 @@ ms.topic: article
 ms.assetid: 679c8bcb-b49d-4bb4-91f5-ea1af6c217e3
 caps.latest.revision: 8
 ms.openlocfilehash: 4553f95e48a2b1440c00b4951bea56376b00628a
-ms.sourcegitcommit: b6871f21bd666f9cd71dd336bb3f844cf472b56c
+ms.sourcegitcommit: e7445ba8203da304286c591ff513900ad1c244a4
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 02/03/2019
-ms.locfileid: "56850548"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62065891"
 ---
 # <a name="firstlinehanging-element-for-frame-for-controls-for-configuration-format"></a>FirstLineHanging Element for Frame for Controls for Configuration (Format) (Elemento FirstLineHanging para Frame para Controls para Configuration [Formatação])
 
@@ -27,7 +27,7 @@ Elemento de controles de elemento (formato) de configuração do elemento de con
 <FirstLineHanging>NumberOfCharactersToShift</FirstLineHanging>
 ```
 
-## <a name="attributes-and-elements"></a>Atributos e Elementos
+## <a name="attributes-and-elements"></a>Atributos e elementos
 
 As secções seguintes descrevem os atributos e elemento pai de elementos filho do `FirstLineHanging` elemento.
 
@@ -35,17 +35,17 @@ As secções seguintes descrevem os atributos e elemento pai de elementos filho 
 
 Nenhum.
 
-### <a name="child-elements"></a>Elementos Subordinados
+### <a name="child-elements"></a>Elementos subordinados
 
 Nenhum.
 
-### <a name="parent-elements"></a>Elementos Principais
+### <a name="parent-elements"></a>Elementos principais
 
 |Elemento|Descrição|
 |-------------|-----------------|
 |[Elemento de quadro para CustomItem para controles de configuração (formato)](./frame-element-for-customitem-for-controls-for-configuration-format.md)|Define a forma como os dados são apresentados, tais como mudar os dados para a esquerda ou direita.|
 
-## <a name="text-value"></a>Valor do Texto
+## <a name="text-value"></a>Valor de texto
 
 Especifique o número de carateres que pretende mudar a primeira linha dos dados.
 

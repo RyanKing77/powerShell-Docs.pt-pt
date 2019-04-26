@@ -3,11 +3,11 @@ ms.date: 06/12/2017
 keywords: DSC, powershell, configuração, a configuração
 title: DSC para Linux nxService recursos
 ms.openlocfilehash: fe8043995205649378725f2ab0a78e19313739c9
-ms.sourcegitcommit: e04292a9c10de9a8391d529b7f7aa3753b362dbe
+ms.sourcegitcommit: e7445ba8203da304286c591ff513900ad1c244a4
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 01/04/2019
-ms.locfileid: "54048384"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62077698"
 ---
 # <a name="dsc-for-linux-nxservice-resource"></a>DSC para Linux nxService recursos
 
@@ -31,7 +31,7 @@ nxService <string> #ResourceName
 | Propriedade | Descrição |
 |---|---|
 | Nome| O nome do serviço/daemon para configurar.|
-| Controlador| O tipo de controlador de serviço a utilizar quando configurar o serviço.|
+| controlador| O tipo de controlador de serviço a utilizar quando configurar o serviço.|
 | Ativado| Indica se o serviço é iniciado no arranque.|
 | Estado| Indica se o serviço está em execução. Defina esta propriedade a "Stopped" para se certificar de que o serviço não está em execução. Defini-lo como "Em execução" para se certificar de que o serviço não está em execução.|
 | DependsOn | Indica que a configuração de outro recurso deve ser executado antes deste recurso está configurado. Por exemplo, se o **ID** do recurso de bloco de script de configuração que pretende executar primeiro é **ResourceName** e seu tipo é **ResourceType**, a sintaxe para usar isso a propriedade é `DependsOn = "[ResourceType]ResourceName"`.|

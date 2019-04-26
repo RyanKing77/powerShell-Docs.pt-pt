@@ -9,11 +9,11 @@ ms.topic: article
 ms.assetid: e620bf6d-76be-47b0-a7a8-f43418f30c60
 caps.latest.revision: 6
 ms.openlocfilehash: b81a32b867795ae51c3f5308c2f82c31ed2747fa
-ms.sourcegitcommit: b6871f21bd666f9cd71dd336bb3f844cf472b56c
+ms.sourcegitcommit: e7445ba8203da304286c591ff513900ad1c244a4
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 02/03/2019
-ms.locfileid: "56848469"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62080786"
 ---
 # <a name="adding-resources-to-a-management-odata-web-service"></a>Adding Resources to a Management OData Web Service (Adicionar Recursos a um Serviço Web OData de Gestão)
 
@@ -51,7 +51,7 @@ O primeiro passo é importar o esquema de ponto de final de OData de gestão exi
 
 3. Certifique-se de que os módulos do PowerShell de Windows instalado está selecionado e selecione o Hyper-V na lista pendente. Clique em **seguinte**. Clique em **Seguinte**.
 
-4. Na **substantivo do Cmdlet** lista, selecione **VM**. Clique em **Seguinte**
+4. Na **substantivo do Cmdlet** lista, selecione **VM**. Clique em **seguinte**
 
 5. Neste exemplo, ligamos apenas os Get e Delete comandos com cmdlets. Limpar o **criar** e **UPDATE** caixas de seleção e certifique-se a **obter** e **eliminar** caixas de verificação são verificadas. Certifique-se de que o `Get-VM` cmdlet está selecionado para **Obtenha**e o `Remove-VM` cmdlet está selecionado para **eliminar**.
 

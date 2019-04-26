@@ -9,11 +9,11 @@ ms.topic: article
 ms.assetid: 2d342f91-23e0-467f-8de2-f9657d820693
 caps.latest.revision: 6
 ms.openlocfilehash: 157cd64e286392f3fd770e1e34542682b1e63625
-ms.sourcegitcommit: b6871f21bd666f9cd71dd336bb3f844cf472b56c
+ms.sourcegitcommit: e7445ba8203da304286c591ff513900ad1c244a4
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 02/03/2019
-ms.locfileid: "56849960"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62067625"
 ---
 # <a name="modules-and-snap-ins"></a>Modules and Snap-ins (Módulos e Snap-ins)
 
@@ -27,7 +27,7 @@ Recomendamos que utilize módulos como o método de entrega para a adição de c
 
 - Snap-ins pode ser utilizados apenas para adicionar os cmdlets e provedores à sessão.
 
-## <a name="see-also"></a>Consulte Também
+## <a name="see-also"></a>Veja Também
 
 [Escrever um módulo do Windows PowerShell](../module/writing-a-windows-powershell-module.md)
 
