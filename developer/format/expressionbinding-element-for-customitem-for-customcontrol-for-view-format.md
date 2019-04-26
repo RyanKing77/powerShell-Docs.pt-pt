@@ -9,11 +9,11 @@ ms.topic: article
 ms.assetid: 7f5ebea5-ee9c-4b90-a116-12a1daa28fc7
 caps.latest.revision: 7
 ms.openlocfilehash: 226bbea1d7613ad3099e05e8caa9817ff16c1f42
-ms.sourcegitcommit: b6871f21bd666f9cd71dd336bb3f844cf472b56c
+ms.sourcegitcommit: e7445ba8203da304286c591ff513900ad1c244a4
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 02/03/2019
-ms.locfileid: "56850093"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62065925"
 ---
 # <a name="expressionbinding-element-for-customitem-for-customcontrol-for-view-format"></a>ExpressionBinding Element for CustomItem for CustomControl for View (Format) (Elemento ExpressionBinding para CustomItem para CustomControl para View [Formatação])
 
@@ -34,7 +34,7 @@ O elemento (formato) ViewDefinitions elemento (formato) vista elemento (formato)
 </ExpressionBinding>
 ```
 
-## <a name="attributes-and-elements"></a>Atributos e Elementos
+## <a name="attributes-and-elements"></a>Atributos e elementos
 
 As secções seguintes descrevem os atributos e elementos filho e o elemento principal do `ExpressionBinding` elemento.
 
@@ -42,7 +42,7 @@ As secções seguintes descrevem os atributos e elementos filho e o elemento pri
 
 Nenhum.
 
-### <a name="child-elements"></a>Elementos Subordinados
+### <a name="child-elements"></a>Elementos subordinados
 
 |Elemento|Descrição|
 |-------------|-----------------|
@@ -53,7 +53,7 @@ Nenhum.
 |[Elemento de PropertyName para ExpressionBinding para CustomControl para exibição (formato)](./propertyname-element-for-expressionbinding-for-customcontrol-for-view-format.md)|Elemento opcional.<br /><br /> Especifica a propriedade de .NET cujo valor é apresentado pelo controle.|
 |[Elemento de ScriptBlock para ExpressionBinding para CustomCustomControl para exibição (formato)](./scriptblock-element-for-expressionbinding-for-customcontrol-for-view-format.md)|Elemento opcional.<br /><br /> Especifica o script cujo valor é apresentado pelo controle.|
 
-### <a name="parent-elements"></a>Elementos Principais
+### <a name="parent-elements"></a>Elementos principais
 
 |Elemento|Descrição|
 |-------------|-----------------|

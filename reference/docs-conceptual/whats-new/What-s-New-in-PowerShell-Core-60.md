@@ -3,11 +3,11 @@ title: Quais são as novidades no PowerShell Core 6.0
 description: Novos recursos e alterações lançadas no PowerShell Core 6.0
 ms.date: 08/06/2018
 ms.openlocfilehash: 83c104d838db9d86fe1d485e92245a9c8f2d2057
-ms.sourcegitcommit: 59e568ac9fa8ba28e2c96932b7c84d4a855fed2f
+ms.sourcegitcommit: e7445ba8203da304286c591ff513900ad1c244a4
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46289247"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62059020"
 ---
 # <a name="whats-new-in-powershell-core-60"></a>Quais são as novidades no PowerShell Core 6.0
 
@@ -39,7 +39,7 @@ PowerShell agora oficialmente suporta o macOS e Linux, incluindo:
 - Red Hat Enterprise Linux 7
 - OpenSUSE 42.2
 - Fedora 25, 26
-- macOS 10.12 +
+- macOS 10.12+
 
 Nossa Comunidade também contribuiu pacotes para as seguintes plataformas, mas não são suportadas oficialmente:
 
@@ -129,7 +129,7 @@ Utiliza o PowerShell Core [.NET Standard][] 2.0 para fornecer a compatibilidade 
 Muitos módulos do PowerShell dependem desses assemblies (normalmente a horas de DLLs), para que o .NET Standard permite-lhes continuar a trabalhar com .NET Core.
 O PowerShell Core também inclui uma heurística para procurar pastas bem conhecidas, como em que a Global Assembly Cache normalmente reside no disco, para encontrar as dependências de DLL do .NET Framework.
 
-Pode saber mais sobre o .NET Standard na [Blog do .NET][], neste [YouTube][] e vídeo, por isso [PERGUNTAS FREQUENTES][] no GitHub.
+Pode saber mais sobre o .NET Standard na [Blog do .NET][], neste [YouTube][] e vídeo, por isso [FAQ][] no GitHub.
 
 Foram efetuados melhores esforços para garantir que os módulos do PowerShell de idioma e "incorporado" (como `Microsoft.PowerShell.Management`, `Microsoft.PowerShell.Utility`, etc.) funcionam da mesma forma que no Windows PowerShell.
 Em muitos casos, com a ajuda da Comunidade, adicionámos novas funcionalidades e correções de erros para esses cmdlets.
@@ -192,7 +192,7 @@ Os seguintes cmdlets são afetados por esta alteração:
 - Import-Csv
 - Out-File
 - SELECT-String
-- Enviar-MailMessage
+- Send-MailMessage
 - Set-Content
 
 Estes cmdlets também foram atualizados para que o `-Encoding` parâmetro universalmente aceita `System.Text.Encoding`.
@@ -215,7 +215,7 @@ Para obter mais informações sobre tarefas do PowerShell, consulte [about_Jobs]
 ## <a name="semantic-versioning"></a>Controle de versão semântica
 
 - Feitas `SemanticVersion` compatível com `SemVer 2.0`. (#5037) (Obrigado [ @iSazonov ](https://github.com/iSazonov)!)
-- Alterar a predefinição `ModuleVersion` no `New-ModuleManifest` para `0.0.1` para alinhar com SemVer. (#4842) (Obrigado [ @LDSpits ](https://github.com/LDSpits))
+- Alterar a predefinição `ModuleVersion` no `New-ModuleManifest` para `0.0.1` para alinhar com SemVer. (#4842) (Thanks [@LDSpits](https://github.com/LDSpits))
 - Adicionado `semver` como um acelerador de tipo para `System.Management.Automation.SemanticVersion`. (#4142) (Graças à [ @oising ](https://github.com/oising)!)
 - Ativada a comparação entre um `SemanticVersion` instância e um `Version` instância construída apenas com `Major` e `Minor` valores de versão.
 
@@ -233,10 +233,10 @@ Para obter mais informações sobre tarefas do PowerShell, consulte [about_Jobs]
 ## <a name="engine-updates"></a>Atualizações de mecanismos
 
 - `$PSVersionTable` tem quatro novas propriedades:
-  - `PSEdition`: Este é definido como `Core` no PowerShell Core e `Desktop` no Windows PowerShell
+  - `PSEdition`: Ele é definido como `Core` no PowerShell Core e `Desktop` no Windows PowerShell
   - `GitCommitId`: Este é o ID de consolidação de Git da ramificação Git ou etiqueta em que o PowerShell foi criado.
     Nas compilações de lançamento, provavelmente será o mesmo que `PSVersion`.
-  - `OS`: Este é uma cadeia de caracteres de versão do SO devolvida pelo `[System.Runtime.InteropServices.RuntimeInformation]::OSDescription`
+  - `OS`: Esta é uma cadeia de caracteres de versão do SO devolvida pelo `[System.Runtime.InteropServices.RuntimeInformation]::OSDescription`
   - `Platform`: Este é devolvido pelo `[System.Environment]::OSVersion.Platform` está definido como `Win32NT` no Windows, `Unix` no macOS, e `Unix` no Linux.
 - Removida a `BuildVersion` propriedade de `$PSVersionTable`.
   Esta propriedade foi fortemente ligada para a versão de compilação do Windows.
@@ -255,12 +255,12 @@ Para obter mais informações sobre tarefas do PowerShell, consulte [about_Jobs]
 ### <a name="new-cmdlets"></a>Novos cmdlets
 
 - Adicione `Get-Uptime` para `Microsoft.PowerShell.Utility`.
-- Adicionar `Remove-Alias` comando. (#5143) (Obrigado [ @PowershellNinja ](https://github.com/PowershellNinja)!)
+- Adicionar `Remove-Alias` comando. (#5143) (Thanks [@PowershellNinja](https://github.com/PowershellNinja)!)
 - Adicionar `Remove-Service` ao módulo de gestão. (#4858) (Obrigado [ @joandrsn ](https://github.com/joandrsn)!)
 
 ### <a name="web-cmdlets"></a>Cmdlets de Web
 
-- Adicione suporte de autenticação de certificado para cmdlets de web. (#4646) (Obrigado [ @markekraus ](https://github.com/markekraus))
+- Adicione suporte de autenticação de certificado para cmdlets de web. (#4646) (Thanks [@markekraus](https://github.com/markekraus))
 - Adicione suporte para cabeçalhos de conteúdo aos cmdlets de web. (#4494 & #4640) (Obrigado [ @markekraus ](https://github.com/markekraus))
 - Adicione suporte a vários cabeçalho ligação aos Cmdlets de Web. (#5265) (Obrigado [ @markekraus ](https://github.com/markekraus)!)
 - Suporte de paginação de cabeçalho de ligação nos cmdlets de web (#3828)
@@ -274,12 +274,12 @@ Para obter mais informações sobre tarefas do PowerShell, consulte [about_Jobs]
 - Adicionar `-SkipHeaderValidation` mudar para cmdlets de web para suportar a adição de cabeçalhos sem validar o valor do cabeçalho. (#4085)
 - Ative web cmdlets não valide o certificado HTTPS do servidor, se necessário.
 - Adicione parâmetros de autenticação aos cmdlets de web. (#5052) (Obrigado [ @markekraus ](https://github.com/markekraus))
-  - Adicionar `-Authentication` que fornece três opções: básico, OAuth e portador.
+  - Adicionar `-Authentication` que fornece três opções: Básico, OAuth e portador.
   - Adicionar `-Token` para obter o portador token OAuth e portador opções.
   - Adicionar `-AllowUnencryptedAuthentication` para ignorar a autenticação que é fornecida para qualquer esquema de transporte que não seja HTTPS.
 - Adicione `-ResponseHeadersVariable` para `Invoke-RestMethod` para ativar a captura de cabeçalhos de resposta. (#4888) (Obrigado [ @markekraus ](https://github.com/markekraus))
 - Corrija os cmdlets de web para incluir a resposta HTTP da exceção, quando o código de estado de resposta não é um sucesso. (#3201)
-- Alterar web cmdlets `UserAgent` partir `WindowsPowerShell` para `PowerShell`. (#4914) (Obrigado [ @markekraus ](https://github.com/markekraus))
+- Alterar web cmdlets `UserAgent` partir `WindowsPowerShell` para `PowerShell`. (#4914) (Thanks [@markekraus](https://github.com/markekraus))
 - Adicionar explícita `ContentType` detecção de `Invoke-RestMethod` (#4692)
 - Corrigir web cmdlets `-SkipHeaderValidation` para trabalhar com cabeçalhos de agente do usuário não padrão. (#4479 & #4512) (Obrigado [ @markekraus ](https://github.com/markekraus))
 
@@ -302,7 +302,7 @@ Para obter mais informações sobre tarefas do PowerShell, consulte [about_Jobs]
 ### <a name="service-cmdlets"></a>Cmdlets de serviço
 
 - Adicionar propriedades `UserName`, `Description`, `DelayedAutoStart`, `BinaryPathName`, e `StartupType` para o `ServiceController` objectos devolvidos pelo `Get-Service`. (#4907) (Obrigado [ @joandrsn ](https://github.com/joandrsn))
-- Adicionar a funcionalidade para definir credenciais no `Set-Service` comando. (#4844) (Obrigado [ @joandrsn ](https://github.com/joandrsn))
+- Adicionar a funcionalidade para definir credenciais no `Set-Service` comando. (#4844) (Thanks [@joandrsn](https://github.com/joandrsn))
 
 ### <a name="other-cmdlets"></a>Outros cmdlets
 
@@ -343,7 +343,7 @@ Para obter mais informações sobre tarefas do PowerShell, consulte [about_Jobs]
 - Permitir Preenchimento automático argumento para `-ExcludeProperty` e `-ExpandProperty` de `Select-Object`. (#3443) (Graças à [ @iSazonov ](https://github.com/iSazonov)!)
 - Corrigir um erro na conclusão de tabulação para tornar `native.exe --<tab>` chamada nativa adicionada a conclusão. (#3633) (Graças à [ @powercode ](https://github.com/powercode)!)
 
-## <a name="breaking-changes"></a>Alterações recentes
+## <a name="breaking-changes"></a>Alterações interruptivas
 
 Introduzimos um número de alterações significativas feitas no PowerShell Core 6.0.
 Para ler mais sobre os mesmos em detalhes, consulte [alterações significativas no PowerShell Core 6.0][breaking-changes].
@@ -355,7 +355,7 @@ Para ler mais sobre os mesmos em detalhes, consulte [alterações significativas
 
 ## <a name="filesystem-updates"></a>Atualizações do sistema de ficheiros
 
-- Ative a utilização do fornecedor de sistema de ficheiros num caminho UNC. (US $4998)
+- Ative a utilização do fornecedor de sistema de ficheiros num caminho UNC. ($4998)
 - `Split-Path` agora funciona com raízes UNC
 - `cd` sem argumentos agora se comporta como `cd ~`
 - Foi corrigido o PowerShell Core para permitir o uso de caminhos que são mais de 260 carateres de comprimento. (#3960)
@@ -379,8 +379,8 @@ Também planejamos expor esses dados de telemetria e as informações que podemo
 Pode encontrar mais informações sobre como utilizamos esses dados desta [mensagem de blogue][telemetry-blog].
 
 [github]: https://github.com/PowerShell/PowerShell
-[.NET core 2.0]: https://docs.microsoft.com/dotnet/core/
-[.NET standard]: https://docs.microsoft.com/dotnet/standard/net-standard
+[.NET Core 2.0]: https://docs.microsoft.com/dotnet/core/
+[.NET Standard]: https://docs.microsoft.com/dotnet/standard/net-standard
 [os_log]: https://developer.apple.com/documentation/os/logging
 [Syslog]: https://en.wikipedia.org/wiki/Syslog
 [ssh-remoting]: ../core-powershell/SSH-Remoting-in-PowerShell-Core.md
@@ -388,10 +388,10 @@ Pode encontrar mais informações sobre como utilizamos esses dados desta [mensa
 [registo de alterações]: https://github.com/PowerShell/PowerShell/tree/master/CHANGELOG.md
 [community-dashboard]: https://aka.ms/PSGitHubBI
 [telemetry-blog]: https://blogs.msdn.microsoft.com/powershell/2017/01/31/powershell-open-source-community-dashboard/
-[.NET standard]: https://docs.microsoft.com/dotnet/standard/net-standard
+[.NET Standard]: https://docs.microsoft.com/dotnet/standard/net-standard
 [Blog do .NET]: https://blogs.msdn.microsoft.com/dotnet/2016/09/26/introducing-net-standard
 [YouTube]: https://www.youtube.com/watch?v=YI4MurjfMn8&list=PLRAdsfhKI4OWx321A_pr-7HhRNk7wOLLY
-[PERGUNTAS FREQUENTES]: https://github.com/dotnet/standard/blob/master/docs/faq.md
+[FAQ]: https://github.com/dotnet/standard/blob/master/docs/faq.md
 [CDXML]: https://msdn.microsoft.com/library/jj542525(v=vs.85).aspx
 [docker-hub]: https://hub.docker.com/r/microsoft/powershell/
 [docker]: https://github.com/PowerShell/PowerShell/tree/master/docker

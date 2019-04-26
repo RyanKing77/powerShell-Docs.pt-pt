@@ -9,11 +9,11 @@ ms.topic: article
 ms.assetid: ac3c0a25-f2ca-4e28-b3dc-9cb06a76d92a
 caps.latest.revision: 11
 ms.openlocfilehash: 7804155bffeb1f0df8339f797bf59f8def56a3fc
-ms.sourcegitcommit: b6871f21bd666f9cd71dd336bb3f844cf472b56c
+ms.sourcegitcommit: e7445ba8203da304286c591ff513900ad1c244a4
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 02/03/2019
-ms.locfileid: "56850884"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62066452"
 ---
 # <a name="customentry-element-for-customentries-for-customcontrol-for-view-format"></a>CustomEntry Element for CustomEntries for CustomControl for View (Format) (Elemento CustomEntry para CustomEntries para CustomControl para View [Formatação])
 
@@ -30,7 +30,7 @@ O elemento (formato) ViewDefinitions elemento (formato) vista elemento (formato)
 </CustomEntry>
 ```
 
-## <a name="attributes-and-elements"></a>Atributos e Elementos
+## <a name="attributes-and-elements"></a>Atributos e elementos
 
 As secções seguintes descrevem os atributos e elementos filho e o elemento principal do `CustomEntry` elemento. Tem de especificar os itens exibidos pela definição.
 
@@ -38,14 +38,14 @@ As secções seguintes descrevem os atributos e elementos filho e o elemento pri
 
 Nenhum.
 
-### <a name="child-elements"></a>Elementos Subordinados
+### <a name="child-elements"></a>Elementos subordinados
 
 |Elemento|Descrição|
 |-------------|-----------------|
 |[Elemento de EntrySelectedBy para CustomEntry para exibição (formato)](./entryselectedby-element-for-customentry-for-customcontrol-for-view-format.md)|Elemento opcional.<br /><br /> Define os tipos do .NET que utilizam a definição de vista do controle personalizado ou a condição que tem de existir para esta definição a utilizar.|
 |[Elemento de CustomItem para CustomEntry para exibição (formato)](./customitem-element-for-customentry-for-customcontrol-for-view-format.md)|Define um controle para a definição de controle personalizado.|
 
-### <a name="parent-elements"></a>Elementos Principais
+### <a name="parent-elements"></a>Elementos principais
 
 |Elemento|Descrição|
 |-------------|-----------------|
@@ -55,7 +55,7 @@ Nenhum.
 
 Na maioria dos casos, apenas uma definição é necessária para cada exibição de controle personalizado, mas é possível ter várias definições, se pretender utilizar a mesma vista para apresentar diferentes objetos do .NET. Nesses casos, pode fornecer uma definição de separado para cada objeto ou conjunto de objetos.
 
-## <a name="see-also"></a>Consulte Também
+## <a name="see-also"></a>Veja Também
 
 [Elemento de CustomControl para exibição (formato)](./customcontrol-element-for-view-format.md)
 

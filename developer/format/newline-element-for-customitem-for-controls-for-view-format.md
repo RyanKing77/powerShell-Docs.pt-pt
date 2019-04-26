@@ -9,11 +9,11 @@ ms.topic: article
 ms.assetid: 7620d561-2d20-46ee-a295-8144b6d9f699
 caps.latest.revision: 6
 ms.openlocfilehash: c1da8c8715d2474a16e0ac47033bbe211624c678
-ms.sourcegitcommit: b6871f21bd666f9cd71dd336bb3f844cf472b56c
+ms.sourcegitcommit: e7445ba8203da304286c591ff513900ad1c244a4
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 02/03/2019
-ms.locfileid: "56851507"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62065041"
 ---
 # <a name="newline-element-for-customitem-for-controls-for-view-format"></a>NewLine Element for CustomItem for Controls for View (Format) (Elemento NewLine para CustomItem para Controls para View [Formatação])
 
@@ -27,7 +27,7 @@ Configuração elemento (formato) ViewDefinitions elemento (formato) vista eleme
 <NewLine/>
 ```
 
-## <a name="attributes-and-elements"></a>Atributos e Elementos
+## <a name="attributes-and-elements"></a>Atributos e elementos
 
 As secções seguintes descrevem os atributos e elementos filho e o elemento principal do `NewLine` elemento.
 
@@ -35,11 +35,11 @@ As secções seguintes descrevem os atributos e elementos filho e o elemento pri
 
 Nenhum.
 
-### <a name="child-elements"></a>Elementos Subordinados
+### <a name="child-elements"></a>Elementos subordinados
 
 Nenhum.
 
-### <a name="parent-elements"></a>Elementos Principais
+### <a name="parent-elements"></a>Elementos principais
 
 |Elemento|Descrição|
 |-------------|-----------------|
@@ -47,7 +47,7 @@ Nenhum.
 
 ## <a name="remarks"></a>Observações
 
-## <a name="see-also"></a>Consulte Também
+## <a name="see-also"></a>Veja Também
 
 [Elemento de CustomItem para CustomEntry para controles para exibição (formato)](./customitem-element-for-customentry-for-controls-for-view-format.md)
 

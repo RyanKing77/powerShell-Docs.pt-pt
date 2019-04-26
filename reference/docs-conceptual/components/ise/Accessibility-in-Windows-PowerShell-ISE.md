@@ -4,11 +4,11 @@ keywords: PowerShell, o cmdlet
 title: Acessibilidade no ISE do Windows PowerShell
 ms.assetid: a078f9d1-dd6b-4323-b16d-0622cd993aa8
 ms.openlocfilehash: 78a001dbe43a0b005d10a817e05e4cc7a72f5bd0
-ms.sourcegitcommit: 00ff76d7d9414fe585c04740b739b9cf14d711e1
+ms.sourcegitcommit: e7445ba8203da304286c591ff513900ad1c244a4
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 12/14/2018
-ms.locfileid: "53404929"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62058459"
 ---
 # <a name="accessibility-in-windows-powershell-ise"></a>Acessibilidade no ISE do Windows PowerShell
 
@@ -62,17 +62,17 @@ Pode utilizar os seguintes atalhos de teclado, ao editar o texto.
 
 |Ação|Atalhos de teclado|Utilize|
 |----------|----------------------|----------|
-|**Cópia**|CTRL + C|Painel de script, o painel de consola|
-|**Operações de corte**|CTRL + X|Painel de script, o painel de consola|
+|**cópia**|CTRL + C|Painel de script, o painel de consola|
+|**Cut**|CTRL + X|Painel de script, o painel de consola|
 |**Encontrar no Script**|CTRL + L|Painel de script|
 |**Localizar seguinte no Script**|F3|Painel de script|
 |**Localizar anterior no Script**|TECLA SHIFT+F3|Painel de script|
 |**Paste**|CTRL + V|Painel de script, o painel de consola|
 |**Refazer**|CTRL + Y|Painel de script, o painel de consola|
 |**Substituir no Script**|CTRL + H|Painel de script|
-|**Guardar**|CTRL+S|Painel de script|
+|**Guardar**|CTRL + S|Painel de script|
 |**Selecionar tudo**|CTRL + T|Painel de script, o painel de consola|
-|**Anular**|CTRL + Z|Painel de script, o painel de consola|
+|**Undo**|CTRL + Z|Painel de script, o painel de consola|
 
 ## <a name="keyboard-shortcuts-for-running-scripts"></a>Atalhos de teclado para executar scripts
 
@@ -80,8 +80,8 @@ Pode utilizar os seguintes atalhos de teclado ao executar scripts no painel de S
 
 |Ação|Atalho de teclado|
 |----------|---------------------|
-|**Novo**|CTRL + N|
-|**Aberto**|CTRL + O|
+|**Novidade**|CTRL + N|
+|**abrir**|CTRL + O|
 |**Executar**|F5|
 |**Executar seleção**|F8|
 |**Parar a execução**|CTRL + BREAK. CTRL + C pode ser utilizado quando o contexto é inequívoca (quando não houver nenhum texto selecionado).|
@@ -131,7 +131,7 @@ Pode utilizar os seguintes atalhos de teclado ao depurar scripts.
 |**Avance para**|S|Painel de consola, quando um script de depuração|
 |**Step Over**|V|Painel de consola, quando um script de depuração|
 |**Krokovat s Vystoupením**|O|Painel de consola, quando um script de depuração|
-|**Repetir último comando** (para o passo em ou Step Over)|ENTER|Painel de consola, quando um script de depuração|
+|**Repetir último comando** (para o passo em ou Step Over)|INTRODUZA|Painel de consola, quando um script de depuração|
 |**Pilha de chamadas de apresentação**|K|Painel de consola, quando um script de depuração|
 |**Parar a depuração**|PERGUNTAS E|Painel de consola, quando um script de depuração|
 |**Lista o Script**|L|Painel de consola, quando um script de depuração|
@@ -157,6 +157,6 @@ Pode utilizar os seguintes atalhos de teclado para iniciar a consola do Windows 
 |**Exit**|ALT+F4|
 |**Iniciar PowerShell.exe** (consola do Windows PowerShell)|CTRL + SHIFT + P|
 
-## <a name="see-also"></a>Consulte Também
+## <a name="see-also"></a>Veja Também
 
 [Introdução ao ISE do Windows PowerShell](Introducing-the-Windows-PowerShell-ISE.md)
