@@ -3,31 +3,31 @@ ms.date: 06/05/2017
 keywords: PowerShell, o cmdlet
 title: Utilizar a Expansão por Tabulação
 ms.assetid: c8730471-bf6a-43b8-ab1d-f9ef5a74f04e
-ms.openlocfilehash: 3d047bf0691c8a304d7637aa50fba6ae99709a82
-ms.sourcegitcommit: e7445ba8203da304286c591ff513900ad1c244a4
+ms.openlocfilehash: 437c1e3c04352f2c5c3aba4c67b542821975f739
+ms.sourcegitcommit: 58fb23c854f5a8b40ad1f952d3323aeeccac7a24
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62086940"
+ms.lasthandoff: 05/07/2019
+ms.locfileid: "65229438"
 ---
 # <a name="using-tab-expansion"></a>Utilizar a Expansão por Tabulação
 
-Shells de linha de comandos, muitas vezes, proporcionam uma forma para concluir os nomes de ficheiros de longos ou comandos automaticamente, acelerar a entrada de comando e o fornecimento. Windows PowerShell, pode preencher os nomes de ficheiros e nomes de cmdlet ao premir o **separador** chave.
+Shells de linha de comandos, muitas vezes, proporcionam uma forma para concluir os nomes de ficheiros de longos ou comandos automaticamente, acelerar a entrada de comando e o fornecimento de sugestões. PowerShell permite-lhe o preenchimento nos nomes de ficheiros e nomes de cmdlet ao premir o <kbd>separador</kbd> chave.
 
 > [!NOTE]
 > Expansão da tabulação é controlado pela função interna TabExpansion ou TabExpansion2. Uma vez que esta função pode ser modificada ou substituída, essa discussão é um guia para o comportamento da configuração predefinida do PowerShell.
 
-Para preencher automaticamente um nome de ficheiro ou caminho as opções disponíveis, escreva parte do nome e prima a **separador** chave. PowerShell expandirá automaticamente o nome para a primeira correspondência que encontra. Premir a **separador** chave repetidamente passará por todas as opções disponíveis.
+Para preencher automaticamente um nome de ficheiro ou caminho as opções disponíveis, escreva parte do nome e prima a <kbd>separador</kbd> chave. PowerShell expandirá automaticamente o nome para a primeira correspondência que encontra. Premir a <kbd>separador</kbd> chave repetidamente passará por todas as opções disponíveis.
 
-A expansão da tabulação de nomes de cmdlet é ligeiramente diferente. Para utilizar a expansão da tabulação no nome de um cmdlet, escreva a primeira parte inteira do nome (o verbo) e o hífen que o sucede. Pode preencher mais o nome de uma correspondência parcial. Por exemplo, se digitar **get-co** e, em seguida, prima a **separador** chaves, PowerShell irá automaticamente expandir esta opção para o **Get-Command** cmdlet (Observe que também altera o caso de letras para o formato padrão). Se pressionar **separador** chave novamente, PowerShell substitui isso com o apenas outro cmdlet nome correspondente, **Get-Content**.
+A expansão da tabulação de nomes de cmdlet é ligeiramente diferente. Para utilizar a expansão da tabulação no nome de um cmdlet, escreva a primeira parte inteira do nome (o verbo) e o hífen que o sucede. Pode preencher mais o nome de uma correspondência parcial. Por exemplo, se digitar `get-co` e, em seguida, prima a <kbd>separador</kbd> chave, PowerShell irá automaticamente expandir esta opção para o `Get-Command` cmdlet (Observe que ele também altera o caso de letras para o formato padrão). Se pressionar <kbd>separador</kbd> chave novamente, PowerShell substitui isso com o apenas outro cmdlet nome correspondente, `Get-Content`.
 
-Pode usar repetidamente expansão da tabulação na mesma linha. Por exemplo, pode utilizar a expansão da tabulação no nome da **Get-Content** cmdlet ao introduzir:
+Pode usar repetidamente expansão da tabulação na mesma linha. Por exemplo, pode utilizar a expansão da tabulação no nome do `Get-Content` cmdlet ao introduzir:
 
 ```
 PS> Get-Con<Tab>
 ```
 
-Quando pressiona o **separador** chave, o comando se expande para:
+Quando pressiona o <kbd>separador</kbd> chave, o comando se expande para:
 
 ```
 PS> Get-Content
@@ -39,7 +39,7 @@ Pode, em seguida, parcialmente especifique o caminho para o ficheiro de registo 
 PS> Get-Content c:\windows\acts<Tab>
 ```
 
-Quando pressiona o **separador** chave, o comando se expande para:
+Quando pressiona o <kbd>separador</kbd> chave, o comando se expande para:
 
 ```
 PS> Get-Content C:\windows\actsetup.log

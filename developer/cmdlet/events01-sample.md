@@ -8,26 +8,29 @@ ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 27d0ee5e-2589-4530-92ef-c09996b80994
 caps.latest.revision: 10
-ms.openlocfilehash: c9963819f1842d1245735dabc487babaa566c160
-ms.sourcegitcommit: e7445ba8203da304286c591ff513900ad1c244a4
+ms.openlocfilehash: 8f745cc0e5ef6db7a6bbdf39d826103f3b8a98ce
+ms.sourcegitcommit: 58fb23c854f5a8b40ad1f952d3323aeeccac7a24
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62068135"
+ms.lasthandoff: 05/07/2019
+ms.locfileid: "65229297"
 ---
 # <a name="events01-sample"></a>Events01 Sample (Exemplo Events01)
 
-Este exemplo mostra como criar um cmdlet que permite ao utilizador para se registrar para eventos gerados por [System.IO.Filesystemwatcher](/dotnet/api/System.IO.FileSystemWatcher). Com este cmdlet, os utilizadores podem registar uma ação a executar quando é criado um ficheiro num diretório específico. Este exemplo deriva de [Microsoft.PowerShell.Commands.Objecteventregistrationbase](/dotnet/api/Microsoft.PowerShell.Commands.ObjectEventRegistrationBase) classe base.
+Este exemplo mostra como criar um cmdlet que permite ao utilizador para se registrar para eventos gerados por [System.IO.FileSystemWatcher](/dotnet/api/System.IO.FileSystemWatcher).
+Com este cmdlet, os utilizadores podem registar uma ação a executar quando é criado um ficheiro num diretório específico.
+Este exemplo deriva de [Microsoft.PowerShell.Commands.ObjectEventRegistrationBase](/dotnet/api/Microsoft.PowerShell.Commands.ObjectEventRegistrationBase) classe base.
 
 ## <a name="how-to-build-the-sample-by-using-visual-studio"></a>Como criar o exemplo com o Visual Studio.
 
-1. Windows PowerShell 2.0 SDK instalado, navegue para a pasta de Events01. A localização predefinida é C:\Program Files (x86) \Microsoft SDKs\Windows\v7.0\Samples\sysmgmt\WindowsPowerShell\csharp\Events01.
+1. Windows PowerShell 2.0 SDK instalado, navegue para a pasta de Events01.
+   A localização predefinida é `C:\Program Files (x86)\Microsoft SDKs\Windows\v7.0\Samples\sysmgmt\WindowsPowerShell\csharp\Events01`.
 
-2. Faça duplo clique no ícone para o ficheiro de solução (. sln). Esta ação abre o projeto de exemplo no Microsoft Visual Studio.
+2. Faça duplo clique no ícone para o ficheiro de solução (. sln).
+   Esta ação abre o projeto de exemplo no Microsoft Visual Studio.
 
 3. Na **crie** menu, selecione **compilar solução**.
-
-    A biblioteca para o exemplo será criada nas pastas de \bin ou \bin\debug do padrão.
+   A biblioteca para o exemplo será interno a predefinição `\bin` ou `\bin\debug` pastas.
 
 ### <a name="how-to-run-the-sample"></a>Como executar o exemplo
 
@@ -78,11 +81,14 @@ Este exemplo requer o Windows PowerShell 2.0.
 
 Este exemplo demonstra o seguinte.
 
-- Como escrever um cmdlet para o registo de eventos. O cmdlet deriva a [Microsoft.PowerShell.Commands.Objecteventregistrationbase](/dotnet/api/Microsoft.PowerShell.Commands.ObjectEventRegistrationBase) classe, que fornece suporte para os parâmetros comuns Register-* cmdlets de evento. Cmdlets derivados [Microsoft.PowerShell.Commands.Objecteventregistrationbase](/dotnet/api/Microsoft.PowerShell.Commands.ObjectEventRegistrationBase) só precisa definir seus parâmetros específicos e substituir o `GetSourceObject` e `GetSourceObjectEventName` abstrair métodos.
+### <a name="how-to-write-a-cmdlet-for-event-registration"></a>Como escrever um cmdlet para o registo de eventos
+
+O cmdlet deriva a [Microsoft.PowerShell.Commands.ObjectEventRegistrationBase](/dotnet/api/Microsoft.PowerShell.Commands.ObjectEventRegistrationBase) classe, que fornece suporte para os parâmetros comuns para o `Register-*Event` cmdlets.
+Cmdlets derivados [Microsoft.PowerShell.Commands.ObjectEventRegistrationBase](/dotnet/api/Microsoft.PowerShell.Commands.ObjectEventRegistrationBase) só precisa definir seus parâmetros específicos e substituir o `GetSourceObject` e `GetSourceObjectEventName` abstrair métodos.
 
 ## <a name="example"></a>Exemplo
 
-Este exemplo mostra como se registrar para eventos gerados pelo [System.IO.FileSystemWatcher](https://msdn.microsoft.com/en-us/library/system.io.filesystemwatcher\(v=vs.110\).aspx).
+Este exemplo mostra como se registrar para eventos gerados pelo [System.IO.FileSystemWatcher](/dotnet/api/System.IO.FileSystemWatcher).
 
 ```csharp
 namespace Sample
@@ -183,4 +189,4 @@ namespace Sample
 
 ## <a name="see-also"></a>Veja Também
 
-[Escrever um Cmdlet do Windows PowerShell](./writing-a-windows-powershell-cmdlet.md)
+[Escrever um Cmdlet do Windows PowerShell](writing-a-windows-powershell-cmdlet.md)

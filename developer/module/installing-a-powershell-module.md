@@ -8,26 +8,16 @@ ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: fb82827e-fdb7-4cbf-b3d4-093e72b3ff0e
 caps.latest.revision: 28
-ms.openlocfilehash: 7c2bfca50de4645676eafc01bbf23d9797e8b758
-ms.sourcegitcommit: e7445ba8203da304286c591ff513900ad1c244a4
+ms.openlocfilehash: 60ac4bf9089232a9fa879e835e32da53422489fd
+ms.sourcegitcommit: 58fb23c854f5a8b40ad1f952d3323aeeccac7a24
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62082197"
+ms.lasthandoff: 05/07/2019
+ms.locfileid: "65229446"
 ---
 # <a name="installing-a-powershell-module"></a>Installing a PowerShell Module (Instalar um Módulo do PowerShell)
 
-Depois de criar o módulo do PowerShell, provavelmente desejará instalar o módulo num sistema, para que ou outros poderão utilizá-lo. Em termos gerais, isso simplesmente consiste em copiar os módulo arquivos (ie, psm1, ou a assemblagem binária, o manifesto de módulo e todos os outros ficheiros associados) num diretório nesse computador. Para um projeto muito pequeno, isso pode ser tão simples quanto copiar e colar os ficheiros com o Explorador do Windows num único computador remoto; No entanto, para soluções maiores poderá querer utilizar um processo de instalação mais sofisticado. Independentemente de como obter o seu módulo no sistema, o PowerShell pode usar várias técnicas que permitirá que os usuários a encontrar e utilizar os módulos. (Para obter mais informações, consulte [importar um módulo do PowerShell](./importing-a-powershell-module.md).) Por conseguinte, o problema principal para a instalação é garantir que o PowerShell poderá encontrar seu módulo.
-
-Este tópico contém as seguintes secções:
-
-- Regras para a instalação de módulos
-
-- Onde instalar os módulos
-
-- Instalação de várias versões de um módulo
-
-- Manipulação de conflitos de nomes de comando
+Depois de criar o módulo do PowerShell, provavelmente desejará instalar o módulo num sistema, para que ou outros poderão utilizá-lo. Em termos gerais, isso consiste em copiar os módulo arquivos (ie, psm1, ou a assemblagem binária, o manifesto de módulo e todos os outros ficheiros associados) num diretório nesse computador. Para um projeto muito pequeno, isso pode ser tão simples quanto copiar e colar os ficheiros com o Explorador do Windows num único computador remoto; No entanto, para soluções maiores poderá querer utilizar um processo de instalação mais sofisticado. Independentemente de como obter o seu módulo no sistema, o PowerShell pode usar várias técnicas que permitirá que os usuários a encontrar e utilizar os módulos. Por conseguinte, o problema principal para a instalação é garantir que o PowerShell poderá encontrar seu módulo. Para obter mais informações, consulte [importar um módulo do PowerShell](./importing-a-powershell-module.md).
 
 ## <a name="rules-for-installing-modules"></a>Regras para a instalação de módulos
 
@@ -41,14 +31,14 @@ O **PSModulePath** variável de ambiente ($Env: PSModulePath) contém os locais 
 
 Por predefinição, o **PSModulePath** valor da variável de ambiente contém o sistema seguinte e os diretórios de módulo de usuário, mas pode adicionar e editar o valor.
 
-- $PSHome\Modules (% Windir%\System32\WindowsPowerShell\v1.0\Modules)
+- `$PSHome\Modules` (% Windir%\System32\WindowsPowerShell\v1.0\Modules)
 
   > [!WARNING]
   > Esta localização é reservada para módulos que acompanham o Windows. Não instale módulos para esta localização.
 
-- $Home\Documents\WindowsPowerShell\Modules (%UserProfile%\Documents\WindowsPowerShell\Modules)
+- `$Home\Documents\WindowsPowerShell\Modules` (%UserProfile%\Documents\WindowsPowerShell\Modules)
 
-- $Env: ProgramFiles\WindowsPowerShell\Modules (% ProgramFiles%\WindowsPowerShell\Modules)
+- `$Env:ProgramFiles\WindowsPowerShell\Modules` (% ProgramFiles%\WindowsPowerShell\Modules)
 
   Para obter o valor do **PSModulePath** variável de ambiente, utilizar qualquer um dos seguintes comandos.
 
@@ -60,7 +50,6 @@ Por predefinição, o **PSModulePath** valor da variável de ambiente contém o 
   Para adicionar um caminho de módulo ao valor do **PSModulePath** variável de ambiente de valor, utilize o seguinte formato de comando. Este formato utiliza o **SetEnvironmentVariable** método da **System.Environment** classe fazer uma alteração de sessão independente para o **PSModulePath** ambiente variável.
 
   ```powershell
-
   #Save the current value in the $p variable.
   $p = [Environment]::GetEnvironmentVariable("PSModulePath")
 
@@ -77,7 +66,7 @@ Por predefinição, o **PSModulePath** valor da variável de ambiente contém o 
 
 ### <a name="use-the-correct-module-directory-name"></a>Utilize o nome de diretório de módulo correto
 
-Um módulo "bem formado" é um módulo que esteja armazenado num diretório com o mesmo nome que o nome de base pelo menos um ficheiro no diretório de módulo. Se um módulo não está formado, Windows PowerShell não o reconhece como um módulo.
+Um módulo bem formado é um módulo que esteja armazenado num diretório com o mesmo nome que o nome de base pelo menos um ficheiro no diretório de módulo. Se um módulo não está formado, Windows PowerShell não o reconhece como um módulo.
 
 O "nome de base" de um ficheiro é o nome sem a extensão de nome de ficheiro. Num módulo bem formado, o nome do diretório que contém os ficheiros de módulo tem de corresponder ao nome de base pelo menos um ficheiro no módulo.
 
@@ -122,9 +111,7 @@ Esta secção explica onde no sistema de ficheiros para instalar os módulos do 
 
 Se criar seu próprio módulo ou obter um módulo de terceiros, como um site da Comunidade do Windows PowerShell, e pretender que o módulo esteja disponível para a sua conta de utilizador apenas, instale o módulo no seu diretório de módulos específicos do usuário.
 
-```
-$home\Documents\WindowsPowerShell\Modules\<Module Folder>\<Module Files>
-```
+`$home\Documents\WindowsPowerShell\Modules\<Module Folder>\<Module Files>`
 
 O diretório de módulos específicos do usuário é adicionado ao valor do **PSModulePath** variável de ambiente, por predefinição.
 
@@ -132,9 +119,7 @@ O diretório de módulos específicos do usuário é adicionado ao valor do **PS
 
 Se pretender que um módulo para estar disponível para todas as contas de utilizador no computador, instale o módulo na localização de ficheiros de programa.
 
-```
-$Env:ProgramFiles\WindowsPowerShell\Modules\<Module Folder>\<Module Files>
-```
+`$Env:ProgramFiles\WindowsPowerShell\Modules\<Module Folder>\<Module Files>`
 
 > [!NOTE]
 > A localização de arquivos de programas é adicionada ao valor da variável de ambiente PSModulePath por predefinição no Windows PowerShell 4.0 e posterior. Para versões anteriores do Windows PowerShell, pode criar os arquivos de programas localização ((%ProgramFiles%\WindowsPowerShell\Modules) e adicionar este caminho à sua variável de ambiente de PSModulePath, conforme descrito acima manualmente.
@@ -160,7 +145,7 @@ Para ativar as funcionalidades de deteção de módulo do Windows PowerShell loc
 
 ```powershell
 $p = [Environment]::GetEnvironmentVariable("PSModulePath")
-$p += "C:\Program Files\Fabrikam Technologies\Fabrikam Manager\Modules\"
+$p += ";C:\Program Files\Fabrikam Technologies\Fabrikam Manager\Modules\"
 [Environment]::SetEnvironmentVariable("PSModulePath",$p)
 ```
 
@@ -168,7 +153,7 @@ $p += "C:\Program Files\Fabrikam Technologies\Fabrikam Manager\Modules\"
 
 Se um módulo é utilizado por vários componentes de um produto ou por várias versões de um produto, instale o módulo num subdiretório específicos de módulo de subdiretório de Files\Modules %ProgramFiles%\Common.
 
-No exemplo a seguir, o módulo de Fabrikam é instalado num subdiretório de subdiretório de Files\Modules %ProgramFiles%\Common Fabrikam. Tenha em atenção que cada módulo reside no seu próprio subdiretório no subdiretório módulos.
+No exemplo a seguir, o módulo de Fabrikam é instalado num subdiretório Fabrikam do `%ProgramFiles%\Common Files\Modules` subdiretório. Tenha em atenção que cada módulo reside no seu próprio subdiretório no subdiretório módulos.
 
 ```
 C:\Program Files
@@ -177,7 +162,6 @@ C:\Program Files
       Fabrikam
         Fabrikam.psd1 (module manifest)
         Fabrikam.dll (module assembly)
-
 ```
 
 Em seguida, o instalador assegura o valor do **PSModulePath** variável de ambiente inclui o caminho do subdiretório de módulos de ficheiros comuns.
@@ -198,9 +182,7 @@ $p = $q -join ';'
 Para instalar várias versões do mesmo módulo, utilize o procedimento seguinte.
 
 1. Crie um diretório para cada versão do módulo. Inclua o número de versão no nome do diretório.
-
 2. Crie um manifesto de módulo para cada versão do módulo. O valor do **ModuleVersion** da chave no manifesto, introduza o número de versão do módulo. Guarde o ficheiro de manifesto (. psd1) no diretório específico da versão para o módulo.
-
 3. Adicionar o caminho de pasta de raiz do módulo para o valor do **PSModulePath** variável de ambiente, conforme mostrado nos exemplos a seguir.
 
 Para importar uma versão específica do módulo, o utilizador final pode utilizar o `MinimumVersion` ou `RequiredVersion` parâmetros do [Import-Module](/powershell/module/Microsoft.PowerShell.Core/Import-Module) cmdlet.

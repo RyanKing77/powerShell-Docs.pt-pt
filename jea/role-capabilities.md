@@ -2,12 +2,12 @@
 ms.date: 06/12/2017
 keywords: jea, powershell, segurança
 title: Funcionalidades de função JEA
-ms.openlocfilehash: b93d206680de485d6cb7a8cb26d63afda5bf8421
-ms.sourcegitcommit: e7445ba8203da304286c591ff513900ad1c244a4
+ms.openlocfilehash: 528b41c0e2ffdcfed3251fb0f714c649e7290761
+ms.sourcegitcommit: 58fb23c854f5a8b40ad1f952d3323aeeccac7a24
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62084798"
+ms.lasthandoff: 05/07/2019
+ms.locfileid: "65229544"
 ---
 # <a name="jea-role-capabilities"></a>Funcionalidades de função JEA
 
@@ -183,6 +183,8 @@ Qualquer cmdlet restrita numa sessão JEA exibirão o mesmo comportamento quando
 
 Se estiver a escrever muitas funções personalizadas, pode ser mais fácil de colocá-los [módulo de Script do PowerShell](https://msdn.microsoft.com/library/dd878340(v=vs.85).aspx).
 Em seguida, pode tornar essas funções visível na sessão usando o campo de VisibleFunctions como faria com módulos de terceiros, incorporados e JEA.
+
+Para o separador conclusão funcione corretamente em sessões JEA, tem de incluir a função incorporada `tabexpansion2` no **VisibleFunctions** lista.
 
 ## <a name="place-role-capabilities-in-a-module"></a>Funcionalidades de função local num módulo
 

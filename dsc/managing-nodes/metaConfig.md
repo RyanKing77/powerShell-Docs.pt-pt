@@ -2,12 +2,12 @@
 ms.date: 12/12/2018
 keywords: DSC, powershell, configuração, a configuração
 title: Configurar o Gestor de configuração Local
-ms.openlocfilehash: 86d2cc17872692a738e9c68121b8931833d2a251
-ms.sourcegitcommit: e7445ba8203da304286c591ff513900ad1c244a4
+ms.openlocfilehash: 15d696587d54d4a6464096cfb78757c41e9185c6
+ms.sourcegitcommit: 58fb23c854f5a8b40ad1f952d3323aeeccac7a24
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62079682"
+ms.lasthandoff: 05/07/2019
+ms.locfileid: "65229507"
 ---
 # <a name="configuring-the-local-configuration-manager"></a>Configurar o Gestor de configuração Local
 
@@ -121,6 +121,10 @@ R **ConfigurationRepositoryWeb** define as propriedades seguintes.
 |ConfigurationNames|String[]|Uma matriz de nomes de configurações para ser solicitada por nó de destino. Estes são utilizados apenas se o nó está registado com o serviço pull utilizando um **RegistrationKey**. Para obter mais informações, consulte [como configurar um cliente de solicitação com nomes de configuração](../pull-server/pullClientConfigNames.md).|
 |RegistrationKey|string|Um GUID que regista o nó com o serviço de solicitação. Para obter mais informações, consulte [como configurar um cliente de solicitação com nomes de configuração](../pull-server/pullClientConfigNames.md).|
 |ServerURL|string|O URL do serviço de configuração.|
+|ProxyURL*|string|O URL de proxy http para utilizar ao comunicar com o serviço de configuração.|
+|ProxyCredential*|pscredential|Credencial que deve utilizar para o proxy de http.|
+
+>! Tenha em atenção \* suportado no Windows versões 1809 e posteriores.
 
 Veja um script de exemplo para simplificar a configurar o valor de ConfigurationRepositoryWeb para nós no local está disponível - [metaconfigurations geração DSC](https://docs.microsoft.com/azure/automation/automation-dsc-onboarding#generating-dsc-metaconfigurations)
 
@@ -143,6 +147,10 @@ R **ResourceRepositoryWeb** define as propriedades seguintes.
 |CertificateID|string|O thumbprint de um certificado utilizado para autenticar para o servidor.|
 |RegistrationKey|string|Um GUID que identifica o nó para o serviço de solicitação.|
 |ServerURL|string|O URL do servidor de configuração.|
+|ProxyURL*|string|O URL de proxy http para utilizar ao comunicar com o serviço de configuração.|
+|ProxyCredential*|pscredential|Credencial que deve utilizar para o proxy de http.|
+
+>! Tenha em atenção \* suportado no Windows versões 1809 e posteriores.
 
 Veja um script de exemplo para simplificar a configurar o valor de ResourceRepositoryWeb para nós no local está disponível - [metaconfigurations geração DSC](https://docs.microsoft.com/azure/automation/automation-dsc-onboarding#generating-dsc-metaconfigurations)
 
@@ -166,6 +174,10 @@ A função de servidor de relatório não é compatível com o serviço de solic
 |CertificateID|string|O thumbprint de um certificado utilizado para autenticar para o servidor.|
 |RegistrationKey|string|Um GUID que identifica o nó para o serviço de solicitação.|
 |ServerURL|string|O URL do servidor de configuração.|
+|ProxyURL*|string|O URL de proxy http para utilizar ao comunicar com o serviço de configuração.|
+|ProxyCredential*|pscredential|Credencial que deve utilizar para o proxy de http.|
+
+>! Tenha em atenção \* suportado no Windows versões 1809 e posteriores.
 
 Veja um script de exemplo para simplificar a configurar o valor de ReportServerWeb para nós no local está disponível - [metaconfigurations geração DSC](https://docs.microsoft.com/azure/automation/automation-dsc-onboarding#generating-dsc-metaconfigurations)
 

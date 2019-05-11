@@ -8,12 +8,12 @@ ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 30183927-6f0e-4717-b6f5-f07a6e134cfb
 caps.latest.revision: 6
-ms.openlocfilehash: f2f6b9af7740b1231881294c2f32bf97b5a1568b
-ms.sourcegitcommit: e7445ba8203da304286c591ff513900ad1c244a4
+ms.openlocfilehash: 37a297228eb33ff75daf94a12635d42b52c6cc9f
+ms.sourcegitcommit: 58fb23c854f5a8b40ad1f952d3323aeeccac7a24
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62064514"
+ms.lasthandoff: 05/07/2019
+ms.locfileid: "65229310"
 ---
 # <a name="scriptblock-element-for-groupby-format"></a>ScriptBlock Element for GroupBy (Format) (Elemento ScriptBlock para GroupBy [Formatação])
 
@@ -27,7 +27,7 @@ O elemento (formato) ViewDefinitions elemento (formato) vista elemento (formato)
 <ScriptBlock>ScriptToEvaluate</ScriptBlock>
 ```
 
-## <a name="attributes-and-elements"></a>Atributos e elementos
+## <a name="attributes-and-elements"></a>Atributos e Elementos
 
 As secções seguintes descrevem os atributos e elementos filho e o elemento principal do `ScriptBlock` elemento.
 
@@ -35,11 +35,11 @@ As secções seguintes descrevem os atributos e elementos filho e o elemento pri
 
 Nenhum.
 
-### <a name="child-elements"></a>Elementos subordinados
+### <a name="child-elements"></a>Elementos Subordinados
 
 Nenhum.
 
-### <a name="parent-elements"></a>Elementos principais
+### <a name="parent-elements"></a>Elementos Principais
 
 |Elemento|Descrição|
 |-------------|-----------------|
@@ -51,14 +51,14 @@ Especifique o script que é avaliado.
 
 ## <a name="remarks"></a>Observações
 
-É iniciado um novo grupo do Windows PowerShell sempre que o valor desse script é alterado.
+PowerShell inicia um novo grupo sempre que o valor desse script é alterado.
 
-Quando este elemento é especificado, não é possível especificar a [PropertyName](http://msdn.microsoft.com/en-us/396dede0-039a-4a87-a5ef-3ecabb729676) elemento para iniciar um novo grupo.
+Quando este elemento é especificado, não é possível especificar a [PropertyName](propertyname-element-for-groupby-format.md) elemento para iniciar um novo grupo.
 
 ## <a name="see-also"></a>Veja Também
 
-[Elemento de PropertyName para GroupBy (formato)](./propertyname-element-for-groupby-format.md)
+[Elemento de PropertyName para GroupBy (formato)](propertyname-element-for-groupby-format.md)
 
-[GroupBy elemento para a exibição (formato)](./groupby-element-for-view-format.md)
+[GroupBy elemento para a exibição (formato)](groupby-element-for-view-format.md)
 
-[Escrever um ficheiro de formatação de PowerShell](./writing-a-powershell-formatting-file.md)
+[Escrever um ficheiro de formatação de PowerShell](writing-a-powershell-formatting-file.md)

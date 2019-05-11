@@ -11,12 +11,12 @@ helpviewer_keywords:
 - cmdlets [PowerShell SDK], described
 ms.assetid: 0aa32589-4447-4ead-a5dd-a3be99113140
 caps.latest.revision: 21
-ms.openlocfilehash: f8a8c9300d1ac811c7fbbf7050dd24f78306db8f
-ms.sourcegitcommit: e7445ba8203da304286c591ff513900ad1c244a4
+ms.openlocfilehash: 14200aed2fb94c37c8b8af29650f602945e7ac1c
+ms.sourcegitcommit: 58fb23c854f5a8b40ad1f952d3323aeeccac7a24
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62068475"
+ms.lasthandoff: 05/07/2019
+ms.locfileid: "65229361"
 ---
 # <a name="cmdlet-overview"></a>Cmdlet Overview (Cmdlet: Descrição Geral)
 
@@ -38,19 +38,53 @@ Cmdlets de executar uma ação e geralmente retorna um objeto do Microsoft .NET 
 
 Os termos seguintes são utilizados com frequência na documentação de cmdlet do Windows PowerShell:
 
-- **Atributo de cmdlet**: Um atributo do .NET Framework que é usado para declarar uma classe cmdlet como um cmdlet. Embora o Windows PowerShell usa vários atributos que são opcionais, o atributo de Cmdlet é obrigatório. Para obter mais informações sobre este atributo, consulte [declaração de atributo do Cmdlet](./cmdlet-attribute-declaration.md).
+### <a name="cmdlet-attribute"></a>Atributo dos cmdlets
 
-- **Parâmetro de cmdlet**: As propriedades públicas que definem os parâmetros que estão disponíveis para o utilizador ou para a aplicação que está a executar o cmdlet. Pode ter exigido cmdlets, com nome, posicional, e *mudar* parâmetros. Parâmetros de comutador permitem-lhe definir os parâmetros que são avaliados apenas se os parâmetros são especificados na chamada. Para obter mais informações sobre os diferentes tipos de parâmetros, consulte [parâmetros de Cmdlet](./cmdlet-parameters.md).
+Um atributo do .NET Framework que é usado para declarar uma classe cmdlet como um cmdlet.
+Embora o PowerShell usa vários atributos que são opcionais, o atributo de Cmdlet é obrigatório.
+Para obter mais informações sobre este atributo, consulte [declaração de atributo do Cmdlet](cmdlet-attribute-declaration.md).
 
-- **Conjunto de parâmetros**: Um grupo de parâmetros que podem ser usados no mesmo comando a executar uma ação específica. Um cmdlet pode ter vários conjuntos de parâmetros, mas cada conjunto de parâmetros tem de ter, pelo menos, um parâmetro que seja exclusivo. Design do cmdlet boas recomenda vivamente que o parâmetro exclusivo também de ser um parâmetro necessário. Para obter mais informações sobre conjuntos de parâmetros, consulte [define o parâmetro de Cmdlet](./cmdlet-parameter-sets.md).
+### <a name="cmdlet-parameter"></a>Parâmetro de cmdlet
 
-- **Parâmetro dinâmico**: Um parâmetro que é adicionado ao cmdlet em tempo de execução. Normalmente, os parâmetros dinâmicos são adicionados ao cmdlet quando outro parâmetro estiver definido como um valor específico. Para obter mais informações sobre parâmetros dinâmicos, consulte [parâmetros dinâmicos de Cmdlet](./cmdlet-dynamic-parameters.md).
+As propriedades públicas que definem os parâmetros que estão disponíveis para o utilizador ou para a aplicação que está a executar o cmdlet.
+Pode ter exigido cmdlets, com nome, posicional, e *mudar* parâmetros.
+Parâmetros de comutador permitem-lhe definir os parâmetros que são avaliados apenas se os parâmetros são especificados na chamada.
+Para obter mais informações sobre os diferentes tipos de parâmetros, consulte [parâmetros de Cmdlet](cmdlet-parameters.md).
 
-- **Método de processamento de entrada**: Um método que um cmdlet pode utilizar para processar os registos que recebe como entrada. Os métodos de processamento de entrada incluem o [System.Management.Automation.Cmdlet.BeginProcessing](/dotnet/api/System.Management.Automation.Cmdlet.BeginProcessing) método, o [System.Management.Automation.Cmdlet.ProcessRecord](/dotnet/api/System.Management.Automation.Cmdlet.ProcessRecord) método, o [ System.Management.Automation.Cmdlet.EndProcessing](/dotnet/api/System.Management.Automation.Cmdlet.EndProcessing) método e o [System.Management.Automation.Cmdlet.StopProcessing](/dotnet/api/System.Management.Automation.Cmdlet.StopProcessing) método. Quando implementa um cmdlet, tem de substituir, pelo menos, um da [System.Management.Automation.Cmdlet.BeginProcessing](/dotnet/api/System.Management.Automation.Cmdlet.BeginProcessing), [System.Management.Automation.Cmdlet.ProcessRecord](/dotnet/api/System.Management.Automation.Cmdlet.ProcessRecord)e [System.Management.Automation.Cmdlet.EndProcessing](/dotnet/api/System.Management.Automation.Cmdlet.EndProcessing) métodos. Normalmente, o [System.Management.Automation.Cmdlet.ProcessRecord](/dotnet/api/System.Management.Automation.Cmdlet.ProcessRecord) é o método que substituir porque ele é chamado para cada registo que o cmdlet processa. Por outro lado, o [System.Management.Automation.Cmdlet.BeginProcessing](/dotnet/api/System.Management.Automation.Cmdlet.BeginProcessing) método e o [System.Management.Automation.Cmdlet.EndProcessing](/dotnet/api/System.Management.Automation.Cmdlet.EndProcessing) método são chamados uma vez para executar pré-processar ou pós-processamento dos registos. Para obter mais informações sobre estes métodos, consulte [métodos de processamento de entrada](./cmdlet-input-processing-methods.md).
+### <a name="parameter-set"></a>Conjunto de parâmetros
 
-- **Funcionalidade de ShouldProcess**: Windows PowerShell permite-lhe criar cmdlets que solicitar ao utilizador comentários antes do cmdlet faz uma alteração no sistema. Para utilizar esta funcionalidade, o cmdlet tem de declarar que suporta a funcionalidade de ShouldProcess quando declarar o atributo de Cmdlet, e o cmdlet deve chamar o [System.Management.Automation.Cmdlet.ShouldProcess](/dotnet/api/System.Management.Automation.Cmdlet.ShouldProcess) e [ System.Management.Automation.Cmdlet.ShouldContinue](/dotnet/api/System.Management.Automation.Cmdlet.ShouldContinue) métodos a partir de um método de processamento de entrada. Para obter mais informações sobre como suportar a funcionalidade de ShouldProcess, consulte [pedir confirmação](./requesting-confirmation-from-cmdlets.md).
+Um grupo de parâmetros que podem ser usados no mesmo comando a executar uma ação específica.
+Um cmdlet pode ter vários conjuntos de parâmetros, mas cada conjunto de parâmetros tem de ter, pelo menos, um parâmetro que seja exclusivo.
+Design do cmdlet boas recomenda vivamente que o parâmetro exclusivo também de ser um parâmetro necessário.
+Para obter mais informações sobre conjuntos de parâmetros, consulte [define o parâmetro de Cmdlet](cmdlet-parameter-sets.md).
 
-- **Transação**: Um grupo lógico de comandos que são tratados como uma única tarefa. A tarefa falhar, automaticamente, se falha de qualquer comando no grupo e o utilizador tem a opção de aceitar ou rejeitar as ações executadas dentro da transação. Para participar de uma transação, o cmdlet tem de declarar que suporta transações quando o atributo de Cmdlet é declarado. Suporte para transações foi introduzido no Windows PowerShell 2.0. Para obter mais informações sobre transações, consulte [transações do Windows PowerShell](http://msdn.microsoft.com/en-us/74d7bac7-bc53-49f1-a47a-272e8da84710).
+### <a name="dynamic-parameter"></a>parâmetro dinâmico
+
+Um parâmetro que é adicionado ao cmdlet em tempo de execução.
+Normalmente, os parâmetros dinâmicos são adicionados ao cmdlet quando outro parâmetro estiver definido como um valor específico.
+Para obter mais informações sobre parâmetros dinâmicos, consulte [parâmetros dinâmicos de Cmdlet](cmdlet-dynamic-parameters.md).
+
+### <a name="input-processing-method"></a>método de processamento de entrada
+
+Um método que um cmdlet pode utilizar para processar os registos que recebe como entrada.
+Os métodos de processamento de entrada incluem o [System.Management.Automation.Cmdlet.BeginProcessing](/dotnet/api/System.Management.Automation.Cmdlet.BeginProcessing) método, o [System.Management.Automation.Cmdlet.ProcessRecord](/dotnet/api/System.Management.Automation.Cmdlet.ProcessRecord) método, o [ System.Management.Automation.Cmdlet.EndProcessing](/dotnet/api/System.Management.Automation.Cmdlet.EndProcessing) método e o [System.Management.Automation.Cmdlet.StopProcessing](/dotnet/api/System.Management.Automation.Cmdlet.StopProcessing) método. Quando implementa um cmdlet, tem de substituir, pelo menos, um da [System.Management.Automation.Cmdlet.BeginProcessing](/dotnet/api/System.Management.Automation.Cmdlet.BeginProcessing), [System.Management.Automation.Cmdlet.ProcessRecord](/dotnet/api/System.Management.Automation.Cmdlet.ProcessRecord)e [System.Management.Automation.Cmdlet.EndProcessing](/dotnet/api/System.Management.Automation.Cmdlet.EndProcessing) métodos.
+Normalmente, o [System.Management.Automation.Cmdlet.ProcessRecord](/dotnet/api/System.Management.Automation.Cmdlet.ProcessRecord) é o método que substituir porque ele é chamado para cada registo que o cmdlet processa.
+Por outro lado, o [System.Management.Automation.Cmdlet.BeginProcessing](/dotnet/api/System.Management.Automation.Cmdlet.BeginProcessing) método e o [System.Management.Automation.Cmdlet.EndProcessing](/dotnet/api/System.Management.Automation.Cmdlet.EndProcessing) método são chamados uma vez para executar pré-processar ou pós-processamento dos registos.
+Para obter mais informações sobre estes métodos, consulte [métodos de processamento de entrada](cmdlet-input-processing-methods.md).
+
+### <a name="shouldprocess-feature"></a>Funcionalidade de ShouldProcess
+
+PowerShell permite-lhe criar cmdlets que solicitar ao utilizador comentários antes do cmdlet faz uma alteração no sistema.
+Para utilizar esta funcionalidade, o cmdlet tem de declarar que suporta a funcionalidade de ShouldProcess quando declarar o atributo de Cmdlet, e o cmdlet deve chamar o [System.Management.Automation.Cmdlet.ShouldProcess](/dotnet/api/System.Management.Automation.Cmdlet.ShouldProcess) e [ System.Management.Automation.Cmdlet.ShouldContinue](/dotnet/api/System.Management.Automation.Cmdlet.ShouldContinue) métodos a partir de um método de processamento de entrada.
+Para obter mais informações sobre como suportar a funcionalidade de ShouldProcess, consulte [pedir confirmação](requesting-confirmation-from-cmdlets.md).
+
+### <a name="transaction"></a>Transação
+
+Um grupo lógico de comandos que são tratados como uma única tarefa.
+A tarefa falhar, automaticamente, se falha de qualquer comando no grupo e o utilizador tem a opção de aceitar ou rejeitar as ações executadas dentro da transação.
+Para participar de uma transação, o cmdlet tem de declarar que suporta transações quando o atributo de Cmdlet é declarado.
+Suporte para transações foi introduzido no Windows PowerShell 2.0.
+Para obter mais informações sobre transações, consulte [como suporte a transações](how-to-support-transactions.md).
 
 ## <a name="how-cmdlets-differ-from-commands"></a>Como os Cmdlets diferem dos comandos
 
