@@ -15,34 +15,16 @@ helpviewer_keywords:
 - cmdlets [PowerShell Programmer's Guide], creating
 ms.assetid: da0b32f8-7b51-440e-a061-3177b5759e0e
 caps.latest.revision: 9
-ms.openlocfilehash: fb113086ce89e4becff9bcaf3232905fde2bf610
-ms.sourcegitcommit: e7445ba8203da304286c591ff513900ad1c244a4
+ms.openlocfilehash: c9ad84c5bcb6826fcf51db9a1f1a578a65a1f275
+ms.sourcegitcommit: 01b81317029b28dd9b61d167045fd31f1ec7bc06
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62068815"
+ms.lasthandoff: 05/17/2019
+ms.locfileid: "65854953"
 ---
 # <a name="adding-parameters-that-process-command-line-input"></a>Adding Parameters That Process Command-Line Input (Adicionar Parâmetros que Processam Entradas da Linha de Comandos)
 
 Uma fonte de entrada para um cmdlet é a linha de comandos. Este tópico descreve como adicionar um parâmetro para o **Get-Proc** cmdlet (descrito na [criando seu primeiro Cmdlet](./creating-a-cmdlet-without-parameters.md)) para que o cmdlet pode processar a entrada a partir do computador local com base em explícita objetos transmitidos ao cmdlet. O **Get-Proc** cmdlet descrito aqui obtém processos com base em seus nomes e, em seguida, apresenta informações sobre os processos num prompt de comando.
-
-São as secções seguintes deste tópico:
-
-- [Definir a classe Cmdlet](#Defining-the-Cmdlet-Class)
-
-- [Declarando parâmetros](#Declaring-Parameters)
-
-- [Suporte a validação de parâmetro](#Supporting-Parameter-Validation)
-
-- [Substituir uma método de processamento de entrada](#Overriding-an-Input-Processing-Method)
-
-- [Exemplo de código](#Code-Sample)
-
-- [Definir tipos de objeto e formatação](#Defining-Object-Types-and-Formatting)
-
-- [Criando o Cmdlet](#Building-the-Cmdlet)
-
-- [O Cmdlet de teste](#Testing-the-Cmdlet)
 
 ## <a name="defining-the-cmdlet-class"></a>Definir a classe Cmdlet
 

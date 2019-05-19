@@ -11,12 +11,12 @@ helpviewer_keywords:
 - providers [PowerShell Programmer's Guide], navigation provider
 ms.assetid: 8bd3224d-ca6f-4640-9464-cb4d9f4e13b1
 caps.latest.revision: 5
-ms.openlocfilehash: 40454f880b57d5b3a8a8ded21c8c97aebba027fe
-ms.sourcegitcommit: e7445ba8203da304286c591ff513900ad1c244a4
+ms.openlocfilehash: 5f7a61e261399d3d2abe62fe4523e8c9895d5ad4
+ms.sourcegitcommit: 01b81317029b28dd9b61d167045fd31f1ec7bc06
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62081857"
+ms.lasthandoff: 05/17/2019
+ms.locfileid: "65855174"
 ---
 # <a name="creating-a-windows-powershell-navigation-provider"></a>Creating a Windows PowerShell Navigation Provider (Criar um Fornecedor de Navegação do Windows PowerShell)
 
@@ -33,34 +33,6 @@ O fornecedor descrito aqui permite o um banco de dados do Access o identificador
 
 > [!CAUTION]
 > Lembre-se de que esse design supõe que uma base de dados que tem um campo com o ID de nome e de que o tipo do campo é LongInteger.
-
-A lista seguinte inclui as secções neste tópico. Se não estiver familiarizado com a escrita de um fornecedor de navegação do Windows PowerShell, ler estas informações na ordem em que ele é exibido. No entanto, se estiver familiarizado com a escrita de um fornecedor de navegação do Windows PowerShell, aceda diretamente às informações de que precisa.
-
-- [Definir uma classe de fornecedor de navegação de PS](#Define-the-Windows-PowerShell-provider)
-
-- [Definir funcionalidade de Base](#Defining-Base-Functionality)
-
-- [Criar um caminho de PS](#Creating-a-Windows-PowerShell-Path)
-
-- [A obter o caminho principal](#Retrieving-the-Parent-Path)
-
-- [A obter o nome do caminho de subordinados](#Retrieve-the-Child-Path-Name)
-
-- [Determinar se um Item é um contentor](#Determining-if-an-Item-is-a-Container)
-
-- [Mover um Item](#Moving-an-Item)
-
-- [Os parâmetros dinâmicos para a anexar o `Move-Item` Cmdlet](#Attaching-Dynamic-Parameters-to-the-Move-Item-Cmdlet)
-
-- [Normalizar um caminho relativo](#Normalizing-a-Relative-Path)
-
-- [Exemplo de código](#Code-Sample)
-
-- [Definir tipos de objeto e formatação](#Defining-Object-Types-and-Formatting)
-
-- [Criando o provedor do Windows PowerShell](#Building-the-Windows-PowerShell-provider)
-
-- [Teste o fornecedor do Windows PowerShell](#Testing-the-Windows-PowerShell-provider)
 
 ## <a name="define-the-windows-powershell-provider"></a>Definir o fornecedor de Windows PowerShell
 

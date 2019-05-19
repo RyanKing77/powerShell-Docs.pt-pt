@@ -8,42 +8,16 @@ ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 79c9bcbc-a2eb-4253-a4b8-65ba54ce8d01
 caps.latest.revision: 9
-ms.openlocfilehash: 871a74a084da3c7ec36767b7195461e0e7290cb9
-ms.sourcegitcommit: e7445ba8203da304286c591ff513900ad1c244a4
+ms.openlocfilehash: 980b488800587e31286e2ca2ece924e07f8af3f3
+ms.sourcegitcommit: 01b81317029b28dd9b61d167045fd31f1ec7bc06
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62068798"
+ms.lasthandoff: 05/17/2019
+ms.locfileid: "65854865"
 ---
 # <a name="advisory-development-guidelines"></a>Advisory Development Guidelines (Diretrizes de Desenvolvimento Recomendadas)
 
 Esta secção descreve as diretrizes que deve considerar para garantir boa experiências de desenvolvimento e de utilizador. Por vezes, podem ser aplicadas e, às vezes, talvez não.
-
-## <a name="design-guidelines"></a>Diretrizes de design
-
-- [Suporte a um parâmetro de InputObject (AD01)](./advisory-development-guidelines.md#AD01)
-
-- [Suporta o parâmetro Force (AD02)](./advisory-development-guidelines.md#AD02)
-
-- [Lidar com as credenciais através do Windows PowerShell (AD03)](./advisory-development-guidelines.md#AD03)
-
-- [Suporta parâmetros de codificação (AD04)](./advisory-development-guidelines.md#AD04)
-
-- [Cmdlets de teste deverá devolver um valor booleano (AD05)](./advisory-development-guidelines.md#AD05)
-
-## <a name="code-guidelines"></a>Diretrizes de código
-
-- [Siga as convenções de nomenclatura de classe Cmdlet (AC01)](./advisory-development-guidelines.md#AC01)
-
-- [Se nenhuma entrada de Pipeline substituir o método BeginProcessing (AC02)](./advisory-development-guidelines.md#AC02)
-
-- [Para processar pedidos de paragem substituem o método de StopProcessing (AC03)](./advisory-development-guidelines.md#AC03)
-
-- [Implementar a Interface IDisposable (AC04)](./advisory-development-guidelines.md#AC04)
-
-- [Usar tipos de parâmetro de amigável à serialização (AC05)](./advisory-development-guidelines.md#AC05)
-
-- [Utilizar SecureString para dados confidenciais (AC06)](./advisory-development-guidelines.md#AC06)
 
 ## <a name="design-guidelines"></a>Diretrizes de design
 
