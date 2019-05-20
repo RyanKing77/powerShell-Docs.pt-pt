@@ -2,12 +2,12 @@
 title: Utilizar o Visual Studio Code para o desenvolvimento de PowerShell
 description: Utilizar o Visual Studio Code para o desenvolvimento de PowerShell
 ms.date: 08/06/2018
-ms.openlocfilehash: 0d796460511b273771eacb03d0df4d90e1e9c322
-ms.sourcegitcommit: 01b81317029b28dd9b61d167045fd31f1ec7bc06
+ms.openlocfilehash: 5badffd49252e0d72ae2c20d3147ad4b1e92d5ed
+ms.sourcegitcommit: cf1a281cce9f7239c440c90f8b2798d32a13778d
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 05/17/2019
-ms.locfileid: "65854400"
+ms.lasthandoff: 05/19/2019
+ms.locfileid: "65882564"
 ---
 # <a name="using-visual-studio-code-for-powershell-development"></a>Utilizar o Visual Studio Code para o desenvolvimento de PowerShell
 
@@ -84,7 +84,7 @@ Tipo de `R` para executar o ficheiro. Em seguida, abra o Visual Studio Code e ve
 
 #### <a name="choosing-a-version-of-powershell-to-use-with-the-extension"></a>Escolher uma versão do PowerShell para utilizar com a extensão
 
-Com o PowerShell Core, a instalação lado a lado com o Windows PowerShell, é agora possível para uma versão específica do PowerShell com a extensão de PowerShell. Utilize o seguinte estes passos para escolher a versão:
+Com o PowerShell Core, a instalação lado a lado com o Windows PowerShell, é agora possível utilizar uma versão específica do PowerShell com a extensão de PowerShell. Utilize o seguinte estes passos para escolher a versão:
 
 1. Abra o palete de comando (<kbd>Ctrl</kbd>+<kbd>Shift</kbd>+<kbd>P</kbd> no Windows e Linux, <kbd>Cmd</kbd> + <kbd>Shift</kbd>+<kbd>P</kbd> no macOS).
 1. Procure "Session".
