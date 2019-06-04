@@ -3,12 +3,12 @@ ms.date: 11/13/2018
 keywords: PowerShell, o cmdlet
 title: Decode a PowerShell command from a running process (Descodificar um comando do PowerShell a partir de um processo em execução)
 author: randomnote1
-ms.openlocfilehash: a0602070a8c5b60ce0bb09e227690f48d970a868
-ms.sourcegitcommit: e7445ba8203da304286c591ff513900ad1c244a4
+ms.openlocfilehash: a6c01d8edf67aba6c47350a97cc0ceec4801ad29
+ms.sourcegitcommit: bc42c9166857147a1ecf9924b718d4a48eb901e3
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62086243"
+ms.lasthandoff: 06/03/2019
+ms.locfileid: "66470961"
 ---
 # <a name="decode-a-powershell-command-from-a-running-process"></a>Decode a PowerShell command from a running process (Descodificar um comando do PowerShell a partir de um processo em execução)
 
@@ -33,7 +33,7 @@ powershell.exe -Command {
 
 ## <a name="view-the-process"></a>Ver o processo
 
-O corpo do comando que está a executar o PowerShell é armazenado na **CommandLine** propriedade da [Win32_Process][] classe. Se o comando é um [codificado comando][], o **CommandLine** propriedade contém a cadeia de caracteres "EncodedCommand". Usando essas informações, o comando codificado pode ser anulado oculto por meio do seguinte processo.
+O corpo do comando que está a executar o PowerShell é armazenado na **CommandLine** propriedade da [Win32_Process][] classe. Se o comando é um comando codificado, o **CommandLine** propriedade contém a cadeia de caracteres "EncodedCommand". Usando essas informações, o comando codificado pode ser anulado oculto por meio do seguinte processo.
 
 Inicie o PowerShell como administrador. É vital que o PowerShell está em execução como administrador, caso contrário, não são devolvidos resultados ao consultar os processos em execução.
 
@@ -107,4 +107,3 @@ DecodedCommand :
 [Agendador de tarefas]: /windows/desktop/TaskSchd/task-scheduler-start-page
 [SQL Server Agent]: /sql/ssms/agent/sql-server-agent
 [Win32_Process]: /windows/desktop/CIMWin32Prov/win32-process
-[codificado comando]: /powershell/scripting/core-powershell/console/powershell.exe-command-line-help#-encodedcommand-

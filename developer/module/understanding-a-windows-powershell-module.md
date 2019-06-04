@@ -8,12 +8,12 @@ ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: d4e38235-9987-4347-afd2-0f7d1dc8f64a
 caps.latest.revision: 19
-ms.openlocfilehash: 77d328bc1cb8cb42d5a10f107a149c05ab270ce3
-ms.sourcegitcommit: e7445ba8203da304286c591ff513900ad1c244a4
+ms.openlocfilehash: cff50d415c4c90182fa1cf015a5a5ba84d4d613a
+ms.sourcegitcommit: bc42c9166857147a1ecf9924b718d4a48eb901e3
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62082112"
+ms.lasthandoff: 06/03/2019
+ms.locfileid: "66470782"
 ---
 # <a name="understanding-a-windows-powershell-module"></a>Understanding a Windows PowerShell Module (Compreender um Módulo do Windows PowerShell)
 
@@ -55,7 +55,7 @@ R *manifesto de módulo* é um módulo que usa um arquivo de manifesto para desc
 
 ### <a name="dynamic-modules"></a>Módulos dinâmicos
 
-R *dynamického modulu* é um módulo não foi carregado ou salva num arquivo. Em vez disso, eles são criados dinamicamente por um script, utilizando o [New-Module](/powershell/module/Microsoft.PowerShell.Core/New-Module) cmdlet. Este tipo de módulo permite que um script para criar um módulo sob demanda e que não precisa de ser carregados ou guardada para armazenamento persistente. Por sua natureza, um módulo dinâmico se destina a ser curta duração e, portanto, não podem ser acedido pelo `Get-Module` cmdlet. Da mesma forma, normalmente, não têm de manifestos de módulo, e eles nem provavelmente precisam permanentes pastas para armazenar seus assemblies relacionados.
+R *dynamického modulu* é um módulo que não é carregado a partir de, ou salva num arquivo. Em vez disso, eles são criados dinamicamente por um script, utilizando o [New-Module](/powershell/module/Microsoft.PowerShell.Core/New-Module) cmdlet. Este tipo de módulo permite que um script para criar um módulo sob demanda e que não precisa de ser carregados ou guardada para armazenamento persistente. Por sua natureza, um módulo dinâmico se destina a ser curta duração e, portanto, não podem ser acedido pelo `Get-Module` cmdlet. Da mesma forma, normalmente, não têm de manifestos de módulo, e eles nem provavelmente precisam permanentes pastas para armazenar seus assemblies relacionados.
 
 ## <a name="module-manifests"></a>Manifestos de módulo
 

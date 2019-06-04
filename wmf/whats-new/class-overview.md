@@ -2,12 +2,12 @@
 ms.date: 06/12/2017
 keywords: wmf,powershell,setup
 title: Criar Tipos Personalizados com as Classes do PowerShell
-ms.openlocfilehash: 0dd5bbaca50abb746e15a7bb64a706c7eceee905
-ms.sourcegitcommit: 01b81317029b28dd9b61d167045fd31f1ec7bc06
+ms.openlocfilehash: c2c50fb65ce4931fcf6ae529b4146df391c831c4
+ms.sourcegitcommit: bc42c9166857147a1ecf9924b718d4a48eb901e3
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 05/17/2019
-ms.locfileid: "65856239"
+ms.lasthandoff: 06/03/2019
+ms.locfileid: "66470927"
 ---
 # <a name="creating-custom-types-using-powershell-classes"></a>Criar Tipos Personalizados com as Classes do PowerShell
 
@@ -21,7 +21,7 @@ PowerShell 5.0 adicionada a capacidade de definir as classes e outros tipos defi
 - Tipos de depuração através da linguagem do PowerShell
 - Gerar e manipular exceções, utilizando os mecanismos formais e no nível certo
 
-# <a name="declare-base-class"></a>Declarar a Classe Base
+## <a name="declare-base-class"></a>Declarar a Classe Base
 
 É possível declarar uma classe do PowerShell como um tipo base para outra classe de PowerShell.
 
@@ -54,7 +54,7 @@ $list.Add(100)
 $list[0] # return 100
 ```
 
-# <a name="call-base-class-constructor"></a>Chamar o Construtor de Classe Base
+### <a name="call-base-class-constructor"></a>Chamar o Construtor de Classe Base
 
 Para chamar um construtor de classe base a partir de uma subclasse, utilize a palavra-chave **base**:
 
@@ -86,7 +86,7 @@ class C : B
 }
 ```
 
-# <a name="call-base-class-method"></a>Chamar o Método de Classe Base
+### <a name="call-base-class-method"></a>Chamar o Método de Classe Base
 
 Pode substituir os métodos existentes numa subclasse. Para tal, declare métodos, utilizando o mesmo nome e assinatura:
 
@@ -135,7 +135,7 @@ $list.Add(100)
 $list[0] # return 200
 ```
 
-# <a name="declare-implemented-interface"></a>Declarar a Interface Implementada
+### <a name="declare-implemented-interface"></a>Declarar a Interface Implementada
 
 É possível declarar interfaces implementadas após tipos base ou imediatamente após dois pontos (:), se não houver nenhum tipo base especificado. Separe todos os nomes de tipo utilizando vírgulas. Isso é semelhante a C# sintaxe.
 
@@ -157,11 +157,11 @@ class MyComparableBar : bar, system.IComparable
 }
 ```
 
-# <a name="new-language-features-in-powershell-50"></a>Novos recursos de linguagem no PowerShell 5.0
+## <a name="new-language-features-in-powershell-50"></a>Novos recursos de linguagem no PowerShell 5.0
 
 PowerShell 5.0 introduz os seguintes novos elementos de linguagem no PowerShell:
 
-## <a name="class-keyword"></a>Palavra-chave de classe
+### <a name="class-keyword"></a>Palavra-chave de classe
 
 O `class` palavra-chave define uma nova classe. Esta é uma verdadeira tipo do .NET Framework. Membros de classe são públicos, mas apenas público dentro do escopo do módulo. Não é possível consultar o nome do tipo como cadeia de caracteres (por exemplo, `New-Object` não funciona), e nesta versão, não é possível utilizar um literal de tipo (por exemplo, `[MyClass]`) fora o ficheiro de script ou módulo no qual a classe é definida.
 
@@ -172,7 +172,7 @@ class MyClass
 }
 ```
 
-## <a name="enum-keyword-and-enumerations"></a>Palavra-chave de enumeração e enumerações
+### <a name="enum-keyword-and-enumerations"></a>Palavra-chave de enumeração e enumerações
 
 Suporte para o `enum` palavra-chave tiver sido adicionado, que utiliza o caractere de nova linha como o delimitador. Atualmente, não é possível definir um enumerador em termos de propriamente dito. No entanto, pode inicializar um enum em termos de outro enum, conforme mostrado no exemplo a seguir. Além disso, não é possível especificar o tipo base; é sempre `[int]`.
 
@@ -202,11 +202,11 @@ enum SomeEnum { Max = 42 }
 enum OtherEnum { Max = [SomeEnum]::Max + 1 }
 ```
 
-## <a name="import-dscresource"></a>Import-DscResource
+### <a name="import-dscresource"></a>Import-DscResource
 
 `Import-DscResource` Agora é uma palavra-chave dynamic verdadeira. PowerShell analisa o módulo de raiz do módulo especificado, pesquisa de classes que contêm os **DscResource** atributo.
 
-## <a name="implementingassembly"></a>ImplementingAssembly
+### <a name="implementingassembly"></a>ImplementingAssembly
 
 Um novo campo **ImplementingAssembly**, foi adicionado ao **ModuleInfo**. Ele é definido para o assembly dinâmico criado para um módulo de script, se o script define classes ou o assembly carregado para módulos binários. Não é definida quando **ModuleType** é **manifesto**.
 
@@ -232,11 +232,11 @@ $s = "hello"
 
 Todos os membros são públicos.
 
-## <a name="constructors-and-instantiation"></a>Construtores e a instanciação
+### <a name="constructors-and-instantiation"></a>Construtores e a instanciação
 
 Classes do PowerShell podem ter construtores. Eles têm o mesmo nome que sua classe. Construtores podem ser sobrecarregados. São suportados construtores estáticos. Propriedades com expressões de inicialização são inicializadas antes de executar qualquer código num construtor. Propriedades estáticas são inicializadas antes do corpo de um construtor estático e propriedades de instância são inicializadas antes do corpo do construtor não estático. Atualmente, não há nenhuma sintaxe para chamar um construtor de outro construtor (como o C\# sintaxe ": this()"). A solução alternativa é definir uma comum `Init()` método.
 
-### <a name="creating-instances"></a>Criação de instâncias
+#### <a name="creating-instances"></a>Criação de instâncias
 
 > [!NOTE]
 > No PowerShell 5.0, `New-Object` não funciona com classes definidas no PowerShell. Além disso, o nome do tipo só é visível lexicalmente, ou seja, não são visível fora da módulo ou script que define a classe. As funções podem devolver instâncias de uma classe definida no PowerShell. Essas instâncias de trabalho fora do módulo ou script.
@@ -265,7 +265,7 @@ O método pseudo-estático `new()` funciona com tipos .NET, conforme mostrado no
 [hashtable]::new()
 ```
 
-### <a name="discovering-constructors"></a>Construtores de deteção
+#### <a name="discovering-constructors"></a>Construtores de deteção
 
 Agora, pode ver sobrecargas de construtor com `Get-Member`, ou conforme mostrado neste exemplo:
 
@@ -280,7 +280,7 @@ hashtable new(int capacity, float loadFactor)
 
 `Get-Member -Static` lista construtores, para que pode exibir sobrecargas como qualquer outro método. O desempenho dessa sintaxe também é consideravelmente mais rápido do que `New-Object`.
 
-## <a name="methods"></a>Métodos
+### <a name="methods"></a>Métodos
 
 Um método de classe do PowerShell é implementado como um **ScriptBlock** que tem apenas um bloco final. Todos os métodos são públicos. O seguinte mostra um exemplo de definir um método chamado **DoSomething**.
 
@@ -304,29 +304,29 @@ $b.DoSomething(42)
 
 Também são suportados métodos sobrecarregados.
 
-## <a name="properties"></a>Propriedades
+### <a name="properties"></a>Propriedades
 
 Todas as propriedades são públicas. As propriedades requerem uma nova linha ou um ponto e vírgula. Se não for especificado nenhum tipo de objeto, o tipo de propriedade é o objeto.
 
 Propriedades que utilizam a validação ou argumento atributos de transformação (como `[ValidateSet("aaa")]`) funcionar conforme esperado.
 
-## <a name="hidden"></a>Oculto
+### <a name="hidden"></a>Oculto
 
 Uma nova palavra-chave, `Hidden`, foi adicionado. `Hidden` podem ser aplicadas a propriedades e métodos (incluindo construtores).
 
-Os membros ocultos são públicos, mas não aparecem na saída do `Get-Member` , a menos que a opção - Force adicionado o parâmetro. Oculto a membros não estão incluídos quando separador a conclusão ou usando o Intellisense, a menos que a conclusão ocorre na classe definindo o membro oculto.
+Os membros ocultos são públicos, mas não aparecem na saída da `Get-Member` , a menos que o `-Force` adicionado o parâmetro. Oculto a membros não estão incluídos quando separador a conclusão ou usando o Intellisense, a menos que a conclusão ocorre na classe definindo o membro oculto.
 
 Um novo atributo **System.Management.Automation.HiddenAttribute** foi adicionada para que C\# código pode ter a mesma semântica dentro do PowerShell.
 
-## <a name="return-types"></a>Tipos de retorno
+### <a name="return-types"></a>Tipos de retorno
 
-Tipo de retorno é um contrato. O valor de retorno é convertido para o tipo esperado. Se não for especificado nenhum tipo de retorno, o tipo de retorno é **void**. Não existe nenhum de transmissão em fluxo de objetos. Bbjects não pode ser escrito para o pipeline, intencionalmente ou acidentalmente.
+Tipo de retorno é um contrato. O valor de retorno é convertido para o tipo esperado. Se não for especificado nenhum tipo de retorno, o tipo de retorno é **void**. Não existe nenhum de transmissão em fluxo de objetos. Objetos não podem ser escritos para o pipeline, intencionalmente ou acidentalmente.
 
-## <a name="attributes"></a>Atributos
+### <a name="attributes"></a>Atributos
 
 Dois novos atributos **DscResource** e **DscProperty** foram adicionados.
 
-## <a name="lexical-scoping-of-variables"></a>Controlo de âmbito léxica de variáveis
+### <a name="lexical-scoping-of-variables"></a>Controlo de âmbito léxica de variáveis
 
 O seguinte mostra um exemplo de como léxico funciona âmbito nesta versão.
 

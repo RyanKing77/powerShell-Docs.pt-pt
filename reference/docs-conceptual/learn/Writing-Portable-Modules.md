@@ -2,12 +2,12 @@
 ms.date: 12/14/2018
 keywords: PowerShell, o cmdlet
 title: Escrever módulos portátil
-ms.openlocfilehash: 38a93b5b030d58784b91292e2cd060b3a2c19a00
-ms.sourcegitcommit: e7445ba8203da304286c591ff513900ad1c244a4
+ms.openlocfilehash: 237f6aaea0ed019c54d04a8477d7a456edf00910
+ms.sourcegitcommit: bc42c9166857147a1ecf9924b718d4a48eb901e3
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62086413"
+ms.lasthandoff: 06/03/2019
+ms.locfileid: "66470991"
 ---
 # <a name="portable-modules"></a>Módulos portátil
 
@@ -17,11 +17,12 @@ Windows PowerShell foi escrito para o [.NET Framework][] enquanto o PowerShell C
 
 ### <a name="porting-a-pssnapin"></a>Portando um PSSnapIn
 
-PowerShell SnapIns (PSSnapIn) não são suportados no PowerShell Core. No entanto, é comum para converter um PSSnapIn para um módulo do PowerShell. Normalmente, o código de registo de PSSnapIn está num único arquivo de origem de uma classe que deriva [PSSnapIn][]. Remover este ficheiro de origem da compilação; já não é necessária.
+PowerShell [SnapIns](/powershell/developer/cmdlet/modules-and-snap-ins) não são suportados no PowerShell Core. No entanto, é comum para converter um PSSnapIn para um módulo do PowerShell. Normalmente, o código de registo de PSSnapIn está num único arquivo de origem de uma classe que deriva [PSSnapIn][].
+Remover este ficheiro de origem da compilação; já não é necessária.
 
-Uso [New-ModuleManifest][] para criar um novo manifesto de módulo substitui a necessidade do código de registo de PSSnapIn. Alguns dos valores de PSSnapIn (por exemplo, descrição) podem ser reutilizados no manifesto de módulo.
+Uso [New-ModuleManifest][] para criar um novo manifesto de módulo substitui a necessidade do código de registo de PSSnapIn. Alguns dos valores do **PSSnapIn** (tal como **Descrição**) podem ser reutilizados no manifesto de módulo.
 
-O `RootModule` propriedade no manifesto do módulo deve ser definida como o nome do assembly (dll) implementando os cmdlets.
+O **RootModule** propriedade no manifesto do módulo deve ser definida como o nome do assembly (dll) implementando os cmdlets.
 
 ### <a name="the-net-portability-analyzer-aka-apiport"></a>O analisador de portabilidade do .NET (também conhecido como APIPort)
 

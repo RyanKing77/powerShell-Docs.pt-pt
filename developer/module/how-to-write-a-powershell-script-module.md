@@ -8,12 +8,12 @@ ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: ed7645ea-5e52-4a45-81a7-aa3c2d605cde
 caps.latest.revision: 16
-ms.openlocfilehash: e8b7151538235cdf7183b78aa8df7e596d6bcfd9
-ms.sourcegitcommit: b6871f21bd666f9cd71dd336bb3f844cf472b56c
+ms.openlocfilehash: b2a929a1724f77f0516ad24cfd90f6d6053ed19e
+ms.sourcegitcommit: bc42c9166857147a1ecf9924b718d4a48eb901e3
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 02/03/2019
-ms.locfileid: "56848917"
+ms.lasthandoff: 06/03/2019
+ms.locfileid: "66470797"
 ---
 # <a name="how-to-write-a-powershell-script-module"></a>How to Write a PowerShell Script Module (Como Escrever um Módulo de Script do PowerShell)
 
@@ -27,9 +27,9 @@ Criar um módulo de script ao guardar um script do PowerShell válido para um fi
 
 1. Escolher um script do PowerShell existente e salve o script com uma extensão. psm1.
 
-   A guardar um script com o. psm1 extensão significa que pode utilizar os cmdlets do módulo, tal como [Import-Module](/powershell/module/Microsoft.PowerShell.Core/Import-Module), no mesmo. Estes cmdlets existe principalmente para que possa facilmente importar e exportar o seu código em sistemas de outro utilizador. (A solução alternativa seria ao carregar o seu código em outros sistemas e, em seguida, ponto de código-fonte-la na memória Active Directory, o que não é uma solução particularmente dimensionável.) Para obter mais informações, consulte a **Cmdlets do módulo e as variáveis** secção [módulos do Windows PowerShell](./understanding-a-windows-powershell-module.md) tenha em atenção que, por predefinição, todas as funções no seu script estará acessíveis aos utilizadores que importar seu. psm1 ficheiro, mas as propriedades serão não.
+   A guardar um script com o. psm1 extensão significa que pode utilizar os cmdlets do módulo, tal como [Import-Module](/powershell/module/Microsoft.PowerShell.Core/Import-Module), no mesmo. Estes cmdlets existe principalmente para que possa facilmente importar e exportar o seu código em sistemas de outro utilizador. (A solução alternativa seria ao carregar o seu código em outros sistemas e, em seguida, ponto de código-fonte-la na memória Active Directory, o que não é uma solução particularmente dimensionável.) Para obter mais informações, consulte a **Cmdlets do módulo e as variáveis** secção [módulos do Windows PowerShell](./understanding-a-windows-powershell-module.md) tenha em atenção que, por predefinição, são acessíveis aos utilizadores que importar o ficheiro. psm1, todas as funções no seu script mas as propriedades não são.
 
-   Um exemplo de script do PowerShell, intitulado Show-calendário, está disponível no final deste tópico.
+   Um exemplo de script do PowerShell, intitulado `Show-Calendar`, está disponível no final deste tópico.
 
    ```powershell
    function Show-Calendar {
@@ -45,7 +45,7 @@ Criar um módulo de script ao guardar um script do PowerShell válido para um fi
    }
    ```
 
-2. Se pretender controlar o acesso de usuário a determinadas funções ou propriedades, chame [Export-ModuleMember](/powershell/module/Microsoft.PowerShell.Core/Export-ModuleMember) no final do seu script.
+2. Para controlar o acesso de utilizador para determinadas funções ou propriedades, chame [Export-ModuleMember](/powershell/module/Microsoft.PowerShell.Core/Export-ModuleMember) no final do seu script.
 
    O código de exemplo na parte inferior da página tem apenas uma função, que, por padrão, iria ser exposta. No entanto, é recomendável que chame explicitamente as funções que deseja expor, conforme descrito no seguinte código:
 
@@ -65,9 +65,9 @@ Criar um módulo de script ao guardar um script do PowerShell válido para um fi
    Import-Module GenericModule
    ```
 
-4. Se quiser descrevem seu módulo para o sistema de ajuda do PowerShell, pode fazer isso com os comentários de ajuda padrão dentro do arquivo, ou com um arquivo de ajuda adicional.
+4. Para descrever seu módulo para o sistema de ajuda do PowerShell, pode utilizar os comentários de ajuda padrão dentro do arquivo ou criar um arquivo de ajuda adicional.
 
-   O exemplo de código na parte inferior deste tópico inclui as informações de ajuda nos comentários. Se assim o desejar, também poderia escrever expandidos arquivos XML que contêm conteúdo de ajuda adicional. Para obter mais informações, consulte [ajudar do escrita para o Windows PowerShell módulos](./writing-help-for-windows-powershell-modules.md).
+   O exemplo de código na parte inferior deste tópico inclui as informações de ajuda nos comentários. Também poderia escrever expandidos arquivos XML que contêm conteúdo de ajuda adicional. Para obter mais informações, consulte [ajudar do escrita para o Windows PowerShell módulos](./writing-help-for-windows-powershell-modules.md).
 
 5. Se tiver módulos adicionais, arquivos XML ou outro conteúdo que pretende empacotar com seu módulo, pode fazê-lo com um manifesto de módulo.
 
@@ -75,15 +75,17 @@ Criar um módulo de script ao guardar um script do PowerShell válido para um fi
 
 6. Para instalar e executar seu módulo, salvar o módulo em um dos caminhos de PowerShell apropriados e fazer uma chamada para `Import-Module`.
 
-   Os caminhos onde pode instalar o módulo estão localizados no `$env:PSModulePath` variável global. Por exemplo, seria um caminho comum para guardar um módulo num sistema `%SystemRoot%/users/<user>/Documents/WindowsPowerShell/Modules/<moduleName>`. Certifique-se de que crie uma pasta para seu módulo existir no, mesmo se for apenas um ficheiro. psm1 único. Se não tiver guardado o seu módulo a uma destes caminhos, terá de passar a localização do seu módulo na chamada para `Import-Module`. (Caso contrário, PowerShell não seria capaz de encontrá-lo.) A partir do PowerShell 3.0, se tiver efetuado seu módulo em um dos caminhos dos módulos do PowerShell, é necessário não explicitamente importá-lo: a simples presença de um usuário chama sua função e irá carregá-lo automaticamente. Para obter mais informações sobre o caminho do módulo, consulte [importar um módulo do PowerShell](./importing-a-powershell-module.md) e [variável de ambiente de PSModulePath](./modifying-the-psmodulepath-installation-path.md).
+   Os caminhos onde pode instalar o módulo estão localizados no `$env:PSModulePath` variável global. Por exemplo, seria um caminho comum para guardar um módulo num sistema `%SystemRoot%/users/<user>/Documents/WindowsPowerShell/Modules/<moduleName>`. Certifique-se de que crie uma pasta para seu módulo existir no, mesmo se for apenas um ficheiro. psm1 único. Se não tiver guardado o seu módulo a uma destes caminhos, terá de passar a localização do seu módulo na chamada para `Import-Module`. (Caso contrário, PowerShell não seria capaz de encontrá-lo.) A partir do PowerShell 3.0, se tiver efetuado seu módulo em um dos caminhos dos módulos do PowerShell, não terá de importá-lo a explicitamente. O módulo é carregado automaticamente quando um usuário chama sua função.
+   Para obter mais informações sobre o caminho do módulo, consulte [importar um módulo do PowerShell](./importing-a-powershell-module.md) e [variável de ambiente de PSModulePath](./modifying-the-psmodulepath-installation-path.md).
 
 7. Para remover um módulo de serviço do Active Directory, fazer uma chamada para [Remove-Module](/powershell/module/Microsoft.PowerShell.Core/Remove-Module).
 
-Tenha em atenção que [Remove-Module](/powershell/module/Microsoft.PowerShell.Core/Remove-Module) remove seu módulo do Active Directory memória – ele não, na verdade, eliminá-la onde guardou os ficheiros de módulo.
+   Tenha em atenção que [Remove-Module](/powershell/module/Microsoft.PowerShell.Core/Remove-Module) remove seu módulo do Active Directory memória – ele não, na verdade, eliminá-la onde guardou os ficheiros de módulo.
 
 ### <a name="show-calendar-code-example"></a>Exemplo de código do calendário show
 
-O exemplo seguinte é um módulo de script simples que contém uma única função denominada calendário Show. Esta função mostra uma representação visual de um calendário. Além disso, o exemplo contém as cadeias de caracteres de ajuda do PowerShell para a sinopse, a descrição, a valores de parâmetro e o exemplo. Tenha em atenção que a última linha de código indica que a função de calendário Show será exportada como um membro do módulo, quando o módulo é importado.
+O exemplo seguinte é um módulo de script simples que contém uma única função chamada `Show-Calendar`.
+Esta função mostra uma representação visual de um calendário. Além disso, o exemplo contém as cadeias de caracteres de ajuda do PowerShell para a sinopse, a descrição, a valores de parâmetro e o exemplo. Tenha em atenção que a última linha de código garante que o `Show-Calendar` função é exportada como um membro do módulo quando o módulo é importado.
 
 ```powershell
 <#
@@ -217,10 +219,10 @@ while($start -le $end)
     $calendar = $weeks | Format-Table $dayNames -AutoSize | Out-String
 
     ## Add a centered header.
-    $width = ($calendar.Split("'n") | Measure-Object -Maximum Length).Maximum
+    $width = ($calendar.Split("`n") | Measure-Object -Maximum Length).Maximum
     $header = "{0:MMMM yyyy}" -f $start
     $padding = " " * (($width - $header.Length) / 2)
-    $displayCalendar = " 'n" + $padding + $header + "'n " + $calendar
+    $displayCalendar = " `n" + $padding + $header + "`n " + $calendar
     $displayCalendar.TrimEnd()
 
     ## Move to the next month.
