@@ -2,13 +2,12 @@
 ms.date: 06/05/2017
 keywords: PowerShell, o cmdlet
 title: Gerir Unidades do Windows PowerShell
-ms.assetid: bd809e38-8de9-437a-a250-f30a667d11b4
-ms.openlocfilehash: 9ac5136fb28b450ea6397cab2f36082c50f22e1f
-ms.sourcegitcommit: e7445ba8203da304286c591ff513900ad1c244a4
+ms.openlocfilehash: 32efa282fb787753942e43acab53c7b6eaeb88e3
+ms.sourcegitcommit: a6f13c16a535acea279c0ddeca72f1f0d8a8ce4c
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62057830"
+ms.lasthandoff: 06/12/2019
+ms.locfileid: "67030140"
 ---
 # <a name="managing-windows-powershell-drives"></a>Gerir Unidades do Windows PowerShell
 
@@ -117,7 +116,7 @@ Office     FileSystem    C:\Program Files\Microsoft Offic...
 > [!NOTE]
 > Em geral, os caminhos não diferenciam maiúsculas de minúsculas.
 
-Consultar a nova unidade do Windows PowerShell, tal como sucede todas as unidades do Windows PowerShell – pelo respetivo nome seguido de dois pontos (**:**).
+Consultar a nova unidade do Windows PowerShell, tal como sucede todas as unidades do Windows PowerShell – pelo respetivo nome seguido de dois pontos ( **:** ).
 
 Uma unidade do Windows PowerShell pode fazer muitas tarefas muito mais simples. Por exemplo, algumas as chaves mais importantes no registo do Windows têm caminhos extremamente longos, tornando-os complicado para o acesso e difícil lembrar-se. Informações de configuração críticas residem sob **HKEY_LOCAL_MACHINE\\SOFTWARE\\Microsoft\\Windows\\CurrentVersion**. Para ver e alterar itens na chave do registo de CurrentVersion, pode criar uma unidade do Windows PowerShell que está enraizada nessa chave ao escrever:
 

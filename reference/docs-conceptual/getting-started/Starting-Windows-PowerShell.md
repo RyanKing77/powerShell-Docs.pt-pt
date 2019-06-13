@@ -2,13 +2,12 @@
 ms.date: 06/05/2017
 keywords: PowerShell, o cmdlet
 title: Iniciar o Windows PowerShell
-ms.assetid: 59b649a2-c90c-4cf4-bf95-a740c59148e7
-ms.openlocfilehash: 9184e8b0e508610e7f4775f1032f3a69c93bb8c1
-ms.sourcegitcommit: e7445ba8203da304286c591ff513900ad1c244a4
+ms.openlocfilehash: d2cb77027f404c5b008a902c5147d018dd741a67
+ms.sourcegitcommit: a6f13c16a535acea279c0ddeca72f1f0d8a8ce4c
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62058357"
+ms.lasthandoff: 06/12/2019
+ms.locfileid: "67030451"
 ---
 # <a name="starting-windows-powershell"></a>Iniciar o Windows PowerShell
 O PowerShell é uma dll de mecanismo de script que é incorporada em vários anfitriões.  O anfitrião mais comuns que começa são a linha de comandos interativa PowerShell.exe e ambiente PowerShell_ISE.exe interativa de scripts.
@@ -83,37 +82,37 @@ Para ativar o Windows PowerShell ISE do Windows PowerShell 2.0 no Windows Server
 
 ## <a name="starting-the-32-bit-version-of-windows-powershell"></a>Iniciar a versão de 32 bits do Windows PowerShell
 
-Quando instala o Windows PowerShell num computador de 64 bits **Windows PowerShell (x86)**, está instalada uma versão de 32 bits do Windows PowerShell, além da versão de 64 bits. Quando executa o Windows PowerShell, a versão de 64 bits é executada por predefinição.
+Quando instala o Windows PowerShell num computador de 64 bits **Windows PowerShell (x86)** , está instalada uma versão de 32 bits do Windows PowerShell, além da versão de 64 bits. Quando executa o Windows PowerShell, a versão de 64 bits é executada por predefinição.
 
-No entanto, ocasionalmente, poderá ter de ser executado **Windows PowerShell (x86)**, como quando estiver a utilizar um módulo que requer a versão de 32 bits ou quando estiver a ligar remotamente a um computador de 32 bits.
+No entanto, ocasionalmente, poderá ter de ser executado **Windows PowerShell (x86)** , como quando estiver a utilizar um módulo que requer a versão de 32 bits ou quando estiver a ligar remotamente a um computador de 32 bits.
 
 Para iniciar uma versão de 32 bits do Windows PowerShell, utilize qualquer um dos seguintes procedimentos.
 
 #### <a name="in-windows-server-2012-r2"></a>No Windows Server® 2012 R2
 
 - Sobre o **começar** ecrã, escreva **(x86) do Windows PowerShell**. Clique nas **x86 do Windows PowerShell** mosaico.
-- Na **Gestor de servidores**, da **ferramentas** menu, selecione **Windows PowerShell (x86)**.
-- Na área de trabalho, mover o cursor para o canto superior direito, clique em **pesquisa**, tipo **PowerShell x86** e, em seguida, clique em **Windows PowerShell (x86)**.
+- Na **Gestor de servidores**, da **ferramentas** menu, selecione **Windows PowerShell (x86)** .
+- Na área de trabalho, mover o cursor para o canto superior direito, clique em **pesquisa**, tipo **PowerShell x86** e, em seguida, clique em **Windows PowerShell (x86)** .
 - Por meio da linha de comandos, introduza: `%SystemRoot%\SysWOW64\WindowsPowerShell\v1.0\powershell.exe`
 
 #### <a name="in-windows-server-2012"></a>In Windows Server® 2012
 
 - Sobre o **começar** ecrã, escreva **PowerShell** e, em seguida, clique em **(x86) do Windows PowerShell**.
-- Na **Gestor de servidores**, da **ferramentas** menu, selecione **Windows PowerShell (x86)**.
-- Na área de trabalho, mover o cursor para o canto superior direito, clique em **pesquisa**, tipo **PowerShell** e, em seguida, clique em **Windows PowerShell (x86)**.
+- Na **Gestor de servidores**, da **ferramentas** menu, selecione **Windows PowerShell (x86)** .
+- Na área de trabalho, mover o cursor para o canto superior direito, clique em **pesquisa**, tipo **PowerShell** e, em seguida, clique em **Windows PowerShell (x86)** .
 - Por meio da linha de comandos, introduza: `%SystemRoot%\SysWOW64\WindowsPowerShell\v1.0\powershell.exe`
 
 #### <a name="in-windows-81"></a>No Windows® 8.1
 
 - Sobre o **começar** ecrã, escreva **(x86) do Windows PowerShell**. Clique nas **x86 do Windows PowerShell** mosaico.
 - Se estiver a executar [ferramentas de administração remota do servidor](https://go.microsoft.com/fwlink/?LinkID=304145) para Windows 8.1, também pode abrir o Windows PowerShell x86 a partir do **servidor ManagerTools** menu.
-  Selecione **Windows PowerShell (x86)**.
-- Na área de trabalho, mover o cursor para o canto superior direito, clique em **pesquisa**, tipo **PowerShell x86** e, em seguida, clique em **Windows PowerShell (x86)**.
+  Selecione **Windows PowerShell (x86)** .
+- Na área de trabalho, mover o cursor para o canto superior direito, clique em **pesquisa**, tipo **PowerShell x86** e, em seguida, clique em **Windows PowerShell (x86)** .
 - Por meio da linha de comandos, introduza: `%SystemRoot%\SysWOW64\WindowsPowerShell\v1.0\powershell.exe`
 
 #### <a name="in-windows-8"></a>No Windows® 8
 
 - Na **começar** ecrã, mova o cursor para o canto superior direito, clique em **definições**, clique em **mosaicos**e, em seguida, mova o **Mostrar Ferramentas administrativas** controlo de deslize como Yes. Em seguida, escreva **PowerShell** e clique em **(x86) do Windows PowerShell**.
-- Se estiver a executar [ferramentas de administração remota do servidor](https://www.microsoft.com/download/details.aspx?id=28972) para Windows 8, também pode abrir o Windows PowerShell x86 a partir do **servidor ManagerTools** menu. Selecione **Windows PowerShell (x86)**.
+- Se estiver a executar [ferramentas de administração remota do servidor](https://www.microsoft.com/download/details.aspx?id=28972) para Windows 8, também pode abrir o Windows PowerShell x86 a partir do **servidor ManagerTools** menu. Selecione **Windows PowerShell (x86)** .
 - Sobre o **começar** ecrã ou ambiente de trabalho, escreva **PowerShell (x86)** e, em seguida, clique em **(x86) do Windows PowerShell**.
 - Por meio da linha de comandos, introduza: `%SystemRoot%\SysWOW64\WindowsPowerShell\v1.0\powershell.exe`

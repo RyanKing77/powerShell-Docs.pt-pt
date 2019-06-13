@@ -2,13 +2,12 @@
 ms.date: 06/05/2017
 keywords: PowerShell, o cmdlet
 title: Novidades no PowerShell 50 ISE
-ms.assetid: 38648d47-7c27-4b37-a40e-ad29948519c2
-ms.openlocfilehash: 2d953bc4553de7720c590304d29750b84a1ef3b2
-ms.sourcegitcommit: e7445ba8203da304286c591ff513900ad1c244a4
+ms.openlocfilehash: 52e8926a7320f86f2ab8970a7778faba6a14a714
+ms.sourcegitcommit: a6f13c16a535acea279c0ddeca72f1f0d8a8ce4c
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62058187"
+ms.lasthandoff: 06/12/2019
+ms.locfileid: "67030028"
 ---
 # <a name="what39s-new-in-the-windows-powershell-ise"></a>O que&#39;novidade do ISE do Windows PowerShell
 Este tópico explica os recursos novos e atualizados que foram introduzidos em versões do Windows PowerShell Integrated Scripting Environment (ISE).

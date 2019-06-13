@@ -2,13 +2,12 @@
 ms.date: 06/05/2017
 keywords: PowerShell, o cmdlet
 title: Atalhos de Teclado do ISE do Windows PowerShell
-ms.assetid: 8328b946-0f02-4ef4-ac28-2743a1b4043b
-ms.openlocfilehash: 1abae849ce599b586357fd2a8db46c608932bd4e
-ms.sourcegitcommit: e7445ba8203da304286c591ff513900ad1c244a4
+ms.openlocfilehash: f71aea16f7a98ff7b6427237dc90104e4ea0db71
+ms.sourcegitcommit: a6f13c16a535acea279c0ddeca72f1f0d8a8ce4c
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62086838"
+ms.lasthandoff: 06/12/2019
+ms.locfileid: "67030936"
 ---
 # <a name="keyboard-shortcuts-for-the-windows-powershell-ise"></a>Atalhos de Teclado do ISE do Windows PowerShell
 
@@ -31,7 +30,7 @@ Pode utilizar os seguintes atalhos de teclado, ao editar o texto.
 |**Paste**|CTRL + V|Painel de script, o painel de comando|
 |**Refazer**|CTRL + Y|Painel de script, o painel de comando|
 |**Substituir no Script**|CTRL + H|Painel de script|
-|**Guardar**|CTRL + S|Painel de script|
+|**Guardar**|CTRL+S|Painel de script|
 |**Selecionar tudo**|CTRL + T|Painel, o painel de comando, o painel de resultados do script|
 |**Mostrar trechos de código**|CTRL + J|Painel de script, o painel de comando|
 |**Undo**|CTRL + Z|Painel de script, o painel de comando|
@@ -92,7 +91,7 @@ Pode utilizar os seguintes atalhos de teclado ao depurar scripts.
 |**Avance para**|S|Painel de consola, quando um script de depuração|
 |**Step Over**|V|Painel de consola, quando um script de depuração|
 |**Krokovat s Vystoupením**|O|Painel de consola, quando um script de depuração|
-|**Repetir último comando** (para o passo em ou Step Over)|INTRODUZA|Painel de consola, quando um script de depuração|
+|**Repetir último comando** (para o passo em ou Step Over)|ENTER|Painel de consola, quando um script de depuração|
 |**Pilha de chamadas de apresentação**|K|Painel de consola, quando um script de depuração|
 |**Parar a depuração**|PERGUNTAS E|Painel de consola, quando um script de depuração|
 |**Lista o Script**|L|Painel de consola, quando um script de depuração|

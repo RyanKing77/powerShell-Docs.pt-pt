@@ -2,13 +2,12 @@
 ms.date: 06/05/2017
 keywords: PowerShell, o cmdlet
 title: Trabalhar com Pastas de Ficheiros e Chaves do Registo
-ms.assetid: e6cf87aa-b5f8-48d5-a75a-7cb7ecb482dc
-ms.openlocfilehash: cd20cc50b573435ba80b52b51e164e60625dc1b6
-ms.sourcegitcommit: e7445ba8203da304286c591ff513900ad1c244a4
+ms.openlocfilehash: 0c8716c384827d0816e2847ff81232c14638681b
+ms.sourcegitcommit: a6f13c16a535acea279c0ddeca72f1f0d8a8ce4c
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62086011"
+ms.lasthandoff: 06/12/2019
+ms.locfileid: "67030757"
 ---
 # <a name="working-with-files-folders-and-registry-keys"></a>Trabalhar com arquivos, pastas e chaves de registo
 
@@ -128,7 +127,7 @@ Pode excluir itens específicos, utilizando o **excluir** parâmetro de Get-Chil
 
 Por exemplo, suponha que está tentando encontrar a DLL de serviço de hora do Windows na pasta System32, e tudo o que pode se lembrar sobre o nome da DLL é que começa com "W" e tem "32" nela.
 
-Uma expressão, como **w\&#42; 32\&#42;. dll** irá encontrar todas as DLLs que cumprem as condições, mas ele pode retornar também o Windows 95 e compatibilidade do Windows de 16 bits DLLs que incluem "95" ou "16" nos respetivos nomes. Pode omitir ficheiros com qualquer um desses números nos respetivos nomes utilizando o **excluir** parâmetro com o padrão  **\&#42;\[ 9516]\&#42;**:
+Uma expressão, como **w\&#42; 32\&#42;. dll** irá encontrar todas as DLLs que cumprem as condições, mas ele pode retornar também o Windows 95 e compatibilidade do Windows de 16 bits DLLs que incluem "95" ou "16" nos respetivos nomes. Pode omitir ficheiros com qualquer um desses números nos respetivos nomes utilizando o **excluir** parâmetro com o padrão  **\&#42;\[ 9516]\&#42;** :
 
 ```
 PS> Get-ChildItem -Path C:\WINDOWS\System32\w*32*.dll -Exclude *[9516]*

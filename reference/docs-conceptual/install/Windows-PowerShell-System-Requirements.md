@@ -2,13 +2,12 @@
 ms.date: 06/05/2017
 keywords: PowerShell, o cmdlet
 title: Requisitos de Sistema do Windows PowerShell
-ms.assetid: 6d1d3c75-3be4-4fc9-8805-ca9b2c454d42
-ms.openlocfilehash: a9a7dc434d26876d6747526ad3ef6fa598376ac1
-ms.sourcegitcommit: e7445ba8203da304286c591ff513900ad1c244a4
+ms.openlocfilehash: 95625efdaea55014f6e6f27c1e8d4c196c89f99c
+ms.sourcegitcommit: a6f13c16a535acea279c0ddeca72f1f0d8a8ce4c
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62058308"
+ms.lasthandoff: 06/12/2019
+ms.locfileid: "67028867"
 ---
 # <a name="windows-powershell-system-requirements"></a>Requisitos de Sistema do Windows PowerShell
 Este tópico lista os requisitos de sistema para o Windows PowerShell 3.0, o Windows PowerShell 4.0 e o Windows PowerShell 5.0 e o Windows PowerShell 5.1 e para recursos especiais, como o Windows PowerShell Integrated Scripting Environment (ISE), comandos CIM, e fluxos de trabalho.
@@ -135,7 +134,7 @@ O mecanismo do Windows PowerShell 2.0 requer o Microsoft .NET Framework 2.0.5072
 
 Para obter informações sobre a adição ou instalar o motor do Windows PowerShell 2.0 e adicionar ou instalar as versões necessárias do Microsoft .NET Framework, consulte [instalar o motor do Windows PowerShell 2.0](Installing-the-Windows-PowerShell-2.0-Engine.md). Para obter informações sobre como iniciar o motor do Windows PowerShell 2.0, consulte [iniciar o motor do Windows PowerShell 2.0](../getting-started/Starting-the-Windows-PowerShell-2.0-Engine.md).
 
-## <a name="windows-preinstallation-environment"></a>Ambiente de pré-instalação do Windows
+## <a name="windows-preinstallation-environment"></a>Ambiente de Pré-instalação do Windows
 Windows PowerShell 2.0, o Windows PowerShell 3.0 e o Windows PowerShell 4.0 executam no ambiente de pré-instalação do Windows (Windows PE). No entanto, os seguintes cmdlets não são suportados.
 
 - [Cmdlets de (BITS serviço) de transferência inteligente em segundo plano](https://go.microsoft.com/fwlink/?LinkId=257514)

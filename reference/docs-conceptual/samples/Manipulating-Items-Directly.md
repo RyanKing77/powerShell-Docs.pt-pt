@@ -2,13 +2,12 @@
 ms.date: 06/05/2017
 keywords: PowerShell, o cmdlet
 title: Manipular Itens Diretamente
-ms.assetid: 8cbd4867-917d-41ea-9ff0-b8e765509735
-ms.openlocfilehash: 4caa7d2e0eecff9783556062d8503fe10e616fe5
-ms.sourcegitcommit: e7445ba8203da304286c591ff513900ad1c244a4
+ms.openlocfilehash: 50aed569cf6b876297abe3cf1544eba70f6279ce
+ms.sourcegitcommit: a6f13c16a535acea279c0ddeca72f1f0d8a8ce4c
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62086226"
+ms.lasthandoff: 06/12/2019
+ms.locfileid: "67030138"
 ---
 # <a name="manipulating-items-directly"></a>Manipular Itens Diretamente
 
@@ -73,7 +72,7 @@ SKC  VC Name                           Property
   0   0 _Test                          {}
 ```
 
-Ao digitar um caminho de registo, certifique-se de que inclui os dois pontos (**:**) no Windows PowerShell unidade nomes, HKLM: e HKCU:. Sem os dois pontos, o Windows PowerShell não reconhece o nome da unidade no caminho.
+Ao digitar um caminho de registo, certifique-se de que inclui os dois pontos ( **:** ) no Windows PowerShell unidade nomes, HKLM: e HKCU:. Sem os dois pontos, o Windows PowerShell não reconhece o nome da unidade no caminho.
 
 ## <a name="why-registry-values-are-not-items"></a>Por que os valores de registo não são itens
 
@@ -93,7 +92,7 @@ SKC  VC Name                           Property
   3   0 OptionalComponents             {}
 ```
 
-Embora seria conveniente tratar as entradas do Registro como itens, não é possível especificar um caminho para uma entrada de registo de uma forma que garante que é exclusivo. A notação de caminho não faz distinção entre a subchave de registo com o nome **execute** e o **(predefinida)** entrada de registo no **executar** subchave. Além disso, uma vez que os nomes de entrada de registo podem conter o caráter de barra invertida (**\\**), se as entradas do Registro foram itens, em seguida, não podia usar a notação de caminho para uma entrada de registo com o nome de distinguir  **Windows\\CurrentVersion\\executar** da subchave que está localizada em que o caminho.
+Embora seria conveniente tratar as entradas do Registro como itens, não é possível especificar um caminho para uma entrada de registo de uma forma que garante que é exclusivo. A notação de caminho não faz distinção entre a subchave de registo com o nome **execute** e o **(predefinida)** entrada de registo no **executar** subchave. Além disso, uma vez que os nomes de entrada de registo podem conter o caráter de barra invertida ( **\\** ), se as entradas do Registro foram itens, em seguida, não podia usar a notação de caminho para uma entrada de registo com o nome de distinguir  **Windows\\CurrentVersion\\executar** da subchave que está localizada em que o caminho.
 
 ## <a name="renaming-existing-items-rename-item"></a>Mudar o nome de itens existentes (Rename-Item)
 

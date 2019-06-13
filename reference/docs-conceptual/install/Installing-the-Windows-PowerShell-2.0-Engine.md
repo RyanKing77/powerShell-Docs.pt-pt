@@ -2,13 +2,12 @@
 ms.date: 06/05/2017
 keywords: PowerShell, o cmdlet
 title: Instalar o Motor do Windows PowerShell 2.0
-ms.assetid: 82928f2b-f96a-4ae6-a0d0-6e7b181da308
-ms.openlocfilehash: b625b61b4e191402074f57ea2e942f800dbbcd53
-ms.sourcegitcommit: e7445ba8203da304286c591ff513900ad1c244a4
+ms.openlocfilehash: a2b78755e7e44e2523baee5477fadc94eab485b1
+ms.sourcegitcommit: a6f13c16a535acea279c0ddeca72f1f0d8a8ce4c
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62058323"
+ms.lasthandoff: 06/12/2019
+ms.locfileid: "67030956"
 ---
 # <a name="installing-the-windows-powershell-20-engine"></a>Instalar o Motor do Windows PowerShell 2.0
 Este tópico explica como instalar o motor do Windows PowerShell 2.0.
@@ -53,7 +52,7 @@ Utilize os procedimentos seguintes para adicionar o motor do Windows PowerShell 
 
 2. Sobre o **tipo de instalação** página, selecione **instalação baseada em funções ou baseada em recursos**.
 
-3. Sobre o **funcionalidades** página, expanda o **funcionalidades do .NET 3.5 Framework** nó e selecione **.NET Framework 3.5 (inclui .NET 2.0 e 3.0)**.
+3. Sobre o **funcionalidades** página, expanda o **funcionalidades do .NET 3.5 Framework** nó e selecione **.NET Framework 3.5 (inclui .NET 2.0 e 3.0)** .
 
     As outras opções desse nó não são necessárias para o motor do Windows PowerShell 2.0.
 

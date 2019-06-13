@@ -2,13 +2,12 @@
 ms.date: 06/05/2017
 keywords: PowerShell, o cmdlet
 title: Glossário do Windows PowerShell
-ms.assetid: b0f88cbe-cb83-4912-a301-184534cb35c7
-ms.openlocfilehash: fd15667939fd9b3ea705806686b626645519588a
-ms.sourcegitcommit: e7445ba8203da304286c591ff513900ad1c244a4
+ms.openlocfilehash: 0827ec771b1744b87a8c0f0ddf48438f9ba484b2
+ms.sourcegitcommit: a6f13c16a535acea279c0ddeca72f1f0d8a8ce4c
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62057365"
+ms.lasthandoff: 06/12/2019
+ms.locfileid: "67030352"
 ---
 # <a name="windows-powershell-glossary"></a>Glossário do Windows PowerShell
 
@@ -22,7 +21,7 @@ ms.locfileid: "62057365"
 |parâmetro dinâmico|Um parâmetro que é adicionado um cmdlet do Windows PowerShell, função ou script sob determinadas condições. Cmdlets, funções, fornecedores e scripts, podem adicionar parâmetros dinâmicos.|
 |formatação de ficheiro|Um ficheiro XML do Windows PowerShell com o. format.ps1xml extensão e de que define como o Windows PowerShell apresenta um objeto com base em seu tipo de .NET Framework.|
 |Estado da sessão global|O estado de sessão que contém os dados que esteja acessíveis para o utilizador de uma sessão do Windows PowerShell.|
-|anfitrião|A interface que o motor do Windows PowerShell utiliza para comunicar com o utilizador. Por exemplo, o anfitrião Especifica como os pedidos são processados entre o Windows PowerShell e o utilizador.|
+|host|A interface que o motor do Windows PowerShell utiliza para comunicar com o utilizador. Por exemplo, o anfitrião Especifica como os pedidos são processados entre o Windows PowerShell e o utilizador.|
 |aplicativo de Host|Um programa que carrega o motor do Windows PowerShell no seu processo e utiliza-o para executar operações de mensagens em fila.|
 |método de processamento de entrada|Um método que um cmdlet pode utilizar para processar os registos que recebe como entrada. Os métodos de processamento de entrada incluem o método BeginProcessing, o método ProcessRecord, o método EndProcessing e o método StopProcessing.|
 |manifesto de módulo|Um módulo do Windows PowerShell com um manifesto de cuja chave RootModule está vazio.|

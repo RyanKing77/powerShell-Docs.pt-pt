@@ -2,13 +2,12 @@
 ms.date: 06/05/2017
 keywords: PowerShell, o cmdlet
 title: Recolher Informações sobre os Computadores
-ms.assetid: 9e7b6a2d-34f7-4731-a92c-8b3382eb51bb
-ms.openlocfilehash: d837684108656e17ebf26189bd4841c5de01051c
-ms.sourcegitcommit: e7445ba8203da304286c591ff513900ad1c244a4
+ms.openlocfilehash: 5dc8fcc5f12fdf9e3fc8151d3e50b8b660262c62
+ms.sourcegitcommit: a6f13c16a535acea279c0ddeca72f1f0d8a8ce4c
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62058340"
+ms.lasthandoff: 06/12/2019
+ms.locfileid: "67030847"
 ---
 # <a name="collecting-information-about-computers"></a>Recolher Informações sobre os Computadores
 
@@ -18,7 +17,7 @@ Além disso, o WMI trata dados como objetos que estão em coleções de um ou ma
 Como o Windows PowerShell também funciona com objetos e tem um pipeline que permite tratar únicos ou vários objetos da mesma forma, o acesso WMI genérico permite-lhe executar algumas tarefas avançadas com muito pouco de trabalho.
 
 Os exemplos seguintes demonstram como recolher informações específicas, utilizando `Get-CimInstance` num computador arbitrário.
-Especificamos o **nomedocomputador** parâmetro com o valor de ponto (**.**), que representa o computador local.
+Especificamos o **nomedocomputador** parâmetro com o valor de ponto ( **.** ), que representa o computador local.
 Pode especificar um nome ou endereço IP associado a qualquer computador que pode aceder através do WMI.
 Para obter informações sobre o computador local, poderia omitir a **ComputerName** parâmetro.
 

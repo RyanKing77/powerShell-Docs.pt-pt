@@ -2,13 +2,12 @@
 ms.date: 06/05/2017
 keywords: PowerShell, o cmdlet
 title: Acessibilidade no ISE do Windows PowerShell
-ms.assetid: a078f9d1-dd6b-4323-b16d-0622cd993aa8
-ms.openlocfilehash: 78a001dbe43a0b005d10a817e05e4cc7a72f5bd0
-ms.sourcegitcommit: e7445ba8203da304286c591ff513900ad1c244a4
+ms.openlocfilehash: 416b18dd492ca04d98b5adf9f7f0f88ea495740a
+ms.sourcegitcommit: a6f13c16a535acea279c0ddeca72f1f0d8a8ce4c
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62058459"
+ms.lasthandoff: 06/12/2019
+ms.locfileid: "67030647"
 ---
 # <a name="accessibility-in-windows-powershell-ise"></a>Acessibilidade no ISE do Windows PowerShell
 
@@ -70,7 +69,7 @@ Pode utilizar os seguintes atalhos de teclado, ao editar o texto.
 |**Paste**|CTRL + V|Painel de script, o painel de consola|
 |**Refazer**|CTRL + Y|Painel de script, o painel de consola|
 |**Substituir no Script**|CTRL + H|Painel de script|
-|**Guardar**|CTRL + S|Painel de script|
+|**Guardar**|CTRL+S|Painel de script|
 |**Selecionar tudo**|CTRL + T|Painel de script, o painel de consola|
 |**Undo**|CTRL + Z|Painel de script, o painel de consola|
 
@@ -131,7 +130,7 @@ Pode utilizar os seguintes atalhos de teclado ao depurar scripts.
 |**Avance para**|S|Painel de consola, quando um script de depuração|
 |**Step Over**|V|Painel de consola, quando um script de depuração|
 |**Krokovat s Vystoupením**|O|Painel de consola, quando um script de depuração|
-|**Repetir último comando** (para o passo em ou Step Over)|INTRODUZA|Painel de consola, quando um script de depuração|
+|**Repetir último comando** (para o passo em ou Step Over)|ENTER|Painel de consola, quando um script de depuração|
 |**Pilha de chamadas de apresentação**|K|Painel de consola, quando um script de depuração|
 |**Parar a depuração**|PERGUNTAS E|Painel de consola, quando um script de depuração|
 |**Lista o Script**|L|Painel de consola, quando um script de depuração|

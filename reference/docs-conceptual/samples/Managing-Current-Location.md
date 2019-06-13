@@ -2,13 +2,12 @@
 ms.date: 06/05/2017
 keywords: PowerShell, o cmdlet
 title: Gerir a Localização Atual
-ms.assetid: a9f9e7a7-3ea8-47d3-bbb4-6e437f6d4a4a
-ms.openlocfilehash: f5e0653b2c3bbc9d2526c7a1c2ff88a8a6641695
-ms.sourcegitcommit: e7445ba8203da304286c591ff513900ad1c244a4
+ms.openlocfilehash: 42ab56759dec882d140f813c8614e578957722b3
+ms.sourcegitcommit: a6f13c16a535acea279c0ddeca72f1f0d8a8ce4c
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62086260"
+ms.lasthandoff: 06/12/2019
+ms.locfileid: "67030195"
 ---
 # <a name="managing-current-location"></a>Gerir a Localização Atual
 
@@ -50,9 +49,9 @@ C:\WINDOWS
 
 O **- PassThru** parâmetro pode ser utilizado com muitos de conjunto de comandos no Windows PowerShell para devolver informações sobre o resultado em casos em que não há nenhuma saída padrão.
 
-É possível especificar caminhos relativo à sua localização atual da mesma forma como faria na maioria dos UNIX e Windows comando shells. Na notação padrão para caminhos relativos, um período (**.**) representa a pasta atual e um período doubled (**...** ) representa o diretório principal da sua localização atual.
+É possível especificar caminhos relativo à sua localização atual da mesma forma como faria na maioria dos UNIX e Windows comando shells. Na notação padrão para caminhos relativos, um período ( **.** ) representa a pasta atual e um período doubled ( **...** ) representa o diretório principal da sua localização atual.
 
-Por exemplo, se estiver da **c:\\Windows** pasta, um período (**.**) representa **c:\\Windows** e o dobro períodos (**...** ) representam **c:**. Pode alterar de sua localização atual na raiz da unidade c:, digitando:
+Por exemplo, se estiver da **c:\\Windows** pasta, um período ( **.** ) representa **c:\\Windows** e o dobro períodos ( **...** ) representam **c:** . Pode alterar de sua localização atual na raiz da unidade c:, digitando:
 
 ```
 PS> Set-Location -Path .. -PassThru
@@ -62,7 +61,7 @@ Path
 C:\
 ```
 
-A mesma técnica funciona em unidades do Windows PowerShell que não são unidades de sistema de ficheiros, tal como **HKLM:**. Pode definir sua localização como o HKLM\\chave de Software no registo ao escrever:
+A mesma técnica funciona em unidades do Windows PowerShell que não são unidades de sistema de ficheiros, tal como **HKLM:** . Pode definir sua localização como o HKLM\\chave de Software no registo ao escrever:
 
 ```
 PS> Set-Location -Path HKLM:\SOFTWARE -PassThru
