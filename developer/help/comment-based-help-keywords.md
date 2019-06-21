@@ -8,12 +8,12 @@ ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: ab90ec96-77f5-42e3-9c7e-2f4156ec207f
 caps.latest.revision: 6
-ms.openlocfilehash: af8a151070d26ffe236800076115c964f625e572
-ms.sourcegitcommit: e7445ba8203da304286c591ff513900ad1c244a4
+ms.openlocfilehash: 534a6c9a43326c8a01b2181c7a799286fa4d3997
+ms.sourcegitcommit: f60fa420bdc81db174e6168d3aeb11371e483162
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62083540"
+ms.lasthandoff: 06/20/2019
+ms.locfileid: "67301536"
 ---
 # <a name="comment-based-help-keywords"></a>Comment-Based Help Keywords (Palavras-chave de Ajuda Baseada em Comentários)
 
@@ -23,7 +23,7 @@ Este tópico apresenta e descreve as palavras-chave na ajuda baseada no comentá
 
 Seguem-se válido com base em comentários ajuda palavras-chave. Estes são apresentados na ordem em que normalmente aparecem num tópico de ajuda, juntamente com seu uso pretendido. Estas palavras-chave pode aparecer em qualquer ordem na ajuda do baseada no comentário, e não diferenciam maiúsculas de minúsculas.
 
-Tenha em atenção que o `.ExternalHelp` palavra-chave tem precedência sobre todas as outras ajuda baseada no comentário palavras-chave. Quando `.ExternalHelp` estiver presente, o [Microsoft.PowerShell.Commands.Get-Help](/dotnet/api/Microsoft.PowerShell.Commands.Get-Help) cmdlet não apresenta a ajuda baseada no comentário, mesmo quando não for possível encontrar um arquivo de ajuda que corresponde ao valor da palavra-chave.
+Tenha em atenção que o `.ExternalHelp` palavra-chave tem precedência sobre todas as outras ajuda baseada no comentário palavras-chave. Quando `.ExternalHelp` estiver presente, o [Microsoft.PowerShell.Commands.GetHelpCommand](/dotnet/api/Microsoft.PowerShell.Commands.gethelpcommand) cmdlet não apresenta a ajuda baseada no comentário, mesmo quando não for possível encontrar um arquivo de ajuda que corresponde ao valor da palavra-chave.
 
 `.Synopsis` Uma breve descrição da função ou script. Esta palavra-chave pode ser utilizado apenas uma vez em cada tópico.
 
@@ -61,9 +61,9 @@ O `.Link` conteúdo de palavra-chave também pode incluir um identificador de re
 
 `.ExternalHelp` `<XML Help File>` Especifica o caminho de e/ou o nome de um arquivo de ajuda baseados em XML para o script ou função.
 
-O `.ExternalHelp` informa a palavra-chave a [Microsoft.PowerShell.Commands.Get-Help](/dotnet/api/Microsoft.PowerShell.Commands.Get-Help) cmdlet para obter ajuda para a função ou script num arquivo baseado em XML. O **. ExternalHelp** palavra-chave é necessário quando utilizar um arquivo de ajuda baseados em XML para uma função ou script. Sem ele, `Get-Help` não irá encontrar um arquivo de ajuda para a função ou script.
+O `.ExternalHelp` informa a palavra-chave a [Microsoft.PowerShell.Commands.GetHelpCommand](/dotnet/api/Microsoft.PowerShell.Commands.gethelpcommand) cmdlet para obter ajuda para a função ou script num arquivo baseado em XML. O **. ExternalHelp** palavra-chave é necessário quando utilizar um arquivo de ajuda baseados em XML para uma função ou script. Sem ele, `Get-Help` não irá encontrar um arquivo de ajuda para a função ou script.
 
-O `.ExternalHelp` palavra-chave tem precedência sobre todas as outras ajuda baseada no comentário palavras-chave. Quando `.ExternalHelp` estiver presente, o [Microsoft.PowerShell.Commands.Get-Help](/dotnet/api/Microsoft.PowerShell.Commands.Get-Help) cmdlet não apresenta a ajuda baseada no comentário, mesmo quando não for possível encontrar um arquivo de ajuda que corresponde ao valor da palavra-chave.
+O `.ExternalHelp` palavra-chave tem precedência sobre todas as outras ajuda baseada no comentário palavras-chave. Quando `.ExternalHelp` estiver presente, o [Microsoft.PowerShell.Commands.GetHelpCommand](/dotnet/api/Microsoft.PowerShell.Commands.gethelpcommand) cmdlet não apresenta a ajuda baseada no comentário, mesmo quando não for possível encontrar um arquivo de ajuda que corresponde ao valor da palavra-chave.
 
 Quando a função é exportada por um módulo de script, o valor de `.ExternalHelp` deve ser um nome de ficheiro sem um caminho. `Get-Help` procura o arquivo num subdiretório específico da localidade do diretório de módulo. Existem não requisitos para o nome de ficheiro, mas uma prática recomendada é usar o seguinte formato de nome de ficheiro: `<ScriptModule>.psm1-help.xml`.
 

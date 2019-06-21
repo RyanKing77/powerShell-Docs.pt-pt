@@ -2,12 +2,12 @@
 ms.date: 06/12/2017
 keywords: DSC, powershell, configuração, a configuração
 title: Criar um pipeline de integração contínua e implementação contínua com o DSC
-ms.openlocfilehash: 012057a32ccf85b0d15e76a332cadda4b226180a
-ms.sourcegitcommit: e7445ba8203da304286c591ff513900ad1c244a4
+ms.openlocfilehash: 2d049cd640f0df9b018a88ad106e59dbeed7bcee
+ms.sourcegitcommit: f60fa420bdc81db174e6168d3aeb11371e483162
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62076480"
+ms.lasthandoff: 06/20/2019
+ms.locfileid: "67301500"
 ---
 # <a name="building-a-continuous-integration-and-continuous-deployment-pipeline-with-dsc"></a>Criar um pipeline de integração contínua e implementação contínua com o DSC
 
@@ -22,10 +22,10 @@ Um pipeline CI/CD automático ajuda-o a atualização de software mais rapidamen
 
 Para utilizar este exemplo, deve estar familiarizado com o seguinte:
 
-- Conceitos do CD de CI. Uma boa referência pode ser encontrada em [o modelo de Pipeline de lançamento](http://aka.ms/thereleasepipelinemodelpdf).
+- Conceitos do CD de CI. Uma boa referência pode ser encontrada em [o modelo de Pipeline de lançamento](https://aka.ms/thereleasepipelinemodelpdf).
 - [Git](https://git-scm.com/) controlo de origem
 - O [Pester](https://github.com/pester/Pester) estrutura de testes
-- [Team Foundation Server](https://www.visualstudio.com/tfs/)
+- [Team Foundation Server](https://visualstudio.microsoft.com/tfs/)
 
 ## <a name="what-you-will-need"></a>O que irá precisar
 
@@ -44,7 +44,7 @@ O computador cliente tem de ser um computador Windows com o seguinte instalado:
 ### <a name="tfssrv1"></a>TFSSrv1
 
 O computador que aloja o servidor do TFS nos quais definirá sua compilação e versão.
-Este computador tem de ter [Team Foundation Server 2017](https://www.visualstudio.com/tfs/) instalado.
+Este computador tem de ter [Team Foundation Server 2017](https://visualstudio.microsoft.com/tfs/) instalado.
 
 ### <a name="buildagent"></a>BuildAgent
 
@@ -157,7 +157,7 @@ Node $AllNodes.Where{$_.Role -eq 'DNSServer'}.NodeName
 
 Isso encontra quaisquer nós que foram definidos como tendo uma função de `DNSServer` no [dados de configuração](../configurations/configData.md), que é criado pelo `DevEnv.ps1` script.
 
-Pode ler mais sobre o `Where` método na [about_arrays](/powershell/reference/3.0/Microsoft.PowerShell.Core/About/about_Arrays.md)
+Pode ler mais sobre o `Where` método na [about_arrays](/powershell/module/microsoft.powershell.core/about/about_arrays)
 
 Usando dados de configuração para definir nós é importante fazer CI porque as informações do nó vão provavelmente mudar entre ambientes e usar dados de configuração permite que facilmente fazer alterações às informações do nó, sem alterar o código de configuração.
 
@@ -319,7 +319,7 @@ O script de teste de integração utiliza uma mistura de [Pester](https://github
 
 Agora que já carregou o nosso código para o TFS e viu o que ele faz, vamos definir nossa compilação.
 
-Aqui, vamos abordar apenas os passos de compilação que adicionará à compilação. Para obter instruções sobre como criar uma definição de compilação no TFS, consulte [criar e uma definição de compilação de fila](/azure/devops/pipelines/get-started-designer).
+Aqui, vamos abordar apenas os passos de compilação que adicionará à compilação. Para obter instruções sobre como criar uma definição de compilação no TFS, consulte [criar e uma definição de compilação de fila](/azure/devops/pipelines/create-first-pipeline).
 
 Criar uma nova definição de compilação (selecione o **vazio** modelo) com o nome "InfraDNS".
 Adicione que os seguintes passos para a definição de compilação:
@@ -388,7 +388,7 @@ Vamos criar uma definição de versão, para que o projeto é implementado no am
 
 Para fazer isso, adicione uma nova definição de versão associada a `InfraDNS` Criar definição que criou anteriormente.
 Verifique se seleciona **implementação contínua** para que uma nova versão será acionada sempre que uma nova compilação é concluída.
-([Quais são os pipelines de versão? ](/azure/devops/pipelines/release/what-is-release-management)) e configurá-lo da seguinte forma:
+([Quais são os pipelines de versão? ](/azure/devops/pipelines/release/)) e configurá-lo da seguinte forma:
 
 Adicione os seguintes passos para a definição de versão:
 
