@@ -1,15 +1,15 @@
 ---
 ms.date: 06/12/2017
 keywords: DSC, powershell, configuração, a configuração
-title: Método GetConfigurationStatus da classe MSFT_DSCLocalConfigurationManager
-ms.openlocfilehash: e14237ef68b95d68e2f14071aa1fa6ba0717f39f
-ms.sourcegitcommit: e7445ba8203da304286c591ff513900ad1c244a4
+title: Método Getconfigurationstatus
+ms.openlocfilehash: bd280cb8ebd7b0522e4e01cbd24bd9bdcfddf4c2
+ms.sourcegitcommit: 46bebe692689ebedfe65ff2c828fe666b443198d
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62078525"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67734442"
 ---
-# <a name="getmetaconfiguration-method-of-the-msftdsclocalconfigurationmanager-class"></a>Método GetConfigurationStatus da classe MSFT_DSCLocalConfigurationManager
+# <a name="getmetaconfiguration-method"></a>Método Getconfigurationstatus
 
 Obtém as definições locais do Configuration Manager que são utilizadas para controlar o agente de configuração.
 

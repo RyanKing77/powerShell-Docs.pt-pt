@@ -8,16 +8,16 @@ ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: a6b8303d-e868-4dd0-bbbb-ed2e6d8f2f76
 caps.latest.revision: 6
-ms.openlocfilehash: 6060c535f07814e4977b72068927205cefe6d012
-ms.sourcegitcommit: e7445ba8203da304286c591ff513900ad1c244a4
+ms.openlocfilehash: 985fbc6f53ca204e700da821fcd08187edc3b60f
+ms.sourcegitcommit: 46bebe692689ebedfe65ff2c828fe666b443198d
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62081483"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67735042"
 ---
 # <a name="runspace03-code-samples"></a>Runspace03 Code Samples (Códigos de Exemplo Runspace03)
 
-Seguem-se exemplos de código para o espaço de execução descrito em [criar uma aplicação de consola execuções para que um Script especificado](http://msdn.microsoft.com/en-us/a93e6006-36db-4bcc-b9da-c5bebf4ffd68).
+Seguem-se exemplos de código para o espaço de execução descrito em [criar uma aplicação de consola execuções para que um Script especificado](fd).
 
 > [!NOTE]
 > Pode transferir o C# origem de ficheiro (runspace03.cs) e o ficheiro de origem do VB.NET (runspace03.vb) para este exemplo com o Microsoft Windows Software Development Kit para Windows Vista e o Microsoft .NET Framework 3.0 Runtime Components. Para obter instruções de transferência, consulte [como instalar o Windows PowerShell e transferir o SDK do Windows PowerShell](/powershell/developer/installing-the-windows-powershell-sdk).

@@ -1,15 +1,15 @@
 ---
 ms.date: 06/12/2017
 keywords: DSC, powershell, configuração, a configuração
-title: Método RemoveConfiguration da classe MSFT_DSCLocalConfigurationManager
-ms.openlocfilehash: 03555cc73da1272bdebebc3d93b26aaf8fabc18e
-ms.sourcegitcommit: e7445ba8203da304286c591ff513900ad1c244a4
+title: Método RemoveConfiguration
+ms.openlocfilehash: aacbed96beb960d7e0d449423a4de9a27f0a287e
+ms.sourcegitcommit: 46bebe692689ebedfe65ff2c828fe666b443198d
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62078695"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67734395"
 ---
-# <a name="removeconfiguration-method-of-the-msftdsclocalconfigurationmanager-class"></a>Método RemoveConfiguration da classe MSFT_DSCLocalConfigurationManager
+# <a name="removeconfiguration-method"></a>Método RemoveConfiguration
 
 Remove os ficheiros de configuração.
 
@@ -26,7 +26,7 @@ uint32 RemoveConfiguration(
 
 *Fase* \[no\] Especifica qual documento de configuração para remover. Os seguintes valores são válidos:
 
-|Valor |Descrição |
+|Value |Descrição |
 |:--- |:---|
 |**1** | O **atual** documento de configuração (current.mof). |
 |**2** | O **pendente** documento de configuração (pending.mof).  |

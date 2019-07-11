@@ -2,12 +2,12 @@
 ms.date: 06/12/2017
 keywords: DSC, powershell, configuração, a configuração
 title: Utilizar dados de configuração
-ms.openlocfilehash: f2d25b9ced805fb4c91378ebfe840104eb6ce52a
-ms.sourcegitcommit: e7445ba8203da304286c591ff513900ad1c244a4
+ms.openlocfilehash: 7d13b19ba932d1a818194a221f145fd1a3832547
+ms.sourcegitcommit: 46bebe692689ebedfe65ff2c828fe666b443198d
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62080225"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67727215"
 ---
 # <a name="using-configuration-data-in-dsc"></a>Utilizar os dados de configuração no DSC
 
@@ -187,11 +187,11 @@ MyDscConfiguration -ConfigurationData .\MyData.psd1
 
 DSC fornece as seguintes variáveis especiais que podem ser usadas num script de configuração:
 
-- **$AllNodes** refere-se a toda a coleção de nós definida no **ConfigurationData**. Pode filtrar os **AllNodes** coleção utilizando **. WHERE()** e **. Foreach ()**.
+- **$AllNodes** refere-se a toda a coleção de nós definida no **ConfigurationData**. Pode filtrar os **AllNodes** coleção utilizando **. WHERE()** e **. Foreach ()** .
 - **ConfigurationData** refere-se a tabela de hash de inteiro que é passada como parâmetro ao compilar uma configuração.
 - **MyTypeName** contém o [configuração](configurations.md) nome de variável é utilizado. Por exemplo, na configuração do `MyDscConfiguration`, o `$MyTypeName` terá um valor de `MyDscConfiguration`.
-- **Nó** refere-se para uma entrada no **AllNodes** coleção depois que ele é filtrado através da utilização **. WHERE()** ou **. Foreach ()**.
-  - Pode ler mais sobre estes métodos em [about_arrays](/powershell/reference/3.0/Microsoft.PowerShell.Core/About/about_Arrays.md)
+- **Nó** refere-se para uma entrada no **AllNodes** coleção depois que ele é filtrado através da utilização **. WHERE()** ou **. Foreach ()** .
+  - Pode ler mais sobre estes métodos em [about_arrays](/powershell/module/microsoft.powershell.core/about/about_arrays)
 
 ## <a name="using-non-node-data"></a>Utilizar os dados de nós não
 

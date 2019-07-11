@@ -8,16 +8,16 @@ ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 12ee5382-95ba-41c7-8291-7f69a6f63514
 caps.latest.revision: 7
-ms.openlocfilehash: c45e802605bf0b4fd84a8847787bcc937b7f417b
-ms.sourcegitcommit: e7445ba8203da304286c591ff513900ad1c244a4
+ms.openlocfilehash: 19de0fd33cd764c161366c8161adf46c2247482b
+ms.sourcegitcommit: 46bebe692689ebedfe65ff2c828fe666b443198d
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62081446"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67735026"
 ---
 # <a name="runspace01-vbnet-code-sample"></a>Runspace01 (VB.NET) Code Sample (Código de Exemplo Runspace01 [VB.NET])
 
-Seguem-se exemplos de código para o espaço de execução descrito em [criar uma aplicação de consola execuções para que um comando especificado](http://msdn.microsoft.com/en-us/793a6570-a072-4799-840b-172f28ce620e). Para fazer isso, o aplicativo invoca um espaço de execução e, em seguida, invoca um comando. (Observe que esta aplicação não especifica informações de configuração de espaço de execução nem -lo explicitamente cria um pipeline). O comando invocado é o `Get-Process` cmdlet.
+Seguem-se exemplos de código para o espaço de execução descrito em [criar uma aplicação de consola execuções para que um comando especificado](/dotnet/csharp/programming-guide/inside-a-program/hello-world-your-first-program). Para fazer isso, o aplicativo invoca um espaço de execução e, em seguida, invoca um comando. (Observe que esta aplicação não especifica informações de configuração de espaço de execução nem -lo explicitamente cria um pipeline). O comando invocado é o `Get-Process` cmdlet.
 
 ## <a name="code-sample"></a>Exemplo de código
 

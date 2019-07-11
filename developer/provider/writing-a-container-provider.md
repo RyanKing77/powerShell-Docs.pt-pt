@@ -8,12 +8,12 @@ ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 524fd900-c0fe-4d13-87f2-14903a8fd5a4
 caps.latest.revision: 5
-ms.openlocfilehash: bf0a73267b3cad1f50d983ebed53318ec98180e0
-ms.sourcegitcommit: e7445ba8203da304286c591ff513900ad1c244a4
+ms.openlocfilehash: 48ab9102e8f1b17b3b533cc3b0aa1dacef0e2076
+ms.sourcegitcommit: 46bebe692689ebedfe65ff2c828fe666b443198d
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62080854"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67734825"
 ---
 # <a name="writing-a-container-provider"></a>Writing a container provider (Escrever um fornecedor de contentores)
 
@@ -25,7 +25,7 @@ Para obter mais informações sobre os fornecedores de Windows PowerShell, consu
 
 ## <a name="implementing-container-methods"></a>Implementar métodos de contentor
 
-O [System.Management.Automation.Provider.Containercmdletprovider](/dotnet/api/System.Management.Automation.Provider.ContainerCmdletProvider) classe implementa métodos que suportam contentores e criarem, copiam e remover itens. Para obter uma lista completa destes métodos, consulte [ContainerCmdletProvider métodos](http://msdn.microsoft.com/library/system.management.automation.provider.containercmdletprovider_methods\(v=vs.85\).aspx).
+O [System.Management.Automation.Provider.Containercmdletprovider](/dotnet/api/System.Management.Automation.Provider.ContainerCmdletProvider) classe implementa métodos que suportam contentores e criarem, copiam e remover itens. Para obter uma lista completa destes métodos, consulte [System.Management.Automation.Provider.ContainerCmdletProvider](/dotnet/api/System.Management.Automation.Provider.ContainerCmdletProvider?view=pscore-6.2.0#methods).
 
 > [!NOTE]
 > Este tópico baseia-se nas informações da [guia de introdução do Windows PowerShell fornecedor](./windows-powershell-provider-quickstart.md). Este tópico não abrange as noções básicas de como configurar um projeto de fornecedor, ou como implementar os métodos herdada a partir da [System.Management.Automation.Provider.Drivecmdletprovider](/dotnet/api/System.Management.Automation.Provider.DriveCmdletProvider) classe que criar e remover unidades. Este tópico também não abrange como implementar os métodos expostos pelos [System.Management.Automation.Provider.Itemcmdletprovider](/dotnet/api/System.Management.Automation.Provider.ItemCmdletProvider) classe. Para obter um exemplo que mostra como implementar o item cmdlets, consulte [escrever um fornecedor de item](./writing-an-item-provider.md).
@@ -44,7 +44,7 @@ Declarar o fornecedor de derivar a partir da [System.Management.Automation.Provi
 
 ### <a name="implementing-getchilditems"></a>Implementando GetChildItems
 
-As chamadas de motor do PowerShell a [System.Management.Automation.Provider.Containercmdletprovider.Getchilditems*](/dotnet/api/System.Management.Automation.Provider.ContainerCmdletProvider.GetChildItems) método quando um usuário chama o [Microsoft.PowerShell.Commands.Get-Childitem](/dotnet/api/Microsoft.PowerShell.Commands.Get-ChildItem) cmdlet. Este método obtém os itens que são filhos do item no caminho especificado.
+As chamadas de motor do PowerShell a [System.Management.Automation.Provider.Containercmdletprovider.Getchilditems*](/dotnet/api/System.Management.Automation.Provider.ContainerCmdletProvider.GetChildItems) método quando um usuário chama o [Microsoft.PowerShell.Commands.GetChildItemCommand](/dotnet/api/Microsoft.PowerShell.Commands.Getchilditemcommand) cmdlet. Este método obtém os itens que são filhos do item no caminho especificado.
 
 O exemplo de base de dados de acesso, o comportamento do [System.Management.Automation.Provider.Containercmdletprovider.Getchilditems*](/dotnet/api/System.Management.Automation.Provider.ContainerCmdletProvider.GetChildItems) método depende do tipo do item especificado. Se o item é a unidade, em seguida, os filhos são tabelas e o método retorna o conjunto de tabelas do banco de dados. Se o item especificado é uma tabela, os filhos são as linhas da tabela. Se o item for uma linha, em seguida, ele não tem subordinados e o método retorna apenas nessa linha. Todos os itens filho são enviados de volta para o motor do PowerShell, o [System.Management.Automation.Provider.Cmdletprovider.Writeitemobject*](/dotnet/api/System.Management.Automation.Provider.CmdletProvider.WriteItemObject) método.
 
@@ -155,7 +155,7 @@ protected override void GetChildNames(string path,
 
 ### <a name="implementing-newitem"></a>Implementando NewItem
 
-O [System.Management.Automation.Provider.Containercmdletprovider.Newitem*](/dotnet/api/System.Management.Automation.Provider.ContainerCmdletProvider.NewItem) método cria um novo item do tipo especificado no caminho especificado. O motor do PowerShell chama esse método quando um usuário chama o [Microsoft.PowerShell.Commands.New Item](/dotnet/api/Microsoft.PowerShell.Commands.New-Item) cmdlet.
+O [System.Management.Automation.Provider.Containercmdletprovider.Newitem*](/dotnet/api/System.Management.Automation.Provider.ContainerCmdletProvider.NewItem) método cria um novo item do tipo especificado no caminho especificado. O motor do PowerShell chama esse método quando um usuário chama o [Microsoft.PowerShell.Commands.NewItemCommand](/dotnet/api/Microsoft.PowerShell.Commands.newitemcommand) cmdlet.
 
 Neste exemplo, o método implementa a lógica para determinar o caminho e o tipo de correspondem. Ou seja, uma tabela só pode ser criada diretamente sob a unidade (a base de dados), e apenas uma linha pode ser criada numa tabela. Se o caminho especificado e o tipo de item não corresponder desta forma, o método gerará uma exceção.
 
@@ -333,7 +333,7 @@ protected override void NewItem(string path, string type,
 
 ### <a name="implementing-copyitem"></a>Implementação de CopyItem
 
-O [System.Management.Automation.Provider.ContainerCmdletProvider.CopyItem](/dotnet/api/System.Management.Automation.Provider.ContainerCmdletProvider.CopyItem) copia o item especificado para o caminho especificado. O motor do PowerShell chama esse método quando um usuário chama o [Microsoft.PowerShell.Commands.Copy Item](/dotnet/api/Microsoft.PowerShell.Commands.Copy-Item) cmdlet. Este método também pode ser recursiva, copiar todos os filhos de itens, além do próprio item.
+O [System.Management.Automation.Provider.ContainerCmdletProvider.CopyItem](/dotnet/api/System.Management.Automation.Provider.ContainerCmdletProvider.CopyItem) copia o item especificado para o caminho especificado. O motor do PowerShell chama esse método quando um usuário chama o [Microsoft.PowerShell.Commands.CopyItemCommand](/dotnet/api/Microsoft.PowerShell.Commands.copyitemcommand) cmdlet. Este método também pode ser recursiva, copiar todos os filhos de itens, além do próprio item.
 
 Da mesma forma para o [System.Management.Automation.Provider.Containercmdletprovider.Newitem*](/dotnet/api/System.Management.Automation.Provider.ContainerCmdletProvider.NewItem) método, esse método executa a lógica para se certificar de que o item especificado é do tipo correto para o caminho para a qual está a ser copiado. Por exemplo, se o caminho de destino é uma tabela, o item seja copiado tem de ser uma linha.
 
@@ -466,7 +466,7 @@ protected override void CopyItem(string path, string copyPath, bool recurse)
 
 ### <a name="implementing-removeitem"></a>Implementando RemoveItem
 
-O [System.Management.Automation.Provider.Containercmdletprovider.Removeitem*](/dotnet/api/System.Management.Automation.Provider.ContainerCmdletProvider.RemoveItem) método Remove o item no caminho especificado. O motor do PowerShell chama esse método quando um usuário chama o [Microsoft.PowerShell.Commands.Remove Item](/dotnet/api/Microsoft.PowerShell.Commands.Remove-Item) cmdlet.
+O [System.Management.Automation.Provider.Containercmdletprovider.Removeitem*](/dotnet/api/System.Management.Automation.Provider.ContainerCmdletProvider.RemoveItem) método Remove o item no caminho especificado. O motor do PowerShell chama esse método quando um usuário chama o [Microsoft.PowerShell.Commands.RemoveItemCommand](/dotnet/api/Microsoft.PowerShell.Commands.removeitemcommand) cmdlet.
 
 ```csharp
 protected override void RemoveItem(string path, bool recurse)
@@ -536,7 +536,7 @@ protected override void RemoveItem(string path, bool recurse)
        }
 ```
 
-## <a name="next-steps"></a>Próximos passos
+## <a name="next-steps"></a>Passos Seguintes
 
 Um provedor de mundo real típico é capaz de mover os itens de um caminho para outra dentro da unidade. Para obter um exemplo de um fornecedor que suporte move itens, consulte [escrevendo um provedor de navegação](./writing-a-navigation-provider.md).
 

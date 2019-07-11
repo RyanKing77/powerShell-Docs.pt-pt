@@ -2,12 +2,12 @@
 ms.date: 06/12/2017
 keywords: DSC, powershell, configuração, a configuração
 title: Recurso WindowsFeatureSet de DSC
-ms.openlocfilehash: 8b7c7e72dd58459bd19cb723e5790a82841515c0
-ms.sourcegitcommit: e7445ba8203da304286c591ff513900ad1c244a4
+ms.openlocfilehash: 8a64168d9ad0d6a6c40eb0398cc734fa93a247dc
+ms.sourcegitcommit: 46bebe692689ebedfe65ff2c828fe666b443198d
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62076791"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67726786"
 ---
 # <a name="dsc-windowsfeatureset-resource"></a>Recurso WindowsFeatureSet de DSC
 
@@ -34,17 +34,17 @@ WindowsFeatureSet [string] #ResourceName
 }
 ```
 
-## <a name="properties"></a>Propriedades
+## <a name="properties"></a>properties
 
-|  Propriedade  |  Descrição   |
+|  Propriedade  |  Description   |
 |---|---|
-| Nome| Os nomes das funções ou funcionalidades que pretende garantir que são adicionados ou removidos. Este é o mesmo que o **Name** propriedade da [Get-WindowsFeature](https://technet.microsoft.com/en-us/library/jj205469.aspx) cmdlet e não o nome a apresentar das funções ou funcionalidades.|
+| Nome| Os nomes das funções ou funcionalidades que pretende garantir que são adicionados ou removidos. Este é o mesmo que o **Name** propriedade da [Get-WindowsFeature](/powershell/module/servermanager/get-windowsfeature?view=winserver2012r2-ps) cmdlet e não o nome a apresentar das funções ou funcionalidades.|
 | Credencial| As credenciais a utilizar para adicionar ou remover as funções ou funcionalidades.|
 | Certifique-se| Indica se as funções ou funcionalidades são adicionadas. Para se certificar de que as funções ou funcionalidades foram adicionados, defina esta propriedade para "Presente" para se certificar de que as funções ou funcionalidades são removidas, defina a propriedade como "Ausente".|
 | IncludeAllSubFeature| Defina esta propriedade como **$true** para incluir todas as necessárias subfuncionalidades com os recursos que especificar com o **nome** propriedade.|
 | LogPath| O caminho para um ficheiro de registo onde pretende que o fornecedor de recursos para iniciar a operação.|
 | DependsOn| Indica que a configuração de outro recurso deve ser executado antes deste recurso está configurado. Por exemplo, se o ID da configuração do recurso do bloco que pretende executar script primeiro será __ResourceName__ e seu tipo é __ResourceType__, a sintaxe para utilizar esta propriedade é `DependsOn = "[ResourceType]ResourceName"`.|
-| Origem| Indica a localização do ficheiro de origem a utilizar para instalação, se necessário.|
+| Source| Indica a localização do ficheiro de origem a utilizar para instalação, se necessário.|
 
 ## <a name="example"></a>Exemplo
 

@@ -8,12 +8,12 @@ ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 7649d5d0-2b56-49b5-a670-dde46caca343
 caps.latest.revision: 11
-ms.openlocfilehash: 633204f3b181316761746ea2679910216fb74657
-ms.sourcegitcommit: e7445ba8203da304286c591ff513900ad1c244a4
+ms.openlocfilehash: f04a07c241268566eaedfe2b299c33d5be4dc19d
+ms.sourcegitcommit: 46bebe692689ebedfe65ff2c828fe666b443198d
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62064106"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67735078"
 ---
 # <a name="selectioncondition-element-for-entryselectedby-for-listcontrol-format"></a>SelectionCondition Element for EntrySelectedBy for ListControl (Format) (Elemento SelectionCondition para EntrySelectedBy para ListControl [Formatação])
 
@@ -32,7 +32,7 @@ O elemento (formato) ViewDefinitions elemento (formato) vista elemento (formato)
 </SelectionCondition>
 ```
 
-## <a name="attributes-and-elements"></a>Atributos e elementos
+## <a name="attributes-and-elements"></a>Atributos e Elementos
 
 As secções seguintes descrevem os atributos e elementos filho e o elemento principal do `SelectionCondition` elemento.
 
@@ -40,7 +40,7 @@ As secções seguintes descrevem os atributos e elementos filho e o elemento pri
 
 Nenhum.
 
-### <a name="child-elements"></a>Elementos subordinados
+### <a name="child-elements"></a>Elementos Subordinados
 
 |Elemento|Descrição|
 |-------------|-----------------|
@@ -49,7 +49,7 @@ Nenhum.
 |[Elemento de SelectionSetName para SelectionCondition para EntrySelectedBy para ListEntry (formato)](./selectionsetname-element-for-selectioncondition-for-entryselectedby-for-listentry-format.md)|Elemento opcional.<br /><br /> Especifica o conjunto de tipos do .NET que acionam a condição.|
 |[Elemento de TypeName para SelectionCondition para EntrySelectedBy para ListEntry (formato)](./typename-element-for-selectioncondition-for-entryselectedby-for-listcontrol-format.md)|Elemento opcional.<br /><br /> Especifica um tipo .NET que aciona a condição.|
 
-### <a name="parent-elements"></a>Elementos principais
+### <a name="parent-elements"></a>Elementos Principais
 
 |Elemento|Descrição|
 |-------------|-----------------|
@@ -77,6 +77,6 @@ Para obter mais informações sobre os outros componentes de uma vista de lista,
 
 [Elemento de SelectionSetName para EntrySelectedBy para ListEntry (formato)](./selectionsetname-element-for-entryselectedby-for-listcontrol-format.md)
 
-[Elemento de TypeName para EntrySelectedBy para ListEntry (formato)](http://msdn.microsoft.com/en-us/fcd4daa6-f3fd-43f7-a468-03c582d34533)
+[Elemento de TypeName para EntrySelectedBy para ListEntry (formato)](/powershell/developer/format/typename-element-for-entryselectedby-for-listcontrol-format)
 
 [Escrever um ficheiro de formatação de PowerShell](./writing-a-powershell-formatting-file.md)

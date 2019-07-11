@@ -2,19 +2,19 @@
 ms.date: 06/12/2017
 keywords: DSC, powershell, configuração, a configuração
 title: Melhores práticas do servidor de solicitação
-ms.openlocfilehash: fe483a487f85f2e4edb0928fccfe98746ae11231
-ms.sourcegitcommit: e7445ba8203da304286c591ff513900ad1c244a4
+ms.openlocfilehash: a3c4ca039b1e061a9246848bef6aeecebcd89011
+ms.sourcegitcommit: 46bebe692689ebedfe65ff2c828fe666b443198d
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62079205"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67727189"
 ---
 # <a name="pull-server-best-practices"></a>Melhores práticas do servidor de solicitação
 
 Aplica-se a: Windows PowerShell 4.0, Windows PowerShell 5.0
 
 > [!IMPORTANT]
-> O servidor de solicitação (recurso do Windows *DSC-serviço*) é um componente suportado do Windows Server no entanto, não existem planos para oferecer novas funcionalidades ou capacidades. É recomendado para começar a fazer a transição geridos os clientes [DSC de automatização do Azure](/azure/automation/automation-dsc-getting-started) (inclui funcionalidades além do servidor de solicitação de mensagens em fila no Windows Server) ou uma das soluções da Comunidade listados [aqui](pullserver.md#community-solutions-for-pull-service).
+> O servidor de solicitação (recurso do Windows *DSC-serviço*) é um componente suportado do Windows Server no entanto, não existem planos para oferecer novas funcionalidades ou capacidades. É recomendado para começar a fazer a transição geridos os clientes [DSC de automatização do Azure](/azure/automation/automation-dsc-getting-started) (inclui funcionalidades além do servidor de solicitação de mensagens em fila no Windows Server) ou uma das soluções da Comunidade listados [aqui](/powershell/dsc/pull-server/pullserver#community-solutions-for-pull-service).
 
 Resumo: Este documento destina-se para incluir o processo e extensibilidade para ajudar os engenheiros que estiver a preparar para a solução. Detalhes devem fornecer melhores práticas, conforme identificado por parte dos clientes e, em seguida, validada pela equipe do produto para garantir que as recomendações são voltado para o futuro e considerado estáveis.
 
@@ -50,9 +50,9 @@ Windows PowerShell fornece um conjunto de extensões de linguagem para Desired S
 Um servidor de solicitação fornece um serviço centralizado para armazenar as configurações que estarão acessíveis a nós de destino.
 
 A função de servidor de solicitação pode ser implementada como uma instância de servidor Web ou uma partilha de ficheiros SMB. A capacidade de servidor web inclui uma interface de OData e, opcionalmente, pode incluir capacidades para nós de destino relatar confirmação de êxito ou falha conforme as configurações são aplicadas. Essa funcionalidade é útil em ambientes em que há um grande número de nós de destino.
-Depois de configurar um nó de destino (também referido como um cliente) para apontar para o servidor de solicitação, a configuração mais recente os dados e quaisquer scripts necessários são transferidos e aplicados. Isto pode acontecer como uma implementação de uso individual ou como uma tarefa que novamente que também faz com que o servidor de solicitação um ativo importante para o gerenciamento de alterações em escala. Para obter mais informações, consulte [Windows PowerShell Desired State Configuration extrair servidores](/powershell/dsc/pullServer) e
+Depois de configurar um nó de destino (também referido como um cliente) para apontar para o servidor de solicitação, a configuração mais recente os dados e quaisquer scripts necessários são transferidos e aplicados. Isto pode acontecer como uma implementação de uso individual ou como uma tarefa que novamente que também faz com que o servidor de solicitação um ativo importante para o gerenciamento de alterações em escala. Para obter mais informações, consulte [Windows PowerShell Desired State Configuration extrair servidores](/powershell/dsc/pullServer/pullserver) e
 
-[Enviar e extrair os modos de configuração](/powershell/dsc/pullServer).
+[Enviar e extrair os modos de configuração](/powershell/dsc/pullServer/pullserver).
 
 ## <a name="configuration-planning"></a>Planejamento da configuração
 
@@ -134,7 +134,7 @@ Se utilizar o balanceamento de carga, o certificado utilizado para proteger o tr
 
 Cenário |Melhor prática
 :---|:---
-Ambiente de teste |Reproduza o ambiente de produção planeada, se possível. Um nome de anfitrião do servidor é adequada para configurações simples. Se o DNS não estiver disponível, um endereço IP pode ser utilizado em lugar de um nome de anfitrião.|
+Ambiente de testes |Reproduza o ambiente de produção planeada, se possível. Um nome de anfitrião do servidor é adequada para configurações simples. Se o DNS não estiver disponível, um endereço IP pode ser utilizado em lugar de um nome de anfitrião.|
 Implementação de nó único |Crie um registo CNAME no DNS que aponta para o nome de anfitrião do servidor.|
 
 Para obter mais informações, consulte [configurar o DNS Round Robin no Windows Server](/previous-versions/windows/it-pro/windows-server-2003/cc787484(v=ws.10)).

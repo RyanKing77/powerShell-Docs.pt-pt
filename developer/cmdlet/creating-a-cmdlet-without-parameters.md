@@ -11,12 +11,12 @@ helpviewer_keywords:
 - cmdlets [PowerShell Programmers Guide], basic cmdlet
 ms.assetid: 54236ef3-82db-45f8-9114-1ecb7ff65d3e
 caps.latest.revision: 8
-ms.openlocfilehash: 7f10acf59dedbb4af17bc5250e8624282ba22656
-ms.sourcegitcommit: 01b81317029b28dd9b61d167045fd31f1ec7bc06
+ms.openlocfilehash: 2685215f41c96955fc662d5eee27fc0e7a31da83
+ms.sourcegitcommit: 46bebe692689ebedfe65ff2c828fe666b443198d
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 05/17/2019
-ms.locfileid: "65854972"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67733963"
 ---
 # <a name="creating-a-cmdlet-without-parameters"></a>Creating a Cmdlet without Parameters (Criar um Cmdlet sem Parâmetros)
 
@@ -71,7 +71,7 @@ Windows PowerShell utiliza a [Microsoft.PowerShell.Commands](/dotnet/api/Microso
 
 ## <a name="overriding-an-input-processing-method"></a>Substituir uma método de processamento de entrada
 
-O [System.Management.Automation.Cmdlet](/dotnet/api/System.Management.Automation.Cmdlet) classe fornece três métodos de processamento de entrada principal, pelo menos um dos quais deve substituir seu cmdlet. Para obter mais informações sobre como o Windows PowerShell processa os registos, consulte [como o Windows PowerShell funciona](https://msdn.microsoft.com/en-us/ced30e23-10af-4700-8933-49873bd84d58).
+O [System.Management.Automation.Cmdlet](/dotnet/api/System.Management.Automation.Cmdlet) classe fornece três métodos de processamento de entrada principal, pelo menos um dos quais deve substituir seu cmdlet. Para obter mais informações sobre como o Windows PowerShell processa os registos, consulte [como o Windows PowerShell funciona](/previous-versions//ms714658(v=vs.85)).
 
 Para todos os tipos de entrada, o tempo de execução do Windows PowerShell chama [System.Management.Automation.Cmdlet.BeginProcessing](/dotnet/api/System.Management.Automation.Cmdlet.BeginProcessing) para ativar o processamento. Se seu cmdlet tem de efetuar alguns pré-processamento ou a configuração, pode fazer isso substituindo esse método.
 
@@ -135,11 +135,11 @@ Para o completa C# código de exemplo, consulte [exemplo de GetProcessSample01](
 
 ## <a name="defining-object-types-and-formatting"></a>Definir tipos de objeto e formatação
 
-Windows PowerShell passa informações entre cmdlets com objetos .NET. Consequentemente, um cmdlet poderá ter de definir seu próprio tipo, ou o cmdlet poderá ter de expandir um tipo existente fornecido pelo outro cmdlet. Para obter mais informações sobre definir novos tipos ou estendendo tipos existentes, consulte [estendendo tipos de objeto e formatação](https://msdn.microsoft.com/en-us/da976d91-a3d6-44e8-affa-466b1e2bd351).
+Windows PowerShell passa informações entre cmdlets com objetos .NET. Consequentemente, um cmdlet poderá ter de definir seu próprio tipo, ou o cmdlet poderá ter de expandir um tipo existente fornecido pelo outro cmdlet. Para obter mais informações sobre definir novos tipos ou estendendo tipos existentes, consulte [estendendo tipos de objeto e formatação](/previous-versions//ms714665(v=vs.85)).
 
 ## <a name="building-the-cmdlet"></a>Criando o Cmdlet
 
-Depois de implementar um cmdlet, tem de registá-lo com o Windows PowerShell através de um snap-in do Windows PowerShell. Para obter mais informações sobre como registar os cmdlets, consulte [como registrar Cmdlets, fornecedores e alojar aplicações](https://msdn.microsoft.com/en-us/a41e9054-29c8-40ab-bf2b-8ce4e7ec1c8c).
+Depois de implementar um cmdlet, tem de registá-lo com o Windows PowerShell através de um snap-in do Windows PowerShell. Para obter mais informações sobre como registar os cmdlets, consulte [como registrar Cmdlets, fornecedores e alojar aplicações](/previous-versions//ms714644(v=vs.85)).
 
 ## <a name="testing-the-cmdlet"></a>O Cmdlet de teste
 
@@ -260,13 +260,13 @@ Quando seu cmdlet foi registado com o Windows PowerShell, pode testá-lo executa
 
 [Criação de um Cmdlet para processar a entrada do Pipeline](./adding-parameters-that-process-pipeline-input.md)
 
-[Como criar um Cmdlet do Windows PowerShell](https://msdn.microsoft.com/en-us/0d721742-c849-4d0d-964f-78ddd9cd258c)
+[Como criar um Cmdlet do Windows PowerShell](/powershell/developer/cmdlet/writing-a-windows-powershell-cmdlet)
 
-[Estendendo tipos de objeto e formatação](https://msdn.microsoft.com/en-us/da976d91-a3d6-44e8-affa-466b1e2bd351)
+[Estendendo tipos de objeto e formatação](/previous-versions//ms714665(v=vs.85))
 
-[Como funciona o Windows PowerShell](https://msdn.microsoft.com/en-us/ced30e23-10af-4700-8933-49873bd84d58)
+[Como funciona o Windows PowerShell](/previous-versions//ms714658(v=vs.85))
 
-[Como registar os Cmdlets, fornecedores e alojar aplicações](https://msdn.microsoft.com/en-us/a41e9054-29c8-40ab-bf2b-8ce4e7ec1c8c)
+[Como registar os Cmdlets, fornecedores e alojar aplicações](/previous-versions//ms714644(v=vs.85))
 
 [Referência do Windows PowerShell](../windows-powershell-reference.md)
 

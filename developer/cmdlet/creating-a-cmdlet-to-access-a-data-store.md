@@ -8,12 +8,12 @@ ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: ea15e00e-20dc-4209-9e97-9ffd763e5d97
 caps.latest.revision: 8
-ms.openlocfilehash: 8d7ba9d122e90b80f6009b6dc8e8e3bb07331e4a
-ms.sourcegitcommit: 01b81317029b28dd9b61d167045fd31f1ec7bc06
+ms.openlocfilehash: 555baec08539403d3c15d1eca2b23eec0a874e49
+ms.sourcegitcommit: 46bebe692689ebedfe65ff2c828fe666b443198d
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 05/17/2019
-ms.locfileid: "65854841"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67733942"
 ---
 # <a name="creating-a-cmdlet-to-access-a-data-store"></a>Creating a Cmdlet to Access a Data Store (Criar um Cmdlet para Aceder a um Arquivo de Dados)
 
@@ -72,7 +72,7 @@ Tenha em atenção que este parâmetro se pertence a dois conjuntos de parâmetr
 
 Dois [System.Management.Automation.Parameterattribute](/dotnet/api/System.Management.Automation.ParameterAttribute) atributos declará-lo a `Path` parâmetro pertence a `ScriptParameterSet` e o `PatternParameterSet`. Para obter mais informações sobre conjuntos de parâmetros, consulte [Adicionar parâmetro define como um Cmdlet](./adding-parameter-sets-to-a-cmdlet.md).
 
-O [System.Management.Automation.Aliasattribute](/dotnet/api/System.Management.Automation.AliasAttribute) atributo declara um `PSPath` alias para o `Path` parâmetro. Declarar este alias é vivamente recomendado para consistência com outros cmdlets que acedem a fornecedores de Windows PowerShell. Para obter mais informações aboutWindows caminhos de PowerShell, consulte "Conceitos de caminho do PowerShell" no [como o Windows PowerShell funciona](https://msdn.microsoft.com/en-us/ced30e23-10af-4700-8933-49873bd84d58).
+O [System.Management.Automation.Aliasattribute](/dotnet/api/System.Management.Automation.AliasAttribute) atributo declara um `PSPath` alias para o `Path` parâmetro. Declarar este alias é vivamente recomendado para consistência com outros cmdlets que acedem a fornecedores de Windows PowerShell. Para obter mais informações aboutWindows caminhos de PowerShell, consulte "Conceitos de caminho do PowerShell" no [como o Windows PowerShell funciona](/previous-versions//ms714658(v=vs.85)).
 
 ### <a name="declaring-the-pattern-parameter"></a>Declarando o parâmetro do padrão
 
@@ -379,7 +379,7 @@ Este cmdlet Select-Str de exemplo utiliza a [System.Management.Automation.Provid
 
 ## <a name="code-sample"></a>Exemplo de código
 
-O código a seguir mostra a implementação desta versão deste cmdlet Select-Str. Observe que esse código inclui a classe de cmdlet, utilizados pelo cmdlet de métodos privados e o Windows PowerShell snap-in do código usado para registrar o cmdlet. Para obter mais informações sobre como registar o cmdlet, consulte [criando o Cmdlet](#building-the-cmdlet).
+O código a seguir mostra a implementação desta versão deste cmdlet Select-Str. Observe que esse código inclui a classe de cmdlet, utilizados pelo cmdlet de métodos privados e o Windows PowerShell snap-in do código usado para registrar o cmdlet. Para obter mais informações sobre como registar o cmdlet, consulte [criando o Cmdlet](#Defining-the-Cmdlet-Class).
 
 ```csharp
 //
@@ -1090,7 +1090,7 @@ namespace Microsoft.Samples.PowerShell.Commands
 
 ## <a name="building-the-cmdlet"></a>Criando o Cmdlet
 
-Depois de implementar um cmdlet, tem de registá-lo com o Windows PowerShell através de um snap-in do Windows PowerShell. Para obter mais informações sobre como registar os cmdlets, consulte [como registrar Cmdlets, fornecedores e alojar aplicações](https://msdn.microsoft.com/en-us/a41e9054-29c8-40ab-bf2b-8ce4e7ec1c8c).
+Depois de implementar um cmdlet, tem de registá-lo com o Windows PowerShell através de um snap-in do Windows PowerShell. Para obter mais informações sobre como registar os cmdlets, consulte [como registrar Cmdlets, fornecedores e alojar aplicações](/previous-versions//ms714644(v=vs.85)).
 
 ## <a name="testing-the-cmdlet"></a>O Cmdlet de teste
 
@@ -1214,7 +1214,7 @@ Quando seu cmdlet foi registado com o Windows PowerShell, pode testá-lo executa
 
 ## <a name="see-also"></a>Veja Também
 
-[Como criar um Cmdlet do Windows PowerShell](https://msdn.microsoft.com/en-us/0d721742-c849-4d0d-964f-78ddd9cd258c)
+[Como criar um Cmdlet do Windows PowerShell](/powershell/developer/cmdlet/writing-a-windows-powershell-cmdlet)
 
 [Criando seu primeiro Cmdlet](./creating-a-cmdlet-without-parameters.md)
 
@@ -1222,8 +1222,8 @@ Quando seu cmdlet foi registado com o Windows PowerShell, pode testá-lo executa
 
 [Estruturar o seu fornecedor do Windows PowerShell](../prog-guide/designing-your-windows-powershell-provider.md)
 
-[Como funciona o Windows PowerShell](https://msdn.microsoft.com/en-us/ced30e23-10af-4700-8933-49873bd84d58)
+[Como funciona o Windows PowerShell](/previous-versions//ms714658(v=vs.85))
 
-[Como registar os Cmdlets, fornecedores e alojar aplicações](https://msdn.microsoft.com/en-us/a41e9054-29c8-40ab-bf2b-8ce4e7ec1c8c)
+[Como registar os Cmdlets, fornecedores e alojar aplicações](/previous-versions//ms714644(v=vs.85))
 
 [SDK do Windows PowerShell](../windows-powershell-reference.md)

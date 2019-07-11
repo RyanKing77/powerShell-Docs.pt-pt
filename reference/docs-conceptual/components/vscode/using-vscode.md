@@ -2,19 +2,19 @@
 title: Utilizar o Visual Studio Code para o desenvolvimento de PowerShell
 description: Utilizar o Visual Studio Code para o desenvolvimento de PowerShell
 ms.date: 08/06/2018
-ms.openlocfilehash: 5badffd49252e0d72ae2c20d3147ad4b1e92d5ed
-ms.sourcegitcommit: cf1a281cce9f7239c440c90f8b2798d32a13778d
+ms.openlocfilehash: 6a0da6e060693dc7cfc08d40fd658414dc23d660
+ms.sourcegitcommit: 46bebe692689ebedfe65ff2c828fe666b443198d
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 05/19/2019
-ms.locfileid: "65882564"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67733885"
 ---
 # <a name="using-visual-studio-code-for-powershell-development"></a>Utilizar o Visual Studio Code para o desenvolvimento de PowerShell
 
 Para além da [ISE do PowerShell][ise], PowerShell também é bem suportada no Visual Studio Code.
 Além disso, o ISE não é suportado com o PowerShell Core, embora o Visual Studio Code é suportada para o PowerShell Core em todas as plataformas (Windows, macOS e Linux)
 
-Pode utilizar Visual Studio Code no Windows com o PowerShell versão 5 com o Windows 10 ou instalando [Windows Management Framework 5.0 RTM](https://www.microsoft.com/en-us/download/details.aspx?id=50395) de nível inferior sistemas operacionais do Windows (por exemplo, Windows 8.1, etc.).
+Pode utilizar Visual Studio Code no Windows com o PowerShell versão 5 com o Windows 10 ou instalando [Windows Management Framework 5.0 RTM](https://devblogs.microsoft.com/powershell/windows-management-framework-wmf-5-0-rtm-is-now-available-via-the-microsoft-update-catalog/) de nível inferior sistemas operacionais do Windows (por exemplo, Windows 8.1, etc.).
 
 Antes de iniciá-lo, certifique-se de que PowerShell existe no seu sistema.
 Para cargas de trabalho modernas no Windows, macOS e Linux, consulte:

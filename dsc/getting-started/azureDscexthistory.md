@@ -3,12 +3,12 @@ description: Saiba mais sobre o histórico de versão para a extensão do Desire
 ms.date: 06/21/2018
 keywords: dsc, powershell, azure, extension
 title: Histórico de versões da extensão de DSC do Azure
-ms.openlocfilehash: 2c076e3beccc15e99af2327820916d7a4d28da68
-ms.sourcegitcommit: e7445ba8203da304286c591ff513900ad1c244a4
+ms.openlocfilehash: 6d821e53e9206d99425e8c83f6d90986c7c28b63
+ms.sourcegitcommit: 46bebe692689ebedfe65ff2c828fe666b443198d
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62079749"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67734655"
 ---
 # <a name="azure-desired-state-configuration-extension-version-history"></a>Histórico de versões de extensão do Azure Desired State Configuration
 
@@ -30,7 +30,7 @@ Este artigo fornecerá informações sobre cada versão da extensão de VM de DS
   - Cliente do Windows 7/8.1/10
   - Servidor Nano
 - **Suporte WMF:**
-  - WMF 5.1
+  - WMF 5.1
   - WMF 5.0 RTM
   - Atualização do WMF 4.0
   - WMF 4.0
@@ -164,7 +164,7 @@ Este artigo fornecerá informações sobre cada versão da extensão de VM de DS
 - **Ambiente:** Azure
 - **Observações:** Esta versão utiliza DSC, incluído no Windows Server 2016 Technical Preview; para outros sistemas operacionais Windows, ele instala o [Windows Management Framework 5.0 RTM](https://blogs.msdn.microsoft.com/powershell/2015/12/16/windows-management-framework-wmf-5-0-rtm-is-now-available/) (instalação de WMF requer um reinício).
 - **Novas funcionalidades:**
-  - O suporte para o WMF 5.1 de pré-visualização. Quando publicada pela primeira vez, esta versão era uma atualização opcional e tinha que especifique Wmfversion = ' 5.1PP' em modelos do Resource Manager para instalar a pré-visualização do WMF 5.1. Wmfversion = "latest" ainda instala os [WMF 5.0 RTM](https://blogs.msdn.microsoft.com/powershell/2015/12/16/windows-management-framework-wmf-5-0-rtm-is-now-available/). Para obter mais informações sobre a pré-visualização do WMF 5.1, consulte [este blog]( https://blogs.msdn.microsoft.com/powershell/2016/07/16/announcing-windows-management-framework-wmf-5-1-preview/).
+  - O suporte para o WMF 5.1 de pré-visualização. Quando publicada pela primeira vez, esta versão era uma atualização opcional e tinha que especifique Wmfversion = ' 5.1PP' em modelos do Resource Manager para instalar a pré-visualização do WMF 5.1. Wmfversion = "latest" ainda instala os [WMF 5.0 RTM](https://blogs.msdn.microsoft.com/powershell/2015/12/16/windows-management-framework-wmf-5-0-rtm-is-now-available/). Para obter mais informações sobre a pré-visualização do WMF 5.1, consulte [este blog](https://blogs.msdn.microsoft.com/powershell/2016/07/16/announcing-windows-management-framework-wmf-5-1-preview/).
   - Menor outras correções e melhorias foram adicionadas.
 
 ### <a name="version--219"></a>Versão 2.19
@@ -237,7 +237,7 @@ Este artigo fornecerá informações sobre cada versão da extensão de VM de DS
   - Fornece um formato de definições atualizadas para a extensão num modelo do Resource Manager. Para obter mais informações, consulte [o blogue](https://blogs.msdn.microsoft.com/powershell/2016/02/26/arm-dsc-extension-settings/).
   - Correções de erros e outras melhorias.
 
-## <a name="next-steps"></a>Próximos passos
+## <a name="next-steps"></a>Passos Seguintes
 
 - Para obter mais informações sobre o DSC de PowerShell, vá para o [Centro de documentação do PowerShell](../overview/overview.md).
 - Examine os [modelo do Resource Manager para a extensão DSC](/azure/virtual-machines/extensions/dsc-template).

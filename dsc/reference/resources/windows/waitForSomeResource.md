@@ -2,12 +2,12 @@
 ms.date: 06/12/2017
 keywords: DSC, powershell, configuração, a configuração
 title: Recursos do DSC WaitForSome
-ms.openlocfilehash: 888da1810f0a9233579bad5eef8d5dd556947c61
-ms.sourcegitcommit: e7445ba8203da304286c591ff513900ad1c244a4
+ms.openlocfilehash: 2260f37002171154a6f2c3996b2af1bd9120039d
+ms.sourcegitcommit: 46bebe692689ebedfe65ff2c828fe666b443198d
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62076859"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67726777"
 ---
 # <a name="dsc-waitforsome-resource"></a>Recursos do DSC WaitForSome
 
@@ -17,6 +17,9 @@ O **WaitForSome** recursos do Desired State Configuration (DSC) podem ser utiliz
 
 Este recurso é bem-sucedida se o recurso especificado pela **ResourceName** propriedade está no Estado desejado num número mínimo de nós (especificado pelo **NodeCount**) definidos pelo **NodeName**  propriedade.
 
+> [!NOTE]
+> **WaitForSome** recursos utilizam a gestão remota do Windows para verificar o estado de outros nós.
+> Para obter mais informações sobre os requisitos de segurança e de porta para o WinRM, consulte [considerações de segurança de comunicação remota do PowerShell](/powershell/scripting/learn/remoting/winrmsecurity?view=powershell-6).
 
 ## <a name="syntax"></a>Sintaxe
 
@@ -34,7 +37,7 @@ WaitForSome [String] #ResourceName
 }
 ```
 
-## <a name="properties"></a>Propriedades
+## <a name="properties"></a>properties
 
 |  Propriedade  |  Descrição   |
 |---|---|

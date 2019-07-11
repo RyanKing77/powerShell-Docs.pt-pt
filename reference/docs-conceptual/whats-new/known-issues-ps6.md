@@ -2,12 +2,12 @@
 ms.date: 05/17/2018
 keywords: PowerShell, core
 title: Problemas conhecidos para o PowerShell 6.0
-ms.openlocfilehash: ce40a1925e564fbd2c661e70ec36d3842d915dfe
-ms.sourcegitcommit: e7445ba8203da304286c591ff513900ad1c244a4
+ms.openlocfilehash: 502143b660204edada6a9e62bdf6b260a384a078
+ms.sourcegitcommit: 46bebe692689ebedfe65ff2c828fe666b443198d
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62085971"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67733820"
 ---
 # <a name="known-issues-for-powershell-60"></a>Problemas conhecidos para o PowerShell 6.0
 
@@ -55,7 +55,7 @@ Ver [#954](https://github.com/PowerShell/PowerShell/issues/954) nos enviar comen
 
 PowerShell no Linux/macOS usa o .NET Core, que é um subconjunto do .NET Framework completo no Microsoft Windows. Isso é significativo, como o PowerShell fornece acesso direto para os tipos de estrutura subjacente, métodos, etc. Como resultado, scripts que são executados no Windows podem não ser executadas em plataformas não Windows devido às diferenças em arquiteturas de. Para obter mais informações sobre o .NET Core Framework, consulte <https://dotnetfoundation.org/net-core>
 
-Com o advento dos [.NET Standard2.0](https://blogs.msdn.microsoft.com/dotnet/2016/09/26/introducing-net-standard/), .NET Core 2.0 trará back muitos dos tipos tradicionais e métodos presentes no .NET Framework completo. Isso significa que o PowerShell Core poderão carregar muitos módulos tradicionais do Windows PowerShell sem modificação. Pode seguir o nosso .NET Standard 2.0 trabalho relacionados [aqui](https://github.com/PowerShell/PowerShell/projects/4).
+Com o advento dos [.NET Standard2.0](https://devblogs.microsoft.com/dotnet/introducing-net-standard/), .NET Core 2.0 trará back muitos dos tipos tradicionais e métodos presentes no .NET Framework completo. Isso significa que o PowerShell Core poderão carregar muitos módulos tradicionais do Windows PowerShell sem modificação. Pode seguir o nosso .NET Standard 2.0 trabalho relacionados [aqui](https://github.com/PowerShell/PowerShell/projects/4).
 
 ### <a name="redirection-issues"></a>Problemas de redirecionamento
 
@@ -82,7 +82,7 @@ Atualmente, o PowerShell Core suporta comunicação remota do PowerShell (PSRP) 
 
 O trabalho para a gestão remota com base em WSMan está a ser feito [fornecedor de omi psl](https://github.com/PowerShell/psl-omi-provider) repositório.
 
-O PowerShell Core também suporta a comunicação remota do PowerShell (PSRP) através de SSH em todas as plataformas (Windows, macOS e Linux). Embora isto não é atualmente suportado em produção, pode saber mais sobre esta configuração [aqui](../core-powershell/ssh-remoting-in-powershell-core.md).
+O PowerShell Core também suporta a comunicação remota do PowerShell (PSRP) através de SSH em todas as plataformas (Windows, macOS e Linux). Embora isto não é atualmente suportado em produção, pode saber mais sobre esta configuração [aqui](../learn/remoting/SSH-Remoting-in-PowerShell-Core.md).
 
 ### <a name="just-enough-administration-jea-support"></a>Suporte de just Enough-administração (JEA)
 

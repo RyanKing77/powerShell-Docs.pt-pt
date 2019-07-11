@@ -2,12 +2,12 @@
 ms.date: 06/12/2017
 keywords: DSC, powershell, configuração, a configuração
 title: Recursos do DSC WaitForAll
-ms.openlocfilehash: 1e891f1aecbdbe641973669f71f22664ad8ea16c
-ms.sourcegitcommit: e7445ba8203da304286c591ff513900ad1c244a4
+ms.openlocfilehash: c1125b7c5b68b9b520ed052800b6a2abf4e53b85
+ms.sourcegitcommit: 46bebe692689ebedfe65ff2c828fe666b443198d
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62076927"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67726874"
 ---
 # <a name="dsc-waitforall-resource"></a>Recursos do DSC WaitForAll
 
@@ -16,6 +16,10 @@ ms.locfileid: "62076927"
 O **WaitForAll** recursos do Desired State Configuration (DSC) podem ser utilizado dentro de um bloco de nó num [configuração de DSC](../../../configurations/configurations.md) para especificar dependências em configurações nos outros nós.
 
 Este recurso é bem-sucedida se o recurso especificado pela **ResourceName** propriedade está no Estado desejado em todos os nós de destino definido no **NodeName** propriedade.
+
+> [!NOTE]
+> **WaitForAll** recursos utilizam a gestão remota do Windows para verificar o estado de outros nós.
+> Para obter mais informações sobre os requisitos de segurança e de porta para o WinRM, consulte [considerações de segurança de comunicação remota do PowerShell](/powershell/scripting/learn/remoting/winrmsecurity?view=powershell-6).
 
 ## <a name="syntax"></a>Sintaxe
 
@@ -31,7 +35,7 @@ WaitForAll [string] #ResourceName
 }
 ```
 
-## <a name="properties"></a>Propriedades
+## <a name="properties"></a>properties
 
 |  Propriedade  |  Descrição   |
 |---|---|

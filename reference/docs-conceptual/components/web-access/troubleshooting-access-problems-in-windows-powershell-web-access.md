@@ -2,12 +2,12 @@
 ms.date: 08/23/2017
 keywords: PowerShell, o cmdlet
 title: resolução de problemas de acesso no acesso web windows powershell
-ms.openlocfilehash: 314e4a8098988111739705d55b68ff5ed2f5eff3
-ms.sourcegitcommit: e7445ba8203da304286c591ff513900ad1c244a4
+ms.openlocfilehash: 66e913504cf0c34f8d9ab18b088fb06173aca24c
+ms.sourcegitcommit: 46bebe692689ebedfe65ff2c828fe666b443198d
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62086600"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67733862"
 ---
 # <a name="troubleshooting-access-problems-in-windows-powershell-web-access"></a>Resolução de Problemas de Acesso no Windows PowerShell Web Access
 
@@ -35,7 +35,7 @@ Falha pode ocorrer devido a qualquer um dos seguintes procedimentos.
 
   Certifique-se a gestão remota está ativada no computador ao qual o usuário está tentando se conectar.
 
-  Para obter mais informações, consulte [como configurar o seu computador para a gestão remota](https://docs.microsoft.com/powershell/module/microsoft.powershell.core/about/about_remote_requirements#how-to-configure-your-computer-for-remoting).
+  Para obter mais informações, consulte [como configurar o seu computador para a gestão remota](/powershell/module/microsoft.powershell.core/about/about_remote_requirements#how-to-configure-your-computer-for-remoting).
 
 ## <a name="internal-server-error"></a>Erro de servidor interno
 
@@ -91,7 +91,7 @@ Não utilize um ponto (.) por si só, para representar o nome do computador.
 
 #### <a name="all-cases"></a>Todos os casos
 
-Parâmetro | Valor
+Parâmetro | Value
 -- | --
 UserName | Server\_name\\user\_name<br/>Localhost\\user\_name<br/>.\\user\_name
 UserGroup | Server\_name\\user\_group<br/>Localhost\\user\_group<br/>. \\utilizador\_grupo
@@ -99,13 +99,13 @@ ComputerGroup | Server\_name\\computer\_group<br/>Localhost\\computer\_group<br/
 
 #### <a name="gateway-server-is-in-a-domain"></a>Servidor de gateway está num domínio
 
-Parâmetro | Valor
+Parâmetro | Value
 -- | --
 ComputerName | Nome completamente qualificado do servidor de gateway ou Localhost
 
 #### <a name="gateway-server-is-in-a-workgroup"></a>O servidor de gateway está num grupo de trabalho
 
-Parâmetro | Valor
+Parâmetro | Value
 -- | --
 ComputerName | Nome do servidor
 

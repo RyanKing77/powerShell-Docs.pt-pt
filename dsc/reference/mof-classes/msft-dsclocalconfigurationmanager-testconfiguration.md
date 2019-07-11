@@ -1,15 +1,15 @@
 ---
 ms.date: 06/12/2017
 keywords: DSC, powershell, configuração, a configuração
-title: Método TestConfiguration da classe MSFT_DSCLocalConfigurationManager
-ms.openlocfilehash: d746832b01310f43a7aae33dd0fa70c0928bb3e0
-ms.sourcegitcommit: e7445ba8203da304286c591ff513900ad1c244a4
+title: Método TestConfiguration
+ms.openlocfilehash: 384134212e3b29b63dc045aee4b708c87c970302
+ms.sourcegitcommit: 46bebe692689ebedfe65ff2c828fe666b443198d
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62078083"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67726955"
 ---
-# <a name="testconfiguration-method-of-the-msftdsclocalconfigurationmanager-class"></a>Método TestConfiguration da classe MSFT_DSCLocalConfigurationManager
+# <a name="testconfiguration-method"></a>Método TestConfiguration
 
 Envia o documento de configuração para o nó gerido e verifica a configuração atual contra o documento.
 

@@ -2,12 +2,12 @@
 ms.date: 12/12/2018
 keywords: DSC, powershell, configuração, a configuração
 title: Especificar dependências entre nós
-ms.openlocfilehash: 1bdfbd9f8a94809d6bf410eff525e1c877fb6aad
-ms.sourcegitcommit: e7445ba8203da304286c591ff513900ad1c244a4
+ms.openlocfilehash: 62e553d894897ae1908745c2788b7b7b9cbe50ff
+ms.sourcegitcommit: 46bebe692689ebedfe65ff2c828fe666b443198d
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62080208"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67734686"
 ---
 # <a name="specifying-cross-node-dependencies"></a>Especificar dependências entre nós
 
@@ -55,14 +55,22 @@ WaitForSome [String] #ResourceName
 
 Todos os **WaitForXXXX** partilhar as seguintes chaves de sintaxe.
 
-|  Propriedade |  Descrição | | RetryIntervalSec | O número de segundos antes de tentar novamente. Mínimo é 1. | | RetryCount | O número máximo de vezes a repetir. | | ThrottleLimit | Número de máquinas para se conectar simultaneamente. A predefinição é `New-CimSession` predefinido. | | DependsOn | Indica que a configuração de outro recurso deve ser executado antes deste recurso está configurado. Para obter mais informações, consulte [DependsOn](resource-depends-on.md)| | PsDscRunAsCredential | Consulte [com DSC com as credenciais de utilizador](./runAsUser.md) |
-
+|Propriedade|  Descrição   |
+|---------|---------------------|
+| RetryIntervalSec| O número de segundos antes de tentar novamente. Mínimo é 1.|
+| RetryCount| O número máximo de vezes a repetir.|
+| ThrottleLimit| Número de máquinas para se conectar simultaneamente. A predefinição é `New-CimSession` padrão.|
+| DependsOn | Indica que a configuração de outro recurso deve ser executado antes deste recurso está configurado. Para obter mais informações, consulte [DependsOn](resource-depends-on.md)|
+| PsDscRunAsCredential | Consulte [com DSC com as credenciais de utilizador](./runAsUser.md) |
 
 ## <a name="using-waitforxxxx-resources"></a>Usando os recursos de WaitForXXXX
 
-Cada **WaitForXXXX** recurso aguarda para que os recursos especificados concluir no nó especificado. Outros recursos na mesma configuração podem então *dependem* a **WaitForXXXX** usando o recurso a **DependsOn** chave.
+Cada **WaitForXXXX** recurso aguarda para que os recursos especificados concluir no nó especificado.
+Outros recursos na mesma configuração podem então *dependem* a **WaitForXXXX** usando o recurso a **DependsOn** chave.
 
 Por exemplo, a configuração seguinte, o nó de destino está a aguardar a **xADDomain** seja concluído dentro do **Meucd** nó com o número máximo de 30 repete, em intervalos de 15 segundos, antes de nó de destino pode ingressar no domínio.
+
+Por predefinição o **WaitForXXX** recursos tente uma vez e, em seguida, falhar. Embora não seja necessário, normalmente, deverá especificar um **RetryCount** e **RetryIntervalSec**.
 
 ```powershell
 Configuration JoinDomain
@@ -111,7 +119,9 @@ Configuration JoinDomain
 
 Quando compilar a configuração, são gerados dois arquivos ". MOF". Aplicam-se ambos os ficheiros de ". MOF" para os nós de destino com o [Start-dscconfiguration para](/powershell/module/psdesiredstateconfiguration/start-dscconfiguration) cmdlet
 
->**Nota:** Por predefinição o WaitForXXX recursos tente uma vez e, em seguida, falharem. Embora não seja necessário, normalmente, deverá especificar um **RetryCount** e **RetryIntervalSec**.
+> [!NOTE]
+> **WaitForXXX** recursos utilizam a gestão remota do Windows para verificar o estado dos outros nós.
+> Para obter mais informações sobre os requisitos de segurança e de porta para o WinRM, consulte [considerações de segurança de comunicação remota do PowerShell](/powershell/scripting/learn/remoting/winrmsecurity?view=powershell-6).
 
 ## <a name="see-also"></a>Veja Também
 

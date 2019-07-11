@@ -1,15 +1,15 @@
 ---
 ms.date: 06/12/2017
 keywords: DSC, powershell, configuração, a configuração
-title: Método EnableDebugConfiguration da classe MSFT_DSCLocalConfigurationManager
-ms.openlocfilehash: b2eaebfa901cb5d93fd0183287073e6b31f975d1
-ms.sourcegitcommit: e7445ba8203da304286c591ff513900ad1c244a4
+title: Método EnableDebugConfiguration
+ms.openlocfilehash: f1290e4d898332361850ffc85aa0a8d79863c8f7
+ms.sourcegitcommit: 46bebe692689ebedfe65ff2c828fe666b443198d
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62078769"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67727142"
 ---
-# <a name="enabledebugconfiguration-method-of-the-msftdsclocalconfigurationmanager-class"></a>Método EnableDebugConfiguration da classe MSFT_DSCLocalConfigurationManager
+# <a name="enabledebugconfiguration-method"></a>Método EnableDebugConfiguration
 
 Permite a depuração de recursos de DSC.
 

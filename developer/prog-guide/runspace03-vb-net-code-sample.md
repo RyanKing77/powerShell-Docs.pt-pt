@@ -8,16 +8,16 @@ ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 3611d66b-19da-4477-ac05-2e5e68312f51
 caps.latest.revision: 6
-ms.openlocfilehash: 432105db021bd19f467f6a275b3ea9038fa82d5b
-ms.sourcegitcommit: e7445ba8203da304286c591ff513900ad1c244a4
+ms.openlocfilehash: 6c625c325e491135af3e5c8d58eead62e89ccb4a
+ms.sourcegitcommit: 46bebe692689ebedfe65ff2c828fe666b443198d
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62081398"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67734976"
 ---
 # <a name="runspace03-vbnet-code-sample"></a>Runspace03 (VB.NET) Code Sample (Código de Exemplo Runspace03 [VB.NET])
 
-Eis o código-fonte VB.NET para a aplicação de consola descrito em [criar uma aplicação de consola execuções para que um Script especificado](http://msdn.microsoft.com/en-us/a93e6006-36db-4bcc-b9da-c5bebf4ffd68). Este exemplo utiliza a [System.Management.Automation.Runspaceinvoke](/dotnet/api/System.Management.Automation.RunspaceInvoke) classe para executar um script que recupera processar informações para obter a lista de nomes de processo passado para o script. Ele mostra como transmitir objetos de entrada para um script e como recuperar objetos de erro, bem como os objetos de saída.
+Eis o código-fonte VB.NET para a aplicação de consola descrito em [criar uma aplicação de consola execuções para que um Script especificado](fd). Este exemplo utiliza a [System.Management.Automation.Runspaceinvoke](/dotnet/api/System.Management.Automation.RunspaceInvoke) classe para executar um script que recupera processar informações para obter a lista de nomes de processo passado para o script. Ele mostra como transmitir objetos de entrada para um script e como recuperar objetos de erro, bem como os objetos de saída.
 
 > [!NOTE]
 > Pode transferir o ficheiro de origem do VB.NET (runspace03.vb) para este exemplo com o Windows Software Development Kit para Windows Vista e o Microsoft .NET Framework 3.0 Runtime Components. Para obter instruções de transferência, consulte [como instalar o Windows PowerShell e transferir o SDK do Windows PowerShell](/powershell/developer/installing-the-windows-powershell-sdk).

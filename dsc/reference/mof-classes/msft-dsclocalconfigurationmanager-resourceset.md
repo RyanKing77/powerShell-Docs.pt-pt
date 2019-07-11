@@ -1,15 +1,15 @@
 ---
 ms.date: 06/12/2017
 keywords: DSC, powershell, configuração, a configuração
-title: Método ResourceSet da classe MSFT_DSCLocalConfigurationManager
-ms.openlocfilehash: 2712b7ff0a19e643c1f343d436c084f8970c9dd4
-ms.sourcegitcommit: e7445ba8203da304286c591ff513900ad1c244a4
+title: Método ResourceSet
+ms.openlocfilehash: 18364027b249e502e1f0b8802d9f3e031c7b07ce
+ms.sourcegitcommit: 46bebe692689ebedfe65ff2c828fe666b443198d
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62078406"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67727102"
 ---
-# <a name="resourceset-method-of-the-msftdsclocalconfigurationmanager-class"></a>Método ResourceSet da classe MSFT_DSCLocalConfigurationManager
+# <a name="resourceset-method"></a>Método ResourceSet
 
 Chama diretamente a **definir** método de um recurso de DSC.
 

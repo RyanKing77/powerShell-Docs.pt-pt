@@ -1,15 +1,15 @@
 ---
 ms.date: 12/12/2018
 keywords: DSC, powershell, configuração, a configuração
-title: Configurar o Gestor de configuração de Local em versões anteriores do Windows PowerShell
-ms.openlocfilehash: cea32c9aa8144bc52f3d44f2ad852f577f6a5e6d
-ms.sourcegitcommit: e7445ba8203da304286c591ff513900ad1c244a4
+title: Configurar o LCM no PowerShell 4.0
+ms.openlocfilehash: a7d8a1d8dea5ca4c2cdf53b8c02e498be20dab60
+ms.sourcegitcommit: 46bebe692689ebedfe65ff2c828fe666b443198d
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62079613"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67734609"
 ---
-# <a name="configuring-the-local-configuration-manager-in-previous-versions-of-windows-powershell"></a>Configurar o Gestor de configuração de Local em versões anteriores do Windows PowerShell
+# <a name="configuring-the-lcm-in-powershell-40"></a>Configurar o LCM no PowerShell 4.0
 
 >Aplica-se a: Windows PowerShell 4.0
 
