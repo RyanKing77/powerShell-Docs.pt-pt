@@ -2,18 +2,20 @@
 title: Instalar o PowerShell Core no Linux
 description: Informações sobre como instalar o PowerShell Core em várias distribuições do Linux
 ms.date: 08/06/2018
-ms.openlocfilehash: 0a7c9549c37222bf599e4bdb9e36c91288191bb3
-ms.sourcegitcommit: 00cf9a99972ce40db7c25b9a3fc6152dec6bddb6
+ms.openlocfilehash: 32d6c0e718ca798af2f6a5d796c3ca362e7befd9
+ms.sourcegitcommit: 13e170e8bff29d3d5f854c874de88f53c5e5ef20
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64530628"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67829428"
 ---
 # <a name="installing-powershell-core-on-linux"></a>Instalar o PowerShell Core no Linux
 
-Suporta [Ubuntu 14.04][u14], [Ubuntu 16.04][u16], [Ubuntu 18.04][u1804], [Ubuntu 18.10][u1810], [Debian 9][deb9], [CentOS 7] [ cos], [Red Hat Enterprise Linux (RHEL) 7][rhel7], [openSUSE 42.3][opensuse], [ dar um passo 15 do openSUSE][opensuse], [Fedora 27][fedora], [Fedora 28][fedora], e [Arch Linux][arch].
+Suporta [Ubuntu 14.04][u14], [Ubuntu 16.04][u16], [Ubuntu 18.04][u1804], [Ubuntu 18.10][u1810],  [Debian 9][deb9],
+[CentOS 7][cos], [Red Hat Enterprise Linux (RHEL) 7][rhel7], [openSUSE 42.3][opensuse], [openSUSE dar um passo 15][opensuse],
+[Fedora 27][fedora], [Fedora 28] [fedora], e [Arch Linux][arch].
 
-Para as distribuições de Linux que não são suportadas oficialmente, pode tentar usar a [pacote de ajuste do PowerShell][snap].
+Para as distribuições de Linux que não são suportadas oficialmente, pode tentar usar a [pacote de ajuste de PowerShell][snap].
 Também pode tentar implementar os binários do PowerShell diretamente com a Linux [ `tar.gz` arquivo][tar], mas terá de configurar as dependências necessárias, com base no sistema operacional nos passos separados.
 
 Todos os pacotes estão disponíveis no nosso GitHub [versões][] página.
@@ -199,7 +201,7 @@ sudo apt-get remove powershell
 > [!NOTE]
 > Como 18.10 é um [versão provisória](https://www.ubuntu.com/about/release-cycle), só é [suportada na Comunidade](https://docs.microsoft.com/en-us/powershell/scripting/powershell-support-lifecycle?view=powershell-6).
 
-A instalar num 18.10 é suportada através de `snapd`. Ver [ajustar pacote] [ snap] para obter instruções completas;
+A instalar num 18.10 é suportada através de `snapd`. Ver [ajustar pacote][snap] para obter instruções completas;
 
 ## <a name="debian-8"></a>Debian 8
 
@@ -588,8 +590,18 @@ Baixe [Raspbian Stretch](https://www.raspberrypi.org/downloads/raspbian/) e siga
 ### <a name="installation---raspbian"></a>Instalação - Raspbian
 
 ```sh
-# Install prerequisites
-sudo apt-get install libunwind8
+###################################
+# Prerequisites
+
+# Update package lists
+sudo apt-get update
+
+# Install libunwind8 and libssl1.0
+# Regex is used to ensure that we do not install libssl1.0-dev, as it is a variant that is not required
+sudo apt-get install '^libssl1.0.[0-9]$' libunwind8 -y
+
+###################################
+# Download and extract PowerShell
 
 # Grab the latest tar.gz
 wget https://github.com/PowerShell/PowerShell/releases/download/v6.2.0/powershell-6.2.0-linux-arm32.tar.gz
@@ -647,7 +659,7 @@ O gráfico seguinte mostra as dependências de .NET Core 2.0 são suportadas ofi
 | Fedora 27 <br> Fedora 28 | libunwind, libcurl, openssl-libs, libicu, compat-openssl10 |
 
 Para implementar os binários do PowerShell distribuições de Linux que não são suportados oficialmente, terá de instalar as dependências necessárias para o sistema operacional de destino nos passos separados.
-Por exemplo, nossa [Amazon Linux dockerfile] [ amazon-dockerfile] instala as dependências primeiro e, em seguida, extrai a Linux `tar.gz` arquivo.
+Por exemplo, nossa [Amazon Linux dockerfile][amazon-dockerfile] instala as dependências primeiro e, em seguida, extrai a Linux `tar.gz` arquivo.
 
 [amazon-dockerfile]: https://github.com/PowerShell/PowerShell-Docker/blob/master/release/community-stable/amazonlinux/docker/Dockerfile
 
@@ -690,7 +702,7 @@ sudo rm -rf /usr/bin/pwsh /opt/microsoft/powershell
 
 Os perfis de respeitam a configuração de por anfitrião do PowerShell, para que os perfis de anfitrião específico padrão existe em `Microsoft.PowerShell_profile.ps1` nos mesmos locais.
 
-PowerShell respeita os [XDG Base diretório especificação] [ xdg-bds] no Linux.
+PowerShell respeita os [XDG Base diretório especificação][xdg-bds] no Linux.
 
 [versões]: https://github.com/PowerShell/PowerShell/releases/latest
 [xdg-bds]: https://specifications.freedesktop.org/basedir-spec/basedir-spec-latest.html

@@ -2,16 +2,16 @@
 title: Quais são as novidades no PowerShell Core 6.0
 description: Novos recursos e alterações lançadas no PowerShell Core 6.0
 ms.date: 08/06/2018
-ms.openlocfilehash: 83c104d838db9d86fe1d485e92245a9c8f2d2057
-ms.sourcegitcommit: e7445ba8203da304286c591ff513900ad1c244a4
+ms.openlocfilehash: e1218a38398f4d86829cf2b4ba6a3a882675eaab
+ms.sourcegitcommit: 09f02ccef56ef30e7a9ca901f8d3713724960c68
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62059020"
+ms.lasthandoff: 07/12/2019
+ms.locfileid: "67843922"
 ---
 # <a name="whats-new-in-powershell-core-60"></a>Quais são as novidades no PowerShell Core 6.0
 
-[PowerShell Core 6.0] [ github] é uma nova edição do PowerShell que é Multiplataforma (Windows, macOS e Linux), código-fonte aberto e criada para ambientes heterogêneos e a cloud híbrida.
+[PowerShell Core 6.0][github] é uma nova edição do PowerShell que é Multiplataforma (Windows, macOS e Linux), código-fonte aberto e criada para ambientes heterogêneos e a cloud híbrida.
 
 ## <a name="moved-from-net-framework-to-net-core"></a>Movido do .NET Framework para o .NET Core
 
@@ -67,7 +67,7 @@ Outras pessoas só estão presentes ou aplicável em instalações de não-Windo
 
 ### <a name="logging"></a>Registo
 
-No macOS, PowerShell utiliza nativa `os_log` APIs para iniciar sessão da Apple [unificada do sistema de registo][os_log].
+No macOS, PowerShell utiliza nativa `os_log` APIs para iniciar sessão da Apple [unificada do sistema de Registro em log][os_log].
 No Linux, utiliza o PowerShell [Syslog][], uma solução de registo onipresente.
 
 ### <a name="filesystem"></a>Sistema de ficheiros
@@ -139,7 +139,7 @@ A maioria dos módulos que são fornecidos como parte do Windows (por exemplo, `
 A equipe do PowerShell está a funcionar com essas equipes e grupos de produtos, para validar e os módulos existentes para o PowerShell Core de porta.
 Com o .NET Standard e [CDXML][], muitos destes módulos tradicionais do Windows PowerShell parece funcionar no PowerShell Core, mas eles não foram formalmente validados e formalmente não são suportados.
 
-Ao instalar o [ `WindowsPSModulePath` ] [ windowspsmodulepath] módulo, pode utilizar módulos do Windows PowerShell ao acrescentar o Windows PowerShell `PSModulePath` para o PowerShell Core `PSModulePath`.
+Ao instalar o [ `WindowsPSModulePath` ][windowspsmodulepath] módulo, pode utilizar módulos do Windows PowerShell ao acrescentar o Windows PowerShell `PSModulePath` para o PowerShell Core `PSModulePath`.
 
 Primeiro, instale o `WindowsPSModulePath` módulo a partir da galeria do PowerShell:
 
@@ -295,9 +295,10 @@ Para obter mais informações sobre tarefas do PowerShell, consulte [about_Jobs]
 
 ### <a name="csv-cmdlets"></a>Cmdlets CSV
 
+- `Import-Csv` agora suporta o formato de ficheiro de registo expandido W3C (#2482) (obrigado [ @iSazonov ](https://github.com/iSazonov)!)
 - Adicione `PSTypeName` suporte para `Import-Csv` e `ConvertFrom-Csv`. (#5389) (Obrigado [ @markekraus ](https://github.com/markekraus)!)
 - Tornar `Import-Csv` suportar `CR`, `LF`, e `CRLF` como delimitadores de linha. (#5363) (Obrigado [ @iSazonov ](https://github.com/iSazonov)!)
-- Tornar `-NoTypeInformation` a predefinição no `Export-Csv` e `ConvertTo-Csv`. (#5164) (Obrigado [ @markekraus ](https://github.com/markekraus))
+- Tornar `-NoTypeInformation` a predefinição no `Export-Csv` e `ConvertTo-Csv`. (#5164) (Obrigado [ @markekraus ](https://github.com/markekraus)!)
 
 ### <a name="service-cmdlets"></a>Cmdlets de serviço
 
