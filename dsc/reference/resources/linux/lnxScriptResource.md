@@ -1,17 +1,17 @@
 ---
 ms.date: 06/12/2017
-keywords: DSC, powershell, configuração, a configuração
-title: DSC para Linux nxScript recursos
-ms.openlocfilehash: 339968512ab1c16c4c3785a3a19b00c3fbbf9ea1
-ms.sourcegitcommit: e7445ba8203da304286c591ff513900ad1c244a4
+keywords: DSC, PowerShell, configuração, instalação
+title: Recurso de nxScript do DSC para Linux
+ms.openlocfilehash: 0ad0530f1de7b86ff48c4eb1f79870f6682894a1
+ms.sourcegitcommit: 118eb294d5a84a772e6449d42a9d9324e18ef6b9
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62077828"
+ms.lasthandoff: 07/22/2019
+ms.locfileid: "68372158"
 ---
-# <a name="dsc-for-linux-nxscript-resource"></a>DSC para Linux nxScript recursos
+# <a name="dsc-for-linux-nxscript-resource"></a>Recurso de nxScript do DSC para Linux
 
-O **nxScript** recursos no PowerShell Desired State Configuration (DSC) fornece um mecanismo para executar scripts do Linux num nó de Linux.
+O recurso **nxScript** na configuração de estado desejado (DSC) do PowerShell fornece um mecanismo para executar scripts do Linux em um nó do Linux.
 
 ## <a name="syntax"></a>Sintaxe
 
@@ -32,16 +32,16 @@ nxScript <string> #ResourceName
 
 |  Propriedade |  Descrição |
 |---|---|
-| GetScript| Fornece um script que é executado quando invoca o [Get-dscconfiguration para](https://technet.microsoft.com/en-us/library/dn521625.aspx) cmdlet. O script tem de começar com um shebang, tais como #! / bin/bash.|
-| SetScript| Fornece um script. Quando invoca o [Start-dscconfiguration para](https://technet.microsoft.com/en-us/library/dn521623.aspx) cmdlet, o **TestScript** é executado primeiro. Se o **TestScript** bloco devolve um código de saída diferente de 0, o **SetScript** bloco será executado. Se o **TestScript** devolve um código de saída 0, o **SetScript** não será executado. O script tem de começar com um shebang, tais como `#!/bin/bash`.|
-| TestScript| Fornece um script. Quando invoca o [Start-dscconfiguration para](https://technet.microsoft.com/en-us/library/dn521623.aspx) cmdlet, este script é executado. Se ela retornar um código de saída diferente de 0, o SetScript será executado. Se ele retorna um código de saída 0, o **SetScript** não será executado. O **TestScript** também é executada quando invoca o [Test-dscconfiguration para](https://technet.microsoft.com/en-us/library/dn407382.aspx) cmdlet. No entanto, no caso, o **SetScript** não será executado, não importa qual código de saída é retornado do **TestScript**. O **TestScript** tem de devolver um código de saída 0 se a configuração real corresponde a configuração atual do estado pretendido e uma saída de código que 0 se não corresponde. (A configuração atual do estado pretendido é a última configuração elaborada no nó que está a utilizar o DSC). O script tem de começar com um shebang, tais como 1#!/bin/bash.1|
-| Utilizador| O utilizador para executar o script como.|
-| Grupo| O grupo para executar o script como.|
-| DependsOn | Indica que a configuração de outro recurso deve ser executado antes deste recurso está configurado. Por exemplo, se o **ID** do recurso de bloco de script de configuração que pretende executar primeiro é **ResourceName** e seu tipo é **ResourceType**, a sintaxe para usar isso a propriedade é `DependsOn = "[ResourceType]ResourceName"`.|
+| GetScript| Fornece um script para retornar o status atual do computador.  Esse script é executado quando você invoca o script [GetDscConfiguration.py](https://github.com/Microsoft/PowerShell-DSC-for-Linux#performing-dsc-operations-from-the-linux-computer) . O script deve começar com um shebang, como #!/bin/bash.|
+| SetScript| Fornece um script que coloca o computador no estado correto. Quando você invoca o script [StartDscConfiguration.py](https://github.com/Microsoft/PowerShell-DSC-for-Linux#performing-dsc-operations-from-the-linux-computer) , o **TestScript** é executado primeiro. Se o bloco **TestScript** retornar um código de saída diferente de 0, o bloco setscript será executado. Se o **TestScript** retornar um código de saída de 0,  o setscript não será executado. O script deve começar com um shebang, `#!/bin/bash`como.|
+| TestScript| Fornece um script que avalia se o nó está atualmente no estado correto. Quando você invoca o script [StartDscConfiguration.py](https://github.com/Microsoft/PowerShell-DSC-for-Linux#performing-dsc-operations-from-the-linux-computer) , esse script é executado. Se ele retornar um código de saída diferente de 0, o setscript será executado. Se ele retornar um código de saída de 0,  o setscript não será executado. O **TestScript** também é executado quando você invoca o script [TestDscConfiguration](https://github.com/Microsoft/PowerShell-DSC-for-Linux#performing-dsc-operations-from-the-linux-computer) . No entanto, nesse caso,  o setscript não será executado, independentemente do código de saída retornado do **TestScript**. O **TestScript** deve conter conteúdo e deve retornar um código de saída de 0 se a configuração real corresponder à configuração de estado atual desejado e um código de saída diferente de 0 se não corresponder. (A configuração de estado atual desejada é a última configuração aplicada no nó que está usando a DSC). O script deve começar com um shebang, como 1 #!/bin/bash.1|
+| Utilizador| O usuário para executar o script como.|
+| Grupo| O grupo para o qual executar o script.|
+| DependsOn | Indica que a configuração de outro recurso deve ser executada antes que este recurso seja configurado. Por exemplo, se a **ID** do bloco de script de configuração de recurso que você deseja executar primeiro  for resourceName e seu tipo for **ResourceType**, a sintaxe para usar `DependsOn = "[ResourceType]ResourceName"`essa propriedade será.|
 
 ## <a name="example"></a>Exemplo
 
-O exemplo seguinte demonstra o uso do **nxScript** recursos para executar o gerenciamento de configuração adicionais.
+O exemplo a seguir demonstra o uso do recurso **nxScript** para executar o gerenciamento de configuração adicional.
 
 ```
 Import-DSCResource -Module nx
