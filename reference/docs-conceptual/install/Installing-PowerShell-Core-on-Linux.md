@@ -6,13 +6,12 @@ ms.openlocfilehash: 929b153ef784f3203cd31a0e2fc52e744a07532f
 ms.sourcegitcommit: 118eb294d5a84a772e6449d42a9d9324e18ef6b9
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 07/22/2019
+ms.lasthandoff: 07/26/2019
 ms.locfileid: "68372191"
 ---
 # <a name="installing-powershell-core-on-linux"></a>Instalar o PowerShell Core no Linux
 
-Dá suporte ao [Ubuntu 16, 4][u16], [Ubuntu 18.04][u1804], [Ubuntu 18,10][u1810], [Debian 9][deb9],
- [CentOS 7][cos], [Red Hat Enterprise Linux (RHEL) 7][rhel7], [openSUSE 42,3][opensuse], [openSUSE Leap 15][opensuse] , [Fedora 27][fedora], [Fedora 28][Fedora]e [Arch Linux][arch].
+Dá suporte ao [ubuntu 16, 4][u16], [Ubuntu 18, 4][u1804], [Ubuntu 18,10][u1810], [Debian 9][deb9], [CentOS 7][cos], [Red Hat Enterprise Linux (RHEL) 7][rhel7], [openSUSE 42,3][opensuse], [openSUSE Leap 15][opensuse], [Fedora 27][fedora], [Fedora 28][fedora], e arquear para o [Linux][arch].
 
 Para distribuições Linux que não têm suporte oficial, você pode tentar instalar o PowerShell usando o [pacote de snap do PowerShell][snap]. Você também pode tentar implantar binários do PowerShell diretamente usando o [ `tar.gz` arquivo][tar]do Linux, mas precisaria configurar as dependências necessárias com base no sistema operacional em etapas separadas.
 
