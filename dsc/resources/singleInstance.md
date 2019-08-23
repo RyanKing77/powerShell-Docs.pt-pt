@@ -1,19 +1,19 @@
 ---
 ms.date: 06/12/2017
-keywords: DSC, powershell, configuração, a configuração
+keywords: DSC, PowerShell, configuração, instalação
 title: Escrever um recurso de DSC de instância única (melhor prática)
-ms.openlocfilehash: 9494964b1b13eaa082ad5cbc279b4586bb7211cc
-ms.sourcegitcommit: e7445ba8203da304286c591ff513900ad1c244a4
+ms.openlocfilehash: 4d9e07c6aaa064f808a03d4252e8d352b82183ec
+ms.sourcegitcommit: 5a004064f33acc0145ccd414535763e95f998c89
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62076570"
+ms.lasthandoff: 08/23/2019
+ms.locfileid: "69986522"
 ---
 # <a name="writing-a-single-instance-dsc-resource-best-practice"></a>Escrever um recurso de DSC de instância única (melhor prática)
 
->**Nota:** Este tópico descreve um procedimento recomendado para definir um recurso de DSC que permite apenas uma única instância numa configuração. Atualmente, não há nenhum recurso de DSC interno para fazer isso. Que podem ser alteradas no futuro.
+>**Nota:** Este tópico descreve uma prática recomendada para definir um recurso de DSC que permite apenas uma única instância em uma configuração. Atualmente, não há nenhum recurso interno de DSC para fazer isso. Isso pode ser alterado no futuro.
 
-Existem situações em que não quiser que um recurso a ser utilizada várias vezes numa configuração. Por exemplo, numa implementação anterior do [xTimeZone](https://github.com/PowerShell/xTimeZone) recurso, uma configuração poderia chamar o recurso várias vezes, definir o fuso horário para uma configuração diferente em cada bloco de recursos:
+Há situações em que você não deseja permitir que um recurso seja usado várias vezes em uma configuração. Por exemplo, em uma implementação anterior do recurso [xTimeZone](https://github.com/PowerShell/xTimeZone) , uma configuração poderia chamar o recurso várias vezes, definindo o fuso horário para uma configuração diferente em cada bloco de recursos:
 
 ```powershell
 Configuration SetTimeZone
@@ -46,10 +46,10 @@ Configuration SetTimeZone
 }
 ```
 
-Isso é devido a forma como funcionam as chaves de recurso de DSC. Um recurso tem de ter, pelo menos, uma propriedade chave. Uma instância de recurso é considerada exclusiva, se a combinação dos valores de todas as suas propriedades de chave é exclusiva. Em sua implementação anterior, o [xTimeZone](https://github.com/PowerShell/xTimeZone) recurso tinha apenas uma propriedade –**fuso horário**, que era necessária para ser uma chave. Por este motivo, uma configuração, como a descrita anteriormente poderia compilar e executar sem aviso. Cada um a **xTimeZone** blocos de recursos é considerado exclusivo. Isso faria com que a configuração a ser aplicado repetidamente para o nó, o fuso horário e volta e voltar a ligar.
+Isso ocorre devido à maneira como as chaves de recurso DSC funcionam. Um recurso deve ter pelo menos uma propriedade de chave. Uma instância de recurso será considerada exclusiva se a combinação dos valores de todas as suas propriedades de chave for exclusiva. Em sua implementação anterior, o recurso [xTimeZone](https://github.com/PowerShell/xTimeZone) tinha apenas uma propriedade--**timezone**, que era necessária para ser uma chave. Por isso, uma configuração como a anterior seria compilada e executada sem aviso. Cada um dos blocos de recursos **xTimeZone** é considerado exclusivo. Isso faria com que a configuração fosse aplicada repetidamente ao nó, alternando o fuso horário para frente e para trás.
 
-Para se certificar de que uma configuração foi possível definir o fuso horário para um nó de destino apenas uma vez, o recurso foi atualizado para adicionar uma segunda propriedade **IsSingleInstance**, tornava-se a propriedade da chave.
-O **IsSingleInstance** foi limitado a um único valor, "Sim", utilizando um **ValueMap**. O esquema MOF antigo para o recurso era:
+Para garantir que uma configuração possa definir o fuso horário para um nó de destino somente uma vez, o recurso foi atualizado para adicionar uma segunda propriedade, **IsSingleInstance**, que se tornou a propriedade de chave.
+O **IsSingleInstance** estava limitado a um único valor, "Sim" usando um **ValueMap**. O antigo esquema MOF para o recurso era:
 
 ```powershell
 [ClassVersion("1.0.0.0"), FriendlyName("xTimeZone")]
@@ -70,7 +70,7 @@ class xTimeZone : OMI_BaseResource
 };
 ```
 
-O script de recurso também foi atualizado para utilizar o novo parâmetro. Aqui está o script de recurso antigo:
+O script de recurso também foi atualizado para usar o novo parâmetro. Aqui, como o script de recurso foi alterado:
 
 ```powershell
 function Get-TargetResource
@@ -102,10 +102,9 @@ function Get-TargetResource
     $returnValue
 }
 
-
 function Set-TargetResource
 {
-    [CmdletBinding(SupportsShouldProcess=$true)]
+    [CmdletBinding()]
     param
     (
         [parameter(Mandatory = $true)]
@@ -122,24 +121,24 @@ function Set-TargetResource
     #Output the result of Get-TargetResource function.
     $CurrentTimeZone = Get-TimeZone
 
-    if($PSCmdlet.ShouldProcess("'$TimeZone'","Replace the System Time Zone"))
+    Write-Verbose -Message "Replace the System Time Zone to $TimeZone"
+    
+    try
     {
-        try
+        if($CurrentTimeZone -ne $TimeZone)
         {
-            if($CurrentTimeZone -ne $TimeZone)
-            {
-                Write-Verbose -Verbose "Setting the TimeZone"
-                Set-TimeZone -TimeZone $TimeZone}
-            else
-            {
-                Write-Verbose -Verbose "TimeZone already set to $TimeZone"
-            }
+            Write-Verbose -Verbose "Setting the TimeZone"
+            Set-TimeZone -TimeZone $TimeZone
         }
-        catch
+        else
         {
-            $ErrorMsg = $_.Exception.Message
-            Write-Verbose -Verbose $ErrorMsg
+            Write-Verbose -Verbose "TimeZone already set to $TimeZone"
         }
+    }
+    catch
+    {
+        $ErrorMsg = $_.Exception.Message
+        Write-Verbose -Verbose $ErrorMsg
     }
 }
 
@@ -203,7 +202,7 @@ Function Set-TimeZone {
 Export-ModuleMember -Function *-TargetResource
 ```
 
-Tenha em atenção que o **fuso horário** propriedade já não é uma chave. Agora, se uma configuração tenta definir o fuso horário duas vezes (ao utilizar dois diferentes **xTimeZone** blocos com diferentes **fuso horário** valores), tentar compilar a configuração, fará com que um erro:
+Observe que a propriedade **timezone** não é mais uma chave. Agora, se uma configuração tentar definir o fuso horário duas vezes (usando dois blocos **xTimeZone** diferentes com valores de **fuso horário** diferentes), tentar compilar a configuração causará um erro:
 
 ```powershell
 Test-ConflictingResources : A conflict was detected between resources '[xTimeZone]TimeZoneExample (::15::10::xTimeZone)' and
