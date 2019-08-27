@@ -162,7 +162,7 @@ Use as seguintes marcas para demonstrar aos usuários quais pacotes funcionarão
 - Linux Pacotes compatíveis com sistemas operacionais Linux
 - MacOS Pacotes que são compatíveis com o sistema operacional Mac
 
-Ao marcar seu pacote com as plataformas compatíveis, ele será incluído nos filtros de pesquisa da galeria no painel esquerdo dos resultados da pesquisa. Se você hospedar seu pacote no GitHub, ao marcar seu pacote, você também poderá tirar proveito de nossa proteção](https://img.shields.io/powershellgallery/p/CosmosDB.svg)de![compatibilidade de [Galeria do PowerShell de proteção](https://img.shields.io/powershellgallery/p/:packageName.svg) 
+Ao marcar seu pacote com as plataformas compatíveis, ele será incluído nos filtros de pesquisa da galeria no painel esquerdo dos resultados da pesquisa. Se você hospedar seu pacote no GitHub, ao marcar seu pacote, você também poderá tirar proveito de nossa proteção](https://img.shields.io/powershellgallery/p/CosmosDB.svg)![compatibilidade de [Galeria do PowerShell de proteção](https://img.shields.io/powershellgallery/p/:packageName.svg) 
 de conformidade.  
 
 ## <a name="include-tests"></a>Incluir testes
