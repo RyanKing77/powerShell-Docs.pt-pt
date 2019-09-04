@@ -1,65 +1,73 @@
 ---
 ms.date: 09/11/2018
 contributor: JKeithB
-keywords: Galeria do powershell, psgallery
+keywords: Galeria, PowerShell, psgallery
 title: Transferência manual de pacotes
-ms.openlocfilehash: af628f99befe50c16c2c0c60f1a352647af34ff4
-ms.sourcegitcommit: e7445ba8203da304286c591ff513900ad1c244a4
+ms.openlocfilehash: c0a96e866dfd27f9b2170ea540ec6dd0c67701fd
+ms.sourcegitcommit: 02eed65c526ef19cf952c2129f280bb5615bf0c8
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62075358"
+ms.lasthandoff: 09/03/2019
+ms.locfileid: "70215459"
 ---
 # <a name="manual-package-download"></a>Transferência manual de pacotes
 
-A galeria do PowerShell suporta baixar um pacote do Web site diretamente, sem utilizar os cmdlets do PowerShellGet. Pode baixar qualquer pacote como um ficheiro de pacote (. nupkg) do NuGet, que, em seguida, pode copiar para um repositório interno.
+O Galeria do PowerShell dá suporte ao download de um pacote diretamente do site, sem usar os cmdlets do PowerShellGet. Você pode baixar qualquer pacote como um arquivo de pacote`.nupkg`NuGet (), que você pode copiar para um repositório interno.
 
 > [!NOTE]
-> A transferência de pacotes manual é **não** pretende ser uma substituição para o cmdlet Install-Module.
-> Download do pacote não instala o módulo ou script. As dependências não são incluídas no pacote NuGet transferido. As instruções seguintes são fornecidas para efeitos de referência apenas.
+> O download do pacote manual **não** se destina como uma substituição `Install-Module` para o cmdlet.
+> O download do pacote não instala o módulo ou o script. As dependências não estão incluídas no pacote NuGet baixado. As instruções a seguir são fornecidas apenas para fins de referência.
 
-## <a name="using-manual-download-to-acquire-a-package"></a>Utilizar transferência manual para adquirir um pacote
+## <a name="using-manual-download-to-acquire-a-package"></a>Usando o download manual para adquirir um pacote
 
-Cada página tem uma ligação para transferir o Manual, como mostrado aqui:
+Cada página tem um link para download manual, como mostrado aqui:
 
-![Transferência manual](../../Images/packagedisplaypagewithpseditions.png)
+![Download manual](../../Images/packagedisplaypagewithpseditions.png)
 
-Para transferir manualmente, clique em **transfira o ficheiro raw nupkg**. Uma cópia do pacote copiados para a pasta de transferência para o seu navegador com o nome `<name>.<version>.nupkg`.
+Para baixar manualmente, clique em **baixar o arquivo RAW nupkg**. Uma cópia do pacote é copiada para a pasta de download do seu navegador com o `<name>.<version>.nupkg`nome.
 
-Um pacote de NuGet é um arquivo ZIP com ficheiros adicionais, que contém informações sobre o conteúdo do pacote. Alguns browsers, como o Internet Explorer, substituem automaticamente a `.nupkg` extensão com o ficheiro `.zip`. Para expandir o pacote, mudar o nome da `.nupkg` de ficheiros para `.zip`, se necessário, em seguida, extraia os conteúdos para uma pasta local.
+Um pacote NuGet é um arquivo ZIP com arquivos extras contendo informações sobre o conteúdo do pacote. Alguns navegadores, como o Internet Explorer, substituem automaticamente a `.zip`extensão de `.nupkg` arquivo por. Para expandir o pacote, renomeie `.nupkg` o `.zip`arquivo como, se necessário, e extraia o conteúdo para uma pasta local.
 
-Um ficheiro de pacote NuGet inclui os seguintes elementos do NuGet específicas que não fazem parte do código em pacote original:
+Um arquivo de pacote NuGet inclui os seguintes **elementos específicos do NuGet** que não fazem parte do código do pacote original:
 
-- Uma pasta denominada `_rels` -contém um `.rels` ficheiro que lista as dependências
-- Uma pasta denominada `package` -contém os dados específicos do NuGet
-- Um arquivo chamado `[Content_Types].xml` -descreve como extensões, como o PowerShellGet funcionam com o NuGet
-- Um arquivo chamado `<name>.nuspec` -contém a maior parte dos metadados
+- Uma pasta chamada `_rels` -contém um `.rels` arquivo que lista as dependências
+- Uma pasta chamada `package` -contém os dados específicos do NuGet
+- Um arquivo nomeado `[Content_Types].xml` -descreve como as extensões como o PowerShellGet funcionam com o NuGet
+- Um arquivo chamado `<name>.nuspec` -contém a massa dos metadados
 
-## <a name="installing-powershell-modules-from-a-nuget-package"></a>Instalar módulos do PowerShell a partir de um pacote de NuGet
+## <a name="installing-powershell-modules-from-a-nuget-package"></a>Instalando módulos do PowerShell de um pacote NuGet
 
 > [!NOTE]
-> Estas instruções **não fazer** apresentam o mesmo resultado como executar `Install-Module`. Estas instruções satisfazem os requisitos mínimos. Estas não recomendações pretendem ser uma substituição para `Install-Module`. Alguns passos realizados por `Install-Module` não estão incluídos.
+> Essas instruções **não** dão o mesmo resultado que a execução `Install-Module`. Essas instruções atendem aos requisitos mínimos. Eles não se destinam a ser `Install-Module`uma substituição para.
+> Algumas etapas executadas pelo `Install-Module` não são incluídas.
 
-A abordagem mais fácil é remover os elementos de NuGet específico a partir da pasta. Isso deixa o código de PowerShell criado pelo autor do pacote. Os passos são:
+A abordagem mais fácil é remover os elementos específicos do NuGet da pasta. A remoção dos elementos deixa o código do PowerShell criado pelo autor do pacote.
+Para obter a lista de elementos específicos do NuGet, consulte [usando o download manual para adquirir um pacote](#using-manual-download-to-acquire-a-package).
+
+Os passos são os seguintes:
 
 1. Extraia o conteúdo do pacote NuGet para uma pasta local.
-2. Elimine os elementos de NuGet específico a partir da pasta.
-3. Renomeie a pasta. O nome da pasta predefinida é normalmente `<name>.<version>`. Pode incluir a versão "-pré-lançamento" se o módulo é identificado como uma versão de pré-lançamento. Renomeie a pasta para apenas o nome do módulo. Por exemplo, "azurerm.storage.5.0.4-pré-visualização" torna-se "azurerm. Storage".
-4. Copie a pasta para uma das pastas no `$env:PSModulePath value`. `$env:PSModulePath` é um conjunto de ponto e vírgula delimitados por de caminhos em que PowerShell deveria procurar módulos.
+2. Exclua os elementos específicos do NuGet da pasta.
+3. Renomeie a pasta. O nome da pasta padrão geralmente `<name>.<version>`é. A versão pode incluir `-prerelease` se o módulo estiver marcado como uma versão de pré-lançamento. Renomeie a pasta apenas para o nome do módulo. Por exemplo, `azurerm.storage.5.0.4-preview` torna `azurerm.storage`-se.
+4. Copie a pasta para uma das pastas no `$env:PSModulePath value`. `$env:PSModulePath`é um conjunto delimitado por ponto-e-vírgula de caminhos nos quais o PowerShell deve procurar módulos.
 
 > [!IMPORTANT]
-> A transferência manual não inclui todas as dependências necessárias pelo módulo. Se o pacote tiver dependências, tem de estar instalados no sistema para este módulo funcione corretamente. A galeria do PowerShell mostra todas as dependências necessárias pelo pacote.
+> O download manual não inclui nenhuma dependência exigida pelo módulo. Se o pacote tiver dependências, eles deverão ser instalados no sistema para que este módulo funcione corretamente. O Galeria do PowerShell mostra todas as dependências exigidas pelo pacote.
 
-## <a name="installing-powershell-scripts-from-a-nuget-package"></a>Instalar Scripts do PowerShell a partir de um pacote NuGet
+## <a name="installing-powershell-scripts-from-a-nuget-package"></a>Instalando scripts do PowerShell de um pacote NuGet
 
 > [!NOTE]
-> Estas instruções **não fazer** apresentam o mesmo resultado como executar `Install-Script`. Estas instruções satisfazem os requisitos mínimos. Estas não recomendações pretendem ser uma substituição para `Install-Script`.
+> Essas instruções **não** dão o mesmo resultado que a execução `Install-Script`. Essas instruções atendem aos requisitos mínimos. Eles não se destinam a ser `Install-Script`uma substituição para.
 
-A abordagem mais fácil é para extrair o pacote NuGet, em seguida, utilize o script diretamente. Os passos são:
+A abordagem mais fácil é extrair o pacote NuGet e, em seguida, usar o script diretamente.
+
+Os passos são os seguintes:
 
 1. Extraia o conteúdo do pacote NuGet.
-2. O `.PS1` ficheiro na pasta pode ser utilizado diretamente a partir desta localização.
-3. Pode eliminar os elementos específicos do NuGet na pasta.
+2. O `.PS1` arquivo na pasta pode ser usado diretamente deste local.
+3. Você pode excluir os elementos específicos do NuGet na pasta.
+
+Para obter a lista de elementos específicos do NuGet, consulte [usando o download manual para adquirir um pacote](#using-manual-download-to-acquire-a-package).
 
 > [!IMPORTANT]
-> A transferência manual não inclui todas as dependências necessárias pelo módulo. Se o pacote tiver dependências, tem de estar instalados no sistema para este módulo funcione corretamente. A galeria do PowerShell mostra todas as dependências necessárias pelo pacote.
+> O download manual não inclui nenhuma dependência exigida pelo módulo. Se o pacote tiver dependências, eles deverão ser instalados no sistema para que este módulo funcione corretamente. O Galeria do PowerShell mostra todas as dependências exigidas pelo pacote.

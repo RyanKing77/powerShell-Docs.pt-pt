@@ -1,93 +1,93 @@
 ---
 ms.date: 06/05/2017
-keywords: PowerShell, o cmdlet
+keywords: PowerShell, cmdlet
 title: Trabalhar com Ficheiros e Pastas
-ms.openlocfilehash: 0f7cb233918b59475417ec49b611ecc25a94ebe1
-ms.sourcegitcommit: a6f13c16a535acea279c0ddeca72f1f0d8a8ce4c
+ms.openlocfilehash: 743e261d2f5e8bfa39f2731fca7fea6e5678c711
+ms.sourcegitcommit: 02eed65c526ef19cf952c2129f280bb5615bf0c8
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 06/12/2019
-ms.locfileid: "67030699"
+ms.lasthandoff: 09/03/2019
+ms.locfileid: "70215529"
 ---
 # <a name="working-with-files-and-folders"></a>Trabalhar com Ficheiros e Pastas
 
-Navegar através de unidades do Windows PowerShell e manipular os itens nos mesmos são semelhante à manipulação de ficheiros e pastas em unidades de disco físicas do Windows. Esta secção descreve como lidar com determinadas tarefas de manipulação de ficheiros e pastas com o PowerShell.
+Navegar pelas unidades do Windows PowerShell e manipular os itens nelas é semelhante à manipulação de arquivos e pastas em unidades de disco físico do Windows. Esta seção discute como lidar com tarefas específicas de manipulação de arquivos e pastas usando o PowerShell.
 
-## <a name="listing-all-the-files-and-folders-within-a-folder"></a>A listagem de todos os arquivos e pastas numa pasta
+## <a name="listing-all-the-files-and-folders-within-a-folder"></a>Listando todos os arquivos e pastas dentro de uma pasta
 
-Pode obter todos os itens diretamente dentro de uma pasta usando **Get-ChildItem**. Adicionar o opcional **força** parâmetro para apresentar ocultada ou itens de sistema. Por exemplo, este comando apresenta o conteúdo direto do Windows PowerShell unidade C (que é o mesmo que a unidade física de Windows C):
+Você pode obter todos os itens diretamente em uma pasta usando **Get-ChildItem**. Adicione o parâmetro **Force** opcional para exibir itens ocultos ou do sistema. Por exemplo, esse comando exibe o conteúdo direto da unidade C do Windows PowerShell (que é o mesmo que a unidade física do Windows C):
 
 ```powershell
 Get-ChildItem -Path C:\ -Force
 ```
 
-O comando lista apenas os itens contidos diretamente, bem similar ao uso do Cmd.exe **DIR** comando ou **ls** numa shell de UNIX. Para mostrar os itens contidos, tem de especificar o **-Recurse** parâmetro também. (Pode demorar muito tempo a concluir.) Para listar tudo na unidade C:
+O comando lista apenas os itens contidos diretamente, de forma semelhante ao uso do comando **dir** do cmd. exe ou **ls** em um shell do UNIX. Para mostrar os itens contidos, você precisa especificar o parâmetro **-recurse** também. (Isso pode levar muito tempo para ser concluído.) Para listar tudo na unidade C:
 
 ```powershell
 Get-ChildItem -Path C:\ -Force -Recurse
 ```
 
-**Get-ChildItem** pode filtrar os itens com suas **caminho**, **filtro**, **Include**, e **excluir** são parâmetros, mas também as Normalmente, com base apenas no nome. Pode efetuar uma filtragem complexa com base nas outras propriedades de itens utilizando **Where-Object**.
+**Get-ChildItem** pode filtrar itens com seu **caminho**, **Filtrar**, **incluir**e **excluir** parâmetros, mas eles geralmente são baseados apenas no nome. Você pode executar uma filtragem complexa com base em outras propriedades de itens usando **Where-Object**.
 
-O seguinte comando localiza todos os executáveis dentro da pasta de arquivos de programas que foram modificado pela última vez depois de 1 de Outubro de 2005 e que são nem menor que 1 megabyte nem superior a 10 megabytes:
+O comando a seguir localiza todos os executáveis na pasta arquivos de programas que foram modificados pela última vez após 1º de outubro de 2005 e que não são menores que 1 megabyte nem maiores que 10 megabytes:
 
 ```powershell
 Get-ChildItem -Path $env:ProgramFiles -Recurse -Include *.exe | Where-Object -FilterScript {($_.LastWriteTime -gt '2005-10-01') -and ($_.Length -ge 1mb) -and ($_.Length -le 10mb)}
 ```
 
-## <a name="copying-files-and-folders"></a>Copiar ficheiros e pastas
+## <a name="copying-files-and-folders"></a>Copiando arquivos e pastas
 
-A copiar é feita com **Copy-Item**. O seguinte comando faz o backup c:\\Boot. ini para c:\\boot.bak:
+A cópia é feita com **Copy-Item**. O comando a seguir faz backup de\\c: boot. ini em\\c: boot. bak:
 
 ```powershell
 Copy-Item -Path C:\boot.ini -Destination C:\boot.bak
 ```
 
-Se o ficheiro de destino já existir, a tentativa de cópia falhar. Para substituir um destino já existente, utilize o **força** parâmetro:
+Se o arquivo de destino já existir, a tentativa de cópia falhará. Para substituir um destino pré-existente, use o parâmetro **Force** :
 
 ```powershell
 Copy-Item -Path C:\boot.ini -Destination C:\boot.bak -Force
 ```
 
-Este comando funciona, mesmo quando o destino é só de leitura.
+Esse comando funciona mesmo quando o destino é somente leitura.
 
-Copiar a pasta funciona da mesma forma. Este comando copia a pasta c:\\temp\\test1 para a nova pasta c:\\temp\\DeleteMe recursivamente:
+A cópia de pastas funciona da mesma maneira. Este comando copia a pasta c:\\temp\\Test1 para a nova pasta c:\\temp\\DeleteMe recursivamente:
 
 ```powershell
 Copy-Item C:\temp\test1 -Recurse C:\temp\DeleteMe
 ```
 
-Também pode copiar uma seleção de itens. O seguinte comando copia todos os arquivos. txt contidos em qualquer lugar em c:\\dados para c:\\temp\\texto:
+Você também pode copiar uma seleção de itens. O comando a seguir copia todos os arquivos. txt contidos em qualquer\\lugar em c:\\data\\para c: Temp Text:
 
 ```powershell
 Copy-Item -Filter *.txt -Path c:\data -Recurse -Destination C:\temp\text
 ```
 
-Ainda pode usar outras ferramentas para efetuar cópias de sistema de ficheiros. XCOPY, ROBOCOPY e COM objetos, tais como o **FileSystemObject,** funcionam no Windows PowerShell. Por exemplo, pode utilizar o Windows Script Host **Scripting.FileSystem COM** classe para criar cópias de segurança c:\\Boot. ini para c:\\boot.bak:
+Você ainda pode usar outras ferramentas para executar cópias do sistema de arquivos. Os objetos XCOPY, ROBOCOPY e COM, como o **script. FileSystemObject,** funcionam no Windows PowerShell. Por exemplo, você pode usar a classe com script do Windows Script Host **. FileSystem** para fazer backup de c\\: boot. ini em c\\: boot. bak:
 
 ```powershell
 (New-Object -ComObject Scripting.FileSystemObject).CopyFile('C:\boot.ini', 'C:\boot.bak')
 ```
 
-## <a name="creating-files-and-folders"></a>Criar ficheiros e pastas
+## <a name="creating-files-and-folders"></a>Criando arquivos e pastas
 
-Criação de novos itens funciona da mesma em todos os fornecedores de Windows PowerShell. Se um fornecedor de Windows PowerShell tem mais de um tipo de item — por exemplo, o fornecedor do sistema de ficheiros Windows PowerShell distingue entre diretórios e arquivos — tem de especificar o tipo de item.
+A criação de novos itens funciona da mesma em todos os provedores do Windows PowerShell. Se um provedor do Windows PowerShell tiver mais de um tipo de item — por exemplo, o provedor do sistema de arquivos do Windows PowerShell se distingue entre diretórios e arquivos — você precisa especificar o tipo de item.
 
-Este comando cria uma nova pasta c:\\temp\\nova pasta:
+Este comando cria uma nova pasta C:\\temp\\nova pasta:
 
 ```powershell
 New-Item -Path 'C:\temp\New Folder' -ItemType Directory
 ```
 
-Este comando cria um novo ficheiro vazio c:\\temp\\nova pasta\\file.txt
+Este comando cria um novo arquivo vazio C:\\temp\\nova pasta\\File. txt
 
 ```powershell
 New-Item -Path 'C:\temp\New Folder\file.txt' -ItemType File
 ```
 
-## <a name="removing-all-files-and-folders-within-a-folder"></a>Remover todos os ficheiros e pastas numa pasta
+## <a name="removing-all-files-and-folders-within-a-folder"></a>Removendo todos os arquivos e pastas dentro de uma pasta
 
-Pode remover itens contidos usando **Remove-Item**, mas será solicitado a confirmar a remoção, se o item contiver qualquer outra coisa. Por exemplo, se tentar eliminar a pasta c:\\temp\\DeleteMe que contém outros itens, Windows PowerShell pede-lhe confirmação antes de eliminar a pasta:
+Você pode remover os itens contidos usando **Remove-Item**, mas será solicitado que você confirme a remoção se o item contiver qualquer outra coisa. Por exemplo, se você tentar excluir a pasta C:\\temp\\DeleteMe que contém outros itens, o Windows PowerShell solicitará sua confirmação antes de excluir a pasta:
 
 ```
 Remove-Item -Path C:\temp\DeleteMe
@@ -100,25 +100,27 @@ sure you want to continue?
 (default is "Y"):
 ```
 
-Se não pretender que seja pedido para cada item contido, especifique a **Recurse** parâmetro:
+Se você não quiser ser solicitado para cada item contido, especifique o parâmetro Recurse :
 
 ```powershell
 Remove-Item -Path C:\temp\DeleteMe -Recurse
 ```
 
-## <a name="mapping-a-local-folder-as-a-windows-accessible-drive"></a>Mapeamento de uma pasta Local como uma unidade de acessíveis do Windows
+## <a name="mapping-a-local-folder-as-a-drive"></a>Mapeando uma pasta local como uma unidade
 
-Também pode mapear uma pasta local, utilizando o **subst** comando. O comando seguinte cria uma unidade local que p: enraizada no diretório arquivos de programas local:
+Você também pode mapear uma pasta local usando o comando **New-PSDrive** . O comando a seguir cria uma unidade local P: com raiz no diretório arquivos de programas locais, visível somente na sessão do PowerShell:
 
 ```powershell
-subst p: $env:programfiles
+New-PSDrive -Name P -Root $env:ProgramFiles -PSProvider FileSystem
 ```
 
-Assim como com unidades de rede, as unidades mapeadas dentro do Windows PowerShell usando **subst** são imediatamente visíveis ao shell do Windows PowerShell.
+Assim como ocorre com unidades de rede, as unidades mapeadas no Windows PowerShell são imediatamente visíveis para o Shell do Windows PowerShell.
+Para criar uma unidade mapeada visível no explorador de arquivos, o parâmetro **-Persist** é necessário. No entanto, somente caminhos remotos podem ser usados com Persist.
 
-## <a name="reading-a-text-file-into-an-array"></a>Leitura de um arquivo de texto numa matriz
 
-Um dos formatos de armazenamento mais comuns para dados de texto é num arquivo com linhas separadas, tratadas como elementos de dados distintos. O **Get-Content** cmdlet pode ser utilizado para ler um ficheiro completo num único passo, conforme mostrado aqui:
+## <a name="reading-a-text-file-into-an-array"></a>Lendo um arquivo de texto em uma matriz
+
+Um dos formatos de armazenamento mais comuns para dados de texto está em um arquivo com linhas separadas tratadas como elementos de dados distintos. O cmdlet **Get-Content** pode ser usado para ler um arquivo inteiro em uma única etapa, como mostrado aqui:
 
 ```
 PS> Get-Content -Path C:\boot.ini
@@ -132,17 +134,17 @@ multi(0)disk(0)rdisk(0)partition(1)\WINDOWS=" Microsoft Windows XP Professional
 with Data Execution Prevention" /noexecute=optin /fastdetect
 ```
 
-**Get-Content** já trata os dados lidos do arquivo como uma matriz, com um elemento por linha de conteúdo do ficheiro. Pode confirmar isto, verificando a **comprimento** do conteúdo devolvido:
+**Get-Content** já trata os dados lidos do arquivo como uma matriz, com um elemento por linha de conteúdo do arquivo. Você pode confirmar isso verificando o **comprimento** do conteúdo retornado:
 
 ```
 PS> (Get-Content -Path C:\boot.ini).Length
 6
 ```
 
-Este comando é mais útil para obter as listas de informações no Windows PowerShell diretamente. Por exemplo, pode armazenar uma lista de nomes de computadores ou endereços IP num arquivo c:\\temp\\domainMembers.txt, com um nome em cada linha do ficheiro. Pode usar **Get-Content** para obter o conteúdo do ficheiro e coloque-os na variável **$Computers**:
+Esse comando é mais útil para obter listas de informações diretamente no Windows PowerShell. Por exemplo, você pode armazenar uma lista de nomes de computador ou endereços IP em um arquivo C\\:\\Temp domainMembers. txt, com um nome em cada linha do arquivo. Você pode usar o **Get-Content** para recuperar o conteúdo do arquivo e colocá-lo na variável **$Computers**:
 
 ```powershell
 $Computers = Get-Content -Path C:\temp\DomainMembers.txt
 ```
 
-**$Computers** agora é uma matriz contendo um nome de computador em cada elemento.
+**$Computers** agora é uma matriz que contém um nome de computador em cada elemento.

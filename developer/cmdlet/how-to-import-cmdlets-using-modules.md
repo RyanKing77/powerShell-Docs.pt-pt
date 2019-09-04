@@ -1,45 +1,55 @@
 ---
-title: Como importar os Cmdlets que utilizam módulos | Documentos da Microsoft
+title: Como importar cmdlets usando módulos | Microsoft Docs
 ms.custom: ''
-ms.date: 09/13/2016
+ms.date: 08/28/2019
 ms.reviewer: ''
 ms.suite: ''
 ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: a41d9e5f-de6f-47b7-9601-c108609320d0
 caps.latest.revision: 8
-ms.openlocfilehash: c007bb11324e10ffd100797dccd9e6ab0d09a73e
-ms.sourcegitcommit: e7445ba8203da304286c591ff513900ad1c244a4
+ms.openlocfilehash: 2f145795a57c988da0cb4ed294142aa141c53cae
+ms.sourcegitcommit: 02eed65c526ef19cf952c2129f280bb5615bf0c8
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62067982"
+ms.lasthandoff: 09/03/2019
+ms.locfileid: "70215271"
 ---
 # <a name="how-to-import-cmdlets-using-modules"></a>How to Import Cmdlets Using Modules (Como Importar Cmdlets Através de Módulos)
 
-Este tópico descreve como importar os cmdlets para uma sessão do Windows PowerShell através de um módulo de binário.
+Este artigo descreve como importar cmdlets para uma sessão do PowerShell usando um módulo binário.
 
 > [!NOTE]
-> Os membros dos módulos podem incluir cmdlets, provedores, funções, variáveis, aliases e muito mais. Snap-ins pode conter apenas os cmdlets e provedores.
+> Os membros de módulos podem incluir cmdlets, provedores, funções, variáveis, aliases e muito mais. Os snap-ins podem conter apenas cmdlets e provedores.
 
-## <a name="how-to-load-cmdlets-using-a-module"></a>Como carregar cmdlets a utilizar um módulo
+## <a name="how-to-load-cmdlets-using-a-module"></a>Como carregar cmdlets usando um módulo
 
-1. Crie uma pasta de módulo que tem o mesmo nome que o ficheiro de assemblagem em que os cmdlets são implementados. Neste procedimento, a pasta de módulo é criada no `system32` pasta.
+1. Crie uma pasta de módulo que tenha o mesmo nome que o arquivo de assembly no qual os cmdlets são implementados. Neste procedimento, a pasta do módulo é criada na pasta do `system32` Windows.
 
    `%SystemRoot%\system32\WindowsPowerShell\v1.0\Modules\mymodule`
 
-2. Certifique-se de que o `PSModulePath` variável de ambiente inclui o caminho para a nova pasta de módulo. Por predefinição, a pasta de sistema já foi adicionada ao `PSModulePath` variável de ambiente.
+1. Verifique se a variável `PSModulePath` de ambiente inclui o caminho para a nova pasta do módulo. Por padrão, a pasta do sistema já foi adicionada à `PSModulePath` variável de ambiente. Para exibir o `PSModulePath`, digite: `$env:PSModulePath`.
 
-3. Copie o assembly de cmdlet para a pasta de módulo.
+1. Copie o assembly do cmdlet para a pasta do módulo.
 
-4. Execute o seguinte comando para adicionar os cmdlets para a sessão:
+1. Adicione um arquivo de manifesto de`.psd1`módulo () na pasta raiz do módulo. O PowerShell usa o manifesto do módulo para importar o módulo. Para obter mais informações, consulte [como escrever um manifesto de módulo do PowerShell](../module/how-to-write-a-powershell-module-manifest.md).
 
-   `import-module [Module_Name]`
+1. Execute o seguinte comando para adicionar os cmdlets à sessão:
 
-   Este procedimento pode ser utilizado para testar seus cmdlets. Ele adiciona todos os cmdlets no assembly para a sessão. Para obter mais informações sobre os módulos, os diferentes tipos de módulos, as diferentes formas de carregar módulos e como restringir os elementos de um módulo que são exportados, consulte [escrever um módulo do Windows PowerShell](../module/writing-a-windows-powershell-module.md).
+   `Import-Module [Module_Name]`
 
-## <a name="see-also"></a>Veja Também
+   Esse procedimento pode ser usado para testar seus cmdlets. Ele adiciona todos os cmdlets no assembly à sessão. Para obter mais informações sobre módulos, consulte [escrevendo um módulo do Windows PowerShell](../module/writing-a-windows-powershell-module.md).
 
-[Escrever um Cmdlet do Windows PowerShell](./writing-a-windows-powershell-cmdlet.md)
+## <a name="see-also"></a>Consulte também
 
-[Instalar módulos](../module/installing-a-powershell-module.md)
+[Como escrever um manifesto de módulo do PowerShell](../module/how-to-write-a-powershell-module-manifest.md)
+
+[Importando um módulo do PowerShell](../module/importing-a-powershell-module.md)
+
+[Importar-módulo](/powershell/module/Microsoft.PowerShell.Core/Import-Module)
+
+[Instalando módulos](../module/installing-a-powershell-module.md)
+
+[Modificando o caminho de instalação do PSModulePath](../module/modifying-the-psmodulepath-installation-path.md)
+
+[Escrevendo um cmdlet do Windows PowerShell](./writing-a-windows-powershell-cmdlet.md)

@@ -1,5 +1,5 @@
 ---
-title: Definindo os métodos de padrão para objetos | Documentos da Microsoft
+title: Definindo métodos padrão para objetos | Microsoft Docs
 ms.custom: ''
 ms.date: 09/13/2016
 ms.reviewer: ''
@@ -8,25 +8,26 @@ ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 53fe744a-485f-4c21-9623-1cb546372211
 caps.latest.revision: 9
-ms.openlocfilehash: af554cde5e888f2a008028010332caa473151622
-ms.sourcegitcommit: 46bebe692689ebedfe65ff2c828fe666b443198d
+ms.openlocfilehash: 346a194c6b4c81aa61a6331cdb62ae380a17bb1e
+ms.sourcegitcommit: 02eed65c526ef19cf952c2129f280bb5615bf0c8
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67733974"
+ms.lasthandoff: 09/03/2019
+ms.locfileid: "70215287"
 ---
 # <a name="defining-default-methods-for-objects"></a>Defining Default Methods for Objects (Predefinir Métodos para Objetos)
 
-Quando expande objetos do .NET Framework, pode adicionar métodos de código e de script para os objetos. O XML que é utilizado para definir esses métodos é descrito nas seções a seguir.
+Ao estender .NET Framework objetos, você pode adicionar métodos de código e métodos de script aos objetos.
+O XML que é usado para definir esses métodos é descrito nas seções a seguir.
 
 > [!NOTE]
-> Os exemplos nas seções a seguir são a partir do ficheiro de tipos de Types.ps1xml no diretório de instalação do Windows PowerShell (`$pshome`).
+> Os exemplos nas seções a seguir são do `Types.ps1xml` arquivo de tipos no diretório de instalação do Windows PowerShell (`$PSHOME`). Para obter mais informações, consulte [sobre tipos. ps1xml](/powershell/module/microsoft.powershell.core/about/about_types.ps1xml).
 
 ## <a name="code-methods"></a>Métodos de código
 
-Um método de código faz referência a um método estático de um objeto do .NET Framework.
+Um método de código faz referência a um método estático de um objeto .NET Framework.
 
-No exemplo a seguir, o **ConvertLargeIntegerToInt64** método é adicionado ao [System.Xml.Xmlnode? Displayproperty = Fullname](/dotnet/api/System.Xml.XmlNode) tipo. O [PSCodeMethod](/dotnet/api/system.management.automation.pscodemethod) elemento define o método expandido como um método de código. O [nome](/dotnet/api/system.management.automation.psmemberinfo.name?view=pscore-6.2.0#System_Management_Automation_PSMemberInfo_Name) elemento Especifica o nome do método expandido. E, o [CodeReference](/dotnet/api/system.management.automation.pscodemethod.codereference?view=pscore-6.2.0#System_Management_Automation_PSCodeMethod_CodeReference) elemento Especifica o método estático. (Também pode adicionar os [PSCodeMethod](/dotnet/api/system.management.automation.pscodemethod) elemento aos membros do [PSMemberSets](/dotnet/api/system.management.automation.psmemberset?view=pscore-6.2.0) elemento.)
+No exemplo a seguir, o método **ToString** é adicionado ao tipo [System. xml. XMLNode](/dotnet/api/System.Xml.XmlNode) . O elemento [PSCodeMethod](/dotnet/api/system.management.automation.pscodemethod) define o método estendido como um método de código. O elemento [Name](/dotnet/api/system.management.automation.psmemberinfo.name?view=pscore-6.2.0#System_Management_Automation_PSMemberInfo_Name) especifica o nome do método estendido. E, o elemento [CodeReference](/dotnet/api/system.management.automation.pscodemethod.codereference?view=pscore-6.2.0#System_Management_Automation_PSCodeMethod_CodeReference) especifica o método estático. Você também pode adicionar o elemento [PSCodeMethod](/dotnet/api/system.management.automation.pscodemethod) aos membros do elemento [PSMemberSets](/dotnet/api/system.management.automation.psmemberset?view=pscore-6.2.0) .
 
 ```xml
 <Type>
@@ -35,7 +36,7 @@ No exemplo a seguir, o **ConvertLargeIntegerToInt64** método é adicionado ao [
     <CodeMethod>
       <Name>ToString</Name>
       <CodeReference>
-        <TypeName>Microsoft.PowerShell.ToStringCodemethods</TypeName>
+        <TypeName>Microsoft.PowerShell.ToStringCodeMethods</TypeName>
         <MethodName>XmlNode</MethodName>
       </CodeReference>
     </CodeMethod>
@@ -45,7 +46,7 @@ No exemplo a seguir, o **ConvertLargeIntegerToInt64** método é adicionado ao [
 
 ## <a name="script-methods"></a>Métodos de script
 
-Um método de script define um método cujo valor é a saída de um script. No exemplo a seguir, o **ConvertToDateTime** método é adicionado ao [System.Management.Managementobject? Displayproperty = Fullname](/dotnet/api/System.Management.ManagementObject) tipo. O [PSScriptMethod](/dotnet/api/system.management.automation.psscriptmethod?view=pscore-6.2.0) elemento define o método expandido como um método de script. O [nome](/dotnet/api/system.management.automation.psmemberinfo.name?view=pscore-6.2.0#System_Management_Automation_PSMemberInfo_Name) elemento Especifica o nome do método expandido. E, o [Script](/dotnet/api/system.management.automation.psscriptmethod.script?view=pscore-6.2.0#System_Management_Automation_PSScriptMethod_Script) elemento Especifica o script que gera o valor do método. (Também pode adicionar os [PSScriptMethod](/dotnet/api/system.management.automation.psscriptmethod?view=pscore-6.2.0) elemento aos membros do [PSMemberSets](/dotnet/api/system.management.automation.psmemberset?view=pscore-6.2.0) elemento.)
+Um método de script define um método cujo valor é a saída de um script. No exemplo a seguir, o método **ConvertToDateTime** é adicionado ao tipo [System. Management. ManagementObject](/dotnet/api/System.Management.ManagementObject) . O elemento [PSScriptMethod](/dotnet/api/system.management.automation.psscriptmethod?view=pscore-6.2.0) define o método estendido como um método de script. O elemento [Name](/dotnet/api/system.management.automation.psmemberinfo.name?view=pscore-6.2.0#System_Management_Automation_PSMemberInfo_Name) especifica o nome do método estendido. E o elemento [script](/dotnet/api/system.management.automation.psscriptmethod.script?view=pscore-6.2.0#System_Management_Automation_PSScriptMethod_Script) especifica o script que gera o valor do método. Você também pode adicionar o elemento [PSScriptMethod](/dotnet/api/system.management.automation.psscriptmethod?view=pscore-6.2.0) aos membros do elemento [PSMemberSets](/dotnet/api/system.management.automation.psmemberset?view=pscore-6.2.0) .
 
 ```xml
 <Type>
@@ -61,6 +62,6 @@ Um método de script define um método cujo valor é a saída de um script. No e
 </Type>
 ```
 
-## <a name="see-also"></a>Veja Também
+## <a name="see-also"></a>Consulte também
 
-[Escrever um Cmdlet do Windows PowerShell](./writing-a-windows-powershell-cmdlet.md)
+[Escrevendo um cmdlet do Windows PowerShell](./writing-a-windows-powershell-cmdlet.md)
