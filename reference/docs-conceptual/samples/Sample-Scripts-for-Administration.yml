@@ -1,0 +1,99 @@
+### YamlMime:Landing
+title: Scripts de exemplo para administração do sistema
+summary: Uma coleção de exemplos percorre cenários para administrar sistemas com o PowerShell.
+metadata:
+  title: Scripts de exemplo para administração do sistema
+  description: Uma coleção de exemplos percorre cenários para administrar sistemas com o PowerShell.
+  ms.topic: landing-page
+  author: sdwheeler
+  ms.author: sewhee
+  ms.date: 09/05/2019
+  ms.openlocfilehash: 95ed43cf713f79d8b648a0f3af77fe2e0119f9c4
+  ms.sourcegitcommit: d1ba596f9e0d4df9565601a70687a126d535c917
+  ms.translationtype: MT
+  ms.contentlocale: pt-PT
+  ms.lasthandoff: 09/05/2019
+  ms.locfileid: "70392638"
+landingContent:
+- title: Trabalhar com objetos
+  linkLists:
+  - linkListType: how-to-guide
+    links:
+    - text: Exibindo estrutura de objeto
+      url: ./viewing-object-structure--get-member-.md
+    - text: Selecionando partes do objeto
+      url: ./selecting-parts-of-objects--select-object-.md
+    - text: Filtrando objetos no pipeline
+      url: ./removing-objects-from-the-pipeline--where-object-.md
+    - text: Ordenar objetos
+      url: ./sorting-objects.md
+    - text: Repetindo uma tarefa para vários objetos
+      url: ./repeating-a-task-for-multiple-objects--foreach-object-.md
+    - text: Criando objetos .NET e COM
+      url: ./creating-.net-and-com-objects--new-object-.md
+    - text: Utilizar classes e métodos estáticos
+      url: ./using-static-classes-and-methods.md
+    - text: Obter objetos WMI (Get-WmiObject)
+      url: ./getting-wmi-objects--get-wmiobject-.md
+- title: Gerenciando computadores
+  linkLists:
+  - linkListType: how-to-guide
+    links:
+    - text: Alterar o estado do computador
+      url: ./changing-computer-state.md
+    - text: Recolher informações sobre os computadores
+      url: ./collecting-information-about-computers.md
+    - text: Criar consultas do Get-WinEvent com o FilterHashtable
+      url: ./creating-get-winEvent-queries-with-filterhashtable.md
+- title: Gerenciando processos & serviços
+  linkLists:
+  - linkListType: how-to-guide
+    links:
+    - text: Gerir processos com cmdlets de processo
+      url: ./managing-processes-with-process-cmdlets.md
+    - text: Gerir serviços
+      url: ./managing-services.md
+    - text: Gerir unidades do Windows PowerShell
+      url: ./managing-windows-powershell-drives.md
+    - text: Trabalhar com impressoras
+      url: ./working-with-printers.md
+    - text: Executar tarefas de rede
+      url: ./performing-networking-tasks.md
+    - text: Trabalhar com instalações de software
+      url: ./working-with-software-installations.md
+    - text: Decode a PowerShell command from a running process (Descodificar um comando do PowerShell a partir de um processo em execução)
+      url: ./decode-powershell-command-from-a-running-process.md
+- title: Trabalhando com saída
+  linkLists:
+  - linkListType: concept
+    links:
+    - text: Redirecionar dados com cmdlets Out-*
+      url: ./redirecting-data-with-out---cmdlets.md
+    - text: Utilizar comandos de formato para alterar a vista de saída
+      url: ./using-format-commands-to-change-output-view.md
+- title: Gerenciando unidades & arquivos
+  linkLists:
+  - linkListType: how-to-guide
+    links:
+    - text: Gerir a localização atual
+      url: ./managing-current-location.md
+    - text: Trabalhar com ficheiros e pastas
+      url: ./working-with-files-and-folders.md
+    - text: Trabalhar com pastas de ficheiros e chaves do registo
+      url: ./working-with-files-folders-and-registry-keys.md
+    - text: Trabalhar com entradas do registo
+      url: ./working-with-registry-entries.md
+    - text: Trabalhar com chaves do registo
+      url: ./working-with-registry-keys.md
+- title: Criar elementos de IU
+  linkLists:
+  - linkListType: how-to-guide
+    links:
+    - text: Criar uma caixa de entrada personalizada
+      url: ./creating-a-custom-input-box.md
+    - text: Criar um seletor de datas gráfico
+      url: ./creating-a-graphical-date-picker.md
+    - text: Caixas de listagem de seleção múltipla
+      url: ./multiple-selection-list-boxes.md
+    - text: Selecionar itens numa caixa de listagem
+      url: ./selecting-items-from-a-list-box.md

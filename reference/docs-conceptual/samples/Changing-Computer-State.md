@@ -1,69 +1,75 @@
 ---
 ms.date: 06/05/2017
-keywords: PowerShell, o cmdlet
+keywords: PowerShell, cmdlet
 title: Alterar o Estado do Computador
-ms.openlocfilehash: 80692ad7c56aa13e55d4997cfec289ffb3605458
-ms.sourcegitcommit: a6f13c16a535acea279c0ddeca72f1f0d8a8ce4c
+ms.openlocfilehash: de3e31e358548943a015b7bba275c4461202b20f
+ms.sourcegitcommit: d1ba596f9e0d4df9565601a70687a126d535c917
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 06/12/2019
-ms.locfileid: "67030275"
+ms.lasthandoff: 09/05/2019
+ms.locfileid: "70386289"
 ---
 # <a name="changing-computer-state"></a>Alterar o Estado do Computador
 
-Para repor um computador no Windows PowerShell, utilize uma ferramenta de linha de comando padrão ou uma classe WMI. Embora o estiver a utilizar o Windows PowerShell apenas para executar a ferramenta, aprendendo a alterar o estado de energia de um computador no Windows PowerShell ilustra alguns dos detalhes importantes sobre como trabalhar com as ferramentas externas no Windows PowerShell.
+Para redefinir um computador no Windows PowerShell, use uma ferramenta de linha de comando padrão, a classe WMI ou CIM. Embora você esteja usando o Windows PowerShell somente para executar a ferramenta, aprender a alterar o estado de energia de um computador no Windows PowerShell ilustra alguns dos detalhes importantes sobre como trabalhar com ferramentas externas no Windows PowerShell.
 
-## <a name="locking-a-computer"></a>Bloqueio de um computador
+## <a name="locking-a-computer"></a>Bloqueando um computador
 
-A única forma de bloquear um computador diretamente com as ferramentas disponíveis padrão é chamar o **LockWorkstation()** funcionar **user32.dll**:
+A única maneira de bloquear um computador diretamente com as ferramentas padrão disponíveis é chamar a função **LockWorkstation ()** no **user32. dll**:
 
 ```
 rundll32.exe user32.dll,LockWorkStation
 ```
 
-Este comando bloqueia imediatamente a estação de trabalho. Ele usa *rundll32.exe*, que executa o Windows DLLs (e salva suas bibliotecas para uso repetido) para executar user32.dll, uma biblioteca de funções de gerenciamento do Windows.
+Esse comando bloqueia imediatamente a estação de trabalho. Ele usa o *rundll32. exe*, que executa as DLLs do Windows (e salva suas bibliotecas para uso repetido) para executar user32. dll, uma biblioteca de funções de gerenciamento do Windows.
 
-Quando bloquear uma estação de trabalho enquanto estiver ativada a troca rápida de usuário, como no Windows XP, o computador apresenta o ecrã de início de sessão do utilizador, em vez de iniciar a proteção de tela do utilizador atual.
+Quando você bloqueia uma estação de trabalho enquanto a troca rápida de usuário está habilitada, como no Windows XP, o computador exibe a tela de logon do usuário em vez de iniciar a proteção do usuário atual.
 
-Para desligar sessões particulares num Terminal Server, utilize o **tsshutdn.exe** ferramenta da linha de comandos.
+Para desligar sessões específicas em um Terminal Server, use a ferramenta de linha de comando **tsshutdn. exe** .
 
-## <a name="logging-off-the-current-session"></a>Terminar a sessão atual
+## <a name="logging-off-the-current-session"></a>Fazendo logoff da sessão atual
 
-Pode usar várias técnicas diferentes para terminar sessão numa sessão no sistema local. A forma mais simples é usar a ferramenta de linha de comandos de serviços de Terminal/ambiente de trabalho remoto, **logoff.exe** (para obter detalhes, na linha de comandos da Windows PowerShell, escreva **logoff /?** ). Para terminar a sessão atual do Active Directory, escreva **logoff** sem argumentos.
+Você pode usar várias técnicas diferentes para fazer logoff de uma sessão no sistema local. A maneira mais simples é usar a ferramenta de linha de comando Área de Trabalho Remota/serviços de terminal, **logoff. exe** (para obter detalhes, no prompt do Windows PowerShell, digite **logoff/?** ). Para fazer logoff da sessão ativa atual, digite **logoff** sem argumentos.
 
-Também pode utilizar o **shutdown.exe** ferramenta com a opção de terminar sessão:
+Você também pode usar a ferramenta **Shutdown. exe** com sua opção de logoff:
 
 ```
 shutdown.exe -l
 ```
 
-Uma terceira opção é usar o WMI. A classe Win32_OperatingSystem tem um método de Win32Shutdown. Invocando o método com o sinalizador 0 inicia a fim de sessão:
+Outra opção é usar o WMI. A classe Win32_OperatingSystem tem um método Win32Shutdown. Invocar o método com o sinalizador 0 inicia o logoff:
 
 ```powershell
 (Get-WmiObject -Class Win32_OperatingSystem -ComputerName .).Win32Shutdown(0)
 ```
 
-Para obter mais informações e para localizar outros recursos do método Win32Shutdown, consulte "Win32Shutdown método da classe Win32_OperatingSystem" no MSDN.
+Para obter mais informações e para encontrar outros recursos do método Win32Shutdown, consulte "método Win32Shutdown da classe Win32_OperatingSystem" no MSDN.
 
-## <a name="shutting-down-or-restarting-a-computer"></a>Encerrar ou reiniciar um computador
+Por fim, você pode usar o CIM com a mesma classe Win32_OperatingSystem, conforme descrito acima no método WMI.
 
-Encerrar e reiniciar os computadores em geral são os mesmos tipos de tarefas. Ferramentas que encerrar um computador em geral serão reiniciá-lo também — e vice-versa. Existem duas opções simples para reiniciar um computador a partir do Windows PowerShell. Utilize Tsshutdn.exe ou Shutdown.exe com argumentos adequados. Pode obter informações de utilização detalhadas de **tsshutdn.exe /?** ou **shutdown.exe /?** .
+```powershell
+Get-CIMInstance -Classname Win32_OperatingSystem | Invoke-CimMethod -MethodName Shutdown
+```
 
-Também pode efetuar encerrar e reiniciar operações diretamente a partir do Windows PowerShell também.
+## <a name="shutting-down-or-restarting-a-computer"></a>Desligando ou reiniciando um computador
 
-Para encerrar o computador, utilize o comando Stop-Computer
+O desligamento e a reinicialização de computadores geralmente são os mesmos tipos de tarefa. As ferramentas que desligam um computador geralmente também o reiniciam, e vice-versa. Há duas opções simples para reiniciar um computador do Windows PowerShell. Use tsshutdn. exe ou Shutdown. exe com argumentos apropriados. Você pode obter informações de uso detalhadas de **tsshutdn. exe/?** ou **Shutdown. exe/?** .
+
+Também é possível executar operações de desligamento e reinicialização diretamente do Windows PowerShell.
+
+Para desligar o computador, use o comando Stop-Computer
 
 ```powershell
 Stop-Computer
 ```
 
-Para reiniciar o sistema operativo, utilize o comando de reiniciar o computador
+Para reiniciar o sistema operacional, use o comando Restart-Computer
 
 ```powershell
 Restart-Computer
 ```
 
-Para forçar um reinício imediato do computador, utilize o parâmetro - Force.
+Para forçar uma reinicialização imediata do computador, use o parâmetro-Force.
 
 ```powershell
 Restart-Computer -Force
