@@ -1,227 +1,204 @@
 ---
-ms.date: 06/05/2017
-keywords: PowerShell, o cmdlet
-title: Novidades no PowerShell 50 ISE
-ms.openlocfilehash: 52e8926a7320f86f2ab8970a7778faba6a14a714
-ms.sourcegitcommit: a6f13c16a535acea279c0ddeca72f1f0d8a8ce4c
+ms.date: 09/06/2019
+keywords: PowerShell, cmdlet
+title: O que há de novo no PowerShell 5,0 ISE
+ms.openlocfilehash: a719baef0da1600f0a5377e1b72c81b67e37eef2
+ms.sourcegitcommit: a74ae7ed089301992fed201fbe55d827a622afa0
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 06/12/2019
-ms.locfileid: "67030028"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70746230"
 ---
-# <a name="what39s-new-in-the-windows-powershell-ise"></a>O que&#39;novidade do ISE do Windows PowerShell
-Este tópico explica os recursos novos e atualizados que foram introduzidos em versões do Windows PowerShell Integrated Scripting Environment (ISE).
+# <a name="whats-new-in-the-windows-powershell-50-ise"></a>O que há de novo no ISE do Windows PowerShell 5,0
+
+Este tópico explica os recursos novos e atualizados que foram introduzidos em versões do Ambiente de Script Integrado do Windows PowerShell (ISE).
 
 ## <a name="feature-description"></a>Descrição da funcionalidade
-ISE do Windows PowerShell é um aplicativo de host que permite-lhe escrever, executar e testar scripts e módulos num ambiente de gráfico e intuitivo. Funcionalidades vitais, como a sintaxe de codificação por cores, separador de conclusão, depuração visual, conformidade de Unicode e ajuda sensível ao contexto fornecem uma Rica experiência de criação de scripts.
 
-Para uma descrição geral do ISE do Windows PowerShell, consulte [descrição geral do Windows PowerShell Integrated Scripting ambiente](https://technet.microsoft.com/library/3c1892c2-bf84-4cb6-af26-1f453be9e671).
+O ISE do Windows PowerShell é um aplicativo host que permite gravar, executar e testar scripts e módulos em um ambiente gráfico e intuitivo. Os principais recursos, como cores de sintaxe, preenchimento com Tab, depuração Visual, conformidade com Unicode e ajuda contextual fornecem uma experiência de script avançada.
 
-## <a name="new-and-changed-functionality-in-windows-powershell-ise"></a>Funcionalidades novas e alteradas no ISE do Windows PowerShell
-A tabela seguinte lista as funcionalidades novas e alteradas para esta versão do Windows PowerShell ISE do Windows PowerShell.
+Para obter mais informações, consulte [apresentando o ISE do Windows PowerShell](../components/ise/Introducing-the-Windows-PowerShell-ISE.md).
 
-|Funcionalidade|Windows PowerShell ISE 4.0|Windows PowerShell ISE 3.0|Windows PowerShell ISE 2.0|
-|--------------------------|-----------------------------------------------|-----------------------------------------------|-----------------------------------------------|
-|**[IntelliSense](#intellisense)**|X|X||
-|**[Trechos de código](#snippets)**|X|X||
-|**[Ferramentas de suplemento](#add-on-tools)**|X|X||
-|**[Gerenciador de reinicialização e salvamento automático](#restart-manager-and-auto-save)**|X|X||
-|**[Mais recentemente utilizado lista](#most-recently-used-list)**|X|X||
-|**[Painel de consola](#console-pane)**|X|X||
-|**[Opções da linha de comandos](#command-line-switches)**|X|X||
-|**[Novos recursos do editor](#new-editor-features)**|X|X||
-|**[Nova janela de Visualizador da ajuda](#new-help-viewer-window)**|X|X||
-|**[Cmdlet de comando show](#show-command-cmdlet)**|X|X||
+A tabela a seguir lista os recursos novos e alterados para esta versão do ISE do Windows PowerShell no Windows PowerShell.
 
-### <a name="intellisense"></a>IntelliSense
-**Adicionado no ISE 3.0**
+## <a name="intellisense"></a>IntelliSense
 
-IntelliSense é uma funcionalidade de assistência de preenchimento automático que faz parte do ISE do Windows PowerShell. O IntelliSense apresenta clicáveis menus de potencialmente correspondentes cmdlets, parâmetros, valores de parâmetros, ficheiros ou pastas à medida que escreve.
+> Adicionado no ISE 3,0
 
-**Que valor acrescenta esta alteração?**
+O IntelliSense é um recurso de assistência de conclusão automática que faz parte do ISE do Windows PowerShell.
+O IntelliSense exibe menus clicáveis de cmdlets, parâmetros, valores de parâmetro, arquivos ou pastas potencialmente correspondentes conforme você digita.
 
-Com a adição do IntelliSense, é mais fácil detetar os cmdlets e sintaxe ao utilizar o ISE do Windows PowerShell para criar scripts. Também pode utilizar o ISE do Windows PowerShell para obter o Windows PowerShell enquanto cria novos scripts.
+**Que valor essa alteração adiciona?**
 
-**O que funciona de forma diferente?**
+Com a adição do IntelliSense, é mais fácil descobrir cmdlets e sintaxe quando você usa ISE do Windows PowerShell para criar scripts. Você também pode usar ISE do Windows PowerShell para aprender o Windows PowerShell enquanto cria novos scripts.
 
-Quando escreve cmdlets no Windows PowerShell ISE 3.0 ou posterior, apresenta um menu rolável e clicável, permitindo que navegue e selecione os comandos apropriados.
+**O que funciona de maneira diferente?**
 
-### <a name="snippets"></a>Trechos de código
-**Adicionado no ISE 3.0**
+Quando você digita cmdlets no ISE do Windows PowerShell, um menu rolável e clicável é exibido, permitindo que você procure e selecione os comandos apropriados.
 
-*Trechos de código* são curtas seções de código do Windows PowerShell que pode inserir em scripts que criar no ISE do Windows PowerShell. ISE do Windows PowerShell vem com um conjunto predefinido de trechos de código. Pode adicionar trechos de código utilizando o **New-fragmento** cmdlet enquanto trabalha no ISE do Windows PowerShell.
+## <a name="snippets"></a>Trechos
 
-**Que valor acrescenta esta alteração?**
+> Adicionado no ISE 3,0
 
-Ao usar trechos de código, pode rapidamente montar e criar scripts para automatizar o seu ambiente.
+Os *trechos* são seções curtas do código do Windows PowerShell que você pode inserir nos scripts criados no ISE do Windows PowerShell. ISE do Windows PowerShell vem com um conjunto padrão de trechos de código. Você pode adicionar trechos de código usando `New-Snippet` o cmdlet enquanto trabalha no ISE do Windows PowerShell.
 
-**O que funciona de forma diferente?**
+**Que valor essa alteração adiciona?**
 
-Para utilizar em trechos de código no Windows PowerShell 3.0 ou posterior, o **editar** menu, clique em **iniciar trechos de código**, ou prima **Ctrl-J**.
+Usando trechos de código, você pode montar e criar scripts rapidamente para automatizar seu ambiente.
 
-### <a name="add-on-tools"></a>Ferramentas de suplemento
-**Adicionado no PowerShell 3.0**
+**O que funciona de maneira diferente?**
 
-ISE do Windows PowerShell agora oferece suporte a ferramentas de suplemento, que são controles do Windows Presentation Foundation (WPF) que são adicionados ao utilizar o modelo de objeto. Ferramentas de suplemento podem ser apresentadas como um painel vertical ou horizontal na consola do. Várias ferramentas de suplemento num painel são apresentadas como um controle com guias. Também pode adicionar ou remover as ferramentas de suplemento que são produzidas por partes não são da Microsoft. Para obter mais informações sobre como importar ou remover as ferramentas de suplemento, consulte [operações de ISE do Windows PowerShell](https://technet.microsoft.com/library/cc732148.aspx).
+Para usar trechos de código no Windows PowerShell 3,0 ou posterior, no menu **Editar** , clique em **Iniciar trechos de código**ou pressione <kbd>Ctrl</kbd>+<kbd>J</kbd>.
 
-**Que valor acrescenta esta alteração?**
+## <a name="add-on-tools"></a>Ferramentas complementares
 
-Suplementos permitem-lhe expandir e personalizar o ISE do Windows PowerShell com ferramentas que podem aprimorar sua experiência de criação de scripts ou adicionar funcionalidade ao ISE do Windows PowerShell.
+> Adicionado no PowerShell 3,0
 
-**O que funciona de forma diferente?**
+O ISE do Windows PowerShell agora dá suporte a ferramentas de complemento usando o modelo de objeto. Esses Complementos são controles Windows Presentation Foundation (WPF) que são exibidos como um painel vertical ou horizontal no console do. Várias ferramentas complementares em um painel são exibidas como um controle com guias. Você também pode adicionar ou remover ferramentas complementares que são produzidas por partes que não são da Microsoft. Para obter mais informações, consulte [a finalidade do modelo de objeto de script de ISE do Windows PowerShell](../components/ise/object-model/Purpose-of-the-Windows-PowerShell-ISE-Scripting-Object-Model.md).
 
-Windows PowerShell ISE 3.0 e versões posterior são fornecidos com o **comandos** suplemento. O **comandos** suplemento permite-lhe procurar os cmdlets e aceder à ajuda sobre a cmdlets lado a lado com o **Script** e **consola** painéis.
+**Que valor essa alteração adiciona?**
 
-Suplementos adicionais podem ser encontrados ao utilizar o **Web site de ferramentas de suplemento aberto** comando o **suplementos** menu.
+Os complementos permitem que você estenda e personalize ISE do Windows PowerShell com ferramentas que adicionam funcionalidade e aprimoram sua experiência de script.
 
-### <a name="restart-manager-and-auto-save"></a>Gerenciador de reinicialização e salvamento automático
-**Adicionado no PowerShell 3.0**
+**O que funciona de maneira diferente?**
 
-ISE do Windows PowerShell agora guarda automaticamente seus scripts abertos a cada dois minutos, num local separado.  Se o ISE do Windows PowerShell deixa de funcionar ou se o sistema operativo for reiniciado, após o reinício do Windows PowerShell ISE, ele recupera scripts que foram abrir na última sessão, mesmo que os scripts não foram guardados.
+ISE do Windows PowerShell 3,0 e posteriores vêm com o complemento de **comandos** . O complemento **comandos** permite que você procure cmdlets e acesse a ajuda dos cmdlets lado a lado com os painéis de **script** e de **console** .
 
-Para alterar o intervalo de salvamento automático, execute o seguinte comando no painel da consola: **$psise. Options.AutoSaveMinuteInterval**.
+Complementos adicionais podem ser encontrados usando o comando **abrir site de ferramentas complementares** no menu **Complementos** .
 
-**Que valor acrescenta esta alteração?**
+## <a name="restart-manager-and-auto-save"></a>Gerenciador de reinicialização e salvamento automático
 
-Agora, pode trabalhar no ISE do Windows PowerShell, sabendo que os seus scripts abertos são guardadas automaticamente em caso de uma reinicialização inesperada.
+> Adicionado no PowerShell 3,0
 
-**O que funciona de forma diferente?**
+ISE do Windows PowerShell agora salva automaticamente os scripts abertos a cada dois minutos, em um local separado. Quando ISE do Windows PowerShell reinicia após uma falha inesperada ou uma reinicialização, ela recupera os scripts que estavam abertos na última sessão, mesmo que os scripts não tenham sido salvos.
 
-Windows PowerShell ISE 2.0 não guardar os scripts automaticamente em caso de um reinício.
+Para alterar o intervalo de salvamento automático, execute o seguinte comando no painel de console `$psise.Options.AutoSaveMinuteInterval`:.
 
-### <a name="most-recently-used-list"></a>Mais recentemente utilizado lista
-**Adicionado no PowerShell 3.0**
+**Que valor essa alteração adiciona?**
 
-ISE do Windows PowerShell tem agora uma lista mais recentemente utilizada para ficheiros. Quando abre um ficheiro no ISE do Windows PowerShell, o arquivo for adicionado à lista mais recentemente utilizada no **ficheiro** menu.
+Agora você pode trabalhar em ISE do Windows PowerShell sabendo que os scripts abertos são salvos automaticamente.
 
-Para alterar o número predefinido de arquivos na lista de mais recentemente utilizado, execute o seguinte comando no painel da consola: **$psise. Options.MruCount**.
+**O que funciona de maneira diferente?**
 
-**Que valor acrescenta esta alteração?**
+ISE do Windows PowerShell 2,0 não salva os scripts automaticamente.
 
-Agora, pode utilizar a lista mais recentemente utilizada para aceder facilmente aos seus arquivos usados com frequência.
+## <a name="most-recently-used-list"></a>Lista de usados mais recentemente
 
-**O que funciona de forma diferente?**
+> Adicionado no PowerShell 3,0
 
-Windows PowerShell ISE 2.0 não tem uma lista mais recentemente utilizada.
+ISE do Windows PowerShell agora tem uma lista de arquivos usada mais recentemente. Quando você abre um arquivo em ISE do Windows PowerShell, o arquivo é adicionado à lista de usados mais recentemente no menu **arquivo** .
 
-### <a name="console-pane"></a>Painel de consola
-**Adicionado no PowerShell 3.0**
+Para alterar o número padrão de arquivos na lista de usados mais recentemente, execute o seguinte comando no painel de console: `$psise.Options.MruCount`.
 
-O comando separado e os painéis de saída que estavam disponíveis na primeira versão do Windows PowerShell ISE foram combinados num único painel de consola. O painel de consola é semelhante em função e a aparência de uma consola típica do Windows PowerShell, mas inclui os seguintes aprimoramentos (a maioria é descrita neste tópico).
+**Que valor essa alteração adiciona?**
 
-- Cores da sintaxe para texto de entrada (não texto de saída), incluindo sintaxe XML
+Agora você pode usar a lista de usados mais recentemente para acessar facilmente os arquivos usados com frequência.
 
+**O que funciona de maneira diferente?**
+
+ISE do Windows PowerShell 2,0 não tem uma lista de usados mais recentemente.
+
+## <a name="console-pane"></a>Painel de console
+
+> Adicionado no PowerShell 3,0
+
+Os painéis de comando e saída separados que estavam disponíveis na primeira versão do ISE do Windows PowerShell foram combinados em um único painel de console. O painel de console é semelhante em função e aparência a um console típico do Windows PowerShell, mas inclui os seguintes aprimoramentos:
+
+- Cores de sintaxe para texto de entrada (não texto de saída), incluindo sintaxe XML
 - IntelliSense
-
-- Correspondência de chave
-
-- Indicação do erro
-
+- Correspondência de chaves
+- Indicação de erro
 - Suporte completo a Unicode
-
-- **F1** ajuda sensível ao contexto
-
-- **CTRL + F1** sensível ao contexto de comando de Show
-
+- Ajuda sensível ao contexto <kbd>F1</kbd>
+- <kbd></kbd>Ctrl+<kbd>F1</kbd> show-Command sensível ao contexto
 - Script complexo e suporte da direita para a esquerda
-
-- Suporte de tipo de letra
-
+- Suporte a fontes
 - Zoom
+- Modos de seleção de linha e seleção de bloco
+- Preservação do conteúdo digitado na linha de comando quando você pressiona a <kbd>seta</kbd> para exibir o histórico no console
 
-- Modos de seleção de linha e selecione de bloco
+**Que valor essa alteração adiciona?**
 
-- Preservação de conteúdo digitado na linha de comandos quando pressiona o **cópia** seta para ver o histórico na consola do
+A adição dessas alterações do painel de console fornece uma experiência de script que é mais consistente com a interface do console.
 
-**Que valor acrescenta esta alteração?**
+**O que funciona de maneira diferente?**
 
-A adição dessas alterações de painel de consola fornece uma experiência de criação de scripts mais consistente com a interface de console.
+ISE do Windows PowerShell 2,0 tem painéis de comando e de saída separados.
 
-**O que funciona de forma diferente?**
+## <a name="command-line-switches"></a>Opções de linha de comando
 
-Windows PowerShell ISE 2.0 tem separado de comando e painéis de saída.
+> Adicionado no PowerShell 3,0
 
-### <a name="command-line-switches"></a>Opções da linha de comandos
-**Adicionado no PowerShell 3.0**
+Se você iniciar ISE do Windows PowerShell na linha de comando (digitando **Powershell_ise. exe**), poderá adicionar as novas opções de linha de comando a seguir.
 
-Se iniciar o ISE do Windows PowerShell a partir da linha de comandos (digitando **powershell_ise.exe**), pode adicionar os seguintes parâmetros de linha de comando novo.
+- `-NoProfile`: Inicia ISE do Windows PowerShell sem execução`$profile`
+- `-Help`: Exibe uma janela de ajuda
+- `-mta`: Inicia ISE do Windows PowerShell no modo Apartment multithread. O modo de operação padrão para ISE do Windows PowerShell é o modo Apartment de thread único ou `-sta`.
 
-- *-NoProfile*: Inicia o ISE do Windows PowerShell sem execução **$profile**
+**Que valor essa alteração adiciona?**
 
-- *-Help*: Exibe uma janela de ajuda
+A adição dessas opções de linha de comando permite controlar o ambiente no qual o ISE do Windows PowerShell é executado.
 
-- *-mta*: Inicia o ISE do Windows PowerShell no modo multithreaded apartment. O modo de operação do padrão do Windows PowerShell ISE é o modo de apartamento de thread único, ou *- sta*.
+**O que funciona de maneira diferente?**
 
-**Que valor acrescenta esta alteração?**
+ISE do Windows PowerShell 2,0 não reconhece essas opções de linha de comando.
 
-A adição desses interruptores de linha de comando permite-lhe controlar o ambiente no qual o ISE do Windows PowerShell é executado.
+## <a name="new-editor-features"></a>Novos recursos do editor
 
-**O que funciona de forma diferente?**
+> Adicionado no PowerShell 3,0
 
-Windows PowerShell ISE 2.0 não reconhece esses comutadores da linha de comandos.
+Outros recursos de edição de ISE do Windows PowerShell incluem:
 
-### <a name="new-editor-features"></a>Novos recursos do editor
-**Adicionado no PowerShell 3.0**
+- **Cor de sintaxe XML** -ISE do Windows PowerShell agora tem a sintaxe XML colorida da mesma maneira que a sintaxe de cores de ti do Windows PowerShell.
+- **Correspondência de chaves** -ISE do Windows PowerShell inclui correspondência de chaves e realce e pode ser usada das seguintes maneiras: (por exemplo, usar o comando **ir para correspondência** ou <kbd>Ctrl</kbd>+<kbd>]</kbd> localiza a chave de fechamento, se você ter uma chave de abertura selecionada).
+- **Modo de exibição da estrutura do código** O painel de script oferece suporte a estrutura de tópicos, que permite recolher ou expandir seções de código clicando em mais ou menos sinais na margem esquerda. Você pode usar chaves ou as marcas `#region` e `#endregion` para marcar o início ou o fim de uma seção recolhível. Para expandir ou recolher todas as regiões, pressione <kbd>Ctrl</kbd>+<kbd>M</kbd>.
+- **Edição de texto arrastar e soltar** -ISE do Windows PowerShell agora dá suporte à edição de texto de arrastar e soltar. Você pode selecionar qualquer bloco de texto e arrastar esse texto para outro local no editor ou no console do para mover o texto. Se você mantiver pressionada a tecla <kbd>Ctrl</kbd> enquanto arrasta o texto selecionado, ao liberar o botão do mouse, o texto será copiado para o novo local. Nesta versão do ISE do Windows PowerShell, quando você arrasta e solta arquivos em ISE do Windows PowerShell, ISE do Windows PowerShell abre o arquivo.
+- **Exibição de erro de análise** -os erros de análise são indicados com sublinhados vermelhos. Quando você passa o mouse sobre um erro indicado, o texto da dica de ferramenta exibe o problema encontrado no código.
+- **Zoom** -o percentual de zoom do conteúdo do console pode ser definido usando o controle deslizante de zoom (no canto inferior direito da janela ISE do Windows PowerShell) ou inserindo o comando `$psise.options.Zoom` no painel de console.
+- **Cópias de Rich Text e** cópia de colagem na área de transferência em ISE do Windows PowerShell preserva a fonte, o tamanho e as informações de cor da seleção original.
+- **Seleção de bloco** – você pode selecionar um bloco de texto mantendo a tecla <kbd>ALT</kbd> pressionada enquanto seleciona o texto no painel de script com o mouse ou pressionando <kbd>ALT</kbd>+<kbd>Shift</kbd>+<kbd>seta</kbd>.
 
-Outras funcionalidades de edição do Windows PowerShell ISE incluem:
-
-- **Cores de sintaxe XML**ISE do Windows PowerShell agora as cores sintaxe XML da mesma forma como ele cores a sintaxe do Windows PowerShell.
-
-- **Correspondência de chaves** ISE do Windows PowerShell inclui a correspondência de chaves e realce e pode ser usado das seguintes formas: (por exemplo, utilizando o **Ir para correspondência** comando ou **Ctrl +]** localiza o a fechar a chave, se tiver uma chave de abertura selecionado).
-
-- **Descrever vista** o painel de Script suporta descrevendo, que permite que o recolhimento ou expandir seções do código ao clicar em mais ou menos, que inicia sessão na margem esquerda. Pode utilizar chaves ou o **#region** e **#endregion** etiquetas para marcar o início ou fim de uma seção recolhível. Para expandir ou fechar todas as regiões, prima **Ctrl + M**.
-
-- **Arraste e largue a edição de texto**ISE do Windows PowerShell agora suporta arrasta e largar a edição de texto. Pode selecionar qualquer bloco de texto e arrastar esse texto para outra localização num editor ou a consola para mover o texto. Se mantenha premida a tecla Ctrl enquanto arrasta o texto selecionado, quando soltar o botão do mouse o texto é copiado para a nova localização. Esta versão do Windows PowerShell ISE, bem como a versão anterior do Windows PowerShell ISE, quando arrastar e soltar arquivos no ISE do Windows PowerShell, o Windows PowerShell ISE abre o arquivo.
-
-- **Analisar a exibição de erro** erros de análise são indicados com sublinhados vermelhos. Quando coloque o cursor sobre um erro indicado, o texto de descrição apresenta o problema que foi encontrado no código.
-
-- **Zoom** pode ser definida a percentagem de zoom do conteúdo da consola, utilizando o controlo de deslize de zoom (no canto inferior direito da janela do Windows PowerShell ISE), ou introduza o comando **$psise.options.Zoom** no painel da consola.
-
-- **Rich text copiar e colar** copiar para a área de transferência no ISE do Windows PowerShell preserva o tipo de letra, tamanho e as informações de cor da seleção original.
-
-- **Bloquear a seleção** pode selecionar um bloco de texto ao premir a tecla ALT ao selecionar o texto no painel de Script com o rato ou ao premir **Alt + Shift + seta**.
-
-**Que valor acrescenta esta alteração?**
+**Que valor essa alteração adiciona?**
 
 Os recursos de edição adicionais fornecem um ambiente de edição mais consistente e eficiente.
 
-**O que funciona de forma diferente?**
+**O que funciona de maneira diferente?**
 
-Estas melhorias de edição não estavam presentes no Windows PowerShell ISE 2.0.
+Esses aprimoramentos de edição não estavam presentes no ISE do Windows PowerShell 2,0.
 
-### <a name="new-help-viewer-window"></a>Nova janela de Visualizador da ajuda
-**Adicionado no PowerShell 3.0**
+## <a name="new-help-viewer-window"></a>Janela do novo Visualizador da ajuda
 
-Se pressionar **F1** quando o cursor está num cmdlet ou, se tiver parte de um cmdlet realçado, o novo Visualizador da ajuda abre ajuda sensível ao contexto sobre o cmdlet realçado. Para apresentar a ajuda do Windows PowerShell sobre, escreva **operadores** no painel de consola e, em seguida, prima **F1**.
+> Adicionado no PowerShell 3,0
 
-Antes de utilizar esta funcionalidade, baixe a versão mais atual dos tópicos de ajuda do Windows PowerShell a partir do site da Microsoft. O método mais simples para baixar os tópicos de ajuda é executar o **Update-Help** cmdlet no painel da consola ao executar o ISE do Windows PowerShell como administrador.
+Se você pressionar <kbd>F1</kbd> quando o cursor estiver em um cmdlet ou se parte de um cmdlet estiver realçada, o novo Visualizador da ajuda abrirá a ajuda contextual sobre o cmdlet realçado. Para exibir **a ajuda do** Windows PowerShell, `operators` digite no painel de console e pressione <kbd>F1</kbd>.
 
-É possível alterar a onde o **F1** chave procura de ajuda. Na **ferramentas**/**opções** menu, no **definições gerais** separador, em **outras definições**, pode definir ou limpar o caixa de verificação **utilizar o conteúdo da ajuda local em vez de conteúdo online**. Se a opção estiver marcada, o cliente procura o ajuda na ajuda do transferido encontradas na pasta de módulos do cmdlet.  Se a caixa de verificação está desmarcada, em seguida, o cliente procura na Biblioteca TechNet para a ajuda do cmdlet.
+Antes de usar esse recurso, baixe a versão mais atual dos tópicos da ajuda do Windows PowerShell no site da Microsoft. O método mais simples para baixar os tópicos da ajuda é executar o `Update-Help` cmdlet no painel de console ao executar ISE do Windows PowerShell como administrador.
 
-**Que valor acrescenta esta alteração?**
+Você pode alterar o local em que a tecla <kbd>F1</kbd> procura ajuda. No menu**Opções** de **ferramentas**/, na guia **configurações gerais** , em **outras configurações**, você pode definir ou desmarcar a caixa de seleção **usar conteúdo de ajuda local em vez de conteúdo online**. Quando marcada, o cliente procura a ajuda do cmdlet na ajuda baixada encontrada na pasta modules. Se a caixa de seleção for desmarcada, o cliente procurará ajuda online.
 
-Ajuda sensível ao contexto sem sair do seus atual cmdlet ou script fornece uma experiência de aprendizagem contínua.
+**Que valor essa alteração adiciona?**
 
-**O que funciona de forma diferente?**
+A ajuda contextual sem deixar seu cmdlet ou script atual fornece uma experiência de aprendizado integrada.
 
-Pressionar F1 nas versões anteriores do Windows PowerShell ISE abrir o arquivo de ajuda no computador local. No Windows PowerShell ISE 3.0 e versões posteriores, é aberta uma janela que contém a ajuda do cmdlet que é pesquisável e configuráveis. Esta experiência de ajuda é nova para o Windows PowerShell ISE 3.0 e ajuda Atualizável é novo para o Windows PowerShell 3.0.
+**O que funciona de maneira diferente?**
 
-### <a name="show-command-cmdlet"></a>Cmdlet de comando show
-**Adicionado no PowerShell 3.0**
+Pressionar <kbd>F1</kbd> em versões anteriores do ISE do Windows PowerShell abriu o arquivo de ajuda no computador local. No ISE do Windows PowerShell 3,0 e posterior, é aberta uma janela que contém a ajuda para o cmdlet que pode ser pesquisado e configurável. Esta experiência de ajuda é nova para o ISE do Windows PowerShell 3,0, e a ajuda atualizável é nova para o Windows PowerShell 3,0.
 
-O **comando Show** cmdlet permite-lhe compor ou executar um cmdlet ou uma função ao preencher um formulário de gráfico. O formulário permite aos utilizadores trabalhar com o Windows PowerShell num ambiente gráfico. **Comando show** também possibilita a autores de script para criar uma rápida GUI de acesso baseado em Windows PowerShell.
+## <a name="show-command-cmdlet"></a>Cmdlet show-Command
 
-**Que valor acrescenta esta alteração?**
+> Adicionado no PowerShell 3,0
 
-Usando **comando Show** nos seus scripts do Windows PowerShell, pode fornecer aos usuários com o ambiente gráfico com as quais está familiarizados. **Comando show** também pode ajudar os utilizadores introdutórios aprender o Windows PowerShell.
+O `Show-Command` cmdlet permite compor ou executar um cmdlet ou uma função preenchendo um formulário gráfico. O formulário permite que os usuários trabalhem com o Windows PowerShell em um ambiente gráfico.
+`Show-Command`também permite que os scripts avançados criem uma GUI rápida baseada no Windows PowerShell.
 
-**O que funciona de forma diferente?**
+**Que valor essa alteração adiciona?**
 
-Comando show é o novo Windows PowerShell ISE 3.0.
+Usando `Show-Command` o em seus scripts do Windows PowerShell, você pode fornecer aos usuários o ambiente gráfico com o qual eles estão familiarizados. `Show-Command`também pode ajudar os usuários introdutórios a aprender o Windows PowerShell.
+
+**O que funciona de maneira diferente?**
+
+`Show-Command`é novo ISE do Windows PowerShell 3,0.
 
 ## <a name="see-also"></a>Consulte também
-Para obter mais informações sobre como utilizar o ISE do Windows PowerShell no Windows PowerShell, consulte os links a seguir.
 
-- [Explorar o ambiente de script integrado do Windows PowerShell](../getting-started/fundamental/exploring-the-windows-powershell-ise.md)
-- [ISE no TechNet Wiki](https://social.technet.microsoft.com/wiki/search/searchresults.aspx?q=ISE)
-- [Centro de scripts](https://technet.microsoft.com/scriptcenter/default)
+Para obter mais informações sobre como usar ISE do Windows PowerShell, consulte [explorando o ambiente de script integrado do Windows PowerShell](../getting-started/fundamental/exploring-the-windows-powershell-ise.md).

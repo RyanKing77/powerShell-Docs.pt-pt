@@ -1,5 +1,5 @@
 ---
-title: Como adicionar parâmetros dinâmicos para um tópico de ajuda do Provedor | Documentos da Microsoft
+title: Como adicionar parâmetros dinâmicos a um tópico de ajuda do provedor | Microsoft Docs
 ms.custom: ''
 ms.date: 09/13/2016
 ms.reviewer: ''
@@ -9,27 +9,27 @@ ms.topic: article
 ms.assetid: e20e5ad6-a6e6-4a63-9d42-1ac54214f748
 caps.latest.revision: 5
 ms.openlocfilehash: cc4877242a16a9caa99564aeaae985f85e38791e
-ms.sourcegitcommit: b6871f21bd666f9cd71dd336bb3f844cf472b56c
+ms.sourcegitcommit: ffcc1c55f5b3adc063353cb75f2a2183acc2234a
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 02/03/2019
-ms.locfileid: "56849526"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70737590"
 ---
 # <a name="how-to-add-dynamic-parameters-to-a-provider-help-topic"></a>How to Add Dynamic Parameters to a Provider Help Topic (Como Adicionar Parâmetros Dinâmicos ao Tópico de Ajuda de um Fornecedor)
 
-Esta secção explica como preencher os **parâmetros DINÂMICOS** seção um tópico de ajuda do fornecedor.
+Esta seção explica como preencher a seção de **parâmetros dinâmicos** de um tópico de ajuda do provedor.
 
-*Os parâmetros dinâmicos* são parâmetros de um cmdlet ou ser especificada de função que estão disponíveis apenas em condições.
+*Parâmetros dinâmicos* são parâmetros de um cmdlet ou função que estão disponíveis somente em condições especificadas.
 
-Os parâmetros dinâmicos que estão documentados num tópico de ajuda do provedor são os parâmetros dinâmicos que o fornecedor adiciona a função ou o cmdlet quando a função ou o cmdlet é utilizada na unidade de fornecedor.
+Os parâmetros dinâmicos documentados em um tópico de ajuda do provedor são os parâmetros dinâmicos que o provedor adiciona ao cmdlet ou função quando o cmdlet ou a função é usada na unidade do provedor.
 
-Os parâmetros dinâmicos também podem ser documentados na ajuda do cmdlet personalizado para um fornecedor. Ao escrever a ajuda do provedor e ajuda de cmdlets personalizados para um fornecedor, incluem a documentação de parâmetro dinâmico em ambos os documentos. Para obter mais informações sobre a ajuda do cmdlet personalizado, consulte [escrita Windows PowerShell personalizado ajuda do Cmdlet para fornecedores](./writing-custom-cmdlet-help-for-windows-powershell-providers.md).
+Os parâmetros dinâmicos também podem ser documentados na ajuda do cmdlet personalizado para um provedor. Ao escrever a ajuda do provedor e a ajuda do cmdlet personalizado para um provedor, inclua a documentação do parâmetro dinâmico em ambos os documentos. Para obter mais informações sobre a ajuda de cmdlets personalizados, consulte [escrevendo a ajuda do cmdlet personalizado do Windows PowerShell para provedores](./writing-custom-cmdlet-help-for-windows-powershell-providers.md).
 
-Se um fornecedor não implementa qualquer parâmetros dinâmicos, o tópico de ajuda do provedor contém vazio `DynamicParameters` elemento.
+Se um provedor não implementar nenhum parâmetro dinâmico, o tópico da ajuda do provedor conterá `DynamicParameters` um elemento vazio.
 
 ### <a name="to-add-dynamic-parameters"></a>Para adicionar parâmetros dinâmicos
 
-1. Na *AssemblyName*help.xml. dll do ficheiro, dentro da `providerHelp` elemento, adicionar um `DynamicParameters` elemento. O `DynamicParameters` elemento deve aparecer após o `Tasks` elemento e antes do `RelatedLinks` elemento.
+1. No arquivo *AssemblyName*. dll-help. xml, dentro do `providerHelp` elemento, adicione um `DynamicParameters` elemento. O `DynamicParameters` elemento deve aparecer após o `Tasks` elemento e antes do `RelatedLinks` elemento.
 
    Por exemplo:
 
@@ -44,9 +44,9 @@ Se um fornecedor não implementa qualquer parâmetros dinâmicos, o tópico de a
     </providerHelp>
     ```
 
-   Se o fornecedor não implementa qualquer parâmetros dinâmicos, o `DynamicParameters` elemento pode estar vazio.
+   Se o provedor não implementar nenhum parâmetro dinâmico, o `DynamicParameters` elemento poderá ficar vazio.
 
-2. Dentro de `DynamicParameters` elemento, para cada parâmetro dinâmico, adicionar um `DynamicParameter` elemento.
+2. Dentro do `DynamicParameters` elemento, para cada parâmetro dinâmico, adicione um `DynamicParameter` elemento.
 
    Por exemplo:
 
@@ -57,14 +57,14 @@ Se um fornecedor não implementa qualquer parâmetros dinâmicos, o tópico de a
     </DynamicParameters>
     ```
 
-3. Em cada `DynamicParameter` elemento, adicione um `Name` e `CmdletSupported` elemento.
+3. Em cada `DynamicParameter` elemento, adicione um `Name` elemento `CmdletSupported` e.
 
    |Nome do Elemento|Descrição|
    |------------------|-----------------|
    |Nome|Especifica o nome do parâmetro.|
-   |CmdletSupported|Especifica os cmdlets em que o parâmetro é válido. Escreva uma lista separada por vírgulas de nomes de cmdlet.|
+   |CmdletSupported|Especifica os cmdlets nos quais o parâmetro é válido. Digite uma lista separada por vírgulas de nomes de cmdlet.|
 
-   Por exemplo, os seguintes documentos XML a `Encoding` parâmetro dinâmico, que o fornecedor do sistema de ficheiros do Windows PowerShell adiciona para o `Add-Content`, `Get-Content`, `Set-Content` cmdlets.
+   Por exemplo, o XML a seguir documenta `Encoding` o parâmetro dinâmico que o provedor do sistema de arquivos do `Add-Content`Windows PowerShell `Set-Content` adiciona aos cmdlets, `Get-Content`,.
 
     ```xml
     <DynamicParameters/>
@@ -75,9 +75,9 @@ Se um fornecedor não implementa qualquer parâmetros dinâmicos, o tópico de a
 
     ```
 
-4. Em cada `DynamicParameter` elemento, adicione um `Type` elemento. O `Type` elemento é um contentor para o `Name` elemento que contém o tipo de .NET do valor do parâmetro dinâmico.
+4. Em cada `DynamicParameter` elemento, adicione um `Type` elemento. O `Type` elemento é um contêiner para o `Name` elemento que contém o tipo .net do valor do parâmetro dinâmico.
 
-   Por exemplo, o XML a seguir mostra que o tipo de .NET do `Encoding` parâmetro dinâmico é o [Microsoft.PowerShell.Commands.FileSystemCmdletProviderEncoding](/dotnet/api/microsoft.powershell.commands.filesystemcmdletproviderencoding) enumeração.
+   Por exemplo, o XML a seguir mostra que o tipo .net do `Encoding` parâmetro dinâmico é a enumeração [Microsoft. PowerShell. Commands. FileSystemCmdletProviderEncoding](/dotnet/api/microsoft.powershell.commands.filesystemcmdletproviderencoding) .
 
     ```xml
     <DynamicParameters/>
@@ -91,7 +91,7 @@ Se um fornecedor não implementa qualquer parâmetros dinâmicos, o tópico de a
     </DynamicParameters>
     ```
 
-5. Adicionar o `Description` elemento, que contém uma breve descrição do parâmetro dinâmico. Ao redigir a descrição, utilize as diretrizes prescritas para todos os parâmetros de cmdlet em [como adicionar informações de parâmetro](./how-to-add-parameter-information.md).
+5. Adicione o `Description` elemento, que contém uma breve descrição do parâmetro dinâmico. Ao compor a descrição, use as diretrizes indicadas para todos os parâmetros de cmdlet em [como adicionar informações de parâmetro](./how-to-add-parameter-information.md).
 
    Por exemplo, o XML a seguir inclui a descrição do `Encoding` parâmetro dinâmico.
 
@@ -108,18 +108,18 @@ Se um fornecedor não implementa qualquer parâmetros dinâmicos, o tópico de a
     </DynamicParameters>
     ```
 
-6. Adicionar o `PossibleValues` elemento e os respetivos elementos subordinados. Juntos, esses elementos descrevem os valores do parâmetro dinâmico. Este elemento foi concebido para valores enumerados. Se o parâmetro dinâmico não tem um valor, tal como é o caso de um parâmetro ou os valores não não possível enumerar, adicionar vazio `PossibleValues` elemento.
+6. Adicione o `PossibleValues` elemento e seus elementos filho. Juntos, esses elementos descrevem os valores do parâmetro dinâmico. Esse elemento é projetado para valores enumerados. Se o parâmetro dinâmico não receber um valor, como é o caso com um parâmetro de opção, ou os valores não podem ser enumerados, adicione um elemento `PossibleValues` vazio.
 
-   A tabela seguinte lista e descreve o `PossibleValues` elemento e os respetivos elementos subordinados.
+   A tabela a seguir lista e descreve `PossibleValues` o elemento e seus elementos filho.
 
    |Nome do Elemento|Descrição|
    |------------------|-----------------|
-   |PossibleValues|Este elemento é um contentor. Elementos filho são descritos abaixo. Adicionar um `PossibleValues` elemento cada tópico de ajuda do fornecedor. O elemento pode estar vazio.|
-   |PossibleValue|Este elemento é um contentor. Elementos filho são descritos abaixo. Adicionar um `PossibleValue` elemento para cada valor do parâmetro dinâmico.|
+   |PossibleValues|Este elemento é um contêiner. Seus elementos filho são descritos abaixo. Adicione um `PossibleValues` elemento a cada tópico da ajuda do provedor. O elemento pode estar vazio.|
+   |Possível|Este elemento é um contêiner. Seus elementos filho são descritos abaixo. Adicione um `PossibleValue` elemento para cada valor do parâmetro dinâmico.|
    |Valor|Especifica o nome do valor.|
-   |Descrição|Esse elemento contém um `Para` elemento. O texto a `Para` elemento descreve o valor com o nome no `Value` elemento.|
+   |Descrição|Este elemento contém um `Para` elemento. O texto no `Para` elemento descreve o valor que é nomeado `Value` no elemento.|
 
-   Por exemplo, o XML a seguir mostra um `PossibleValue` elemento do `Encoding` parâmetro dinâmico.
+   Por exemplo, o XML a seguir mostra `PossibleValue` um elemento `Encoding` do parâmetro dinâmico.
 
     ```xml
     <DynamicParameters/>
@@ -140,7 +140,7 @@ Se um fornecedor não implementa qualquer parâmetros dinâmicos, o tópico de a
 
 ## <a name="example"></a>Exemplo
 
-A exemplo a seguir mostra a `DynamicParameters` elemento do `Encoding` parâmetro dinâmico.
+O exemplo a seguir mostra `DynamicParameters` o elemento `Encoding` do parâmetro dinâmico.
 
 ```xml
 <DynamicParameters/>
