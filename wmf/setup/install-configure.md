@@ -4,30 +4,30 @@ ms.topic: conceptual
 keywords: wmf,powershell,setup
 contributor: keithb
 title: Instalar e configurar o WMF 5.1
-ms.openlocfilehash: cb223844c2a214846e7206bcb476fac9154fda4b
-ms.sourcegitcommit: 01b81317029b28dd9b61d167045fd31f1ec7bc06
+ms.openlocfilehash: 241f52be011e1afc87d25c9a934db0c1e0361b76
+ms.sourcegitcommit: 00083f07b13c73b86936e7d7307397df27c63c04
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 05/17/2019
-ms.locfileid: "65856148"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70848127"
 ---
-# <a name="install-and-configure-wmf-51"></a>Instalar e configurar o WMF 5.1
+# <a name="install-and-configure-wmf-51"></a>Instalar e configurar o WMF 5,1
 
 > [!IMPORTANT]
-> WMF 5.0 é substituído pelo WMF 5.1. Os utilizadores com o WMF 5.0 tem de atualizar para o WMF 5.1 para receber suporte.
-> **WMF 5.1 requer o .NET Framework 4.5.2** (ou superior). Instalação será concluída com êxito, mas os principais recursos irão falhar se a .NET 4.5.2 (ou superior) não está instalado.
+> O WMF 5,0 é substituído pelo WMF 5,1. Os usuários com o WMF 5,0 devem atualizar para o WMF 5,1 para receber suporte.
+> **O WMF 5,1 requer o .NET Framework 4.5.2** (ou acima). A instalação terá êxito, mas os principais recursos falharão se o .NET 4.5.2 (ou superior) não estiver instalado.
 
-## <a name="download-and-install-the-wmf-51-package"></a>Transfira e instale o pacote do WMF 5.1
+## <a name="download-and-install-the-wmf-51-package"></a>Baixar e instalar o pacote WMF 5,1
 
-Transferir o pacote de WMF 5.1 para o sistema operativo e a arquitetura que deseja instalá-lo em:
+Baixe o pacote do WMF 5,1 para o sistema operacional e a arquitetura em que você deseja instalá-lo:
 
-| Sistema Operativo       | Pré-requisitos           | Ligações de pacote                          |
+| Sistema Operativo       | Pré-requisitos           | Links de pacote                          |
 |------------------------|-------------------------|----------------------------------------|
 | Windows Server 2012 R2 |                         | [Win8.1AndW2K12R2-KB3191564-x64.msu][] |
 | Windows Server 2012    |                         | [W2K12-KB3191565-x64.msu][]            |
 | Windows Server 2008 R2 | [.NET Framework 4.5.2][]| [Win7AndW2K8R2-KB3191566-x64.ZIP][]    |
-| Windows 8.1            |                         | **x64:** [Win8.1AndW2K12R2-KB3191564-x64.msu][]</br>**x86:** [Win8.1-KB3191564-x86.msu][] |
-| Windows 7 SP1          | [.NET Framework 4.5.2][]| **x64:** [Win7AndW2K8R2-KB3191566-x64.ZIP][]</br>**x86:** [Win7-KB3191566-x86.ZIP][] |
+| Windows 8.1            |                         | **x86** [Win8.1AndW2K12R2-KB3191564-x64.msu][]</br>**x86** [Win8.1-KB3191564-x86.msu][] |
+| Windows 7 SP1          | [.NET Framework 4.5.2][]| **x86** [Win7AndW2K8R2-KB3191566-x64.ZIP][]</br>**x86** [Win7-KB3191566-x86.ZIP][] |
 
 [.NET Framework 4.5.2]: https://www.microsoft.com/download/details.aspx?id=42642
 [W2K12-KB3191565-x64.msu]: https://go.microsoft.com/fwlink/?linkid=839513
@@ -36,58 +36,58 @@ Transferir o pacote de WMF 5.1 para o sistema operativo e a arquitetura que dese
 [Win8.1-KB3191564-x86.msu]: https://go.microsoft.com/fwlink/?linkid=839521
 [Win8.1AndW2K12R2-KB3191564-x64.msu]: https://go.microsoft.com/fwlink/?linkid=839516
 
-- Pré-visualização do WMF 5.1 têm de ser desinstalada antes de instalar a versão do WMF 5.1 RTM.
-- WMF 5.1 pode ser instalado diretamente ao longo do WMF 5.0 ou WMF 4.0.
-- É **não é necessário** para instalar o WMF 4.0 antes de instalar o WMF 5.1 no Windows 7 e Windows Server 2008 R2.
+- O WMF 5,1 Preview deve ser desinstalado antes da instalação do WMF 5,1 RTM.
+- O WMF 5,1 pode ser instalado diretamente no WMF 5,0 ou no WMF 4,0.
+- Não é **necessário** instalar o WMF 4,0 antes de instalar o WMF 5,1 no Windows 7 e no windows Server 2008 R2.
 
-## <a name="install-wmf-51-for-windows-server-2008-r2-and-windows-7"></a>Instale o WMF 5.1 para o Windows Server 2008 R2 e Windows 7
+## <a name="install-wmf-51-for-windows-server-2008-r2-and-windows-7"></a>Instalar o WMF 5,1 para Windows Server 2008 R2 e Windows 7
 
 > [!NOTE]
-> Instruções de instalação para Windows Server 2008 R2 e Windows 7 foram alterados e diferem das instruções para os outros pacotes. Instruções de instalação para Windows Server 2012 R2, Windows Server 2012 e Windows 8.1 estão abaixo.
+> As instruções de instalação do Windows Server 2008 R2 e do Windows 7 foram alteradas e são diferentes das instruções para os outros pacotes. As instruções de instalação do Windows Server 2012 R2, do Windows Server 2012 e do Windows 8.1 estão abaixo.
 
-### <a name="installing-wmf-51-on-windows-server-2008-r2-and-windows-7"></a>Instalar o WMF 5.1 no Windows Server 2008 R2 e Windows 7
+### <a name="wmf-51-prerequisites-for-windows-server-2008-r2-sp1-and-windows-7-sp1"></a>Pré-requisitos do WMF 5,1 para Windows Server 2008 R2 SP1 e Windows 7 SP1
 
-1. Navegue para a pasta na qual transferiu o ficheiro ZIP.
+A instalação do WMF 5,1 no Windows Server 2008 R2 SP1 ou no Windows 7 SP1 requer o seguinte:
 
-2. Com o botão direito no ficheiro ZIP e selecione "Extrair todos os...". O Zip contém 2 ficheiros: um MSU e o ficheiro de script de instalação WMF5.1.PS1. Depois de descompactação o ficheiro ZIP, pode copiar o conteúdo a qualquer máquina com o Windows 7 ou Windows Server 2008 R2.
+- Os service pack mais recentes devem ser instalados.
+- O WMF 3,0 **não deve** ser instalado. A instalação do WMF 5,1 sobre o WMF 3,0 resultará na perda do PSModulePath`$env:PSModulePath`(), que pode causar falha em outros aplicativos. Antes de instalar o WMF 5,1, você deve desinstalar o WMF 3,0 ou salvar o **PSModulePath** e restaurá-lo manualmente após a conclusão da instalação do WMF 5,1.
+- O WMF 5,1 requer pelo menos [.NET Framework 4.5.2](https://www.microsoft.com/download/details.aspx?id=42642).
+  Você pode instalar o Microsoft .NET Framework 4.5.2 seguindo as instruções no local de download.
 
-3. Depois de extrair o conteúdo do ficheiro ZIP, abra o PowerShell como administrador, em seguida, navegue para a pasta que contenha o conteúdo do ficheiro ZIP.
+### <a name="installing-wmf-51-on-windows-server-2008-r2-and-windows-7"></a>Instalando o WMF 5,1 no Windows Server 2008 R2 e no Windows 7
 
-4. Execute o script de instalação Wmf5.1.ps1 nessa pasta e siga as instruções. Este script irá verificar os pré-requisitos no computador local e instale o WMF 5.1 se os pré-requisitos tiverem sido cumpridos. Os pré-requisitos estão listados abaixo.
+1. Navegue até a pasta na qual você baixou o arquivo ZIP.
 
-   Instalação WMF5.1.ps1 precisa dos seguintes parâmetros para facilitar a automatizar a instalação no Windows Server 2008 R2 e Windows 7:
+2. Clique com o botão direito do mouse no arquivo ZIP e selecione **extrair tudo...** . O arquivo zip contém dois arquivos: um MSU e o `Install-WMF5.1.ps1` arquivo de script. Depois de descompactar o arquivo ZIP, você poderá copiar o conteúdo para qualquer computador que esteja executando o Windows 7 ou o Windows Server 2008 R2.
 
-   - AcceptEula: Quando este parâmetro está incluído, o EULA automaticamente é aceite e não será apresentado.
-   - AllowRestart: Este parâmetro só pode ser utilizado se não for especificado AcceptEula. Se este parâmetro está incluído e é necessário um reinício após a instalação do WMF 5.1, irá ocorrer o reinício sem pedir confirmação imediatamente após a instalação estiver concluída.
+3. Depois de extrair o conteúdo do arquivo ZIP, abra o PowerShell como administrador e, em seguida, navegue até a pasta que contém o conteúdo do arquivo ZIP.
 
-### <a name="wmf-51-prerequisites-for-windows-server-2008-r2-sp1-and-windows-7-sp1"></a>WMF 5.1 pré-requisitos para o Windows Server 2008 R2 SP1 e Windows 7 SP1
+4. Execute o `Install-WMF5.1.ps1` script nessa pasta e siga as instruções. Esse script verificará os pré-requisitos no computador local e instalará o WMF 5,1 se os pré-requisitos tiverem sido atendidos. Os pré-requisitos estão listados abaixo.
 
-Instalação do WMF 5.1 no Windows Server 2008 R2 SP1 ou Windows 7 SP1, necessita do seguinte:
+   `Install-WMF5.1.ps1`o usa os seguintes parâmetros para facilitar a automatização da instalação no Windows Server 2008 R2 e no Windows 7:
 
-- Deve ser instalado o service pack mais recente.
-- WMF 3.0 **não podem** ser instalado. Instalação do WMF 5.1 ao longo do WMF 3.0 resultará na perda de PSModulePath, que pode fazer com que outros aplicativos efetuar a ativação. Antes de instalar o WMF 5.1, tem do desinstalar WMF 3.0, ou guardar o PSModulePath e, em seguida, restaurá-lo manualmente após a conclusão da instalação do WMF 5.1.
-- WMF 5.1 requer pelo menos [.NET Framework 4.5.2](https://www.microsoft.com/download/details.aspx?id=42642).
-  Pode instalar o Microsoft .NET Framework 4.5.2 ao seguir as instruções na localização de transferência.
+   - **AcceptEula**: Quando esse parâmetro é incluído, o EULA é automaticamente aceito e não será exibido.
+   - **AllowRestart**: Esse parâmetro só poderá ser usado se AcceptEula for especificado. Se esse parâmetro estiver incluído e uma reinicialização for necessária após a instalação do WMF 5,1, a reinicialização ocorrerá sem avisar imediatamente após a conclusão da instalação.
 
-## <a name="winrm-dependency"></a>Dependência de WinRM
+## <a name="winrm-dependency"></a>Dependência do WinRM
 
-Windows PowerShell Desired State Configuration (DSC) depende de WinRM. WinRM não está ativado por padrão no Windows Server 2008 R2 e Windows 7. Executar `Set-WSManQuickConfig`, no Windows PowerShell elevados sessão, para ativar o WinRM.
+A DSC (configuração de estado desejado) do Windows PowerShell depende do WinRM. O WinRM não está habilitado por padrão no Windows Server 2008 R2 e no Windows 7. Execute `Set-WSManQuickConfig`, em uma sessão com privilégios elevados do Windows PowerShell, para habilitar o WinRM.
 
-## <a name="install-wmf-51-for-windows-server-2012-r2-windows-server-2012-and-windows-81"></a>Instale o WMF 5.1 para o Windows Server 2012 R2, Windows Server 2012 e Windows 8.1
+## <a name="install-wmf-51-for-windows-server-2012-r2-windows-server-2012-and-windows-81"></a>Instalar o WMF 5,1 para Windows Server 2012 R2, Windows Server 2012 e Windows 8.1
 
-### <a name="install-from-windows-file-explorer"></a>Instalar a partir do Explorador de ficheiros do Windows
+### <a name="install-from-windows-file-explorer"></a>Instalar do explorador de arquivos do Windows
 
-1. Navegue para a pasta na qual transferiu o ficheiro MSU.
-2. Faça duplo clique MSU executá-lo.
+1. Navegue até a pasta na qual você baixou o arquivo MSU.
+2. Clique duas vezes na MSU para executá-la.
 
-### <a name="installing-from-the-command-prompt"></a>Instalar a partir da linha de comandos
+### <a name="installing-from-the-command-prompt"></a>Instalando no prompt de comando
 
-1. Depois de transferir o pacote correto para a arquitetura do seu computador, abra uma janela de linha de comandos com direitos de utilizador elevados (executar como administrador). Sobre as opções de instalação Server Core do Windows Server 2012 R2, Windows Server 2012 ou Windows Server 2008 R2 SP1, linha de comandos é aberta com direitos de utilizador elevados por predefinição.
-2. Altere os diretórios para a pasta em que tiver transferido ou copiado o pacote de instalação do WMF 5.1.
+1. Depois de baixar o pacote correto para a arquitetura do seu computador, abra uma janela do prompt de comando com direitos de usuário elevados (executar como administrador). Nas opções de instalação Server Core do Windows Server 2012 R2, Windows Server 2012 ou Windows Server 2008 R2 SP1, o prompt de comando é aberto com direitos de usuário elevados por padrão.
+2. Altere os diretórios para a pasta na qual você baixou ou copiou o pacote de instalação do WMF 5,1.
 3. Execute um dos seguintes comandos:
-   - Nos computadores que executem Windows Server 2012 R2 ou Windows 8.1 x64, execute `Win8.1AndW2K12R2-KB3191564-x64.msu /quiet`.
-   - Nos computadores que executem Windows Server 2012, execute `W2K12-KB3191565-x64.msu /quiet`.
-   - Nos computadores que estejam a executar o Windows 8.1 x86, execute `Win8.1-KB3191564-x86.msu /quiet`.
+   - Em computadores que executam o Windows Server 2012 R2 ou Windows 8.1 x64, `Win8.1AndW2K12R2-KB3191564-x64.msu /quiet`execute.
+   - Em computadores que executam o Windows Server 2012, `W2K12-KB3191565-x64.msu /quiet`execute.
+   - Em computadores que executam o Windows 8.1 x86, `Win8.1-KB3191564-x86.msu /quiet`execute.
 
 > [!NOTE]
-> A instalação de WMF 5.1 requer um reinício. Usando o `/quiet` opção irá reiniciar o sistema sem aviso. Utilize o `/norestart` opção para evitar o reinício. No entanto, WMF 5.1 não será instalado até que foram reiniciados.
+> A instalação do WMF 5,1 requer uma reinicialização. O uso `/quiet` da opção reiniciará o sistema sem aviso. Use a `/norestart` opção para evitar a reinicialização. No entanto, o WMF 5,1 não será instalado até que você tenha reinicializado.

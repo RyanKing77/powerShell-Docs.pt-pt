@@ -2,12 +2,12 @@
 title: Instalar o PowerShell Core no Linux
 description: Informações sobre a instalação do PowerShell Core em várias distribuições do Linux
 ms.date: 07/19/2019
-ms.openlocfilehash: be11a2a873af71c193730d0a9e723da2dc70a62d
-ms.sourcegitcommit: 5a004064f33acc0145ccd414535763e95f998c89
+ms.openlocfilehash: 7d7c9a9f915f0a6e735a7baec1ec56e9c205a155
+ms.sourcegitcommit: 00083f07b13c73b86936e7d7307397df27c63c04
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 08/23/2019
-ms.locfileid: "69986717"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70848178"
 ---
 # <a name="installing-powershell-core-on-linux"></a>Instalar o PowerShell Core no Linux
 
@@ -166,7 +166,7 @@ O método preferencial é o seguinte:
 ```sh
 # Install system components
 sudo apt-get update
-sudo apt-get install curl apt-transport-https
+sudo apt-get install -y curl apt-transport-https
 
 # Import the public repository GPG keys
 curl https://packages.microsoft.com/keys/microsoft.asc | sudo apt-key add -
@@ -197,7 +197,7 @@ O método preferencial é o seguinte:
 ```sh
 # Install system components
 sudo apt-get update
-sudo apt-get install curl gnupg apt-transport-https
+sudo apt-get install -y curl gnupg apt-transport-https
 
 # Import the public repository GPG keys
 curl https://packages.microsoft.com/keys/microsoft.asc | sudo apt-key add -

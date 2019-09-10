@@ -8,12 +8,12 @@ ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: e20e5ad6-a6e6-4a63-9d42-1ac54214f748
 caps.latest.revision: 5
-ms.openlocfilehash: cc4877242a16a9caa99564aeaae985f85e38791e
-ms.sourcegitcommit: ffcc1c55f5b3adc063353cb75f2a2183acc2234a
+ms.openlocfilehash: 59839e9b8b6f2a56f2f1a9c755f2f1a85deb34aa
+ms.sourcegitcommit: 00083f07b13c73b86936e7d7307397df27c63c04
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70737590"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70848108"
 ---
 # <a name="how-to-add-dynamic-parameters-to-a-provider-help-topic"></a>How to Add Dynamic Parameters to a Provider Help Topic (Como Adicionar Parâmetros Dinâmicos ao Tópico de Ajuda de um Fornecedor)
 
@@ -23,7 +23,7 @@ Esta seção explica como preencher a seção de **parâmetros dinâmicos** de u
 
 Os parâmetros dinâmicos documentados em um tópico de ajuda do provedor são os parâmetros dinâmicos que o provedor adiciona ao cmdlet ou função quando o cmdlet ou a função é usada na unidade do provedor.
 
-Os parâmetros dinâmicos também podem ser documentados na ajuda do cmdlet personalizado para um provedor. Ao escrever a ajuda do provedor e a ajuda do cmdlet personalizado para um provedor, inclua a documentação do parâmetro dinâmico em ambos os documentos. Para obter mais informações sobre a ajuda de cmdlets personalizados, consulte [escrevendo a ajuda do cmdlet personalizado do Windows PowerShell para provedores](./writing-custom-cmdlet-help-for-windows-powershell-providers.md).
+Os parâmetros dinâmicos também podem ser documentados na ajuda do cmdlet personalizado para um provedor. Ao escrever a ajuda do provedor e a ajuda do cmdlet personalizado para um provedor, inclua a documentação do parâmetro dinâmico em ambos os documentos.
 
 Se um provedor não implementar nenhum parâmetro dinâmico, o tópico da ajuda do provedor conterá `DynamicParameters` um elemento vazio.
 
