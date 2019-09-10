@@ -887,39 +887,13 @@
         - name: Writing Help for Windows PowerShell Cmdlets (Escrever Ajuda para Cmdlets do Windows PowerShell)
           href: ./help/writing-help-for-windows-powershell-cmdlets.md
         - name: Writing Help for Windows PowerShell Providers (Escrever Ajuda para Fornecedores do Windows PowerShell)
-          href: ./help/writing-help-for-windows-powershell-providers.md
           items:
-            - name: How to Create a Provider Help Topic (Como Criar um Tópico de Ajuda de Fornecedores)
-              href: ./help/how-to-create-a-provider-help-topic.md
-            - name: How to Add the Provider Name (Como Adicionar o Nome do Fornecedor)
-              href: ./help/how-to-add-the-provider-name.md
-            - name: How to Add the Provider Drives (Como Adicionar as Unidades do Fornecedor)
-              href: ./help/how-to-add-the-provider-drives.md
-            - name: How to Add the Provider Synopsis (Como Adicionar a Sinopse do Fornecedor)
-              href: ./help/how-to-add-the-provider-synopsis.md
-            - name: How to Add a Provider Description (Como Adicionar uma Descrição do Fornecedor)
-              href: ./help/how-to-add-a-provider-description.md
-            - name: How to Add Capabilities (Como Adicionar Funcionalidades)
-              href: ./help/how-to-add-capabilities.md
-            - name: How to Add Tasks to a Provider Help Topic (Como Adicionar Tarefas ao Tópico de Ajuda de um Fornecedor)
-              href: ./help/how-to-add-tasks-to-a-provider-help-topic.md
             - name: How to Add Dynamic Parameters to a Provider Help Topic (Como Adicionar Parâmetros Dinâmicos ao Tópico de Ajuda de um Fornecedor)
               href: ./help/how-to-add-dynamic-parameters-to-a-provider-help-topic.md
-            - name: How to Add Notes to a Provider Help Topic (Como Adicionar Notas ao Tópico de Ajuda de um Fornecedor)
-              href: ./help/how-to-add-notes-to-a-provider-help-topic.md
             - name: How to Add a See Also Section to a Provider Help Topic (Como Adicionar uma Secção Consulte Também ao Tópico de Ajuda de um Fornecedor)
               href: ./help/how-to-add-a-see-also-section-to-a-provider-help-topic.md
         - name: Writing Help for Windows PowerShell Scripts and Functions (Escrever Ajuda para Scripts e Funções do Windows PowerShell)
           href: ./help/writing-help-for-windows-powershell-scripts-and-functions.md
-          items:
-            - name: Writing XML-Based Help Topics for Scripts and Functions (Escrever Tópicos de Ajuda Baseados em XML para Scripts e Funções)
-              href: ./help/writing-xml-based-help-topics-for-scripts-and-functions.md
-        - name: Writing Help for Windows PowerShell Snap-ins (Escrever Ajuda para Snap-ins do Windows PowerShell)
-          href: ./help/writing-help-for-windows-powershell-snap-ins.md
-        - name: Writing Custom Cmdlet Help for Windows PowerShell Providers (Escrever Ajuda Personalizada para Cmdlets para Fornecedores do Windows PowerShell)
-          href: ./help/writing-custom-cmdlet-help-for-windows-powershell-providers.md
-        - name: Writing Windows PowerShell About Help (Escrever Tópicos de Ajuda do Windows PowerShell)
-          href: ./help/writing-windows-powershell-about-help.md
         - name: Writing Comment-Based Help Topics (Escrever Tópicos de Ajuda Baseados em Comentários)
           href: ./help/writing-comment-based-help-topics.md
           items:
@@ -936,7 +910,6 @@
             - name: Examples of Comment-Based Help (Exemplos de Ajuda Baseada em Comentários)
               href: ./help/examples-of-comment-based-help.md
         - name: Writing XML-Based Help Topics for Commands (Escrever Tópicos de Ajuda Baseada em Comentários para Comandos)
-          href: ./help/writing-xml-based-help-topics-for-commands.md
           items:
             - name: How to Create the Cmdlet Help File (Como Criar um Ficheiro de Ajuda de Cmdlet)
               href: ./help/how-to-create-the-cmdlet-help-file.md
